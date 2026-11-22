@@ -1,0 +1,14 @@
+UN1017 CHLORINE, tb 238.5388888889
+  155.0-239.4 K: A 3.0213 B 530.591 C -64.639 -> SPB 1221.73 SPC -64.639; at tb the row gives 0.9214 atm (nist-webbook-1017 p. 77)
+  239.4-400.3 K: A 4.28814 B 969.992 C -12.791 -> SPB 2233.49 SPC -12.791; at tb the row gives 0.9675 atm (nist-webbook-1017 p. 77)
+UN1005 AMMONIA, ANHYDROUS, tb 239.8
+  164.0-239.6 K: A 3.18757 B 506.713 C -80.78 -> SPB 1166.75 SPC -80.78; at tb the row gives 0.9894 atm (nist-webbook-1005 p. 86)
+  239.6-371.5 K: A 4.86886 B 1113.928 C -10.409 -> SPB 2564.91 SPC -10.409; at tb the row gives 1.0165 atm (nist-webbook-1005 p. 86)
+UN1977 NITROGEN, REFRIGERATED LIQUID (CRYOGENIC LIQUID), tb 77.5388888889
+  63.14-126.0 K: A 3.7362 B 264.651 C -6.788 -> SPB 609.38 SPC -6.788; at tb the row gives 0.9770 atm (nist-webbook-1977 p. 108)
+  63.14-78.0 K: A 3.63792 B 257.877 C -6.344 -> SPB 593.78 SPC -6.344; at tb the row gives 1.0235 atm (nist-webbook-1977 p. 108)
+UN1978 PROPANE, tb 231.0388888889
+  277.6-360.8 K: A 4.53678 B 1149.36 C 24.906 -> SPB 2646.50 SPC 24.906; at tb the row gives 1.0975 atm (nist-webbook-1978 p. 116)
+  230.6-320.7 K: A 3.98292 B 819.296 C -24.417 -> SPB 1886.50 SPC -24.417; at tb the row gives 1.0280 atm (nist-webbook-1978 p. 116)
+  166.02-231.41 K: A 4.01158 B 834.26 C -22.763 -> SPB 1920.95 SPC -22.763; at tb the row gives 1.0007 atm (nist-webbook-1978 p. 116)
+PR4 (INPR4 lines 10-11): SPB 1978.34 SPC -27.01

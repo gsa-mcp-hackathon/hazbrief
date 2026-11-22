@@ -1,0 +1,32 @@
+# The four scenario points HB-08 recorded NWS exchanges for (DN-001 section 3 corridors: I-81,
+# I-83, the Capital Beltway, one rail line through the same region). Read by
+# scripts/record_nws_fixtures.py and by the tests.
+#
+# Provenance: chosen by HB-08 from the corridors' known crossings (a state line, a river bridge, a
+# river-side rail junction), NOT read from TIGER: the TIGER/Line 2025 roads and rails files are
+# deferred bulk data in corpus/sources.yaml (not held) and tigerweb.geo.census.gov was not on HB-08's
+# network allowlist. Each point is expected within about 1 km of its roadway or track; the NWS
+# points response's relativeLocation (recorded beside each) is the independent check that each
+# point lies where it is named. HB-04 re-checks them against TIGER when the files are held.
+# Latitude and longitude are WGS84 decimal degrees, at most four decimals (the NWS points form).
+points:
+  - id: i81-md-pa-line
+    corridor: I-81
+    description: I-81 at the Maryland-Pennsylvania line (Mason-Dixon line), north of Hagerstown, MD
+    latitude: 39.722
+    longitude: -77.724
+  - id: i83-md-pa-line
+    corridor: I-83
+    description: I-83 at the Maryland-Pennsylvania line (Mason-Dixon line), Maryland Line, MD
+    latitude: 39.722
+    longitude: -76.661
+  - id: i495-wilson-bridge
+    corridor: Capital Beltway (I-95/I-495)
+    description: Woodrow Wilson Bridge over the Potomac River, Alexandria, VA to Oxon Hill, MD
+    latitude: 38.7934
+    longitude: -77.037
+  - id: csx-point-of-rocks
+    corridor: rail (CSX)
+    description: CSX main line at Point of Rocks, MD, on the Potomac River
+    latitude: 39.2756
+    longitude: -77.5394

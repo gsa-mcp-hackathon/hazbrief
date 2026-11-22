@@ -1,0 +1,40 @@
+Created Issue: d8668053-60dd-4006-9f20-479e34a10ba5
+  name: brief does not call the materials resolver
+  description: HB-119 built hazbrief.brief.materials.resolve and with_resolved, and the source term and dense-gas channel read a fetched entry as they read a seed one (test_materials_resolver.py (a test held privately)), but the brief does not call the resolver: derive.puff and derive.dense_gas load packs/materials_properties.json and stop at 'UN<n> is not in the properties pack' for any unseeded material. Wiring needs the DN-001 dispersion class a fetched entry does not carry (MaterialProperties.dispersion_class, dense_gas_caveat, guide), which is HB-120's routing table. Fix after HB-120: in derive's async stage, resolve the footprint's material when its UN is not seeded, merge with materials.with_resolved, and print the fetched label in the appendix. Found by HB-119 (docs/evidence/hb119/acceptance.md, 'What this run does not do').
+  type: missing_content
+  quadrant: DO SOON (importance=high, urgency=medium)
+  detection: audit
+  target: code
+  state: open
+Created Issue: 8f5970e2-e405-407d-91d5-eb009d047abd
+  name: fetched materials have no saturation-pressure curve
+  description: Neither CAMEO Chemicals nor PubChem prints Antoine (or any saturation-pressure) constants, so every material the HB-119 resolver fetches has saturation_pressure_antoine not_held and source_term.material_from_pack answers 'not available' for it, whatever else is resolved (chlorine fetched: only liquid heat capacity, liquid density and the Antoine rows missing). source_term already carries ALOHA's Clausius-Clapeyron form through two points (Material.clausius; noaa-aloha-technical-documentation p. 68) for a worked example, and a fetched entry often holds the normal boiling point, the heat of vaporisation and a vapour pressure at a stated temperature. Whether that form may stand in for a fetched material's saturation curve, and over what temperature range, is a ruling for the Desktop; liquid density (from a specific gravity, which needs a held density of the reference water) is the same gap HB-109 named (Issue 1176b8ae). Found by HB-119 (docs/evidence/hb119/acceptance.md).
+  type: missing_content
+  quadrant: DO SOON (importance=high, urgency=medium)
+  detection: audit
+  target: code
+  state: open
+Created Issue: bdfbe892-c8d7-40ef-8f37-ba9e67702ae2
+  name: PubChem robots.txt now disallows /rest/pug/
+  description: PubChem's robots.txt version 2026-10-29.1 (read 2026-11-07, the HB-119 evidence (held privately)) disallows /rest/pug/ for every agent, Crawl-delay 5, and keeps /rest/pug_view crawlable. The HB-119 resolver's PUG REST name, CAS and property calls rest on DN-002 section 1 (robots.txt does not bind a per-request API client, which honours the documented limits; corpus/allowlist.txt HB-119 note). If the operator reads the change as PubChem's intent for API clients too, a robots-clean route exists for a material with a UN number: the held erg2024-pubchem-index maps every ERG UN number to its CID, and PUG View's 'Computed Properties' heading carries the molecular weight, so only a name-only material would need PUG REST. Found by HB-119 Part A step 1 (docs/evidence/hb119/sources.md section 1).
+  type: citation_gap
+  quadrant: PLAN (importance=medium, urgency=medium)
+  detection: incidental
+  target: citation
+  state: open
+Created Issue: 03cb703e-b6ab-435a-b4eb-a618b9691a6b
+  name: PUG REST documentation not held
+  description: No held page prints PUG REST's URL grammar (compound/name/<name>/cids/JSON, compound/cid/<cid>/property/<names>/JSON); pubchem-programmatic-access and pubchem-pug-view-limits print PUG View's only. https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest answered the project's client with a reCAPTCHA challenge on 2026-11-07 (docs/evidence/hb119/pug_rest_docs/record.json), rung 3 of DN-002 ADDENDUM-00 (the operator), as HB-98 found for the programmatic-access page. The forms the HB-119 resolver uses are verified by their recorded answers (pubchem/ (held privately)). Fix: the operator's browser saves the page into corpus/inbox/, registered by content; or the PUG-REST paper (Kim et al., J Cheminform 2018, on PMC) by the allowlisted fetcher under a task whose Network line names pmc.ncbi.nlm.nih.gov. Found by HB-119 (docs/evidence/hb119/sources.md section 2).
+  type: citation_gap
+  quadrant: ELIMINATE (importance=low, urgency=low)
+  detection: incidental
+  target: citation
+  state: open
+Created Issue: f15a1396-5b24-4353-9708-5510c752e399
+  name: AEGL rows the threshold parser leaves unparsed or in mg/m3
+  description: scripts/build_packs.py thresholds (HB-119) keeps 15 AEGL rows of epa-aegl-compiled-2018 unparsed, as printed with the reason (the row prints fewer than the five column cells): the nerve agents GA, GB, GD, GF and VX, sulfur mustard, acetone's AEGL-2 and AEGL-3, MTBE's AEGL-3. Their cells sit on two lines or carry bracketed alternates the text layer splits. 42 entries state their AEGLs in mg/m3, which the resolver does not convert (it would need the material's molecular weight and the seed pack's air basis, which it has). A toxic material among these gets the IDLH fallback or no toxic level, named. Fix: read the split rows from the rendered page (read_by: rendered_page) and convert mg/m3 by the seed's air basis, labelled. Found by HB-119 (docs/evidence/hb119/sources.md section 5).
+  type: missing_content
+  quadrant: ELIMINATE (importance=low, urgency=low)
+  detection: audit
+  target: data
+  state: open

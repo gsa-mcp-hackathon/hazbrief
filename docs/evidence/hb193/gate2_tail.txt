@@ -1,0 +1,53 @@
+GATE START 2026-11-16T23:07:21Z at 8de7748f
+============================= slowest 40 durations =============================
+795.25s call     test_brief_dense_gas_layer.py (a test held privately)::test_the_routing_outcome_does_not_depend_on_the_vapour_heat_capacity
+490.21s call     test_hb163_one_cloud.py (a test held privately)::test_engine_by_brief_lists_every_brief_and_its_class
+274.41s call     test_hb115_cue_block.py (a test held privately)::test_the_lower_bound_line_prints_the_legends_own_number
+239.82s call     test_hb185_daytime_layer.py (a test held privately)::test_every_table_re_derives_byte_for_byte
+237.45s call     test_hb184_stable_levels.py (a test held privately)::test_the_checklist_carries_no_two_methods_warning_under_a_stable_class[csx-point-of-rocks-night]
+219.21s call     test_evidence_replay.py (a test held privately)::test_the_migration_is_idempotent_and_deterministic
+201.13s call     test_hb182_domain_cut.py (a test held privately)::test_a_cut_line_lies_on_the_edge_its_own_level_reaches
+170.62s call     test_hb131_panels.py (a test held privately)::test_a_killed_recording_resumes_to_the_uninterrupted_output
+163.54s call     tests/test_brief.py::test_each_committed_brief_equals_a_fresh_replay_build[i81-md-pa-line-day]
+160.81s call     test_hb139_weather_source.py (a test held privately)::test_a_scenario_files_block_with_a_basis_is_read_and_printed
+158.97s call     test_hb131_panels.py (a test held privately)::test_a_tool_or_a_view_the_brief_does_not_have_is_refused
+156.13s call     test_hb158_less_at_once.py (a test held privately)::test_rows_are_one_line_at_1440
+149.56s call     tests/test_brief.py::test_each_committed_brief_equals_a_fresh_replay_build[csx-point-of-rocks-crossing]
+147.26s call     test_hb131_panels.py (a test held privately)::test_the_panel_is_the_alert_events_minus_the_withdrawn_in_kind_order[i495-wilson-bridge-night]
+145.89s call     test_protective_action_footprint.py (a test held privately)::test_recorded_fixtures_carry_no_key_or_email
+141.36s call     test_hb130_event_stream.py (a test held privately)::test_every_sections_last_fragment_is_the_static_pages_byte_for_byte[i83-md-pa-line-night]
+137.71s call     test_hb158_less_at_once.py (a test held privately)::test_the_tabs_sit_on_one_line_at_1280
+134.99s call     test_hb131_panels.py (a test held privately)::test_every_call_is_recorded_and_a_replay_answers_with_no_call
+133.35s call     test_hb131_panels.py (a test held privately)::test_the_record_route_opens_each_record_with_the_logs_fields
+122.53s call     test_hb131_panels.py (a test held privately)::test_a_view_proposal_is_a_layer_or_an_hour_the_page_has
+118.56s call     test_hb130_event_stream.py (a test held privately)::test_every_sections_last_fragment_is_the_static_pages_byte_for_byte[csx-point-of-rocks-night]
+113.97s call     tests/test_brief_footprint_citation.py::test_every_record_row_of_the_appendix_is_the_request_this_brief_made[csx-point-of-rocks-night]
+113.78s call     tests/test_brief.py::test_each_committed_brief_equals_a_fresh_replay_build[csx-point-of-rocks-night]
+112.92s call     test_hb157_plume_over_time.py (a test held privately)::test_the_modelled_population_has_its_data_sources_row[guide-111-wilson-bridge]
+110.49s call     test_hb141_checklist.py (a test held privately)::test_the_replay_banner_is_on_a_replayed_serve_and_off_a_live_one
+109.51s call     test_evidence_replay.py (a test held privately)::test_every_seed_record_replays_to_its_entity
+108.85s call     test_hb155_siting.py (a test held privately)::test_the_site_route_refuses_what_is_not_a_move
+108.69s call     test_hb155_siting.py (a test held privately)::test_on_the_pair_three_points_outside_every_drawn_hazard_and_the_sweep[i81-md-pa-line-day]
+106.99s call     tests/test_brief_footprint_citation.py::test_every_reader_record_a_brief_cites_used_its_own_footprint[i495-wilson-bridge-night]
+102.92s call     test_hb132_load_read.py (a test held privately)::test_every_committed_brief_keeps_its_numbers_and_receipts_in_every_section[csx-point-of-rocks-night]
+102.75s call     test_hb132_load_read.py (a test held privately)::test_every_committed_brief_keeps_its_numbers_and_receipts_in_every_section[i83-md-pa-line-night]
+96.67s call     tests/test_brief_footprint_citation.py::test_every_reader_record_a_brief_cites_used_its_own_footprint[csx-point-of-rocks-night]
+96.06s call     test_hb177_trace.py (a test held privately)::test_the_trace_re_derives_byte_for_byte_from_the_held_runs
+94.53s call     test_hb154_shell.py (a test held privately)::test_the_print_view_is_the_ics201_under_the_exercise_banner
+94.18s call     test_hb141_checklist.py (a test held privately)::test_a_check_mid_run_keeps_every_alert_id_and_withdrawal
+93.74s call     test_brief_map.py (a test held privately)::test_offline_every_layer_draws_and_the_zones_fit_the_payload[-csx-point-of-rocks-day]
+93.44s call     test_hb157_plume_over_time.py (a test held privately)::test_the_control_moves_outline_wind_and_figure_together_and_makes_no_request[csx-point-of-rocks-day]
+92.17s call     test_hb154_shell.py (a test held privately)::test_the_data_sources_rows_are_the_evidence_logs_channels_each_with_one_of_four[propane-unresolved-i81]
+91.68s call     test_hb157_plume_over_time.py (a test held privately)::test_no_dense_gas_band_ends_at_slabs_table_unless_drawn_open[csx-point-of-rocks-night]
+91.31s call     test_hb130_event_stream.py (a test held privately)::test_a_map_degraded_after_the_derivations_settles_again
+=========================== short test summary info ============================
+FAILED test_hb139_weather_source.py (a test held privately)::test_a_stated_run_on_the_held_wind_draws_every_consumer_on_its_bearing
+1 failed, 7979 passed, 14 skipped, 12 deselected, 17 xfailed, 2 warnings in 3902.75s (1:05:02)
+PYTEST EXIT=1
+All checks passed!
+RUFF EXIT=0
+960 files already formatted
+FORMAT EXIT=0
+GATE END 2026-11-17T00:12:29Z
+.                                                                        [100%]
+1 passed in 20.82s

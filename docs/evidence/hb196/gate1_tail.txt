@@ -1,0 +1,9 @@
+FAILED test_hb178_material_keyed_and_off_pair.py (a test held privately)::test_the_audit_re_derives_and_every_hit_has_a_verdict
+1 failed, 8010 passed, 14 skipped, 97 deselected, 17 xfailed, 2 warnings in 3653.63s (1:00:53)
+PYTEST EXIT=1
+load_sensitive step:
+85 passed, 1886 deselected in 907.51s (0:15:07)
+PYTEST2 EXIT=0
+All checks passed!
+RUFF EXIT=0
+FORMAT EXIT=0

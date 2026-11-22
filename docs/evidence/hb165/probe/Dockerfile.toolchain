@@ -1,0 +1,12 @@
+# HB-165 Part A: the build toolchain for the SCICHEM probe. Not part of any shipped image.
+# The server image's own base (Dockerfile at the root), aarch64 on this Mac, with gfortran, cmake,
+# ninja and make, and NetCDF and HDF5 from Debian packages (task step 2). The SCICHEM checkout is
+# bind-mounted read-only at run time; nothing of it enters this image.
+FROM python:3.11-slim@sha256:b7a9e5f6a93d6d4a31f129bbd4bdee69efccb6ded0fb230d78aafaf37af98377
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+      gfortran gcc g++ cmake ninja-build make \
+      libnetcdf-dev libhdf5-dev libaec-dev zlib1g-dev pkg-config file binutils \
+ && rm -rf /var/lib/apt/lists/*
+RUN gfortran --version | head -1 && cmake --version | head -1 \
+ && dpkg -s libnetcdf-dev libhdf5-dev | grep -E '^(Package|Version)'

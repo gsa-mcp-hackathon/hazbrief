@@ -1,0 +1,448 @@
+trial	arcs_km	weather_set	case	statistic	value	unit	table	page	kind	note
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	sensor pairs used / sensors above threshold in the data	31/31	count	11	22	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	FB	-0.18	dimensionless	11	22	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	NMSE	1.89	dimensionless	11	22	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	NAD	0.13	dimensionless	11	22	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	MG	1.82	dimensionless	11	22	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	VG	19.77	dimensionless	11	22	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+1	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG NoStab	simple (jet only); original orientation	FAC2	0.67	fraction of arcs	11	22	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	sensor pairs used / sensors above threshold in the data	31/31	count	11	22	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	FB	0.30	dimensionless	11	22	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	NMSE	1.53	dimensionless	11	22	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	NAD	0.15	dimensionless	11	22	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	MG	1.91	dimensionless	11	22	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	VG	12.51	dimensionless	11	22	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+1	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG StabE	simple (jet only); original orientation	FAC2	0.67	fraction of arcs	11	22	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	sensor pairs used / sensors above threshold in the data	17/31	count	11	22	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	FB	1.03	dimensionless	11	22	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	NMSE	5.51	dimensionless	11	22	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	NAD	0.59	dimensionless	11	22	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	MG	17.35	dimensionless	11	22	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	VG	4.31E+09	dimensionless	11	22	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+1	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	3 km WRF	simple (jet only); original orientation	FAC2	0.00	fraction of arcs	11	22	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	sensor pairs used / sensors above threshold in the data	53/53	count	11	22	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	FB	0.91	dimensionless	11	22	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	NMSE	2.82	dimensionless	11	22	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	NAD	0.30	dimensionless	11	22	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	MG	8.25	dimensionless	11	22	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	VG	6.02E+03	dimensionless	11	22	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+6	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG NoStab	simple (jet only); original orientation	FAC2	0.33	fraction of arcs	11	22	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	sensor pairs used / sensors above threshold in the data	51/53	count	11	22	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	FB	0.26	dimensionless	11	22	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	NMSE	1.47	dimensionless	11	22	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	NAD	0.28	dimensionless	11	22	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	MG	4.26	dimensionless	11	22	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	VG	4.71E+03	dimensionless	11	22	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+6	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG StabE	simple (jet only); original orientation	FAC2	0.83	fraction of arcs	11	22	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	sensor pairs used / sensors above threshold in the data	41/53	count	11	22	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	FB	0.65	dimensionless	11	22	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	NMSE	1.36	dimensionless	11	22	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	NAD	0.44	dimensionless	11	22	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	MG	10.21	dimensionless	11	22	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	VG	6.86E+05	dimensionless	11	22	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+6	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	3 km WRF	simple (jet only); original orientation	FAC2	0.50	fraction of arcs	11	22	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	sensor pairs used / sensors above threshold in the data	36/37	count	11	22	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	FB	-0.05	dimensionless	11	22	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	NMSE	2.41	dimensionless	11	22	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	NAD	0.41	dimensionless	11	22	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	MG	1.52	dimensionless	11	22	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); original orientation	VG	3.96E+03	dimensionless	11	22	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+7	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG NoStab	simple (jet only); original orientation	FAC2	0.33	fraction of arcs	11	22	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	sensor pairs used / sensors above threshold in the data	34/37	count	11	22	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	FB	-0.02	dimensionless	11	22	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	NMSE	2.23	dimensionless	11	22	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	NAD	0.42	dimensionless	11	22	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	MG	1.45	dimensionless	11	22	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); original orientation	VG	2.78E+04	dimensionless	11	22	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+7	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG StabE	simple (jet only); original orientation	FAC2	0.83	fraction of arcs	11	22	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	sensor pairs used / sensors above threshold in the data	04/37	count	11	22	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	FB	1.33	dimensionless	11	22	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	NMSE	7.29	dimensionless	11	22	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	NAD	0.91	dimensionless	11	22	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	MG	82.64	dimensionless	11	22	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); original orientation	VG	5.83E+19	dimensionless	11	22	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+7	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	3 km WRF	simple (jet only); original orientation	FAC2	0.00	fraction of arcs	11	22	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	sensor pairs used / sensors above threshold in the data	31/31	count	12	23	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	FB	-0.16	dimensionless	12	23	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	NMSE	1.18	dimensionless	12	23	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	NAD	0.13	dimensionless	12	23	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	MG	1.91	dimensionless	12	23	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	VG	11.57	dimensionless	12	23	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+1	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG NoStab	simple (jet only); midpoint alignment	FAC2	0.67	fraction of arcs	12	23	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	sensor pairs used / sensors above threshold in the data	31/31	count	12	23	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	FB	0.32	dimensionless	12	23	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	NMSE	0.91	dimensionless	12	23	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	NAD	0.15	dimensionless	12	23	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	MG	1.96	dimensionless	12	23	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	VG	5.81	dimensionless	12	23	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+1	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG StabE	simple (jet only); midpoint alignment	FAC2	0.67	fraction of arcs	12	23	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	sensor pairs used / sensors above threshold in the data	29/31	count	12	23	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	FB	0.75	dimensionless	12	23	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	NMSE	3.01	dimensionless	12	23	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	NAD	0.29	dimensionless	12	23	table	
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	MG	2.32	dimensionless	12	23	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+1	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	VG	6.36	dimensionless	12	23	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+1	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	3 km WRF	simple (jet only); midpoint alignment	FAC2	0.00	fraction of arcs	12	23	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	sensor pairs used / sensors above threshold in the data	53/53	count	12	23	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	FB	0.83	dimensionless	12	23	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	NMSE	1.99	dimensionless	12	23	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	NAD	0.30	dimensionless	12	23	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	MG	4.23	dimensionless	12	23	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	VG	88.79	dimensionless	12	23	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+6	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG NoStab	simple (jet only); midpoint alignment	FAC2	0.33	fraction of arcs	12	23	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	sensor pairs used / sensors above threshold in the data	53/53	count	12	23	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	FB	0.13	dimensionless	12	23	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	NMSE	0.8	dimensionless	12	23	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	NAD	0.25	dimensionless	12	23	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	MG	1.41	dimensionless	12	23	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	VG	20.6	dimensionless	12	23	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+6	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG StabE	simple (jet only); midpoint alignment	FAC2	0.83	fraction of arcs	12	23	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	sensor pairs used / sensors above threshold in the data	53/53	count	12	23	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	FB	0.60	dimensionless	12	23	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	NMSE	1.11	dimensionless	12	23	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	NAD	0.27	dimensionless	12	23	table	
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	MG	2.73	dimensionless	12	23	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+6	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	VG	8.87	dimensionless	12	23	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+6	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	3 km WRF	simple (jet only); midpoint alignment	FAC2	0.50	fraction of arcs	12	23	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	sensor pairs used / sensors above threshold in the data	36/37	count	12	23	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	FB	-0.32	dimensionless	12	23	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	NMSE	1.28	dimensionless	12	23	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	NAD	0.40	dimensionless	12	23	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	MG	0.67	dimensionless	12	23	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG NoStab	simple (jet only); midpoint alignment	VG	19.69	dimensionless	12	23	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+7	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG NoStab	simple (jet only); midpoint alignment	FAC2	0.33	fraction of arcs	12	23	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	sensor pairs used / sensors above threshold in the data	36/37	count	12	23	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	FB	-0.30	dimensionless	12	23	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	NMSE	1.27	dimensionless	12	23	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	NAD	0.38	dimensionless	12	23	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	MG	0.68	dimensionless	12	23	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	MWG StabE	simple (jet only); midpoint alignment	VG	17.91	dimensionless	12	23	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+7	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	MWG StabE	simple (jet only); midpoint alignment	FAC2	0.83	fraction of arcs	12	23	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	sensor pairs used / sensors above threshold in the data	36/37	count	12	23	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	FB	0.81	dimensionless	12	23	table	FB = 2(mean Co - mean Cp)/(mean Co + mean Cp) (eq. 2, p. 9): positive is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	NMSE	2.60	dimensionless	12	23	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	NAD	0.23	dimensionless	12	23	table	
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	MG	4.11	dimensionless	12	23	table	MG = exp(mean ln Co - mean ln Cp) (eq. 6, p. 9): above 1 is under-prediction
+7	0.5, 1, 2, 5, 11 (paired in space, threshold 0.1 ppm)	3 km WRF	simple (jet only); midpoint alignment	VG	50.86	dimensionless	12	23	table	VG = exp(mean (ln Co - ln Cp)^2) (eq. 7, p. 9)
+7	0.2, 0.5, 1, 2, 5, 11 (arc maxima)	3 km WRF	simple (jet only); midpoint alignment	FAC2	0.00	fraction of arcs	12	23	table	fraction of the six arcs' maxima with 0.5 < Cp/Co < 2 (eq. 5, p. 9; p. 23)
+1	11	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	30.5	ppm	3	8	table	
+1	5	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	107.8	ppm	3	8	table	
+1	2	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	376.2	ppm	3	8	table	
+1	1	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	1,098.4	ppm	3	8	table	
+1	0.5	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	2,939.9	ppm	3	8	table	
+1	0.2	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	15,077.4	ppm	3	8	table	
+6	11	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	49.2	ppm	3	8	table	
+6	5	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	192.5	ppm	3	8	table	
+6	2	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	667.3	ppm	3	8	table	
+6	1	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	1,684.1	ppm	3	8	table	
+6	0.5	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	4,586.8	ppm	3	8	table	
+6	0.2	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	32,239.9	ppm	3	8	table	
+7	11	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	63.6	ppm	3	8	table	
+7	5	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	270.4	ppm	3	8	table	
+7	2	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	930.7	ppm	3	8	table	
+7	1	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	2,229.9	ppm	3	8	table	
+7	0.5	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	6,399.0	ppm	3	8	table	
+7	0.2	MWG StabE	simple (jet only)	predicted maximum arc concentration (no averaging)	55,915.6	ppm	3	8	table	
+1	11	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	31.1	ppm	4	8	table	
+1	5	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	113.1	ppm	4	8	table	
+1	2	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	410.1	ppm	4	8	table	
+1	1	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	1,308.6	ppm	4	8	table	
+1	0.5	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	3,570.0	ppm	4	8	table	
+1	0.2	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	21,110.1	ppm	4	8	table	
+6	11	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	34.3	ppm	4	8	table	
+6	5	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	114.6	ppm	4	8	table	
+6	2	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	602.5	ppm	4	8	table	
+6	1	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	1,455.2	ppm	4	8	table	
+6	0.5	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	4,275.9	ppm	4	8	table	
+6	0.2	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	27,938.8	ppm	4	8	table	
+7	11	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	65.7	ppm	4	8	table	
+7	5	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	278.3	ppm	4	8	table	
+7	2	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	1,004.6	ppm	4	8	table	
+7	1	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	2,633.4	ppm	4	8	table	
+7	0.5	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	6,314.1	ppm	4	8	table	
+7	0.2	MWG StabE	complex (jet + stack)	predicted maximum arc concentration (no averaging)	31,372.5	ppm	4	8	table	
+1	0.5	JR II data		time of arrival of the arc maximum, observed	282	s	5	15	table	
+1	0.5	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	217	s	5	15	table	
+1	0.5	MWG StabE	simple (jet only)	time of arrival relative to observed	0.77	ratio	5	15	table	
+1	0.5	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	248	s	5	15	table	
+1	0.5	MWG NoStab	simple (jet only)	time of arrival relative to observed	0.88	ratio	5	15	table	
+1	0.5	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	558	s	5	15	table	
+1	0.5	3 km WRF	simple (jet only)	time of arrival relative to observed	1.98	ratio	5	15	table	
+1	1	JR II data		time of arrival of the arc maximum, observed	624	s	5	15	table	
+1	1	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	385	s	5	15	table	
+1	1	MWG StabE	simple (jet only)	time of arrival relative to observed	0.62	ratio	5	15	table	
+1	1	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	449	s	5	15	table	
+1	1	MWG NoStab	simple (jet only)	time of arrival relative to observed	0.72	ratio	5	15	table	
+1	1	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	782	s	5	15	table	
+1	1	3 km WRF	simple (jet only)	time of arrival relative to observed	1.25	ratio	5	15	table	
+1	2	JR II data		time of arrival of the arc maximum, observed	944	s	5	15	table	
+1	2	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	693	s	5	15	table	
+1	2	MWG StabE	simple (jet only)	time of arrival relative to observed	0.73	ratio	5	15	table	
+1	2	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	803	s	5	15	table	
+1	2	MWG NoStab	simple (jet only)	time of arrival relative to observed	0.85	ratio	5	15	table	
+1	2	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	1224	s	5	15	table	
+1	2	3 km WRF	simple (jet only)	time of arrival relative to observed	1.30	ratio	5	15	table	
+1	5	JR II data		time of arrival of the arc maximum, observed	1931	s	5	15	table	
+1	5	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	1486	s	5	15	table	
+1	5	MWG StabE	simple (jet only)	time of arrival relative to observed	0.77	ratio	5	15	table	
+1	5	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	1611	s	5	15	table	
+1	5	MWG NoStab	simple (jet only)	time of arrival relative to observed	0.83	ratio	5	15	table	
+1	5	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	2538	s	5	15	table	
+1	5	3 km WRF	simple (jet only)	time of arrival relative to observed	1.31	ratio	5	15	table	
+1	11	JR II data		time of arrival of the arc maximum, observed	3526	s	5	15	table	
+1	11	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	2578	s	5	15	table	
+1	11	MWG StabE	simple (jet only)	time of arrival relative to observed	0.73	ratio	5	15	table	
+1	11	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	3169	s	5	15	table	
+1	11	MWG NoStab	simple (jet only)	time of arrival relative to observed	0.90	ratio	5	15	table	
+1	11	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	N/D	s	5	15	table	N/D: no modelled plume at this arc
+1	11	3 km WRF	simple (jet only)	time of arrival relative to observed	N/D	ratio	5	15	table	N/D: no modelled plume at this arc
+6	0.5	JR II data		time of arrival of the arc maximum, observed	223	s	6	15	table	
+6	0.5	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	211	s	6	15	table	
+6	0.5	MWG StabE	simple (jet only)	time of arrival relative to observed	0.95	ratio	6	15	table	
+6	0.5	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	174	s	6	15	table	
+6	0.5	MWG NoStab	simple (jet only)	time of arrival relative to observed	0.78	ratio	6	15	table	
+6	0.5	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	164	s	6	15	table	
+6	0.5	3 km WRF	simple (jet only)	time of arrival relative to observed	0.74	ratio	6	15	table	
+6	1	JR II data		time of arrival of the arc maximum, observed	442	s	6	15	table	
+6	1	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	357	s	6	15	table	
+6	1	MWG StabE	simple (jet only)	time of arrival relative to observed	0.81	ratio	6	15	table	
+6	1	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	318	s	6	15	table	
+6	1	MWG NoStab	simple (jet only)	time of arrival relative to observed	0.72	ratio	6	15	table	
+6	1	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	260	s	6	15	table	
+6	1	3 km WRF	simple (jet only)	time of arrival relative to observed	0.59	ratio	6	15	table	
+6	2	JR II data		time of arrival of the arc maximum, observed	733	s	6	15	table	
+6	2	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	613	s	6	15	table	
+6	2	MWG StabE	simple (jet only)	time of arrival relative to observed	0.84	ratio	6	15	table	
+6	2	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	595	s	6	15	table	
+6	2	MWG NoStab	simple (jet only)	time of arrival relative to observed	0.81	ratio	6	15	table	
+6	2	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	444	s	6	15	table	
+6	2	3 km WRF	simple (jet only)	time of arrival relative to observed	0.61	ratio	6	15	table	
+6	5	JR II data		time of arrival of the arc maximum, observed	1488	s	6	15	table	
+6	5	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	1317	s	6	15	table	
+6	5	MWG StabE	simple (jet only)	time of arrival relative to observed	0.89	ratio	6	15	table	
+6	5	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	1468	s	6	15	table	
+6	5	MWG NoStab	simple (jet only)	time of arrival relative to observed	0.99	ratio	6	15	table	
+6	5	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	954	s	6	15	table	
+6	5	3 km WRF	simple (jet only)	time of arrival relative to observed	0.64	ratio	6	15	table	
+6	11	JR II data		time of arrival of the arc maximum, observed	3045	s	6	15	table	
+6	11	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	2543	s	6	15	table	
+6	11	MWG StabE	simple (jet only)	time of arrival relative to observed	0.84	ratio	6	15	table	
+6	11	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	3155	s	6	15	table	
+6	11	MWG NoStab	simple (jet only)	time of arrival relative to observed	1.04	ratio	6	15	table	
+6	11	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	1989	s	6	15	table	
+6	11	3 km WRF	simple (jet only)	time of arrival relative to observed	0.65	ratio	6	15	table	
+7	0.5	JR II data		time of arrival of the arc maximum, observed	93	s	7	16	table	
+7	0.5	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	162	s	7	16	table	
+7	0.5	MWG StabE	simple (jet only)	time of arrival relative to observed	1.74	ratio	7	16	table	
+7	0.5	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	164	s	7	16	table	
+7	0.5	MWG NoStab	simple (jet only)	time of arrival relative to observed	1.76	ratio	7	16	table	
+7	0.5	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	86	s	7	16	table	
+7	0.5	3 km WRF	simple (jet only)	time of arrival relative to observed	0.92	ratio	7	16	table	
+7	1	JR II data		time of arrival of the arc maximum, observed	258	s	7	16	table	
+7	1	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	274	s	7	16	table	
+7	1	MWG StabE	simple (jet only)	time of arrival relative to observed	1.06	ratio	7	16	table	
+7	1	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	280	s	7	16	table	
+7	1	MWG NoStab	simple (jet only)	time of arrival relative to observed	1.09	ratio	7	16	table	
+7	1	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	133	s	7	16	table	
+7	1	3 km WRF	simple (jet only)	time of arrival relative to observed	0.52	ratio	7	16	table	
+7	2	JR II data		time of arrival of the arc maximum, observed	443	s	7	16	table	
+7	2	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	473	s	7	16	table	
+7	2	MWG StabE	simple (jet only)	time of arrival relative to observed	1.07	ratio	7	16	table	
+7	2	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	513	s	7	16	table	
+7	2	MWG NoStab	simple (jet only)	time of arrival relative to observed	1.16	ratio	7	16	table	
+7	2	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	214	s	7	16	table	
+7	2	3 km WRF	simple (jet only)	time of arrival relative to observed	0.48	ratio	7	16	table	
+7	5	JR II data		time of arrival of the arc maximum, observed	1055	s	7	16	table	
+7	5	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	1057	s	7	16	table	
+7	5	MWG StabE	simple (jet only)	time of arrival relative to observed	1.00	ratio	7	16	table	
+7	5	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	1231	s	7	16	table	
+7	5	MWG NoStab	simple (jet only)	time of arrival relative to observed	1.17	ratio	7	16	table	
+7	5	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	454	s	7	16	table	
+7	5	3 km WRF	simple (jet only)	time of arrival relative to observed	0.43	ratio	7	16	table	
+7	11	JR II data		time of arrival of the arc maximum, observed	2052	s	7	16	table	
+7	11	MWG StabE	simple (jet only)	time of arrival of the arc maximum, modelled	2023	s	7	16	table	
+7	11	MWG StabE	simple (jet only)	time of arrival relative to observed	0.99	ratio	7	16	table	
+7	11	MWG NoStab	simple (jet only)	time of arrival of the arc maximum, modelled	2507	s	7	16	table	
+7	11	MWG NoStab	simple (jet only)	time of arrival relative to observed	1.22	ratio	7	16	table	
+7	11	3 km WRF	simple (jet only)	time of arrival of the arc maximum, modelled	962	s	7	16	table	
+7	11	3 km WRF	simple (jet only)	time of arrival relative to observed	0.47	ratio	7	16	table	
+1	0.5	JR II data		observed plume width across the arc, Dob	462	m	8	20	table	
+1	0.5	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	574	m	8	20	table	
+1	0.5	MWG StabE	simple (jet only)	overlap distance, Dov	462	m	8	20	table	
+1	0.5	MWG StabE	simple (jet only)	MOE percentage overlap	80.5%	percent	8	20	table	
+1	0.5	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	574	m	8	20	table	
+1	0.5	MWG NoStab	simple (jet only)	overlap distance, Dov	462	m	8	20	table	
+1	0.5	MWG NoStab	simple (jet only)	MOE percentage overlap	80.5%	percent	8	20	table	
+1	0.5	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	676	m	8	20	table	
+1	0.5	3 km WRF	simple (jet only)	overlap distance, Dov	423	m	8	20	table	
+1	0.5	3 km WRF	simple (jet only)	MOE percentage overlap	57.3%	percent	8	20	table	
+1	1	JR II data		observed plume width across the arc, Dob	684	m	8	20	table	
+1	1	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	765	m	8	20	table	
+1	1	MWG StabE	simple (jet only)	overlap distance, Dov	684	m	8	20	table	
+1	1	MWG StabE	simple (jet only)	MOE percentage overlap	89.4%	percent	8	20	table	
+1	1	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	765	m	8	20	table	
+1	1	MWG NoStab	simple (jet only)	overlap distance, Dov	684	m	8	20	table	
+1	1	MWG NoStab	simple (jet only)	MOE percentage overlap	89.4%	percent	8	20	table	
+1	1	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	1000	m	8	20	table	
+1	1	3 km WRF	simple (jet only)	overlap distance, Dov	347	m	8	20	table	
+1	1	3 km WRF	simple (jet only)	MOE percentage overlap	17.6%	percent	8	20	table	
+1	2	JR II data		observed plume width across the arc, Dob	864	m	8	20	table	
+1	2	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	1033	m	8	20	table	
+1	2	MWG StabE	simple (jet only)	overlap distance, Dov	864	m	8	20	table	
+1	2	MWG StabE	simple (jet only)	MOE percentage overlap	83.6%	percent	8	20	table	
+1	2	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	864	m	8	20	table	
+1	2	MWG NoStab	simple (jet only)	overlap distance, Dov	864	m	8	20	table	
+1	2	MWG NoStab	simple (jet only)	MOE percentage overlap	100.0%	percent	8	20	table	
+1	2	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	1366	m	8	20	table	
+1	2	3 km WRF	simple (jet only)	overlap distance, Dov	0*	m	8	20	table	the asterisk: one common sensor, overlap not quantifiable (p. 19)
+1	2	3 km WRF	simple (jet only)	MOE percentage overlap	0.0%	percent	8	20	table	
+1	5	JR II data		observed plume width across the arc, Dob	872	m	8	20	table	
+1	5	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	1305	m	8	20	table	
+1	5	MWG StabE	simple (jet only)	overlap distance, Dov	872	m	8	20	table	
+1	5	MWG StabE	simple (jet only)	MOE percentage overlap	66.8%	percent	8	20	table	
+1	5	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	1305	m	8	20	table	
+1	5	MWG NoStab	simple (jet only)	overlap distance, Dov	872	m	8	20	table	
+1	5	MWG NoStab	simple (jet only)	MOE percentage overlap	66.8%	percent	8	20	table	
+1	5	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	2586	m	8	20	table	
+1	5	3 km WRF	simple (jet only)	overlap distance, Dov	0	m	8	20	table	
+1	5	3 km WRF	simple (jet only)	MOE percentage overlap	0.0%	percent	8	20	table	
+1	11	JR II data		observed plume width across the arc, Dob	960	m	8	20	table	
+1	11	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	1917	m	8	20	table	
+1	11	MWG StabE	simple (jet only)	overlap distance, Dov	960	m	8	20	table	
+1	11	MWG StabE	simple (jet only)	MOE percentage overlap	50.1%	percent	8	20	table	
+1	11	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	1917	m	8	20	table	
+1	11	MWG NoStab	simple (jet only)	overlap distance, Dov	960	m	8	20	table	
+1	11	MWG NoStab	simple (jet only)	MOE percentage overlap	50.1%	percent	8	20	table	
+1	11	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	0	m	8	20	table	
+1	11	3 km WRF	simple (jet only)	overlap distance, Dov	0	m	8	20	table	
+1	11	3 km WRF	simple (jet only)	MOE percentage overlap	0.0%	percent	8	20	table	
+1	0.5, 1, 2, 5, 11 (equal weights)	MWG StabE	simple (jet only)	MOE average overlap over all arcs	74.1%	percent	8	20	table	acceptable at 70 percent (p. 19)
+1	0.5, 1, 2, 5, 11 (equal weights)	MWG NoStab	simple (jet only)	MOE average overlap over all arcs	77.4%	percent	8	20	table	acceptable at 70 percent (p. 19)
+1	0.5, 1, 2, 5, 11 (equal weights)	3 km WRF	simple (jet only)	MOE average overlap over all arcs	15.0%	percent	8	20	table	acceptable at 70 percent (p. 19)
+6	0.5	JR II data		observed plume width across the arc, Dob	500	m	9	20	table	
+6	0.5	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	692	m	9	20	table	
+6	0.5	MWG StabE	simple (jet only)	overlap distance, Dov	500	m	9	20	table	
+6	0.5	MWG StabE	simple (jet only)	MOE percentage overlap	72.3%	percent	9	20	table	
+6	0.5	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	692	m	9	20	table	
+6	0.5	MWG NoStab	simple (jet only)	overlap distance, Dov	500	m	9	20	table	
+6	0.5	MWG NoStab	simple (jet only)	MOE percentage overlap	72.3%	percent	9	20	table	
+6	0.5	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	643	m	9	20	table	
+6	0.5	3 km WRF	simple (jet only)	overlap distance, Dov	500	m	9	20	table	
+6	0.5	3 km WRF	simple (jet only)	MOE percentage overlap	77.8%	percent	9	20	table	
+6	1	JR II data		observed plume width across the arc, Dob	560	m	9	20	table	
+6	1	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	1000	m	9	20	table	
+6	1	MWG StabE	simple (jet only)	overlap distance, Dov	560	m	9	20	table	
+6	1	MWG StabE	simple (jet only)	MOE percentage overlap	56.0%	percent	9	20	table	
+6	1	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	1037	m	9	20	table	
+6	1	MWG NoStab	simple (jet only)	overlap distance, Dov	560	m	9	20	table	
+6	1	MWG NoStab	simple (jet only)	MOE percentage overlap	54.0%	percent	9	20	table	
+6	1	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	962	m	9	20	table	
+6	1	3 km WRF	simple (jet only)	overlap distance, Dov	518	m	9	20	table	
+6	1	3 km WRF	simple (jet only)	MOE percentage overlap	49.8%	percent	9	20	table	
+6	2	JR II data		observed plume width across the arc, Dob	608	m	9	20	table	
+6	2	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	1203	m	9	20	table	
+6	2	MWG StabE	simple (jet only)	overlap distance, Dov	608	m	9	20	table	
+6	2	MWG StabE	simple (jet only)	MOE percentage overlap	50.5%	percent	9	20	table	
+6	2	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	1368	m	9	20	table	
+6	2	MWG NoStab	simple (jet only)	overlap distance, Dov	608	m	9	20	table	
+6	2	MWG NoStab	simple (jet only)	MOE percentage overlap	44.4%	percent	9	20	table	
+6	2	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	1203	m	9	20	table	
+6	2	3 km WRF	simple (jet only)	overlap distance, Dov	262	m	9	20	table	
+6	2	3 km WRF	simple (jet only)	MOE percentage overlap	9.4%	percent	9	20	table	
+6	5	JR II data		observed plume width across the arc, Dob	436	m	9	20	table	
+6	5	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	1521	m	9	20	table	
+6	5	MWG StabE	simple (jet only)	overlap distance, Dov	436	m	9	20	table	
+6	5	MWG StabE	simple (jet only)	MOE percentage overlap	28.7%	percent	9	20	table	
+6	5	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	2588	m	9	20	table	
+6	5	MWG NoStab	simple (jet only)	overlap distance, Dov	436	m	9	20	table	
+6	5	MWG NoStab	simple (jet only)	MOE percentage overlap	16.8%	percent	9	20	table	
+6	5	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	2377	m	9	20	table	
+6	5	3 km WRF	simple (jet only)	overlap distance, Dov	0	m	9	20	table	
+6	5	3 km WRF	simple (jet only)	MOE percentage overlap	0.0%	percent	9	20	table	
+6	11	JR II data		observed plume width across the arc, Dob	1917	m	9	20	table	
+6	11	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	1919	m	9	20	table	
+6	11	MWG StabE	simple (jet only)	overlap distance, Dov	962	m	9	20	table	
+6	11	MWG StabE	simple (jet only)	MOE percentage overlap	25.2%	percent	9	20	table	
+6	11	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	4290	m	9	20	table	
+6	11	MWG NoStab	simple (jet only)	overlap distance, Dov	1917	m	9	20	table	
+6	11	MWG NoStab	simple (jet only)	MOE percentage overlap	44.7%	percent	9	20	table	
+6	11	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	4293	m	9	20	table	
+6	11	3 km WRF	simple (jet only)	overlap distance, Dov	0	m	9	20	table	
+6	11	3 km WRF	simple (jet only)	MOE percentage overlap	0.0%	percent	9	20	table	
+6	0.5, 1, 2, 5, 11 (equal weights)	MWG StabE	simple (jet only)	MOE average overlap over all arcs	46.5%	percent	9	20	table	acceptable at 70 percent (p. 19)
+6	0.5, 1, 2, 5, 11 (equal weights)	MWG NoStab	simple (jet only)	MOE average overlap over all arcs	46.4%	percent	9	20	table	acceptable at 70 percent (p. 19)
+6	0.5, 1, 2, 5, 11 (equal weights)	3 km WRF	simple (jet only)	MOE average overlap over all arcs	27.4%	percent	9	20	table	acceptable at 70 percent (p. 19)
+7	0.5	JR II data		observed plume width across the arc, Dob	301	m	10	20	table	
+7	0.5	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	659	m	10	20	table	
+7	0.5	MWG StabE	simple (jet only)	overlap distance, Dov	301	m	10	20	table	
+7	0.5	MWG StabE	simple (jet only)	MOE percentage overlap	45.7%	percent	10	20	table	
+7	0.5	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	659	m	10	20	table	
+7	0.5	MWG NoStab	simple (jet only)	overlap distance, Dov	301	m	10	20	table	
+7	0.5	MWG NoStab	simple (jet only)	MOE percentage overlap	45.7%	percent	10	20	table	
+7	0.5	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	423	m	10	20	table	
+7	0.5	3 km WRF	simple (jet only)	overlap distance, Dov	174	m	10	20	table	
+7	0.5	3 km WRF	simple (jet only)	MOE percentage overlap	23.8%	percent	10	20	table	
+7	1	JR II data		observed plume width across the arc, Dob	433	m	10	20	table	
+7	1	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	915	m	10	20	table	
+7	1	MWG StabE	simple (jet only)	overlap distance, Dov	433	m	10	20	table	
+7	1	MWG StabE	simple (jet only)	MOE percentage overlap	47.3%	percent	10	20	table	
+7	1	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	915	m	10	20	table	
+7	1	MWG NoStab	simple (jet only)	overlap distance, Dov	433	m	10	20	table	
+7	1	MWG NoStab	simple (jet only)	MOE percentage overlap	47.3%	percent	10	20	table	
+7	1	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	560	m	10	20	table	
+7	1	3 km WRF	simple (jet only)	overlap distance, Dov	0	m	10	20	table	
+7	1	3 km WRF	simple (jet only)	MOE percentage overlap	0.0%	percent	10	20	table	
+7	2	JR II data		observed plume width across the arc, Dob	608	m	10	20	table	
+7	2	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	951	m	10	20	table	
+7	2	MWG StabE	simple (jet only)	overlap distance, Dov	522	m	10	20	table	
+7	2	MWG StabE	simple (jet only)	MOE percentage overlap	47.1%	percent	10	20	table	
+7	2	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	951	m	10	20	table	
+7	2	MWG NoStab	simple (jet only)	overlap distance, Dov	608	m	10	20	table	
+7	2	MWG NoStab	simple (jet only)	MOE percentage overlap	63.9%	percent	10	20	table	
+7	2	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	694	m	10	20	table	
+7	2	3 km WRF	simple (jet only)	overlap distance, Dov	0	m	10	20	table	
+7	2	3 km WRF	simple (jet only)	MOE percentage overlap	0.0%	percent	10	20	table	
+7	5	JR II data		observed plume width across the arc, Dob	1521	m	10	20	table	
+7	5	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	1305	m	10	20	table	
+7	5	MWG StabE	simple (jet only)	overlap distance, Dov	1089	m	10	20	table	
+7	5	MWG StabE	simple (jet only)	MOE percentage overlap	59.7%	percent	10	20	table	
+7	5	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	1951	m	10	20	table	
+7	5	MWG NoStab	simple (jet only)	overlap distance, Dov	1521	m	10	20	table	
+7	5	MWG NoStab	simple (jet only)	MOE percentage overlap	78.0%	percent	10	20	table	
+7	5	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	1299	m	10	20	table	
+7	5	3 km WRF	simple (jet only)	overlap distance, Dov	0	m	10	20	table	
+7	5	3 km WRF	simple (jet only)	MOE percentage overlap	0.0%	percent	10	20	table	
+7	11	JR II data		observed plume width across the arc, Dob	480	m	10	20	table	
+7	11	MWG StabE	simple (jet only)	predicted plume width across the arc, Dpr	1441	m	10	20	table	
+7	11	MWG StabE	simple (jet only)	overlap distance, Dov	480	m	10	20	table	
+7	11	MWG StabE	simple (jet only)	MOE percentage overlap	33.3%	percent	10	20	table	
+7	11	MWG NoStab	simple (jet only)	predicted plume width across the arc, Dpr	3347	m	10	20	table	
+7	11	MWG NoStab	simple (jet only)	overlap distance, Dov	480	m	10	20	table	
+7	11	MWG NoStab	simple (jet only)	MOE percentage overlap	14.3%	percent	10	20	table	
+7	11	3 km WRF	simple (jet only)	predicted plume width across the arc, Dpr	2871	m	10	20	table	
+7	11	3 km WRF	simple (jet only)	overlap distance, Dov	0	m	10	20	table	
+7	11	3 km WRF	simple (jet only)	MOE percentage overlap	0.0%	percent	10	20	table	
+7	0.5, 1, 2, 5, 11 (equal weights)	MWG StabE	simple (jet only)	MOE average overlap over all arcs	46.6%	percent	10	20	table	acceptable at 70 percent (p. 19)
+7	0.5, 1, 2, 5, 11 (equal weights)	MWG NoStab	simple (jet only)	MOE average overlap over all arcs	49.8%	percent	10	20	table	acceptable at 70 percent (p. 19)
+7	0.5, 1, 2, 5, 11 (equal weights)	3 km WRF	simple (jet only)	MOE average overlap over all arcs	4.8%	percent	10	20	table	acceptable at 70 percent (p. 19)
+1		MWG StabE	simple (jet only)	AEGL-3 (20 ppm, 60 min) footprint area	1.87	km2	13	27	table	
+1		MWG StabE	simple (jet only)	AEGL-2 (2 ppm, 60 min) footprint area	23.01	km2	13	27	table	
+6		MWG StabE	simple (jet only)	AEGL-3 (20 ppm, 60 min) footprint area	3.61	km2	13	27	table	
+6		MWG StabE	simple (jet only)	AEGL-2 (2 ppm, 60 min) footprint area	26.85	km2	13	27	table	
+7		MWG StabE	simple (jet only)	AEGL-3 (20 ppm, 60 min) footprint area	3.63	km2	13	27	table	
+7		MWG StabE	simple (jet only)	AEGL-2 (2 ppm, 60 min) footprint area	33.23	km2	13	27	table	
+1		MWG NoStab	simple (jet only)	AEGL-3 (20 ppm, 60 min) footprint area	1.85	km2	13	27	table	
+1		MWG NoStab	simple (jet only)	AEGL-2 (2 ppm, 60 min) footprint area	15.21	km2	13	27	table	
+6		MWG NoStab	simple (jet only)	AEGL-3 (20 ppm, 60 min) footprint area	0.58	km2	13	27	table	
+6		MWG NoStab	simple (jet only)	AEGL-2 (2 ppm, 60 min) footprint area	9.76	km2	13	27	table	
+7		MWG NoStab	simple (jet only)	AEGL-3 (20 ppm, 60 min) footprint area	1.76	km2	13	27	table	
+7		MWG NoStab	simple (jet only)	AEGL-2 (2 ppm, 60 min) footprint area	20.88	km2	13	27	table	
+1		3 km WRF	simple (jet only)	AEGL-3 (20 ppm, 60 min) footprint area	0.65	km2	13	27	table	
+1		3 km WRF	simple (jet only)	AEGL-2 (2 ppm, 60 min) footprint area	9.17	km2	13	27	table	
+6		3 km WRF	simple (jet only)	AEGL-3 (20 ppm, 60 min) footprint area	0.60	km2	13	27	table	
+6		3 km WRF	simple (jet only)	AEGL-2 (2 ppm, 60 min) footprint area	15.66	km2	13	27	table	
+7		3 km WRF	simple (jet only)	AEGL-3 (20 ppm, 60 min) footprint area	0.35	km2	13	27	table	
+7		3 km WRF	simple (jet only)	AEGL-2 (2 ppm, 60 min) footprint area	17.57	km2	13	27	table	
+1	0.2, 0.5, 1, 2, 5, 11	JR II data and the three weather sets	simple (jet only)	observed and modelled arc maxima behind FAC2		ppm	Figure 13	23	figure only	not tabulated: the paper plots the observed and modelled arc maxima on log-log axes, saturated sensors as white circles (pp. 23 to 25); the FAC2 of Tables 11 and 12 is the fraction of these arcs within a factor of two (p. 23)
+6	0.2, 0.5, 1, 2, 5, 11	JR II data and the three weather sets	simple (jet only)	observed and modelled arc maxima behind FAC2		ppm	Figure 14	24	figure only	not tabulated: the paper plots the observed and modelled arc maxima on log-log axes, saturated sensors as white circles (pp. 23 to 25); the FAC2 of Tables 11 and 12 is the fraction of these arcs within a factor of two (p. 23)
+7	0.2, 0.5, 1, 2, 5, 11	JR II data and the three weather sets	simple (jet only)	observed and modelled arc maxima behind FAC2		ppm	Figure 15	25	figure only	not tabulated: the paper plots the observed and modelled arc maxima on log-log axes, saturated sensors as white circles (pp. 23 to 25); the FAC2 of Tables 11 and 12 is the fraction of these arcs within a factor of two (p. 23)

@@ -1,0 +1,148 @@
+# HB-178 Part A item 4 (Issue d16f6882; DN-028 ADDENDUM-06; ADDENDUM-01 of HB-178 section 1): the one table of what
+# each dense-gas engine was checked or compared against, by material, from which each brief's TEVV sections T7
+# (SLAB) and T45 (SCICHEM) name the held trials that match the brief's own material, or say that none does and list
+# what is held for other materials as such. Nothing here is written per brief.
+#
+# Every figure is read from the held evidence file it names (`figures`), never retyped here: HB-176's summary and
+# arcs (docs/evidence/hb176/summary.tsv; docs/evidence/hb177/hb176_restated.tsv, the same arcs with the like-for-like
+# scoring HB-177 added) and HB-169's railcar benchmark (docs/evidence/hb169/benchmark.tsv). A row's `quote_from` is an
+# existing configured sentence, read where it stands, not copied. A row's `material` is the UN numbers of the
+# properties pack it matches, with the name the held source gives it; `source` is the corpus key or the design record.
+#
+# `kind`:
+#   check_case   an engine check hazbrief runs at every image build (no observation)
+#   field_trial  a field trial with measured arc maxima that hazbrief ran itself (HB-176, HB-177)
+#   reported     a field trial evaluation others ran and a held report states
+#   comparison   a published model comparison of one case, not observation
+#
+# The engines: `slab` (section T7), `scichem` (section T45).
+
+files:
+  summary: docs/evidence/hb176/summary.tsv
+  arcs: docs/evidence/hb177/hb176_restated.tsv
+  benchmark: docs/evidence/hb169/benchmark.tsv
+
+sections:
+  slab: dense_gas
+  scichem: harm_path
+
+words:
+  # the pooled comparison, both engines, numbers from `files.summary` and `files.arcs`' second table
+  pooled:
+    slab: "Compared with {slab_arcs} measured arc maxima from {slab_trials} stable field trials of other releases at {nearest_arc_m} to {farthest_arc_m} m ({trials}), run as hazbrief runs SLAB: MG {slab_mg}, VG {slab_vg}, within a factor of two at {slab_within_factor_two} of {slab_arcs} (HB-176; DN-028 ADDENDUM-06)."
+    scichem: "Compared with {scichem_arcs} measured arc maxima from {scichem_trials} stable field trials of other releases at {nearest_arc_m} to {farthest_arc_m} m ({trials}), run as hazbrief runs SCICHEM on the PGT layer: its mean, which the brief draws, MG {scichem_pgt_mg}, VG {mean_vg}, within a factor of two at {mean_fac2} of {scichem_arcs}, below every measured maximum by a factor of {scichem_pgt_factor_below} on geometric average (HB-176; DN-028 ADDENDUM-06; Issue c998e714); the same run scored as its authors score a peak, MG {peak_mg}, VG {peak_vg}, below {peak_below} of {scichem_arcs} (HB-177; DN-028 ADDENDUM-07)."
+  # the trial names as the pooled sentence lists them, each with its material
+  pooled_trial: "{title}, {material}"
+  # this brief's material: matching rows, then the line for none
+  matching: "Of this release's material ({material}, UN{un}): {rows}."
+  none: "No held trial or check is of this release's material (UN{un}); what is held is of other materials: {others}."
+  other: "{title} ({material})"
+  arc_head: "{title} ({source}; HB-176; HB-177): "
+  arc: "at {x:,} m{statistic}, {engine} as hazbrief runs it {ratio}"
+  arc_in_statistic: ", in the statistic"
+  arc_outside_statistic: ", outside the statistic"
+  ratio_slab: "{slab:.2f} of the measured maximum"
+  ratio_scichem: "{mean:.2f} of the measured maximum as its mean, which the brief draws, and {peak:.2f} scored as its authors score a peak"
+  benchmark: "{title}, {what}: {engine} as hazbrief runs it {lo:.2f} to {hi:.2f} of its published curve ({variant}; {ref})"
+  join: "; "
+
+trials:
+  - id: scichem_check
+    kind: check_case
+    engines: [scichem]
+    title: "HB-165's check case"
+    material: {un: ["1017"], name: chlorine}
+    source: "deploy/models/scichem/check/check_engine.py; HB-167"
+    # the sentence section T45 already states, first in its `checked` list
+    what: "the check above"
+  # SLAB's four distributed test cases (epa-slab-code.zip INPR1 to INPR4; materials as docs/evidence/hb102/inventory.md
+  # and docs/evidence/hb124/slab_inputs.md read them), each reproduced at every build of the models image
+  - id: slab_check_pr2
+    kind: check_case
+    engines: [slab]
+    title: "SLAB test case 2"
+    what: "a horizontal jet, reproduced at every image build"
+    material: {un: ["1005"], name: ammonia}
+    source: "epa-slab-code.zip INPR2; deploy/models/check_cases.py"
+  - id: slab_check_pr4
+    kind: check_case
+    engines: [slab]
+    title: "SLAB test case 4"
+    what: "a two-phase jet, reproduced at every image build"
+    material: {un: ["1017"], name: chlorine}
+    source: "epa-slab-code.zip INPR4; deploy/models/check_cases.py"
+  - id: slab_check_pr1_pr3
+    kind: check_case
+    engines: [slab]
+    title: "SLAB test cases 1 and 3"
+    what: "an evaporating pool and an instantaneous release, reproduced at every image build"
+    material: {un: ["1972"], name: "methane, as LNG"}
+    source: "epa-slab-code.zip INPR1 and INPR3; deploy/models/check_cases.py"
+  - id: DT4
+    kind: field_trial
+    engines: [slab, scichem]
+    title: "Desert Tortoise 4"
+    material: {un: ["1005"], name: ammonia}
+    source: hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2
+    arcs: [800, 100]
+    # the 100 m arc is outside the statistic (under 200 m) and inside the two-phase jet's 147 m cone (HB-177)
+    note: {100: "inside the 147 m two-phase cone, where a cone-end source computes nothing"}
+    pooled: true
+  - id: TC45
+    kind: field_trial
+    engines: [slab, scichem]
+    title: "Thorney Island 045"
+    material: {un: [], name: "Freon-12 and nitrogen"}
+    source: hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2
+    pooled: true
+  - id: TC47
+    kind: field_trial
+    engines: [slab, scichem]
+    title: "Thorney Island 047"
+    material: {un: [], name: "Freon-12 and nitrogen"}
+    source: hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2
+    pooled: true
+  - id: BU8
+    kind: field_trial
+    engines: [slab]
+    title: "Burro 8"
+    material: {un: ["1972"], name: LNG}
+    source: hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2
+    pooled: true
+  - id: jack_rabbit_ii
+    kind: reported
+    engines: [slab, scichem]
+    title: "Jack Rabbit II Trials 1, 6 and 7"
+    material: {un: ["1017"], name: chlorine}
+    source: mazzola-2020-jack-rabbit-ii-17-dense-gas-models-manuscript
+    # the sentence the agreement pop-out already states (agreement.yaml `evaluations.jack_rabbit`)
+    quote_from: {file: agreement, key: [evaluations, jack_rabbit]}
+  - id: chicago_railcar
+    kind: comparison
+    engines: [slab, scichem]
+    title: "the Chicago railcar comparison"
+    what: "a published model comparison of a class F chlorine release, not observation"
+    material: {un: ["1017"], name: chlorine}
+    source: hanna-chang-2008-gaps-tic-model-systems
+    benchmark: {case: chicago-f, slab: published, scichem: pgt_f, ref: "Figure 3; DN-028 ADDENDUM-01 and ADDENDUM-03 section 1"}
+  - id: epa_1991_desert_tortoise
+    kind: reported
+    engines: [slab]
+    title: "Desert Tortoise 1, 2 and 4 in the 1991 EPA evaluation"
+    material: {un: ["1005"], name: ammonia}
+    source: epa-dense-gas-evaluation-1991
+    quote_from: {section: null, config: [weather, dense_gas, evaluation, jet]}
+  - id: epa_1991_goldfish
+    kind: reported
+    engines: [slab]
+    title: "Goldfish 1 to 3 in the 1991 EPA evaluation"
+    material: {un: ["1052", "1790"], name: "hydrofluoric acid"}
+    source: epa-dense-gas-evaluation-1991
+    quote_from: {section: null, config: [weather, dense_gas, evaluation, jet]}
+  - id: epa_1991_burro
+    kind: reported
+    engines: [slab]
+    title: "Burro in the 1991 EPA evaluation"
+    material: {un: ["1972"], name: LNG}
+    source: epa-dense-gas-evaluation-1991
+    quote_from: {section: null, config: [weather, dense_gas, evaluation, cryogenic_pool]}

@@ -1,0 +1,131 @@
+# Cross-cutting flag rules that bind pack fields rather than guide text (HB-12 step 4). Written by
+# hand, as packs/src/flag_rules.yaml is, and compiled with it by `scripts/build_packs.py
+# flag_rules`; each is `source_kind: table`: it reads an ERG table's membership as the erg pack
+# carries it, and its receipts are the ERG page that defines the table (verified on the held page
+# by the build). They apply to every material (`table_rule_set`), not to a hazard class.
+
+rules:
+  - rule_id: FR-T2-01
+    kind: table.water_reactive
+    title: Water-reactive material spilled in water (ERG Table 2)
+    modes: [highway, rail]
+    inputs:
+      - name: where_spilled
+        tool: protective_action_footprint
+        field: incident.where_spilled (land or water)
+        dataset: incident report
+        description: The surface the spill is on.
+      - name: where_spilled_matters
+        tool: assess_incident
+        field: erg materials[un].where_spilled_matters (ERG Table 2 lists the material)
+        dataset: erg2024-en-pdf
+        description: Whether ERG Table 2 lists the material.
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: where_spilled, op: eq, value: water}
+        - {input: where_spilled_matters, op: is_true}
+    template: >-
+      The material is spilled in water and produces toxic inhalation hazard gases. Use the
+      Table 1 entry for a spill in water.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 336
+        quote: "Table 2 lists materials which produce large amounts of Toxic Inhalation Hazard (TIH) (PIH in the US) gases when spilled in water, and identifies the TIH gases produced."
+        supports: What Table 2 lists.
+      - doc_id: erg2024-en-pdf
+        page: 336
+        quote: "These water-reactive materials are easily identified in Table 1 as their names are immediately followed by (when spilled in water)."
+        supports: The Table 1 entry for a spill in water is the one that applies.
+    basis: HB-12 step 4; HB-08b (where_spilled)
+    gaps: []
+    # HB-12b (DN-006 3.4): consolidated into each Table 2 material's guide flag of this kind; a
+    # guide with no water sentence (171) gets that flag from this rule alone.
+    merge_into_kind: water_reactive
+    # The consequence of a guide flag made from this rule alone (guide 171): the user's guide
+    # states it without the "(PIH in the US)" the p. 336 sentence prints, a term the stylebook
+    # forbids in output (VOCABULARY.yaml, PIH under TIH).
+    consequence: {doc_id: erg2024-en-pdf, page: 350, quote: "materials which produce large amounts of Toxic Inhalation Hazard (TIH) gases when spilled in water"}
+
+  - rule_id: FR-T3-01
+    kind: table.table3
+    title: A common TIH gas with container-specific large spill distances (ERG Table 3)
+    modes: [highway, rail]
+    inputs:
+      - name: table3_listed
+        tool: assess_incident
+        field: erg materials[un].table3 is present
+        dataset: erg2024-en-pdf
+        description: Whether ERG Table 3 lists the material.
+      - name: spill_size
+        tool: assess_incident
+        field: incident.spill_size
+        dataset: incident report
+        description: small, large or unknown.
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: table3_listed, op: is_true}
+        - {input: spill_size, op: in, value: [large, unknown]}
+    template: >-
+      The material is a toxic inhalation hazard gas that ERG Table 3 lists. Its large spill
+      distances depend on the transport container and the wind speed. Confirm the container.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 342
+        quote: "Table 3 lists Toxic Inhalation Hazard (TIH) materials that may be more commonly encountered."
+        supports: What Table 3 lists.
+    basis: HB-12 step 4
+    gaps: []
+    # HB-12b (DN-006 3.4): consolidated into each Table 3 material's guide flag of this kind.
+    merge_into_kind: toxic_by_inhalation
+
+  # HB-18 (A-3): an input the ERG answers with several candidates. Its cause is the number of
+  # yellow-index rows (a name under several ID numbers, an ID number whose names carry different
+  # guides) or placard-table rows the input matches, which protective_action_footprint counts; the
+  # footprint then draws every candidate and prints the largest distances. It merges into no
+  # guide flag (no `merge_into_kind`): it applies to every input (`table_rule_set`). Priority high
+  # (DN-006 section 3.5: the consequence changes the protective distance). The fired flag carries
+  # every candidate's name, ID number and guide as its receipts (`candidates`).
+  - rule_id: FR-AMB-01
+    kind: identification.ambiguous_material
+    title: The load as reported matches several ERG entries
+    modes: [highway, rail]
+    inputs:
+      - name: candidate_count
+        tool: protective_action_footprint
+        field: ambiguity.candidate_count (yellow-index or placard-table rows the input matches)
+        dataset: erg2024-en-pdf
+        description: How many candidates the ERG gives for the load as reported.
+      - name: governing_candidate
+        tool: protective_action_footprint
+        field: ambiguity.candidates[ambiguity.governing].label
+        dataset: erg2024-en-pdf
+        description: The candidate whose zones give the farthest distance.
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: candidate_count, op: gt, value: 1}
+    template: >-
+      The load as reported matches {candidate_count} candidates. The distances shown are the
+      largest among them, those of {governing_candidate}.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 9
+        quote: "If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions)."
+        supports: Several candidates are answered by the one needing the most protective action.
+      - doc_id: erg2024-en-pdf
+        page: 290
+        quote: "If you do not know the shipping name and Table 1 lists more than one name for the same ID number, use the entry with the largest distances."
+        supports: The same rule for Table 1's names under one ID number.
+      - doc_id: erg2024-en-pdf
+        page: 9
+        quote: "When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted."
+        supports: Identifying the material settles the candidates.
+    basis: HB-18 (A-3; DN-001 section 4, an ambiguity is reported, never resolved silently)
+    gaps: []
+    consequence: {doc_id: erg2024-en-pdf, page: 9, quote: "If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions)."}
+    response: {doc_id: erg2024-en-pdf, page: 9, quote: "When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted."}

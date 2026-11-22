@@ -1,0 +1,1132 @@
+# HB-190: the corpus/sources.yaml rows this task adds (tools/rows.py writes this file; tools/land_rows.py lands it).
+# Part A: HB-188's twenty fetched sources (full text). Part B: two works held in full at rung 1. Parts B and C:
+# the works not held in full, held as their OpenAlex record (metadata and abstract, or metadata where no abstract
+# is deposited). Every row says how it was got: plan fetch (the manifest's acquired_by), held_as, and for a
+# record, open_copy_searched.
+sources:
+- doc_id: hb188-admlc-2023-scipuff-id4314
+  priority: 6
+  title: SCIPUFF Modelling of Dense Gas Dispersion (Ian Sykes, Xator Corporation; ADMLC, 7 March 2023)
+  publisher: Defense Threat Reduction Agency presentation to the UK Atmospheric Dispersion Modelling Liaison Committee (ADMLC),
+    hosted by admlc.com
+  edition: 2023-03-07 (PA approved, id 4314)
+  url: https://admlc.com/wp-content/uploads/2023/03/scipuff_admlc2023_id4314_pa-approved-002.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: deterministic
+  reuse: public-release
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 82, sha256 f738770e...) and
+    cited by 5 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: its first page reads "Approved for public release" (DTRA).'
+  role: method
+  kb_reason: SCIPUFF's dense-gas terms as its author presented them in 2023 (HB-188 R1, R3).
+- doc_id: hb188-admlc-dgd-seminar
+  priority: 6
+  title: Review of dense-gas dispersion for industrial regulation and emergency preparedness and response (ADMLC seminar
+    slides; Rachel Batt, HSE)
+  publisher: Atmospheric Dispersion Modelling Liaison Committee (ADMLC) seminar, Health and Safety Executive
+  edition: '2021'
+  url: https://admlc.com/wp-content/uploads/2021/06/pe06527_admlc_dgd_seminar_final_for_publication.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 44, sha256 edb7f63e...) and
+    cited by 7 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: its first page reads "© Crown Copyright HSE 2021"; no reuse terms stated
+    in the file.'
+  role: comparator
+  kb_reason: The UK review of dense-gas models for emergency response, as presented (HB-188 R1, R2).
+- doc_id: hb188-admlc-r13
+  priority: 6
+  title: Atmospheric Dispersion Modelling Liaison Committee Report ADMLC-R13, including Review of dense-gas dispersion for
+    industrial regulation and emergency preparedness and response (main text)
+  publisher: ADMLC, Public Health England, Chilton
+  edition: July 2021
+  url: https://admlc.com/wp-content/uploads/2021/07/main-text-admlc-r13.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 41, sha256 be8505bc...) and
+    cited by 2 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: its cover reads "© Chairman of ADMLC".'
+  role: comparator
+  kb_reason: The UK committee's report on dense-gas models (HB-188 R1, R2).
+- doc_id: hb188-epri-3002020094
+  priority: 6
+  title: Near-Field Air Modeling Tools for Potential Hazardous Material Releases from Battery Energy Storage System Fires
+    (EPRI 3002020094)
+  publisher: Electric Power Research Institute (EPRI), public download
+  edition: November 2020
+  url: https://restservice.epri.com/publicdownload/000000003002020094/0/Product
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: copyrighted
+  held_as: metadata only
+  notes: 'NOT HELD: the fetcher refused restservice.epri.com, which is on corpus/allowlist.txt (HB-180) but not on HB-190''s
+    network line, and the fetcher intersects the two (corpus/fetch_log.jsonl, blocked_host, no request made). HB-188''s
+    bytes (sha256 b41ef1fd..., /tmp/hb188/fetched) were not admitted, because only a fetch records bytes in the corpus;
+    a task whose network line names restservice.epri.com admits them with `fetch_allowlisted.py --only hb188-epri-3002020094
+    --retry hb188-epri-3002020094`. HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line
+    86, sha256 b41ef1fd...) and cited by 8 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into
+    the corpus and its sha256 compared (docs/evidence/hb190/admitted.tsv). Licence: an EPRI product (EPRI reserves its rights,
+    as in its SCICHEM manuals, HB-170).'
+  role: comparator
+  kb_reason: EPRI's account of SCICHEM and the near-field models it compares (HB-188 R1, R3).
+- doc_id: hb188-gmd-18-7763-derma-hybrid
+  priority: 6
+  title: A new hybrid particle-puff approach to atmospheric dispersion modeling, implemented in the Danish Emergency Response
+    Model of the Atmosphere (DERMA)
+  publisher: Geoscientific Model Development 18, 7763-7779 (Copernicus); Tølløse et al., Danish Meteorological Institute
+  edition: '2025-10-24'
+  url: https://gmd.copernicus.org/articles/18/7763/2025/gmd-18-7763-2025.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: deterministic
+  reuse: cc-by
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 99, sha256 6e5f993a...) and
+    cited by 1 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: its first page reads "This work is distributed under the Creative Commons
+    Attribution 4.0 License".'
+  role: comparator
+  kb_reason: A particle-puff hybrid for emergency response dispersion (HB-188 R1).
+- doc_id: hb188-harmo13-h13-087-presentation
+  priority: 6
+  title: SCIPUFF Capabilities and Application in Hazard Assessment (H13-087, presentation; Ian Sykes, Sage Management)
+  publisher: HARMO 13 conference, Paris, 1-4 June 2010 (harmo.org)
+  edition: '2010'
+  url: https://www.harmo.org/Conferences/Proceedings/_Paris/publishedSections/PPT/H13-087-presentation.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 33, sha256 bd72b664...) and
+    cited by 3 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: conference slides; no licence stated in the file.'
+  role: method
+  kb_reason: SCIPUFF's capabilities for hazard assessment, by its author (HB-188 R3).
+- doc_id: hb188-harmo17-h17-186-oral
+  priority: 6
+  title: Preliminary Analysis of Observations from the Jack Rabbit II-2015 Field Experiment on Dense Gas Dispersion in a
+    Built Environment (H17-186, oral; Hanna, Chang, Spicer et al.)
+  publisher: HARMO 17 conference, Budapest (harmo.org)
+  edition: '2016'
+  url: https://harmo.org/Conferences/Proceedings/_Budapest/publishedSections/PPT/H17-186_oral.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 50, sha256 48869fbd...) and
+    cited by 3 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: conference slides; no licence stated in the file.'
+  role: evidence
+  kb_reason: Jack Rabbit II's observations as first presented (HB-188 R6).
+- doc_id: hb188-hse-rr1174-assets-pdf
+  priority: 6
+  title: 'Jack Rabbit II Chlorine Release Experiments: HSE scientific contribution and main findings (RR1174)'
+  publisher: Health and Safety Executive (HSE), Research Report
+  edition: 2022 (prepared 2021)
+  url: https://www.hse.gov.uk/research/assets/docs/rr1174.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: deterministic
+  reuse: reproduction-permitted
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 114, sha256 d2daab21...)
+    and cited by 27 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256
+    compared (docs/evidence/hb190/admitted.tsv). Licence: its second page reads "© Crown copyright 2022 ... You may reuse
+    this information (not including logos) free of charge in any format or medium, under the terms of the Open Government
+    Licence"; some images are not Crown-owned.'
+  role: evidence
+  kb_reason: HSE's account of Jack Rabbit II and the model comparisons, DRIFT and CFD among them (HB-188 R1, R6).
+- doc_id: hb188-lanl-shallow-water-ams-146175
+  priority: 6
+  title: A Shallow Water Model for Dense Gas Simulation in Urban Areas (AMS extended abstract 14.6; Brambilla, Manca, Williams,
+    Gowardhan, Brown)
+  publisher: American Meteorological Society, 8th Symposium on the Urban Environment (ams.confex.com)
+  edition: '2009'
+  url: https://ams.confex.com/ams/pdfpapers/146175.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 5, sha256 8778fc04...) and
+    cited by 7 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: AMS extended abstract; no licence stated in the file.'
+  role: comparator
+  kb_reason: Los Alamos's shallow-water dense gas model (HB-188 R1, R2).
+- doc_id: hb188-narac-ucrl-jc-155085
+  priority: 6
+  title: Operational Systems for Emergency Preparedness and Response (UCRL-JC-155085; Sugiyama, Nasstrom and Baskett)
+  publisher: Lawrence Livermore National Laboratory, NARAC; AMS 84th Annual Meeting, January 2004
+  edition: '2004'
+  url: https://narac.llnl.gov/sites/narac/files/2024-02/UCRL-JC-155085.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: deterministic
+  reuse: public-release
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 71, sha256 67e90e83...) and
+    cited by 1 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: an LLNL preprint under DOE contract (the LLNL precedent of llnl-mass-casualty-framework-2016).'
+  role: comparator
+  kb_reason: NARAC's operational emergency response system (HB-188 R1).
+- doc_id: hb188-nhess-17-861-twodee-2-1-nyos
+  priority: 6
+  title: 'High-resolution modelling of atmospheric dispersion of dense gas using TWODEE-2.1: application to the 1986 Lake
+    Nyos limnic eruption'
+  publisher: Natural Hazards and Earth System Sciences 17, 861-879 (Copernicus); Folch, Barcons, Kozono and Costa
+  edition: '2017'
+  url: https://nhess.copernicus.org/articles/17/861/2017/nhess-17-861-2017.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: deterministic
+  reuse: cc-by
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 9, sha256 d9a4e2dd...) and
+    cited by 9 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: its first page reads "This work is distributed under the Creative Commons
+    Attribution 3.0 License".'
+  role: comparator
+  kb_reason: TWODEE-2.1, a shallow-layer dense model on a time-varying wind (HB-188 R1).
+- doc_id: hb188-noaa-31301
+  priority: 6
+  title: The Suitability of Diffusion and Wind-Field Techniques for an Emergency-Response Dispersion Model (NOAA Technical
+    Memorandum ERL ARL-171; Eckman and Dobosy)
+  publisher: NOAA Air Resources Laboratory (NOAA Institutional Repository item 31301)
+  edition: April 1989
+  url: https://repository.library.noaa.gov/view/noaa/31301/noaa_31301_DS1.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: deterministic
+  reuse: public-domain
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 79, sha256 0bd40e2f...) and
+    cited by 6 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: a NOAA technical memorandum, a US federal work.'
+  role: comparator
+  kb_reason: NOAA's assessment of wind-field and diffusion techniques for an emergency-response model (HB-188 R1).
+- doc_id: hb188-nora-164012
+  priority: 6
+  title: 'TWODEE-2: a shallow layer model for dense gas dispersion on complex topography (NERC Open Research Archive record
+    164012: metadata and abstract)'
+  publisher: NERC Open Research Archive (nora.nerc.ac.uk)
+  edition: record of the 2009 article (Computers and Geosciences 35(3))
+  url: https://nora.nerc.ac.uk/id/eprint/164012/
+  format: html
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 54, sha256 4ef95ead...) and
+    cited by 2 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: a repository record page; no licence stated.'
+  role: comparator
+  kb_reason: TWODEE-2's abstract, as its repository record carries it (HB-188 R1).
+- doc_id: hb188-osti-15013318-hpac-narac
+  priority: 6
+  title: 'Evaluation of Transport and Dispersion Models: A Controlled Comparison of HPAC and NARAC Predictions (UCRL-JC-144276;
+    Warner, Heagy, Platt et al.)'
+  publisher: Lawrence Livermore National Laboratory and Institute for Defense Analyses; preprint for the 5th GMU Transport
+    and Dispersion Modeling Workshop (OSTI 15013318)
+  edition: May 1, 2001
+  url: https://www.osti.gov/servlets/purl/15013318
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: deterministic
+  reuse: public-release
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 94, sha256 fd4be097...) and
+    cited by 18 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256
+    compared (docs/evidence/hb190/admitted.tsv). Licence: an LLNL preprint under DOE contract, served by OSTI.'
+  role: evidence
+  kb_reason: The one published vertical-resolution sensitivity in SCIPUFF's family (HB-188 R3).
+- doc_id: hb188-osti-1763931-epicode-dense
+  priority: 6
+  title: Incorporation of a Dense Gas capability into the EPIcode Atmospheric Dispersion Model (LLNL-TR-818768; Homman and
+    Aluzzi)
+  publisher: Lawrence Livermore National Laboratory, National Atmospheric Release Advisory Center (OSTI 1763931)
+  edition: December 7, 2020
+  url: https://www.osti.gov/servlets/purl/1763931
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: deterministic
+  reuse: public-release
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 92, sha256 740bd147...) and
+    cited by 12 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256
+    compared (docs/evidence/hb190/admitted.tsv). Licence: an LLNL technical report under DOE contract, served by OSTI.'
+  role: comparator
+  kb_reason: A dense gas capability added to a Gaussian emergency model, and how it hands over (HB-188 R1, R2).
+- doc_id: hb188-osti-956359-lanl-shallow-water-urban
+  priority: 6
+  title: A Shallow Water Model for Dense Gas Simulation in Urban Areas (LA-UR; Brambilla, Manca, Williams, Gowardhan, Brown)
+  publisher: Los Alamos National Laboratory (OSTI 956359)
+  edition: '2009'
+  url: https://www.osti.gov/servlets/purl/956359
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: deterministic
+  reuse: public-release
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 90, sha256 c24f17b5...) and
+    cited by 1 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: its cover reads "Approved for public release; distribution is unlimited".'
+  role: comparator
+  kb_reason: Los Alamos's shallow-water dense gas model, the laboratory's own copy (HB-188 R1, R2).
+- doc_id: hb188-soton-id-eprint-64012
+  priority: 6
+  title: 'TWODEE-2: a shallow layer model for dense gas dispersion on complex topography (ePrints Soton record 64012: metadata
+    and abstract)'
+  publisher: University of Southampton, ePrints Soton
+  edition: record of the 2009 article (Computers and Geosciences 35(3))
+  url: https://eprints.soton.ac.uk/id/eprint/64012/
+  format: html
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 118, sha256 893a3966...)
+    and cited by 2 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256
+    compared (docs/evidence/hb190/admitted.tsv). Licence: a repository record page; no licence stated.'
+  role: comparator
+  kb_reason: TWODEE-2's abstract, as its repository record carries it (HB-188 R1).
+- doc_id: hb188-soton-id-eprint-64074
+  priority: 6
+  title: 'A shallow-layer model for heavy gas dispersion from natural sources: Application and hazard assessment at Caldara
+    di Manziana, Italy (ePrints Soton record 64074: metadata and abstract)'
+  publisher: University of Southampton, ePrints Soton
+  edition: record of the 2007 article
+  url: https://eprints.soton.ac.uk/id/eprint/64074/
+  format: html
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 120, sha256 d346522f...)
+    and cited by 1 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256
+    compared (docs/evidence/hb190/admitted.tsv). Licence: a repository record page; no licence stated.'
+  role: comparator
+  kb_reason: TWODEE applied to a natural CO2 source (HB-188 R1).
+- doc_id: hb188-sykes-ams-161708
+  priority: 6
+  title: SCIPUFF Capabilities and Application in Hazard Assessment (AMS paper 8.2; R. Ian Sykes, Sage Management)
+  publisher: American Meteorological Society, extended abstract (ams.confex.com)
+  edition: '2010'
+  url: https://ams.confex.com/ams/pdfpapers/161708.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 29, sha256 0e40caee...) and
+    cited by 4 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: AMS extended abstract; no licence stated in the file.'
+  role: method
+  kb_reason: SCIPUFF's moment equations and dense terms, by its author (HB-188 R3).
+- doc_id: hb188-ucar-iddm-page
+  priority: 6
+  title: 'The Integral Dense-gas Dispersion Model (IDDM) and comparison with Jack Rabbit II data (NCAR publication page:
+    metadata and abstract)'
+  publisher: NSF NCAR and UCAR, Impacts publication page
+  edition: record of the 2023 article (Atmospheric Environment 296, 119563)
+  url: https://impacts.ucar.edu/en/publications/the-integral-dense-gas-dispersion-model-iddm-and-comparison-with-
+  format: html
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part A: fetched by HB-188 at rung 1 (docs/evidence/hb188/fetch_log.jsonl line 14, sha256 e4b2c546...) and
+    cited by 2 row(s) of its review; fetched again here by scripts/fetch_allowlisted.py into the corpus and its sha256 compared
+    (docs/evidence/hb190/admitted.tsv). Licence: a publication record page; no licence stated.'
+  role: comparator
+  kb_reason: IDDM's abstract and its Jack Rabbit II score (HB-188 R1).
+- doc_id: anl-2001-erg2000-table-of-protective-action-distances
+  priority: 6
+  title: Development of the Table of Initial Isolation and Protective Action Distances for the 2000 Emergency Response Guidebook
+    (ANL/DIS-00-1; Brown, Policastro, Dunn, Carhart, Lazaro, Freeman and Krumpolc)
+  publisher: Argonne National Laboratory (OSTI 775267, doi:10.2172/775267)
+  edition: '2001'
+  url: https://publications.anl.gov/anlpubs/2001/01/38246.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: deterministic
+  reuse: public-release
+  source_page: https://www.osti.gov/servlets/purl/775267
+  held_as: full text
+  notes: 'HB-190 Part B: held in full at rung 1 (OSTI''s purl (https://www.osti.gov/servlets/purl/775267) redirects to this
+    address; the fetcher records a redirect to another page as redirected_elsewhere and stores nothing (HB-47; ladder_log.jsonl
+    unit hb190-loc-w1499327475-0), so the file is fetched at the address the purl resolves to). Licence: an Argonne report
+    under DOE contract, served by OSTI and Argonne.'
+  role: method
+  kb_reason: The guidebook's distances as first computed, the method's history (HB-188 R4, item 16).
+- doc_id: uvu-2017-jack-rabbit-ii-impacts-on-emergency-responders
+  priority: 6
+  title: 'Final Report: The Jack Rabbit II Project''s Impacts on Emergency Responders, Catastrophic Releases of Liquefied
+    Compressed Chlorine 2015-2016 at U.S. Army Dugway Proving Ground, Utah'
+  publisher: 'Utah Valley University, Emergency Services Department (UVU Emergency Responder SME Team: Byrnes, DuPont, Matthew,
+    McCartt, Noll, Yoder)'
+  edition: September 30, 2017
+  url: https://www.uvu.edu/es/docs/jackrabbit/jr17/finalreports/uvu-jack-rabbit-final-report-2017.pdf
+  format: pdf
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  held_as: full text
+  notes: 'HB-190 Part B: held in full at rung 1 (the host was off HB-188''s allowlist and is on this task''s). Licence:
+    a university report; no licence stated in the file.'
+  role: evidence
+  kb_reason: Jack Rabbit II from the emergency responders' side (HB-188 R6, item 17).
+- doc_id: folch-2008-twodee-2-shallow-layer-model-dense-openalex-record
+  priority: 7
+  title: 'twodee-2: A shallow layer model for dense gas dispersion on complex topography (OpenAlex record: metadata; no
+    abstract deposited)'
+  publisher: 'OpenAlex record (W1983594907) of: Computers & Geosciences; Arnau Folch, Antonio Costa, Robin K. S. Hankin'
+  edition: 2008; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.cageo.2007.12.017
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.cageo.2007.12.017
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Computers & Geosciences (publishedVersion), https://doi.org/10.1016/j.cageo.2007.12.017'
+  - 'OpenAlex location: ePrints Soton (University of Southampton) (submittedVersion), https://eprints.soton.ac.uk/64012/'
+  - 'OpenAlex location: NERC Open Research Archive (Natural Environment Research Council) (submittedVersion), http://nora.nerc.ac.uk/id/eprint/164012/'
+  - 'rung 1: https://eprints.soton.ac.uk/64012/: redirected_elsewhere (HTTP 200 text/html; charset=utf-8 from https://eprints.soton.ac.uk/id/eprint/64012/,
+    a different page from the one requested)'
+  - 'rung 1: http://nora.nerc.ac.uk/id/eprint/164012/: fetched'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.cageo.2007.12.017: fetched; the Crossref record carries no abstract'
+  - 'rung 1: https://www.earth-prints.org/handle/2122/4539: failed (HTTP 202)'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: witlox-2013-modeling-time-varying-dispersion-releases-including-openalex-record
+  priority: 7
+  title: 'Modeling of time‐varying dispersion for releases including potential rainout (OpenAlex record: metadata and abstract)'
+  publisher: 'OpenAlex record (W1992336907) of: Process Safety Progress; Henk W.M. Witlox, Mike Harper'
+  edition: 2013; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1002/prs.11652
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1002/prs.11652
+  held_as: abstract only
+  open_copy_searched:
+  - 'OpenAlex location: Process Safety Progress (publishedVersion), https://doi.org/10.1002/prs.11652'
+  notes: 'HB-190: abstract only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. The record
+    carries the publisher''s abstract. Where an open copy was looked for, and what each place answered, is `open_copy_searched`
+    (docs/evidence/hb190/ladder_log.jsonl). Reference-only: a publisher''s abstract and the index''s metadata; the bytes
+    are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: witlox-1994-interfacing-dispersion-models-hgsystem-hazard-assessment-openalex-record
+  priority: 7
+  title: 'Interfacing dispersion models in the HGSYSTEM hazard-assessment package (OpenAlex record: metadata; no abstract
+    deposited)'
+  publisher: 'OpenAlex record (W1997225801) of: Atmospheric Environment; Henk W.M. Witlox, K. McFarlane'
+  edition: 1994; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/1352-2310(94)90342-5
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/1352-2310(94)90342-5
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Atmospheric Environment (publishedVersion), https://doi.org/10.1016/1352-2310(94)90342-5'
+  - 'rung 1: https://api.crossref.org/works/10.1016/1352-2310(94)90342-5: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: hankin-1999-twodee-health-safety-laboratory-s-shallow-part-1-openalex-record
+  priority: 7
+  title: 'twodee: the Health and Safety Laboratory''s shallow layer model for heavy gas dispersion Part 1. Mathematical
+    basis and physical assumptions (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W2004960228) of: Journal of Hazardous Materials; Robin K. S. Hankin, Rex E. Britter'
+  edition: 1999; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/s0304-3894(98)00269-6
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/s0304-3894(98)00269-6
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Journal of Hazardous Materials (publishedVersion), https://doi.org/10.1016/s0304-3894(98)00269-6'
+  - 'OpenAlex location: PubMed (publishedVersion), https://pubmed.ncbi.nlm.nih.gov/10334822'
+  - 'OpenAlex location: Cambridge University Engineering Department Publications Database (submittedVersion), http://publications.eng.cam.ac.uk/336607/'
+  - 'OpenAlex location: Cambridge University Engineering Department Publications Database (submittedVersion), http://publications.eng.cam.ac.uk/336608/'
+  - 'rung 1: http://publications.eng.cam.ac.uk/336607/: blocked_host (''http://publications.eng.cam.ac.uk/336607/'': host
+    ''publications.eng.cam.ac.uk'' is not on the allowlist)'
+  - 'rung 1: http://publications.eng.cam.ac.uk/336608/: blocked_host (''http://publications.eng.cam.ac.uk/336608/'': host
+    ''publications.eng.cam.ac.uk'' is not on the allowlist)'
+  - 'rung 1: https://api.crossref.org/works/10.1016/s0304-3894(98)00269-6: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: witlox-1994-hegadas-model-ground-level-heavy-gas-openalex-record
+  priority: 7
+  title: 'The HEGADAS model for ground-level heavy-gas dispersion II. Time-dependent model (OpenAlex record: metadata; no
+    abstract deposited)'
+  publisher: 'OpenAlex record (W2006819157) of: Atmospheric Environment; Henk W.M. Witlox'
+  edition: 1994; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/1352-2310(94)90341-7
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/1352-2310(94)90341-7
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Atmospheric Environment (publishedVersion), https://doi.org/10.1016/1352-2310(94)90341-7'
+  - 'rung 1: https://api.crossref.org/works/10.1016/1352-2310(94)90341-7: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: venetsanos-2003-display-2-two-dimensional-shallow-layer-openalex-record
+  priority: 7
+  title: 'DISPLAY-2: a two-dimensional shallow layer model for dense gas dispersion including complex features (OpenAlex
+    record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W2007149048) of: Journal of Hazardous Materials; Alexandros G. Venetsanos, John G. Bartzis,
+    J. Würtz, Demosthenes D. Papailiou'
+  edition: 2003; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/s0304-3894(03)00011-6
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/s0304-3894(03)00011-6
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Journal of Hazardous Materials (publishedVersion), https://doi.org/10.1016/s0304-3894(03)00011-6'
+  - 'OpenAlex location: PubMed (publishedVersion), https://pubmed.ncbi.nlm.nih.gov/12719147'
+  - 'OpenAlex location: Joint Research Centre (European Commission) (submittedVersion), http://publications.jrc.ec.europa.eu/repository/handle/JRC25091'
+  - 'rung 1: http://publications.jrc.ec.europa.eu/repository/handle/JRC25091: blocked_host (''http://publications.jrc.ec.europa.eu/repository/handle/JRC25091'':
+    host ''publications.jrc.ec.europa.eu'' is not on the allowlist)'
+  - 'rung 1: https://api.crossref.org/works/10.1016/s0304-3894(03)00011-6: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: sykes-1995-representation-velocity-gradient-effects-gaussian-puff-openalex-record
+  priority: 7
+  title: 'Representation of Velocity Gradient Effects in a Gaussian Puff Model (OpenAlex record: metadata and abstract)'
+  publisher: 'OpenAlex record (W2022088635) of: Journal of applied meteorology; R. Ian Sykes, D. S. Henn'
+  edition: 1995; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1175/1520-0450(1995)034%3C2715:rovgei%3E2.0.co;2
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1175/1520-0450(1995)034<2715:rovgei>2.0.co;2
+  held_as: abstract only
+  open_copy_searched:
+  - 'OpenAlex location: Journal of applied meteorology (publishedVersion), https://doi.org/10.1175/1520-0450(1995)034<2715:rovgei>2.0.co;2'
+  - 'rung 1: https://journals.ametsoc.org/view/journals/apme/34/12/1520-0450_1995_034_2715_rovgei_2_0_co_2.xml: refused_by_host
+    (HTTP 403)'
+  notes: 'HB-190: abstract only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. The record
+    carries the publisher''s abstract. Where an open copy was looked for, and what each place answered, is `open_copy_searched`
+    (docs/evidence/hb190/ladder_log.jsonl). Reference-only: a publisher''s abstract and the index''s metadata; the bytes
+    are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: hanna-2013-minimum-turbulence-assumptions-u-l-estimation-openalex-record
+  priority: 7
+  title: 'Minimum turbulence assumptions and u* and L estimation for dispersion models during low-wind stable conditions
+    (OpenAlex record: metadata and abstract)'
+  publisher: 'OpenAlex record (W2023615232) of: Journal of the Air & Waste Management Association; Steven R. Hanna, Biswanath
+    Chowdhury'
+  edition: 2013; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1080/10962247.2013.872709
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1080/10962247.2013.872709
+  held_as: abstract only
+  open_copy_searched:
+  - 'OpenAlex location: Journal of the Air & Waste Management Association (publishedVersion), https://www.tandfonline.com/doi/pdf/10.1080/10962247.2013.872709?needAccess=true&role=button'
+  - 'OpenAlex location: PubMed (publishedVersion), https://pubmed.ncbi.nlm.nih.gov/24701689'
+  - 'rung 1: https://www.tandfonline.com/doi/pdf/10.1080/10962247.2013.872709?needAccess=true&role=button: blocked_host
+    (''https://www.tandfonline.com/doi/pdf/10.1080/10962247.2013.872709?needAccess=true&role=button'': host ''www.tandfonline.com''
+    is not on the allowlist)'
+  notes: 'HB-190: abstract only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: bronze. The record
+    carries the publisher''s abstract. Where an open copy was looked for, and what each place answered, is `open_copy_searched`
+    (docs/evidence/hb190/ladder_log.jsonl). Reference-only: a publisher''s abstract and the index''s metadata; the bytes
+    are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: hankin-1999-twodee-health-safety-laboratory-s-shallow-part-2-openalex-record
+  priority: 7
+  title: 'twodee: The Health and Safety Laboratory''s shallow layer model for heavy gas dispersion Part 2: Outline and validation
+    of the computational scheme (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W2026499832) of: Journal of Hazardous Materials; Robin K. S. Hankin, Rex E. Britter'
+  edition: 1999; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/s0304-3894(98)00275-1
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/s0304-3894(98)00275-1
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Journal of Hazardous Materials (publishedVersion), https://doi.org/10.1016/s0304-3894(98)00275-1'
+  - 'OpenAlex location: PubMed (publishedVersion), https://pubmed.ncbi.nlm.nih.gov/10334823'
+  - 'OpenAlex location: Cambridge University Engineering Department Publications Database (submittedVersion), http://publications.eng.cam.ac.uk/336605/'
+  - 'OpenAlex location: Cambridge University Engineering Department Publications Database (submittedVersion), http://publications.eng.cam.ac.uk/336701/'
+  - 'rung 1: http://publications.eng.cam.ac.uk/336605/: blocked_host (''http://publications.eng.cam.ac.uk/336605/'': host
+    ''publications.eng.cam.ac.uk'' is not on the allowlist)'
+  - 'rung 1: http://publications.eng.cam.ac.uk/336701/: blocked_host (''http://publications.eng.cam.ac.uk/336701/'': host
+    ''publications.eng.cam.ac.uk'' is not on the allowlist)'
+  - 'rung 1: https://api.crossref.org/works/10.1016/s0304-3894(98)00275-1: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: wang-2014-meta-modelling-fast-analysis-cfd-simulated-openalex-record
+  priority: 7
+  title: 'Meta-modelling for fast analysis of CFD-simulated vapour cloud dispersion processes (OpenAlex record: metadata;
+    no abstract deposited)'
+  publisher: 'OpenAlex record (W2032360613) of: Computers & Chemical Engineering; Ke Wang, Tao Chen, Soo Tin Kwa, Yifei
+    Ma, Raymond Wai Man Lau'
+  edition: 2014; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.compchemeng.2014.07.003
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.compchemeng.2014.07.003
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Computers & Chemical Engineering (publishedVersion), https://doi.org/10.1016/j.compchemeng.2014.07.003'
+  - 'OpenAlex location: Surrey Research Insight Open Access (The University of Surrey) (submittedVersion), http://epubs.surrey.ac.uk/806978/1/kwang2014_cce_meta_vapour.pdf'
+  - 'OpenAlex location: Open Research (University of Surrey) (submittedVersion), https://openresearch.surrey.ac.uk/esploro/outputs/journalArticle/Meta-modelling-for-fast-analysis-of-CFD-simulated/99514399602346'
+  - 'rung 1: http://epubs.surrey.ac.uk/806978/1/kwang2014_cce_meta_vapour.pdf: blocked_host (''http://epubs.surrey.ac.uk/806978/1/kwang2014_cce_meta_vapour.pdf'':
+    host ''epubs.surrey.ac.uk'' is not on the allowlist)'
+  - 'rung 1: https://openresearch.surrey.ac.uk/esploro/outputs/journalArticle/Meta-modelling-for-fast-analysis-of-CFD-simulated/99514399602346:
+    blocked_host (''https://openresearch.surrey.ac.uk/esploro/outputs/journalArticle/Meta-modelling-for-fast-analysis-of-CFD-simulated/99514399602346'':
+    host ''openresearch.surrey.ac.uk'' is not on the allowlist)'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.compchemeng.2014.07.003: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: anfossi-2009-new-lagrangian-particle-model-simulation-dense-openalex-record
+  priority: 7
+  title: 'A new Lagrangian particle model for the simulation of dense gas dispersion (OpenAlex record: metadata; no abstract
+    deposited)'
+  publisher: 'OpenAlex record (W2032917463) of: Atmospheric Environment; D. Anfossi, Gianni Luigi Tinarelli, Silvia Trini
+    Castelli, Maxime Nibart, Christophe Olry, Julien Commanay'
+  edition: 2009; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.atmosenv.2009.11.041
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2009.11.041
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Atmospheric Environment (publishedVersion), https://doi.org/10.1016/j.atmosenv.2009.11.041'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.atmosenv.2009.11.041: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: connan-2013-comparison-rimpuff-hysplit-adms-atmospheric-dispersion-openalex-record
+  priority: 7
+  title: 'Comparison of RIMPUFF, HYSPLIT, ADMS atmospheric dispersion model outputs, using emergency response procedures,
+    with 85Kr measurements made in the vicinity of nuclear reprocessing plant (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W2036601955) of: Journal of Environmental Radioactivity; O. Connan, Kilian J. Smith, Catherine
+    Organo, Luc Solier, Denis Maro, Didier Hébert'
+  edition: 2013; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.jenvrad.2013.06.004
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.jenvrad.2013.06.004
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Journal of Environmental Radioactivity (publishedVersion), https://doi.org/10.1016/j.jenvrad.2013.06.004'
+  - 'OpenAlex location: PubMed (publishedVersion), https://pubmed.ncbi.nlm.nih.gov/23850583'
+  - 'OpenAlex location: HAL (submittedVersion), https://hal.science/hal-02865171'
+  - 'rung 1: https://hal.science/hal-02865171: fetched'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.jenvrad.2013.06.004: fetched; the Crossref record carries no abstract'
+  - 'rung 1: https://hal.science/hal-02865171/document: failed (HTTP 404)'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: hankin-1999-twodee-health-safety-laboratory-s-shallow-part-3-openalex-record
+  priority: 7
+  title: 'twodee: the Health and Safety Laboratory''s shallow layer model for heavy gas dispersion Part 3: Experimental
+    validation (Thorney Island) (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W2047043981) of: Journal of Hazardous Materials; Robin K. S. Hankin, Rex E. Britter'
+  edition: 1999; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/s0304-3894(98)00270-2
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/s0304-3894(98)00270-2
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Journal of Hazardous Materials (publishedVersion), https://doi.org/10.1016/s0304-3894(98)00270-2'
+  - 'OpenAlex location: PubMed (publishedVersion), https://pubmed.ncbi.nlm.nih.gov/10334824'
+  - 'OpenAlex location: Cambridge University Engineering Department Publications Database (submittedVersion), http://publications.eng.cam.ac.uk/336606/'
+  - 'OpenAlex location: Cambridge University Engineering Department Publications Database (submittedVersion), http://publications.eng.cam.ac.uk/336700/'
+  - 'rung 1: http://publications.eng.cam.ac.uk/336606/: blocked_host (''http://publications.eng.cam.ac.uk/336606/'': host
+    ''publications.eng.cam.ac.uk'' is not on the allowlist)'
+  - 'rung 1: http://publications.eng.cam.ac.uk/336700/: blocked_host (''http://publications.eng.cam.ac.uk/336700/'': host
+    ''publications.eng.cam.ac.uk'' is not on the allowlist)'
+  - 'rung 1: https://api.crossref.org/works/10.1016/s0304-3894(98)00270-2: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: atkinson-2017-development-heavy-vapour-clouds-very-low-openalex-record
+  priority: 7
+  title: 'Development of heavy vapour clouds in very low wind speeds (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W2607149849) of: Journal of Loss Prevention in the Process Industries; Graham Atkinson'
+  edition: 2017; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.jlp.2017.04.011
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.jlp.2017.04.011
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Journal of Loss Prevention in the Process Industries (publishedVersion), https://www.sciencedirect.com/science/article/pii/S0950423017301365/pdf'
+  - 'rung 1: https://www.sciencedirect.com/science/article/pii/S0950423017301365/pdf: blocked_host (''https://www.sciencedirect.com/science/article/pii/S0950423017301365/pdf'':
+    host ''www.sciencedirect.com'' is not on the allowlist)'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.jlp.2017.04.011: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: bronze. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: na-2018-toxic-gas-release-modeling-real-time-openalex-record
+  priority: 7
+  title: 'Toxic gas release modeling for real-time analysis using variational autoencoder with convolutional neural networks
+    (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W2793663825) of: Chemical Engineering Science; Jonggeol Na, Kyeongwoo Jeon, Won Bo Lee'
+  edition: 2018; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.ces.2018.02.008
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.ces.2018.02.008
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Chemical Engineering Science (publishedVersion), https://doi.org/10.1016/j.ces.2018.02.008'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.ces.2018.02.008: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: gant-2018-dense-gas-dispersion-model-development-testing-openalex-record
+  priority: 7
+  title: 'Dense gas dispersion model development and testing for the Jack Rabbit II phase 1 chlorine release experiments
+    (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W2887048286) of: Atmospheric Environment; Simon E. Gant, JEFFREY C. WEIL, Luca Delle Monache,
+    Bryan McKenna, María M. Pérez García, Graham Tickle, Harvey Tucker, James R. Stewart'
+  edition: 2018; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.atmosenv.2018.08.009
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2018.08.009
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Atmospheric Environment (publishedVersion), https://doi.org/10.1016/j.atmosenv.2018.08.009'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.atmosenv.2018.08.009: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: sigg-2018-hazmat-risk-area-assessment-atmospheric-dispersion-openalex-record
+  priority: 7
+  title: 'Hazmat risk area assessment by atmospheric dispersion modelling using Latin hypercube sampling with weather ensemble
+    (OpenAlex record: metadata and abstract)'
+  publisher: 'OpenAlex record (W2893068349) of: Meteorological Applications; Robert Sigg, Petter Lindgren, Pontus von Schoenberg,
+    Leif Persson, Jan Burman, Håkan Grahn, Niklas Brännström, Oscar Björnham'
+  edition: 2018; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1002/met.1722
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1002/met.1722
+  held_as: abstract only
+  open_copy_searched:
+  - 'OpenAlex location: Meteorological Applications (publishedVersion), https://rmets.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/met.1722'
+  - 'rung 1: https://rmets.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/met.1722: blocked_host (''https://rmets.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/met.1722'':
+    host ''rmets.onlinelibrary.wiley.com'' is not on the allowlist)'
+  - 'rung 1: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/met.1722: refused_by_host (HTTP 403)'
+  notes: 'HB-190: abstract only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: bronze. The record
+    carries the publisher''s abstract. Where an open copy was looked for, and what each place answered, is `open_copy_searched`
+    (docs/evidence/hb190/ladder_log.jsonl). Reference-only: a publisher''s abstract and the index''s metadata; the bytes
+    are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: mazzola-2020-cloud-dimensions-jack-rabbit-field-trial-openalex-record
+  priority: 7
+  title: 'Cloud dimensions from Jack Rabbit II field trial data (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W3033920564) of: Atmospheric Environment; Thomas Mazzola'
+  edition: 2020; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.atmosenv.2020.117614
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2020.117614
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Atmospheric Environment (acceptedVersion), https://www.sciencedirect.com/science/article/am/pii/S1352231020303484'
+  - 'rung 1: https://www.sciencedirect.com/science/article/am/pii/S1352231020303484: blocked_host (''https://www.sciencedirect.com/science/article/am/pii/S1352231020303484'':
+    host ''www.sciencedirect.com'' is not on the allowlist)'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.atmosenv.2020.117614: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: bronze. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: gant-2020-drift-dispersion-model-predictions-jack-rabbit-openalex-record
+  priority: 7
+  title: 'DRIFT dispersion model predictions for the Jack Rabbit II model inter-comparison exercise (OpenAlex record: metadata;
+    no abstract deposited)'
+  publisher: 'OpenAlex record (W3037289593) of: Atmospheric Environment; Simon E. Gant, Graham Tickle, Adrian Kelsey, Harvey
+    Tucker'
+  edition: 2020; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.atmosenv.2020.117717
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2020.117717
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Atmospheric Environment (publishedVersion), https://doi.org/10.1016/j.atmosenv.2020.117717'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.atmosenv.2020.117717: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: simpson-2020-hpac-model-studies-selected-jack-rabbit-openalex-record
+  priority: 7
+  title: 'HPAC model studies of selected Jack Rabbit II (JRII) releases and comparisons to test data (OpenAlex record: metadata;
+    no abstract deposited)'
+  publisher: 'OpenAlex record (W3038770972) of: Atmospheric Environment; S. Simpson, Sean Miner, Thomas Mazzola, Ronald
+    Meris'
+  edition: 2020; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.atmosenv.2020.117675
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2020.117675
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Atmospheric Environment (acceptedVersion), https://www.sciencedirect.com/science/article/am/pii/S1352231020304076'
+  - 'rung 1: https://www.sciencedirect.com/science/article/am/pii/S1352231020304076: blocked_host (''https://www.sciencedirect.com/science/article/am/pii/S1352231020304076'':
+    host ''www.sciencedirect.com'' is not on the allowlist)'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.atmosenv.2020.117675: fetched; the Crossref record carries no abstract'
+  - 'OSTI record search by title (www.osti.gov/api/v1/records?title=...): 0 records (lookup_log.jsonl, hb190-osti-simpson-2020-title)'
+  - 'OSTI record search by DOI: 0 records (hb190-osti-simpson-2020-doi)'
+  - 'OSTI full-text search ''HPAC Jack Rabbit'': 5 records, none this work (hb190-osti-hpac-jack-rabbit)'
+  - 'DTIC (apps.dtic.mil): its search is a script-rendered application with no record API the fetcher can read; no DTIC
+    accession for this work is named by OpenAlex, Crossref or the paper''s record'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: bronze. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: gomez-2020-simulation-dense-gas-chlorine-release-lagrangian-openalex-record
+  priority: 7
+  title: 'Simulation of a dense gas chlorine release with a Lagrangian particle dispersion model (LPDM) (OpenAlex record:
+    metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W3049463839) of: Atmospheric Environment; Félix Gomez, Bruno Ribstein, Laurent Makké, Patrick
+    Armand, Jacques Moussafir, Maxime Nibart'
+  edition: 2020; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.atmosenv.2020.117791
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2020.117791
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Atmospheric Environment (publishedVersion), https://doi.org/10.1016/j.atmosenv.2020.117791'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.atmosenv.2020.117791: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: hanna-2021-gaps-toxic-industrial-chemical-model-systems-openalex-record
+  priority: 7
+  title: 'Gaps in toxic industrial chemical model systems: Improvements and changes over past 10 years (OpenAlex record:
+    metadata and abstract)'
+  publisher: 'OpenAlex record (W3184141661) of: Process Safety Progress; Steven R. Hanna, Thomas Mazzola, Joseph Chang,
+    Thomas O. Spicer, Simon E. Gant, Rachel Batt'
+  edition: 2021; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1002/prs.12289
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1002/prs.12289
+  held_as: abstract only
+  open_copy_searched:
+  - 'OpenAlex location: Process Safety Progress (publishedVersion), https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/prs.12289'
+  - 'rung 1: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/prs.12289: refused_by_host (HTTP 403)'
+  notes: 'HB-190: abstract only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: hybrid. The record
+    carries the publisher''s abstract. Where an open copy was looked for, and what each place answered, is `open_copy_searched`
+    (docs/evidence/hb190/ladder_log.jsonl). Reference-only: a publisher''s abstract and the index''s metadata; the bytes
+    are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: fox-2021-overview-jack-rabbit-jr-field-experiments-openalex-record
+  priority: 7
+  title: 'Overview of the Jack Rabbit II (JR II) field experiments and summary of the methods used in the dispersion model
+    comparisons (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W3205865649) of: Atmospheric Environment; Shannon Fox, Steven R. Hanna, Thomas Mazzola, Thomas
+    O. Spicer, Joseph Chang, Simon E. Gant'
+  edition: 2021; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.atmosenv.2021.118783
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2021.118783
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Atmospheric Environment (acceptedVersion), https://www.sciencedirect.com/science/article/am/pii/S1352231021006051'
+  - 'rung 1: https://www.sciencedirect.com/science/article/am/pii/S1352231021006051: blocked_host (''https://www.sciencedirect.com/science/article/am/pii/S1352231021006051'':
+    host ''www.sciencedirect.com'' is not on the allowlist)'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.atmosenv.2021.118783: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: bronze. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: weil-2022-integral-dense-gas-dispersion-model-iddm-openalex-record
+  priority: 7
+  title: 'The Integral Dense-gas Dispersion Model (IDDM) and comparison with Jack Rabbit II data (OpenAlex record: metadata;
+    no abstract deposited)'
+  publisher: 'OpenAlex record (W4312194024) of: Atmospheric Environment; JEFFREY C. WEIL, Stefano Alessandrini'
+  edition: 2022; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.atmosenv.2022.119563
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2022.119563
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Atmospheric Environment (acceptedVersion), https://www.sciencedirect.com/science/article/am/pii/S1352231022006288'
+  - 'rung 1: https://www.sciencedirect.com/science/article/am/pii/S1352231022006288: blocked_host (''https://www.sciencedirect.com/science/article/am/pii/S1352231022006288'':
+    host ''www.sciencedirect.com'' is not on the allowlist)'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.atmosenv.2022.119563: fetched; the Crossref record carries no abstract'
+  - 'rung 1: https://opensky.ucar.edu/search?query=%22Integral+Dense-gas+Dispersion+Model%22: host_set_aside (Crawl-delay
+    120 s exceeds crawl_delay_max_s 60 s; host set aside for this run)'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: bronze. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: shi-2023-real-time-plume-tracking-transfer-learning-openalex-record
+  priority: 7
+  title: 'Real-time plume tracking using transfer learning approach (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W4320855288) of: Computers & Chemical Engineering; Jihao Shi, Weikang Xie, Junjie Li, Xinqi
+    Zhang, Xinyan Huang, Asif  Sohail Usmani, Faisal Khan, Guoming Chen'
+  edition: 2023; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.compchemeng.2023.108172
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.compchemeng.2023.108172
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Computers & Chemical Engineering (publishedVersion), https://doi.org/10.1016/j.compchemeng.2023.108172'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.compchemeng.2023.108172: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: li-2023-real-time-hydrogen-release-dispersion-modelling-openalex-record
+  priority: 7
+  title: 'Real-time hydrogen release and dispersion modelling of hydrogen refuelling station by using deep learning probability
+    approach (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W4368348105) of: International Journal of Hydrogen Energy; Junjie Li, Weikang Xie, Huihao
+    Li, Xiaoyuan Qian, Jihao Shi, Zonghao Xie, Qing Wang, Xinqi Zhang'
+  edition: 2023; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.ijhydene.2023.04.126
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.ijhydene.2023.04.126
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: International Journal of Hydrogen Energy (publishedVersion), https://doi.org/10.1016/j.ijhydene.2023.04.126'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.ijhydene.2023.04.126: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'
+- doc_id: li-2015-improved-model-heavy-gas-dispersion-time-openalex-record
+  priority: 7
+  title: 'An improved model for heavy gas dispersion using time-varying wind data: Mathematical basis, physical assumptions,
+    and case studies (OpenAlex record: metadata; no abstract deposited)'
+  publisher: 'OpenAlex record (W634477377) of: Journal of Loss Prevention in the Process Industries; Yue Li, Dongsheng Chen,
+    Shuiyuan Cheng, Tingting Xu, Qing Huang, Xiurui Guo, Xin Ma, Nan Yang'
+  edition: 2015; record retrieved by HB-190
+  url: https://api.openalex.org/works/doi:10.1016/j.jlp.2015.05.010
+  format: json
+  structured_alternative: none
+  plan: fetch
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.jlp.2015.05.010
+  held_as: metadata only
+  open_copy_searched:
+  - 'OpenAlex location: Journal of Loss Prevention in the Process Industries (publishedVersion), https://doi.org/10.1016/j.jlp.2015.05.010'
+  - 'rung 1: https://api.crossref.org/works/10.1016/j.jlp.2015.05.010: fetched; the Crossref record carries no abstract'
+  notes: 'HB-190: metadata only, fetched at rung 1 from api.openalex.org. OpenAlex''s open-access status: closed. Neither
+    OpenAlex nor Crossref carries an abstract for this work (the publisher deposits none), so the record holds its metadata
+    and locations only. Where an open copy was looked for, and what each place answered, is `open_copy_searched` (docs/evidence/hb190/ladder_log.jsonl).
+    Reference-only: a publisher''s abstract and the index''s metadata; the bytes are held, the text withheld.'
+  role: comparator
+  kb_reason: 'HB-190: an HB-188 work not held in full (docs/evidence/hb190/unreached.tsv), held as its record so a reboot
+    loses nothing.'

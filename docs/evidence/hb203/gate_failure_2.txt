@@ -1,0 +1,59 @@
+## clean clone's gate, parallel step ended: 18 failed (after its tail) at 2026-11-18T16:38:22-05:00
+gate log	logs/hb203/clone_gate.log (gitignored)
+failing lines in the log so far	37
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/ornl-tm-2002-144-sorensen-evacuate-or-shelter.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/erg2024-en-pdf.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/erg2024-en-pdf.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/erg2024-en-pdf.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/ornl-tm-2002-144-sorensen-evacuate-or-shelter.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/nrt-1-hazmat-emergency-planning-guide-2001.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/llnl-mass-casualty-framework-2016.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/nws-10-518.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/nrt-1-hazmat-emergency-planning-guide-2001.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/ornl-tm-2002-144-sorensen-evacuate-or-shelter.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/ornl-tm-2002-144-sorensen-evacuate-or-shelter.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/ornl-tm-2002-144-sorensen-evacuate-or-shelter.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/nces-ntps-2021-school-start-time-by-characteristics.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/fema-hazus-earthquake-technical-manual-6-1.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/fema-hazus-earthquake-technical-manual-6-1.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/fema-hazus-earthquake-technical-manual-6-1.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/fema-hazus-earthquake-technical-manual-6-1.json'
+  /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/otmem-user-guide.json'
+  /private/tmp/hb203_clone/scripts/agent_eval.py:172: FastMCPDeprecationWarning: Accessing `Tool.inputSchema` is deprecated; MCP SDK v2 renamed this field to `input_schema`. Update your code to read `.input_schema` instead.
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[institution-{'doc': 'ornl-tm-2002-144-sorensen-evacu]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[special_populations-{'doc': 'erg2024-en-pdf', 'page': 286, ']
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[roadblock-{'doc': 'erg2024-en-pdf', 'page': 285, ']
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[residents-{'doc': 'erg2024-en-pdf', 'page': 287, ']
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[clear-{'doc': 'ornl-tm-2002-144-sorensen-evacu]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[alert_public-{'doc': 'nrt-1-hazmat-emergency-planning]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[warning_means-{'doc': 'llnl-mass-casualty-framework-20]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[nws_relay-{'doc': 'nws-10-518', 'page': 12, 'block]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[traffic-{'doc': 'nrt-1-hazmat-emergency-planning]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[time_shelter-{'doc': 'ornl-tm-2002-144-sorensen-evacu]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[time_warning-{'doc': 'ornl-tm-2002-144-sorensen-evacu]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[plume_duration-{'doc': 'ornl-tm-2002-144-sorensen-evacu]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[school:0-{'doc': 'nces-ntps-2021-school-start-tim]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[school:0-{'doc': 'fema-hazus-earthquake-technical]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[school:3-{'doc': 'fema-hazus-earthquake-technical]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[group_quarters:0-{'doc': 'fema-hazus-earthquake-technical]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[population:0-{'doc': 'fema-hazus-earthquake-technical]
+  FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[population:1-{'doc': 'otmem-user-guide', 'page': 5, ']
+load average	16:38  up 47 days, 10:49, 7 users, load averages: 8.12 8.47 9.34
+free disk	81301929984 bytes (probe statvfs on /)
+swap	vm.swapusage: total = 19456.00M  used = 18425.62M  free = 1030.38M  (encrypted)
+memory pressure	System-wide memory free percentage: 30%
+placeholders under the linked corpus paths:
+  corpus/raw	files=550	placeholders=0
+  the corpus graph (held privately)	files=375	placeholders=0
+  the corpus graph (held privately)	files=174	placeholders=0
+  the corpus graph (held privately)	files=2722	placeholders=0
+  the corpus graph (held privately)	files=1	placeholders=0
+  placeholders_before=0
+pytest, headless Chrome and engine processes running	3
+  43330 35394       00:20 uv run pytest tests/ -q -n 3 --dist loadgroup -m load_sensitive and not slow -o cache_dir=logs/pytest_cache -rfEX --tb=line
+  43331 43330       00:20 /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python /private/tmp/hb203_clone/.venv/bin/pytest tests/ -q -n 3 --dist loadgroup -m load_sensitive and not slow -o cache_dir=logs/pytest_cache -rfEX --tb=l
+  43418 43334       00:02 /opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python /private/tmp/hb203_clone/scripts/eval_harness.py live --scenarios i81-md-pa-line-day --live-dir /private/var/folders/s1/yqb3d76d7053f7dyy9fwtkzw0000
+
+E   FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/ornl-tm-2002-144-sorensen-evacuate-or-shelter.json'
+/opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hb203_clone/graphs/hazbrief-corpus/corpus/parsed/ornl-tm-2002-144-sorensen-evacuate-or-shelter.json'
+cause, read from the lines above: the test opens the corpus graph (held privately)<doc>.json, gitignored data a worktree links and a clean clone does not hold; it raises FileNotFoundError instead of skipping by name (HB-90's rule for the build host's files). Every one of the 18 is this test (one per quotation).

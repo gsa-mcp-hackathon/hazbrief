@@ -1,0 +1,7 @@
+# HB-198 gate ledger summary, written by gate_ledger.py (a build tool held privately) from docs/evidence/hb198/gate_ledger.tsv
+# the bound: exact (Clopper-Pearson) one-sided 95 percent upper limit on a binomial proportion
+after_hb194	n=13	failed=7	bound_failed=0.7760	intermittent=2	bound_intermittent=0.4101	stopped_left_out=3
+before_hb194	n=16	failed=9	bound_failed=0.7733	intermittent=6	bound_intermittent=0.6090	stopped_left_out=0
+
+After HB-194 landed: 13 full gate runs, 7 failed; the exact one-sided 95 percent upper bound on the failure rate is 78 percent. Of those runs, 2 failed for a reason other than a defect of the tree under test (a bound missed under load, a cloud placeholder, a cause not established), bound 41 percent; 3 runs stopped before their tails by a dispatcher hard stop are left out of n, being neither a pass nor a fail.
+Before it: 16 full gate runs, 9 failed; the exact one-sided 95 percent upper bound on the failure rate is 77 percent. Of those runs, 6 failed for a reason other than a defect of the tree under test (a bound missed under load, a cloud placeholder, a cause not established), bound 61 percent.

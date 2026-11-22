@@ -1,0 +1,20 @@
+# corpus/concept_vocab.yaml: what scripts/build_concept_vocab.py reads (HB-20).
+#
+# The corpus graph's concept vocabularies are derived from the commander stylebook's controlled
+# vocabulary, one `form: manual` vocabulary per authority (squiddy.vocab.parse_manual). Which
+# authority goes to which vocabulary file is the graph's own declaration: each entry of
+# `domain.vocabularies` in the corpus graph (held privately) names its `authority`.
+source: docs/stylebook/VOCABULARY.yaml
+graph: the corpus graph (held privately)
+# The local Squiddy index (`text_of_record: parsed`): alternative labels are located in its rows.
+index_db: the corpus graph (held privately)
+
+# Authorities of VOCABULARY.yaml that are not imported, each with its reason.
+not_imported:
+  project: >-
+    this server's own coinage (DN-001 section 4 invariant 1), not a term any held document
+    publishes; the concept layer holds the authorities' terms only
+
+# Every Concept's term_type (squiddy schema: "as its own vocabulary types it"). The stylebook does
+# not type its terms, so every one is a term.
+term_type: term

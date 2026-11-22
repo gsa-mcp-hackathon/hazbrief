@@ -1,0 +1,10 @@
+commit	df1cb4b7
+disk_before	free 82,796,761,088 bytes in /var/folders/s1/yqb3d76d7053f7dyy9fwtkzw0000gp/T; need 14,516,920,320 (2 x the archive, 2,532,546,560, + HB-202's largest swap draw, 9,451,827,200)
+copy	`git archive HEAD` into a new temporary directory (hb209_clean_8rb2bd32); 2,509,992,298 bytes
+uv sync --group dev	exit 0 in 0.6 s, offline from uv's local cache
+uv run ruff check .	exit 0 in 0.7 s
+uv run python main.py (stdio, README's client line)	answered in 5.9 s: 7 tools (assess_incident, build_ics_201, facilities_in_footprint, material_response_guidance, population_at_risk, protective_action_footprint, receiving_hospitals); prompts decision_support, ics201_brief; assess_incident with README's arguments: 0 differences on 20 fields README prints
+uv run hazbrief brief docs/briefs/csx-point-of-rocks-day/scenario.json --out /tmp/brief --replay --now 2026-10-26T12:00:00Z --no-google	exit 0 in 27.1 s; brief.html equals the committed docs/briefs/csx-point-of-rocks-day/brief.html: yes
+not run here	README's container lines (`docker build` fetches from PyPI; this task's Network line is none) and its full-suite line (the gate runs it, item 14)
+copy_size	2,684,006,231 bytes after the steps
+deleted	yes; free 82,781,687,808 bytes after

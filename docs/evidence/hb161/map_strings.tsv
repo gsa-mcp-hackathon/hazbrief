@@ -1,0 +1,1132 @@
+layer	modelled	where	head	klass	rule	string	disposition	section	field	why
+population	False	title		name	R1 a layer title names the layer	Population by Census block (2020)	kept			
+population	False	label		documentation	R5 a label clause is provenance	2020 Census DHC (live_call), as of 04/01/2020, current	kept			
+population	False	label		documentation	R5 a label clause is provenance	TIGERweb Census 2020 tabulation geography (live_call), 01/01/2020 as the service stated it when last read on 10/21/2026, current	kept			
+population	False	label		key	R5 a bare record hash is a key to the evidence	record 8ffdc8bd2fd0	kept			
+population	False	label		documentation	R5 a label clause is provenance	geometry: TIGERweb Census 2020 tabulation geography (live_call), as of 11/09/2026 04:04 EST, current	kept			
+population	False	label		key	R5 a bare record hash is a key to the evidence	record f14502289f5b	kept			
+population	False	label		documentation	R5 a label clause is provenance	count: 2020 Census DHC (live_call), as of 10/26/2026 23:39 EDT, current	kept			
+population	False	label		key	R5 a bare record hash is a key to the evidence	record 2002c426c8ca	kept			
+population	False	popup	Residents, whole block (2020 Census)	measurement	R6 popup heading 'Residents, whole block (2020 Census)' gives a measurement	151	kept			
+population	False	popup	Margin of error	documentation	R8 popup heading 'Margin of error' explains	none: 2020 Census counts are published without one; they carry disclosure avoidance noise, so a small block's count can be off	kept			
+population	False	popup	Inside the footprint	documentation	R8 popup heading 'Inside the footprint' explains	partly (the tool counts the share of its area inside)	kept			
+population	False	popup	Inside the footprint	name	R7b popup heading 'Inside the footprint' names the feature (an attribute)	wholly	kept			
+modelled_population	True	title		name	R1 a layer title names the layer	Population under the modelled area (2020 blocks)	kept			
+modelled_population	True	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/11/2026 00:09 EST, record 27340d152869	moved	T17	inputs	
+modelled_population	True	popup	Residents, whole block (2020 Census)	measurement	R6 popup heading 'Residents, whole block (2020 Census)' gives a measurement	151.0	kept			
+modelled_population	True	popup	Share of its area under the modelled area	measurement	R6 popup heading 'Share of its area under the modelled area' gives a measurement	5%	kept			
+modelled_population	True	popup	Figure	documentation	R8 popup heading 'Figure' explains	1,525 residents and 187 workers (LODES) under the modelled area (modelled first-order puff contours; modelled first-order arrival area; modelled dense-gas AEGL-1 band; modelled dense-gas AEGL-2 band; modelled dense-gas AEGL-3 band; 21.2 km2, 36 blocks, 11 wholly or partly beyond the ERG zones); the ERG protective action figure is 2,456 residents and 502 workers in the ERG zones	moved	T17	inputs	
+residential_density	False	title		name	R1 a layer title names the layer	Residential density by Census block (2020)	kept			
+residential_density	False	legend		documentation	R11 a clause that explains	Residential density, 2020 Census blocks, residents per km² in 5 quantile bands: 0	kept			
+residential_density	False	legend		documentation	R11 a clause that explains	over 0 to 26	kept			
+residential_density	False	legend		documentation	R11 a clause that explains	over 252	kept			
+residential_density	False	label		documentation	R5 a label clause is provenance	residents per km² of the whole block (2020 Census DHC count over the block's whole area, land and water, from its TIGERweb geometry on the local plane)	kept			
+residential_density	False	label		documentation	R5 a label clause is provenance	5 quantile bands of this brief's 72 blocks	kept			
+residential_density	False	label		documentation	R5 a label clause is provenance	2020 Census DHC (live_call), as of 04/01/2020, current	kept			
+residential_density	False	label		documentation	R5 a label clause is provenance	TIGERweb Census 2020 tabulation geography (live_call), 01/01/2020 as the service stated it when last read on 10/21/2026, current	kept			
+residential_density	False	label		key	R5 a bare record hash is a key to the evidence	record 8ffdc8bd2fd0	kept			
+residential_density	False	label		documentation	R5 a label clause is provenance	geometry: TIGERweb Census 2020 tabulation geography (live_call), as of 11/09/2026 04:04 EST, current	kept			
+residential_density	False	label		key	R5 a bare record hash is a key to the evidence	record f14502289f5b	kept			
+residential_density	False	popup	Residents per km²	name	R7b popup heading 'Residents per km²' names the feature (an attribute)	694	kept			
+residential_density	False	popup	Residents, whole block (2020 Census)	measurement	R6 popup heading 'Residents, whole block (2020 Census)' gives a measurement	151	kept			
+residential_density	False	popup	Block area	name	R7b popup heading 'Block area' names the feature (an attribute)	0.218 km²	kept			
+residential_density	False	popup	Band	key	R7 popup heading 'Band' gives a threshold	5 of 5	kept			
+residential_density	False	popup	Inside the footprint	documentation	R8 popup heading 'Inside the footprint' explains	partly (the tool counts the share of its area inside)	kept			
+residential_density	False	popup	Inside the footprint	name	R7b popup heading 'Inside the footprint' names the feature (an attribute)	wholly	kept			
+workplaces	False	title		name	R1 a layer title names the layer	Workplaces by Census block (LODES jobs)	kept			
+workplaces	False	label		documentation	R5 a label clause is provenance	LODES workplace area characteristics, 2023 (LODES 8.4)	kept			
+workplaces	False	label		documentation	R5 a label clause is provenance	whole-block counts	kept			
+workplaces	False	label		documentation	R5 a label clause is provenance	md_wac_S000_JT00_2023.csv.gz, va_wac_S000_JT00_2023.csv.gz	kept			
+workplaces	False	label		documentation	R5 a label clause is provenance	LEHD LODES8 (recorded_pack), as of 12/03/2025, current	kept			
+workplaces	False	label		key	R5 a bare record hash is a key to the evidence	record 8ffdc8bd2fd0	kept			
+workplaces	False	label		documentation	R5 a label clause is provenance	geometry: TIGERweb Census 2020 tabulation geography (live_call), as of 11/09/2026 04:04 EST, current	kept			
+workplaces	False	label		key	R5 a bare record hash is a key to the evidence	record f14502289f5b	kept			
+workplaces	False	popup	Jobs located in the block, whole block (C000)	name	R7b popup heading 'Jobs located in the block, whole block (C000)' names the feature (an attribute)	13	kept			
+workplaces	False	popup	NAICS 62 Health Care and Social Assistance	name	R7b popup heading 'NAICS 62 Health Care and Social Assistance' names the feature (an attribute)	13	kept			
+workplaces	False	popup	Note	documentation	R8 popup heading 'Note' explains	Daytime counts jobs located in the footprint; a worker with two jobs counts twice.	kept			
+workplaces	False	popup	Inside the footprint	documentation	R8 popup heading 'Inside the footprint' explains	partly (the tool counts the share of its area inside)	kept			
+workplaces	False	popup	Inside the footprint	name	R7b popup heading 'Inside the footprint' names the feature (an attribute)	wholly	kept			
+workplaces	False	popup	NAICS 81 Other Services (except Public Administration)	name	R7b popup heading 'NAICS 81 Other Services (except Public Administration)' names the feature (an attribute)	1	kept			
+workplaces	False	popup	NAICS 31-33 Manufacturing	name	R7b popup heading 'NAICS 31-33 Manufacturing' names the feature (an attribute)	226	kept			
+workplaces	False	popup	NAICS 72 Accommodation and Food Services	name	R7b popup heading 'NAICS 72 Accommodation and Food Services' names the feature (an attribute)	1	kept			
+workplaces	False	popup	NAICS 56 Administrative and Support and Waste Management and Remediation Services	name	R7b popup heading 'NAICS 56 Administrative and Support and Waste Management and Remediation Services' names the feature (an attribute)	8	kept			
+workplaces	False	popup	NAICS 23 Construction	name	R7b popup heading 'NAICS 23 Construction' names the feature (an attribute)	7	kept			
+workplaces	False	popup	NAICS 44-45 Retail Trade	name	R7b popup heading 'NAICS 44-45 Retail Trade' names the feature (an attribute)	3	kept			
+workplaces	False	popup	NAICS 51 Information	name	R7b popup heading 'NAICS 51 Information' names the feature (an attribute)	1	kept			
+workplaces	False	popup	NAICS 54 Professional, Scientific, and Technical Services	name	R7b popup heading 'NAICS 54 Professional, Scientific, and Technical Services' names the feature (an attribute)	3	kept			
+workplaces	False	popup	NAICS 42 Wholesale Trade	name	R7b popup heading 'NAICS 42 Wholesale Trade' names the feature (an attribute)	3	kept			
+workplaces	False	popup	NAICS 11 Agriculture, Forestry, Fishing and Hunting	name	R7b popup heading 'NAICS 11 Agriculture, Forestry, Fishing and Hunting' names the feature (an attribute)	40	kept			
+workplaces	False	popup	NAICS 61 Educational Services	name	R7b popup heading 'NAICS 61 Educational Services' names the feature (an attribute)	25	kept			
+workplaces	False	popup	NAICS 71 Arts, Entertainment, and Recreation	name	R7b popup heading 'NAICS 71 Arts, Entertainment, and Recreation' names the feature (an attribute)	1	kept			
+workplaces	False	popup	NAICS 48-49 Transportation and Warehousing	name	R7b popup heading 'NAICS 48-49 Transportation and Warehousing' names the feature (an attribute)	4	kept			
+plume_range	True	title		name	R1 a layer title names the layer	Range of plume paths across the forecast wind's range (low to high); not a probability	rewritten			item 9: a title is at most eight words; 'not a probability' is the range's TEVV limit (T14)
+plume_range	True	legend		documentation	R11 a clause that explains	Range of plume paths across the forecast wind's range (low to high)	rewritten			item 9: a title is at most eight words; 'not a probability' is the range's TEVV limit (T14)
+plume_range	True	legend		documentation	R11 a clause that explains	not a probability: Steps and arrival: one level of concern, AEGL-2 (60 min) (2 ppm	rewritten			item 9: a title is at most eight words; 'not a probability' is the range's TEVV limit (T14)
+plume_range	True	legend		documentation	R11 a clause that explains	epa-aegl-compiled-2018#p43), the class's first threshold at its longest held duration	moved	T11	inputs	
+plume_range	True	legend		documentation	R11 a clause that explains	Modelled to H+2 h: no new place reaches the level after that step (horizon 6 h)	moved	T11	inputs	
+plume_range	True	legend		documentation	R11 a clause that explains	computed on the 10/21/2026 14:00 EDT wind	moved	T7	inputs	
+plume_range	True	legend		documentation	R11 a clause that explains	does not follow later shifts	moved	T7	inputs	
+plume_range	True	legend		documentation	R11 a clause that explains	a level of concern, not a protective action distance	moved	T7	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	First-order passive puff (hazbrief.brief.puff (NumPy) d58debe1a124)	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	not a dense-gas model	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	source assumed: hazbrief's tank source (the method of ALOHA's technical documentation	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+plume_range	True	label		documentation	R5 a label clause is provenance	hazbrief does not run ALOHA), two-phase flashing release: 59.8 kg/s for 22.3 minutes (80,000 kg of the stated 80,000 kg, scenario author's stated quantity	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+plume_range	True	label		documentation	R5 a label clause is provenance	basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg), flashed fraction 0.16, aerosol fraction 0.84, at 239.5 K, at the ground	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	hole assumed: a seam failure 40 inches long and 0.1 inch wide (2.58e-3 m2) at the bottom of the tank, the ALOHA user's manual's tank-car example (epa-aloha-users-manual-2007 p. 75, which calls the bottom the worst case)	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+plume_range	True	label		documentation	R5 a label clause is provenance	"storage temperature assumed: the air temperature, the ALOHA manual's default ""Chemical stored at ambient temperature"" (epa-aloha-users-manual-2007 p. 70)"	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+plume_range	True	label		documentation	R5 a label clause is provenance	properties: molecular weight 70.906 g/mol (tier not stated	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	as printed: not printed	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 p. 22)	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	normal boiling point 239.5 K (reference-table	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	as printed: 239.5 K ± 0.6	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 (Thiele and Schulte, 1920, p71))	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	heat of vaporisation 20409.6 J/mol (model-test-input	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	"as printed: 287840. J/kg at TBP 239.10 K (""Heat of vaporization at the boiling point temperature"")"	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	epa-slab-users-guide-1990 p. 136)	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	liquid heat capacity 65.6802 J/mol/K (model-test-input	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	as printed: 926.30 J/kg*K (no temperature printed)	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	liquid density 1574 kg/m3 (model-test-input	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	as printed: 1574.00 kg/m3 (no temperature printed)	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	saturation pressure (Antoine) 2 rows (reference-table	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	as printed: 155 to 239.4 K: A 3.0213, B 530.591, C -64.639	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	239.4 to 400.3 K: A 4.28814, B 969.992, C -12.791	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	vapour heat capacity 35.3183 J/mol/K (model-test-input	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	model-test-input: a program's test-case input (for chlorine, the SLAB user's guide's PR4 test inputs DHE, CPSL, RHOSL and CPS, epa-slab-users-guide-1990 PDF p. 136), not a benchmark-validated property	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	CPSL, RHOSL and CPS print no temperature, and DHE is used at the 239.10 K it states	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	reference-table: a value read from a held reference table (NIST WebBook, NIST Fluid Systems or CAMEO Chemicals)	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	boiling point disputed (cameo-chem-2862: 238.54 K (-30.3 °F) (Antoine 0.92 atm)	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 (Thiele and Schulte, 1920, p71): 239.5 K ± 0.6 (Antoine 1.01 atm))	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	239.5 K taken, where the pack's Antoine row is nearest 1 atm (HB-110 ADDENDUM-02 section 3)	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	not modelled: the tank wall's heat flux (ALOHA states a wall of 2 cm steel and 10 cm foam and no conductivity, p. 22): the tank cools by evaporation alone	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+plume_range	True	label		documentation	R5 a label clause is provenance	not modelled: the liquid's head above the hole: the container's dimensions are not stated, so the hole is at the bottom and the vapour pressure alone drives it	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	wind: NWS forecast as of 2026-10-21T02:52:44+00:00	moved	T8	inputs	
+plume_range	True	label		documentation	R5 a label clause is provenance	stability class B by EPA's Turner key. The ERG footprint is the protective action distance.	moved	T8	inputs	
+plume_range	True	label		key	R5 a bare record hash is a key to the evidence	record 79fd1db7cb6d	rewritten			the run record's hash moved with its label text (ADDENDUM-02 item 1); the section's run record names the new hash
+plume_range	True	popup	Step	measurement	R6 popup heading 'Step' gives a measurement	H+15 min (10/21/2026 14:15 EDT)	kept			
+plume_range	True	popup	Runs	documentation	R8 popup heading 'Runs' explains	the puff run again at the low and high ends of the wind's direction (10 to 10 degrees from) and speed (11.1 to 11.1 km/h) over hours 0, 1, 2, with the central run; the band is their outer boundary	moved	T14	method	
+arrival_bands	True	title		name	R1 a layer title names the layer	Modelled arrival, first order: AEGL-2 (60 min)	kept			
+arrival_bands	True	legend		documentation	R11 a clause that explains	Modelled arrival, first order: AEGL-2 (60 min): Steps and arrival: one level of concern, AEGL-2 (60 min) (2 ppm	moved	T11	inputs	
+arrival_bands	True	legend		documentation	R11 a clause that explains	epa-aegl-compiled-2018#p43), the class's first threshold at its longest held duration	moved	T11	inputs	
+arrival_bands	True	legend		documentation	R11 a clause that explains	Modelled to H+2 h: no new place reaches the level after that step (horizon 6 h)	moved	T11	inputs	
+arrival_bands	True	legend		documentation	R11 a clause that explains	computed on the 10/21/2026 14:00 EDT wind	moved	T11	inputs	
+arrival_bands	True	legend		documentation	R11 a clause that explains	does not follow later shifts	moved	T11	inputs	
+arrival_bands	True	legend		documentation	R11 a clause that explains	a level of concern, not a protective action distance	moved	T7	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	First-order passive puff (hazbrief.brief.puff (NumPy) d58debe1a124)	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	not a dense-gas model	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	source assumed: hazbrief's tank source (the method of ALOHA's technical documentation	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+arrival_bands	True	label		documentation	R5 a label clause is provenance	hazbrief does not run ALOHA), two-phase flashing release: 59.8 kg/s for 22.3 minutes (80,000 kg of the stated 80,000 kg, scenario author's stated quantity	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+arrival_bands	True	label		documentation	R5 a label clause is provenance	basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg), flashed fraction 0.16, aerosol fraction 0.84, at 239.5 K, at the ground	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	hole assumed: a seam failure 40 inches long and 0.1 inch wide (2.58e-3 m2) at the bottom of the tank, the ALOHA user's manual's tank-car example (epa-aloha-users-manual-2007 p. 75, which calls the bottom the worst case)	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+arrival_bands	True	label		documentation	R5 a label clause is provenance	"storage temperature assumed: the air temperature, the ALOHA manual's default ""Chemical stored at ambient temperature"" (epa-aloha-users-manual-2007 p. 70)"	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+arrival_bands	True	label		documentation	R5 a label clause is provenance	properties: molecular weight 70.906 g/mol (tier not stated	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	as printed: not printed	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 p. 22)	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	normal boiling point 239.5 K (reference-table	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	as printed: 239.5 K ± 0.6	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 (Thiele and Schulte, 1920, p71))	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	heat of vaporisation 20409.6 J/mol (model-test-input	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	"as printed: 287840. J/kg at TBP 239.10 K (""Heat of vaporization at the boiling point temperature"")"	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	epa-slab-users-guide-1990 p. 136)	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	liquid heat capacity 65.6802 J/mol/K (model-test-input	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	as printed: 926.30 J/kg*K (no temperature printed)	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	liquid density 1574 kg/m3 (model-test-input	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	as printed: 1574.00 kg/m3 (no temperature printed)	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	saturation pressure (Antoine) 2 rows (reference-table	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	as printed: 155 to 239.4 K: A 3.0213, B 530.591, C -64.639	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	239.4 to 400.3 K: A 4.28814, B 969.992, C -12.791	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	vapour heat capacity 35.3183 J/mol/K (model-test-input	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	model-test-input: a program's test-case input (for chlorine, the SLAB user's guide's PR4 test inputs DHE, CPSL, RHOSL and CPS, epa-slab-users-guide-1990 PDF p. 136), not a benchmark-validated property	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	CPSL, RHOSL and CPS print no temperature, and DHE is used at the 239.10 K it states	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	reference-table: a value read from a held reference table (NIST WebBook, NIST Fluid Systems or CAMEO Chemicals)	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	boiling point disputed (cameo-chem-2862: 238.54 K (-30.3 °F) (Antoine 0.92 atm)	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 (Thiele and Schulte, 1920, p71): 239.5 K ± 0.6 (Antoine 1.01 atm))	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	239.5 K taken, where the pack's Antoine row is nearest 1 atm (HB-110 ADDENDUM-02 section 3)	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	not modelled: the tank wall's heat flux (ALOHA states a wall of 2 cm steel and 10 cm foam and no conductivity, p. 22): the tank cools by evaporation alone	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+arrival_bands	True	label		documentation	R5 a label clause is provenance	not modelled: the liquid's head above the hole: the container's dimensions are not stated, so the hole is at the bottom and the vapour pressure alone drives it	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	wind: NWS forecast as of 2026-10-21T02:52:44+00:00	moved	T8	inputs	
+arrival_bands	True	label		documentation	R5 a label clause is provenance	stability class B by EPA's Turner key. The ERG footprint is the protective action distance.	moved	T8	inputs	
+arrival_bands	True	label		key	R5 a bare record hash is a key to the evidence	record 79fd1db7cb6d	rewritten			the run record's hash moved with its label text (ADDENDUM-02 item 1); the section's run record names the new hash
+arrival_bands	True	popup	Reached	measurement	R6 popup heading 'Reached' gives a measurement	reached by H+15 min (10/21/2026 14:15 EDT)	kept			
+arrival_bands	True	popup	Level of concern	documentation	R8 popup heading 'Level of concern' explains	Steps and arrival: one level of concern, AEGL-2 (60 min) (2 ppm; epa-aegl-compiled-2018#p43), the class's first threshold at its longest held duration	moved	T11	inputs	
+arrival_bands	True	popup	Modelled time	name	R7b popup heading 'Modelled time' names the feature (an attribute)	Modelled to H+2 h: no new place reaches the level after that step (horizon 6 h)	moved	T11	inputs	
+arrival_bands	True	popup	Wind	documentation	R8 popup heading 'Wind' explains	computed on the 10/21/2026 14:00 EDT wind; does not follow later shifts	moved	T7	inputs	
+arrival_bands	True	popup	Reached	measurement	R6 popup heading 'Reached' gives a measurement	reached by H+1 h (10/21/2026 15:00 EDT)	kept			
+puff_source_term	True	title		name	R1 a layer title names the layer	Modelled, first order: source term	kept			
+puff_source_term	True	legend		documentation	R11 a clause that explains	Modelled, first order: source term: contours at AEGL-2 (10 min), AEGL-3 (10 min), AEGL-2 (30 min), AEGL-3 (30 min)	moved	T8	inputs	
+puff_source_term	True	legend		documentation	R11 a clause that explains	set beside the ERG at source term, AEGL-2 (30 min)	moved	T8	inputs	
+puff_source_term	True	legend		documentation	R11 a clause that explains	the first 60 minutes after a release at 10/21/2026 14:00 EDT, on the wind as of 10/20/2026 22:52 EDT	moved	T8	inputs	
+puff_source_term	True	legend		documentation	R11 a clause that explains	a level of concern, not a protective action distance	moved	T7	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	First-order passive puff (hazbrief.brief.puff (NumPy) d58debe1a124)	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	not a dense-gas model	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	source assumed: hazbrief's tank source (the method of ALOHA's technical documentation	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+puff_source_term	True	label		documentation	R5 a label clause is provenance	hazbrief does not run ALOHA), two-phase flashing release: 59.8 kg/s for 22.3 minutes (80,000 kg of the stated 80,000 kg, scenario author's stated quantity	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+puff_source_term	True	label		documentation	R5 a label clause is provenance	basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg), flashed fraction 0.16, aerosol fraction 0.84, at 239.5 K, at the ground	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	hole assumed: a seam failure 40 inches long and 0.1 inch wide (2.58e-3 m2) at the bottom of the tank, the ALOHA user's manual's tank-car example (epa-aloha-users-manual-2007 p. 75, which calls the bottom the worst case)	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+puff_source_term	True	label		documentation	R5 a label clause is provenance	"storage temperature assumed: the air temperature, the ALOHA manual's default ""Chemical stored at ambient temperature"" (epa-aloha-users-manual-2007 p. 70)"	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+puff_source_term	True	label		documentation	R5 a label clause is provenance	properties: molecular weight 70.906 g/mol (tier not stated	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	as printed: not printed	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 p. 22)	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	normal boiling point 239.5 K (reference-table	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	as printed: 239.5 K ± 0.6	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 (Thiele and Schulte, 1920, p71))	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	heat of vaporisation 20409.6 J/mol (model-test-input	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	"as printed: 287840. J/kg at TBP 239.10 K (""Heat of vaporization at the boiling point temperature"")"	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	epa-slab-users-guide-1990 p. 136)	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	liquid heat capacity 65.6802 J/mol/K (model-test-input	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	as printed: 926.30 J/kg*K (no temperature printed)	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	liquid density 1574 kg/m3 (model-test-input	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	as printed: 1574.00 kg/m3 (no temperature printed)	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	saturation pressure (Antoine) 2 rows (reference-table	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	as printed: 155 to 239.4 K: A 3.0213, B 530.591, C -64.639	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	239.4 to 400.3 K: A 4.28814, B 969.992, C -12.791	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	vapour heat capacity 35.3183 J/mol/K (model-test-input	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	model-test-input: a program's test-case input (for chlorine, the SLAB user's guide's PR4 test inputs DHE, CPSL, RHOSL and CPS, epa-slab-users-guide-1990 PDF p. 136), not a benchmark-validated property	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	CPSL, RHOSL and CPS print no temperature, and DHE is used at the 239.10 K it states	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	reference-table: a value read from a held reference table (NIST WebBook, NIST Fluid Systems or CAMEO Chemicals)	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	boiling point disputed (cameo-chem-2862: 238.54 K (-30.3 °F) (Antoine 0.92 atm)	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 (Thiele and Schulte, 1920, p71): 239.5 K ± 0.6 (Antoine 1.01 atm))	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	239.5 K taken, where the pack's Antoine row is nearest 1 atm (HB-110 ADDENDUM-02 section 3)	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	not modelled: the tank wall's heat flux (ALOHA states a wall of 2 cm steel and 10 cm foam and no conductivity, p. 22): the tank cools by evaporation alone	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+puff_source_term	True	label		documentation	R5 a label clause is provenance	not modelled: the liquid's head above the hole: the container's dimensions are not stated, so the hole is at the bottom and the vapour pressure alone drives it	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	wind: NWS forecast as of 2026-10-21T02:52:44+00:00	moved	T8	inputs	
+puff_source_term	True	label		documentation	R5 a label clause is provenance	stability class B by EPA's Turner key. The ERG footprint is the protective action distance.	moved	T8	inputs	
+puff_source_term	True	label		key	R5 a bare record hash is a key to the evidence	record 79fd1db7cb6d	rewritten			the run record's hash moved with its label text (ADDENDUM-02 item 1); the section's run record names the new hash
+puff_source_term	True	popup	Threshold	key	R7 popup heading 'Threshold' gives a threshold	AEGL-2 (10 min)	kept			
+puff_source_term	True	popup	At	measurement	R6 popup heading 'At' gives a measurement	10 minutes after the release began	kept			
+puff_source_term	True	popup	Farthest extent	measurement	R6 popup heading 'Farthest extent' gives a measurement	2,303 m from the spill	kept			
+puff_source_term	True	popup	Source assumed	documentation	R8 popup heading 'Source assumed' explains	"hazbrief's tank source (the method of ALOHA's technical documentation; hazbrief does not run ALOHA), two-phase flashing release: 59.8 kg/s for 22.3 minutes (80,000 kg of the stated 80,000 kg, scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg), flashed fraction 0.16, aerosol fraction 0.84, at 239.5 K, at the ground; hole assumed: a seam failure 40 inches long and 0.1 inch wide (2.58e-3 m2) at the bottom of the tank, the ALOHA user's manual's tank-car example (epa-aloha-users-manual-2007 p. 75, which calls the bottom the worst case); storage temperature assumed: the air temperature, the ALOHA manual's default ""Chemical stored at ambient temperature"" (epa-aloha-users-manual-2007 p. 70); properties: molecular weight 70.906 g/mol (tier not stated; as printed: not printed; nist-webbook-1017 p. 22); normal boiling point 239.5 K (reference-table; as printed: 239.5 K ± 0.6; nist-webbook-1017 (Thiele and Schulte, 1920, p71)); heat of vaporisation 20409.6 J/mol (model-test-input; as printed: 287840. J/kg at TBP 239.10 K (""Heat of vaporization at the boiling point temperature""); epa-slab-users-guide-1990 p. 136); liquid heat capacity 65.6802 J/mol/K (model-test-input; as printed: 926.30 J/kg*K (no temperature printed); epa-slab-users-guide-1990 p. 136); liquid density 1574 kg/m3 (model-test-input; as printed: 1574.00 kg/m3 (no temperature printed); epa-slab-users-guide-1990 p. 136); saturation pressure (Antoine) 2 rows (reference-table; as printed: 155 to 239.4 K: A 3.0213, B 530.591, C -64.639; 239.4 to 400.3 K: A 4.28814, B 969.992, C -12.791; nist-webbook-1017 p. 77); vapour heat capacity 35.3183 J/mol/K (model-test-input; as printed: 498.10 J/kg*K (no temperature printed); epa-slab-users-guide-1990 p. 136); model-test-input: a program's test-case input (for chlorine, the SLAB user's guide's PR4 test inputs DHE, CPSL, RHOSL and CPS, epa-slab-users-guide-1990 PDF p. 136), not a benchmark-validated property; CPSL, RHOSL and CPS print no temperature, and DHE is used at the 239.10 K it states; reference-table: a value read from a held reference table (NIST WebBook, NIST Fluid Systems or CAMEO Chemicals); boiling point disputed (cameo-chem-2862: 238.54 K (-30.3 °F) (Antoine 0.92 atm); nist-webbook-1017 (Thiele and Schulte, 1920, p71): 239.5 K ± 0.6 (Antoine 1.01 atm)); 239.5 K taken, where the pack's Antoine row is nearest 1 atm (HB-110 ADDENDUM-02 section 3); not modelled: the tank wall's heat flux (ALOHA states a wall of 2 cm steel and 10 cm foam and no conductivity, p. 22): the tank cools by evaporation alone; not modelled: the liquid's head above the hole: the container's dimensions are not stated, so the hole is at the bottom and the vapour pressure alone drives it"	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+puff_source_term	True	popup	Quantity from	documentation	R8 popup heading 'Quantity from' explains	scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg	moved	T8	inputs	
+puff_source_term	True	popup	Release rate	documentation	R8 popup heading 'Release rate' explains	Tank source method of the ALOHA technical documentation, computed by hazbrief: Homogeneous Nonequilibrium Model (section 3.4.5, p. 27), tank cooling (3.4.1, p. 22), head-space gas (3.4.6, pp. 28-30), flashed fraction (6.3.2, p. 68)	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+dense_gas	True	title		name	R1 a layer title names the layer	Modelled, dense gas (SLAB): toxic, AEGL-2 60 min	kept			
+dense_gas	True	legend		documentation	R11 a clause that explains	Modelled, dense gas (SLAB): toxic, AEGL-2 60 min: AEGL-2 60 minutes, 2 ppm (epa-aegl-compiled-2018 p. 43), SLAB averaging over 3600 s	moved	T7	inputs	
+dense_gas	True	legend		measurement	R9 a clause that is a distance or count	farthest downwind 5,513 m (dense gas over ERG 0.88)	moved	T7	inputs	
+dense_gas	True	legend		documentation	R11 a clause that explains	on the wind as of 10/20/2026 22:52 EDT	moved	T7	inputs	
+dense_gas	True	legend		documentation	R11 a clause that explains	a level of concern, not a protective action distance	moved	T7	inputs	
+dense_gas	True	legend		documentation	R11 a clause that explains	bands, outermost first: AEGL-1 0.5 ppm at 60 min (epa-aegl-compiled-2018#p43)	moved	T7	inputs	
+dense_gas	True	legend		documentation	R11 a clause that explains	AEGL-2 2 ppm at 60 min (epa-aegl-compiled-2018#p43)	moved	T7	inputs	
+dense_gas	True	legend		documentation	R11 a clause that explains	each band's fill opacity is 0.18	moved	T7	inputs	
+dense_gas	True	label		documentation	R5 a label clause is provenance	Modelled, dense gas: SLAB (LLNL, 1990), run in `hazbrief-models` sha256:272f3dda4d49754d454ffe83c1e77fad4a1d01f86bb1265f62ec782ac6adcd68	moved	T7	inputs	
+dense_gas	True	label		documentation	R5 a label clause is provenance	source term rests on model-test-input values (DHE, CPSL, RHOSL, CPS). Source: two-phase flashing release, 59.8 kg/s for 1,337 s, flashed 0.16, hole 0.00258 m2 assumed (a seam 40 inches by 0.1 inch, epa-aloha-users-manual-2007 p. 75), from 80,000 kg in a Rail tank car. Level of concern AEGL-2 60 minutes, 2 ppm (epa-aegl-compiled-2018 p. 43), SLAB averaging over 3600 s. Checked: SLAB test cases 1 to 4 reproduce at build. 1991 EPA evaluation: within a factor of 2 on 0/6 Desert Tortoise, 0/7 Goldfish	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+dense_gas	True	label		documentation	R5 a label clause is provenance	under-predicts pressurised jets by 2.5 to 3. The ERG footprint is the protective action distance.	moved	T7	inputs	
+dense_gas	True	label		key	R5 a bare record hash is a key to the evidence	record 3a139805885d	rewritten			the run record's hash moved with its label text (ADDENDUM-02 item 1); the section's run record names the new hash
+dense_gas	True	popup	Level of concern	documentation	R8 popup heading 'Level of concern' explains	AEGL-2 60 minutes, 2 ppm (epa-aegl-compiled-2018 p. 43), SLAB averaging over 3600 s	moved	T7	inputs	
+dense_gas	True	popup	Farthest downwind	measurement	R6 popup heading 'Farthest downwind' gives a measurement	5,513 m from the spill	kept			
+dense_gas	True	popup	Widest half-width	measurement	R6 popup heading 'Widest half-width' gives a measurement	599 m	kept			
+dense_gas	True	popup	Beside	documentation	R8 popup heading 'Beside' explains	Beside the ERG: protective action distance 6,300 m; puff 5,495 m (source term, AEGL-2 (30 min)); dense gas 5,513 m. Modelled over ERG: puff 0.87, dense gas 0.88	cut			ADDENDUM-03 item 1: agreement between methods reads 'set by HB-163'; no puff figure is written for the csx pair
+dense_gas	True	popup	Time it stands for	documentation	R8 popup heading 'Time it stands for' explains	the concentration averaged over 3,600 s from the release (SLAB's TAV), not one moment; not stepped	moved	T7	limits	
+dense_gas	True	popup	Wind	documentation	R8 popup heading 'Wind' explains	computed on the 10/21/2026 14:00 EDT wind; does not follow later shifts	moved	T7	inputs	
+dense_gas	True	popup	Band	key	R7 popup heading 'Band' gives a threshold	AEGL-1 0.5 ppm at 60 min	kept			
+dense_gas	True	popup	Threshold from	documentation	R8 popup heading 'Threshold from' explains	epa-aegl-compiled-2018#p43	moved	T7	inputs	
+step_outline	True	title		name	R1 a layer title names the layer	Modelled outline at the step, first order: AEGL-2 (60 min)	rewritten			item 9: a title is at most eight words ('Modelled step outline')
+step_outline	True	legend		documentation	R11 a clause that explains	Modelled outline at the step, first order: AEGL-2 (60 min): Steps and arrival: one level of concern, AEGL-2 (60 min) (2 ppm	rewritten			item 9: a title is at most eight words ('Modelled step outline')
+step_outline	True	legend		documentation	R11 a clause that explains	epa-aegl-compiled-2018#p43), the class's first threshold at its longest held duration	moved	T11	inputs	
+step_outline	True	legend		documentation	R11 a clause that explains	Modelled to H+2 h: no new place reaches the level after that step (horizon 6 h)	moved	T11	inputs	
+step_outline	True	legend		documentation	R11 a clause that explains	computed on the 10/21/2026 14:00 EDT wind	moved	T7	inputs	
+step_outline	True	legend		documentation	R11 a clause that explains	does not follow later shifts	moved	T7	inputs	
+step_outline	True	legend		documentation	R11 a clause that explains	a level of concern, not a protective action distance	moved	T7	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	First-order passive puff (hazbrief.brief.puff (NumPy) d58debe1a124)	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	not a dense-gas model	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	source assumed: hazbrief's tank source (the method of ALOHA's technical documentation	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+step_outline	True	label		documentation	R5 a label clause is provenance	hazbrief does not run ALOHA), two-phase flashing release: 59.8 kg/s for 22.3 minutes (80,000 kg of the stated 80,000 kg, scenario author's stated quantity	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+step_outline	True	label		documentation	R5 a label clause is provenance	basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg), flashed fraction 0.16, aerosol fraction 0.84, at 239.5 K, at the ground	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	hole assumed: a seam failure 40 inches long and 0.1 inch wide (2.58e-3 m2) at the bottom of the tank, the ALOHA user's manual's tank-car example (epa-aloha-users-manual-2007 p. 75, which calls the bottom the worst case)	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+step_outline	True	label		documentation	R5 a label clause is provenance	"storage temperature assumed: the air temperature, the ALOHA manual's default ""Chemical stored at ambient temperature"" (epa-aloha-users-manual-2007 p. 70)"	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+step_outline	True	label		documentation	R5 a label clause is provenance	properties: molecular weight 70.906 g/mol (tier not stated	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	as printed: not printed	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 p. 22)	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	normal boiling point 239.5 K (reference-table	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	as printed: 239.5 K ± 0.6	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 (Thiele and Schulte, 1920, p71))	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	heat of vaporisation 20409.6 J/mol (model-test-input	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	"as printed: 287840. J/kg at TBP 239.10 K (""Heat of vaporization at the boiling point temperature"")"	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	epa-slab-users-guide-1990 p. 136)	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	liquid heat capacity 65.6802 J/mol/K (model-test-input	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	as printed: 926.30 J/kg*K (no temperature printed)	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	liquid density 1574 kg/m3 (model-test-input	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	as printed: 1574.00 kg/m3 (no temperature printed)	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	saturation pressure (Antoine) 2 rows (reference-table	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	as printed: 155 to 239.4 K: A 3.0213, B 530.591, C -64.639	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	239.4 to 400.3 K: A 4.28814, B 969.992, C -12.791	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	vapour heat capacity 35.3183 J/mol/K (model-test-input	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	model-test-input: a program's test-case input (for chlorine, the SLAB user's guide's PR4 test inputs DHE, CPSL, RHOSL and CPS, epa-slab-users-guide-1990 PDF p. 136), not a benchmark-validated property	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	CPSL, RHOSL and CPS print no temperature, and DHE is used at the 239.10 K it states	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	reference-table: a value read from a held reference table (NIST WebBook, NIST Fluid Systems or CAMEO Chemicals)	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	boiling point disputed (cameo-chem-2862: 238.54 K (-30.3 °F) (Antoine 0.92 atm)	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 (Thiele and Schulte, 1920, p71): 239.5 K ± 0.6 (Antoine 1.01 atm))	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	239.5 K taken, where the pack's Antoine row is nearest 1 atm (HB-110 ADDENDUM-02 section 3)	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	not modelled: the tank wall's heat flux (ALOHA states a wall of 2 cm steel and 10 cm foam and no conductivity, p. 22): the tank cools by evaporation alone	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+step_outline	True	label		documentation	R5 a label clause is provenance	not modelled: the liquid's head above the hole: the container's dimensions are not stated, so the hole is at the bottom and the vapour pressure alone drives it	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	wind: NWS forecast as of 2026-10-21T02:52:44+00:00	moved	T8	inputs	
+step_outline	True	label		documentation	R5 a label clause is provenance	stability class B by EPA's Turner key. The ERG footprint is the protective action distance.	moved	T8	inputs	
+step_outline	True	label		key	R5 a bare record hash is a key to the evidence	record 79fd1db7cb6d	rewritten			the run record's hash moved with its label text (ADDENDUM-02 item 1); the section's run record names the new hash
+step_outline	True	popup	Step	measurement	R6 popup heading 'Step' gives a measurement	H+15 min (10/21/2026 14:15 EDT)	kept			
+step_outline	True	popup	Level of concern	documentation	R8 popup heading 'Level of concern' explains	Steps and arrival: one level of concern, AEGL-2 (60 min) (2 ppm; epa-aegl-compiled-2018#p43), the class's first threshold at its longest held duration	moved	T11	inputs	
+step_outline	True	popup	Wind at the step	name	R7b popup heading 'Wind at the step' names the feature (an attribute)	from 10 degrees, 11.1 km/h (forecast)	kept			
+step_outline	True	popup	Modelled time	name	R7b popup heading 'Modelled time' names the feature (an attribute)	Modelled to H+2 h: no new place reaches the level after that step (horizon 6 h)	moved	T11	inputs	
+protective_action_zone	False	title		name	R1 a layer title names the layer	Protective action zone	kept			
+protective_action_zone	False	legend		documentation	R11 a clause that explains	Protective action zone, 6.3 km (3.9 mi) downwind, toward 190 degrees: Then PROTECT persons Downwind during DAY. ERG 2024 Table 3, UN1017, rail tank car, daytime, moderate wind	rewritten			item 9: no sentence on the map; the action and its table entry are now two clauses of one key
+protective_action_zone	False	legend		documentation	R11 a clause that explains	for the daytime at 10/21/2026 14:00 EDT	kept			
+protective_action_zone	False	label		documentation	R5 a label clause is provenance	ERG 2024 (recorded_pack), as of 2024, current	kept			
+protective_action_zone	False	label		documentation	R5 a label clause is provenance	49 CFR 172.101 Hazardous Materials Table (recorded_pack), current, checked against the eCFR text of 49 CFR 172.101 as of 10/15/2026 (docs/sources/cfr172_currency_check.json)	kept			
+protective_action_zone	False	label		documentation	R5 a label clause is provenance	NOAA solar equations (astral) (derived_by_code), as of 11/08/2026 12:14 EST, current	kept			
+protective_action_zone	False	label		documentation	R5 a label clause is provenance	wind as given by the requester (caller_supplied)	kept			
+protective_action_zone	False	label		key	R5 a bare record hash is a key to the evidence	record 751803ff6a89	kept			
+protective_action_zone	False	popup	Distance	measurement	R6 popup heading 'Distance' gives a measurement	6.3 km (3.9 mi)	kept			
+protective_action_zone	False	popup	Table	name	R7b popup heading 'Table' names the feature (an attribute)	[ERG 2024 Table 3, UN1017, rail tank car, daytime, moderate wind]	kept			
+protective_action_zone	False	popup	Downwind toward	name	R7b popup heading 'Downwind toward' names the feature (an attribute)	190 degrees	kept			
+initial_isolation_zone	False	title		name	R1 a layer title names the layer	Initial isolation zone	kept			
+initial_isolation_zone	False	legend		documentation	R11 a clause that explains	Initial isolation zone, 1,000 m (3,000 ft): First ISOLATE in all Directions. ERG 2024 Table 3, UN1017, rail tank car, daytime, moderate wind	rewritten			item 9: no sentence on the map; the action and its table entry are now two clauses of one key
+initial_isolation_zone	False	legend		documentation	R11 a clause that explains	for the daytime at 10/21/2026 14:00 EDT	kept			
+initial_isolation_zone	False	label		documentation	R5 a label clause is provenance	ERG 2024 (recorded_pack), as of 2024, current	kept			
+initial_isolation_zone	False	label		documentation	R5 a label clause is provenance	49 CFR 172.101 Hazardous Materials Table (recorded_pack), current, checked against the eCFR text of 49 CFR 172.101 as of 10/15/2026 (docs/sources/cfr172_currency_check.json)	kept			
+initial_isolation_zone	False	label		documentation	R5 a label clause is provenance	NOAA solar equations (astral) (derived_by_code), as of 11/08/2026 12:14 EST, current	kept			
+initial_isolation_zone	False	label		documentation	R5 a label clause is provenance	wind as given by the requester (caller_supplied)	kept			
+initial_isolation_zone	False	label		key	R5 a bare record hash is a key to the evidence	record 751803ff6a89	kept			
+initial_isolation_zone	False	popup	Distance	measurement	R6 popup heading 'Distance' gives a measurement	1,000 m (3,000 ft)	kept			
+initial_isolation_zone	False	popup	Table	name	R7b popup heading 'Table' names the feature (an attribute)	[ERG 2024 Table 3, UN1017, rail tank car, daytime, moderate wind]	kept			
+water	False	title		name	R1 a layer title names the layer	Waterways and waterbodies (105)	kept			
+water	False	label		documentation	R5 a label clause is provenance	USGS 3D Hydrography Program (3DHP) (live_call), 09/04/2026 as the service stated it when last read on 10/21/2026, current	kept			
+water	False	label		key	R5 a bare record hash is a key to the evidence	record d459a48f6c7d	kept			
+water	False	label		documentation	R5 a label clause is provenance	geometry: USGS 3D Hydrography Program (3DHP) (live_call), as of 11/09/2026 04:04 EST, current	kept			
+water	False	label		key	R5 a bare record hash is a key to the evidence	record b2be7e34cb92	kept			
+water	False	label		key	R5 a bare record hash is a key to the evidence	record b31815f4bbb3	kept			
+water	False	popup	Kind	name	R7b popup heading 'Kind' names the feature (an attribute)	flowline	kept			
+water	False	popup	In the isolation zone	name	R7b popup heading 'In the isolation zone' names the feature (an attribute)	no	kept			
+water	False	popup	Length inside the footprint	measurement	R6b popup heading 'Length inside the footprint' gives a value with a unit	1454 m over 5 reaches	kept			
+water	False	popup	Mainstem	name	R7b popup heading 'Mainstem' names the feature (an attribute)	https://geoconnex.us/usgs/mainstems/2574817	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	139E9	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	182UM	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1AW4L	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1FQ5E	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1FQ5F	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1FQ5G	kept			
+water	False	popup	In the isolation zone	name	R7b popup heading 'In the isolation zone' names the feature (an attribute)	yes	kept			
+water	False	popup	Mainstem	name	R7b popup heading 'Mainstem' names the feature (an attribute)	https://geoconnex.us/ref/mainstems/2154021	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1HRGY	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1KJMG	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1KJMH	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1PDSB	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1RF4G	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1RFIY	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1RFMP	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	1Z23L	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	25XQM	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	28Q3O	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	2ARWQ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	2FM5V	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	2KGZE	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	2PAZ8	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	2WY8J	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	33UG3	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	33UIB	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	36MZS	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	38NS6	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	38NU3	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	3B0T	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	3BH1J	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	3N771	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	3WV6Y	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	3WVO3	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	4G8FC	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	4PXF1	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	4PXHM	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	4URDZ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	4URR0	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	4XKAS	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	5C2UD	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	5SOHT	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	5SOIB	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	5VHRV	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	60DUA	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	62F23	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	62FIE	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	6A3FZ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	6C4ZN	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	6C5EO	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	6LUOB	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	6VL5I	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	6VL68	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	70GMT	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	75B19	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	75B1K	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	78421	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	7CZDF	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	7HUAB	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	7JWDU	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	7ORK4	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	7ORKP	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	7TM27	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	7WG3C	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	7YH44	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	83CQG	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	83CQZ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	8HWU9	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	8HXAQ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	8KQJV	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	8MRLV	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	8PM6X	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	8PM6Y	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	8PM71	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	8UH1Q	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	8ZC33	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	947TV	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	969ND	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	9B54W	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	9DXTE	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	9DXU7	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	9FZCU	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	9FZDY	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	9ISZP	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	9PPYP	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	9XE3E	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	A29D6	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	A4B0X	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	A79H	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	AIW3J	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	AIWG7	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	ALQ1K	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	B77I3	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BA0TA	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BC2Z2	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BGXIT	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BJR9G	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BOLM3	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BOLMB	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BOLMZ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BQN0Y	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BQN2A	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BQNIB	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	BQNIG	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	C37AV	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	C594K	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	CA43O	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	CHRZ9	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	COOO6	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	CTK5R	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	CYECA	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	CYERO	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	D08H	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	D3ADM	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	D85N1	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	D85Q7	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	DFTXH	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	DHVUF	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	DMPTW	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	DZ9PL	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	E44VF	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	E8ZNZ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	EB1HQ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	EFWZQ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	EIQS0	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	EKSPV	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	ESHHK	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	ESHHM	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	EXD9M	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	F49Y1	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	F73XL	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	F9583	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	FBYXJ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	FNR2D	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	FNRJR	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	FQKJE	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GA0RR	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GA0RS	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GC2MF	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GC2O8	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GGXB7	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GGXBB	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GGXCE	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GJQMW	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GLSB6	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GOLYC	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GQNK7	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GQO1U	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GTHRW	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GVJ30	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	GVJ3C	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	H0FSU	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	H0FT5	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	H5BJ1	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	H5C01	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	H85ID	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	HTNL	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	MOXM	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	TJZI	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	TJZS	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	YEL3	kept			
+water	False	popup	Kind	name	R7b popup heading 'Kind' names the feature (an attribute)	Lake	kept			
+water	False	popup	Area inside the footprint	name	R7b popup heading 'Area inside the footprint' names the feature (an attribute)	349 m²	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	IUATK	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	IUAU8	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	IUBCY	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	IUBI7	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	IUBIV	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	IUC7A	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	IYAUP	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	J3DE9	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	J3YN2	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	J7GSN	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	JFVGB	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	JNERO	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	JPFZ6	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	JPLRW	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	JUEKP	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	JZZZA	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	K0P1X	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	K138S	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	K2ATA	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	K3H6H	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	K6GUH	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KDN66	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KETVO	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KGMZH	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KGT2I	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KHLDH	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KK4SA	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KO6DR	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KQSDJ	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KR4N5	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KUUQ9	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KW31B	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KX08Y	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	KZAX9	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	L1QG4	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	L5NP7	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	LIYDN	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	LLF5V	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	LOUM0	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	LOYZO	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	LSKF7	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	LZU25	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	LZVWW	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	M109T	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	M238G	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	M2K67	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	M59CV	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	M6DBH	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	M81EK	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	MHHPE	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	ML4TD	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	MNOCF	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	MNXJN	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	MTMZM	kept			
+water	False	popup	Kind	name	R7b popup heading 'Kind' names the feature (an attribute)	River	kept			
+water	False	popup	3DHP id	name	R7b popup heading '3DHP id' names the feature (an attribute)	OIKQH	kept			
+downstream	False	title		name	R1 a layer title names the layer	Downstream path	kept			
+downstream	False	label		documentation	R5 a label clause is provenance	the mapped flow path from the nearest flowline within 1000 m of the spill, downstream for 10 km	kept			
+downstream	False	label		documentation	R5 a label clause is provenance	no travel time, no dilution	kept			
+downstream	False	label		documentation	R5 a label clause is provenance	NLDI's path was not used (NLDI's comid 4507352 runs 374 m from 3DHP's flowline 0 m downstream of the start, more than the 50.8 m allowed there), so the path follows 3DHP's own downstream connectivity inside the footprint and ends at its edge	kept			
+downstream	False	label		documentation	R5 a label clause is provenance	usgs_3dhp answer, retrieved 11/09/2026 04:06 EST, record 5d6fa6b673b9	kept			
+downstream	False	label		documentation	R5 a label clause is provenance	nldi answer, retrieved 10/27/2026 22:40 EDT, record ad7b8e74483e	kept			
+downstream	False	label		documentation	R5 a label clause is provenance	nldi answer, retrieved 10/27/2026 11:05 EDT, record bf35817aeabc	kept			
+downstream	False	label		documentation	R5 a label clause is provenance	usgs_3dhp answer, retrieved 10/27/2026 11:10 EDT, record 071d9ebda2d0	kept			
+downstream	False	label		documentation	R5 a label clause is provenance	usgs_3dhp answer, retrieved 10/27/2026 22:35 EDT, record 418b4a78c81f	kept			
+downstream	False	popup	Starts at	documentation	R8 popup heading 'Starts at' explains	Chesapeake and Ohio Canal (3DHP 9PPYP), 241 m from the spill	kept			
+downstream	False	popup	Flows through	name	R7b popup heading 'Flows through' names the feature (an attribute)	Chesapeake and Ohio Canal → Washington Run → unnamed → Potomac River	kept			
+downstream	False	popup	Length drawn	measurement	R6b popup heading 'Length drawn' gives a value with a unit	3.7 km over 6 NHDPlus reaches	kept			
+rail_lines	False	title		name	R1 a layer title names the layer	Rail lines (9 segments)	kept			
+rail_lines	False	label		documentation	R5 a label clause is provenance	BTS NTAD rail layers (live_call), 10/09/2026 as the service stated it when last read on 10/21/2026, current	kept			
+rail_lines	False	label		key	R5 a bare record hash is a key to the evidence	record d459a48f6c7d	kept			
+rail_lines	False	label		documentation	R5 a label clause is provenance	geometry: BTS NTAD rail layers (live_call), as of 10/20/2026 19:47 EDT, current	kept			
+rail_lines	False	label		key	R5 a bare record hash is a key to the evidence	record b43b256f0ff0	kept			
+rail_lines	False	popup	Subdivision	name	R7b popup heading 'Subdivision' names the feature (an attribute)	METROPOLITAN	kept			
+rail_lines	False	popup	Tracks	name	R7b popup heading 'Tracks' names the feature (an attribute)	1	kept			
+rail_lines	False	popup	Zone	name	R7b popup heading 'Zone' names the feature (an attribute)	isolation	kept			
+rail_lines	False	popup	Length inside the footprint	measurement	R6b popup heading 'Length inside the footprint' gives a value with a unit	629 m	kept			
+rail_lines	False	popup	FRA arc	name	R7b popup heading 'FRA arc' names the feature (an attribute)	393485	kept			
+rail_lines	False	popup	Subdivision	name	R7b popup heading 'Subdivision' names the feature (an attribute)	OLD MAIN LINE	kept			
+uncertainty_lines	True	title		name	R1 a layer title names the layer	Wind-direction uncertainty lines (hazbrief's calculation)	kept			
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	First-order passive puff (hazbrief.brief.puff (NumPy) d58debe1a124)	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	not a dense-gas model	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	source assumed: hazbrief's tank source (the method of ALOHA's technical documentation	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	hazbrief does not run ALOHA), two-phase flashing release: 59.8 kg/s for 22.3 minutes (80,000 kg of the stated 80,000 kg, scenario author's stated quantity	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg), flashed fraction 0.16, aerosol fraction 0.84, at 239.5 K, at the ground	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	hole assumed: a seam failure 40 inches long and 0.1 inch wide (2.58e-3 m2) at the bottom of the tank, the ALOHA user's manual's tank-car example (epa-aloha-users-manual-2007 p. 75, which calls the bottom the worst case)	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	"storage temperature assumed: the air temperature, the ALOHA manual's default ""Chemical stored at ambient temperature"" (epa-aloha-users-manual-2007 p. 70)"	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	properties: molecular weight 70.906 g/mol (tier not stated	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	as printed: not printed	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 p. 22)	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	normal boiling point 239.5 K (reference-table	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	as printed: 239.5 K ± 0.6	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 (Thiele and Schulte, 1920, p71))	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	heat of vaporisation 20409.6 J/mol (model-test-input	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	"as printed: 287840. J/kg at TBP 239.10 K (""Heat of vaporization at the boiling point temperature"")"	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	epa-slab-users-guide-1990 p. 136)	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	liquid heat capacity 65.6802 J/mol/K (model-test-input	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	as printed: 926.30 J/kg*K (no temperature printed)	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	liquid density 1574 kg/m3 (model-test-input	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	as printed: 1574.00 kg/m3 (no temperature printed)	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	saturation pressure (Antoine) 2 rows (reference-table	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	as printed: 155 to 239.4 K: A 3.0213, B 530.591, C -64.639	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	239.4 to 400.3 K: A 4.28814, B 969.992, C -12.791	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	vapour heat capacity 35.3183 J/mol/K (model-test-input	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	model-test-input: a program's test-case input (for chlorine, the SLAB user's guide's PR4 test inputs DHE, CPSL, RHOSL and CPS, epa-slab-users-guide-1990 PDF p. 136), not a benchmark-validated property	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	CPSL, RHOSL and CPS print no temperature, and DHE is used at the 239.10 K it states	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	reference-table: a value read from a held reference table (NIST WebBook, NIST Fluid Systems or CAMEO Chemicals)	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	boiling point disputed (cameo-chem-2862: 238.54 K (-30.3 °F) (Antoine 0.92 atm)	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	nist-webbook-1017 (Thiele and Schulte, 1920, p71): 239.5 K ± 0.6 (Antoine 1.01 atm))	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	239.5 K taken, where the pack's Antoine row is nearest 1 atm (HB-110 ADDENDUM-02 section 3)	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	not modelled: the tank wall's heat flux (ALOHA states a wall of 2 cm steel and 10 cm foam and no conductivity, p. 22): the tank cools by evaporation alone	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	not modelled: the liquid's head above the hole: the container's dimensions are not stated, so the hole is at the bottom and the vapour pressure alone drives it	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	wind: NWS forecast as of 2026-10-21T02:52:44+00:00	moved	T8	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	stability class B by EPA's Turner key. The ERG footprint is the protective action distance.	moved	T8	inputs	
+uncertainty_lines	True	label		key	R5 a bare record hash is a key to the evidence	record 79fd1db7cb6d	rewritten			the run record's hash moved with its label text (ADDENDUM-02 item 1); the section's run record names the new hash
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	Modelled, dense gas: SLAB (LLNL, 1990), run in `hazbrief-models` sha256:272f3dda4d49754d454ffe83c1e77fad4a1d01f86bb1265f62ec782ac6adcd68	moved	T7	inputs	
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	source term rests on model-test-input values (DHE, CPSL, RHOSL, CPS). Source: two-phase flashing release, 59.8 kg/s for 1,337 s, flashed 0.16, hole 0.00258 m2 assumed (a seam 40 inches by 0.1 inch, epa-aloha-users-manual-2007 p. 75), from 80,000 kg in a Rail tank car. Level of concern AEGL-2 60 minutes, 2 ppm (epa-aegl-compiled-2018 p. 43), SLAB averaging over 3600 s. Checked: SLAB test cases 1 to 4 reproduce at build. 1991 EPA evaluation: within a factor of 2 on 0/6 Desert Tortoise, 0/7 Goldfish	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+uncertainty_lines	True	label		documentation	R5 a label clause is provenance	under-predicts pressurised jets by 2.5 to 3. The ERG footprint is the protective action distance.	moved	T7	inputs	
+uncertainty_lines	True	label		key	R5 a bare record hash is a key to the evidence	record 3a139805885d	rewritten			the run record's hash moved with its label text (ADDENDUM-02 item 1); the section's run record names the new hash
+uncertainty_lines	True	popup	Around	measurement	R6 popup heading 'Around' gives a measurement	the outline at H+15 min (10/21/2026 14:15 EDT)	kept			
+uncertainty_lines	True	popup	Side	measurement	R6 popup heading 'Side' gives a measurement	rotated +alpha	kept			
+uncertainty_lines	True	popup	Method	documentation	R8 popup heading 'Method' explains	"Drawn by the method NOAA publishes in the ALOHA technical documentation (NOS OR&R 43, section 4.5.3, p. 57): the outline rotated 17.1 degrees either side of the wind about the source, the angle from the Gaussian plume's width 5 minutes downwind (x5 = 300 x U3 = 808 m, sigma_y 124 m, Table 13 rural coefficients, class B). hazbrief does not run ALOHA. ALOHA's manual says of ALOHA's own lines: ""The ""uncertainty lines"" around the longest threat zone enclose the region within which, about 95 percent of the time, the gas cloud is expected to remain."" (epa-aloha-users-manual-2007 p. 45). hazbrief's lines use the same construction on hazbrief's outlines and have not been verified to that figure; implemented from the text and not checked against ALOHA's output. Departures: sigma_y is the held Briggs form, not the puff's own Pasquill-Gifford curve; U3 = 2.69 m/s is the 3.08 m/s wind at 10 m reduced by ALOHA's power law (n = 0.112); that sigma_y is read at x5 is a reading of the section, which does not write sigma_y(300 U3). No circle is drawn at low wind: the held texts give no rule for it."	rewritten			ADDENDUM-02 item 1: no tool hazbrief does not run is named on the brief; the fact stays and the document is cited on the TEVV page
+uncertainty_lines	True	popup	Side	measurement	R6 popup heading 'Side' gives a measurement	rotated -alpha	kept			
+uncertainty_lines	True	popup	Around	measurement	R6 popup heading 'Around' gives a measurement	the dense-gas AEGL-1 band (SLAB, one wind)	kept			
+uncertainty_lines	True	popup	Wind	documentation	R8 popup heading 'Wind' explains	computed on the 10/21/2026 14:00 EDT wind; does not follow later shifts	moved	T7	inputs	
+wind	False	title		name	R1 a layer title names the layer	Wind	kept			
+wind	False	legend		documentation	R11 a clause that explains	the wind every layer reads: from 10 degrees at 11.1 km/h (forecast, NWS cell LWX/77,86 for 10/21/2026 14:00 EDT, as of 10/20/2026 22:52 EDT)	kept			
+wind	False	label		documentation	R5 a label clause is provenance	ERG 2024 (recorded_pack), as of 2024, current	kept			
+wind	False	label		documentation	R5 a label clause is provenance	49 CFR 172.101 Hazardous Materials Table (recorded_pack), current, checked against the eCFR text of 49 CFR 172.101 as of 10/15/2026 (docs/sources/cfr172_currency_check.json)	kept			
+wind	False	label		documentation	R5 a label clause is provenance	NOAA solar equations (astral) (derived_by_code), as of 11/08/2026 12:14 EST, current	kept			
+wind	False	label		documentation	R5 a label clause is provenance	wind as given by the requester (caller_supplied)	kept			
+wind	False	label		key	R5 a bare record hash is a key to the evidence	record 751803ff6a89	kept			
+wind	False	popup	Wind	documentation	R8 popup heading 'Wind' explains	11.1 km/h (6.9 mph) from the north, Moderate wind	kept			
+wind	False	popup	Source	documentation	R8 popup heading 'Source' explains	the brief's one wind record: NWS gridpoint forecast LWX/77,86, the cell for 2026-10-21T14:00:00-04:00	kept			
+wind	False	popup	As of	name	R7b popup heading 'As of' names the feature (an attribute)	10/20/2026 22:52 EDT	kept			
+wind	False	popup	Arrow	documentation	R8 popup heading 'Arrow' explains	from the spill, pointing downwind; its length is a symbol, not a distance	kept			
+grade_crossings	False	title		name	R1 a layer title names the layer	Grade crossings	kept			
+grade_crossings	False	label		documentation	R5 a label clause is provenance	BTS NTAD rail layers (live_call), 10/09/2026 as the service stated it when last read on 10/21/2026, current	kept			
+grade_crossings	False	label		key	R5 a bare record hash is a key to the evidence	record d459a48f6c7d	kept			
+grade_crossings	False	popup	Railroad	name	R7b popup heading 'Railroad' names the feature (an attribute)	CSX	kept			
+grade_crossings	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	PRIVATE	kept			
+grade_crossings	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	Private	kept			
+grade_crossings	False	popup	Zone	name	R7b popup heading 'Zone' names the feature (an attribute)	isolation	kept			
+grade_crossings	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	LS	kept			
+grade_crossings	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	Public	kept			
+grade_crossings	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	PED	kept			
+grade_crossings	False	popup	Zone	name	R7b popup heading 'Zone' names the feature (an attribute)	protective action	kept			
+receiving_hospitals	False	title		name	R1 a layer title names the layer	Receiving hospitals (nearest 5)	kept			
+receiving_hospitals	False	label		documentation	R5 a label clause is provenance	USGS National Structures Dataset (live_call), as of 10/21/2026, current	kept			
+receiving_hospitals	False	label		documentation	R5 a label clause is provenance	CMS Hospital General Information and Provider of Services (recorded_pack), as of 07/22/2026, 96 days old, past its 91-day limit	kept			
+receiving_hospitals	False	label		documentation	R5 a label clause is provenance	Census Geocoder (recorded_pack), as of 10/21/2026, current	kept			
+receiving_hospitals	False	label		key	R5 a bare record hash is a key to the evidence	record c1e4f23d0459	kept			
+receiving_hospitals	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	Acute Care Hospitals	kept			
+receiving_hospitals	False	popup	Beds	name	R7b popup heading 'Beds' names the feature (an attribute)	248	kept			
+receiving_hospitals	False	popup	Distance	measurement	R6 popup heading 'Distance' gives a measurement	18.8 km NE	kept			
+receiving_hospitals	False	popup	Straight line crosses the footprint	name	R7b popup heading 'Straight line crosses the footprint' names the feature (an attribute)	no	kept			
+receiving_hospitals	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	400 WEST SEVENTH ST, FREDERICK, MD 21701	kept			
+receiving_hospitals	False	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	Hospital: FGDC HSWG Emergency Response Symbology v2.20, Operations symbol, key stroke F (FGDC Operations reference page, row 8); a draft prototype	kept			
+receiving_hospitals	False	popup	Distance	measurement	R6 popup heading 'Distance' gives a measurement	23.6 km S	kept			
+receiving_hospitals	False	popup	Straight line crosses the footprint	name	R7b popup heading 'Straight line crosses the footprint' names the feature (an attribute)	yes	kept			
+receiving_hospitals	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	44045 RIVERSIDE PARKWAY, LEESBURG, VA 20176	kept			
+receiving_hospitals	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	Critical Access Hospitals	kept			
+receiving_hospitals	False	popup	Distance	measurement	R6 popup heading 'Distance' gives a measurement	27.7 km W	kept			
+receiving_hospitals	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	300 SOUTH PRESTON STREET, RANSON, WV 25438	kept			
+receiving_hospitals	False	popup	Distance	measurement	R6 popup heading 'Distance' gives a measurement	28.0 km SE	kept			
+receiving_hospitals	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	19801 OBSERVATION DRIVE, GERMANTOWN, MD 20876	kept			
+receiving_hospitals	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	Acute Care - Veterans Administration	kept			
+receiving_hospitals	False	popup	Distance	measurement	R6 popup heading 'Distance' gives a measurement	35.4 km NW	kept			
+receiving_hospitals	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	510 BUTLER AVE., MARTINSBURG, WV 25405	kept			
+nearby_services	False	title		name	R1 a layer title names the layer	Nearest services outside the footprint (within 16.1 km)	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	every fire, EMS and police station and hospital outside the ERG footprint within 16.1 km (10 mi) of the incident, and the nearest of a class with none inside it (HB-155 ADDENDUM-01	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	DN-019 ADDENDUM-02 F6)	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	default area radius: 10 miles (operator default	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	no published basis held)	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	straight-line distance and bearing from the incident	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:48 EST, record 6e6bad646e78	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:48 EST, record 0db9b9a31c09	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:48 EST, record 668ff7dfbf5c	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/11/2026 06:48 EST, record 48db958cb846	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/11/2026 06:48 EST, record 06aea144927e	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record 76941a53554e	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record 1c0ca186781c	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record e2d320794b25	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/11/2026 06:49 EST, record 5ce9cb9dd83c	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/11/2026 06:49 EST, record cd7004504f77	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	USGS National Structures Dataset (live_call), as of 10/21/2026, current	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	CMS Hospital General Information and Provider of Services (recorded_pack), as of 07/22/2026, 96 days old, past its 91-day limit	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	Census Geocoder (recorded_pack), as of 10/21/2026, current	kept			
+nearby_services	False	label		key	R5 a bare record hash is a key to the evidence	record c1e4f23d0459	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	services and candidate places read within 20 miles of the incident	kept			
+nearby_services	False	label		documentation	R5 a label clause is provenance	past this ring nothing was read	kept			
+nearby_services	False	popup	Service	name	R7b popup heading 'Service' names the feature (an attribute)	Fire	kept			
+nearby_services	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	Fire	kept			
+nearby_services	False	popup	Distance from the incident	measurement	R6b popup heading 'Distance from the incident' gives a value with a unit	1.3 km, bearing 41° (NE), straight line	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	1809 Ballenger Creek Pike, Point Of Rocks, MD	kept			
+nearby_services	False	popup	Travel time	documentation	R8 popup heading 'Travel time' explains	1.8 min over 1.63 km of road and 200 m of connector (free-flow travel time over TIGER primary and secondary roads at assumed speeds by class (S1100 100 km/h, S1200 70 km/h; connectors 30 km/h), no live traffic; assumed speeds, no held source)	kept			
+nearby_services	False	popup	Route	name	R7b popup heading 'Route' names the feature (an attribute)	crosses the ERG footprint: the responder goes around it	kept			
+nearby_services	False	popup	As of	name	R7b popup heading 'As of' names the feature (an attribute)	2024-08-28	kept			
+nearby_services	False	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	Fire Station: FGDC HSWG Emergency Response Symbology v2.20, Operations symbol, key stroke Y (FGDC Operations reference page, row 27); a draft prototype	kept			
+nearby_services	False	popup	Distance from the incident	measurement	R6b popup heading 'Distance from the incident' gives a value with a unit	6.7 km, bearing 175° (S), straight line	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	42367 Lucketts Road, Leesburg, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	2795 Adams Street, Adamstown, MD	kept			
+nearby_services	False	popup	Distance from the incident	measurement	R6b popup heading 'Distance from the incident' gives a value with a unit	9.2 km, bearing 260° (W), straight line	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	12837 Berlin Turnpike, Lovettsville, VA	kept			
+nearby_services	False	popup	Distance from the incident	measurement	R6b popup heading 'Distance from the incident' gives a value with a unit	9.5 km, bearing 4° (N), straight line	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	4603 Lander Road, Jefferson, MD	kept			
+nearby_services	False	popup	Distance from the incident	measurement	R6b popup heading 'Distance from the incident' gives a value with a unit	10.2 km, bearing 308° (NW), straight line	kept			
+nearby_services	False	popup	Address	documentation	R8 popup heading 'Address' explains	1500 Volunteer Drive, Brunswick, MD	kept			
+nearby_services	False	popup	Distance from the incident	measurement	R6b popup heading 'Distance from the incident' gives a value with a unit	15.3 km, bearing 134° (SE), straight line	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	19801 Beallsville Road, Beallsville, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	5525 New Design Road, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	6715 Jefferson Boulevard, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	13345 Harpers Ferry Road, Purcellville, VA	kept			
+nearby_services	False	popup	Distance from the incident	measurement	R6b popup heading 'Distance from the incident' gives a value with a unit	16.7 km, bearing 70° (E), straight line	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	3602 Urbana Pike, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	215 Loudoun Street Southwest, Leesburg, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	3417 Rohrersville Road, Rohrersville, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	61 Plaza Street Northeast, Leesburg, VA	kept			
+nearby_services	False	popup	Distance from the incident	measurement	R6b popup heading 'Distance from the incident' gives a value with a unit	18.4 km, bearing 212° (SW), straight line	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	39071 East Colonial Highway, Hamilton, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	13 South Church Street, Middletown, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	1050 Washington Street, Harpers Ferry, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	79 South Market Street, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	15 South Court Street, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	310 Baughmans Lane, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	25801 Frederick Road, Clarksburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	340 Montevue Lane, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	535 North Market Street, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	181 Keyes Gap Road, Harpers Ferry, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	500 North Maple Avenue, Purcellville, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	2202 Dargan School Road, Sharpsburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	1504 Porter Street, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	6061 Spring Ridge Parkway, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	891 Carter Avenue, Harpers Ferry, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	100 Mission Road, Harpers Ferry, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	19485 Sandridge Way, Leesburg, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	22610 Gateway Center Drive, Clarksburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	37 Thomas Johnson Drive, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	3939 Green Valley Road, Monrovia, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	4 Main Street, Round Hill, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	18910 Germantown Road, Germantown, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	301 Main Street, Myersville, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	76 West Main Street, New Market, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	20001 Crystal Rock Drive, Germantown, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	20688 Ashburn Road, Ashburn, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	245 Citizens Way, Charles Town, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	20633 Boland Farm Road, Germantown, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	79 West Frederick Street, Walkersville, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	110 West Chapline Street, Sharpsburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	5 Saint Paul Street, Boonsboro, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	200 West 2nd Avenue, Ranson, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	46700 Middlefield Drive, Sterling, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	45900 Russell Branch Parkway, Sterling, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	26334 Ridge Road, Damascus, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	8052 Martinsburg Pike, Shepherdstown, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	36560 Jeb Stuart Road, Purcellville, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	43496 Moorefield Boulevard, Ashburn, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	12100 Darnestown Road, North Potomac, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	11101 Hessong Bridge Road, Thurmont, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	801 Russell Avenue, Gaithersburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	100 Bureau Drive MS 1912, Gaithersburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	104 Commerce Street, Sterling, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	131 Retreat Road, Bluemont, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	18002 Tilghmanton Road, Fairplay, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	12027 South Street, Libertytown, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	2 South Third Street, Woodsboro, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	1117 Reston Avenue, Herndon, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	510 Butler Avenue, Martinsburg, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	9615 Darnestown Road, Rockville, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	9916 Georgetown Pike, Great Falls, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	12019 Woodsboro Pike, New Midway, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	19844 Blueridge Mountain Road, Bluemont, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	11430 Falls Road, Potomac, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	775 Bedington Road, Martinsburg, WV	kept			
+nearby_services	False	popup	Service	name	R7b popup heading 'Service' names the feature (an attribute)	EMS	kept			
+nearby_services	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	EMS	kept			
+nearby_services	False	popup	Address	documentation	R8 popup heading 'Address' explains	200 West Potomac Street, Brunswick, MD	kept			
+nearby_services	False	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	EMT Station Locations: FGDC HSWG Emergency Response Symbology v2.20, Operations symbol, key stroke B (FGDC Operations reference page, row 4); a draft prototype	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	143 Catoctin Circle Southeast, Leesburg, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	500 North Maple Street, Purcellville, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	1001 Sycolin Road, Leesburg, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	750 Hollywood Drive, Charles Town, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	110 1/2 West Chapline Street, Sharpsburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	419 16th Avenue, Ranson, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	255 Edmond Road, Kearneysville, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	7619 Old National Pike, Boonsboro, MD	kept			
+nearby_services	False	popup	Service	name	R7b popup heading 'Service' names the feature (an attribute)	Police	kept			
+nearby_services	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	Police	kept			
+nearby_services	False	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	Police: FGDC HSWG Emergency Response Symbology v2.20, Operations symbol, key stroke g (FGDC Operations reference page, row 35); a draft prototype	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	1000 Washington Street Suite 100, Harpers Ferry, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	100 East All Saints Street, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	110 Airport Drive East, Frederick, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	125 East Hirst Road, Purcellville, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	41904 Loudoun Center Place, Leesburg, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	20272 Savin Hill Drive, Ashburn, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	47 West Loudoun Street, Round Hill, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	20000 Aircraft Drive, Germantown, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	2011 Monument Road, Myersville, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	241 Potomac Street, Boonsboro, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	114 West Liberty Street, Charles Town, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	700 North Preston Street, Ranson, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	104 North King Street Room 100, Shepherdstown, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	45 West Watkins Mill Road, Gaithersburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	409 Industrial Boulevard, Kearneysville, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	222 Paramount Park Drive, Gaithersburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	46620 East Frederick Drive, Sterling, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	100 Edison Park Drive, Gaithersburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	14 Fulks Corner Avenue, Gaithersburg, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	9125 Gaither Road, Gaithersburg, MD	kept			
+nearby_services	False	popup	Service	name	R7b popup heading 'Service' names the feature (an attribute)	Hospitals	kept			
+nearby_services	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	Acute Care Hospitals	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	400 WEST SEVENTH ST, FREDERICK, MD	kept			
+nearby_services	False	popup	Beds	name	R7b popup heading 'Beds' names the feature (an attribute)	248	kept			
+nearby_services	False	popup	Emergency department	name	R7b popup heading 'Emergency department' names the feature (an attribute)	yes (the CMS cache holds only hospitals whose Emergency Services is Yes)	kept			
+nearby_services	False	popup	Trauma level	documentation	R8 popup heading 'Trauma level' explains	trauma level: not in held data (not a CMS Hospital General Information column)	kept			
+nearby_services	False	popup	Capability	documentation	R8 popup heading 'Capability' explains	capability: not in held data (no held source lists inhalation or chemical-burn capability)	kept			
+nearby_services	False	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	Hospital: FGDC HSWG Emergency Response Symbology v2.20, Operations symbol, key stroke F (FGDC Operations reference page, row 8); a draft prototype	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	44045 RIVERSIDE PARKWAY, LEESBURG, VA	kept			
+nearby_services	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	Critical Access Hospitals	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	300 SOUTH PRESTON STREET, RANSON, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	19801 OBSERVATION DRIVE, GERMANTOWN, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	9901 MEDICAL CENTER DRIVE, ROCKVILLE, MD	kept			
+nearby_services	False	popup	Type	name	R7b popup heading 'Type' names the feature (an attribute)	Acute Care - Veterans Administration	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	510 BUTLER AVE., MARTINSBURG, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	24440 STONE SPRINGS BOULEVARD, DULLES, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	1850 TOWN CENTER PARKWAY, RESTON, VA	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	11116 MEDICAL CAMPUS ROAD, HAGERSTOWN, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	18101 PRINCE PHILIP DRIVE, OLNEY, MD	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	2500 HOSPITAL DRIVE, MARTINSBURG, WV	kept			
+nearby_services	False	popup	Address	name	R7b popup heading 'Address' names the feature (an attribute)	8600 OLD GEORGETOWN ROAD, BETHESDA, MD	kept			
+nearby_services	False	popup	Radius	measurement	R6b popup heading 'Radius' gives a value with a unit	20 mi (32.2 km)	kept			
+siting_routes	False	title		name	R1 a layer title names the layer	Routes to the suggested points	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	free-flow, assumed speeds	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	no live traffic	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	free-flow travel time over TIGER primary and secondary roads at assumed speeds by class (S1100 100 km/h, S1200 70 km/h	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	connectors 30 km/h), no live traffic	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	assumed speeds, no held source	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:48 EST, record 6e6bad646e78	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:48 EST, record 0db9b9a31c09	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:48 EST, record 668ff7dfbf5c	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/11/2026 06:48 EST, record 48db958cb846	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/11/2026 06:48 EST, record 06aea144927e	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record 76941a53554e	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record 1c0ca186781c	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record e2d320794b25	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/11/2026 06:49 EST, record 5ce9cb9dd83c	kept			
+siting_routes	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/11/2026 06:49 EST, record cd7004504f77	kept			
+siting_routes	False	popup	Route	documentation	R8 popup heading 'Route' explains	Fire: Carroll Manor Fire Company Station 28 to Staging (suggested): 16.7 min, 19.08 km	kept			
+siting_routes	False	popup	Connectors	measurement	R6b popup heading 'Connectors' gives a value with a unit	174 m in all	kept			
+siting_routes	False	popup	Directions	documentation	R8 popup heading 'Directions' explains	https://www.google.com/maps/dir/?api=1&origin=39.284568,-77.529412&destination=39.275165,-77.637601	kept			
+siting_routes	False	popup	Route	documentation	R8 popup heading 'Route' explains	EMS: Brunswick Volunteer Ambulance and Rescue Company Station 19 to Staging (suggested): 4.1 min, 4.47 km	kept			
+siting_routes	False	popup	Route	documentation	R8 popup heading 'Route' explains	Police: Brunswick Police Department to Staging (suggested): 11.4 min, 13.02 km	kept			
+siting_routes	False	popup	Route	name	R7b popup heading 'Route' names the feature (an attribute)	Triage (suggested) to FREDERICK HEALTH HOSPITAL: 18.9 min, 16.45 km	kept			
+roadblock_candidates	False	title		name	R1 a layer title names the layer	Roadblock candidates	kept			
+roadblock_candidates	False	label		documentation	R5 a label clause is provenance	candidate moved outward along the road to the first junction between 200 m and 1000 m outside the zone, else 200 m	kept			
+roadblock_candidates	False	label		documentation	R5 a label clause is provenance	prior art: FHWA MUTCD 2009 edition, Part 6, Chapter 6I, Control of Traffic Through Traffic Incident Management Areas (cited by title	kept			
+roadblock_candidates	False	label		documentation	R5 a label clause is provenance	page not held)	kept			
+roadblock_candidates	False	label		documentation	R5 a label clause is provenance	not a traffic plan	kept			
+roadblock_candidates	False	label		documentation	R5 a label clause is provenance	crossings within 100 m on one road merged	kept			
+roadblock_candidates	False	label		documentation	R5 a label clause is provenance	classes S1100, S1200, S1400, S1630, S1640	kept			
+roadblock_candidates	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/09/2026 14:41 EST, record abb89355e2d3	kept			
+roadblock_candidates	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/09/2026 14:41 EST, record d2200eb598b3	kept			
+roadblock_candidates	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/09/2026 14:41 EST, record ffab739c06a5	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Ballenger Creek Pike	kept			
+roadblock_candidates	False	popup	Class (MTFCC)	name	R7b popup heading 'Class (MTFCC)' names the feature (an attribute)	S1400	kept			
+roadblock_candidates	False	popup	Zone boundary	name	R7b popup heading 'Zone boundary' names the feature (an attribute)	initial isolation zone	kept			
+roadblock_candidates	False	popup	Bearing	name	R7b popup heading 'Bearing' names the feature (an attribute)	48° / 228°	kept			
+roadblock_candidates	False	popup	Offset	measurement	R6 popup heading 'Offset' gives a measurement	389 m outward along the road from the boundary	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Lockhouse Dr, 389 m from the boundary	kept			
+roadblock_candidates	False	popup	Boundary crossing	name	R7b popup heading 'Boundary crossing' names the feature (an attribute)	39.282877, -77.532582	kept			
+roadblock_candidates	False	popup	TIGER line	name	R7b popup heading 'TIGER line' names the feature (an attribute)	1106081477065 (S1400)	kept			
+roadblock_candidates	False	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	Traffic Control Point: FGDC HSWG Emergency Response Symbology v2.20, Infrastructures symbol, key stroke q (FGDC Infrastructures reference page, row 71); a draft prototype	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Brookshire Run	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the road's held line ends 80 m from the boundary, short of the 200 m minimum: the candidate is at its end	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Canal Run Ct	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Canal Run Dr	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	no junction between 200 m and 1000 m along the road outside the zone: the minimum offset, 200 m from the boundary	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Conrads Ferry Dr, 383 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Cassidy Ct	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Clay St	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets unnamed line 110511170580, 267 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Ferry Hill Ct	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Furnace Mountain Rd	kept			
+roadblock_candidates	False	popup	Inner cordon	key	R7a popup heading 'Inner cordon' gives the state acted on	inside the protective action zone; inner cordon, protective equipment required	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	James Monroe Hwy	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Myersville Ln, 696 m from the boundary	kept			
+roadblock_candidates	False	popup	Inner cordon	key	R7a popup heading 'Inner cordon' gives the state acted on	inside the protective action zone; modelled first-order puff contours; modelled first-order arrival area; modelled dense-gas AEGL-1 band; modelled dense-gas AEGL-2 band; inner cordon, protective equipment required	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Lovettsville Rd	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Misty Hollow Rd	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	State Hwy 28	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	State Rte 665	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	US Hwy 15	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	unnamed	kept			
+roadblock_candidates	False	popup	Crossings merged	name	R7b popup heading 'Crossings merged' names the feature (an attribute)	2	kept			
+roadblock_candidates	False	popup	Zone boundary	name	R7b popup heading 'Zone boundary' names the feature (an attribute)	protective action zone	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Hobbits Glen Rd, 880 m from the boundary	kept			
+roadblock_candidates	False	popup	Inner cordon	key	R7a popup heading 'Inner cordon' gives the state acted on	inside the initial isolation zone; inner cordon, protective equipment required	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Bank St	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Ballenger Creek Pike, 325 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Beech Grove Ln	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Browns Farm Ln	kept			
+roadblock_candidates	False	popup	Inner cordon	key	R7a popup heading 'Inner cordon' gives the state acted on	inside the modelled first-order arrival area; modelled dense-gas AEGL-1 band; inner cordon, protective equipment required	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Chapel Ln	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Charles Ln, 944 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Courtney Meadow Pl	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Tarleton Dr, 346 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Dove Ln	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Downey Mill Rd	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Falconaire Pl	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Prairie Merlin Ct, 767 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Featherbed Ln	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Hickory Shade Ln	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Mullein Ln, 328 m from the boundary	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Demory Ter, 323 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Kanawha Ave	kept			
+roadblock_candidates	False	popup	Inner cordon	key	R7a popup heading 'Inner cordon' gives the state acted on	inside the initial isolation zone; modelled first-order arrival area; inner cordon, protective equipment required	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Kanawha Ave E	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Beech Grove Ln, 754 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Loyalty Rd	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Lucketts Rd	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets James Monroe Hwy, 328 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Newvalley Church Rd	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Rosefinch Cir, 415 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Rock Hall Rd	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Clay St, 266 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Rosefinch Cir	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Woodstar Ct, 374 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	St Clair Ln	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Elysian Dr, 282 m from the boundary	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Ridgefield Ln, 435 m from the boundary	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Booth Rd, 352 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Sycamore Vista Ln	kept			
+roadblock_candidates	False	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets State Rte 668, 826 m from the boundary	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Taylors Valley Ln	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Taylorstown Rd	kept			
+roadblock_candidates	False	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Yakey Ln	kept			
+modelled_cordons	True	title		name	R1 a layer title names the layer	Roadblock candidates on the modelled boundary	kept			
+modelled_cordons	True	label		documentation	R5 a label clause is provenance	candidate: the outer boundary of every drawn hazard layer (the ERG zones and the modelled outlines) crosses this road	moved	T21	inputs	
+modelled_cordons	True	label		documentation	R5 a label clause is provenance	not a traffic plan	moved	T21	inputs	
+modelled_cordons	True	label		documentation	R5 a label clause is provenance	crossings within 100 m on one road merged	moved	T21	inputs	
+modelled_cordons	True	label		documentation	R5 a label clause is provenance	classes S1100, S1200, S1400, S1630, S1640	moved	T21	inputs	
+modelled_cordons	True	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/10/2026 21:36 EST, record 96944f4fbe36	moved	T21	inputs	
+modelled_cordons	True	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/10/2026 21:36 EST, record 9b86a4610b19	moved	T21	inputs	
+modelled_cordons	True	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/10/2026 21:36 EST, record dcbb543b3ed6	moved	T21	inputs	
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Beningbrough Pl	kept			
+modelled_cordons	True	popup	Class (MTFCC)	name	R7b popup heading 'Class (MTFCC)' names the feature (an attribute)	S1400	kept			
+modelled_cordons	True	popup	Zone boundary	name	R7b popup heading 'Zone boundary' names the feature (an attribute)	modelled boundary	kept			
+modelled_cordons	True	popup	Bearing	name	R7b popup heading 'Bearing' names the feature (an attribute)	114° / 294°	kept			
+modelled_cordons	True	popup	Offset	measurement	R6 popup heading 'Offset' gives a measurement	200 m outward along the road from the boundary	kept			
+modelled_cordons	True	popup	Rule	documentation	R8 popup heading 'Rule' explains	no junction between 200 m and 1000 m along the road outside the zone: the minimum offset, 200 m from the boundary	moved	T21	method	
+modelled_cordons	True	popup	Boundary crossing	name	R7b popup heading 'Boundary crossing' names the feature (an attribute)	39.186166, -77.54964	kept			
+modelled_cordons	True	popup	TIGER line	name	R7b popup heading 'TIGER line' names the feature (an attribute)	1106072547013 (S1400)	kept			
+modelled_cordons	True	popup	Guards	name	R7b popup heading 'Guards' names the feature (an attribute)	guards the outer boundary of every drawn hazard layer	kept			
+modelled_cordons	True	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	Traffic Control Point: FGDC HSWG Emergency Response Symbology v2.20, Infrastructures symbol, key stroke q (FGDC Infrastructures reference page, row 71); a draft prototype	kept			
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Browns Farm Ln	kept			
+modelled_cordons	True	popup	Rule	documentation	R8 popup heading 'Rule' explains	the road's held line ends 102 m from the boundary, short of the 200 m minimum: the candidate is at its end	moved	T21	method	
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Farnborough Pl	kept			
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Fox Creek Ln	kept			
+modelled_cordons	True	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Raspberry Dr, 426 m from the boundary	moved	T21	method	
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Hunter Pl	kept			
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Limestone Branch Pl	kept			
+modelled_cordons	True	popup	Inner cordon	key	R7a popup heading 'Inner cordon' gives the state acted on	inside the modelled dense-gas AEGL-1 band; inner cordon, protective equipment required	kept			
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Montresor Rd	kept			
+modelled_cordons	True	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Trongate Ct, 346 m from the boundary	moved	T21	method	
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Newvalley Church Rd	kept			
+modelled_cordons	True	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets James Monroe Hwy, 575 m from the boundary	moved	T21	method	
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Osterly Ln	kept			
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Selma Ln	kept			
+modelled_cordons	True	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Hunters Crossing Ln, 641 m from the boundary	moved	T21	method	
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Stanford Farm Ln	kept			
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	State Rte 661	kept			
+modelled_cordons	True	popup	Rule	documentation	R8 popup heading 'Rule' explains	the first junction outside the zone at least 200 m along the road: meets Mountain Meadow Ln, 735 m from the boundary	moved	T21	method	
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Stumptown Rd	kept			
+modelled_cordons	True	popup	Road	name	R7b popup heading 'Road' names the feature (an attribute)	Woolsthorpe Dr	kept			
+rail_candidates	False	title		name	R1 a layer title names the layer	Rail crossings of the boundary	kept			
+rail_candidates	False	label		documentation	R5 a label clause is provenance	candidate: the boundary of the ERG footprint crosses this rail line here	kept			
+rail_candidates	False	label		documentation	R5 a label clause is provenance	not a traffic plan	kept			
+rail_candidates	False	label		documentation	R5 a label clause is provenance	crossings within 100 m on one rail line merged	kept			
+rail_candidates	False	label		documentation	R5 a label clause is provenance	BTS NTAD rail layers (live_call), 10/09/2026 as the service stated it when last read on 10/21/2026, current	kept			
+rail_candidates	False	label		key	R5 a bare record hash is a key to the evidence	record d459a48f6c7d	kept			
+rail_candidates	False	popup	Owner	name	R7b popup heading 'Owner' names the feature (an attribute)	CSXT	kept			
+rail_candidates	False	popup	Subdivision	name	R7b popup heading 'Subdivision' names the feature (an attribute)	METROPOLITAN	kept			
+rail_candidates	False	popup	FRA arc	name	R7b popup heading 'FRA arc' names the feature (an attribute)	394269	kept			
+rail_candidates	False	popup	Zone boundary	name	R7b popup heading 'Zone boundary' names the feature (an attribute)	initial isolation zone	kept			
+rail_candidates	False	popup	Bearing	name	R7b popup heading 'Bearing' names the feature (an attribute)	153° / 333°	kept			
+rail_candidates	False	popup	Subdivision	name	R7b popup heading 'Subdivision' names the feature (an attribute)	OLD MAIN LINE	kept			
+rail_candidates	False	popup	Zone boundary	name	R7b popup heading 'Zone boundary' names the feature (an attribute)	protective action zone	kept			
+rail_candidates	False	popup	Crossings merged	name	R7b popup heading 'Crossings merged' names the feature (an attribute)	2	kept			
+sited_points	False	title		name	R1 a layer title names the layer	Command post, triage and staging (suggested)	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	suggested points, chosen by the rules of packs/siting_rules.json (DN-023)	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	exclusion area: every drawn hazard layer	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	the protective action zone swept 15° each side of the wind (the forecast's direction range over the window)	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	lower ground not excluded: the terrain is not held for this brief (its upstream answer is not recorded), so the dense-gas class's (tih_gas) low ground cannot be found	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	sectors from the wind record (from 10°), upwind within 45°, crosswind within 135° (configured	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	no published angle)	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	candidates: Fire station, EMS station, Police station, Hospital, Public building, School, Parking lot, Rest area or truck stop	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	weigh stations: no free federal layer found at rung 1 (DN-023 section 3)	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	not offered	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	default area radius: 10 miles (operator default	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	no published basis held)	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record 333bed6bb915	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record 9055c16e861d	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record f17a2ce5678a	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record 15996c0c1bd2	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record 30f159a0c090	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	usgs_structures answer, retrieved 11/11/2026 06:49 EST, record 49d0675c9dad	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	tigerweb answer, retrieved 11/11/2026 06:49 EST, record dd9083f01dca	kept			
+sited_points	False	label		documentation	R5 a label clause is provenance	bts_ntad answer, retrieved 11/11/2026 06:49 EST, record a68520fc827e	kept			
+sited_points	False	popup	Place	name	R7b popup heading 'Place' names the feature (an attribute)	Carroll Manor Fire Company Station 28 (Fire station)	kept			
+sited_points	False	popup	Why	name	R7b popup heading 'Why' names the feature (an attribute)	the nearest candidate to the incident upwind of it (rule command_post)	kept			
+sited_points	False	popup	Rule sources	documentation	R8 popup heading 'Rule sources' explains	command_post (nims-doctrine-2017 p. 41; erg2024-en-pdf p. 372; erg2024-en-pdf p. 6)	kept			
+sited_points	False	popup	Distance from the spill	measurement	R6 popup heading 'Distance from the spill' gives a measurement	1.3 km, bearing 41° (NE) from the spill	kept			
+sited_points	False	popup	Status	name	R7b popup heading 'Status' names the feature (an attribute)	suggested; the incident commander sets it	kept			
+sited_points	False	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	Emergency Incident Command Center: FGDC HSWG Emergency Response Symbology v2.20, Operations symbol, key stroke N (FGDC Operations reference page, row 16); a draft prototype	kept			
+sited_points	False	popup	Place	name	R7b popup heading 'Place' names the feature (an attribute)	Adamstown Post Office (Public building)	kept			
+sited_points	False	popup	Why	documentation	R8 popup heading 'Why' explains	the candidate nearest the exclusion area's edge upwind of the incident (rule triage)	kept			
+sited_points	False	popup	Rule sources	documentation	R8 popup heading 'Rule sources' explains	triage (cfr29-1910-120-govinfo-2025 p. 663; atsdr-mmg-chlorine p. 8; atsdr-mmg-chlorine p. 10)	kept			
+sited_points	False	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	Triage: FGDC HSWG Emergency Response Symbology v2.20, Operations symbol, key stroke K (FGDC Operations reference page, row 13); a draft prototype	kept			
+sited_points	False	popup	Place	name	R7b popup heading 'Place' names the feature (an attribute)	Lovettsville Post Office (Public building)	kept			
+sited_points	False	popup	Why	documentation	R8 popup heading 'Why' explains	crosswind of the incident, farther out than the command post and triage, with direct access to a primary or secondary road (a connector of at most 100 m, configured), the nearest such to the incident (rule staging)	kept			
+sited_points	False	popup	Rule sources	documentation	R8 popup heading 'Rule sources' explains	staging (nims-doctrine-2017 p. 41; fema-is-200c-student-manual p. 91; ntsb-rar-05-04-graniteville p. 47)	kept			
+sited_points	False	popup	Distance from the spill	measurement	R6 popup heading 'Distance from the spill' gives a measurement	8.5 km, bearing 270° (W) from the spill	kept			
+sited_points	False	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	Emergency Staging Areas: FGDC HSWG Emergency Response Symbology v2.20, Operations symbol, key stroke R (FGDC Operations reference page, row 20); a draft prototype	kept			
+spill	False	title		name	R1 a layer title names the layer	Spill point	kept			
+spill	False	label		documentation	R5 a label clause is provenance	ERG 2024 (recorded_pack), as of 2024, current	kept			
+spill	False	label		documentation	R5 a label clause is provenance	49 CFR 172.101 Hazardous Materials Table (recorded_pack), current, checked against the eCFR text of 49 CFR 172.101 as of 10/15/2026 (docs/sources/cfr172_currency_check.json)	kept			
+spill	False	label		documentation	R5 a label clause is provenance	NOAA solar equations (astral) (derived_by_code), as of 11/08/2026 12:14 EST, current	kept			
+spill	False	label		documentation	R5 a label clause is provenance	wind as given by the requester (caller_supplied)	kept			
+spill	False	label		key	R5 a bare record hash is a key to the evidence	record 751803ff6a89	kept			
+spill	False	popup	Location	name	R7b popup heading 'Location' names the feature (an attribute)	39.2756, -77.5394	kept			
+spill	False	popup	How it was given	documentation	R8 popup heading 'How it was given' explains	a point from the request (caller_supplied)	kept			
+spill	False	popup	Accuracy	name	R7b popup heading 'Accuracy' names the feature (an attribute)	no accuracy stated; the footprint is drawn as if this point were exact	kept			
+spill	False	popup	Symbol	key	R7c popup heading 'Symbol' names the symbol drawn (HB-152 item 5)	Hazardous Material Incident: FGDC HSWG Emergency Response Symbology v2.20, Incidents symbol, key stroke U (FGDC Incidents reference page, row 23); a draft prototype	kept			
+spill	False	row	name	name	R1 a row's short name names the layer	Spill point	kept			
+spill	False	row		measurement	R2b a row's count of what is drawn	1 drawn	kept			
+initial_isolation_zone	False	row	name	name	R1 a row's short name names the layer	Initial isolation zone	kept			
+initial_isolation_zone	False	row	figure	measurement	R2 a row's one figure	3,000 ft all round	kept			
+initial_isolation_zone	False	row		documentation	R11 a clause that explains	Initial isolation zone, 1,000 m (3,000 ft): First ISOLATE in all Directions. ERG 2024 Table 3, UN1017, rail tank car, daytime, moderate wind	rewritten			item 9: no sentence on the map; the action and its table entry are now two clauses of one key
+initial_isolation_zone	False	row		documentation	R11 a clause that explains	for the daytime at 10/21/2026 14:00 EDT	kept			
+initial_isolation_zone	False	row		measurement	R2b a row's count of what is drawn	1 drawn	kept			
+protective_action_zone	False	row	name	name	R1 a row's short name names the layer	Protective action zone	kept			
+protective_action_zone	False	row	figure	measurement	R2 a row's one figure	3.9 mi downwind	kept			
+protective_action_zone	False	row		documentation	R11 a clause that explains	Protective action zone, 6.3 km (3.9 mi) downwind, toward 190 degrees: Then PROTECT persons Downwind during DAY. ERG 2024 Table 3, UN1017, rail tank car, daytime, moderate wind	rewritten			item 9: no sentence on the map; the action and its table entry are now two clauses of one key
+protective_action_zone	False	row		documentation	R11 a clause that explains	for the daytime at 10/21/2026 14:00 EDT	kept			
+protective_action_zone	False	row		measurement	R2b a row's count of what is drawn	1 drawn	kept			
+arrival_bands	True	row	name	name	R1 a row's short name names the layer	Modelled arrival	kept			
+arrival_bands	True	row	figure	measurement	R2 a row's one figure	to H+2 h	kept			
+arrival_bands	True	row		documentation	R11 a clause that explains	Modelled arrival, first order: AEGL-2 (60 min): Steps and arrival: one level of concern, AEGL-2 (60 min) (2 ppm	moved	T11	inputs	
+arrival_bands	True	row		documentation	R11 a clause that explains	epa-aegl-compiled-2018#p43), the class's first threshold at its longest held duration	moved	T11	inputs	
+arrival_bands	True	row		documentation	R11 a clause that explains	Modelled to H+2 h: no new place reaches the level after that step (horizon 6 h)	moved	T11	inputs	
+arrival_bands	True	row		documentation	R11 a clause that explains	computed on the 10/21/2026 14:00 EDT wind	moved	T11	inputs	
+arrival_bands	True	row		documentation	R11 a clause that explains	does not follow later shifts	moved	T11	inputs	
+arrival_bands	True	row		documentation	R11 a clause that explains	a level of concern, not a protective action distance	moved	T7	inputs	
+arrival_bands	True	row		measurement	R2b a row's count of what is drawn	5 drawn	kept			
+step_outline	True	row	name	name	R1 a row's short name names the layer	Modelled outline at the step	kept			
+step_outline	True	row	figure	measurement	R2 a row's one figure	to H+2 h	kept			
+step_outline	True	row		documentation	R11 a clause that explains	Modelled outline at the step, first order: AEGL-2 (60 min): Steps and arrival: one level of concern, AEGL-2 (60 min) (2 ppm	rewritten			item 9: a title is at most eight words ('Modelled step outline')
+step_outline	True	row		documentation	R11 a clause that explains	epa-aegl-compiled-2018#p43), the class's first threshold at its longest held duration	moved	T11	inputs	
+step_outline	True	row		documentation	R11 a clause that explains	Modelled to H+2 h: no new place reaches the level after that step (horizon 6 h)	moved	T11	inputs	
+step_outline	True	row		documentation	R11 a clause that explains	computed on the 10/21/2026 14:00 EDT wind	moved	T7	inputs	
+step_outline	True	row		documentation	R11 a clause that explains	does not follow later shifts	moved	T7	inputs	
+step_outline	True	row		documentation	R11 a clause that explains	a level of concern, not a protective action distance	moved	T7	inputs	
+step_outline	True	row		measurement	R2b a row's count of what is drawn	3 drawn	kept			
+uncertainty_lines	True	row	name	name	R1 a row's short name names the layer	Wind-direction uncertainty	kept			
+uncertainty_lines	True	row	figure	measurement	R2 a row's one figure	8 lines	kept			
+uncertainty_lines	True	row		measurement	R2b a row's count of what is drawn	8 drawn	kept			
+plume_range	True	row	name	name	R1 a row's short name names the layer	Range of plume paths	kept			
+plume_range	True	row	figure	measurement	R2 a row's one figure	to H+2 h	kept			
+plume_range	True	row		documentation	R11 a clause that explains	Range of plume paths across the forecast wind's range (low to high)	rewritten			item 9: a title is at most eight words; 'not a probability' is the range's TEVV limit (T14)
+plume_range	True	row		documentation	R11 a clause that explains	not a probability: Steps and arrival: one level of concern, AEGL-2 (60 min) (2 ppm	rewritten			item 9: a title is at most eight words; 'not a probability' is the range's TEVV limit (T14)
+plume_range	True	row		documentation	R11 a clause that explains	epa-aegl-compiled-2018#p43), the class's first threshold at its longest held duration	moved	T11	inputs	
+plume_range	True	row		documentation	R11 a clause that explains	Modelled to H+2 h: no new place reaches the level after that step (horizon 6 h)	moved	T11	inputs	
+plume_range	True	row		documentation	R11 a clause that explains	computed on the 10/21/2026 14:00 EDT wind	moved	T7	inputs	
+plume_range	True	row		documentation	R11 a clause that explains	does not follow later shifts	moved	T7	inputs	
+plume_range	True	row		documentation	R11 a clause that explains	a level of concern, not a protective action distance	moved	T7	inputs	
+plume_range	True	row		measurement	R2b a row's count of what is drawn	3 drawn	kept			
+dense_gas	True	row	name	name	R1 a row's short name names the layer	Dense gas (SLAB)	kept			
+dense_gas	True	row	figure	measurement	R2 a row's one figure	to 5,513 m	kept			
+dense_gas	True	row		documentation	R11 a clause that explains	Modelled, dense gas (SLAB): toxic, AEGL-2 60 min: AEGL-2 60 minutes, 2 ppm (epa-aegl-compiled-2018 p. 43), SLAB averaging over 3600 s	moved	T7	inputs	
+dense_gas	True	row		measurement	R9 a clause that is a distance or count	farthest downwind 5,513 m (dense gas over ERG 0.88)	moved	T7	inputs	
+dense_gas	True	row		documentation	R11 a clause that explains	on the wind as of 10/20/2026 22:52 EDT	moved	T7	inputs	
+dense_gas	True	row		documentation	R11 a clause that explains	a level of concern, not a protective action distance	moved	T7	inputs	
+dense_gas	True	row		documentation	R11 a clause that explains	bands, outermost first: AEGL-1 0.5 ppm at 60 min (epa-aegl-compiled-2018#p43)	moved	T7	inputs	
+dense_gas	True	row		documentation	R11 a clause that explains	AEGL-2 2 ppm at 60 min (epa-aegl-compiled-2018#p43)	moved	T7	inputs	
+dense_gas	True	row		documentation	R11 a clause that explains	each band's fill opacity is 0.18	moved	T7	inputs	
+dense_gas	True	row		measurement	R2b a row's count of what is drawn	3 drawn	kept			
+puff_source_term	True	row	name	name	R1 a row's short name names the layer	Puff: source term	kept			
+puff_source_term	True	row	figure	measurement	R2 a row's one figure	4 contours	kept			
+puff_source_term	True	row		documentation	R11 a clause that explains	Modelled, first order: source term: contours at AEGL-2 (10 min), AEGL-3 (10 min), AEGL-2 (30 min), AEGL-3 (30 min)	moved	T8	inputs	
+puff_source_term	True	row		documentation	R11 a clause that explains	set beside the ERG at source term, AEGL-2 (30 min)	moved	T8	inputs	
+puff_source_term	True	row		documentation	R11 a clause that explains	the first 60 minutes after a release at 10/21/2026 14:00 EDT, on the wind as of 10/20/2026 22:52 EDT	moved	T8	inputs	
+puff_source_term	True	row		documentation	R11 a clause that explains	a level of concern, not a protective action distance	moved	T7	inputs	
+puff_source_term	True	row		measurement	R2b a row's count of what is drawn	4 drawn	kept			
+downstream	False	row	name	name	R1 a row's short name names the layer	Downstream path	kept			
+downstream	False	row	figure	measurement	R2 a row's one figure	1 path	kept			
+downstream	False	row		measurement	R2b a row's count of what is drawn	1 drawn	kept			
+water	False	row	name	name	R1 a row's short name names the layer	Waterways	kept			
+water	False	row	figure	measurement	R2 a row's one figure	215 features	kept			
+water	False	row		measurement	R2b a row's count of what is drawn	215 drawn	kept			
+nearby_services	False	row	name	name	R1 a row's short name names the layer	Services in the area	kept			
+nearby_services	False	row	figure	measurement	R2 a row's one figure	119 stations	kept			
+nearby_services	False	row		measurement	R2b a row's count of what is drawn	119 drawn	kept			
+receiving_hospitals	False	row	name	name	R1 a row's short name names the layer	Receiving hospitals	kept			
+receiving_hospitals	False	row	figure	measurement	R2 a row's one figure	5 hospitals	kept			
+receiving_hospitals	False	row		measurement	R2b a row's count of what is drawn	5 drawn	kept			
+roadblock_candidates	False	row	name	name	R1 a row's short name names the layer	Roadblock candidates	kept			
+roadblock_candidates	False	row	figure	measurement	R2 a row's one figure	69 points	kept			
+roadblock_candidates	False	row		measurement	R2b a row's count of what is drawn	69 drawn	kept			
+modelled_cordons	True	row	name	name	R1 a row's short name names the layer	Roadblocks, modelled edge	kept			
+modelled_cordons	True	row	figure	measurement	R2 a row's one figure	20 points	kept			
+modelled_cordons	True	row		measurement	R2b a row's count of what is drawn	20 drawn	kept			
+siting_routes	False	row	name	name	R1 a row's short name names the layer	Routes to the suggested points	kept			
+siting_routes	False	row	figure	measurement	R2 a row's one figure	4 routes	kept			
+siting_routes	False	row		measurement	R2b a row's count of what is drawn	4 drawn	kept			
+rail_candidates	False	row	name	name	R1 a row's short name names the layer	Rail crossings of the edge	kept			
+rail_candidates	False	row	figure	measurement	R2 a row's one figure	6 points	kept			
+rail_candidates	False	row		measurement	R2b a row's count of what is drawn	6 drawn	kept			
+roads	False	row	name	name	R1 a row's short name names the layer	Roads image	kept			
+rail_lines	False	row	name	name	R1 a row's short name names the layer	Rail lines	kept			
+rail_lines	False	row	figure	measurement	R2 a row's one figure	9 segments	kept			
+rail_lines	False	row		measurement	R2b a row's count of what is drawn	9 drawn	kept			
+grade_crossings	False	row	name	name	R1 a row's short name names the layer	Grade crossings	kept			
+grade_crossings	False	row	figure	measurement	R2 a row's one figure	8 crossings	kept			
+grade_crossings	False	row		measurement	R2b a row's count of what is drawn	8 drawn	kept			
+sited_points	False	row	name	name	R1 a row's short name names the layer	Command post, triage, staging	kept			
+sited_points	False	row	figure	measurement	R2 a row's one figure	3 points	kept			
+sited_points	False	row		measurement	R2b a row's count of what is drawn	3 drawn	kept			
+population	False	row	name	name	R1 a row's short name names the layer	Population	kept			
+population	False	row	figure	measurement	R2 a row's one figure	72 blocks	kept			
+population	False	row		measurement	R2b a row's count of what is drawn	72 drawn	kept			
+modelled_population	True	row	name	name	R1 a row's short name names the layer	Population, modelled area	kept			
+modelled_population	True	row	figure	measurement	R2 a row's one figure	36 blocks	kept			
+modelled_population	True	row		measurement	R2b a row's count of what is drawn	36 drawn	kept			
+residential_density	False	row	name	name	R1 a row's short name names the layer	Residential density	kept			
+residential_density	False	row	figure	measurement	R2 a row's one figure	72 blocks	kept			
+residential_density	False	row		documentation	R11 a clause that explains	Residential density, 2020 Census blocks, residents per km² in 5 quantile bands: 0	kept			
+residential_density	False	row		documentation	R11 a clause that explains	over 0 to 26	kept			
+residential_density	False	row		documentation	R11 a clause that explains	over 252	kept			
+residential_density	False	row		measurement	R2b a row's count of what is drawn	72 drawn	kept			
+workplaces	False	row	name	name	R1 a row's short name names the layer	Workplaces	kept			
+workplaces	False	row	figure	measurement	R2 a row's one figure	72 blocks	kept			
+workplaces	False	row		measurement	R2b a row's count of what is drawn	72 drawn	kept			
+wind	False	row	name	name	R1 a row's short name names the layer	Wind	kept			
+wind	False	row	figure	measurement	R2 a row's one figure	from 10°, 11.1 km/h	kept			
+wind	False	row		documentation	R11 a clause that explains	the wind every layer reads: from 10 degrees at 11.1 km/h (forecast, NWS cell LWX/77,86 for 10/21/2026 14:00 EDT, as of 10/20/2026 22:52 EDT)	kept			
+wind	False	row		measurement	R2b a row's count of what is drawn	1 drawn	kept			
+wind_field	False	row	name	name	R1 a row's short name names the layer	Wind field	kept			
+wind_field	False	row	figure	measurement	R2 a row's one figure	39 cells	kept			
+wind_field	False	row		documentation	R11 a clause that explains	Hour  +0 h, 14:00	kept			
+wind_field	False	row		documentation	R11 a clause that explains	wind field: NWS grid, hour as stepped	kept			
+wind_field	False	row		documentation	R11 a clause that explains	footprint on the cell marked	kept			
+wind_field	False	row		documentation	R11 a clause that explains	NWS gridpoint forecast, one arrow per 2.5 km cell (the spill's cell and its neighbours, each read from its own gridpoint answer)	kept			
+wind_field	False	row		documentation	R11 a clause that explains	arrows point downwind, length by speed	kept			
+wind_field	False	row		documentation	R11 a clause that explains	shown as data, the footprint is not re-oriented on it	kept			
+emergency_services	False	row	name	name	R1 a row's short name names the layer	Stations in the zones	kept			
+emergency_services	False	row	figure	measurement	R2 a row's one figure	none in the zones	kept			
+emergency_services	False	row		documentation	R11 a clause that explains	none in the footprint in emergency services	kept			
+care	False	row	name	name	R1 a row's short name names the layer	Hospitals, nursing homes	kept			
+care	False	row	figure	measurement	R2 a row's one figure	none in the zones	kept			
+care	False	row		documentation	R11 a clause that explains	none in the footprint in hospitals, nursing homes	kept			
+schools	False	row	name	name	R1 a row's short name names the layer	Schools	kept			
+schools	False	row	figure	measurement	R2 a row's one figure	none in the zones	kept			
+schools	False	row		documentation	R11 a clause that explains	none in the footprint in schools	kept			
+flags	False	row	name	name	R1 a row's short name names the layer	Flags with a location	kept			
+flags	False	row	figure	measurement	R2 a row's one figure	none has a location	kept			
+flags	False	row		documentation	R11 a clause that explains	none of this incident's 3 flags carries a location	kept			
+fire_isolation	False	row	name	name	R1 a row's short name names the layer	Fire isolation zone	kept			
+fire_isolation	False	row	figure	measurement	R2 a row's one figure	none for this incident	kept			
+fire_isolation	False	row		documentation	R11 a clause that explains	the guide gives no such zone for this incident	kept			
+time_control	False	time	step	key	R3 the time control	H+15 min	kept			
+time_control	False	time	wind	measurement	R3 the time control	wind at the step: from 10 degrees, 11.1 km/h (forecast)	kept			
+time_control	False	time	figure	measurement	R3 the time control	128 residents under the area reached by H+15 min	kept			
+time_control	False	time	step	key	R3 the time control	H+1 h	kept			
+time_control	False	time	figure	measurement	R3 the time control	645 residents under the area reached by H+1 h	kept			

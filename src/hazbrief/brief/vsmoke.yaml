@@ -1,0 +1,63 @@
+# The VSMOKE client's settings (DN-021 section 3; HB-128 step 4; hazbrief.brief.vsmoke_driver). A file of its own,
+# not a block of orchestrator.yaml, so the smoke client can land without touching what the rendered briefs read.
+#
+# State at HB-128: VSMOKE is not in the models image. Its source is distributed from webcam.srs.fs.usda.gov, which has
+# no address record, and its manual (usfs-lavdas-1996-vsmoke-users-manual) is robots-disallowed at rung 1
+# (docs/evidence/hb128/acquisition.md). The client takes and checks every input, labels, and records and replays runs;
+# a run without a recording refuses with `engine_not_held` until a task holds the source and the manual, builds the
+# engine and adds the deck writer and the output reader.
+#
+# State at HB-150: the manual is held (the operator's download). The smoke layer is a FUTURE USE, by the operator's
+# decision of 2026-11-09 (Issue 7a4dd74a; HB-150 Decisions item 5) applied to what is held: no candidate engine passed
+# all three of HB-150 Part C's tests (docs/evidence/hb150/smoke_candidates.tsv). The client, the banding, the overlay
+# and the message block stay as HB-129 built them; every run still refuses, now in the future-use words below.
+
+# The engine's state, one of `built` or `future_use` (tests/test_hb150_smoke_engine.py), and the decision behind it.
+engine:
+  state: future_use
+  decision: >-
+    HB-150 Part C, under the operator's decision of 2026-11-09 (Issue 7a4dd74a): the smoke layer ships only if an open
+    engine builds and reproduces a documented example from held material. USFS AirFire's BlueSky repository
+    (GPL-3.0, commit c11ae06a) ships VSMOKE only as a prebuilt x86-64 binary; it reproduces the manual's worked
+    example (PM2.5 column exact at all 31 distances), but there is no VSMOKE source to build, and a GPL binary
+    without its source cannot be passed on. Galini (Fortran) states no licence. So smoke is future work.
+
+# The models image a VSMOKE run would use (deploy/models/; the SLAB client's `dense_gas.image`).
+image: hazbrief-models
+# The run records: one JSON per input set, named by the sha256 of its canonical inputs (vsmoke_driver.input_key).
+recordings_dir: fixtures/evidence/vsmoke_runs
+
+# The Pasquill-Gifford classes the brief's weather carries (hazbrief.brief.derive, the Turner table; HB-57).
+stability_classes: [A, B, C, D, E, F]
+
+# Each input by its key, with the words its refusal names (the SLAB client's pattern: nothing is defaulted).
+inputs:
+  latitude: "the fire's latitude"
+  longitude: "the fire's longitude"
+  emission_rate_g_s: "the PM2.5 emission rate, g/s, with its source"
+  heat_release_w: "the heat release rate, W, with its source"
+  stability: "the Pasquill-Gifford stability class"
+  wind_speed_ms: "the wind speed, m/s"
+  wind_from_deg: "the wind direction, degrees from north the wind blows from"
+  mixing_height_m: "the mixing height, m"
+
+refusals:
+  missing: "VSMOKE not run: {what} is not supplied"
+  no_source: "VSMOKE not run: {what} names no source"
+  out_of_range: "VSMOKE not run: {what} is {value!r}; {why}"
+  engine_not_held: >-
+    VSMOKE not run: the smoke layer is a future use. No held open engine builds and reproduces the manual's worked
+    example (HB-150): the one VSMOKE held is a prebuilt binary with no source to build
+  not_recorded: "VSMOKE not run: no recorded run for these inputs ({sha}) in {dir}"
+  corrupt_recording: "{path}: the recorded inputs are not the inputs its name hashes"
+
+hints:
+  missing: "the caller supplies it; nothing is defaulted"
+  no_source: "every emission and heat value carries where it came from (DN-020 ADDENDUM-02)"
+  engine_not_held: "future work: the layer draws when an open engine builds from held source in the models image and reproduces its manual's worked example at build (operator decision, 2026-11-09)"
+  not_recorded: "record it with the engine built, or supply a recording"
+
+# The label every smoke footprint carries, DN-021 section 3 verbatim with <source> as {source}.
+label: >-
+  VSMOKE (Lavdas 1996), steady-state Gaussian plume with Briggs rise; built for prescribed-fire planning, daytime,
+  flat terrain; emission rate from {source}; not validated by hazbrief against any fire

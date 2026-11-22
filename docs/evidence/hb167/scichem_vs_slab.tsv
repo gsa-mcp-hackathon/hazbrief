@@ -1,0 +1,15 @@
+case	tier	ppm	slab_reach_m	slab_beyond_table	slab_area_km2	scichem_avg60_reach_m	scichem_avg60_beyond_lines	scichem_avg60_area_km2	reach_ratio_scichem_over_slab	scichem_instant_any_time_reach_m	scichem_instant_any_time_area_km2
+csx-day	AEGL-1	0.5	13161	no	21.137	13336	no	16.247	1.01	29879	88.905
+csx-day	AEGL-2	2.0	5513	no	4.744	3714	no	3.305	0.67	5787	8.468
+csx-day	AEGL-3	20.0	1480	no	0.477	1256	no	0.505	0.85	1942	1.508
+csx-day	cloud at 100 m		sigma_y 38 m	sigma_z 3.6 m		sigma_y 48 m	sigma_z 4.5 m		width 1.24; depth 1.24	dilution (sigma_y sigma_z) SCICHEM/SLAB 1.54; cloud speed SCICHEM 1.66 / SLAB 2.45 m/s; dilution x speed 1.04	centreline 60-min ppm SLAB/SCICHEM 0.99
+csx-day	cloud at 500 m		sigma_y 102 m	sigma_z 45.6 m		sigma_y 124 m	sigma_z 30.8 m		width 1.21; depth 0.68	dilution (sigma_y sigma_z) SCICHEM/SLAB 0.82; cloud speed SCICHEM 2.59 / SLAB 3.45 m/s; dilution x speed 0.61	centreline 60-min ppm SLAB/SCICHEM 0.74
+csx-day	cloud at 1000 m		sigma_y 176 m	sigma_z 90.1 m		sigma_y 228 m	sigma_z 82.8 m		width 1.29; depth 0.92	dilution (sigma_y sigma_z) SCICHEM/SLAB 1.19; cloud speed SCICHEM 2.89 / SLAB 3.70 m/s; dilution x speed 0.93	centreline 60-min ppm SLAB/SCICHEM 1.22
+csx-day	cloud at 5000 m		sigma_y 633 m	sigma_z 385.2 m		sigma_y 756 m	sigma_z 389.0 m		width 1.19; depth 1.01	dilution (sigma_y sigma_z) SCICHEM/SLAB 1.21; cloud speed SCICHEM 3.47 / SLAB 4.20 m/s; dilution x speed 1.00	centreline 60-min ppm SLAB/SCICHEM 2.30
+csx-night	AEGL-1	0.5	52500	yes	359.078	25000	yes	235.131	0.48	38166	437.989
+csx-night	AEGL-2	2.0	52500	yes	265.839	25000	yes	140.858	0.48	28824	184.655
+csx-night	AEGL-3	20.0	20071	no	54.525	4910	no	8.380	0.24	5372	17.900
+csx-night	cloud at 100 m		sigma_y 116 m	sigma_z 1.4 m		sigma_y 55 m	sigma_z 6.4 m		width 0.47; depth 4.45	dilution (sigma_y sigma_z) SCICHEM/SLAB 2.10; cloud speed SCICHEM 0.84 / SLAB 0.60 m/s; dilution x speed 2.94	centreline 60-min ppm SLAB/SCICHEM 4.36
+csx-night	cloud at 500 m		sigma_y 433 m	sigma_z 2.0 m		sigma_y 142 m	sigma_z 12.3 m		width 0.33; depth 6.27	dilution (sigma_y sigma_z) SCICHEM/SLAB 2.05; cloud speed SCICHEM 0.88 / SLAB 0.47 m/s; dilution x speed 3.83	centreline 60-min ppm SLAB/SCICHEM 7.39
+csx-night	cloud at 1000 m		sigma_y 573 m	sigma_z 2.6 m		sigma_y 279 m	sigma_z 17.6 m		width 0.49; depth 6.73	dilution (sigma_y sigma_z) SCICHEM/SLAB 3.28; cloud speed SCICHEM 0.91 / SLAB 0.53 m/s; dilution x speed 5.60	centreline 60-min ppm SLAB/SCICHEM 8.56
+csx-night	cloud at 5000 m		sigma_y 862 m	sigma_z 9.3 m		sigma_y 1279 m	sigma_z 45.2 m		width 1.48; depth 4.87	dilution (sigma_y sigma_z) SCICHEM/SLAB 7.23; cloud speed SCICHEM 1.05 / SLAB 0.88 m/s; dilution x speed 8.63	centreline 60-min ppm SLAB/SCICHEM 10.40

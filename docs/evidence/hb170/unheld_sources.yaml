@@ -1,0 +1,54 @@
+# HB-170 Part B item 9: the works DN-026 and DN-028 (with every addendum) cite that the corpus graph does not hold,
+# each with the Issue that tracks it. test_hb170_cited_sources_held.py (a test held privately) reads this file: every source key a
+# DN-026 or DN-028 file cites (a backticked doc_id) must be a corpus/sources.yaml row whose manifest entry is in the
+# graph with held bytes, or be listed here. A new citation to an unheld source that is not listed fails the test.
+# The operator's rule (Issue ecb84787, 2026-11-12): nothing is cited that is not held. A work listed here is cited by
+# name only, never as support for a number a brief draws.
+# HB-174 removed EPRI's SourceForge page: it was held all along as `epri-dispersion-sourceforge` (HB-69, 2026-10-29;
+# docs/evidence/hb174/what_is_held.md; DN-028 ADDENDUM-05).
+unheld:
+  - name: 'Hanna, Dharmavaram, Zhang, Sykes, Witlox, Khajehnajafi and Koslan (2008), Process Safety Progress 27(3),
+      248-259, doi:10.1002/prs.10257 (the article)'
+    key: null
+    held_instead: hanna-2008-psp-six-dense-gas-models-railcar
+    why: 'paywalled; the operator could not download it; its publisher abstract page is held (metadata only) and
+      supports the abstract''s statements only. HB-169''s one rung-1 attempt: Wiley HTTP 403.'
+    issue: 787b448d-e999-43db-8d84-85f4ced3b97a
+  - name: 'Hanna et al. (2008), Air Pollution Modeling and Its Application XIX (Springer), chapter 49,
+      doi:10.1007/978-1-4020-8453-9_49'
+    key: hanna-2008-itm-six-dense-gas-models-railcar
+    held_instead: null
+    why: 'closed unobtainable: HB-169''s one rung-1 attempt redirected to idp.springer.com (a sign-in).'
+    issue: 787b448d-e999-43db-8d84-85f4ced3b97a
+  - name: 'Sykes, Cerasoli and Henn (1999), Journal of Hazardous Materials 64(3), 223-247,
+      doi:10.1016/S0304-3894(98)00271-4 (the article)'
+    key: null
+    held_instead: sykes-cerasoli-henn-1999-dynamic-flow-effects-puff
+    why: 'paywalled; the operator could not download it; its publisher abstract page is held (metadata only). No open
+      copy on HB-170''s allowlisted hosts is known.'
+    issue: 787b448d-e999-43db-8d84-85f4ced3b97a
+  - name: 'Mazzola et al. (2021), Atmospheric Environment 244, 117887, doi:10.1016/j.atmosenv.2020.117887 (the
+      published article)'
+    key: null
+    held_instead: mazzola-2020-jack-rabbit-ii-17-dense-gas-models-manuscript
+    why: 'the published (Elsevier) article is not held; the authors'' revision manuscript of 12 August 2020 is held
+      whole. Cite the manuscript, by its own pages.'
+    issue: 787b448d-e999-43db-8d84-85f4ced3b97a
+  - name: 'Puttock (1988), cited by the SCICHEM Technical Documentation section 5.3.3 for the wind reduction'
+    key: null
+    held_instead: scichem-technical-documentation-3-4
+    why: 'a secondary citation: DN-028 cites the technical documentation''s own statement, which is held.'
+    issue: 787b448d-e999-43db-8d84-85f4ced3b97a
+  - name: 'Warner, Platt and Heagy (2004), Journal of Applied Meteorology 43(1)'
+    key: warner-platt-heagy-2004-user-oriented-moe
+    held_instead: null
+    why: 'closed unobtainable under HBD-312 to HBD-314 (HB-160: journals.ametsoc.org HTTP 403).'
+    issue: 787b448d-e999-43db-8d84-85f4ced3b97a
+# Backticked tokens in those notes that have a doc_id's shape and are not sources.
+not_sources:
+  - token: operator-2026-11-11-1120-scichem-was-settled-in-october-find-it-and-use-it
+    what: an Issue's slug (DN-028 section 1)
+  - token: hb173-siting-does-not-read-the-planning-shape
+    what: an Issue's slug (DN-028 ADDENDUM-10 section 3 decision 1)
+  - token: hb184-conditions-of-use-standards-not-held
+    what: an Issue's slug (DN-028 ADDENDUM-10 section 2)

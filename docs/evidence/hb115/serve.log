@@ -1,0 +1,139 @@
+
+
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│                                                                              │
+│                         ▄▀▀ ▄▀█ █▀▀ ▀█▀ █▀▄▀█ █▀▀ █▀█                        │
+│                         █▀  █▀█ ▄▄█  █  █ ▀ █ █▄▄ █▀▀                        │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                FastMCP 4.1.1                                 │
+│                            https://gofastmcp.com                             │
+│                                                                              │
+│                  🖥  Server:      HazBrief MCP Server, 4.1.1                  │
+│                  🚀 Deploy free: https://horizon.prefect.io                  │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                          🎉 Update available: 4.1.6                          │
+│                      Run: pip install --upgrade fastmcp                      │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/07/26 09:23:42] INFO     Starting MCP server 'HazBrief MCP  transport.py:358
+                             Server' with transport                             
+                             'streamable-http' on                               
+                             http://127.0.0.1:8081/mcp                          
+INFO:     Started server process [1270]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58816 - "GET /health HTTP/1.1" 200 OK
+Traceback (most recent call last):
+  File "/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/woolly-marinating-seahorse/scripts/serve_review.py", line 437, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/woolly-marinating-seahorse/scripts/serve_review.py", line 428, in main
+    return serve(cfg)
+           ^^^^^^^^^^
+  File "/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/woolly-marinating-seahorse/scripts/serve_review.py", line 299, in serve
+    httpd = ThreadingHTTPServer(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 456, in __init__
+    self.server_bind()
+  File "/opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/opt/homebrew/Cellar/python@3.11/3.11.12_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 472, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use
+INFO:     127.0.0.1:58817 - "GET /health HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1270]
+
+
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│                                                                              │
+│                         ▄▀▀ ▄▀█ █▀▀ ▀█▀ █▀▄▀█ █▀▀ █▀█                        │
+│                         █▀  █▀█ ▄▄█  █  █ ▀ █ █▄▄ █▀▀                        │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                FastMCP 4.1.1                                 │
+│                            https://gofastmcp.com                             │
+│                                                                              │
+│                  🖥  Server:      HazBrief MCP Server, 4.1.1                  │
+│                  🚀 Deploy free: https://horizon.prefect.io                  │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                          🎉 Update available: 4.1.6                          │
+│                      Run: pip install --upgrade fastmcp                      │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/07/26 09:24:45] INFO     Starting MCP server 'HazBrief MCP  transport.py:358
+                             Server' with transport                             
+                             'streamable-http' on                               
+                             http://127.0.0.1:8081/mcp                          
+INFO:     Started server process [1514]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58869 - "GET /health HTTP/1.1" 200 OK
+serving http://127.0.0.1:8770/ (MCP http://127.0.0.1:8081/health); served.json written
+2026-11-07T09:24:50-05:00 127.0.0.1 "GET / HTTP/1.1" 200 -
+2026-11-07T09:24:50-05:00 127.0.0.1 "GET /briefs/csx-point-of-rocks-night/brief.html HTTP/1.1" 200 -
+INFO:     127.0.0.1:58876 - "GET /health HTTP/1.1" 200 OK
+2026-11-07T09:26:00-05:00 127.0.0.1 "GET /briefs/csx-point-of-rocks-night/brief.html HTTP/1.1" 200 -
+2026-11-07T09:26:00-05:00 127.0.0.1 code 404, message Not Found
+2026-11-07T09:26:00-05:00 127.0.0.1 "GET /favicon.ico HTTP/1.1" 404 -
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1514]
+
+
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│                                                                              │
+│                         ▄▀▀ ▄▀█ █▀▀ ▀█▀ █▀▄▀█ █▀▀ █▀█                        │
+│                         █▀  █▀█ ▄▄█  █  █ ▀ █ █▄▄ █▀▀                        │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                FastMCP 4.1.1                                 │
+│                            https://gofastmcp.com                             │
+│                                                                              │
+│                  🖥  Server:      HazBrief MCP Server, 4.1.1                  │
+│                  🚀 Deploy free: https://horizon.prefect.io                  │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                          🎉 Update available: 4.1.6                          │
+│                      Run: pip install --upgrade fastmcp                      │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/07/26 09:31:21] INFO     Starting MCP server 'HazBrief MCP  transport.py:358
+                             Server' with transport                             
+                             'streamable-http' on                               
+                             http://127.0.0.1:8081/mcp                          
+INFO:     Started server process [3067]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59295 - "GET /health HTTP/1.1" 200 OK
+serving http://127.0.0.1:8770/ (MCP http://127.0.0.1:8081/health); served.json written
+2026-11-07T09:31:24-05:00 127.0.0.1 "GET /briefs/csx-point-of-rocks-night/brief.html HTTP/1.1" 200 -
+2026-11-07T09:31:24-05:00 127.0.0.1 code 404, message Not Found
+2026-11-07T09:31:24-05:00 127.0.0.1 "GET /favicon.ico HTTP/1.1" 404 -
+2026-11-07T12:43:34-05:00 127.0.0.1 "GET / HTTP/1.1" 200 -
+INFO:     127.0.0.1:51967 - "GET /health HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3067]

@@ -1,0 +1,197 @@
+# The pack side of the controlled vocabulary (HB-03): every term the packs' emitted text and
+# labelled fields use. HB-02's docs/stylebook/VOCABULARY.yaml is the stylebook side;
+# test_packs.py (a test held privately) checks the two agree (same spelling where both carry a term; no pack term
+# or flag sentence is a stylebook forbidden synonym or never-written word).
+#
+# Nothing here is a definition typed by hand. Each term names a held document, a page (PDF page,
+# or form-feed block for a converted file) and two anchors; the build reads the definition from
+# the held page as the text from `start` (inclusive) up to `end` (exclusive), whitespace
+# collapsed, and refuses an anchor that is missing or not unique on the page. Terms keep HB-02's
+# spelling where HB-02 carries the term.
+#
+# `fields`: the pack fields the term labels. The build adds, as `used_by`, every flag rule whose
+# sentence template contains the term.
+
+terms:
+  - term: protective action footprint
+    authority: project
+    doc_id: erg2024-en-pdf
+    page: 290
+    start: "For practical purposes, the protective action zone"
+    end: " Protective actions are the steps you take"
+    fields: [erg.materials.table1, erg.materials.table3]
+  - term: initial isolation zone
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 282
+    start: "The Initial Isolation Zone defines"
+    end: " • The Protective Action Zone defines"
+    fields: [erg.materials.table1, erg.materials.table3]
+  - term: protective action zone
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 282
+    start: "The Protective Action Zone defines"
+    end: " Table 1 provides specific guidance"
+    fields: [erg.materials.table1, erg.materials.table3]
+  - term: initial isolation distance
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 290
+    start: "This distance defines the radius of a zone"
+    end: " (5) Look up the PROTECTIVE ACTION DISTANCE."
+    fields: [erg.materials.table1.small.isolate, erg.materials.table3.rows.isolate]
+  - term: protective action distance
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 290
+    start: "For a given material, spill size, and whether day or night"
+    end: " For practical purposes"
+    fields: [erg.materials.table1.small.protect_day, erg.materials.table3.rows.day]
+  - term: isolate
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 376
+    start: "Isolate indicates a zone of no entry"
+    end: " Large spill A spill"
+    fields: [erg.guides.evacuation.fire_isolate]
+  - term: evacuate
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 285
+    start: "Evacuate means to move all people"
+    end: " If there is enough time"
+    fields: [erg.guides.evacuation.fire_evacuate]
+  - term: shelter-in-place
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 285
+    start: "Shelter-in-place means people should seek shelter"
+    end: " It is vital for first responders"
+    fields: []
+  - term: immediate precautionary measure
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 348
+    start: "Lists suggested EVACUATION distances for immediate precautionary measures"
+    end: " • When the material is highlighted"
+    fields: [erg.guides.evacuation.immediate_precautionary]
+  - term: small spill
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 379
+    start: "A spill that involves quantities that are 208 liters"
+    end: " Specific gravity Weight"
+    fields: [erg.materials.table1.small]
+  - term: large spill
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 376
+    start: "A spill that involves quantities that are greater than 208 liters"
+    end: " LC50 Lethal concentration"
+    fields: [erg.materials.table1.large, erg.materials.table3]
+  - term: daytime
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 349
+    start: "Daytime is after sunrise and before sunset."
+    end: " Nighttime is between"
+    fields: [erg.materials.table1.small.protect_day, erg.materials.table3.rows.day]
+  - term: nighttime
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 349
+    start: "Nighttime is between sunset and sunrise."
+    end: " For example, in the case of a small spill"
+    fields: [erg.materials.table1.small.protect_night, erg.materials.table3.rows.night]
+  - term: low wind
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 342
+    start: "< 6 < 10 Low wind"
+    end: " 6 - 12 10 - 20 Moderate wind"
+    fields: [erg.table3_wind_bands]
+  - term: moderate wind
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 342
+    start: "6 - 12 10 - 20 Moderate wind"
+    end: " > 12 > 20 High wind"
+    fields: [erg.table3_wind_bands]
+  - term: high wind
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 342
+    start: "> 12 > 20 High wind"
+    end: " (Data taken from the Beaufort Wind Scale"
+    fields: [erg.table3_wind_bands]
+  - term: TIH
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 380
+    start: "Toxic Inhalation Hazard. Term used"
+    end: " V Saturated vapor"
+    fields: [erg.materials.tih, hazard_classes.tih_gas]
+  - term: BLEVE
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 371
+    start: "Boiling Liquid Expanding Vapor Explosion"
+    end: " Boil over"
+    fields: [flag_rules.FR-BLEVE-01]
+  - term: cryogenic liquid
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 374
+    start: "A refrigerated, liquefied gas that has a boiling point"
+    end: " Decomposition"
+    fields: [hazard_classes.cryogenic_asphyxiant]
+  - term: flammable liquid
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 375
+    start: "A liquid that has a flash point of 60°C"
+    end: " Flash point Lowest"
+    fields: [hazard_classes.flammable_liquid]
+  - term: potential hazards
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 348
+    start: "Displays the hazards in terms of FIRE OR EXPLOSION"
+    end: " PUBLIC SAFETY:"
+    fields: [erg.guides.sections.potential_hazards]
+  - term: public safety
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 348
+    start: "Provides general information on initial precautionary measures"
+    end: " EMERGENCY RESPONSE:"
+    fields: [erg.guides.sections.public_safety]
+  - term: emergency response
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 348
+    start: "Outlines special precautions for incidents"
+    end: " • Provides specific FIRST AID guidance"
+    fields: [erg.guides.sections.emergency_response]
+  - term: Packing Group
+    authority: ERG
+    doc_id: erg2024-en-pdf
+    page: 377
+    start: "The Packing Group (PG) is assigned"
+    end: " PG See"
+    fields: [cfr172.materials.rows.packing_group]
+  - term: margin of error
+    authority: Census
+    doc_id: cre-2024-file-layout
+    page: 3
+    start: "Margins of error are calculated at the 90 percent confidence level."
+    end: " Additional Information:"
+    fields: [flag_rules.FR-VEH-01, flag_rules.FR-LEP-01, flag_rules.FR-CRE-01]
+  - term: high social vulnerability
+    authority: Census
+    doc_id: cre-2024-quick-guide
+    page: 4
+    start: "Individuals with three or more components of SV"
+    end: " CRE data files are available"
+    fields: [flag_rules.FR-CRE-01]

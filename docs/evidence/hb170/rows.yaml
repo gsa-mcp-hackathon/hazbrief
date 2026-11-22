@@ -1,0 +1,635 @@
+# HB-170 Part A: the rows this task lands in corpus/sources.yaml (tools/land_rows.py appends them verbatim, re-indented,
+# under an HB-170 section). Three groups: SCICHEM's two manuals at the pinned commit (rung 1); HB-169's drafted rows
+# (docs/evidence/hb169/fetch_sources.yaml), each checked against its bytes in corpus/raw, two titles corrected; and the
+# operator's inbox of 2026-11-12 (rung 2, registered by content with scripts/register_inbox.py). Licences: a US
+# Government work carries no `reuse` (the graph's default licence); a work whose terms are not stated, or are a
+# publisher's, is reference-only or copyrighted and its text is withheld (DN-002 section 3a). The report of 2026-11-12
+# is a source of URLs, never of facts.
+sources:
+  # ── SCICHEM 3.4's manuals at the commit the engine is built from (DN-028 section 2; HB-167) ──
+  - doc_id: scichem-technical-documentation-3-4
+    priority: 5
+    title: 'SCICHEM Version 3.4 Technical Documentation (SCICHEM3.4 Technical Documentation_R01.docx)'
+    publisher: EPRI (epri-dev/SCICHEM)
+    edition: commit 156625eff47923d232dbe4f6d055707ea3bf6ff1 (2025-10-23), revision R01
+    url: https://raw.githubusercontent.com/epri-dev/SCICHEM/156625eff47923d232dbe4f6d055707ea3bf6ff1/SCICHEM3.4%20Technical%20Documentation_R01.docx
+    format: docx
+    structured_alternative: none
+    plan: fetch
+    route: reference
+    reuse: copyrighted
+    source_page: https://github.com/epri-dev/SCICHEM
+    notes: 'Licence: copyrighted, by the document''s own notice (its first pages, EPRI report 3002030677): "EPRI
+      reserves all rights in the Program as delivered" and "THIS REPORT CONTAINS PROPRIETARY INFORMATION THAT IS THE
+      INTELLECTUAL PROPERTY OF EPRI". The repository has no LICENSE or terms file (scichem-tree), and SourceForge''s "BSD
+      License" label (report of 2026-11-12, section 6) is the code''s. Held for citation, text withheld (DN-002 section
+      3a); checked passages are quoted briefly in the evidence. Expected bytes: 5,381,879, sha256
+      d86ad49e..., the copy HB-165 read in its checkout (docs/evidence/hb165/fetched.tsv). The sections DN-028 cites are
+      read in the held bytes in docs/evidence/hb170/citations_checked.tsv.'
+    role: method
+    kb_reason: SCIPUFF's dense-gas dynamics, boundary layer, uncertainty inputs, probability and evaluation, which DN-028
+      cites (HB-170).
+  - doc_id: scichem-users-guide-3-4
+    priority: 5
+    title: 'SCICHEM Version 3.4 User''s Guide (SCICHEM3.4 User''s Guide_R01.docx)'
+    publisher: EPRI (epri-dev/SCICHEM)
+    edition: commit 156625eff47923d232dbe4f6d055707ea3bf6ff1 (2025-10-23), revision R01
+    url: https://raw.githubusercontent.com/epri-dev/SCICHEM/156625eff47923d232dbe4f6d055707ea3bf6ff1/SCICHEM3.4%20User%27s%20Guide_R01.docx
+    format: docx
+    structured_alternative: none
+    plan: fetch
+    route: reference
+    reuse: copyrighted
+    source_page: https://github.com/epri-dev/SCICHEM
+    notes: 'Licence: copyrighted, by the document''s own notice (its first pages carry the same EPRI rights and
+      proprietary notice as scichem-technical-documentation-3-4, and a FAR 52.227-14 restricted rights legend). Held for
+      citation, text withheld. Expected bytes: 1,514,353, sha256 98db0bb2... (docs/evidence/hb165/fetched.tsv). The met keys, the
+      boundary-layer types and the large-scale variance inputs DN-028 and its ADDENDUM-01 cite are read in the held
+      bytes in docs/evidence/hb170/citations_checked.tsv.'
+    role: method
+    kb_reason: SCICHEM's input keys (MET, BL_TYPE, ENSM_TYPE, T_AVG) as DN-028 and its ADDENDUM-01 set them (HB-170).
+
+  # ── HB-169's rung-1 fetches (docs/evidence/hb169/fetch_sources.yaml and fetch_log.jsonl), admitted here ──
+  - doc_id: hanna-chang-2008-gaps-tic-model-systems
+    priority: 6
+    title: 'Gaps in Toxic Industrial Chemical (TIC) Model Systems'
+    publisher: 'Hrcak (Croatian scientific journals portal), Hanna and Chang'
+    edition: '2008-12-12'
+    url: https://hrcak.srce.hr/file/96099
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    notes: 'HB-170: drafted by HB-169 and fetched by it at rung 1 (2026-11-12T13:07Z); checked against the held bytes
+      (6 pages, sha256 7fcae08a...; title page "GAPS IN TOXIC INDUSTRIAL CHEMICAL (TIC) MODEL SYSTEMS", Steven Hanna and
+      Joseph Chang). The publisher''s terms are not stated in the file; reference-only, text withheld.'
+    kb_reason: Hanna's account of where the railcar model estimates exceeded what was observed (HB-169 Part A).
+  - doc_id: hanna-2016-ae-jack-rabbit-lyme-bay
+    priority: 6
+    title: 'Observed chlorine concentrations during Jack Rabbit I and Lyme Bay field experiments'
+    publisher: 'Atmospheric Environment 125 (2016) 252-256 (Elsevier); Hanna, Chang and Huq; University of Delaware
+      Environmental Fluids lab copy'
+    edition: '2016'
+    url: https://publicutility.ceoe.udel.edu/envfluids/assets/pdf/2016ae.pdf
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    notes: 'HB-170: drafted by HB-169 and fetched by it at rung 1; checked against the held bytes (5 pages, sha256
+      6cac49f1..., the typeset article). The draft''s descriptive title is replaced by the article''s own. An Elsevier
+      article served by a co-author''s lab; reference-only, text withheld.'
+    kb_reason: The later summary of the six-model comparison and the field data at railcar scale (HB-169 Part A).
+  - doc_id: hanna-2007-cbis-tic-emissions-slides
+    priority: 6
+    title: 'Estimating Emissions of Toxic Industrial Chemicals (TICs) Released as a Result of Accidents or Sabotage'
+    publisher: 'NDIA 2007 Chemical and Biological Information Systems (CBIS) conference, slides (Hanna, Lee, Belonger,
+      Drivas, Britter and Hansen)'
+    edition: '2007-01-10'
+    url: https://ndia.dtic.mil/wp-content/uploads/2007/cbis/wednesday/hannaWed1130.pdf
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    notes: 'HB-170: drafted by HB-169 and fetched by it at rung 1; checked against the held bytes (21 pages, sha256
+      9deebafe...; the title slide names six authors, not three). Conference slides; reference-only, text withheld.'
+    kb_reason: Slides that show the six models on the three railcar accidents (HB-169 Part A).
+  - doc_id: ams-2008-132550-hanna-railcar-models
+    priority: 6
+    # The search result named this paper with the railcar comparison; as fetched it is Long, Zajaczkowski, Haupt and
+    # Peltier, "Examining various spatial scales of a hypothetical chlorine release on a college campus" (paper 3.4),
+    # which cites Hanna et al. (2007) for the Festus and Macdona masses. The doc_id is the fetch log's key and stays.
+    title: 'Examining various spatial scales of a hypothetical chlorine release on a college campus (AMS 2008 paper 3.4;
+      Long, Zajaczkowski, Haupt and Peltier)'
+    publisher: 'American Meteorological Society, annual meeting extended abstract'
+    edition: '2008'
+    url: https://ams.confex.com/ams/pdfpapers/132550.pdf
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    notes: 'HB-170: fetched by HB-169 at rung 1; checked against the held bytes (11 pages, sha256 2ad0d471...). Not a
+      Hanna paper: the doc_id is the fetch log''s key and stays; the title is the paper''s own. AMS; reference-only.'
+    kb_reason: Cites the railcar comparison's release masses (Festus 21,792 kg, Macdona 54,480 kg) (HB-169 Part A).
+  - doc_id: ams-2009-146817-hanna-chicago-chlorine-sensitivity
+    priority: 6
+    title: 'Source emissions and transport and dispersion models for toxic industrial chemicals (TICs) released in cities
+      (AMS 2009 paper J14.1; Hanna, Britter, Leung, Hansen, Sykes, Drivas, Weil and Strimaitis)'
+    publisher: 'American Meteorological Society, 89th annual meeting extended abstract'
+    edition: '2009'
+    url: https://ams.confex.com/ams/pdfpapers/146817.pdf
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    notes: 'HB-170: fetched by HB-169 at rung 1; checked against the held bytes (11 pages, sha256 caba3fa4...). The
+      draft''s descriptive title is replaced by the paper''s own; it holds the hypothetical Chicago release and its
+      SCIPUFF and SLAB sensitivity runs. The doc_id is the fetch log''s key and stays. AMS; reference-only.'
+    kb_reason: SCIPUFF and SLAB sensitivity to wind speed, roughness, stability and deposition (HB-169 Part A).
+  - doc_id: ams-2011-186566-hanna-dense-gas-poster
+    priority: 6
+    title: 'Comparing results of two chlorine release field experiments - Wild Stallions and Jack Rabbit (AMS 2011 paper
+      2.3; Hanna, Britter, Koopman and Chang)'
+    publisher: 'American Meteorological Society, 91st annual meeting'
+    edition: '2011'
+    url: https://ams.confex.com/ams/91Annual/webprogram/Manuscript/Paper186566/P127%20AAPM%20Dense%20Gas%202011%20Final.pdf
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    notes: 'HB-170: fetched by HB-169 at rung 1; checked against the held bytes (14 pages, sha256 451c76cb...). The draft
+      called it a dense-gas poster; its title page is a comparison of the Wild Stallions and Jack Rabbit chlorine
+      trials. The doc_id is the fetch log''s key and stays. AMS; reference-only.'
+    kb_reason: A later Hanna dense gas paper on the chlorine field trials (HB-169 Part A).
+  - doc_id: hanna-2008-itm-six-dense-gas-models-railcar
+    priority: 6
+    title: 'Comparison of Six Widely-Used Dense Gas Dispersion Models for Three Actual Railcar Accidents'
+    publisher: 'Air Pollution Modeling and Its Application XIX (Springer), chapter 49, pp. 443-451'
+    edition: '2008'
+    url: https://link.springer.com/chapter/10.1007/978-1-4020-8453-9_49
+    format: html
+    structured_alternative: none
+    plan: fetch
+    route: reference
+    reuse: copyrighted
+    status: closed
+    closed_under: unobtainable
+    closed_note: >-
+      HB-169's one rung-1 attempt (doi.org, refused for www.doi.org; then link.springer.com, which redirected to
+      idp.springer.com, off the allowlist) is this work's attempt (docs/evidence/hb169/fetch_log.jsonl, 2026-11-12T13:07Z).
+      No new request (HB-170 ADDENDUM-01 item 3). The conference version of the Process Safety Progress paper, whose
+      abstract is held (hanna-2008-psp-six-dense-gas-models-railcar).
+    refused_by: 'blocked_host: idp.springer.com (a sign-in redirect) is not on corpus/allowlist.txt (HB-169). Not queued.'
+    requested_by: HB-169
+    save_format: pdf
+    notes: 'Copyrighted (Springer); metadata only. doi:10.1007/978-1-4020-8453-9_49; pages from the report of
+      2026-11-12, section 1.'
+    role: method
+    kb_reason: The conference version of the 2008 six-model railcar comparison (HB-169), reference only.
+
+  # ── The operator's inbox of 2026-11-12 (rung 2): the search report, then each document by its own title page ──
+  - doc_id: perplexity-report-dense-gas-and-occupancy-2026-11-12
+    priority: 7
+    title: 'Search report (Perplexity): full-text copies of the dense-gas evaluations and SCICHEM''s licence; FEMA Hazus,
+      USACE NSI, NCES school schedules, HSEEP and CSEPP, the ORNL protective-action reports and SCICHEM''s manuals'
+    publisher: Perplexity (an AI search service), saved by the operator
+    edition: saved 2026-11-12 11:19 EST
+    url: https://www.perplexity.ai/
+    format: md
+    identify:
+      text: 'I need legitimately downloadable full-text copies \(open-access PDF, author'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    reuse: reference-only
+    notes: 'A search report holding two searches: a list of URLs, never a source and never cited. HB-170 took each inbox
+      file''s URL from it only where the file''s own title page matched (the HB-170 evidence (held privately)). The url is the
+      browser''s recorded origin (kMDItemWhereFroms, read before registration). Its first line, Perplexity''s logo
+      <img> tag, and the blank line after it were removed before registration, as HB-160 did (report_logo_stripped.json).'
+    role: search_report
+    kb_reason: The leads HB-170 registered or fetched, kept so each row names the report it came from (HB-170).
+  - doc_id: hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2
+    priority: 5
+    title: 'Hazard Response Modeling Uncertainty (A Quantitative Method), Volume II: Evaluation of Commonly Used Hazardous
+      Gas Dispersion Models'
+    publisher: 'Sigma Research Corporation (Hanna, Strimaitis and Chang) for the Air Force Engineering & Services Center,
+      Tyndall AFB; co-sponsored by the American Petroleum Institute. ESL-TR-91-28, DTIC AD-A270 095'
+    edition: 'March 1993 (cover); final report covering April 1989 - April 1991'
+    url: https://www.researchgate.net/publication/235087863_Hazard_Response_Modeling_Uncertainty_A_Quantitative_Method_Volume_2_Evaluation_of_Commonly_Used_Hazardous_Gas_Dispersion_Models/link/546f66e60cf216f8cfa9db67/download
+    format: pdf
+    identify:
+      text: 'AD-A270 ?095.{0,600}HAZARD RESPONSE MODELING'
+    text_converter: ocr
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    reuse: public-release
+    source_page: https://apps.dtic.mil/sti/tr/pdf/ADA270095.pdf
+    notes: 'Licence: the cover reads "APPROVED FOR PUBLIC RELEASE: DISTRIBUTION UNLIMITED" (a contractor report for the
+      Air Force). The operator''s copy came from ResearchGate (the browser''s recorded origin, kMDItemWhereFroms), not
+      from DTIC, which the report verified and the operator could not reach (CAC); the DTIC accession is the source_page.
+      The bytes are the scanned DTIC report (355 pages, its cover stamped by DTIC), with an OCR text layer. The cover is
+      dated March 1993; DN-028 and HB-102 call it "1991" (corrected in DN-028 ADDENDUM-02). Not the same study as
+      epa-dense-gas-evaluation-1991 (TRC, EPA-450/4-90-018).'
+    role: method
+    kb_reason: The evaluation of 14 hazardous gas models (SLAB among them) against 8 field data sets, the archive SCICHEM's
+      section 13 reuses (HB-170 Part B).
+  - doc_id: mazzola-2020-jack-rabbit-ii-17-dense-gas-models-manuscript
+    priority: 5
+    title: 'Results of comparisons of the predictions of 17 dense gas dispersion models with observations from the Jack
+      Rabbit II chlorine field experiment (author manuscript, revision of 12 August 2020)'
+    publisher: 'Mazzola, Hanna, Chang, Bradley, Meris and others; author manuscript hosted by S. Gant (HSE); published as
+      Atmospheric Environment 244 (2021) 117887, doi:10.1016/j.atmosenv.2020.117887'
+    edition: 'revision manuscript, 12 August 2020 (not the published article)'
+    url: https://www.gant.org.uk/research/AE%20JRII%20Model%20Intercomparison_revision_clean_12AUG20.pdf
+    format: pdf
+    identify:
+      text: 'Results of comparisons of the predictions of 17 dense gas.{0,80}Jack Rabbit II'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    reuse: reference-only
+    notes: 'The revision manuscript, not the typeset article: page and line numbers are the manuscript''s. The url is the
+      browser''s recorded origin and matches the report''s co-author-hosted copy. The report says it bears "Distribution
+      Statement A"; the published article is Elsevier''s, so the text is withheld (reference-only).'
+    role: method
+    kb_reason: SCIPUFF and SLAB against the observed chlorine of Jack Rabbit II, with 15 other dense gas models (HB-170).
+  - doc_id: hanna-2008-psp-six-dense-gas-models-railcar
+    priority: 5
+    title: 'Comparison of six widely-used dense gas dispersion models for three recent chlorine railcar accidents
+      (publisher''s abstract page)'
+    publisher: 'Process Safety Progress 27(3), 248-259 (AIChE / Wiley); Hanna, Dharmavaram, Zhang, Sykes, Witlox,
+      Khajehnajafi and Koslan'
+    edition: 'first published 2008-04-07; abstract page saved 2026-11-12'
+    url: https://aiche.onlinelibrary.wiley.com/doi/10.1002/prs.10257
+    format: md
+    identify:
+      text: 'authored-by/Dharmavaram/Seshu'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    reuse: copyrighted
+    locators: 'The abstract only, verbatim from the publisher''s page as saved: "Given the same source emissions rates,
+      the models'' simulations of 10-min averaged cloud centerline concentration, at downwind distances ranging from 0.1
+      to 10 km, agree with each other within plus and minus a factor of two most of the time." "For a very large release
+      (Graniteville), the 2,000, 400, and 20 ppm contours are predicted to extend downwind about 1.3, 3.1, and 14 km,
+      respectively, from the source." "It must also be stressed that observed concentrations would be expected to be less
+      than those calculated here, because removal by dry deposition at the surface and by chemical reactions in the plume
+      have not been accounted for."'
+    notes: 'Metadata only: the article is paywalled and the operator could not download it, so the saved page holds the
+      abstract, the author list and the references, and no article text. It supports a citation of the abstract''s own
+      statements and nothing else. HB-169''s one rung-1 attempt (doi.org, then aiche.onlinelibrary.wiley.com HTTP 403,
+      docs/evidence/hb169/fetch_log.jsonl) is this work''s attempt; no new request. Copyrighted (AIChE); text withheld.'
+    role: method
+    kb_reason: The six-model railcar comparison's abstract (SCIPUFF and SLAB on Festus, Macdona and Graniteville) (HB-170).
+  - doc_id: sykes-cerasoli-henn-1999-dynamic-flow-effects-puff
+    priority: 6
+    title: 'The representation of dynamic flow effects in a Lagrangian puff dispersion model (publisher''s abstract page)'
+    publisher: 'Journal of Hazardous Materials 64(3), 223-247 (Elsevier); Sykes, Cerasoli and Henn'
+    edition: '1999; abstract page saved 2026-11-12'
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0304389498002714
+    format: md
+    identify:
+      text: 'A technique for incorporating buoyancy-driven dynamics in a Lagrangian puff model is described'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    reuse: copyrighted
+    notes: 'Metadata only: paywalled, the operator could not download it; the saved page holds the abstract, the
+      introduction and the publisher''s section snippets, not the article, and supports a citation of the abstract''s
+      own statements only. No open copy on this task''s
+      allowlisted hosts is known (the report of 2026-11-12, section 3, found none); no request was made.
+      doi:10.1016/S0304-3894(98)00271-4. Copyrighted (Elsevier); text withheld.'
+    role: method
+    kb_reason: SCIPUFF's dynamic (dense and buoyant) puff treatment as its authors published it (HB-170), abstract only.
+  - doc_id: harmo15-h15-75-platt-probabilistic-plume-consequence
+    priority: 6
+    title: 'The use of probabilistic plume predictions for the consequence assessment of atmospheric releases of hazardous
+      materials (HARMO 15, paper H15-75; Platt, Kimball and Urban)'
+    publisher: 'Proceedings of the 15th International Conference on Harmonisation within Atmospheric Dispersion Modelling
+      for Regulatory Purposes, Madrid, 2013'
+    edition: '2013'
+    url: https://www.harmo.org/Conferences/Proceedings/_Madrid/publishedSections/H15-75.pdf
+    format: pdf
+    identify:
+      text: 'THE USE OF PROBABILISTIC PLUME PREDICTIONS FOR THE CONSEQUENCE ASSESSMENT'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    reuse: reference-only
+    notes: 'The url is the browser''s recorded origin for H15-75.pdf and the report''s proceedings URL. Issue dc584ba7''s
+      copy (harmo15-H15-75-...pdf) is byte-identical. Conference proceedings, terms not stated; reference-only.'
+    role: method
+    kb_reason: Probabilistic (fluctuating) plume predictions in a consequence assessment, against the mean plume (HB-170).
+  - doc_id: harmo15-h15-84-urban-hazard-area-casualty-toxic-load
+    priority: 6
+    title: 'Comparison of hazard area and casualty predictions of a small-scale chemical attack using various toxic load
+      toxicity models (HARMO 15, paper H15-84; Urban, Galvin, Platt, Bieringer, Bieberbach and Annunzio)'
+    publisher: 'Proceedings of the 15th International Conference on Harmonisation within Atmospheric Dispersion Modelling
+      for Regulatory Purposes, Madrid, 2013'
+    edition: '2013'
+    url: https://www.harmo.org/Conferences/Proceedings/_Madrid/publishedSections/H15-84.pdf
+    format: pdf
+    identify:
+      text: 'COMPARISON OF HAZARD AREA AND CASUALTY PREDICTIONS OF A SMALL-SCALE'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    reuse: reference-only
+    source_page: http://harmo.isac.cnr.it/Conferences/Proceedings/_Madrid/publishedSections/H15-84.pdf
+    notes: 'The hz-15 thread''s download (Issue dc584ba7) recorded no origin; the url is the report''s proceedings URL,
+      whose title and authors match the file''s title page; the report verified the CNR mirror (source_page). Conference
+      proceedings, terms not stated; reference-only.'
+    role: method
+    kb_reason: Toxic-load models against Haber's law for hazard area and casualties (HB-170; DN-027's parked harm bands).
+  - doc_id: ornl-tm-2002-144-sorensen-evacuate-or-shelter
+    priority: 6
+    title: 'Planning Protective Action Decision-Making: Evacuate or Shelter-in-Place? (ORNL/TM-2002/144)'
+    publisher: 'Oak Ridge National Laboratory (Sorensen, Shumpert and Vogt) for FEMA, Chemical Stockpile Emergency
+      Preparedness Program; OSTI 814651'
+    edition: 'June 2002 (title page)'
+    url: https://digital.library.unt.edu/ark:/67531/metadc739967/m2/1/high_res_d/814651.pdf
+    format: pdf
+    identify:
+      text: 'ORNL/TM-2002/144.{0,300}PLANNING PROTECTIVE ACTION DECISION'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    source_page: https://www.osti.gov/biblio/814651
+    notes: 'Licence: a government-sponsored laboratory report (ORNL for FEMA under DOE contract DE-AC05-00OR22725), as
+      the SLAB guide''s row treats LLNL''s. The url is the browser''s recorded origin and the report''s UNT copy.'
+    role: method
+    kb_reason: When to evacuate and when to shelter in place for a chemical release, the planning basis (HB-171).
+  - doc_id: ornl-tm-13722-vogt-sorensen-west-helena-survey
+    priority: 6
+    title: 'Description of Survey Data Regarding the Chemical Repackaging Plant Accident, West Helena, Arkansas
+      (ORNL/TM-13722)'
+    publisher: 'Oak Ridge National Laboratory (Vogt and Sorensen); OSTI 5889'
+    edition: 'March 1999'
+    url: https://www.osti.gov/servlets/purl/5889
+    format: pdf
+    identify:
+      text: 'WEST HELENA, ARKANSAS'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    text_converter: ocr
+    source_page: https://www.osti.gov/biblio/5889
+    notes: 'Licence: a government-sponsored laboratory report ("prepared as an account of work sponsored by an agency of
+      the United States Government"). A scan whose text layer runs words together ("Thisreportwaspqared"), so the
+      ingest reads it by tesseract (corpus/ingest_config.yaml ocr:), as HB-122 did for the 1991 evaluation; quote from
+      the rendered pages. The url is the browser''s recorded origin and OSTI''s full-report PURL.'
+    role: evidence
+    kb_reason: What people at West Helena did and were told after a chemical release, for protective-action timing (HB-171).
+  - doc_id: fema-hazus-earthquake-technical-manual-6-1
+    priority: 5
+    title: 'Hazus Earthquake Model Technical Manual, Hazus 6.1'
+    publisher: FEMA
+    edition: July 2024
+    url: https://www.fema.gov/sites/default/files/documents/fema_hazus-earthquake-model-technical-manual-6-1.pdf
+    format: pdf
+    identify:
+      text: 'Hazus Earthquake Model Technical Manual Hazus 6\.1'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    source_page: https://www.fema.gov/flood-maps/tools-resources/flood-map-products/hazus/documentation
+    notes: 'Licence: a US Government work (17 U.S.C. 105). Current: the report says FEMA''s documentation page still
+      lists the 6.1 Earthquake manual as current. Section 12 (casualties, the scenario times and Table 12-2) is HB-171''s
+      to read. The url is the browser''s recorded origin.'
+    role: method
+    kb_reason: Population by occupancy class and time of day in Hazus's casualty module (HB-171 ADDENDUM-02).
+  - doc_id: fema-hazus-inventory-technical-manual-6-0
+    priority: 6
+    title: 'Hazus Inventory Technical Manual, Hazus 6.0'
+    publisher: FEMA
+    edition: November 2022
+    url: https://www.fema.gov/sites/default/files/documents/fema_hazus-6-inventory-technical-manual.pdf
+    format: pdf
+    identify:
+      text: 'Hazus Inventory Technical Manual Hazus 6\.0'
+    # HB-170: held, its text deferred, as HB-153 deferred the MUTCD's: docling's pinned parse runs about 4.5 s a page
+    # here and drove swap on the data volume toward the 10 GB floor (HB-153); this task parses the 477-page Earthquake
+    # manual HB-171 reads first and defers the 946 pages of the other three Hazus manuals and the superseded CSEPP
+    # edition. Drop this line in the ingest that parses it; the text then enters as an R-213 revision.
+    text_withheld: parse_deferred
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    source_page: https://www.fema.gov/flood-maps/tools-resources/flood-map-products/hazus/documentation
+    notes: 'Licence: a US Government work. Superseded by 6.1 (August 2024) and 7.0 (June 2025); held because HB-171
+      ADDENDUM-02 names it. Which edition the Earthquake manual 6.1 refers to is recorded in the HB-170 evidence (held privately).'
+    role: method
+    kb_reason: Hazus's inventory and its population data, the edition HB-171 ADDENDUM-02 names (HB-171).
+  - doc_id: fema-hazus-inventory-technical-manual-6-1
+    priority: 6
+    title: 'Hazus Inventory Technical Manual, Hazus 6.1'
+    publisher: FEMA
+    edition: August 2024
+    url: https://www.fema.gov/sites/default/files/documents/fema_hazus-inventory-technical-manual-6.1.pdf
+    format: pdf
+    identify:
+      text: 'Hazus Inventory Technical Manual Hazus 6\.1'
+    # HB-170: held, its text deferred, as HB-153 deferred the MUTCD's: docling's pinned parse runs about 4.5 s a page
+    # here and drove swap on the data volume toward the 10 GB floor (HB-153); this task parses the 477-page Earthquake
+    # manual HB-171 reads first and defers the 946 pages of the other three Hazus manuals and the superseded CSEPP
+    # edition. Drop this line in the ingest that parses it; the text then enters as an R-213 revision.
+    text_withheld: parse_deferred
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    source_page: https://www.fema.gov/flood-maps/tools-resources/flood-map-products/hazus/documentation
+    notes: 'Licence: a US Government work. The inventory edition of the same release as the Earthquake manual 6.1;
+      superseded by 7.0 (June 2025).'
+    role: method
+    kb_reason: Hazus's inventory and its population data, the 6.1 release (HB-171).
+  - doc_id: fema-hazus-inventory-technical-manual-7-0
+    priority: 6
+    title: 'Hazus Inventory Technical Manual, Hazus 7.0'
+    publisher: FEMA
+    edition: June 2025
+    url: https://www.fema.gov/sites/default/files/documents/fema_rsl_hazus-7-invtm_06272025_1.pdf
+    format: pdf
+    identify:
+      text: 'Hazus Inventory Technical Manual Hazus 7\.0'
+    # HB-170: held, its text deferred, as HB-153 deferred the MUTCD's: docling's pinned parse runs about 4.5 s a page
+    # here and drove swap on the data volume toward the 10 GB floor (HB-153); this task parses the 477-page Earthquake
+    # manual HB-171 reads first and defers the 946 pages of the other three Hazus manuals and the superseded CSEPP
+    # edition. Drop this line in the ingest that parses it; the text then enters as an R-213 revision.
+    text_withheld: parse_deferred
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    source_page: https://www.fema.gov/flood-maps/tools-resources/flood-map-products/hazus/documentation
+    notes: 'Licence: a US Government work. Current: the newest Inventory manual FEMA''s documentation page lists (report
+      of 2026-11-12, section 1 of its second search).'
+    role: method
+    kb_reason: Hazus's inventory and its population data, the current edition (HB-171).
+  - doc_id: fema-hseep-doctrine-2020
+    priority: 5
+    title: 'Homeland Security Exercise and Evaluation Program (HSEEP)'
+    publisher: DHS / FEMA
+    edition: January 2020 (the file FEMA serves, rendered 2020-02-25)
+    url: https://www.fema.gov/sites/default/files/2020-04/Homeland-Security-Exercise-and-Evaluation-Program-Doctrine-2020-Revision-2-2-25.pdf
+    format: pdf
+    identify:
+      text: 'Homeland Security Exercise and Evaluation Program \(HSEEP\) JANUARY 2020'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    source_page: https://preptoolkit.fema.gov/web/hseep-resources/policy-and-guidance
+    notes: 'Licence: a US Government work. The url is the browser''s recorded origin. The South Carolina copy
+      (scemd.org, hseep-manual-january-2020.pdf, rendered 2020-02-20) holds the same words in another table reading
+      order (40,907 against 40,906 word tokens, 11 spans of table cells reordered; the HB-170 evidence (held privately)), so
+      it is not a revision and only FEMA''s is held. The MSEL is chapter 3, pages 3-23 to 3-24 (HB-171''s to read).'
+    role: method
+    kb_reason: The Master Scenario Events List and its columns, for the exercise events list (HB-171).
+  - doc_id: csepp-exercise-policy-guidance-2012
+    priority: 6
+    title: 'Exercise Policy and Guidance for the Chemical Stockpile Emergency Preparedness Program'
+    publisher: 'United States Army (JPEO-CBD) and DHS / FEMA Technological Hazards Division'
+    edition: December 2012
+    url: https://www.hsdl.org/api/v1/files/730014.pdf
+    format: pdf
+    identify:
+      text: 'CHEMICAL STOCKPILE EMERGENCY PREPAREDNESS PROGRAM EXERCISE POLICY & GUIDANCE December 2012'
+    # HB-170: held, its text deferred, as HB-153 deferred the MUTCD's: docling's pinned parse runs about 4.5 s a page
+    # here and drove swap on the data volume toward the 10 GB floor (HB-153); this task parses the 477-page Earthquake
+    # manual HB-171 reads first and defers the 946 pages of the other three Hazus manuals and the superseded CSEPP
+    # edition. Drop this line in the ingest that parses it; the text then enters as an R-213 revision.
+    text_withheld: parse_deferred
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    source_page: https://www.hsdl.org/document/730014
+    notes: 'Licence: a US Government work; HSDL''s record says "Rights: Public Domain" (the operator''s saved record page).
+      The browser''s recorded origin is a signed, expiring HSDL storage URL; the url here is the record page''s own View
+      PDF link. Superseded by CSEPP Exercise Implementation Guidance (December 2023, version 3.0; not held), per the
+      report; held because it is the edition the operator could download.'
+    role: method
+    kb_reason: The chemical stockpile program's exercise guidance and its MSEL (HB-171).
+  - doc_id: nces-ntps-2020-21-school-questionnaire
+    priority: 6
+    title: 'School Questionnaire, National Teacher and Principal Survey, 2020-21 School Year'
+    publisher: U.S. Department of Education, NCES (collected by the U.S. Census Bureau)
+    edition: 2020-21
+    url: https://nces.ed.gov/surveys/ntps/pdf/2021/School_Questionnaire_2020_21.pdf
+    format: pdf
+    identify:
+      text: 'SCHOOL QUESTIONNAIRE.{0,200}NATIONAL TEACHER AND PRINCIPAL SURVEY.{0,40}2020-21'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    notes: 'Licence: a US Government work. The questionnaire, not a table of results: items 1-4 and 1-6 ask the official
+      start and end times and the school-year days (the report, its second search, section 3).'
+    role: method
+    kb_reason: The definitions behind NCES's school start-time tables (HB-171).
+  - doc_id: nces-ntps-2021-school-start-time-by-state
+    priority: 6
+    title: 'School start time: Average public K-12 school start time and percentage distribution of public school start
+      time, by state: 2020-21 (NTPS web table ntps2021_sflt05_s1s)'
+    publisher: U.S. Department of Education, NCES
+    edition: 2020-21
+    url: https://nces.ed.gov/surveys/ntps/estable/table/ntps/ntps2021_sflt05_s1s
+    format: md
+    identify:
+      text: '^## School start time: Average public K.12 school start time and percentage distribution of public'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    notes: 'Licence: a US Government work. The operator''s browser clipping of the web table; the url is the report''s,
+      whose title matches the clipping''s heading (the clipping carries no source line).'
+    role: evidence
+    kb_reason: Public school start times by state, a held source for school occupancy by hour (HB-171).
+  - doc_id: nces-ntps-2021-school-start-time-by-characteristics
+    priority: 6
+    title: 'School start time: Average K-12 school start time and percentage distribution of school start times, by school
+      type and selected school characteristics: 2020-21 (NTPS web table ntps2021_fl05_s12n)'
+    publisher: U.S. Department of Education, NCES
+    edition: 2020-21
+    url: https://nces.ed.gov/surveys/ntps/estable/table/ntps/ntps2021_fl05_s12n
+    format: md
+    identify:
+      text: '^## School start time: Average K.12 school start time and percentage distribution of school start times'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    notes: 'Licence: a US Government work. The operator''s browser clipping; its footnote links name ntps2021_fl05_s12n.'
+    role: evidence
+    kb_reason: School start times by school type and level, for school occupancy by hour (HB-171).
+  - doc_id: nces-state-education-reforms-table-5-14-2018
+    priority: 6
+    title: 'Table 5.14. Number of instructional days and hours in the school year, by state: 2018 (NCES State Education
+      Reforms)'
+    publisher: U.S. Department of Education, NCES
+    edition: '2018'
+    url: https://nces.ed.gov/programs/statereform/tab5_14.asp
+    format: md
+    identify:
+      text: 'Table 5\.14\. Number of instructional days and hours in the school year, by state'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    notes: 'Licence: a US Government work. State-required minimums, not observed schedules (the report says so). The
+      clipping links a newer version of the table (tab1_1-2020.asp), not held.'
+    role: evidence
+    kb_reason: The school year's length in days by state law, for whether school is in session (HB-171).
+  - doc_id: usace-nsi-technical-documentation-2022
+    priority: 6
+    title: 'National Structure Inventory (NSI) Technical Documentation, 2022'
+    publisher: U.S. Army Corps of Engineers, Hydrologic Engineering Center
+    edition: '2022'
+    url: https://www.hec.usace.army.mil/confluence/nsi/technicalreferences/2022/technical-documentation
+    format: md
+    identify:
+      text: 'technicalreferences/2022/technical-documentation#id-\.TechnicalDocumentationv2022-Mission'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    notes: 'Licence: a US Government work. The operator''s browser clipping ("Technical Documentation.md"); its own
+      section anchors name the 2022 page (TechnicalDocumentationv2022).'
+    role: method
+    kb_reason: What the NSI's population fields mean and how they were assigned, 2022 base (HB-171 ADDENDUM-02).
+  - doc_id: usace-nsi-technical-documentation-2026
+    priority: 6
+    title: 'National Structure Inventory (NSI) Technical Documentation, 2026 (latest)'
+    publisher: U.S. Army Corps of Engineers, Hydrologic Engineering Center
+    edition: '2026'
+    url: https://www.hec.usace.army.mil/confluence/nsi/technicalreferences/latest/technical-documentation
+    format: md
+    identify:
+      text: 'technicalreferences/latest/technical-documentation#id-\.TechnicalDocumentationv2026'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    notes: 'Licence: a US Government work. The operator''s browser clipping ("Technical Documentation (1).md"); its own
+      section anchors name the latest page, version 2026 (TechnicalDocumentationv2026).'
+    role: method
+    kb_reason: What the NSI's population fields mean and how they were assigned, 2026 base (HB-171 ADDENDUM-02).
+  - doc_id: usace-nsi-api-reference-guide-2022
+    priority: 6
+    title: 'National Structure Inventory (NSI) API Reference Guide (2022 documentation)'
+    publisher: U.S. Army Corps of Engineers, Hydrologic Engineering Center
+    edition: '2022'
+    url: https://www.hec.usace.army.mil/confluence/nsi/technicalreferences/2022/api-reference-guide
+    format: md
+    identify:
+      text: 'technicalreferences/2022/api-reference-guide#id-\.APIReferenceGuidev2022'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    notes: 'Licence: a US Government work. The operator''s browser clipping ("API Reference Guide.md"); its anchors name
+      the 2022 page.'
+    role: method
+    kb_reason: How to ask the NSI API for the structures inside a polygon or box (HB-171 ADDENDUM-02).
+  - doc_id: usace-nsi-faq-2022
+    priority: 6
+    title: 'National Structure Inventory (NSI) Frequently Asked Questions (2022, written August 2022)'
+    publisher: U.S. Army Corps of Engineers, Hydrologic Engineering Center
+    edition: August 2022
+    url: https://www.hec.usace.army.mil/confluence/nsi/technicalreferences/2022/frequently-asked-questions
+    format: md
+    identify:
+      text: 'technicalreferences/2022/frequently-asked-questions#id-\.FrequentlyAskedQuestionsv2022'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    notes: 'Licence: a US Government work. The operator''s browser clipping ("Frequently Asked Questions.md"); its anchors
+      name the 2022 page. Holds the data-use statement (who can use the NSI data).'
+    role: method
+    kb_reason: The NSI's stated limits and its terms of use (HB-171 ADDENDUM-02).
+  - doc_id: usace-nsi-release-notes-2026
+    priority: 6
+    title: 'National Structure Inventory (NSI) Release Notes, 2026 (latest)'
+    publisher: U.S. Army Corps of Engineers, Hydrologic Engineering Center
+    edition: '2026'
+    url: https://www.hec.usace.army.mil/confluence/nsi/technicalreferences/latest/release-notes
+    format: md
+    identify:
+      text: 'technicalreferences/latest/release-notes#id-\.ReleaseNotesv2026'
+    structured_alternative: none
+    plan: operator_download
+    route: reference
+    notes: 'Licence: a US Government work. The operator''s browser clipping ("Release Notes.md"); its anchors name the
+      latest page, version 2026.'
+    role: method
+    kb_reason: What changed in the 2026 NSI base, the first update since 2022 (HB-171 ADDENDUM-02).

@@ -1,0 +1,75 @@
+# The public mode's citation rules, as this tree needs them (HB-213). Each citation of the working record
+# (task files, handoffs, design notes, the decision register, lab notes, the corpus graph) was replaced when
+# this tree was built, by a shipped file that holds the fact or by the record's name; the working record is
+# held privately. What remains: the paths a command makes when it runs (`runtime`) and the strings that read
+# like paths but are no path of the repository (`not_paths`), which the check of the built tree leaves alone.
+runtime:
+- logs/
+- logs/*
+- evidence/store/*
+- evidence/store/
+- corpus/raw/*
+- corpus/raw/
+- corpus/inbox/*
+- corpus/inbox/
+- corpus/parsed/*
+- graphs/hazbrief-corpus/texts/*
+not_paths:
+- corpus/candidates/hazbrief.yaml
+- corpus/inbox
+- corpus/manifest.yaml
+- corpus/parsed
+- corpus/raw
+- corpus/text_records.json
+- corpus/vocab/*.yaml
+- deploy/ibm/local-mcp-toolkit/_stage/
+- deploy/ibm/local-mcp-toolkit/_toolkit.generated.yaml
+- docs/01_THEORY.md
+- docs/02_VALIDATION_REFERENCE.md
+- docs/03_VALIDATION_FIELD.md
+- docs/04_DEVELOPMENT.md
+- docs/KIT_BOUNDARY.md
+- docs/data-policy.md
+- docs/modelcontextprotocol-io/quickstart.mdx
+- docs/reference/server-json/generic-server-json.md
+- docs/reproduction.md
+- docs/so
+- docs/sour
+- docs/sources/cfr172_currency_check
+- eval/phoenix/agent.py
+- evidence/catalog.py
+- evidence/client.py
+- evidence/exchange_records.py
+- evidence/hb01b_09.r1/dangling_gate_hb01b_09.r1.json
+- evidence/hb134/rtm.md
+- evidence/hb25_pilot_cli310
+- evidence/labels.py
+- evidence/store
+- evidence/store.py
+- fixtures/evidence/appendix_seed
+- fixtures/evidence/slab_runs/b60b984b...json
+- fixtures/evidence/vsmoke_runs
+- fixtures/exchanges/nws/e7ee7c8d....json
+- fixtures/exchanges/tigerweb/bf84cbba...json
+- packs/build/RATIONALIZATION_DISAGREEMENTS.md
+- packs/build/adjudicated
+- packs/build/adjudicated/
+- packs/build/adjudicated/meta.json
+- packs/build/flag_mining/calls.jsonl
+- packs/build/join
+- packs/build/keyA
+- packs/build/keyA/
+- packs/build/keyA/guides.jsonl
+- packs/build/keyB
+- packs/build/keyB/pages.jsonl
+- packs/build/keyC
+- packs/build/keyC/
+- packs/cache/
+- packs/cache/materials_cache.json
+- packs/materials_cache.json
+- src/CGaussianPuff.cpp
+- src/everything
+- src/hazbrief/claim_verdicts.py
+- src/lib/SCIPUFFlib/PlotMgr/slice.f90
+- src/lib/SCIPUFFlib/SCIPUFF/
+rules: []

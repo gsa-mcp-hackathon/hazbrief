@@ -1,0 +1,15 @@
+>       assert got == want
+E       AssertionError: assert {'epa-slab-co...ne, 'active')} == {'epa-slab-co...tadata_only')}
+E         
+E         Differing items:
+E         {'epa-degadis-testcases': ('public-domain', 'container', 'metadata_only')} != {'epa-degadis-testcases': ('reference-only', 'reference-only', 'metadata_only')}
+E         {'epa-slab-code': ('public-domain', 'container', 'metadata_only')} != {'epa-slab-code': ('reference-only', 'reference-only', 'metadata_only')}
+E         {'epa-degadis-readme': ('public-domain', None, 'active')} != {'epa-degadis-readme': ('reference-only', 'reference-only', 'metadata_only')}
+E         {'epa-degadis-source': ('public-domain', 'container', 'metadata_only')} != {'epa-degadis-source': ('reference-only', 'reference-only', 'metadata_only')}
+E         Use -v to get more diff
+
+test_packs.py (a test held privately):398: AssertionError
+=========================== short test summary info ============================
+FAILED test_packs.py (a test held privately)::test_the_dense_gas_entries_are_reference_only_in_sources_yaml
+FAILED test_packs.py (a test held privately)::test_the_corpus_graph_serves_the_dense_gas_entries_reference_only
+2 failed, 68 deselected in 1.98s

@@ -1,0 +1,3 @@
+when_utc	request	url	status	redirect_to	body_first_line
+2026-11-21T07:54:43Z	without a key	https://api.census.gov/data/2020/dec/dhc?get=P1_001N&for=county:021&in=state:24	302	https://api.census.gov/data/missing_key.html	redirect page title: Missing Key
+2026-11-21T07:54:44Z	with the key from ~/.secrets/master.env	https://api.census.gov/data/2020/dec/dhc?get=P1_001N&for=county:021&in=state:24&key=<masked>	200		"[[""P1_001N"",""state"",""county""],"

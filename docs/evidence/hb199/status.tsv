@@ -1,0 +1,29 @@
+reading	tool	hazbrief	criterion	source	tool_value	tool_meets	hazbrief_value	hazbrief_meets	status
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	hazbrief	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	hazbrief	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	hazbrief	0.25 < MG < 4	simpson p. 9 line 256	1.733	yes	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	hazbrief	VG < 6.8	simpson p. 9 line 257	1.663	yes	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	hazbrief	|FB| <= 0.30	simpson p. 9 line 253	0.8221	no	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	hazbrief	NMSE <= 3	simpson p. 9 line 254	2.371	yes	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	hazbrief	row status (protocol section 5)						below
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	hazbrief	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	hazbrief	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	hazbrief	0.25 < MG < 4	simpson p. 9 line 256	2.129	yes	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	hazbrief	VG < 6.8	simpson p. 9 line 257	3.586	yes	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	hazbrief	|FB| <= 0.30	simpson p. 9 line 253	0.3442	no	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	hazbrief	NMSE <= 3	simpson p. 9 line 254	0.3467	yes	none	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	hazbrief	row status (protocol section 5)						below
+all six arcs	HPAC	hazbrief	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6667	yes	none	no	
+all six arcs	HPAC	hazbrief	FAC2 >= 0.50	simpson p. 9 line 258	0.6667	yes	none	no	
+all six arcs	HPAC	hazbrief	0.25 < MG < 4	simpson p. 9 line 256	1.51	yes	none	no	
+all six arcs	HPAC	hazbrief	VG < 6.8	simpson p. 9 line 257	1.548	yes	none	no	
+all six arcs	HPAC	hazbrief	|FB| <= 0.30	simpson p. 9 line 253	0.8212	no	none	no	
+all six arcs	HPAC	hazbrief	NMSE <= 3	simpson p. 9 line 254	2.839	yes	none	no	
+all six arcs	HPAC	hazbrief	row status (protocol section 5)						below
+all six arcs	ALOHA	hazbrief	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.5	no	none	no	
+all six arcs	ALOHA	hazbrief	FAC2 >= 0.50	simpson p. 9 line 258	0.5	yes	none	no	
+all six arcs	ALOHA	hazbrief	0.25 < MG < 4	simpson p. 9 line 256	2.673	yes	none	no	
+all six arcs	ALOHA	hazbrief	VG < 6.8	simpson p. 9 line 257	6.132	yes	none	no	
+all six arcs	ALOHA	hazbrief	|FB| <= 0.30	simpson p. 9 line 253	0.3446	no	none	no	
+all six arcs	ALOHA	hazbrief	NMSE <= 3	simpson p. 9 line 254	0.4158	yes	none	no	
+all six arcs	ALOHA	hazbrief	row status (protocol section 5)						below

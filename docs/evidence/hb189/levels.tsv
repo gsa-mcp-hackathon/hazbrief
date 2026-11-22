@@ -1,0 +1,40 @@
+brief	level	slab_reach_hb186	slab_reach_now	slab_stopped_by_now	time_bound_m	cloud_reach_now	planning_km2	cloud_km2	check_km2	residents_hb186	residents_now	residents_now_in_cloud	residents_now_in_slab_check_only	cut_by
+csx-point-of-rocks-night	AEGL-1	159,676 m	27,800 m	time bound	28,860 m	at least 40,305 m	557.089	557.089	0.0	at least 520,834	at least 100,429	100,429	0	the engine's domain
+csx-point-of-rocks-night	AEGL-2	73,334 m	27,800 m	time bound	28,860 m	at least 39,789 m	399.505	392.953	6.552	at least 233,641	at least 40,683	38,197	2,486	the time bound (the release hour's wind's travel in the horizon and 30 percent over) and the engine's domain
+csx-point-of-rocks-night	AEGL-3	19,978 m	20,037 m	closes	28,860 m	10,434 m	79.531	55.558	23.973	3,432	4,497	4,293	204	
+i495-wilson-bridge-night	AEGL-1	84,383 m	56,800 m	time bound	57,720 m	at least 34,823 m	389.042	288.813	100.229	at least 141,416	at least 152,166	147,010	5,156	the time bound (the release hour's wind's travel in the horizon and 30 percent over) and the engine's domain
+i495-wilson-bridge-night	AEGL-2	40,256 m	40,337 m	closes	57,720 m	25,529 m	163.882	129.996	33.886	at least 102,963	87,273	76,866	10,407	
+i495-wilson-bridge-night	AEGL-3	10,432 m	10,405 m	closes	57,720 m	6,184 m	18.543	15.238	3.305	8,248	9,527	7,120	2,407	
+i81-md-pa-line-night	AEGL-1	83,774 m	57,500 m	time bound	57,720 m	at least 32,209 m	373.292	273.248	100.044	at least 92,484	at least 92,755	85,134	7,621	the time bound (the release hour's wind's travel in the horizon and 30 percent over) and the engine's domain
+i81-md-pa-line-night	AEGL-2	40,001 m	39,976 m	closes	57,720 m	25,615 m	153.129	130.957	22.172	at least 59,353	59,208	58,298	910	
+i81-md-pa-line-night	AEGL-3	10,353 m	10,311 m	closes	57,720 m	6,591 m	18.612	15.618	2.994	9,775	9,888	6,823	3,065	
+i83-md-pa-line-night	AEGL-1	83,833 m	71,300 m	time bound	72,540 m	at least 32,045 m	360.239	228.002	132.237	at least 116,267	at least 115,228	18,999	96,229	the time bound (the release hour's wind's travel in the horizon and 30 percent over) and the engine's domain
+i83-md-pa-line-night	AEGL-2	39,598 m	39,527 m	closes	72,540 m	at least 30,479 m	145.997	131.075	14.923	at least 17,280	at least 13,509	9,276	4,233	the engine's domain
+i83-md-pa-line-night	AEGL-3	9,626 m	9,667 m	closes	72,540 m	7,877 m	16.426	15.624	0.802	1,154	1,156	1,120	36	
+csx-point-of-rocks-day	AEGL-1	by day: no planning area	13,161 m	closes	86,580 m	at least 29,870 m	78.971	78.971	0.0		at least 21,244	21,244	0	the engine's domain
+csx-point-of-rocks-day	AEGL-2	by day: no planning area	5,513 m	closes	86,580 m	6,775 m	11.044	11.044	0.0		671	671	0	
+csx-point-of-rocks-day	AEGL-3	by day: no planning area	1,480 m	closes	86,580 m	2,450 m	2.221	2.221	0.0		125	125	0	
+i495-wilson-bridge-day	AEGL-1	by day: no planning area	9,508 m	closes	115,440 m	10,989 m	19.63	19.629	0.001		7,979	7,979	0	
+i495-wilson-bridge-day	AEGL-2	by day: no planning area	4,105 m	closes	115,440 m	6,572 m	8.332	8.332	0.0		1,329	1,329	0	
+i495-wilson-bridge-day	AEGL-3	by day: no planning area	1,099 m	closes	115,440 m	2,122 m	1.445	1.445	0.0		200	200	0	
+i81-md-pa-line-day	AEGL-1	by day: no planning area	5,974 m	closes	86,580 m	8,697 m	17.22	17.22	0.0		12,401	12,401	0	
+i81-md-pa-line-day	AEGL-2	by day: no planning area	2,666 m	closes	86,580 m	4,990 m	6.946	6.946	0.0		2,286	2,286	0	
+i81-md-pa-line-day	AEGL-3	by day: no planning area	737 m	closes	86,580 m	1,798 m	1.487	1.487	0.0		162	162	0	
+i83-md-pa-line-day	AEGL-1	by day: no planning area	9,451 m	closes	115,440 m	11,076 m	19.355	19.355	0.0		1,932	1,932	0	
+i83-md-pa-line-day	AEGL-2	by day: no planning area	4,077 m	closes	115,440 m	6,560 m	7.78	7.78	0.0		474	474	0	
+i83-md-pa-line-day	AEGL-3	by day: no planning area	1,092 m	closes	115,440 m	2,200 m	1.494	1.494	0.0		87	87	0	
+csx-point-of-rocks-crossing	AEGL-1	by day: no planning area	13,161 m	closes	86,580 m	at least 29,890 m	79.065	79.065	0.0		at least 20,720	20,720	0	the engine's domain
+csx-point-of-rocks-crossing	AEGL-2	by day: no planning area	5,513 m	closes	86,580 m	6,719 m	11.017	11.017	0.0		594	594	0	
+csx-point-of-rocks-crossing	AEGL-3	by day: no planning area	1,480 m	closes	86,580 m	2,449 m	2.231	2.231	0.0		64	64	0	
+i495-wilson-bridge-address	AEGL-1	by day: no planning area	9,508 m	closes	115,440 m	11,007 m	19.496	19.493	0.003		14,403	14,397	6	
+i495-wilson-bridge-address	AEGL-2	by day: no planning area	4,105 m	closes	115,440 m	6,506 m	8.027	8.027	0.0		4,227	4,227	0	
+i495-wilson-bridge-address	AEGL-3	by day: no planning area	1,099 m	closes	115,440 m	2,122 m	1.445	1.445	0.0		686	686	0	
+i495-wilson-bridge-cross-streets	AEGL-1	by day: no planning area	9,508 m	closes	115,440 m	11,019 m	19.562	19.56	0.001		16,127	16,125	2	
+i495-wilson-bridge-cross-streets	AEGL-2	by day: no planning area	4,105 m	closes	115,440 m	6,504 m	7.93	7.93	0.0		5,055	5,055	0	
+i495-wilson-bridge-cross-streets	AEGL-3	by day: no planning area	1,099 m	closes	115,440 m	2,122 m	1.445	1.445	0.0		1,176	1,176	0	
+i81-md-pa-line-milepost	AEGL-1	by day: no planning area	5,974 m	closes	86,580 m	8,793 m	17.313	17.313	0.0		11,486	11,486	0	
+i81-md-pa-line-milepost	AEGL-2	by day: no planning area	2,666 m	closes	86,580 m	4,922 m	6.963	6.963	0.0		1,979	1,979	0	
+i81-md-pa-line-milepost	AEGL-3	by day: no planning area	737 m	closes	86,580 m	1,805 m	1.479	1.479	0.0		246	246	0	
+un1005-i81	AEGL-1	by day: no planning area	1,268 m	closes	86,580 m	2,745 m	2.931	2.931	0.0		679	679	0	
+un1005-i81	AEGL-2	by day: no planning area	515 m	closes	86,580 m	1,432 m	0.927	0.927	0.0		137	137	0	
+un1005-i81	AEGL-3	by day: no planning area	206 m	closes	86,580 m	567 m	0.2	0.2	0.0		99	99	0	

@@ -1,0 +1,75 @@
+# HB-147: the operator's acquisition queue page. Read by scripts/acquisition_queue.py, which renders every
+# corpus/sources.yaml row with `status: awaiting_operator` (DN-002 ADDENDUM-00 rung 2: a hand fetch into the inbox) as
+# one self-contained HTML page the operator opens in a browser and clicks through. tests/conftest.py renders it at the
+# start of every pytest session, so the gate (`the Seldon configuration (held privately)` dispatch.gate_command) regenerates it; register_inbox.py
+# renders it again after a registration. Every path is relative to the repository root.
+
+# Inputs. The queue is the manifest: a row is on the page because of its `status`, nothing else.
+sources: corpus/sources.yaml
+fetch_log: corpus/fetch_log.jsonl
+operator_downloads: corpus/operator_downloads.jsonl
+# The corpus graph's intake (tracked; scripts/ingest_corpus.py writes it). A registered row stays on the page, in the
+# received table, until an ingest names it here.
+intake_candidates: the corpus graph (held privately)
+# Gitignored and local to a checkout. A checkout without it (a dispatched worktree) renders an empty inbox.
+inbox: corpus/inbox
+# Where a row's `requested_by` task id resolves to its task file (`YYYY-MM-DD_<id>_<slug>.md`), for the date the page
+# sorts by and the link it prints.
+tasks_dir: cc_tasks
+
+# Output. Tracked, and byte-identical for identical inputs: no clock, no host path. The page computes the inbox's
+# absolute path in the browser from its own file:// location, for the copy buttons.
+output: docs/evidence/acquisition/queue.html
+title: Acquisition queue
+
+# The `status` values (corpus/sources.yaml header). `held` is the one value a script writes there:
+# scripts/register_inbox.py, on a successful registration. HB-150 added `closed`: a row the operator will not fetch,
+# closed by hand under one of the decisions below, leaves the page; it carries `closed_under` (a key of
+# closed_under) and `closed_note` (what replaces it, or what was dropped).
+status:
+  awaiting: awaiting_operator
+  held: held
+  closed: closed
+
+# HB-150: the operator's acquisition decisions of 2026-11-09 (Desktop chat 22:42 EST, Issue 7a4dd74a; registered by
+# HB-150 Part A item 1). A closed row names the one it is closed under.
+closed_under:
+  unobtainable: >-
+    Issue 7a4dd74a decision (1): no money is paid for a paper or a standard; a paywalled or unobtainable work never
+    blocks a task.
+  replaced: >-
+    Issue 7a4dd74a decision (2): the work cannot be had free; a free held source replaces it, or the claim resting on
+    it is labelled or dropped.
+  low_value: >-
+    Issue 7a4dd74a decision (4): hand fetches are the last resort and are not queued for low-value works; bulk and
+    programmatic routes come first.
+
+# The commands the page prints, each with a copy button; run from the repository root.
+commands:
+  register: uv run python scripts/register_inbox.py --queue
+  render: uv run python scripts/acquisition_queue.py
+  commit: >-
+    git add corpus/sources.yaml corpus/operator_downloads.jsonl docs/evidence/acquisition/queue.html &&
+    git commit -m "register: the operator's inbox, from the acquisition queue (HB-147)"
+
+# The search links: a query URL built from the row's title (and publisher, for the web search), no API. `{query}` is
+# replaced by the URL-encoded query text.
+search:
+  - label: Google
+    url: https://www.google.com/search?q={query}
+    with_publisher: true
+  - label: Scholar
+    url: https://scholar.google.com/scholar?q={query}
+    with_publisher: false
+
+# How the operator saves each format, printed beside the drop path. The keys are register_inbox.EXTENSIONS's formats;
+# a queued row whose format is not one of them cannot be registered and the renderer refuses it.
+save_as:
+  pdf: the PDF as the site serves it
+  md: the page clipped to Markdown, its front matter carrying the page's source URL (the HB-01e clipping)
+  csv: the CSV as the site serves it
+  txt: the text export as the site writes it
+  xlsx: the workbook as the site serves it
+  xls: the workbook as the site serves it
+  json: the JSON document as the site serves it
+  xml: the XML document as the site serves it

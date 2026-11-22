@@ -1,0 +1,16 @@
+section	model	against	label	n_arcs	within_factor_2	FAC2	MG	MG_low_95	MG_high_95	VG	ratio_of_MG	ratio_low_95	ratio_high_95	limits_exclude_1
+model	HPAC_complex		HPAC, complex source (17-model Table 5; Simpson Table 4)	5	3 of 5	0.60	1.73	0.92	3.26	1.66				
+model	HPAC_simple		HPAC, simple source (Simpson Table 3)	5	4 of 5	0.80	1.63	0.92	2.86	1.48				
+model	ALOHA		ALOHA (17-model Table 5)	5	3 of 5	0.60	2.13	0.65	6.98	3.59				
+model	P_scichem		hazbrief, SCICHEM (the route's run)	5	1 of 5	0.20	2.88	1.58	5.27	3.69				
+model	P_slab_rh20		hazbrief, SLAB, RH 20 percent (the route's run)	5	4 of 5	0.80	1.43	0.83	2.47	1.32				
+model	P_slab_rh80		hazbrief, SLAB, RH 80 percent (the route's run)	5	4 of 5	0.80	1.41	0.81	2.47	1.32				
+difference	P_scichem	HPAC_complex	hazbrief, SCICHEM (the route's run) against HPAC, complex source (17-model Table 5; Simpson Table 4)	5							1.66	0.87	3.16	no
+difference	P_scichem	HPAC_simple	hazbrief, SCICHEM (the route's run) against HPAC, simple source (Simpson Table 3)	5							1.77	0.91	3.47	no
+difference	P_scichem	ALOHA	hazbrief, SCICHEM (the route's run) against ALOHA (17-model Table 5)	5							1.35	0.62	2.94	no
+difference	P_slab_rh20	HPAC_complex	hazbrief, SLAB, RH 20 percent (the route's run) against HPAC, complex source (17-model Table 5; Simpson Table 4)	5							0.83	0.44	1.56	no
+difference	P_slab_rh20	HPAC_simple	hazbrief, SLAB, RH 20 percent (the route's run) against HPAC, simple source (Simpson Table 3)	5							0.88	0.49	1.58	no
+difference	P_slab_rh20	ALOHA	hazbrief, SLAB, RH 20 percent (the route's run) against ALOHA (17-model Table 5)	5							0.67	0.31	1.46	no
+difference	P_slab_rh80	HPAC_complex	hazbrief, SLAB, RH 80 percent (the route's run) against HPAC, complex source (17-model Table 5; Simpson Table 4)	5							0.82	0.42	1.57	no
+difference	P_slab_rh80	HPAC_simple	hazbrief, SLAB, RH 80 percent (the route's run) against HPAC, simple source (Simpson Table 3)	5							0.87	0.47	1.59	no
+difference	P_slab_rh80	ALOHA	hazbrief, SLAB, RH 80 percent (the route's run) against ALOHA (17-model Table 5)	5							0.66	0.31	1.41	no

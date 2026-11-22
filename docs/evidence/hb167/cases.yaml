@@ -1,0 +1,44 @@
+# HB-167: the two briefs the engine is run for, and the comparison sensors (the HB-167 evidence (held privately)).
+# Every input is a committed record: the brief's own SLAB deck (fixtures/evidence/slab_runs/), the held NWS gridpoint
+# forecast the brief read (evidence/seed/, LWX/77,86), the rendered brief's map data (its roadblocks, cordons and points)
+# and the materials pack's AEGL cells at the brief's averaging time.
+cases:
+  csx-day:
+    brief: docs/briefs/csx-point-of-rocks-day/brief.html
+    scenario: docs/briefs/csx-point-of-rocks-day/scenario.json
+    slab_deck_sha256: b60b984b645a1a0ad450c98f6f4523e6d263646510cfecb6fc843b76dac68c23
+    forecast: evidence/seed/3f/3f37a999ab35b5f26cd20aa6fce6ff912e0efd69b652d8ed34ee2bb88ea04184.json
+  csx-night:
+    brief: docs/briefs/csx-point-of-rocks-night/brief.html
+    scenario: docs/briefs/csx-point-of-rocks-night/scenario.json
+    slab_deck_sha256: 7542c0ba51cc333932449c76a90d81739aaa2d799661e8d72054b6237733884d
+    forecast: evidence/seed/3f/3f37a999ab35b5f26cd20aa6fce6ff912e0efd69b652d8ed34ee2bb88ea04184.json
+
+# The material: chlorine, the brief's DN-001 class tih_gas, averaging time 60 minutes
+# (orchestrator.yaml dense_gas.classes.tih_gas.averaging_time_s 3600).
+material:
+  un: "1017"
+  scichem_name: CL2
+  averaging_minutes: 60
+
+# The comparison sensors (Part A item 2): crosswind lines and columns on the release hour's wind.
+lines:
+  distances_m: [50, 100, 150, 200, 300, 400, 500, 700, 1000, 1500, 2000, 3000, 4000, 5000, 7000, 10000, 13000, 16000, 20000, 25000]
+  points: 41
+  min_half_width_m: 100.0
+  half_width_frac: 0.5
+  height_m: 0.0
+  column_heights_m: [0.0, 1.5, 5.0, 10.0, 20.0, 40.0, 80.0, 160.0, 320.0, 640.0]
+  # The distances the task names for the cloud's width and depth.
+  report_m: [100, 500, 1000, 5000]
+
+# The seeded turn of HB-165 (a test of the engine, not a forecast): +90 degrees from the release's second hour.
+turn: {deg: 90.0, after_h: 1}
+
+# Input sensitivity (Part A item 3): each run changes one input from the record's, over the range its source states.
+sensitivity:
+  albedo: {values: [0.12, 0.20], source: "user's guide Table 21, autumn: 0.12 (forests) to 0.20 (grassland), without desert"}
+  bowen: {values: [0.1, 1.0, 2.0], source: "user's guide Table 20, autumn: 0.1 (water, swamp) to 2.0 (urban), without desert"}
+  z0_m: {values: [0.01, 0.1, 0.5], source: "user's guide Table 23 (Saucier 1987): 0.01 grassland, cropland; 0.1 villages, forest clearings; 0.5 mixed forest, towns"}
+  boundary_layer: {values: ["OPER+ZI"], source: "the forecast's mixingHeight written as ZI with BL_TYPE OPER (user's guide B.6), against the engine's own calculation (CALC)"}
+  large_scale: {values: ["INPUT"], source: "ENSM_TYPE INPUT at the user's guide defaults (UU_ENSM 0.25 m2/s2, SL_ENSM 1e5 m): how the probability changes when wind variability is added"}

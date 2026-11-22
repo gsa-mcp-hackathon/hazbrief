@@ -1,0 +1,122 @@
+brief	place	names	distance_m	inside_any_time_area	measured_tier	peak_ppm
+csx-point-of-rocks-night	dbdb45614c81	Jeffery Rd	37734.9	False	AEGL-2	3.918
+csx-point-of-rocks-night	ea333a0026db	Running Brook Dr	34132.1	False	AEGL-2	2.735
+csx-point-of-rocks-night	d4939b785655	Chesapeake Dr	36813.4	False	AEGL-2	4.06
+csx-point-of-rocks-night	390774519ec1	Springvale Rd; State Rte 674	35103.9	False	AEGL-2	3.519
+csx-point-of-rocks-night	9dd3d57705a0	State Rte 681; Walker Rd	35839.0	False	AEGL-2	3.866
+csx-point-of-rocks-night	127728df5e67	River Bend Rd; State Rte 603	37045.6	False	AEGL-2	4.057
+csx-point-of-rocks-night	752ea0dce787	unnamed	37476.0	False	AEGL-2	3.958
+csx-point-of-rocks-night	3d4d30e234da	Club View Dr	36385.0	False	AEGL-2	4.065
+csx-point-of-rocks-night	46f6ecb75bdc	Utterback Store Rd	34223.4	False	AEGL-2	3.053
+csx-point-of-rocks-night	93099bffabf5	Burbank Dr; Corral Dr	39737.3	False	AEGL-2	2.669
+csx-point-of-rocks-night	fd84cc02926d	Crown Meadow Dr; Rich Meadow Dr	33270.8	False	AEGL-2	2.271
+csx-point-of-rocks-night	5e6218a6b359	Bit and Spur Ln	39964.1	False	AEGL-2	2.5
+csx-point-of-rocks-night	8ef2b6a2d0d4	Interpretive Center Dr	37716.7	False	AEGL-2	3.836
+csx-point-of-rocks-night	4e7d02c5e0be	Martingale Ct	39333.2	False	AEGL-2	2.896
+csx-point-of-rocks-night	99c6c4859429	Martingale Ct	39191.5	False	AEGL-2	2.978
+csx-point-of-rocks-night	4d6fb1b8259a	Eaton Ct	37351.2	False	AEGL-2	3.953
+csx-point-of-rocks-night	22f4429b13c8	Potomac Hills St	37966.6	False	AEGL-2	3.696
+csx-point-of-rocks-night	8f63f989249d	Forest Oak Ln	34013.9	False	AEGL-2	3.076
+csx-point-of-rocks-night	7dea541b3862	Martin Redman Dr	34503.3	False	AEGL-2	3.469
+csx-point-of-rocks-night	098e7588a744	unnamed	5893.5	False	AEGL-1	0.5474
+i495-wilson-bridge-day	9c677105fb0d	Villamay Blvd	4107.3	False	AEGL-1	0.8111
+i495-wilson-bridge-night	3b9ba53dd597	Kentucky Ave	39607.7	False	AEGL-1	0.5241
+i495-wilson-bridge-night	f2ff2e9cfff1	Kentucky Ave	38623.0	False	AEGL-1	0.5436
+i495-wilson-bridge-night	79753a4f727e	Kentucky Ave	38529.8	False	AEGL-1	0.5492
+i495-wilson-bridge-night	f1aa1fcedacc	Kentucky Ave	37707.7	False	AEGL-1	0.6272
+i495-wilson-bridge-night	d9093ad5de0f	Kentucky Ave; Kentucky Home Pl	37577.7	False	AEGL-1	0.6293
+i495-wilson-bridge-night	3117beb43daf	Autumn Pl	37542.0	False	AEGL-1	0.6264
+i495-wilson-bridge-night	1ad5d6bdb8ff	Charles St; State Hwy 6	37349.6	False	AEGL-1	0.8036
+i495-wilson-bridge-night	b3535e644653	James Carroll Pl	36868.5	False	AEGL-1	0.6953
+i495-wilson-bridge-night	a8f0d79cffe2	Lkr Pl	36244.7	False	AEGL-1	0.5031
+i495-wilson-bridge-night	badd33def74b	Wheatley Rd; unnamed	36166.4	False	AEGL-1	0.8109
+i495-wilson-bridge-night	f2541d907545	unnamed	35077.5	False	AEGL-1	1.029
+i495-wilson-bridge-night	e976ddbeedf8	Doctor Edelen Rd; Dr Edelen Rd	34355.9	False	AEGL-1	0.9725
+i495-wilson-bridge-night	16b04f4c54c6	Welch Farm Rd	33505.7	False	AEGL-1	1.232
+i495-wilson-bridge-night	b8eab6e3e6d3	Englewood Dr	30950.1	False	AEGL-1	1.552
+i495-wilson-bridge-night	88da632c03e3	Laplata Rd; State Hwy 488	29333.2	False	AEGL-1	0.6497
+i495-wilson-bridge-night	a15a274217fe	Mason Hill Dr	4861.6	False	AEGL-1	0.5576
+i495-wilson-bridge-night	33352417798c	Alcoa Dr	4275.8	False	AEGL-1	0.61
+i495-wilson-bridge-night	7d3b4c293225	Prentice Ct	4169.3	False	AEGL-1	0.624
+i495-wilson-bridge-night	4800aae4b9af	Jefferson St	1091.4	True	below the lowest level	0.4825
+i495-wilson-bridge-night	a070a8b399f6	Franklin St; S Saint Asaph St	1032.4	True	below the lowest level	0.4701
+i81-md-pa-line-day	fca32c19c4fa	Reid Rd	284.2	False	AEGL-1	0.5162
+i81-md-pa-line-milepost	5697cf4c3c2f	I- 81; Maryland Veterans Memorial Hwy	1528.9	False	AEGL-1	0.7164
+i81-md-pa-line-night	b71aa64cfa1c	Sumantown Rd	38654.8	False	AEGL-1	1.361
+i81-md-pa-line-night	d01a3a74028a	Sumantown Rd	38879.3	False	AEGL-1	1.168
+i81-md-pa-line-night	f5b62169449f	unnamed	38390.9	False	AEGL-1	1.372
+i81-md-pa-line-night	b2e88e124171	Harley Rd; unnamed	37408.5	False	AEGL-1	1.458
+i81-md-pa-line-night	b95363f17bd3	Bennies Hill Rd	37196.9	False	AEGL-1	1.326
+i81-md-pa-line-night	768a12a5054a	Burkittsville Middletown Rd; Burkittsville Rd; Schneider Dr; State Hwy 17	36493.6	False	AEGL-1	1.558
+i81-md-pa-line-night	5d8a5e685cf5	Picnic Woods Rd	35395.9	False	AEGL-1	1.635
+i81-md-pa-line-night	9762419bc69d	Burkittsville Middletown Rd; Burkittsville Rd; State Hwy 17; unnamed	35998.4	False	AEGL-1	1.362
+i81-md-pa-line-night	d86d458b77f5	unnamed	35343.1	False	AEGL-1	1.63
+i81-md-pa-line-night	fec7610f7e9d	unnamed	35204.1	False	AEGL-1	1.637
+i81-md-pa-line-night	9c5c2531fca6	unnamed	35037.2	False	AEGL-1	1.647
+i81-md-pa-line-night	2b9e6050e27b	Quebec School Rd; unnamed	34222.1	False	AEGL-1	1.703
+i81-md-pa-line-night	9895a37466a6	Picnic Woods Rd	34518.1	False	AEGL-1	1.529
+i81-md-pa-line-night	284c5d110579	Marker Rd	33650.2	False	AEGL-1	1.752
+i81-md-pa-line-night	53de5bd03d07	Bidle Rd	34255.4	False	AEGL-1	1.491
+i81-md-pa-line-night	1c74a02a4ed7	unnamed	33821.5	False	AEGL-1	1.515
+i81-md-pa-line-night	2db4bc1d71ab	unnamed	33202.3	False	AEGL-1	1.517
+i81-md-pa-line-night	b81982d63504	Sines Ln	32140.8	False	AEGL-1	1.9
+i81-md-pa-line-night	7b4da8007c18	Marker Rd	32506.3	False	AEGL-1	1.58
+i81-md-pa-line-night	6f9f042dff3e	Maugansville Rd; Mason Dixon Rd; State Rte 163	1422.3	False	AEGL-1	0.5753
+i83-md-pa-line-day	7ca7cc59997f	Bee Tree Rd	3668.4	False	AEGL-1	0.6371
+i83-md-pa-line-day	f5fc48cc22cd	Main St; State Rte 3001; Susquehanna Trl S	148.8	False	AEGL-1	0.6436
+i83-md-pa-line-night	acd5a93c0091	Gradien Dr	39489.2	False	AEGL-1	1.63
+i83-md-pa-line-night	0ab1dcc36a75	Walther Blvd	39384.0	False	AEGL-1	1.624
+i83-md-pa-line-night	8c29721a3892	Ramort Dr	39368.9	False	AEGL-1	1.642
+i83-md-pa-line-night	c5abc8da24bc	Dunfield Rd	39300.4	False	AEGL-1	1.645
+i83-md-pa-line-night	49c4c52609bd	Walther Blvd	39197.2	False	AEGL-1	1.649
+i83-md-pa-line-night	af826e486415	Beyda Ct	39129.0	False	AEGL-1	1.656
+i83-md-pa-line-night	99cd193e3049	unnamed	38993.2	False	AEGL-1	1.656
+i83-md-pa-line-night	80100225013f	unnamed	38985.4	False	AEGL-1	1.662
+i83-md-pa-line-night	2335a116ab29	unnamed	38974.7	False	AEGL-1	1.663
+i83-md-pa-line-night	28e8625086a4	unnamed	38948.7	False	AEGL-1	1.664
+i83-md-pa-line-night	19da1412daf7	unnamed	38913.2	False	AEGL-1	1.666
+i83-md-pa-line-night	d7c8e2895c78	unnamed	38734.5	False	AEGL-1	1.673
+i83-md-pa-line-night	75ad831d609e	unnamed	38613.7	False	AEGL-1	1.661
+i83-md-pa-line-night	deea99855435	E Joppa Rd	38513.3	False	AEGL-1	1.67
+i83-md-pa-line-night	f330c79b58f0	E Joppa Rd	38684.5	False	AEGL-1	1.664
+i83-md-pa-line-night	d9bf37caa0cf	Magledt Rd	38425.0	False	AEGL-1	1.677
+i83-md-pa-line-night	f761f3644adc	unnamed	38564.9	False	AEGL-1	1.677
+i83-md-pa-line-night	34dc7a02ff36	Britinay Ln	38413.0	False	AEGL-1	1.684
+i83-md-pa-line-night	de7c27c0b777	Summit Ave	38120.0	False	AEGL-1	1.702
+i83-md-pa-line-night	01df19f00566	Britinay Ln; Magledt Rd	38131.2	False	AEGL-1	1.684
+i83-md-pa-line-night	7f4f69650864	Finney Dr	37624.3	False	AEGL-1	1.73
+i83-md-pa-line-night	c0bce5f5d26c	Summit Ave	37562.2	False	AEGL-1	1.732
+i83-md-pa-line-night	0dd237d04d30	Harford Rd; State Hwy 147	37443.7	False	AEGL-1	1.736
+i83-md-pa-line-night	011ddbf0fe4d	Bender Ridge Ct	37329.8	False	AEGL-1	1.759
+i83-md-pa-line-night	813464c328df	Nearbrook Ln	37426.2	False	AEGL-1	1.728
+i83-md-pa-line-night	e04d71679c8f	Maidbrook Rd; Northwind Rd	37378.2	False	AEGL-1	1.742
+i83-md-pa-line-night	20f7685e2a91	Montreal Ave	36986.1	False	AEGL-1	1.788
+i83-md-pa-line-night	92a1839e68bf	N Branch Ln	37131.7	False	AEGL-1	1.771
+i83-md-pa-line-night	08560423f289	Harwind Ter	37108.8	False	AEGL-1	1.776
+i83-md-pa-line-night	82ed175583e0	Ontario Ave	36740.9	False	AEGL-1	1.791
+i83-md-pa-line-night	05aa28893143	Northford Way	37004.6	False	AEGL-1	1.785
+i83-md-pa-line-night	afeb5149b873	Erie Ave; Superior Ave	36550.3	False	AEGL-1	1.8
+i83-md-pa-line-night	62b4cd1ff407	Knoll Acres Dr	36756.0	False	AEGL-1	1.802
+i83-md-pa-line-night	66b56ca8e6eb	Old Harford Rd	36342.9	False	AEGL-1	1.799
+i83-md-pa-line-night	f3fa7f422732	Harford Rd; State Hwy 147	36598.5	False	AEGL-1	1.801
+i83-md-pa-line-night	b8dd8a448319	Cub Hill Rd	35750.1	False	AEGL-1	1.822
+i83-md-pa-line-night	84918e6011a8	Powder Horn Ln; Powderhorn Ln	35609.6	False	AEGL-1	1.81
+i83-md-pa-line-night	7bbd5872ac9e	Buckhorn Rd	35566.5	False	AEGL-1	1.826
+i83-md-pa-line-night	d4326556d8c6	unnamed	35748.8	False	AEGL-1	1.815
+i83-md-pa-line-night	dfa261eb8061	Glen Arm Rd; Gunpowder Rd	34603.2	False	AEGL-1	1.829
+i83-md-pa-line-night	3ccc2b6335d8	Old Carriage Rd	34208.5	False	AEGL-1	1.806
+i83-md-pa-line-night	ec43d5adb52c	Running Fox Rd	33568.0	False	AEGL-1	1.94
+i83-md-pa-line-night	9e95932e39be	Glen Arm Rd	33593.6	False	AEGL-1	1.896
+i83-md-pa-line-night	824043db3c0b	Manor Springs Ct	32672.8	False	AEGL-2	2.071
+i83-md-pa-line-night	060d692cd1bd	Loch Raven Dr	31477.8	False	AEGL-2	2.109
+i83-md-pa-line-night	3cf4d8a8758d	Meadowcliff Rd	32201.4	False	AEGL-2	2.084
+i83-md-pa-line-night	9b34ed164bc5	unnamed	31874.4	False	AEGL-2	2.153
+i83-md-pa-line-night	f9f8b6353163	unnamed	31754.8	False	AEGL-2	2.149
+i83-md-pa-line-night	3284d41f61f8	unnamed	31699.2	False	AEGL-2	2.162
+i83-md-pa-line-night	d745f23f62f6	Manorview Rd	31240.8	False	AEGL-2	2.158
+i83-md-pa-line-night	0bb4274d4704	Manor Rd; unnamed	31031.0	False	AEGL-2	2.165
+i83-md-pa-line-night	d0a51bc5a0b6	unnamed	30773.3	False	AEGL-2	2.144
+i83-md-pa-line-night	9eb81cd4f4f6	Graystone Rd	8327.6	False	AEGL-1	0.5885
+i83-md-pa-line-night	14482602b8d9	Old York Rd; State Hwy 439	6684.9	False	AEGL-1	0.7021
+i83-md-pa-line-night	e8b52b31ebe1	Old York Rd; State Hwy 439	6588.0	False	AEGL-1	0.6182
+i83-md-pa-line-night	2a5a75f63233	unnamed	6137.8	False	AEGL-1	0.5395

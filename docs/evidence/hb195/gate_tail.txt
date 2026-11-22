@@ -1,0 +1,9 @@
+7920 passed, 12 skipped, 97 deselected, 17 xfailed, 2 warnings in 3916.11s (1:05:16)
+PYTEST_PARALLEL_EXIT=0
+85 passed, 1886 deselected in 919.00s (0:15:18)
+PYTEST_LOAD_SENSITIVE_EXIT=0
+All checks passed!
+RUFF_EXIT=0
+1001 files already formatted
+FORMAT_EXIT=0
+EXIT 0

@@ -1,0 +1,9 @@
+regime	config	statistic	n	trials	mg (observed over predicted, geometric)	mg_low95	mg_high95	vg	fac2	fac3	arcs_predicted_below_observed
+daytime	mol	expmax	11	DT1 DT2 DT3 GF1 GF2 GF3	2.01943	1.46342	2.7867	2.05294	0.363636	0.727273	9
+daytime	mol	mean	11	DT1 DT2 DT3 GF1 GF2 GF3	3.17464	2.40118	4.19724	4.81772	0.181818	0.363636	11
+daytime	shipped	expmax	11	DT1 DT2 DT3 GF1 GF2 GF3	2.66391	1.97895	3.58596	3.42625	0.272727	0.545455	11
+daytime	shipped	mean	11	DT1 DT2 DT3 GF1 GF2 GF3	4.32776	3.2774	5.71473	13.9548	0.181818	0.272727	11
+stable	mol	expmax	8	DT4 TC45 TC47	1.80636	1.46864	2.22176	1.61109	0.5	1	7
+stable	mol	mean	8	DT4 TC45 TC47	3.51249	2.91021	4.23943	5.31636	0.125	0.25	8
+stable	shipped	expmax	8	DT4 TC45 TC47	1.79822	1.41946	2.27805	1.62752	0.375	1	7
+stable	shipped	mean	8	DT4 TC45 TC47	3.5032	2.87361	4.27073	5.28586	0.125	0.25	8

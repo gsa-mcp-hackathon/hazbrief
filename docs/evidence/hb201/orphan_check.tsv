@@ -1,0 +1,4 @@
+run	bound_s	seconds	outcome	survivors_after_s	survivors	survivor_kinds	orphans
+1	1	1.0	bound expired; subprocess.run killed the process it started	3	0		0
+2	1	1.0	bound expired; subprocess.run killed the process it started	3	0		0
+3	1	1.2	bound expired; subprocess.run killed the process it started	3	0		0

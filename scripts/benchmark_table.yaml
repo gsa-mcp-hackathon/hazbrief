@@ -1,0 +1,109 @@
+# HB-214 (the operator, 2026-11-20 19:19 EST: "a general table of all the tests and the result in a clean tabular
+# format without a shit ton of words ... a note section for like more detail"; ADDENDUM-01, 21:49 EST: the result
+# column is a question with a yes or no answer, and the table is introduced by its definitions). The words of the one
+# benchmark table, read by scripts/benchmark_table.py. Every number in the table is read from
+# docs/evidence/hb209/trial7_intervals.tsv through scripts/benchmark_state.py; none is typed here.
+
+caption: "The benchmark table: every test of hazbrief against a published result"
+definitions_heading: "Definitions: what the benchmark table's rows, columns and names mean"
+notes_heading: "Notes"
+
+# ADDENDUM-01 item 2: the definitions come before the table, one line each, plain words: what a benchmark row is (and
+# BENCH-0), each column in the table's order, then the names in the Run column
+definitions:
+  - term: "Benchmark row (BENCH-n)"
+    text: "one test of hazbrief against a published result. BENCH-0 is the requirement the others serve: as a minimum, hazbrief does as well as each accepted tool; as its objective, better (its state is note 5)."
+columns:
+  - name: "Test"
+    key: test
+    text: "the benchmark row's id and a plain name for it."
+  - name: "Run"
+    key: run
+    text: "the model run being compared (the names are below); empty where no run is held."
+  - name: "Compared with"
+    key: against
+    text: "the trial's measurements, or a tool's published run of the same trial (why these tools: note 3)."
+  - name: "Arcs (n)"
+    key: arcs
+    text: "how many sampling arcs, at fixed distances from the release, are compared; each arc gives its maximum concentration."
+  - name: "Ratio"
+    key: ratio
+    text: "against the measurements, the geometric mean of measured over predicted concentration (MG); against a tool, the run's MG divided by the tool's. 1 means no difference; above 1 means the run's concentrations are lower."
+  - name: "95 percent limits"
+    key: limits
+    text: "the range the ratio could plausibly be in, at the 95 percent confidence level (the method: note 2)."
+  - name: "Within a factor of two (k of n)"
+    key: fac2
+    text: "how many arcs' predicted maximum is within a factor of two of the measured one; a count, not a test."
+  - name: "Statistically different?"
+    key: result
+    text: "Yes when the 95 percent limits leave out 1, with below or above for the run's concentrations; No when they include 1; Not yet tested where no run is held."
+  - name: "Note"
+    key: note
+    text: "the numbers of the notes below the table that bear on the row."
+names:
+  - term: "SCICHEM"
+    text: "hazbrief's run of SCICHEM, the puff model that draws a dense release's cloud on the brief."
+  - term: "SLAB RH 20, SLAB RH 80"
+    text: "hazbrief's run of SLAB, the dense-gas model (Lawrence Livermore National Laboratory, 1990), at 20 or 80 percent relative humidity."
+  - term: "HPAC complex, HPAC simple"
+    text: "HPAC's two published runs of the trial: with a complex source (the 17-model comparison) and a simple jet-only source (Simpson et al. 2020)."
+  - term: "ALOHA"
+    text: "ALOHA's (Areal Locations of Hazardous Atmospheres) published run of the trial in the 17-model comparison."
+
+# the Run column's name for each run of trial7_intervals.tsv
+runs:
+  P_scichem: "SCICHEM"
+  P_slab_rh20: "SLAB RH 20"
+  P_slab_rh80: "SLAB RH 80"
+  HPAC_complex: "HPAC complex"
+  HPAC_simple: "HPAC simple"
+  ALOHA: "ALOHA"
+measurements: "Measurements"
+
+# the Test column: each row's BENCH id and a name of at most six words (task item 1); a Trial 7 line belongs to the
+# row whose tool it names, and a hazbrief run against the measurements to both like-for-like rows
+tests:
+  BENCH-1: "HPAC complex source, three trials"
+  BENCH-2: "HPAC measured weather, three trials"
+  BENCH-3: "HPAC forecast weather, three trials"
+  BENCH-4: "HPAC forecast, re-aligned, three trials"
+  BENCH-5: "HPAC arrival time, three trials"
+  BENCH-6: "HPAC cloud width overlap, three trials"
+  BENCH-7: "ALOHA, three trials"
+  BENCH-8: "Jack Rabbit II Trial 7, HPAC"
+  BENCH-9: "Jack Rabbit II Trial 7, ALOHA"
+trial7_both: "BENCH-8, BENCH-9 Jack Rabbit II Trial 7"
+# which like-for-like row a Trial 7 line belongs to, by the tool it names
+trial7_row:
+  HPAC_complex: BENCH-8
+  HPAC_simple: BENCH-8
+  ALOHA: BENCH-9
+
+# ADDENDUM-01 item 1: the result column's cells, from scripts/benchmark_state.py's state (ADDENDUM-02 item 1)
+result:
+  above: "Yes, above"
+  below: "Yes, below"
+  same: "No"
+  not_run: "Not yet tested"
+
+# the Note column: the measurement lines rest on note 1; the model-against-model lines on notes 1 and 4 (the caution
+# beside every model-against-model line, HB-212 item 9)
+row_notes:
+  measurements: "1"
+  tool: "1, 4"
+
+# task item 4: numbered, each at most 25 words; {minimum} is benchmark_state.minimum(). Notes 3 and 4 quote the
+# operator's statements of 2026-11-20 07:10 EST as the HB-212 task file holds them (lines 23 and 22), shown as his
+notes:
+  - "Jack Rabbit II Trial 7: one trial, five arcs at 0.2 to 5 km, all of one release, not five independent releases."
+  - "The limits are Hanna, Strimaitis and Chang (1993), equation 34, at the 95 percent confidence level; the words are the Census Bureau's."
+  - "Why HPAC and ALOHA, the operator: \"the community tools that people have been relying on ... the gold standard for the community.\""
+  - "Two models can agree and both be wrong (Warner et al., page 40). The operator: \"they can still be useful for making decisions.\""
+  - "BENCH-0's minimum, doing as well as each tool: {minimum}."
+max_note_words: 25
+max_cell_words: 8
+max_name_words: 6
+
+# where the longer detail is (task item 4: the notes do not repeat it)
+detail: "Detail: docs/submission/EVALUATION.md section 2.7; the numbers: docs/evidence/hb209/trial7_intervals.tsv and docs/evidence/hb212/states.tsv."

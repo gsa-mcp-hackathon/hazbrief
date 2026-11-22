@@ -1,0 +1,290 @@
+# HB-198 ADDENDUM-01 items 3a to 3c, ADDENDUM-04 item 3j, ADDENDUM-05 (3a/3b): every full gate run from HB-189 to
+# HB-197 and HB-201, one entry per run, in the order each task ran them. tools/gate_ledger.py reads this file and the
+# files it names and writes gate_ledger.tsv; counts and seconds come from the tail files, never typed here.
+#
+# Per run:
+#   tail:      a committed file holding the run's own tail (its pytest summary lines); the tool reads every count and
+#              "in N s" from it. `step` narrows a file holding several runs' steps (HB-194's three_gates.tsv rows).
+#   result:    the RESULT line that states the run, when no tail of the run is held; its numbers are quoted as
+#              the RESULT prints them and the tool parses them from this quotation.
+#   failures:  each failing test (or lint stage) with its class. A class is HB-194's table's word for that kind
+#              (docs/evidence/hb194/failures.tsv: "bound missed under load", or a real failure: "a defect"), or one of
+#              the classes ADDENDUM-04 3j and ADDENDUM-05 name. `class_source` cites where the class was read.
+#   commit:    as the RESULT or the tail names it; "not stated" when neither does.
+#
+# The tool decides "after HB-194 landed" from the event log: a run is after when its task's dispatch was launched
+# after HB-194's dispatch_finished (ccf4a4c1, outcome merged, 2026-11-17T16:01:58Z). HB-191 ran no full gate (its
+# RESULT, "Gate"); it has no row. HB-189's first session's gates are not stated in its RESULT; only the second
+# session's four are rows.
+
+hb194_landed_event: ccf4a4c1
+
+runs:
+  - task: HB-189
+    run: gate 1
+    steps: one
+    commit: not stated
+    result: "HB-189, Gate and verify, item 1: \"35 failed: the seed broken by the exchange prune, and earlier tasks' tests not yet restated (both fixed, above).\""
+    result_counts: {failed: 35}
+    failures:
+      - test: 35 tests (not listed in the RESULT)
+        class: a defect
+        class_source: HB-189 RESULT item 1 (the branch's own seed and unrestated tests, both fixed)
+  - task: HB-189
+    run: gate 2
+    steps: one
+    commit: not stated
+    tail: docs/evidence/hb193/hb189_logs/gate_run2.log
+    failures:
+      - test: test_brief_derive.py (a test held privately)::test_the_stability_class_is_read_by_the_panel_and_the_puff_only
+        class: a defect
+        class_source: docs/evidence/hb194/failures.tsv (HB-189 gate 2, "real failure, fixed in HB-189")
+      - test: test_hb139_weather_source.py (a test held privately)::test_a_stated_run_on_the_held_wind_draws_every_consumer_on_its_bearing
+        class: bound missed under load
+        class_source: docs/evidence/hb194/stated_wind/README.md ("a bound missed under load")
+  - task: HB-189
+    run: gate 3
+    steps: one
+    commit: not stated
+    tail: docs/evidence/hb193/hb189_logs/gate_run3.log
+    failures:
+      - test: test_orchestrator_harness.py (a test held privately)::test_a_channel_that_never_answers_degrades_its_section_and_the_brief_completes
+        class: bound missed under load
+        class_source: docs/evidence/hb194/failures.tsv (HB-189 gate 3)
+      - test: ruff check (1 error, a docstring past the line limit)
+        class: a defect
+        class_source: HB-189 RESULT item 3 ("my docstring past the line limit (fixed)")
+  - task: HB-189
+    run: gate 4
+    steps: one
+    commit: not stated
+    tail: docs/evidence/hb189/gate_tail.txt
+  - task: HB-193
+    run: baseline on main
+    steps: one
+    commit: 1240b17b
+    tail: docs/evidence/hb193/gate_base_tail.txt
+    failures:
+      - test: test_hb187_evidence.py (a test held privately)::test_the_protocol_was_committed_before_every_run_and_not_changed_after
+        class: a defect
+        class_source: HB-193 RESULT, Deviations (the tree before HB-189 against the live graph that holds HB-189; both pass on the branch)
+      - test: test_hb159_findings_in_the_graph.py (a test held privately)::test_the_tevv_rows_equal_the_graph
+        class: a defect
+        class_source: as the row above
+  - task: HB-193
+    run: gate 1
+    steps: one
+    commit: cb3dad41
+    tail: docs/evidence/hb193/gate1_tail.txt
+    failures:
+      - test: ruff check (40 errors) and ruff format (3 files), all the task's evidence tools
+        class: a defect
+        class_source: HB-193 RESULT, Gate table, run 1
+  - task: HB-193
+    run: gate 2
+    steps: one
+    commit: 8de7748f
+    tail: docs/evidence/hb193/gate2_tail.txt
+    failures:
+      - test: test_hb139_weather_source.py (a test held privately)::test_a_stated_run_on_the_held_wind_draws_every_consumer_on_its_bearing
+        class: bound missed under load
+        class_source: docs/evidence/hb194/failures.tsv (HB-193 gate 2) and stated_wind/README.md
+  - task: HB-193
+    run: gate 3
+    steps: one
+    commit: 8de7748f
+    tail: docs/evidence/hb193/gate3_tail.txt
+    failures:
+      - test: test_hb158_less_at_once.py (a test held privately)::test_rows_are_one_line_at_1440
+        class: bound missed under load
+        class_source: docs/evidence/hb194/failures.tsv (HB-193 gate 3)
+      - test: test_hb158_less_at_once.py (a test held privately)::test_every_group_head_and_the_verify_items_are_in_view_at_1440
+        class: bound missed under load
+        class_source: docs/evidence/hb194/failures.tsv (HB-193 gate 3)
+  - task: HB-193
+    run: gate 4
+    steps: one
+    commit: 8de7748f
+    tail: docs/evidence/hb193/gate_tail.txt
+  - task: HB-190
+    run: gate 1
+    steps: one
+    commit: 28e35207
+    tail: docs/evidence/hb190/gate_tail.txt
+  - task: HB-194
+    run: one-step gate before the change
+    steps: one
+    commit: 9d07faad
+    tail: docs/evidence/hb194/gate_before.log
+    failures:
+      - test: test_hb141_checklist.py (a test held privately)::test_a_page_opened_from_a_file_opens_on_the_topographic_map_and_says_why
+        class: bound missed under load
+        class_source: docs/evidence/hb194/failures.tsv (HB-194 one-step gate)
+  - task: HB-194
+    run: series 1 gate 1
+    steps: two
+    commit: e5b3558d
+    tail: docs/evidence/hb194/three_gates.tsv
+    tail_gate: series 1 gate 1
+  - task: HB-194
+    run: series 1 gate 2
+    steps: two
+    commit: e5b3558d
+    tail: docs/evidence/hb194/three_gates.tsv
+    tail_gate: series 1 gate 2
+    note: the parallel step failed and the series was restarted; the load-sensitive step did not run
+    failures:
+      - test: test_hb154_shell.py (a test held privately)::test_first_paint_has_the_regions_the_tab_bar_a_closed_body_and_both_columns_open
+        class: bound missed under load
+        class_source: docs/evidence/hb194/failures.tsv (series 1 gate 2)
+      - test: test_hb154_shell.py (a test held privately)::test_the_served_page_swaps_every_section_and_moves_the_maps_parts
+        class: bound missed under load
+        class_source: docs/evidence/hb194/failures.tsv (series 1 gate 2)
+  - task: HB-194
+    run: series 2 gate 1
+    steps: two
+    commit: 246b2fb1
+    tail: docs/evidence/hb194/three_gates.tsv
+    tail_gate: series 2 gate 1
+  - task: HB-194
+    run: series 2 gate 2
+    steps: two
+    commit: 246b2fb1
+    tail: docs/evidence/hb194/three_gates.tsv
+    tail_gate: series 2 gate 2
+  - task: HB-194
+    run: series 2 gate 3
+    steps: two
+    commit: 246b2fb1
+    tail: docs/evidence/hb194/three_gates.tsv
+    tail_gate: series 2 gate 3
+  - task: HB-195
+    run: run 1
+    steps: two
+    commit: b8ae2746
+    tail: docs/evidence/hb195/gate_run1_tail.txt
+    failures:
+      - test: test_hb150_triage.py (a test held privately)::test_what_is_still_in_the_inbox_is_accounted_for
+        class: a defect
+        class_source: HB-195 RESULT item 11 (the test read the live inbox the task had linked; fixed in a750627d, red first)
+  - task: HB-195
+    run: run 2
+    steps: two
+    commit: a750627d
+    tail: docs/evidence/hb195/gate_tail.txt
+  - task: HB-192
+    run: gate 1
+    steps: two
+    commit: not stated
+    tail: docs/evidence/hb192/gate1_failures.txt
+    failures:
+      - test: 67 parallel-step tests, 2 load-sensitive tests, ruff (an unused import) and one unformatted file (all listed in the tail file)
+        class: a defect
+        class_source: HB-192 RESULT, Gate and verify, item 1 (earlier tasks' tests pinned to what the change moves, and T60 not yet pinned; restated)
+  - task: HB-192
+    run: gate 2
+    steps: two
+    commit: not stated
+    tail: docs/evidence/hb192/gate_tail.txt
+  - task: HB-196
+    run: gate 1
+    steps: two
+    commit: not stated
+    tail: docs/evidence/hb196/gate1_tail.txt
+    failures:
+      - test: test_hb178_material_keyed_and_off_pair.py (a test held privately)::test_the_audit_re_derives_and_every_hit_has_a_verdict
+        class: a defect
+        class_source: HB-196 RESULT, Gate and verify, item 1 (the task's T58 rows had no verdict; fixed)
+  - task: HB-196
+    run: gate 2
+    steps: two
+    commit: not stated
+    tail: docs/evidence/hb196/gate2_tail.txt
+    failures:
+      - test: test_hb103_weather_map.py (a test held privately)::test_the_drawn_arrow_layer_counts_one_symbol_per_cell
+        class: not established; the key and the place ruled out by HB-201; the test opens no file under a folder iCloud manages (HB-198 3h)
+        class_source: docs/evidence/hb201/chrome_reading.md; docs/evidence/hb198/fixture_opens.tsv
+  - task: HB-196
+    run: gate 3
+    steps: two
+    commit: not stated
+    tail: docs/evidence/hb196/gate_tail.txt
+  - task: HB-201
+    run: first collection
+    steps: two
+    commit: not stated
+    result: "HB-201, Interpretations: \"The first collection of the gate's test modules failed with OSError: [Errno 11] Resource deadlock avoided in test_corpus_intake.py (a test held privately): 35 files under ~/Documents/kg-archive/hazbrief-corpus/raw (reached through corpus/raw) had been evicted by iCloud.\""
+    result_counts: {}
+    note: stopped at collection; no test ran and no tail was printed
+    failures:
+      - test: test_corpus_intake.py (a test held privately) (collection)
+        class: a file under a linked corpus path was a cloud placeholder
+        class_source: HB-201 RESULT, Interpretations ("The gate's iCloud placeholders")
+  - task: HB-201
+    run: gate 1
+    steps: two
+    commit: not stated
+    tail: docs/evidence/hb201/gate_tail.txt
+  - task: HB-197
+    run: gate 1
+    steps: two
+    commit: not stated
+    result: "HB-197, Gate and verify: \"At 10:34 the dispatcher's disk-ceiling stop refused further work; the parallel step's output then stood at 96 percent with no F and no E in it\""
+    result_counts: {}
+    stopped_by: c3163e6c
+    note: stopped before its tail by a dispatcher hard stop; neither a pass nor a fail
+  # HB-203 item 5: the gates since HB-198 stopped, each classed (HB-203 task file item 5; ADDENDUM-06 item 5)
+  - task: HB-198
+    run: clean clone's gate
+    steps: two
+    commit: a400c065
+    result: "HB-198, In plain terms item 5: \"When the stop came, the parallel step stood at 53 percent, with no `F` and no `E` in its progress lines. I ended it (11:04). There is no tail\""
+    result_counts: {}
+    stopped_by: 5d755186
+    note: the clone's gate, ended by the session at the dispatcher's hard stop; neither a pass nor a fail
+  - task: HB-199
+    run: gate 1
+    steps: two
+    commit: not stated
+    result: "docs/evidence/hb199/gate_failure_1.txt, progress at stop: \"about 42 percent of the parallel step's tests; no failure or error printed\""
+    result_counts: {}
+    stopped_by: a9f3a805
+    note: stopped before its tail by a dispatcher hard stop; neither a pass nor a fail
+  - task: HB-202
+    run: gate 1
+    steps: two
+    commit: e6a7cb9b
+    tail: docs/evidence/hb202/gate1_tail.txt
+    failures:
+      - test: test_hb178_material_keyed_and_off_pair.py (a test held privately)::test_the_audit_re_derives_and_every_hit_has_a_verdict
+        class: a defect
+        class_source: docs/evidence/hb202/README.md Part B (HB-199's rewording; HB-178's verdict A24 not restated; reached main with no gate)
+      - test: test_hb199_trial7.py (a test held privately)::test_the_protocol_was_committed_before_every_record_and_not_changed_after
+        class: a defect
+        class_source: docs/evidence/hb202/README.md Part B (the test compared a commit id the dispatcher's rebase rewrote)
+      - test: ruff check (31 errors, E501 in three HB-198 evidence tools)
+        class: a defect
+        class_source: docs/evidence/hb202/README.md Part B
+      - test: ruff format (5 files)
+        class: a defect
+        class_source: docs/evidence/hb202/README.md Part B
+  - task: HB-202
+    run: gate 2
+    steps: two
+    commit: 54c2491c
+    tail: docs/evidence/hb202/gate_tail.txt
+  - task: HB-203
+    run: clean clone's gate
+    steps: two
+    commit: ae27a5f7
+    tail: docs/evidence/hb203/clone_gate_tail.txt
+    failures:
+      - test: test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text (18 quotations)
+        class: a defect
+        class_source: docs/evidence/hb203/gate_failure_2.txt (FileNotFoundError on gitignored corpus/parsed data a clean clone does not hold; the test raised instead of skipping; fixed by HB-203)
+  # HB-204 item 3: the gate that brought HB-203's branch to main (merged into HB-204's)
+  - task: HB-204
+    run: gate 1
+    steps: two
+    commit: 0e7ccea8
+    tail: docs/evidence/hb204/gate_tail.txt

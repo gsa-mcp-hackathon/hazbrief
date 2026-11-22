@@ -1,0 +1,511 @@
+# The release routing table (HB-120; DN-020 ADDENDUM-02 section 2 item 3). AUTHORED.
+#
+# One block per ERG 2024 orange guide; one row per storage state the guide serves, or one `any` row for a guide
+# whose route does not depend on the state. `route`: two_phase_jet | evaporating_pool | instantaneous |
+# not_applicable. `loc_class` (a routed row): toxic (AEGL-2, else the NIOSH IDLH: HB-119 ADDENDUM-00) |
+# flammable_lfl | oxygen_deficiency. `reason` (a not_applicable row): the responder's sentence, quoting the ERG.
+# `basis`: the guide's own POTENTIAL HAZARDS words and the PDF page they are printed on, verified on the held
+# page by `scripts/build_packs.py release_routing` (a row with no basis, or a basis not on its page, fails the
+# build). The rules and their receipts are in `rules` below; packs/SCHEMA.md documents the pack.
+#
+# First written by the HB-120 evidence (held privately) from the ERG pack's text; edit this file now.
+
+doc: erg2024-en-pdf
+rules:
+  primary_hazard_first: {page: 348, quote: "Primary potential hazard is listed first."}
+  polymerization_letter: {page: 347, quote: "The letter (P) following the guide number in the yellow and blue sections identifies materials that present a polymerization hazard under certain conditions."}
+guides:
+  "111":
+    title: "Mixed Load/Unidentified Cargo"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: Guide 111 is the guide for a mixed load or an unidentified cargo, and no release can be modelled for a material nobody has identified. The ERG warns \"May explode from heat, shock, friction or contamination\"; identify the material, then the brief can route it."
+      basis: {page: 154, quote: "May explode from heat, shock, friction or contamination."}
+  "112":
+    title: "Explosives* - Division 1.1, 1.2, 1.3 or 1.5"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states this guide's hazard as blast and fragments, \"MAY EXPLODE AND THROW FRAGMENTS 1600 METERS (1 MILE) OR MORE IF FIRE REACHES CARGO\", not a drifting vapour cloud. The guide's isolation and evacuation distances are the response."
+      basis: {page: 156, quote: "MAY EXPLODE AND THROW FRAGMENTS 1600 METERS (1 MILE) OR MORE IF FIRE REACHES CARGO."}
+  "113":
+    title: "Flammable Materials (Wet/Desensitized Explosive)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states this guide's hazard as fire and, once dried out, explosion, \"DRIED OUT material may explode if exposed to heat, flame, friction or shock; treat as an explosive (GUIDE 112)\", not a drifting vapour cloud. The guide's distances are the response."
+      basis: {page: 158, quote: "DRIED OUT material may explode if exposed to heat, flame, friction or shock; treat as an explosive (GUIDE 112)."}
+  "114":
+    title: "Explosives* - Division 1.4 or 1.6"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states this guide's hazard as blast and fragments, \"MAY EXPLODE AND THROW FRAGMENTS 800 METERS (1/2 MILE) OR MORE IF FIRE REACHES CARGO\", not a drifting vapour cloud. The guide's isolation and evacuation distances are the response."
+      basis: {page: 160, quote: "MAY EXPLODE AND THROW FRAGMENTS 800 METERS (1/2 MILE) OR MORE IF FIRE REACHES CARGO."}
+  "115":
+    title: "Gases - Flammable (Including Refrigerated Liquids)"
+    rows:
+    - state: pressure_liquefied
+      route: two_phase_jet
+      loc_class: flammable_lfl
+      basis: {page: 162, quote: "Will form explosive mixtures with air."}
+    - state: refrigerated_liquid
+      route: evaporating_pool
+      loc_class: flammable_lfl
+      basis: {page: 162, quote: "Will form explosive mixtures with air."}
+  "116":
+    title: "Gases - Flammable (Unstable)"
+    rows:
+    - state: pressure_liquefied
+      route: two_phase_jet
+      loc_class: flammable_lfl
+      basis: {page: 164, quote: "Will form explosive mixtures with air. Acetylene (UN1001, UN3374) may react explosively even in the absence of air."}
+  "117":
+    title: "Gases - Toxic - Flammable (Extreme Hazard)"
+    rows:
+    - state: pressure_liquefied
+      route: two_phase_jet
+      loc_class: toxic
+      basis: {page: 166, quote: "May be fatal if inhaled or absorbed through skin."}
+  "118":
+    title: "Gases - Flammable - Corrosive"
+    rows:
+    - state: pressure_liquefied
+      route: two_phase_jet
+      loc_class: flammable_lfl
+      basis: {page: 168, quote: "May form explosive mixtures with air."}
+  "119":
+    title: "Gases - Toxic - Flammable"
+    rows:
+    - state: pressure_liquefied
+      route: two_phase_jet
+      loc_class: toxic
+      basis: {page: 170, quote: "TOXIC; may be fatal if inhaled or absorbed through skin. Some may cause severe skin burns and eye damage."}
+    - state: refrigerated_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 170, quote: "TOXIC; may be fatal if inhaled or absorbed through skin. Some may cause severe skin burns and eye damage."}
+  "120":
+    title: "Gases - Inert (Including Refrigerated Liquids)"
+    rows:
+    - state: pressure_liquefied
+      route: two_phase_jet
+      loc_class: oxygen_deficiency
+      basis: {page: 172, quote: "Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas."}
+    - state: refrigerated_liquid
+      route: evaporating_pool
+      loc_class: oxygen_deficiency
+      basis: {page: 172, quote: "Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas."}
+    - state: solid
+      route: not_applicable
+      reason: "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas\". The guide's distances are the response."
+      basis: {page: 172, quote: "Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas."}
+  "122":
+    title: "Gases - Oxidizing (Including Refrigerated Liquids)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states this guide's hazard as feeding a fire, \"Substance does not burn but will support combustion\", not a toxic or flammable cloud. The guide's distances are the response."
+      basis: {page: 176, quote: "Substance does not burn but will support combustion."}
+  "123":
+    title: "Gases - Toxic"
+    rows:
+    - state: pressure_liquefied
+      route: two_phase_jet
+      loc_class: toxic
+      basis: {page: 178, quote: "TOXIC; may be fatal if inhaled or absorbed through skin."}
+    - state: refrigerated_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 178, quote: "TOXIC; may be fatal if inhaled or absorbed through skin."}
+  "124":
+    title: "Gases - Toxic and/or Corrosive - Oxidizing"
+    rows:
+    - state: pressure_liquefied
+      route: two_phase_jet
+      loc_class: toxic
+      basis: {page: 180, quote: "TOXIC and/or CORROSIVE; may be fatal if inhaled or absorbed through skin."}
+  "125":
+    title: "Gases - Toxic and/or Corrosive"
+    rows:
+    - state: pressure_liquefied
+      route: two_phase_jet
+      loc_class: toxic
+      basis: {page: 182, quote: "TOXIC and/or CORROSIVE; may be fatal if inhaled, ingested or absorbed through skin."}
+    - state: refrigerated_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 182, quote: "TOXIC and/or CORROSIVE; may be fatal if inhaled, ingested or absorbed through skin."}
+  "126":
+    title: "Gases - Compressed or Liquefied (Including Refrigerant Gases)"
+    rows:
+    - state: pressure_liquefied
+      route: two_phase_jet
+      loc_class: oxygen_deficiency
+      basis: {page: 184, quote: "Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas."}
+  "127":
+    title: "Flammable Liquids (Water-Miscible)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: flammable_lfl
+      basis: {page: 186, quote: "Vapors may form explosive mixtures with air."}
+  "128":
+    title: "Flammable Liquids (Water-Immiscible)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: flammable_lfl
+      basis: {page: 188, quote: "Vapors may form explosive mixtures with air."}
+    - state: solid
+      route: not_applicable
+      reason: "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"HIGHLY FLAMMABLE: Will be easily ignited by heat, sparks or flames\". The guide's distances are the response."
+      basis: {page: 188, quote: "HIGHLY FLAMMABLE: Will be easily ignited by heat, sparks or flames."}
+  "129":
+    title: "Flammable Liquids (Water-Miscible/Noxious)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: flammable_lfl
+      basis: {page: 190, quote: "Vapors may form explosive mixtures with air."}
+  "130":
+    title: "Flammable Liquids (Water-Immiscible/Noxious)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: flammable_lfl
+      basis: {page: 192, quote: "Vapors may form explosive mixtures with air."}
+  "131":
+    title: "Flammable Liquids - Toxic"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 194, quote: "TOXIC; may be fatal if inhaled, ingested or absorbed through skin."}
+  "132":
+    title: "Flammable Liquids - Corrosive"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: flammable_lfl
+      basis: {page: 196, quote: "Vapors may form explosive mixtures with air."}
+  "133":
+    title: "Flammable Solids"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: these are solids whose hazard the ERG states as fire, reaction or contact, \"May be ignited by friction, heat, sparks or flames\", not a vapour that drifts downwind. The guide's distances are the response."
+      basis: {page: 198, quote: "May be ignited by friction, heat, sparks or flames."}
+  "134":
+    title: "Flammable Solids - Toxic and/or Corrosive"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: these are solids whose hazard the ERG states as fire, reaction or contact, \"Flammable/combustible material\", not a vapour that drifts downwind. The guide's distances are the response."
+      basis: {page: 200, quote: "Flammable/combustible material."}
+  "135":
+    title: "Substances - Spontaneously Combustible"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: these are solids whose hazard the ERG states as fire, reaction or contact, \"May ignite on contact with moist air or moisture\", not a vapour that drifts downwind. The guide's distances are the response."
+      basis: {page: 202, quote: "May ignite on contact with moist air or moisture."}
+  "136":
+    title: "Substances - Spontaneously Combustible - Toxic and/or Corrosive (Air-Reactive)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: these are solids whose hazard the ERG states as fire, reaction or contact, \"Extremely flammable; will ignite itself if exposed to air\", not a vapour that drifts downwind. The guide's distances are the response."
+      basis: {page: 204, quote: "Extremely flammable; will ignite itself if exposed to air."}
+  "137":
+    title: "Substances - Water-Reactive - Corrosive"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 206, quote: "CORROSIVE and/or TOXIC; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death."}
+    - state: solid
+      route: not_applicable
+      reason: "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"CORROSIVE and/or TOXIC; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death\". The guide's distances are the response."
+      basis: {page: 206, quote: "CORROSIVE and/or TOXIC; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death."}
+  "138":
+    title: "Substances - Water-Reactive (Emitting Flammable Gases)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the hazard is the gas the material makes with water, \"Produce flammable gases on contact with water\", a reaction no release model here describes. The guide and ERG Table 2 (water-reactive materials) are the response."
+      basis: {page: 208, quote: "Produce flammable gases on contact with water."}
+  "139":
+    title: "Substances - Water-Reactive (Emitting Flammable And Toxic Gases)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the hazard is the gas the material makes with water, \"Produce flammable and toxic gases on contact with water\", a reaction no release model here describes. The guide and ERG Table 2 (water-reactive materials) are the response."
+      basis: {page: 210, quote: "Produce flammable and toxic gases on contact with water."}
+  "140":
+    title: "Oxidizers"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: an oxidiser's hazard, as the ERG states it, is fire and explosion with other materials, \"These substances will accelerate burning when involved in a fire\", not a toxic or flammable cloud of its own. The guide's distances are the response."
+      basis: {page: 212, quote: "These substances will accelerate burning when involved in a fire."}
+  "141":
+    title: "Oxidizers - Toxic"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: an oxidiser's hazard, as the ERG states it, is fire and explosion with other materials, \"These substances will accelerate burning when involved in a fire\", not a toxic or flammable cloud of its own. The guide's distances are the response."
+      basis: {page: 214, quote: "These substances will accelerate burning when involved in a fire."}
+  "142":
+    title: "Oxidizers - Toxic (Liquid)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: an oxidiser's hazard, as the ERG states it, is fire and explosion with other materials, \"These substances will accelerate burning when involved in a fire\", not a toxic or flammable cloud of its own. The guide's distances are the response."
+      basis: {page: 216, quote: "These substances will accelerate burning when involved in a fire."}
+  "143":
+    title: "Oxidizers (Unstable)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: an oxidiser's hazard, as the ERG states it, is fire and explosion with other materials, \"May explode from friction, heat or contamination\", not a toxic or flammable cloud of its own. The guide's distances are the response."
+      basis: {page: 218, quote: "May explode from friction, heat or contamination."}
+  "144":
+    title: "Oxidizers (Water-Reactive)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: an oxidiser's hazard, as the ERG states it, is fire and explosion with other materials, \"React vigorously and/or explosively with water\", not a toxic or flammable cloud of its own. The guide's distances are the response."
+      basis: {page: 220, quote: "React vigorously and/or explosively with water."}
+  "145":
+    title: "Organic Peroxides (Heat and Contamination Sensitive)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states an organic peroxide's hazard as decomposition, fire and explosion, \"May explode from heat or contamination\", not a vapour cloud. The guide's distances are the response."
+      basis: {page: 222, quote: "May explode from heat or contamination."}
+  "146":
+    title: "Organic Peroxides (Heat, Contamination and Friction Sensitive)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states an organic peroxide's hazard as decomposition, fire and explosion, \"May explode from heat, shock, friction or contamination\", not a vapour cloud. The guide's distances are the response."
+      basis: {page: 224, quote: "May explode from heat, shock, friction or contamination."}
+  "147":
+    title: "Lithium Ion and Sodium Ion Batteries"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states the hazard as battery fire, \"May ignite other batteries in close proximity\", not a release of a stored liquid or gas. The guide's distances are the response."
+      basis: {page: 226, quote: "May ignite other batteries in close proximity."}
+  "148":
+    title: "Organic Peroxides (Heat and Contamination Sensitive/Temperature Controlled)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states an organic peroxide's hazard as decomposition, fire and explosion, \"May explode from heat, contamination or loss of temperature control\", not a vapour cloud. The guide's distances are the response."
+      basis: {page: 228, quote: "May explode from heat, contamination or loss of temperature control."}
+  "149":
+    title: "Substances (Self-Reactive)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states the hazard as self-reaction, fire and explosion, \"Self-decomposition, self-polymerization, or self-ignition may be triggered by heat, chemical reaction, friction or impact\", not a vapour cloud. The guide's distances are the response."
+      basis: {page: 230, quote: "Self-decomposition, self-polymerization, or self-ignition may be triggered by heat, chemical reaction, friction or impact."}
+  "150":
+    title: "Substances (Self-Reactive/ Temperature Controlled)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states the hazard as self-reaction, fire and explosion, \"Self-decomposition, self-polymerization, or self-ignition may be triggered by heat, chemical reaction, friction or impact\", not a vapour cloud. The guide's distances are the response."
+      basis: {page: 232, quote: "Self-decomposition, self-polymerization, or self-ignition may be triggered by heat, chemical reaction, friction or impact."}
+  "151":
+    title: "Substances - Toxic (Non-Combustible)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 234, quote: "Highly toxic, may be fatal if inhaled, ingested or absorbed through skin."}
+    - state: solid
+      route: not_applicable
+      reason: "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"Highly toxic, may be fatal if inhaled, ingested or absorbed through skin\". The guide's distances are the response."
+      basis: {page: 234, quote: "Highly toxic, may be fatal if inhaled, ingested or absorbed through skin."}
+  "152":
+    title: "Substances - Toxic (Combustible)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 236, quote: "Highly toxic, may be fatal if inhaled, ingested or absorbed through skin."}
+    - state: solid
+      route: not_applicable
+      reason: "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"Highly toxic, may be fatal if inhaled, ingested or absorbed through skin\". The guide's distances are the response."
+      basis: {page: 236, quote: "Highly toxic, may be fatal if inhaled, ingested or absorbed through skin."}
+  "153":
+    title: "Substances - Toxic and/or Corrosive (Combustible)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 238, quote: "TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death."}
+    - state: solid
+      route: not_applicable
+      reason: "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death\". The guide's distances are the response."
+      basis: {page: 238, quote: "TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death."}
+  "154":
+    title: "Substances - Toxic and/or Corrosive (Non-Combustible)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 240, quote: "TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death."}
+    - state: solid
+      route: not_applicable
+      reason: "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death\". The guide's distances are the response."
+      basis: {page: 240, quote: "TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death."}
+  "155":
+    title: "Substances - Toxic and/or Corrosive (Flammable/Water-Sensitive)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: flammable_lfl
+      basis: {page: 242, quote: "Vapors form explosive mixtures with air: indoors, outdoors and sewers explosion hazards."}
+  "156":
+    title: "Substances - Toxic and/or Corrosive (Combustible/Water-Sensitive)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 244, quote: "TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death."}
+    - state: solid
+      route: not_applicable
+      reason: "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death\". The guide's distances are the response."
+      basis: {page: 244, quote: "TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death."}
+  "157":
+    title: "Substances - Toxic and/or Corrosive (Non-Combustible/Water-Sensitive)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 246, quote: "TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death."}
+    - state: solid
+      route: not_applicable
+      reason: "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death\". The guide's distances are the response."
+      basis: {page: 246, quote: "TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death."}
+  "158":
+    title: "Infectious Substances"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states the hazard as infection, \"Inhalation or contact with substance may cause infection, disease or death\", not a chemical vapour cloud. The guide's distances are the response."
+      basis: {page: 248, quote: "Inhalation or contact with substance may cause infection, disease or death."}
+  "159":
+    title: "Substances (Irritating)"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 250, quote: "Inhalation of vapors or dust is extremely irritating."}
+    - state: solid
+      route: not_applicable
+      reason: "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"Inhalation of vapors or dust is extremely irritating\". The guide's distances are the response."
+      basis: {page: 250, quote: "Inhalation of vapors or dust is extremely irritating."}
+  "160":
+    title: "Halogenated Solvents"
+    rows:
+    - state: ambient_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 252, quote: "Vapors may cause dizziness or asphyxiation, especially when in closed or confined areas."}
+  "161":
+    title: "Radioactive Materials (Low Level Radiation)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the hazard is radiation and contamination from the package, which the ERG describes as \"Very low levels of contained radioactive materials and low radiation levels outside packages result in low risks to people. Damaged packages may release ...\". No vapour-cloud model measures it; the guide's distances and a radiation survey are the response."
+      basis: {page: 254, quote: "Very low levels of contained radioactive materials and low radiation levels outside packages result in low risks to people. Damaged packages may release measurable amounts of radioactive material, but the resulting risks are expected to be low."}
+  "162":
+    title: "Radioactive Materials (Low to Moderate Level Radiation)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the hazard is radiation and contamination from the package, which the ERG describes as \"Low radiation hazard when material is inside container. If material is released from package or bulk container, hazard will vary from low to moderate. Level ...\". No vapour-cloud model measures it; the guide's distances and a radiation survey are the response."
+      basis: {page: 256, quote: "Low radiation hazard when material is inside container. If material is released from package or bulk container, hazard will vary from low to moderate. Level of hazard will depend on the type and amount of radioactivity, the kind of material it is in, and/or the surfaces it is on."}
+  "163":
+    title: "Radioactive Materials (Low to High Level Radiation)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the hazard is radiation and contamination from the package, which the ERG describes as \"Undamaged packages are safe. Contents of damaged packages may cause higher external radiation exposure, or both external and internal radiation exposure if ...\". No vapour-cloud model measures it; the guide's distances and a radiation survey are the response."
+      basis: {page: 258, quote: "Undamaged packages are safe. Contents of damaged packages may cause higher external radiation exposure, or both external and internal radiation exposure if contents are released."}
+  "164":
+    title: "Radioactive Materials (Special Form/ Low to High Level External Radiation)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the hazard is radiation and contamination from the package, which the ERG describes as \"Undamaged packages are safe; contents of damaged packages may cause external radiation exposure, and much higher external exposure if contents (source ...\". No vapour-cloud model measures it; the guide's distances and a radiation survey are the response."
+      basis: {page: 260, quote: "Undamaged packages are safe; contents of damaged packages may cause external radiation exposure, and much higher external exposure if contents (source capsules) are released."}
+  "165":
+    title: "Radioactive Materials (Fissile/Low to High Level Radiation)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the hazard is radiation and contamination from the package, which the ERG describes as \"Undamaged packages are safe. Contents of damaged packages may cause higher external radiation exposure, or both external and internal radiation exposure if ...\". No vapour-cloud model measures it; the guide's distances and a radiation survey are the response."
+      basis: {page: 262, quote: "Undamaged packages are safe. Contents of damaged packages may cause higher external radiation exposure, or both external and internal radiation exposure if contents are released."}
+  "166":
+    title: "Radioactive Materials - Corrosive (Uranium Hexafluoride/Water-Reactive)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: this is a radioactive material whose chemical hazard is a reaction product, \"Substance reacts with water and water vapor in air to form toxic and corrosive hydrogen fluoride gas, hydrofluoric acid, and an extremely irritating and ...\". No release model here takes a reaction with the air's moisture; the guide and ERG Table 1 are the response."
+      basis: {page: 264, quote: "Substance reacts with water and water vapor in air to form toxic and corrosive hydrogen fluoride gas, hydrofluoric acid, and an extremely irritating and corrosive, white-colored, water-soluble residue."}
+  "168":
+    title: "Carbon Monoxide (Refrigerated Liquid)"
+    rows:
+    - state: refrigerated_liquid
+      route: evaporating_pool
+      loc_class: toxic
+      basis: {page: 268, quote: "Inhalation extremely dangerous; may be fatal."}
+  "169":
+    title: "Aluminum (Molten)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states the hazard as heat, contact and reaction, \"Contact causes severe burns to skin and eyes\", not a vapour cloud. The guide's distances are the response."
+      basis: {page: 270, quote: "Contact causes severe burns to skin and eyes."}
+  "170":
+    title: "Metals (Powders, Dusts, Shavings, Borings, Turnings, or Cuttings, etc.)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: these are solids whose hazard the ERG states as fire, reaction or contact, \"May react violently or explosively on contact with water\", not a vapour that drifts downwind. The guide's distances are the response."
+      basis: {page: 272, quote: "May react violently or explosively on contact with water."}
+  "171":
+    title: "Substances (Low to Moderate Hazard)"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states this guide's hazard as \"Inhalation of material may be harmful\", with no toxic or flammable cloud. The guide's distances are the response."
+      basis: {page: 274, quote: "Inhalation of material may be harmful."}
+  "172":
+    title: "Gallium and Mercury"
+    rows:
+    - state: any
+      route: not_applicable
+      reason: "No dispersion model applies: the ERG states the hazard as contamination by contact and vapour, \"Inhalation of vapors or contact with substance will result in contamination and potential harmful effects\", not a drifting cloud a release model sizes. The guide's distances are the response."
+      basis: {page: 276, quote: "Inhalation of vapors or contact with substance will result in contamination and potential harmful effects."}
+  "173":
+    title: "Adsorbed Gases - Toxic*"
+    rows:
+    - state: any
+      route: instantaneous
+      loc_class: toxic
+      basis: {page: 278, quote: "TOXIC; may be fatal if inhaled or absorbed through skin."}
+  "174":
+    title: "Adsorbed Gases - Flammable or Oxidizing"
+    rows:
+    - state: any
+      route: instantaneous
+      loc_class: flammable_lfl
+      basis: {page: 280, quote: "Vapors may travel to source of ignition and flash back."}

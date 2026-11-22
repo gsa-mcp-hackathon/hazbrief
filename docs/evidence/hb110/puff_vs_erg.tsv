@@ -1,0 +1,17 @@
+brief	envelope	erg_m	aegl2_threshold_at_max	aegl2_max_m	ratio	all_extents_m
+csx-point-of-rocks-crossing	Source term	6300	AEGL-2 (30 min)	5495	0.87	AEGL-2 (10 min) 2,303; AEGL-3 (10 min) 1,538; AEGL-2 (30 min) 5,495; AEGL-3 (30 min) 2,149; AEGL-2 (60 min) 0; AEGL-3 (60 min) 0
+csx-point-of-rocks-day	Source term	6300	AEGL-2 (30 min)	5495	0.87	AEGL-2 (10 min) 2,303; AEGL-3 (10 min) 1,538; AEGL-2 (30 min) 5,495; AEGL-3 (30 min) 2,149; AEGL-2 (60 min) 0; AEGL-3 (60 min) 0
+csx-point-of-rocks-night	Source term	8900	AEGL-2 (60 min)	4210	0.47	AEGL-2 (10 min) 645; AEGL-3 (10 min) 645; AEGL-2 (30 min) 2,239; AEGL-3 (30 min) 2,127; AEGL-2 (60 min) 4,210; AEGL-3 (60 min) 4,020
+i495-wilson-bridge-address	Source term	3300	AEGL-2 (10 min)	2815	0.85	AEGL-2 (10 min) 2,815; AEGL-3 (10 min) 0; AEGL-2 (30 min) 0; AEGL-3 (30 min) 0; AEGL-2 (60 min) 0; AEGL-3 (60 min) 0
+i495-wilson-bridge-cross-streets	Source term	3300	AEGL-2 (10 min)	2815	0.85	AEGL-2 (10 min) 2,815; AEGL-3 (10 min) 0; AEGL-2 (30 min) 0; AEGL-3 (30 min) 0; AEGL-2 (60 min) 0; AEGL-3 (60 min) 0
+i495-wilson-bridge-day	Source term	3300	AEGL-2 (10 min)	2815	0.85	AEGL-2 (10 min) 2,815; AEGL-3 (10 min) 0; AEGL-2 (30 min) 0; AEGL-3 (30 min) 0; AEGL-2 (60 min) 0; AEGL-3 (60 min) 0
+i495-wilson-bridge-night	Source term	4700	AEGL-2 (60 min)	8126	1.73	AEGL-2 (10 min) 1,442; AEGL-3 (10 min) 1,334; AEGL-2 (30 min) 4,175; AEGL-3 (30 min) 3,957; AEGL-2 (60 min) 8,126; AEGL-3 (60 min) 7,797
+i81-md-pa-line-day	Source term	3300	AEGL-2 (30 min)	5208	1.58	AEGL-2 (10 min) 2,258; AEGL-3 (10 min) 1,522; AEGL-2 (30 min) 5,208; AEGL-3 (30 min) 0; AEGL-2 (60 min) 0; AEGL-3 (60 min) 0
+i81-md-pa-line-milepost	Source term	3300	AEGL-2 (30 min)	5208	1.58	AEGL-2 (10 min) 2,258; AEGL-3 (10 min) 1,522; AEGL-2 (30 min) 5,208; AEGL-3 (30 min) 0; AEGL-2 (60 min) 0; AEGL-3 (60 min) 0
+i81-md-pa-line-night	Source term	4700	AEGL-2 (60 min)	8126	1.73	AEGL-2 (10 min) 1,442; AEGL-3 (10 min) 1,334; AEGL-2 (30 min) 4,175; AEGL-3 (30 min) 3,957; AEGL-2 (60 min) 8,126; AEGL-3 (60 min) 7,757
+i83-md-pa-line-day	Source term	3300	AEGL-2 (10 min)	2815	0.85	AEGL-2 (10 min) 2,815; AEGL-3 (10 min) 0; AEGL-2 (30 min) 0; AEGL-3 (30 min) 0; AEGL-2 (60 min) 0; AEGL-3 (60 min) 0
+i83-md-pa-line-night	Source term	4700	AEGL-2 (60 min)	10082	2.15	AEGL-2 (10 min) 1,811; AEGL-3 (10 min) 1,702; AEGL-2 (30 min) 5,173; AEGL-3 (30 min) 4,913; AEGL-2 (60 min) 10,082; AEGL-3 (60 min) 9,574
+scranton-i81-nws-wind	Source term	6400	AEGL-2 (60 min)	9910	1.55	AEGL-2 (10 min) 1,760; AEGL-3 (10 min) 1,671; AEGL-2 (30 min) 5,034; AEGL-3 (30 min) 4,887; AEGL-2 (60 min) 9,910; AEGL-3 (60 min) 9,612
+scranton-i81-stated-wind	Source term	6400	AEGL-2 (60 min)	10007	1.56	AEGL-2 (10 min) 1,816; AEGL-3 (10 min) 1,671; AEGL-2 (30 min) 5,034; AEGL-3 (30 min) 4,979; AEGL-2 (60 min) 10,007; AEGL-3 (60 min) 9,761
+un1203-i83	Worst case	300	None	0	0.00	LFL 1.1 % 0
+un1977-wilson-bridge	Source term	100	None	0	0.00	oxygen below 19.5 % by volume 0

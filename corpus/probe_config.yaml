@@ -1,0 +1,17 @@
+# scripts/probe_apis.py settings (HB-06). Every key is required (standards s2, s4).
+
+# One request's bound. The template's server timeout (src/hazbrief/utils.py DEFAULT_TIMEOUT)
+# is 30 s for the same federal APIs; a probe uses the same so it observes what a tool would.
+timeout_seconds: 30
+
+# Section 15 ceiling for the whole run (under ten requests).
+ceiling_wall_clock_seconds: 600
+
+# For a 4xx or 5xx, the first bytes of the body are recorded: the upstream's own statement of
+# why (the Census API's key message, an NWS problem+json). 600 bytes holds either.
+body_excerpt_bytes: 600
+
+# A probe reads at most this much of a body: the as-of fields are in the first bytes of a
+# service description, and a data response is size=1 or a single feature. The template's own
+# response cap (utils.MAX_RESPONSE_BYTES) is 5,000,000.
+max_body_bytes: 5000000

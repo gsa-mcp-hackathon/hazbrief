@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+
+# Prevent search engine crawlers from indexing dynamic map services.
+# This does NOT restrict GIS desktop clients (QGIS, ArcGIS) or web mapping APIs.
+Disallow: /geoserver/
+
+# Allow search engine crawlers to see the main app
+Allow: /
+
+# Explicitly point the sitemap
+Sitemap: https://nowcoast.noaa.gov/sitemap.xml

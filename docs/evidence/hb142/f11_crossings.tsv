@@ -1,0 +1,174 @@
+brief	tiger_oid	road	mtfcc	zone	crossing	offset_m	rule	meets	before
+csx-point-of-rocks-day	1106081477065	Ballenger Creek Pike	S1400	initial_isolation_zone	39.282877, -77.532582	388.9	junction	Lockhouse Dr	no
+csx-point-of-rocks-day	1105598231773	Brookshire Run	S1400	initial_isolation_zone	39.282462, -77.531897	80.2	line_end		no
+csx-point-of-rocks-day	1103670549835	Canal Run Ct	S1400	initial_isolation_zone	39.279046, -77.528705	52.3	line_end		no
+csx-point-of-rocks-day	1103689658386	Canal Run Dr	S1400	initial_isolation_zone	39.281526, -77.530683	200.0	minimum		no
+csx-point-of-rocks-day	1103689658386	Canal Run Dr	S1400	initial_isolation_zone	39.280644, -77.529806	383.4	junction	Conrads Ferry Dr	no
+csx-point-of-rocks-day	1103732722305	Cassidy Ct	S1400	initial_isolation_zone	39.283144, -77.533087	115.6	line_end		no
+csx-point-of-rocks-day	1104483533878	Clay St	S1200	initial_isolation_zone	39.27549, -77.527817	267.4	junction	unnamed line 110511170580	yes
+csx-point-of-rocks-day	1103663982201	Ferry Hill Ct	S1400	initial_isolation_zone	39.280524, -77.529708	4.0	line_end		no
+csx-point-of-rocks-day	1104351232855	Furnace Mountain Rd	S1400	initial_isolation_zone	39.271209, -77.549512	200.0	minimum		no
+csx-point-of-rocks-day	110512755645	James Monroe Hwy	S1200	initial_isolation_zone	39.267754, -77.545084	696.1	junction	Myersville Ln	yes
+csx-point-of-rocks-day	1104345541178	Lovettsville Rd	S1400	initial_isolation_zone	39.271433, -77.549662	200.0	minimum		no
+csx-point-of-rocks-day	1103670548757	Misty Hollow Rd	S1400	initial_isolation_zone	39.279826, -77.529177	28.4	line_end		no
+csx-point-of-rocks-day	1104470498183	State Hwy 28	S1200	initial_isolation_zone	39.27549, -77.527817	267.4	junction	unnamed line 110511170580	yes
+csx-point-of-rocks-day	1104347189855	State Rte 665	S1400	initial_isolation_zone	39.271209, -77.549512	200.0	minimum		no
+csx-point-of-rocks-day	110512742756	US Hwy 15	S1200	initial_isolation_zone	39.267754, -77.545084	696.1	junction	Myersville Ln	yes
+csx-point-of-rocks-day	1104484208233	US Hwy 15	S1200	initial_isolation_zone	39.283588, -77.53407	200.0	minimum		yes
+csx-point-of-rocks-day	1104782824263	unnamed	S1400	initial_isolation_zone	39.281693, -77.54792	200.0	minimum		no
+csx-point-of-rocks-day	110511165392	unnamed	S1400	initial_isolation_zone	39.270905, -77.529521	200.0	minimum		no
+csx-point-of-rocks-day	110511180265	unnamed	S1400	initial_isolation_zone	39.275699, -77.527817	77.4	line_end		no
+csx-point-of-rocks-day	110511180270	unnamed	S1400	initial_isolation_zone	39.277231, -77.528006	47.0	line_end		no
+csx-point-of-rocks-day	1106081477065	Ballenger Creek Pike	S1400	protective_action_zone	39.275635, -77.5397	879.9	junction	Hobbits Glen Rd	no
+csx-point-of-rocks-day	110511126585	Bank St	S1400	protective_action_zone	39.275227, -77.536718	325.1	junction	Ballenger Creek Pike	no
+csx-point-of-rocks-day	110512754022	Beech Grove Ln	S1400	protective_action_zone	39.278506, -77.560648	79.1	line_end		no
+csx-point-of-rocks-day	110512754085	Browns Farm Ln	S1400	protective_action_zone	39.220355, -77.556782	200.0	minimum		no
+csx-point-of-rocks-day	1104345498994	Chapel Ln	S1400	protective_action_zone	39.219136, -77.51516	944.2	junction	Charles Ln	no
+csx-point-of-rocks-day	110511126627	Clay St	S1400	protective_action_zone	39.275322, -77.537414	10.4	line_end		no
+csx-point-of-rocks-day	1104483533878	Clay St	S1200	protective_action_zone	39.274405, -77.530725	246.7	junction	unnamed line 110511180262	yes
+csx-point-of-rocks-day	11015482191515	Courtney Meadow Pl	S1400	protective_action_zone	39.225508, -77.587795	200.0	minimum		no
+csx-point-of-rocks-day	11015482191515	Courtney Meadow Pl	S1400	protective_action_zone	39.224548, -77.587369	345.5	junction	Tarleton Dr	no
+csx-point-of-rocks-day	110512743581	Dove Ln	S1400	protective_action_zone	39.219728, -77.552206	200.0	minimum		no
+csx-point-of-rocks-day	1104427949370	Downey Mill Rd	S1400	protective_action_zone	39.253861, -77.581383	200.0	minimum		no
+csx-point-of-rocks-day	11015482191530	Falconaire Pl	S1400	protective_action_zone	39.216204, -77.526493	766.9	junction	Prairie Merlin Ct	no
+csx-point-of-rocks-day	1104351231147	Featherbed Ln	S1400	protective_action_zone	39.231639, -77.586408	200.0	minimum		no
+csx-point-of-rocks-day	110512756589	Hickory Shade Ln	S1400	protective_action_zone	39.266404, -77.578546	34.0	line_end		no
+csx-point-of-rocks-day	110512756589	Hickory Shade Ln	S1400	protective_action_zone	39.267989, -77.578187	328.1	junction	Mullein Ln	no
+csx-point-of-rocks-day	110512755645	James Monroe Hwy	S1200	protective_action_zone	39.217253, -77.53415	322.9	junction	Demory Ter	yes
+csx-point-of-rocks-day	110511129116	Kanawha Ave	S1400	protective_action_zone	39.275289, -77.537176	222.0	junction	Ballenger Creek Pike	no
+csx-point-of-rocks-day	110511129118	Kanawha Ave E	S1400	protective_action_zone	39.274889, -77.534256	120.7	line_end		no
+csx-point-of-rocks-day	1104345541178	Lovettsville Rd	S1400	protective_action_zone	39.277593, -77.553983	754.5	junction	Beech Grove Ln	no
+csx-point-of-rocks-day	1104374693196	Loyalty Rd	S1400	protective_action_zone	39.22405, -77.583738	389.3	junction	Tarleton Dr	no
+csx-point-of-rocks-day	1104345657338	Lucketts Rd	S1400	protective_action_zone	39.216843, -77.531159	327.5	junction	James Monroe Hwy	no
+csx-point-of-rocks-day	1104345657338	Lucketts Rd	S1400	protective_action_zone	39.225987, -77.513603	200.0	minimum		no
+csx-point-of-rocks-day	1104345615888	Newvalley Church Rd	S1400	protective_action_zone	39.21906, -77.547331	415.1	junction	Rosefinch Cir	no
+csx-point-of-rocks-day	11030539180421	Rock Hall Rd	S1400	protective_action_zone	39.273663, -77.525308	265.7	junction	Clay St	no
+csx-point-of-rocks-day	110512751868	Rosefinch Cir	S1400	protective_action_zone	39.21938, -77.549667	374.1	junction	Woodstar Ct	no
+csx-point-of-rocks-day	1104345602498	St Clair Ln	S1400	protective_action_zone	39.237417, -77.511006	282.0	junction	Elysian Dr	no
+csx-point-of-rocks-day	1104470498183	State Hwy 28	S1200	protective_action_zone	39.274405, -77.530725	246.7	junction	unnamed line 110511180262	yes
+csx-point-of-rocks-day	1104363577081	State Rte 658	S1400	protective_action_zone	39.237417, -77.511006	282.0	junction	Elysian Dr	no
+csx-point-of-rocks-day	1106087426545	State Rte 661	S1400	protective_action_zone	39.219136, -77.51516	944.2	junction	Charles Ln	no
+csx-point-of-rocks-day	1106087436312	State Rte 662	S1400	protective_action_zone	39.216843, -77.531159	327.5	junction	James Monroe Hwy	no
+csx-point-of-rocks-day	1106087436312	State Rte 662	S1400	protective_action_zone	39.225987, -77.513603	200.0	minimum		no
+csx-point-of-rocks-day	1104428253960	State Rte 663	S1400	protective_action_zone	39.253861, -77.581383	200.0	minimum		no
+csx-point-of-rocks-day	1104428253960	State Rte 663	S1400	protective_action_zone	39.21906, -77.547331	415.1	junction	Rosefinch Cir	no
+csx-point-of-rocks-day	1104374972057	State Rte 665	S1400	protective_action_zone	39.22405, -77.583738	389.3	junction	Tarleton Dr	no
+csx-point-of-rocks-day	1104351230637	State Rte 667	S1400	protective_action_zone	39.276937, -77.576164	434.8	junction	Ridgefield Ln	no
+csx-point-of-rocks-day	1104432452879	State Rte 668	S1400	protective_action_zone	39.259973, -77.58	352.3	junction	Booth Rd	no
+csx-point-of-rocks-day	1104345643070	State Rte 672	S1400	protective_action_zone	39.277593, -77.553983	754.5	junction	Beech Grove Ln	no
+csx-point-of-rocks-day	1104692086510	State Rte 673	S1400	protective_action_zone	39.231639, -77.586408	200.0	minimum		no
+csx-point-of-rocks-day	110512757323	Sycamore Vista Ln	S1400	protective_action_zone	39.273041, -77.577045	826.4	junction	State Rte 668	no
+csx-point-of-rocks-day	110512757328	Taylors Valley Ln	S1400	protective_action_zone	39.260176, -77.579954	11.8	line_end		no
+csx-point-of-rocks-day	1104433360836	Taylorstown Rd	S1400	protective_action_zone	39.259973, -77.58	352.3	junction	Booth Rd	no
+csx-point-of-rocks-day	1104484208233	US Hwy 15	S1200	protective_action_zone	39.275788, -77.540811	200.0	minimum		yes
+csx-point-of-rocks-day	110512742756	US Hwy 15	S1200	protective_action_zone	39.217253, -77.53415	322.9	junction	Demory Ter	yes
+csx-point-of-rocks-day	1104345584497	Yakey Ln	S1400	protective_action_zone	39.276937, -77.576164	434.8	junction	Ridgefield Ln	no
+csx-point-of-rocks-day	1104782824263	unnamed	S1400	protective_action_zone	39.2764, -77.545283	200.0	minimum		no
+csx-point-of-rocks-day	110511165392	unnamed	S1400	protective_action_zone	39.258433, -77.506232	200.0	minimum		no
+csx-point-of-rocks-day	110511173374	unnamed	S1400	protective_action_zone	39.272077, -77.513734	122.9	line_end		no
+csx-point-of-rocks-day	110512820129	unnamed	S1400	protective_action_zone	39.219907, -77.553509	32.1	line_end		no
+csx-point-of-rocks-day	1106073059236	unnamed	S1400	protective_action_zone	39.24205, -77.584054	200.0	minimum		no
+csx-point-of-rocks-night	1106081477065	Ballenger Creek Pike	S1400	initial_isolation_zone	39.282877, -77.532582	388.9	junction	Lockhouse Dr	no
+csx-point-of-rocks-night	1105598231773	Brookshire Run	S1400	initial_isolation_zone	39.282462, -77.531897	80.2	line_end		no
+csx-point-of-rocks-night	1103670549835	Canal Run Ct	S1400	initial_isolation_zone	39.279046, -77.528705	52.3	line_end		no
+csx-point-of-rocks-night	1103689658386	Canal Run Dr	S1400	initial_isolation_zone	39.281526, -77.530683	200.0	minimum		no
+csx-point-of-rocks-night	1103689658386	Canal Run Dr	S1400	initial_isolation_zone	39.280644, -77.529806	383.4	junction	Conrads Ferry Dr	no
+csx-point-of-rocks-night	1103732722305	Cassidy Ct	S1400	initial_isolation_zone	39.283144, -77.533087	115.6	line_end		no
+csx-point-of-rocks-night	1104483533878	Clay St	S1200	initial_isolation_zone	39.27549, -77.527817	267.4	junction	unnamed line 110511170580	yes
+csx-point-of-rocks-night	1103663982201	Ferry Hill Ct	S1400	initial_isolation_zone	39.280524, -77.529708	4.0	line_end		no
+csx-point-of-rocks-night	1104351232855	Furnace Mountain Rd	S1400	initial_isolation_zone	39.271209, -77.549512	200.0	minimum		no
+csx-point-of-rocks-night	110512755645	James Monroe Hwy	S1200	initial_isolation_zone	39.267754, -77.545084	696.1	junction	Myersville Ln	yes
+csx-point-of-rocks-night	1104345541178	Lovettsville Rd	S1400	initial_isolation_zone	39.271433, -77.549662	200.0	minimum		no
+csx-point-of-rocks-night	1103670548757	Misty Hollow Rd	S1400	initial_isolation_zone	39.279826, -77.529177	28.4	line_end		no
+csx-point-of-rocks-night	1104470498183	State Hwy 28	S1200	initial_isolation_zone	39.27549, -77.527817	267.4	junction	unnamed line 110511170580	yes
+csx-point-of-rocks-night	1104347189855	State Rte 665	S1400	initial_isolation_zone	39.271209, -77.549512	200.0	minimum		no
+csx-point-of-rocks-night	110512742756	US Hwy 15	S1200	initial_isolation_zone	39.267754, -77.545084	696.1	junction	Myersville Ln	yes
+csx-point-of-rocks-night	1104484208233	US Hwy 15	S1200	initial_isolation_zone	39.283588, -77.53407	200.0	minimum		yes
+csx-point-of-rocks-night	1104782824263	unnamed	S1400	initial_isolation_zone	39.281693, -77.54792	200.0	minimum		no
+csx-point-of-rocks-night	110511165392	unnamed	S1400	initial_isolation_zone	39.270905, -77.529521	200.0	minimum		no
+csx-point-of-rocks-night	110511180265	unnamed	S1400	initial_isolation_zone	39.275699, -77.527817	77.4	line_end		no
+csx-point-of-rocks-night	110511180270	unnamed	S1400	initial_isolation_zone	39.277231, -77.528006	47.0	line_end		no
+csx-point-of-rocks-night	11035781099950	Anita Ln	S1400	protective_action_zone	39.264425, -77.564256	142.4	line_end		no
+csx-point-of-rocks-night	1104351234922	Bald Hill Rd	S1400	protective_action_zone	39.227266, -77.577092	461.0	junction	Loyalty Rd	no
+csx-point-of-rocks-night	1106081477065	Ballenger Creek Pike	S1400	protective_action_zone	39.275409, -77.539778	210.4	junction	Maple Ave	no
+csx-point-of-rocks-night	110467109795	Big Woods Rd	S1400	protective_action_zone	39.217978, -77.423139	258.7	junction	State Hwy 28	no
+csx-point-of-rocks-night	110467109795	Big Woods Rd	S1400	protective_action_zone	39.214292, -77.421033	200.0	minimum		no
+csx-point-of-rocks-night	1104485016076	Buckeystown Pike	S1200	protective_action_zone	39.274908, -77.465324	405.9	junction	unnamed line 1109096562119	yes
+csx-point-of-rocks-night	110511127154	Canal Rd	S1400	protective_action_zone	39.273888, -77.543167	200.0	minimum		no
+csx-point-of-rocks-night	1103689658386	Canal Run Dr	S1400	protective_action_zone	39.280181, -77.529143	248.8	junction	Conrads Ferry Dr	no
+csx-point-of-rocks-night	110512755370	Carter Ridge Ln	S1400	protective_action_zone	39.203423, -77.559388	200.0	minimum		no
+csx-point-of-rocks-night	1106068091704	Catoctin Springs Ct	S1400	protective_action_zone	39.19525, -77.55332	200.0	minimum		no
+csx-point-of-rocks-night	1104483533878	Clay St	S1200	protective_action_zone	39.274608, -77.541561	26.1	line_end		yes
+csx-point-of-rocks-night	1103732810335	Conrads Ferry Dr	S1400	protective_action_zone	39.280794, -77.527776	228.1	junction	Greysens Ferry Ct	no
+csx-point-of-rocks-night	110512748886	Daleview Ln	S1400	protective_action_zone	39.199449, -77.556437	316.9	junction	Lauren Hill Ct	no
+csx-point-of-rocks-night	110467123687	Dickerson Church Rd	S1400	protective_action_zone	39.220052, -77.424676	225.0	junction	Dickerson School Rd	no
+csx-point-of-rocks-night	1103701410154	Dickerson Rd	S1200	protective_action_zone	39.253198, -77.449237	784.6	junction	Park Mills Rd	yes
+csx-point-of-rocks-night	1103701410155	Dickerson Rd	S1200	protective_action_zone	39.20938, -77.431984	354.9	junction	unnamed line 110467141786	yes
+csx-point-of-rocks-night	1103701410155	Dickerson Rd	S1200	protective_action_zone	39.219739, -77.424444	575.8	junction	Mouth of Monocacy Rd	yes
+csx-point-of-rocks-night	1104427949370	Downey Mill Rd	S1400	protective_action_zone	39.253908, -77.587691	433.5	junction	Booth Rd	no
+csx-point-of-rocks-night	1103670549177	Fletchers Way	S1400	protective_action_zone	39.282152, -77.52475	82.8	line_end		no
+csx-point-of-rocks-night	1104351232855	Furnace Mountain Rd	S1400	protective_action_zone	39.266949, -77.558631	200.0	minimum		no
+csx-point-of-rocks-night	11030539180593	Gibbons Rd	S1400	protective_action_zone	39.279352, -77.530991	224.1	junction	Wise Rd	no
+csx-point-of-rocks-night	110511131638	Greenfield Rd	S1400	protective_action_zone	39.259371, -77.453811	403.1	junction	unnamed line 1109096561506	no
+csx-point-of-rocks-night	110512755645	James Monroe Hwy	S1200	protective_action_zone	39.173656, -77.537285	461.3	junction	Rocky Meadow Ln	yes
+csx-point-of-rocks-night	110511129116	Kanawha Ave	S1400	protective_action_zone	39.275735, -77.539051	50.8	line_end		no
+csx-point-of-rocks-night	11035781100370	Limestone School Rd	S1400	protective_action_zone	39.172312, -77.536287	50.3	line_end		no
+csx-point-of-rocks-night	1103732810119	Lockhouse Dr	S1400	protective_action_zone	39.281585, -77.526014	353.4	junction	Fletchers Dr	no
+csx-point-of-rocks-night	1104345541178	Lovettsville Rd	S1400	protective_action_zone	39.271171, -77.549222	200.0	minimum		no
+csx-point-of-rocks-night	1104374693196	Loyalty Rd	S1400	protective_action_zone	39.232357, -77.580873	391.6	junction	Featherbed Ln	no
+csx-point-of-rocks-night	1105581275777	Malvosin Pl	S1400	protective_action_zone	39.182069, -77.543532	103.8	line_end		no
+csx-point-of-rocks-night	110467118430	Martinsburg Rd	S1400	protective_action_zone	39.194095, -77.46606	200.0	minimum		no
+csx-point-of-rocks-night	110467118430	Martinsburg Rd	S1400	protective_action_zone	39.195582, -77.462745	880.7	junction	unnamed line 110467141459	no
+csx-point-of-rocks-night	110467118430	Martinsburg Rd	S1400	protective_action_zone	39.203519, -77.445051	811.9	junction	unnamed line 110467141460	no
+csx-point-of-rocks-night	110467118430	Martinsburg Rd	S1400	protective_action_zone	39.204718, -77.442379	620.3	junction	Darnestown Rd	no
+csx-point-of-rocks-night	1104345539333	Montresor Rd	S1400	protective_action_zone	39.191479, -77.550519	509.2	junction	Beningbrough Pl	no
+csx-point-of-rocks-night	1104345539333	Montresor Rd	S1400	protective_action_zone	39.174764, -77.538108	226.0	junction	Ripkin Way	no
+csx-point-of-rocks-night	110467123873	Mouth of Monocacy Rd	S1400	protective_action_zone	39.224938, -77.428297	475.7	junction	Nicholson Farm Rd	no
+csx-point-of-rocks-night	1103735779713	New Design Rd	S1400	protective_action_zone	39.28169, -77.470349	214.3	junction	unnamed line 110511172533	no
+csx-point-of-rocks-night	110511133011	Pleasant View Rd	S1400	protective_action_zone	39.297702, -77.490098	440.5	junction	Bald Hill Rd	no
+csx-point-of-rocks-night	1105045438550	River Farm Ln	S1400	protective_action_zone	39.169509, -77.520871	200.0	minimum		no
+csx-point-of-rocks-night	110512755947	Rocky Meadow Ln	S1400	protective_action_zone	39.169833, -77.534447	158.9	line_end		no
+csx-point-of-rocks-night	1104470498183	State Hwy 28	S1200	protective_action_zone	39.274608, -77.541561	26.1	line_end		yes
+csx-point-of-rocks-night	1104470498183	State Hwy 28	S1200	protective_action_zone	39.253198, -77.449237	784.6	junction	Park Mills Rd	yes
+csx-point-of-rocks-night	1104485247509	State Hwy 28	S1200	protective_action_zone	39.20938, -77.431984	354.9	junction	unnamed line 110467141786	yes
+csx-point-of-rocks-night	1104485247509	State Hwy 28	S1200	protective_action_zone	39.219739, -77.424444	575.8	junction	Mouth of Monocacy Rd	yes
+csx-point-of-rocks-night	1104484397405	State Hwy 85	S1200	protective_action_zone	39.274908, -77.465324	405.9	junction	unnamed line 1109096562119	yes
+csx-point-of-rocks-night	1104345583916	State Rte 661	S1400	protective_action_zone	39.191479, -77.550519	509.2	junction	Beningbrough Pl	no
+csx-point-of-rocks-night	1104345583916	State Rte 661	S1400	protective_action_zone	39.174764, -77.538108	226.0	junction	Ripkin Way	no
+csx-point-of-rocks-night	1106087426545	State Rte 661	S1400	protective_action_zone	39.172312, -77.536287	50.3	line_end		no
+csx-point-of-rocks-night	1106087436312	State Rte 662	S1400	protective_action_zone	39.208508, -77.563164	515.1	junction	Melrose Spring Ln	no
+csx-point-of-rocks-night	1104428253960	State Rte 663	S1400	protective_action_zone	39.253908, -77.587691	433.5	junction	Booth Rd	no
+csx-point-of-rocks-night	1104374972057	State Rte 665	S1400	protective_action_zone	39.232357, -77.580873	391.6	junction	Featherbed Ln	no
+csx-point-of-rocks-night	1104347189855	State Rte 665	S1400	protective_action_zone	39.266949, -77.558631	200.0	minimum		no
+csx-point-of-rocks-night	1104432452879	State Rte 668	S1400	protective_action_zone	39.257695, -77.579253	280.4	junction	Taylors Valley Ln	no
+csx-point-of-rocks-night	1104345581219	State Rte 673	S1400	protective_action_zone	39.227266, -77.577092	461.0	junction	Loyalty Rd	no
+csx-point-of-rocks-night	110512757834	Stoneburner Mill Ln	S1400	protective_action_zone	39.252614, -77.590576	693.3	junction	unnamed line 110512820038	no
+csx-point-of-rocks-night	1104345615076	Stumptown Rd	S1400	protective_action_zone	39.208508, -77.563164	515.1	junction	Melrose Spring Ln	no
+csx-point-of-rocks-night	110512757328	Taylors Valley Ln	S1400	protective_action_zone	39.259612, -77.57498	457.4	junction	State Rte 668	no
+csx-point-of-rocks-night	110512757328	Taylors Valley Ln	S1400	protective_action_zone	39.260385, -77.573258	200.0	minimum		no
+csx-point-of-rocks-night	1104433360836	Taylorstown Rd	S1400	protective_action_zone	39.257695, -77.579253	280.4	junction	Taylors Valley Ln	no
+csx-point-of-rocks-night	110511128523	Thomas Dr	S1400	protective_action_zone	39.278673, -77.532504	32.0	line_end		no
+csx-point-of-rocks-night	110511127005	Tuck Ave	S1400	protective_action_zone	39.276555, -77.537224	165.5	line_end		no
+csx-point-of-rocks-night	1104484208233	US Hwy 15	S1200	protective_action_zone	39.273549, -77.543922	226.5	junction	Clay St	yes
+csx-point-of-rocks-night	110512742756	US Hwy 15	S1200	protective_action_zone	39.173656, -77.537285	461.3	junction	Rocky Meadow Ln	yes
+csx-point-of-rocks-night	110512757682	Waterford Woods Ct	S1400	protective_action_zone	39.21047, -77.564621	129.8	line_end		no
+csx-point-of-rocks-night	110511127025	Wise Rd	S1400	protective_action_zone	39.27852, -77.532844	206.9	junction	Pippins Pl	no
+csx-point-of-rocks-night	1104483532184	unnamed	S1630	protective_action_zone	39.274528, -77.54174	200.0	minimum		no
+csx-point-of-rocks-night	1104483532185	unnamed	S1630	protective_action_zone	39.27465, -77.541469	200.0	minimum		no
+csx-point-of-rocks-night	1104483920536	unnamed	S1400	protective_action_zone	39.253189, -77.44923	0.7	line_end		no
+csx-point-of-rocks-night	110467141013	unnamed	S1400	protective_action_zone	39.209502, -77.431713	200.0	minimum		no
+csx-point-of-rocks-night	110467141785	unnamed	S1400	protective_action_zone	39.205149, -77.441417	27.6	line_end		no
+csx-point-of-rocks-night	110467141786	unnamed	S1400	protective_action_zone	39.207894, -77.435297	119.8	line_end		no
+csx-point-of-rocks-night	110511165297	unnamed	S1400	protective_action_zone	39.270671, -77.462184	200.0	minimum		no
+csx-point-of-rocks-night	110511165311	unnamed	S1400	protective_action_zone	39.28471, -77.519051	595.6	junction	Ballenger Creek Pike	no
+csx-point-of-rocks-night	110511168382	unnamed	S1400	protective_action_zone	39.289657, -77.508025	752.0	junction	Ballenger Creek Pike	no
+csx-point-of-rocks-night	110511170731	unnamed	S1400	protective_action_zone	39.293348, -77.4998	228.1	junction	unnamed line 110511167048	no
+csx-point-of-rocks-night	110511170748	unnamed	S1400	protective_action_zone	39.289207, -77.475919	219.8	junction	unnamed line 110511172560	no
+csx-point-of-rocks-night	110511171467	unnamed	S1400	protective_action_zone	39.25361, -77.449542	44.7	line_end		no
+csx-point-of-rocks-night	110511172533	unnamed	S1400	protective_action_zone	39.283697, -77.471836	178.4	line_end		no
+csx-point-of-rocks-night	110511174537	unnamed	S1400	protective_action_zone	39.273242, -77.464089	200.0	minimum		no
+csx-point-of-rocks-night	110511175028	unnamed	S1400	protective_action_zone	39.235661, -77.436242	190.5	line_end		no
+csx-point-of-rocks-night	110511179827	unnamed	S1400	protective_action_zone	39.232355, -77.433792	83.7	line_end		no
+csx-point-of-rocks-night	110511179842	unnamed	S1400	protective_action_zone	39.238114, -77.43806	172.5	line_end		no
+csx-point-of-rocks-night	110512820349	unnamed	S1400	protective_action_zone	39.232289, -77.580822	6.5	line_end		no
+csx-point-of-rocks-night	1109096561045	unnamed	S1400	protective_action_zone	39.234082, -77.435072	180.4	line_end		no

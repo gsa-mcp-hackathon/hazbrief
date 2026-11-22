@@ -1,0 +1,12 @@
+# decisions: lines lifted from the decision register
+
+Lifted by `lift_results.py (a build tool held privately)` (HB-213) from the decision register, held privately with the rest of the working
+record. The TEVV page's conditions table (`src/hazbrief/brief/conditions.yaml`) rests rows on these lines, and
+the register lines name every decision its rows rest on. Each line is quoted verbatim with its line number.
+
+- line 353:   - amended by hazbrief-mcp:HBD-375 (cc:HB-167, 2026-11-12): SCICHEM: Amended by HBD-375 (HB-167, DN-028): SCICHEM's gate is passed. It builds with gfortran in the models image and matches EPRI's Intel build within 1 percent; its dense-gas option runs; the licence is the declared BSD of EPRI's SourceForge page, the repository still holding no licence file. It is the engine for a dense release.
+- line 737: - **hazbrief-mcp:HBD-375** SCICHEM (EPRI SCICHEM 3.4, commit 156625ef, built in the models image with eleven patches) is the engine for a release HB-163's rule classes as dense; HBD-191's gate is passed.
+- line 881:   - amended by hazbrief-mcp:HBD-447 (cc:HB-189, 2026-11-16): SLAB's area together with SCICHEM's: Amended by DN-028 ADDENDUM-14 decisions 2 and 6 (HB-189): under the stable treatment each level's planning area is the moving cloud's area over the horizon together with SLAB's time-bounded area outside it; the parts are kept and their roles swapped.
+- line 884:   - amended by hazbrief-mcp:HBD-447 (cc:HB-189, 2026-11-16): SLAB's part filled, the turned part dashed: Reversed by DN-028 ADDENDUM-14 decision 6 (HB-189): the moving cloud's part is filled in the level's colour and SLAB's part outside it is the dashed outline with no fill, an extent check on one wind with no times.
+- line 900: - **hazbrief-mcp:HBD-444** Under the stable treatment SCICHEM is run at a 1.25 m vertical setting with the domain top at 250 m, as configuration; the page states the setting as an approximation with its cost from HB-187's tables (areas at hour 1 0.83 to 0.91 of the finest run held, arrivals within 360 s in the first hour and 720 s overall), that no setting is converged and that every setting reads below the measured trials; no factor is applied to any concentration.
+- line 906: - **hazbrief-mcp:HBD-447** A level's planning area under the stable treatment is the moving cloud's area over the horizon, filled in the level's colour, together with SLAB's time-bounded area outside it, a dashed outline with no fill labelled as an extent check on one wind with no times; the two are told apart without colour.

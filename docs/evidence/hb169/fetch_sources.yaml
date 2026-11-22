@@ -1,0 +1,121 @@
+# HB-169 Part A item 1: the published chlorine railcar comparison and its companions, fetched at rung 1 with this file
+# as the fetcher's source list (the HB-100 / HB-152 route), because a corpus/sources.yaml row cannot land until an
+# ingest runs and the corpus graph (held privately) is not in this task's Touches. The rows are the drafts for that ingest. The log is
+# fetch_log.jsonl beside this file; the bytes are corpus/raw/<doc_id>.pdf (gitignored; copyrighted works are not
+# committed). URLs were located by web search on 2026-11-12; nothing was fetched except through this file.
+sources:
+  - doc_id: hanna-2008-psp-six-dense-gas-models-railcar
+    priority: 6
+    title: 'Comparison of six widely-used dense gas dispersion models for three recent chlorine railcar accidents'
+    publisher: 'Process Safety Progress 27(3), 248-259 (AIChE / Wiley)'
+    edition: '2008; Hanna, Dharmavaram, Zhang, Sykes, Witlox, Khajehnajafi and Koslan'
+    url: https://doi.org/10.1002/prs.10257
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    kb_reason: SCIPUFF and SLAB run by their own developers' teams on Festus, Macdona and Graniteville (HB-169 Part A).
+  - doc_id: hanna-2008-itm-six-dense-gas-models-railcar
+    priority: 6
+    title: 'Comparison of Six Widely-Used Dense Gas Dispersion Models for Three Actual Railcar Accidents'
+    publisher: 'Air Pollution Modeling and Its Application XIX (Springer), chapter 49'
+    edition: '2008'
+    url: https://doi.org/10.1007/978-1-4020-8453-9_49
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    kb_reason: The conference version of the 2008 comparison (HB-169 Part A).
+  - doc_id: hanna-2007-cbis-tic-emissions-slides
+    priority: 6
+    title: 'Estimating Emissions of Toxic Industrial Chemicals (TICs) Released as a Result of Accidents or Sabotage'
+    publisher: 'NDIA 2007 Chemical and Biological Information Systems (CBIS) conference, slides (Hanna, Lee, Belonger)'
+    edition: '2007-01-10'
+    url: https://ndia.dtic.mil/wp-content/uploads/2007/cbis/wednesday/hannaWed1130.pdf
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    kb_reason: Slides that show the six models on the three railcar accidents (HB-169 Part A).
+  - doc_id: ams-2008-132550-hanna-railcar-models
+    priority: 6
+    # The search result named this paper with the railcar comparison; as fetched it is Long, Zajaczkowski, Haupt and
+    # Peltier, "Examining various spatial scales of a hypothetical chlorine release on a college campus" (paper 3.4),
+    # which cites Hanna et al. (2007) for the Festus and Macdona masses. The doc_id is the fetch log's key and stays.
+    title: 'AMS 2008 paper 3.4 (Long et al., a hypothetical chlorine release on a college campus, HPAC/SCIPUFF and CFD)'
+    publisher: 'American Meteorological Society, annual meeting extended abstract'
+    edition: '2008'
+    url: https://ams.confex.com/ams/pdfpapers/132550.pdf
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    kb_reason: Cites the railcar comparison's release masses (Festus 21,792 kg, Macdona 54,480 kg) (HB-169 Part A).
+  - doc_id: ams-2009-146817-hanna-chicago-chlorine-sensitivity
+    priority: 6
+    title: 'AMS extended abstract 146817 (Hanna et al., a hypothetical Chicago chlorine railcar release; SCIPUFF and SLAB sensitivity runs)'
+    publisher: 'American Meteorological Society, 89th annual meeting extended abstract'
+    edition: '2009'
+    url: https://ams.confex.com/ams/pdfpapers/146817.pdf
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    kb_reason: SCIPUFF and SLAB sensitivity to wind speed, roughness, stability and deposition (HB-169 Part A).
+  - doc_id: ams-2011-186566-hanna-dense-gas-poster
+    priority: 6
+    title: 'AMS 2011 poster P1.27 (dense gas), manuscript 186566'
+    publisher: 'American Meteorological Society, 91st annual meeting'
+    edition: '2011'
+    url: https://ams.confex.com/ams/91Annual/webprogram/Manuscript/Paper186566/P127%20AAPM%20Dense%20Gas%202011%20Final.pdf
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    kb_reason: A later Hanna dense gas manuscript that returned with the railcar comparison in the search (HB-169 Part A).
+  - doc_id: hanna-chang-2008-gaps-tic-model-systems
+    priority: 6
+    title: 'Gaps in Toxic Industrial Chemical (TIC) Model Systems'
+    publisher: 'Hrcak (Croatian scientific journals portal), Hanna and Chang'
+    edition: '2008-12-12'
+    url: https://hrcak.srce.hr/file/96099
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    kb_reason: Hanna's account of where the railcar model estimates exceeded what was observed (HB-169 Part A).
+  - doc_id: hanna-2016-ae-jack-rabbit-lyme-bay
+    priority: 6
+    title: 'Hanna et al. 2016, Atmospheric Environment: chlorine concentrations in the Jack Rabbit I and Lyme Bay field experiments'
+    publisher: 'University of Delaware Environmental Fluids lab copy'
+    edition: '2016'
+    url: https://publicutility.ceoe.udel.edu/envfluids/assets/pdf/2016ae.pdf
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    kb_reason: The later summary of the six-model comparison and the field data at railcar scale (HB-169 Part A).
+  # doi.org's robots.txt redirects to www.doi.org, which is not on the task's Network line; the two DOI rows above
+  # were refused there (blocked_host). The publishers' own URLs are tried once each instead.
+  - doc_id: hanna-2008-psp-six-dense-gas-models-railcar-wiley
+    priority: 6
+    title: 'Comparison of six widely-used dense gas dispersion models for three recent chlorine railcar accidents (publisher PDF)'
+    publisher: 'Process Safety Progress 27(3), 248-259 (AIChE / Wiley)'
+    edition: '2008'
+    url: https://aiche.onlinelibrary.wiley.com/doi/pdf/10.1002/prs.10257
+    format: pdf
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    kb_reason: The 2008 paper at its publisher (HB-169 Part A); a paywall is not gone around.
+  - doc_id: hanna-2008-itm-six-dense-gas-models-railcar-springer
+    priority: 6
+    title: 'Comparison of Six Widely-Used Dense Gas Dispersion Models for Three Actual Railcar Accidents (publisher page)'
+    publisher: 'Air Pollution Modeling and Its Application XIX (Springer), chapter 49'
+    edition: '2008'
+    url: https://link.springer.com/chapter/10.1007/978-1-4020-8453-9_49
+    format: html
+    plan: fetch
+    route: deterministic
+    reuse: reference-only
+    kb_reason: The conference version at its publisher (HB-169 Part A).

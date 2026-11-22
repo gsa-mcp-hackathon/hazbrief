@@ -1,0 +1,71 @@
+HB-193 Part A item 1: main and worktree-witty-finding-whisper (HB-189), read 2026-11-16 ~19:10Z in worktree
+radiant-moseying-canyon. Read-only: git log / diff / reflog, the event log of the graph (held privately), the dispatcher's log
+($SELDON_PRIMARY_CHECKOUT/logs/seldon_dispatch.log) and seldon/commands/dispatch_worktree.py `_merge`.
+
+== Merge base ==
+git merge-base main worktree-witty-finding-whisper = 1240b17b132b0853769703a43bd64ae839fd6169
+  (13:37:32 EST, "record: kept_events_deduped f61999a7 — 1 line(s) written by dispatcher"): the dispatcher's own
+  commit in the merge round that was refused. The branch was rebased onto it by that round.
+
+== Commits since the base ==
+main (5, at f10255db when read):
+  e3904bc2 13:38:29 record: kept_events_deduped, dispatch_finished, ... worktree_kept, kept_events_reconciled ... (24 lines)
+  2bbba942 13:51:30 register: HB-193... (this task)
+  e60e916a 13:51:48 register: record of HB-193 (9 lines)
+  96230eaa 13:51:58 desktop: link_created (1 line)
+  f10255db 13:54:17 record: artifact_state_changed, artifact_updated, dispatch_launched 4d98aefe (4 lines)
+branch (31): HB-189's two sessions, linear (the first session's merge 6201037d was flattened by the dispatcher's
+  rebase), from 5dcfa090 (prior-art library search) to c10a7ecd (RESULT), then fa8fd4d2, the dispatcher's own
+  "dispatch: drop 3 event line(s) of HB-189 ... already reconciled into main (SEL-034, AD-038-R25)".
+
+== Files changed since the base ==
+main: 2 (the event log of the graph (held privately); HB-193)
+branch: 445
+both: 1 -- the event log of the graph (held privately) (merge=union in .gitattributes)
+No source, test, brief, hash list, register or manifest file changed on both sides.
+
+== What the merge round did (dispatch_finished 93965f23, 18:38:26Z: ff_refused, attempts 3) ==
+git's own words (payload.merge.stderr): "error: Your local changes to the following files would be overwritten by
+merge: the event log of the graph (held privately)".
+
+The branch reflog and main's log give the round step by step (times EST):
+  13:34:41  f7fefe89  HB-189's session's last commit (its RESULT). Kept as branch hb189-session-tip by this task,
+                      because the RESULT cites 32235bb5 and 6201037d, which only that tip still reaches.
+  13:35:52  rebase onto 8eb45a75 (main then)                         -> 885e3704; the three ids below held once each
+  13:35:54  main 9d8c7b2e  record: ... stop_gate (17 lines)           = attempt 1, `_record_journals` under the lease
+  13:36:36  rebase onto 9d8c7b2e -> 864cf918: the three ids held TWICE; dedupe() commits e9598be1 dropping them
+  18:36:39Z kept_events_deduped cffcdf74 written to MAIN's store, after the journal commit -> store dirty
+            merge --ff-only refused (1)
+  13:36:43  main 1573cbc2  record: kept_events_deduped (1 line)       = attempt 2's journal commit
+  13:37:22  rebase onto 1573cbc2 -> 8f5d7ab3: TWICE again; dedupe() commits 3891cff2
+  18:37:25Z kept_events_deduped 569e07ce written to main's store -> dirty; ff refused (2)
+  13:37:32  main 1240b17b  record: kept_events_deduped (1 line)       = attempt 3's journal commit
+  13:38:15  rebase onto 1240b17b -> c10a7ecd: TWICE again; dedupe() commits fa8fd4d2 (the branch's tip now)
+  18:38:19Z kept_events_deduped 7175298e written to main's store -> dirty; ff refused (3); merge_attempts = 3
+  13:38:29  main e3904bc2 commits 7175298e with dispatch_finished and the rest (24 lines)
+
+Counts of the three ids at each revision (tools/events_diff.py trace):
+  rev        30730309 b1ab2033 dfa7ae1e
+  9e977247^  2 2 2     HB-189's own tree before its hand edit
+  9e977247   1 1 1     HB-189's hand edit (Part D item 15) removed the later copy of each
+  f7fefe89   1 1 1     HB-189's session tip
+  885e3704   1 1 1
+  864cf918   2 2 2     after the round's rebase onto 9d8c7b2e
+  e9598be1   1 1 1     dedupe
+  8f5d7ab3   2 2 2     after the rebase onto 1573cbc2
+  3891cff2   1 1 1     dedupe
+  c10a7ecd   2 2 2     after the rebase onto 1240b17b
+  fa8fd4d2   1 1 1     dedupe (branch tip)
+  main       1 1 1
+
+== Cause ==
+Not a conflict of content. In each attempt the round, under its lease, committed main's store (`_record_journals`),
+which moved main by a housekeeping commit; it then rebased the branch over that commit. git's union driver, replaying
+HB-189's commits that first wrote the three reconciled events, put back the copies HB-189 had removed by hand, so
+`dedupe()` dropped them again and appended a `kept_events_deduped` line to main's store. That line was written after
+the store was committed and before `git merge --ff-only`, and the branch also changes the event log of the graph (held privately), so git
+refused to overwrite the dirty file. The next attempt committed that line, which moved main again, and the cycle
+repeated until merge_attempts (3) ran out. Main moving during the session (Desktop's handoff, filings) only set the
+first rebase going. Which replayed commit restores the copies (HB-189's hand removal 9e977247, the dispatcher's own
+drop commits, or the commits that wrote the lines) is not isolated here; the counts above show only that every
+rebase of this branch restored them.

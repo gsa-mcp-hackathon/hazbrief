@@ -1,0 +1,822 @@
+# docs/sources/catalog.yaml: the source catalog (DN-010 section 3.2, HB-39). THE ONE PLACE A HORIZON LIVES.
+#
+# One row per source the seven tools read. Seeded from HB-06's API access catalog (corpus/api_catalog.yaml,
+# HB-06); `api_catalog` names the row each one comes from, and
+# terms and rate limits are condensed from it (the full quotes stay there). A pack, a cached file and a computation
+# are rows too, because a value read from them carries a label like any other (DN-010 D4).
+#
+# horizon_s: how long a value from this source holds before its label reads stale (DN-010 D4: stale when
+#   now - as_of > horizon_s). null only for `computed`, a value derived from the request alone, which has no
+#   source to age.
+# horizon_reason:
+#   stated   - the source's own statement of its cadence or freshness, named in `horizon_basis`. A source that
+#              answers with Cache-Control max-age states its freshness lifetime (RFC 9111 section 4.2.1).
+#   assumed  - no held document states one; `horizon_basis` says what the number was chosen from.
+#   computed - no source; the value is a calculation (horizon_s null).
+# provenance_class (DN-010 D3): recorded_pack (a shipped pack or a cached file read in every mode), live_call
+#   (an upstream API call per request), derived_by_code (computed from the request).
+# name: the source as it names itself (SB-SEN-06), for the label and the evidence appendix.
+# endpoints: url prefixes; an upstream exchange (fixtures/exchanges) belongs to the one row whose prefix it
+#   starts with (test_source_catalog.py (a test held privately) checks every exchange maps to exactly one row).
+# tag_as: the phrases the tools' `basis` source tags use for it, when they differ from named_as (the label matches a tag
+#   to the row whose phrase is most specific: a row whose matching phrase another row's contains is not matched).
+# tools: the tools that read it. named_as: the phrases a tool's MCP description uses for it; the catalog test
+#   checks each listed tool's "Data source" paragraph names the row, and that every source the paragraph names has
+#   a row.
+# edition_as_of (every `kind: pack` row; HB-94, review L5-4): the date the held edition prints, "YYYY" when it
+#   prints only the year, else "YYYY-MM-DD". A pack value whose tag prints no date is labelled as of it, and its
+#   horizon counts from it. It is the edition's date of issue (DCAT `dcterms:issued`), not the instant the pack was
+#   built: a pack's `built_at` is build provenance and is printed nowhere as an as-of.
+# file_as_of (every `kind: file` row; HB-94, review L5-2): {path, field}, the dotted field of a committed file that
+#   holds the file's own as-of. A file value whose tag prints no date is labelled as of it. A file row never takes
+#   the as-of of the tool call that read it (`hazbrief.evidence.labels.label_for` refuses).
+# service_stated (optional; HB-94, review L5-3 ArcGIS half): {read_on, basis, values}. `values` are the fields that
+#   hold a date the service stated in its own description, read once on `read_on` and typed into config. A label
+#   whose as-of is one of those dates says so, with the read date, rather than a bare "as of"; the per-call read of
+#   the service description that would make it live is deferred (L5-3, post-submission).
+# verified_current (optional, `kind: pack` rows; HB-108): {record, checked_on, against, as_of}. The pack's edition was
+#   checked against a later held text of the same source (`against`, at point in time `as_of`) on `checked_on`, by a
+#   script whose record (`record`, a committed file) names every file it read with its sha256. A pack value whose tag
+#   prints no date is then labelled "current, checked against <against> as of <as_of>", with the record cited, and its
+#   horizon counts from `as_of`, the date the check shows the edition still the source's. The loader refuses a check
+#   whose text is not newer than the edition, whose record names another build of the pack (`pack_sha256`), a text
+#   other than `as_of`, or any row a fixture reads that differs between the edition and the text.
+
+schema_version: 1
+cited_in: hazbrief-mcp DN-010 s3.2
+seeded_from: corpus/api_catalog.yaml (HB-06)
+
+# Acronyms a "Data source" paragraph prints that are not sources (the catalog test's reverse check reads these).
+docstring_not_sources:
+  CENSUS_API_KEY: an environment variable the paragraph names as a requirement
+  URL: the signup URL the no-key error carries
+  CCN: the CMS Certification Number, the join key between two CMS files
+  FRA: the agency NTAD credits with its updates; the source read is BTS NTAD
+  USGS: the agency; each USGS source read has its own row (Structures, 3DHP)
+  CMS: the agency; each CMS file read has its own row
+  EMS: a facility type the Structures layers are listed by ("fire and EMS stations"), not a source
+  ID: the ERG ID number (UN or NA number) a material is resolved by, not a source
+
+# A tool whose paragraph inherits its components' sources ("Data sources: those tools' (...)"). A row it shares with a
+# component is named in that component's paragraph; a row it alone reads must be named in its own.
+composite_tools:
+  build_ics_201: [assess_incident, protective_action_footprint, population_at_risk, facilities_in_footprint,
+                  receiving_hospitals, material_response_guidance]
+
+# Packs under packs/ that no tool reads, so no record names them (the catalog test checks every pack is a row or here).
+packs_not_read:
+  vocabulary: "packs/vocabulary.json, the pack-side term list (HB-03), is loaded and verified at startup with every pack
+    (packs.default_packs), but no module reads its data (no `.vocabulary` access under src/hazbrief, HB-39). The
+    vocabulary the prompt and resources serve is docs/stylebook/VOCABULARY.yaml, not a pack."
+  # HB-207 (DN-029 ADDENDUM-00): read by a prompt, not by a tool, so it is no tool's source and moves no brief's view.
+  suggested_actions: "packs/suggested_actions.json, the suggested actions to consider (HB-207), is loaded and verified
+    at startup with every pack (packs.default_packs) and read only by the decision_support prompt, not by any tool;
+    each entry's quotation names its own held source."
+  # HB-66: the workbench puff's application packs (hazbrief.models.APP_PACK_MODELS). No tool reads them and the server
+  # never loads them (DN-009 section 2); the brief's first-order puff (derive.puff, HB-67) reads them through
+  # hazbrief.packs.load_app_pack, and its run record names each with its sha256 (the appendix's "Derived" table).
+  materials_properties: "packs/materials_properties.json, the puff's material classes, thresholds and molecular weights
+    (HB-66), and the source term's thermodynamics and each class's level of concern (HB-109), read by the brief's
+    derive.puff, not by any tool."
+  sigma_curves: "packs/sigma_curves.json, the Pasquill-Gifford curves from ISC3 Volume II (HB-66), read by the brief's
+    first-order puff, not by any tool."
+  release_scenarios: "packs/release_scenarios.json, EPA RMP's two release envelopes per container (HB-66), read by the
+    brief's derive.puff, not by any tool."
+  # HB-120: the fourth application pack. The brief's modelled channels name it with its sha256 in their run records.
+  release_routing: "packs/release_routing.json, every ERG guide routed to a release model or to no dispersion model
+    (HB-120), read by the brief's derive.puff and derive.dense_gas through hazbrief.brief.routing, not by any tool."
+  # HB-155: the fifth application pack. The brief's siting layer names its rules on each suggested point.
+  siting_rules: "packs/siting_rules.json, the rules that suggest the command post, triage and staging, each with its
+    held quote or operator record (HB-155, DN-023), read by the brief's hazbrief.brief.siting, not by any tool."
+
+sources:
+
+  # ── live APIs ─────────────────────────────────────────────────────────────────────────────────────────────
+  - id: nws:points
+    name: "National Weather Service, api.weather.gov points"
+    api_catalog: nws
+    kind: api
+    exchanges_api: nws
+    endpoints: ["https://api.weather.gov/points/"]
+    tools: [protective_action_footprint, build_ics_201]
+    readers: [hazbrief.brief]
+    named_as: ["National Weather Service", "NWS"]
+    tag_as: ["NWS api.weather.gov points"]
+    provenance_class: live_call
+    horizon_s: 86400
+    horizon_reason: stated
+    horizon_basis: "Cache-Control: public, max-age=86400 on every recorded /points response (fixtures/exchanges/nws)"
+    terms: "Public domain unless noted; no implied endorsement; logos not used (nws-disclaimer)."
+    rate_limit: "Not public; a limited request may be retried after about 5 s (nws-api-faq). User-Agent with a contact required."
+
+  - id: nws:stations
+    name: "National Weather Service observation stations near a gridpoint"
+    api_catalog: nws
+    kind: api
+    exchanges_api: nws
+    endpoints: ["https://api.weather.gov/gridpoints/"]
+    # The station list is `gridpoints/{cell}/stations`, under the forecast's prefix: this row is the more specific
+    # match (evidence/catalog.py `_specificity`).
+    path_suffix: /stations
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 86400
+    horizon_reason: stated
+    horizon_basis: "Cache-Control s-maxage=86400 on every recorded gridpoints/{cell}/stations response (HB-60; RFC 9111 s5.2.2.10: the shared-cache lifetime the origin states)"
+    terms: "Public domain unless noted; no implied endorsement (nws-disclaimer)."
+    rate_limit: "Not public; a limited request may be retried after about 5 s (nws-api-faq)."
+
+  - id: nws:observations
+    name: "National Weather Service station observations"
+    api_catalog: nws
+    kind: api
+    exchanges_api: nws
+    endpoints: ["https://api.weather.gov/stations/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 3600
+    horizon_reason: assumed
+    horizon_basis: "A METAR 'shall be transmitted at fixed intervals' (fmh1-2019 section 2.6.4, page 2-4), each station's schedule; the recorded observations/latest answers carry max-age 106 and s-maxage 300, which are cache times, not the observation's cadence. Taken as an hour, the routine report interval (HB-60)."
+    terms: "Public domain unless noted; no implied endorsement (nws-disclaimer)."
+    rate_limit: "Not public; a limited request may be retried after about 5 s (nws-api-faq)."
+    # HB-143: this row is the dataset `weather.source: observed` reads (orchestrator.yaml weather.observed.dataset), the
+    # manifest row the observed source needs before it stops refusing (HB-139). Its corpus/sources.yaml twin
+    # (nws-api-observations) is drafted in docs/evidence/hb143/deferred_corpus_rows.yaml until a corpus ingest lands it.
+    observed_dataset:
+      url: "https://api.weather.gov/stations/{stationId}/observations/latest"
+      station_list: "the observationStations url of https://api.weather.gov/points/{lat},{lon} (/gridpoints/{wfo}/{x},{y}/stations, 'a list of observation stations usable for a given 2.5km grid area', nws-api-openapi)"
+      licence: "A US Government work (17 U.S.C. 105): public domain unless noted; no implied endorsement (nws-disclaimer)"
+      update_cadence: "each station's own schedule: a METAR at fixed intervals (fmh1-2019 section 2.6.4), routinely hourly, with specials between"
+      held: "live: read per brief at its hour and recorded with the brief's exchanges (DN-011 D7), never a held document; a replayed brief reads its own records"
+
+  - id: nws:gridpoints
+    name: "National Weather Service gridpoint forecast"
+    api_catalog: nws
+    kind: api
+    exchanges_api: nws
+    endpoints: ["https://api.weather.gov/gridpoints/"]
+    tools: [protective_action_footprint, build_ics_201]
+    readers: [hazbrief.brief]
+    named_as: ["National Weather Service", "NWS"]
+    tag_as: ["NWS api.weather.gov gridpoint forecast"]
+    provenance_class: live_call
+    horizon_s: 3600
+    horizon_reason: stated
+    horizon_basis: "Cache-Control s-maxage=3600 on every recorded /gridpoints forecast response (max-age is 3600 too, except where the CDN in front of NWS answers with what remains: 3564 on BGM/79,27, HB-60; RFC 9111 s5.2.2.10); NWS documents no cadence (HB-06 premise 5)"
+    terms: "Public domain unless noted; no implied endorsement (nws-disclaimer)."
+    rate_limit: "Not public; a limited request may be retried after about 5 s (nws-api-faq)."
+
+  - id: census:dhc2020
+    name: "2020 Census DHC"
+    api_catalog: census_data
+    kind: api
+    exchanges_api: census
+    endpoints: ["https://api.census.gov/data/2020/dec/dhc"]
+    tools: [population_at_risk, build_ics_201]
+    named_as: ["Census DHC", "2020 Census DHC"]
+    provenance_class: live_call
+    horizon_s: 315576000
+    horizon_reason: stated
+    horizon_basis: "The decennial census, every 10 years (13 U.S.C. 141(a)); HB-06: the 2020 DHC is static. 10 x 365.25 days."
+    terms: 'Required notice: "This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau" (census-api-terms).'
+    rate_limit: "Up to 50 variables per query; no per-key rate published; a key is required on every data query (census-api-query-limits)."
+
+  - id: census:acs5
+    name: "ACS 2020-2024 5-year"
+    api_catalog: census_data
+    kind: api
+    exchanges_api: census
+    endpoints: ["https://api.census.gov/data/2024/acs/acs5"]
+    tools: [population_at_risk, build_ics_201]
+    named_as: ["ACS"]
+    provenance_class: live_call
+    horizon_s: 31557600
+    horizon_reason: stated
+    horizon_basis: "ACS 5-year estimates are released annually (HB-06: 2020-2024 released 2026-01-29). 365.25 days."
+    terms: 'Required notice: "This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau".'
+    rate_limit: "Up to 50 variables per query; a key is required."
+
+  - id: census:cre
+    name: "Community Resilience Estimates 2024"
+    api_catalog: census_data
+    kind: api
+    exchanges_api: census
+    endpoints: ["https://api.census.gov/data/2024/cre"]
+    tools: [population_at_risk, build_ics_201]
+    named_as: ["Community Resilience Estimates", "CRE"]
+    provenance_class: live_call
+    horizon_s: 31557600
+    horizon_reason: stated
+    horizon_basis: "CRE is published annually (HB-06: the 2024 dataset, modified 2025-11-26). 365.25 days."
+    terms: 'Required notice: "This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau".'
+    rate_limit: "Up to 50 variables per query; a key is required."
+
+  - id: tigerweb:census2020
+    name: "TIGERweb Census 2020 tabulation geography"
+    api_catalog: tigerweb
+    kind: api
+    exchanges_api: tigerweb
+    endpoints: ["https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/"]
+    tools: [population_at_risk, build_ics_201]
+    named_as: ["TIGERweb 2020 tabulation", "TIGERweb"]
+    tag_as: ["TIGERweb Census 2020"]
+    provenance_class: live_call
+    horizon_s: 315576000
+    service_stated:  # HB-94 (review L5-3, ArcGIS half deferred): a date the service stated, read once
+      read_on: "2026-10-21"
+      basis: "population_sources.yaml tigerweb: the service's own listing (?f=json, 2026-10-21)"
+      values: [{path: src/hazbrief/population_sources.yaml, field: tigerweb.as_of}]
+    horizon_reason: assumed
+    horizon_basis: "The 2020 tabulation geography (\"January 1, 2020 vintage\") is the decennial count's; no cadence is stated for the service. Taken as the decennial cycle, 10 x 365.25 days."
+    terms: 'Service copyright text "Source: U.S. Census Bureau"; the Census developer terms (census-api-terms).'
+    rate_limit: "None published; maxRecordCount 100,000."
+
+  - id: tigerweb:current
+    name: "TIGERweb Census Current"
+    api_catalog: tigerweb
+    kind: api
+    exchanges_api: tigerweb
+    endpoints:
+      - "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/"
+      - "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/"
+    tools: [build_ics_201]
+    named_as: ["TIGERweb"]
+    tag_as: ["TIGERweb Census Current", "TIGERweb Transportation"]
+    provenance_class: live_call
+    horizon_s: 31557600
+    service_stated:  # HB-94 (review L5-3, ArcGIS half deferred): a date the service stated, read once
+      read_on: "2026-10-20"
+      basis: "ics201.yaml place: the held service description (tigerweb-current-mapserver, fetched 2026-10-20, corpus/fetch_log.jsonl)"
+      values: [{path: src/hazbrief/ics201.yaml, field: place.vintage}]
+    horizon_reason: assumed
+    horizon_basis: "HB-06: \"Annual vintage in practice; not stated as a cadence\" (\"January 1, 2026 vintage\"). 365.25 days."
+    terms: 'Service copyright text "Source: U.S. Census Bureau".'
+    rate_limit: "None published; maxRecordCount 100,000."
+
+  - id: usgs_structures
+    name: "USGS National Structures Dataset"
+    api_catalog: usgs_structures
+    kind: api
+    exchanges_api: usgs_structures
+    endpoints: ["https://carto.nationalmap.gov/arcgis/rest/services/structures/"]
+    tools: [facilities_in_footprint, receiving_hospitals, build_ics_201]
+    named_as: ["USGS National Structures Dataset", "USGS Structures"]
+    provenance_class: live_call
+    horizon_s: 7889400
+    service_stated:  # HB-94 (review L5-3, ArcGIS half deferred): a date the service stated, read once
+      read_on: "2026-10-21"
+      basis: "facilities_sources.yaml header: read from the service's own description on 2026-10-21 (logs/2026-10-21_HB-10_probe.log)"
+      values: [{path: src/hazbrief/facilities_sources.yaml, field: structures.as_of}]
+    horizon_reason: stated
+    horizon_basis: "HB-06: \"Quarterly refresh targeted (USGS FAQ, snippet)\"; the service states its refresh (\"Data Refreshed October, 2026\"). A quarter, 365.25 / 4 days."
+    terms: 'USGS-produced data are U.S. public domain; credit "U.S. Geological Survey" (usgs-copyrights-credits).'
+    rate_limit: "None published; maxRecordCount 2,000."
+
+  - id: usgs_3dhp
+    name: "USGS 3D Hydrography Program (3DHP)"
+    api_catalog: usgs_3dhp
+    kind: api
+    exchanges_api: usgs_3dhp
+    endpoints: ["https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/"]
+    tools: [facilities_in_footprint, build_ics_201]
+    named_as: ["USGS 3D Hydrography Program", "3DHP"]
+    tag_as: ["USGS 3D Hydrography Program"]
+    provenance_class: live_call
+    horizon_s: 7889400
+    service_stated:  # HB-94 (review L5-3, ArcGIS half deferred): a date the service stated, read once
+      read_on: "2026-10-21"
+      basis: "facilities_sources.yaml header: read from the service's own description on 2026-10-21 (logs/2026-10-21_HB-10_probe.log)"
+      values: [{path: src/hazbrief/facilities_sources.yaml, field: hydrography.as_of}]
+    horizon_reason: stated
+    horizon_basis: "\"New Elevation-Derived Hydrography data and attributes will be added quarterly\" (HB-06 discovery). A quarter."
+    terms: "USGS data are public domain; credit requested (usgs-copyrights-credits)."
+    rate_limit: "None published; maxRecordCount 2,500."
+
+  - id: bts_ntad
+    name: "BTS NTAD rail layers"
+    api_catalog: bts_ntad
+    kind: api
+    exchanges_api: bts_ntad
+    endpoints:
+      - "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_North_American_Rail_Network_Lines/"
+      - "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/"
+    tools: [facilities_in_footprint, build_ics_201]
+    named_as: ["BTS NTAD", "NTAD"]
+    tag_as: ["NTAD"]
+    provenance_class: live_call
+    horizon_s: 7889400
+    service_stated:  # HB-94 (review L5-3, ArcGIS half deferred): a date the service stated, read once
+      read_on: "2026-10-21"
+      basis: "facilities_sources.yaml header: read from each layer's own description on 2026-10-21 (logs/2026-10-21_HB-10_probe.log)"
+      values: [{path: src/hazbrief/facilities_sources.yaml, field: rail.lines.as_of}, {path: src/hazbrief/facilities_sources.yaml, field: rail.crossings.as_of}]
+    horizon_reason: assumed
+    horizon_basis: "Each layer states its last update date (rail lines 2026-10-19, grade crossings 2026-10-09, \"from the FRA\") but no cadence. Taken as a quarter, the cadence of the other federal GIS layers here (USGS Structures, 3DHP)."
+    terms: '"This NTAD dataset is a work of the United States government" (bts-ntad-rail-lines-layer).'
+    rate_limit: "maxRecordCount 2,000 per query, paging by resultOffset."
+
+  # HB-155 (DN-023 section 3): NTAD's Truck Stop Parking layer, read by the brief's siting layer for rest areas and
+  # truck stops as candidate places; no tool reads it
+  - id: bts_ntad:truck_parking
+    name: "BTS NTAD Truck Stop Parking"
+    api_catalog: bts_ntad
+    kind: api
+    exchanges_api: bts_ntad
+    endpoints:
+      - "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Truck_Stop_Parking/"
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 7889400
+    horizon_reason: assumed
+    horizon_basis: "The layer states it was compiled on 2019-04-09 from FHWA's Jason's Law survey (docs/evidence/hb155/probes/ntad_truck_stop_parking.json) and no cadence. Taken as a quarter, the cadence of the other federal GIS layers here."
+    terms: '"part of the U.S. Department of Transportation (USDOT)/Bureau of Transportation Statistics (BTS) National Transportation Atlas Database (NTAD)", a public federal service with no key (the layer''s own description).'
+    rate_limit: "maxRecordCount 2,000 per query, paging by resultOffset."
+
+  # ── cached files (read as files in every mode, not exchanges) ────────────────────────────────────────────────
+  - id: cms:hospitals
+    name: "CMS Hospital General Information and Provider of Services"
+    api_catalog: cms_provider_data
+    kind: file
+    endpoints: ["fixtures/cms/hospitals.json"]
+    tools: [receiving_hospitals, build_ics_201]
+    named_as: ["CMS Hospital General Information", "CMS Provider of Services"]
+    tag_as: ["CMS Hospital General Information", "CMS Provider of Services"]
+    provenance_class: recorded_pack
+    horizon_s: 7889400
+    file_as_of: {path: fixtures/cms/hospitals.json, field: meta.as_of}  # the CMS file's own as-of, as its tag prints it
+    horizon_reason: stated
+    horizon_basis: "CMS releases are quarterly (HB-06 cms_provider_data: each dataset's metastore states modified and released). A quarter."
+    terms: "Works of the U.S. Government are in the public domain; attribution to the agency is appreciated (cms-api-faq)."
+    rate_limit: "No call per incident (scripts/fetch_cms.py caches the file)."
+
+  - id: census_geocoder
+    name: "Census Geocoder"
+    api_catalog: census_geocoder
+    kind: file
+    endpoints: ["fixtures/cms/hospitals.json"]
+    tools: [receiving_hospitals, build_ics_201]
+    named_as: ["Census Geocoder"]
+    provenance_class: recorded_pack
+    horizon_s: 7889400
+    file_as_of: {path: fixtures/cms/hospitals.json, field: meta.built_at}  # geocoded when the file was built (scripts/fetch_cms.py)
+    horizon_reason: assumed
+    horizon_basis: "Read only as the hospital locations built into the CMS hospital file at fetch time; it ages with that file (a quarter)."
+    terms: "A public federal service; no key (census-api-terms)."
+    rate_limit: "No call per incident."
+
+  - id: cms:nursing_homes
+    name: "CMS Nursing Home Provider Information"
+    api_catalog: cms_data
+    kind: file
+    endpoints: ["fixtures/cms/nursing_homes.json"]
+    tools: [facilities_in_footprint, build_ics_201]
+    named_as: ["CMS Nursing Home Provider Information"]
+    provenance_class: recorded_pack
+    horizon_s: 7889400
+    file_as_of: {path: fixtures/cms/nursing_homes.json, field: meta.as_of}  # the CMS file's own as-of, as its tag prints it
+    horizon_reason: stated
+    horizon_basis: "HB-06 cms_data: \"Quarterly\". A quarter."
+    terms: "Works of the U.S. Government are in the public domain (cms-api-faq)."
+    rate_limit: "No call per incident."
+
+  - id: lodes
+    name: "LEHD LODES8"
+    api_catalog: lodes
+    kind: file
+    endpoints: ["fixtures/lodes/"]
+    tools: [population_at_risk, build_ics_201]
+    named_as: ["LEHD LODES8", "LODES"]
+    provenance_class: recorded_pack
+    horizon_s: 31557600
+    # The LODES files carry no date; fixtures/lodes/MANIFEST.json holds only download times. The version date is
+    # the one population_sources.yaml states for LODES 8.4 (lodes8-techdoc-8-4), which the tag prints.
+    file_as_of: {path: src/hazbrief/population_sources.yaml, field: lodes.as_of}
+    horizon_reason: assumed
+    horizon_basis: "HB-06: \"Annual in practice (8.4 created 2025-12-03)\"; LEHD states no cadence. 365.25 days."
+    terms: 'Requested citation: U.S. Census Bureau, "{File Name}," LEHD Origin-Destination Employment Statistics, {Vintage} (lodes-data-landing).'
+    rate_limit: "No call per incident (scripts/fetch_lodes.py caches the state files)."
+
+  # ── packs (packs/<kind>.json; the server's shipped reference knowledge) ──────────────────────────────────────
+  - id: pack:erg
+    name: "ERG 2024"
+    kind: pack
+    pack_file: packs/erg.json
+    endpoints: ["packs/erg.json"]
+    tools: [assess_incident, protective_action_footprint, material_response_guidance, build_ics_201]
+    named_as: ["ERG 2024"]
+    provenance_class: recorded_pack
+    horizon_s: 126230400
+    # The held ERG2024 PDF (erg2024-en-pdf) prints the year only: its cover ("2024 EMERGENCY RESPONSE GUIDEBOOK") and
+    # printed page 380, PUBLICATION DATA ("The 2024 Emergency Response Guidebook (ERG2024) was prepared by ..."; PDF
+    # p. 382). No month or day is printed, so the as-of is the year.
+    edition_as_of: "2024"
+    horizon_reason: assumed
+    horizon_basis: "The edition life. The held editions are four years apart (ERG 2016, 2020, 2024 in the corpus), but no held PHMSA document states the cycle (searched the corpus texts for it, HB-39). 4 x 365.25 days."
+    # HB-95 (review L5-5): the ERG is a joint US, Canada and Mexico publication, not a 17 U.S.C. 105 work; its terms
+    # are its own p. 382 notice (packs/erg.json attribution.notices; corpus/sources.yaml erg2024-en-pdf reuse).
+    terms: "Reproduction permitted under the ERG2024 notice, PDF p. 382 \"REPRODUCTION AND RESALE\": \"ERG2024 may be reproduced without further permission subject to the following\"; the participating governments' names and seals only on an unmodified whole copy; free copies may not be resold. PHMSA attribution (docs/stylebook/ATTRIBUTION.md)."
+    rate_limit: "Shipped; no call."
+
+  - id: pack:cfr172
+    name: "49 CFR 172.101 Hazardous Materials Table"
+    kind: pack
+    pack_file: packs/cfr172.json
+    endpoints: ["packs/cfr172.json"]
+    tools: [assess_incident, protective_action_footprint, build_ics_201]
+    # The footprint's basis carries the 172.101 tag (its hazard class), but its MCP description names only the ERG.
+    # The description is part of the frozen surface (DN-009 s2, until 2026-11-20), so it is not edited here.
+    undocumented_readers: [protective_action_footprint]
+    named_as: ["49 CFR 172.101"]
+    provenance_class: recorded_pack
+    horizon_s: 31557600
+    # packs/cfr172.json sources[].edition: "Title 49 Parts 100 to 177 Revised as of October 1, 2025" (the annual edition).
+    edition_as_of: "2025-10-01"
+    # HB-108 (Issue 3fb514c8): the 2025 annual edition's horizon ran out on 2026-10-01, so every brief read its CFR
+    # sections stale. scripts/cfr_currency_check.py compared the edition's whole table with the held eCFR text at
+    # 2026-10-15 (0 rows added, 0 removed, 3 changed, none a row any fixture reads) and with eCFR's version history
+    # read 2026-11-04 (no substantive amendment after 2026-10-15). The label counts the horizon from the text checked.
+    verified_current:
+      record: docs/sources/cfr172_currency_check.json
+      checked_on: "2026-11-06"
+      against: "the eCFR text of 49 CFR 172.101"
+      as_of: "2026-10-15"
+    horizon_reason: stated
+    horizon_basis: "\"titles 42-50 are revised as of October 1\" each year (phmsa-hmr-overview-page): the annual CFR edition. 365.25 days."
+    terms: "Public domain (17 U.S.C. 105)."
+    rate_limit: "Shipped; no call."
+
+  - id: pack:cameo
+    name: "CAMEO Chemicals"
+    kind: pack
+    pack_file: packs/cameo.json
+    endpoints: ["packs/cameo.json"]
+    tools: [assess_incident, build_ics_201]
+    named_as: ["CAMEO"]
+    provenance_class: recorded_pack
+    horizon_s: 126230400
+    # No held document prints the release date of CAMEO Chemicals 3.1.0 rev 1. The program page
+    # (noaa-cameo-chemicals-program-page) says 3.1.0 was "Updated to the newly released 2024 Emergency Response
+    # Guidebook data", and its datasheets cite 2024 sources ("(NIOSH, 2024)", "(DOE, 2024)"). The year is 2024 at the
+    # earliest; taken as 2024.
+    edition_as_of: "2024"
+    horizon_reason: assumed
+    # HB-94: the horizon was a year counted from the pack's build. Counted from the 2024 release, a year would read
+    # stale a release the program page (last updated October 22, 2026) still offers as current ("Download CAMEO
+    # Chemicals 3.1.0"). The release was made against the ERG edition, so it takes the ERG edition life.
+    horizon_basis: "CAMEO Chemicals 3.1.0.1, the release that took in the ERG 2024 data; no held document states a release cadence, and the program page still offers 3.1.0 in October 2026. Taken as the ERG edition life it was released against, 4 x 365.25 days."
+    terms: "NOAA/EPA public domain; attribution per docs/stylebook/ATTRIBUTION.md."
+    rate_limit: "Shipped; no call."
+
+  - id: pack:hazard_classes
+    name: "hazbrief hazard classes (pack)"
+    kind: pack
+    pack_file: packs/hazard_classes.json
+    endpoints: ["packs/hazard_classes.json"]
+    tools: [assess_incident, protective_action_footprint, build_ics_201]
+    named_as: []
+    provenance_class: recorded_pack
+    horizon_s: 31557600
+    # The grouping is over the 49 CFR annual edition the 172.101 pack holds (packs/hazard_classes.json sources: "CFR
+    # 2025 annual edition"); it carries that edition's date.
+    edition_as_of: "2025-10-01"
+    horizon_reason: assumed
+    horizon_basis: "The project's grouping of ERG and 49 CFR materials (DN-001); it follows the annual CFR edition."
+    terms: "Project-authored over public-domain sources."
+    rate_limit: "Shipped; no call."
+
+  - id: pack:flag_rules
+    name: "hazbrief flag rules (pack)"
+    kind: pack
+    pack_file: packs/flag_rules.json
+    endpoints: ["packs/flag_rules.json"]
+    tools: [protective_action_footprint, build_ics_201]
+    named_as: []
+    provenance_class: recorded_pack
+    horizon_s: 126230400
+    # Project-authored rules over the ERG; they carry the ERG edition's date, as their horizon does.
+    edition_as_of: "2024"
+    horizon_reason: assumed
+    horizon_basis: "Project-authored rules over the ERG (packs/src/flag_rules.yaml); they age with the ERG edition."
+    terms: "Project-authored; each rule cites its source."
+    rate_limit: "Shipped; no call."
+
+  # ── computation ──────────────────────────────────────────────────────────────────────────────────────────────
+  - id: code:astral
+    name: "NOAA solar equations (astral)"
+    kind: code
+    endpoints: []
+    tools: [assess_incident, protective_action_footprint, build_ics_201]
+    named_as: []
+    tag_as: ["NOAA solar equations"]
+    provenance_class: derived_by_code
+    horizon_s: null
+    horizon_reason: computed
+    horizon_basis: "Sunrise and sunset by the NOAA solar calculator equations (astral), from the incident's own time and place."
+    terms: "astral (Apache-2.0)."
+    rate_limit: "No call."
+
+  # ── basemaps (HB-45): read by the workbench page in the browser, never by a tool or the server ────────────────────
+  # Tiles are drawn, never testify (DN-012 s3, DN-009 ADDENDUM-01 s4): no value in a brief is read from them, no record
+  # is written for them, and they are never stored. `tools` is empty because no tool reads them; `readers` names the
+  # application. The horizon is nominal (tiles are fetched at view time), so it is `assumed`.
+  # ── the workbench's location services (HB-49; DN-013 section 5.3). No tool reads them: the workbench's location
+  # resolver does (hazbrief.brief.location), through the server's one upstream client and its recorder. Their
+  # `api_catalog` ids are rows of corpus/workbench_api_catalog.yaml, not corpus/api_catalog.yaml (the server's). ───────
+  - id: lrs:penndot
+    name: "PennDOT Roadway Management System, via PASDA"
+    api_catalog: pasda_penndot
+    kind: api
+    exchanges_api: pasda_penndot
+    endpoints: ["https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 7889400
+    horizon_reason: assumed
+    horizon_basis: "Each layer is named by its extract month (2026_07, pasda-penndot-interstate-mile-markers-layer) and states no cadence. Taken as a quarter, the cadence of the other GIS layers here."
+    terms: 'Copyright "Pennsylvania Department of Transportation" (pasda-penndot-interstate-mile-markers-layer copyrightText); the metadata records state no use constraint (pasda-penndot-state-roads-metadata).'
+    rate_limit: "maxRecordCount 1,000 per query (layer description)."
+
+  - id: lrs:mdot_sha
+    name: "MDOT SHA Milepoints"
+    api_catalog: mdot_sha_milepoints
+    kind: api
+    exchanges_api: mdot_sha_milepoints
+    endpoints: ["https://maps.roads.maryland.gov/arcgis/rest/services/Milepoints/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 31557600
+    horizon_reason: stated
+    horizon_basis: '"MDOT SHA Milepoints data is updated and published on an annual basis" (mdot-sha-milepoints-layer). A year; the layer itself says "This data is for the year 2018".'
+    terms: 'Copyright MDOT, MDOT SHA and its offices (mdot-sha-milepoints-layer copyrightText); no licence stated.'
+    rate_limit: "maxRecordCount 100,000 per query (layer description)."
+
+  - id: lrs:vdot
+    name: "VDOT Mile Marker Signs"
+    api_catalog: vdot_lrs
+    kind: api
+    exchanges_api: vdot_lrs
+    endpoints: ["https://services.arcgis.com/p5v98VHDX9Atv3l7/ArcGIS/rest/services/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 31557600
+    horizon_reason: assumed
+    horizon_basis: 'VDOT calls the layer "a legacy reference resource, provided as‑is and not actively maintained" (vdot-mile-marker-signs-metadata), so no cadence exists; a year, nominal. Probed only: the milepost resolver refuses Virginia (HB-49 RESULT).'
+    terms: 'VDOT disclaimer: "This data is provided without any guarantee of accuracy, timeliness or completeness" (vdot-mile-marker-signs-metadata).'
+    rate_limit: "None published."
+
+  - id: census:geocoder
+    name: "Census Geocoder"
+    api_catalog: census_geocoder_locations
+    kind: api
+    exchanges_api: census_geocoder
+    endpoints: ["https://geocoding.geo.census.gov/geocoder/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 7889400
+    horizon_reason: assumed
+    horizon_basis: 'The calls name the benchmark Public_AR_Current, which "refers to the most current or last released benchmark" (census-geocoder-user-guide); the responses carry "Cache-Control: private, no-store" and no release date. Taken as a quarter, the cadence of the other Census geographic services here.'
+    terms: 'A public federal service with no key (census-geocoder-documentation; DN-003 section 1). The workbench calls its one-line address endpoint (HB-50); the census_geocoder row above is the hospital file geocoded once.'
+    rate_limit: "Single-record calls; the documented limit is the batch's 10,000 addresses (census-geocoder-documentation)."
+
+  - id: nldi
+    name: "USGS Hydro Network-Linked Data Index (NLDI)"
+    api_catalog: nldi
+    kind: api
+    exchanges_api: nldi
+    endpoints: ["https://api.water.usgs.gov/nldi/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 7889400
+    horizon_reason: assumed
+    horizon_basis: "NHDPlus V2, the network NLDI navigates, is a fixed release; the responses carry no date (HB-54 probe). Taken as a quarter, the cadence of the other geographic services here."
+    terms: "A US Government work and a public federal service with no key (usgs-nldi-navigation-docs)."
+    rate_limit: "None stated; slow and intermittent on the HB-54 probe (54 s and 116 s position answers, 502s)."
+
+  - id: census:cbp
+    name: "County Business Patterns 2023"
+    api_catalog: census_cbp
+    kind: api
+    exchanges_api: census
+    endpoints: ["https://api.census.gov/data/2023/cbp"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 31557600
+    horizon_reason: stated
+    horizon_basis: "CBP is an annual series (census-cbp-api-docs); 2023 is the newest vintage served (HB-55). 365.25 days."
+    terms: 'Required notice: "This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau" (census-api-terms).'
+    rate_limit: "Up to 50 variables per query; a key is required (census-api-query-limits)."
+
+  - id: epqs
+    name: "USGS Elevation Point Query Service"
+    api_catalog: epqs
+    kind: api
+    exchanges_api: epqs
+    endpoints: ["https://epqs.nationalmap.gov/v1/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 31557600
+    horizon_reason: assumed
+    horizon_basis: "3DEP DEMs are replaced as new lidar is collected, with no stated cadence; the answer at the water fixture was acquired 2017-11-04 (HB-55). Taken as a year."
+    terms: "A US Government work and a public federal service with no key (usgs-3dep-13-arcsec-dem-metadata)."
+    rate_limit: "None stated; about 3 s per point on the HB-55 recording."
+
+  - id: usgs:3dep
+    name: "USGS 3DEPElevation ImageServer (getSamples)"
+    api_catalog: usgs_3dep
+    kind: api
+    exchanges_api: usgs_3dep
+    endpoints: ["https://elevation.nationalmap.gov/arcgis/rest/services/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 31557600
+    horizon_reason: assumed
+    horizon_basis: "The same 3DEP DEMs EPQS reads (HB-59: every recorded point read the same from both), replaced as new lidar is collected with no stated cadence. Taken as a year, as the EPQS row is."
+    terms: "A US Government work and a public federal service with no key (usgs-3dep-elevation-imageserver)."
+    rate_limit: "None stated; a URL past about 8,200 characters answers 414, so a set is split to fit (HB-59)."
+
+  # Superseded for CONUS on 2026-10-28 (HB-59 ADDENDUM-02): MRLC's GeoServer no longer serves CONUS land cover. Kept
+  # because the HB-55 exchanges under mrlc/ (held privately) map to it; no brief reads it. The land cover reads
+  # nlcd:cog-mirror (HB-59 ADDENDUM-03).
+  - id: mrlc:nlcd
+    name: "NLCD 2021 Land Cover (MRLC WMS; superseded for CONUS, 2026-10-28)"
+    api_catalog: mrlc_nlcd
+    kind: api
+    exchanges_api: mrlc
+    endpoints: ["https://www.mrlc.gov/geoserver/"]
+    tools: []
+    readers: []
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 315576000
+    horizon_reason: assumed
+    horizon_basis: "The 2021 layer is a fixed release; a newer single-year layer is not served on the WMS (HB-55 GetCapabilities). Taken as ten years, as a fixed release."
+    terms: "None stated on mrlc-data-services-page; MRLC is a consortium of federal agencies led by USGS."
+    rate_limit: "None stated."
+
+  - id: nlcd:cog-mirror
+    name: "Annual NLCD (USGS, public domain), via the NRP/source.coop Cloud Optimized GeoTIFF mirror"
+    api_catalog: nlcd_cog_mirror
+    kind: api
+    exchanges_api: nlcd_cog
+    endpoints: ["https://s3-west.nrp-nautilus.io/public-land-cover/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 31557600
+    horizon_reason: assumed
+    horizon_basis: "Annual NLCD is one map per year (1985 to 2025 in Collection 1.2, nlcd-cog-mirror-stac); no held document states when the next year is published. Taken as a year."
+    terms: "\"license\": \"public-domain\" (nlcd-cog-mirror-stac), linking USGS's copyrights-and-credits policy; a mirror of MRLC/USGS Annual NLCD, reprojected to EPSG:4326 by nearest neighbour, with no checksum published against USGS."
+    rate_limit: "None stated."
+
+  - id: nowcoast:radar
+    name: "NOAA nowCOAST Weather Radar WMS (MRMS base reflectivity)"
+    api_catalog: nowcoast_radar
+    kind: api
+    exchanges_api: nowcoast
+    endpoints: ["https://nowcoast.noaa.gov/geoserver/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 240
+    horizon_reason: stated
+    horizon_basis: "Cache-Control: max-age=240, public on the recorded capabilities response (fixtures/exchanges/nowcoast)"
+    terms: "Fees NONE; AccessConstraints NONE (the capabilities' service block, nowcoast-weather-radar-wms)."
+    rate_limit: "None stated."
+
+  # HB-103 Part A. KLUDGE: `api_catalog` names the corpus/workbench_api_catalog.yaml row `nowcoast_satellite`, which is
+  # not written yet. That row's `docs` must be a corpus/sources.yaml entry, and a new sources.yaml entry fails the
+  # graph-intake test until a corpus ingest, which HB-103's Touches (no the corpus graph (held privately)) do not allow. Both rows are drafted
+  # in docs/evidence/hb103/deferred_corpus_rows.yaml for the task that ingests them (HB-103 RESULT section 7).
+  - id: nowcoast:satellite
+    name: "NOAA nowCOAST Geostationary Satellite Imagery WMS (GOES East and West)"
+    api_catalog: nowcoast_satellite
+    kind: api
+    exchanges_api: nowcoast
+    endpoints: ["https://nowcoast.noaa.gov/geoserver/observations/satellite/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 240
+    horizon_reason: stated
+    horizon_basis: "Cache-Control: max-age=240, public on the recorded capabilities response (fixtures/exchanges/nowcoast, 2026-11-04)"
+    terms: "Fees NONE; AccessConstraints NONE (the capabilities' own service block, recorded in fixtures/exchanges/nowcoast; HB-103)."
+    rate_limit: "None stated."
+
+  # ── the brief's materials resolver (HB-119; DN-020 ADDENDUM-02 section 2 item 2). No tool reads them: the
+  # application resolves a material the properties pack does not seed (hazbrief.brief.materials), through the server's
+  # one upstream client and its recorder. Horizon: neither source states a cadence for a datasheet or a compound
+  # record, so each takes the catalog's rule for a reference database, the pack:cameo row's: `assumed`, the ERG
+  # edition life the CAMEO release was made against, 4 x 365.25 days. A fetched entry's label goes stale with it. ──
+  - id: cameo:chemical
+    name: "CAMEO Chemicals chemical datasheets"
+    api_catalog: cameo_chemicals
+    kind: api
+    exchanges_api: cameo
+    endpoints: ["https://cameochemicals.noaa.gov/chemical/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 126230400
+    horizon_reason: assumed
+    horizon_basis: "No held document states a cadence for a datasheet (each value prints its own source and year). Taken by the catalog's rule for a reference database, the pack:cameo row's: the ERG edition life the CAMEO release was made against, 4 x 365.25 days."
+    terms: '"CAMEO Chemicals is available for free in multiple formats" (noaa-cameo-chemicals-program-page); NOAA and EPA, public domain; attribution per docs/stylebook/ATTRIBUTION.md.'
+    rate_limit: "None stated; robots.txt disallows /search for every agent, so a datasheet is reached only by the id PubChem's record names (HB-119)."
+
+  - id: pubchem:pug_rest
+    name: "PubChem PUG REST"
+    api_catalog: pubchem_pug_rest
+    kind: api
+    exchanges_api: pubchem
+    endpoints: ["https://pubchem.ncbi.nlm.nih.gov/rest/pug/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 126230400
+    horizon_reason: assumed
+    horizon_basis: "PubChem states no cadence for a compound record (pubchem-programmatic-access, pubchem-pug-view-limits). Taken by the catalog's rule for a reference database, the pack:cameo row's: 4 x 365.25 days."
+    terms: '"We ask that any user, application, or organization not make more than 5 requests per second" (pubchem-programmatic-access); NLM, public domain; each annotation names its depositor.'
+    rate_limit: "5 requests per second, 400 per minute, 300 s running time per minute (pubchem-pug-view-limits), honoured by the resolver's client-side gate."
+
+  - id: pubchem:pug_view
+    name: "PubChem PUG View"
+    api_catalog: pubchem_pug_view
+    kind: api
+    exchanges_api: pubchem
+    endpoints: ["https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 126230400
+    horizon_reason: assumed
+    horizon_basis: "PubChem states no cadence for a compound record (pubchem-pug-view-limits). Taken by the catalog's rule for a reference database, the pack:cameo row's: 4 x 365.25 days."
+    terms: '"We ask that any user, application, or organization not make more than 5 requests per second" (pubchem-programmatic-access); each annotation names its depositor and that source''s licence URL.'
+    rate_limit: "5 requests per second, 400 per minute, 300 s running time per minute (pubchem-pug-view-limits), honoured by the resolver's client-side gate."
+
+  - id: basemap:google
+    name: "Google Maps JavaScript API (Dynamic Maps)"
+    kind: basemap
+    endpoints: ["https://maps.googleapis.com/maps/api/js"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 86400
+    horizon_reason: assumed
+    horizon_basis: "Tiles are fetched when the page is viewed and never stored; no held document states a cadence. One day, nominal."
+    terms: 'Google Maps Platform Terms of Service (google-maps-platform-terms): a billed key; "Customer will not cache Google Maps Content except as expressly permitted" and will not "pre-fetch, index, store, reshare, or rehost Google Maps Content outside the services" (3.2.3); "Customer will display all attribution that ... Google provides through the Services" and "will not modify, obscure, or delete such attribution" (3.2.2). Since March 1, 2025 "Google has replaced the USD $200 monthly recurring credit with a free monthly usage threshold for each Core Services SKU" (google-maps-platform-march-2025-changes); Dynamic Maps (Essentials, SKU FAF4-3B2D-51B2) has a free usage cap of 10,000 monthly loads, then $7.00 per 1,000 to 100,000 (google-maps-platform-pricing).'
+    rate_limit: "Per-project quota set in the Google Cloud console; the key is restricted by HTTP referrer."
+
+  - id: basemap:usgs
+    name: "USGS The National Map basemap (USGSTopo tiles)"
+    kind: basemap
+    endpoints: ["https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 86400
+    horizon_reason: assumed
+    horizon_basis: "Tiles are fetched when the page is viewed and never stored; no held document states a cadence. One day, nominal."
+    terms: 'USGS-produced data are U.S. public domain; credit "U.S. Geological Survey" (usgs-copyrights-credits). Credited on the map as "Basemap: U.S. Geological Survey, The National Map".'
+    rate_limit: "None published."
+
+  - id: basemap:osm
+    name: "OpenStreetMap standard tile layer"
+    kind: basemap
+    endpoints: ["https://tile.openstreetmap.org/"]
+    tools: []
+    readers: [hazbrief.brief]
+    named_as: []
+    provenance_class: live_call
+    horizon_s: 86400
+    horizon_reason: assumed
+    horizon_basis: "Tiles are fetched when the page is viewed and never stored; no held document states a cadence. One day, nominal."
+    terms: 'Data ODbL, attribution "© OpenStreetMap contributors" on the map. The OSMF Tile Usage Policy (osmf-tile-usage-policy) requires the URL "https://tile.openstreetmap.org/{z}/{x}/{y}.png", "visible licence attribution", "a valid HTTP User-Agent that clearly identifies your application" (a browser''s default is accepted: "Browsers will use the browser’s default User-Agent"), and "From web pages, ensure a valid HTTP Referer header is sent". A page opened from file:// sends no Referer (measured, Chrome 156 and Firefox 158; HB-47 RESULT), so OSM is the second base layer, not the default. The ODbL itself is not held.'
+    rate_limit: 'OSMF Tile Usage Policy (osmf-tile-usage-policy): "You must not: Bulk download (“scrape”) tiles or offer prefetch features"; "Offline use is not permitted"; caching follows the HTTP caching headers. Normal interactive viewing of the current viewport is permitted.'

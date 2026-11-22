@@ -1,0 +1,14 @@
+Source  What was asked  As of  Current or old  Record
+------  --------------  -----  --------------  ------
+
+Derived: the load read
+Load read rules sha256  5a3de344ae8450d1d2c7e539f715d1dc276222f76eb2d85f58b924b7e1afa766
+  words, map  1937 before, 1937 after
+  words, footprint  39 before, 39 after
+  words, flags  37 before, 37 after
+  words, population  53 before, 53 after
+  words, facilities  55 before, 55 after
+  words, hospitals  49 before, 49 after
+  words, guidance  30 before, 30 after
+  words, ics201  88 before, 88 after
+  cuts  0 applied, 7 proposed

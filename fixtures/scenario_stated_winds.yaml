@@ -1,0 +1,21 @@
+# The fixture scenarios' stated_wind blocks (HB-70 step 3, renumbered HB-72; hazbrief.brief.stated_wind). AUTHORED by
+# the scenario author.
+#
+# A stated wind is the wind at the scene as a responder reports it (an anemometer, a flag), and it replaces the NWS
+# forecast wind for the puff alone, for every hour of the window. The ERG footprint never reads it (the ERG distance is a
+# table lookup, not a wind product), and the server never sees it. Same shape and refusals as the release block: a speed
+# or direction without its source is refused. The schema is docs/schema/scenario_stated_wind.schema.json.
+#
+# One fixture states one, on purpose: scranton-i81-stated-wind, the sibling of scranton-i81-nws-wind (identical
+# otherwise), so the display review sees the forecast-driven case (whose held forecast reads 0 km/h through the window,
+# so it prints the calm line) beside the stated-wind case. The values are a test value the author states, not an
+# observation: they round the 04:00Z report of KAVP, the station nearest the spill, which is held with the scenario
+# (fixtures/exchanges/nws/e7ee7c8d....json: windSpeed 9.252 km/h, windDirection 110). No `observed_at`: nobody observed
+# this wind at the scene. scenario_manifest.py (a build tool held privately) and scripts/build_scenario_briefs.py carry each block into
+# fixtures/scenarios.yaml and docs/briefs/<id>/scenario.json beside `release`.
+
+stated_winds:
+  scranton-i81-stated-wind:
+    speed_m_s: 2.6
+    direction_deg_from: 110
+    source: "the scenario author's test value, not an observation (KAVP's 04:00Z report, 9.3 km/h from 110 degrees, rounded)"

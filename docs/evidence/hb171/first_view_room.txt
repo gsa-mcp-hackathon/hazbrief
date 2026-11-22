@@ -1,0 +1,17 @@
+HB-171 DN-029 decision 7: the room in the live shell's left column at a 1440 x 900 viewport, csx-point-of-rocks-day,
+measured with test_hb158_less_at_once.py (a test held privately)'s probe (_probe(1440, 900); the bottom of every layer group heading
+must stay inside the column, test_every_group_head_and_the_verify_items_are_in_view_at_1440).
+
+Before HB-171 (main at the task's start, 2026-11-12):
+  column top, bottom (px): 79, 872
+  last layer group heading bottom (px): 774.3
+  room below it: 97.7 px, so four lines of 19 to 20 px fit and a fifth would not
+
+After HB-171 (three first-view rows and the one "more rows" line, about 80 px; the modelled population layer drawn
+now that its blocks are recorded):
+  column top, bottom (px): 79, 872
+  last layer group heading bottom (px): 854.3
+  room below it: 17.7 px
+
+So the first view holds three rows and one line naming the rest; a fourth row would push the last group heading out
+of view.

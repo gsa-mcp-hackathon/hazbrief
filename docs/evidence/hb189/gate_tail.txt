@@ -1,0 +1,8 @@
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+7980 passed, 14 skipped, 12 deselected, 17 xfailed, 2 warnings in 3815.23s (1:03:35)
+PYTEST EXIT=0
+All checks passed!
+RUFF EXIT=0
+956 files already formatted
+FORMAT EXIT=0

@@ -1,0 +1,87 @@
+# The extraction pilot's plan (HB-13 Phase A; HB-14 step 3 re-runs it), read by
+# extract_under_transport.py (a build tool held privately) `documents` until HB-71 retired that driver (2026-10-30) in favour of the kit's
+# `squiddy extract` (squiddy SQ-050R); the reports and the HB-21 diagnosis read it still. The instrument (prompts, segment rule, gates, roles) is the
+# graph's (the corpus graph (held privately) `domain.extract`, `extract`); this file holds only what the run
+# itself needs.
+
+#: The evidence directory, under the graph's `evidence_dir`. One per pilot; the gate reads it. HB-13's was
+#: `hb13_pilot` (kept, with its release); HB-14 re-runs the same eight documents into its own. HB-14's first pass,
+#: `hb14_pilot`, ran five documents under CLI 2.1.307 before the model lock moved to 2.1.309 and the kit refused the
+#: new binary (`cli_not_piloted`); it is kept as the record, and the pilot is re-run whole into `hb14_pilot_cli309`.
+#: HB-25 (2026-10-24): the lock moved to CLI 2.1.310 (resolved 00:09:23Z) and the kit refused HB-24's rating top-up
+#: (`cli_not_piloted`). The same eight documents are piloted again under 2.1.310 into their own directory, as a
+#: measurement of the CLI change: nothing from it is committed (HB-25 step 2), and `hb14_pilot_cli309` stays the record
+#: of the pilot whose claims are served.
+evidence_version: hb25_pilot_cli310
+
+#: HB-14b step 2 asked for `rater_sample: 100` here. The kit's gate does not read this file; it reads
+#: `engine.extract.rater_sample`, so the value is declared in the corpus graph (held privately) `extract:` with its
+#: basis, and this note points there rather than holding a second copy.
+
+#: The prefix of every spend job and progress log this plan runs (HB-13: `hb13`; HB-14: `hb14`).
+job_prefix: hb25
+
+#: HB-22 ADDENDUM-00, applied to the pilot by HB-25 step 1 ("pre-approved jobs"): every declared job's
+#: `spend_approval.yaml` is written before its first call, at the job's declared token cap
+#: (`extract_under_transport.preapprove`, retired by HB-71). HB-14 wrote them after a band stop, by hand.
+approval:
+  operator: Brock Webb
+  date: "2026-10-24"
+  words: >-
+    HB-25 Spend line (2026-10-24): "open (HB-14 ADDENDUM-01 stands). The pilot is the eight HB-14 documents ...
+    Pre-approval per HB-22 ADDENDUM-00; held not failed." HB-22 ADDENDUM-00 (operator, 2026-10-23 10:08): "Those
+    should never have been fails. Those should have been a hold for authorization and start another document."
+    HB-14 ADDENDUM-01 (operator, 2026-10-22 18:05): budget open, no limits.
+    HB-29 (operator, 2026-10-24), which supersedes the open budget for every run from HB-29 on: "estimates for
+    any run on CLI 2.1.310 are made at twice HB-14's per-call rate until SQ-034 closes with a measurement; a run's
+    hard cap is its estimate times 1.3; a run holds, not fails, when its measured per-call rate leaves the band."
+
+#: HB-25: the rubrics a measure-only gate may be run under (`gate --measure-only --rubric NAME`), with each prompt's
+#: sha256: HB-24's list, read from there rather than copied. The graph's declared rubric is `hb21-operational-v1`;
+#: HB-14 and HB-14b gated under `s007-rubric-v1`, so the CLI change is measured under both.
+rubrics_file: corpus/hb24_rate_claims.yaml
+
+#: HB-14 ADDENDUM-00's page exclusion (ERG 2024 Table 1, PDF pp. 292-335) was here as `exclude_segments` until
+#: HB-77 (2026-10-30) moved it, in the kit's shape, to the corpus graph (held privately) `exclusions:`,
+#: which the kit's segment rule reads (squiddy SQ-100 Part A). The runs this file configured applied it through the
+#: retired drivers; it is at `exclude_segments` in this file's history for anyone reading those runs.
+
+#: HB-13 step 3: the units test_corpus_claims.py (a test held privately) names that the graph admits with text (the
+#: five documents behind the seven admitted questions), plus the kit's own sample
+#: (`python -m squiddy.extract pilot-set`), which the driver adds at run time.
+named_units:
+  - erg2024-en-pdf
+  - census-acs-general-handbook-2020
+  - cre-2024-techdoc
+  - ics-201
+  - phmsa-erg-api-definition
+
+#: HB-14 step 3: "re-run the pilot on HB-13's eight documents". The kit's sample is drawn from the segment counts,
+#: which the re-parse changed, so HB-13's three are named here and HB-14 runs `documents --no-kit-sample` over
+#: `named_units + hb13_kit_sample`.
+hb13_kit_sample:
+  - census-mcp-cyanheads-license
+  - bts-ntad-rail-lines-layer
+  - cms-pos-layout
+
+#: Constitution 15.3: a progress line at least this often, to stdout and the log.
+progress_seconds: 60
+
+#: Constitution 15.5: stop starting documents past this wall clock (a document in flight lands).
+wall_seconds_max: 21600
+
+#: SQ-009 (DN-042 R-177 to R-179): each document runs on its own declared spend job. HB-64 (2026-10-29; squiddy
+#: SQ-086R, DN-052 R-236): the estimate, the hard cap and the rate band come from the graph's declared baseline,
+#: the corpus graph (held privately) `baseline:`, which this file carried from HB-29 (2026-10-24) to HB-64.
+#: The kit prices each job by it (units times calls per unit times the measured rate times the CLI factor; the kit's
+#: measured floor still binds from below), declares the run's hard cap (the estimate times 1.3; each job's token cap,
+#: and so its approval's ceiling, is what is left of it), and holds a job, or the run's lane, whose weighted tokens per
+#: call leave 0.67x to 1.5x of the expected. The bulk run and HB-22's and HB-23's corpus expansions read this plan
+#: through their `plan:`, and the baseline through the graph.
+
+#: The spend job's node: the kit's own name for the per-document extraction call
+#: (`squiddy.extract.extract_document`), so the history it is priced from is the same calls'.
+spend_node: extract_document
+
+#: The checkpoint, inside the evidence directory: one fsynced row per finished document.
+units_file: units.jsonl

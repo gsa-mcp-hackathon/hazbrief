@@ -1,0 +1,18 @@
+Wed Nov 18 19:03:56 EST 2026
+dir: .claude/worktrees/abundant-skipping-candle
+commit: 0e7ccea8ea6ad60a7d11b430f71106deb3347ff0
+STEP1 START=1795046636
+8088 passed, 14 skipped, 97 deselected, 17 xfailed, 1 warning in 2053.84s (0:34:13)
+PYTEST EXIT=0
+STEP1 END=1795048692
+load_sensitive step:
+STEP2 START=1795048692
+85 passed, 1886 deselected in 783.35s (0:13:03)
+PYTEST2 EXIT=0
+STEP2 END=1795049477
+All checks passed!
+RUFF EXIT=0
+1070 files already formatted
+FORMAT EXIT=0
+Wed Nov 18 19:51:17 EST 2026
+GATE DONE

@@ -1,0 +1,353 @@
+# HB-128 step 6: the PM2.5 AQI categories, their breakpoints and the per-category messages, transcribed by hand from
+# two held pages each. the HB-128 evidence (held privately) checks every `quote` on its PDF page and writes
+# packs/src/aqi_pm25_breakpoints.json. `pdf_page` is the PDF's page index (1-based); `printed_page` is the folio.
+#
+# Sources:
+#   tad   epa-aqi-technical-assistance-2026  EPA-403/B-26-003, May 2026: the breakpoints in force (Table 6), the
+#         descriptors and colours (Tables 1 and 2), the sensitive groups (Table 4) and the PM cautionary statements
+#         (Table 5, one column for PM2.5 and PM10).
+#   guide epa-wildfire-smoke-guide-2019      Wildfire Smoke: A Guide for Public Health Officials, Revised 2019
+#         (EPA-452/R-21-901, September 2021): Table 4, health effects and cautionary statements for each category
+#         during smoke; Table 5, recommended actions for public health officials.
+#
+# The guide's Table 5 prints PM2.5 ranges from before the 2024 NAAQS revision (Good 0-12, Moderate 12.1-35.4, ...).
+# They are kept as `guide_printed_pm25` so the drift is visible; the breakpoints in force are the TAD's.
+# The regulation itself (40 CFR part 58 Appendix G, ecfr-40-cfr-58-appendix-g) is not held: eCFR's bot wall refused
+# rung 1 (acquisition.md). The TAD's own first page says it implements Appendix G.
+
+docs:
+  tad: epa-aqi-technical-assistance-2026
+  guide: epa-wildfire-smoke-guide-2019
+
+method:
+  implements:
+    doc: tad
+    pdf_page: 6
+    printed_page: 1
+    quote: "as required in 40 CFR Part 58.50 and according to 40 CFR Appendix G to Part 58."
+  truncation:
+    doc: tad
+    pdf_page: 18
+    printed_page: 13
+    quote: "PM2.5 (µg/m3) – truncate to 1 decimal place"
+  rounding:
+    doc: tad
+    pdf_page: 18
+    printed_page: 13
+    quote: "Round the index to the nearest integer."
+  equation:
+    doc: tad
+    pdf_page: 18
+    printed_page: 13
+    text: "Ip = (IHi - ILo) / (BPHi - BPLo) * (Cp - BPLo) + ILo"
+    quote: "BPHi = the concentration breakpoint that is greater than or equal to Cp"
+  aqi_500:
+    doc: tad
+    pdf_page: 19
+    printed_page: 14
+    value_ug_m3: 325.4
+    quote: "PM2.5 24-hour—325.4 μg/m3"
+  averaging:
+    doc: tad
+    pdf_page: 19
+    printed_page: 14
+    text: "PM2.5 (μg/m3), 24-hour"
+    quote: "PM2.5 (μg/m3) 24-hour"
+  sensitive_groups:
+    doc: tad
+    pdf_page: 12
+    printed_page: 7
+    text: >-
+      People with heart or lung disease; older adults; and children, including teenagers. In addition, some minority
+      groups, people with lower incomes, and outdoor workers may experience higher exposure that can worsen underlying
+      health conditions.
+    quote: >-
+      People with heart or lung disease; older adults; and children, including teenagers. In addition, some minority
+      groups, people with lower incomes, and outdoor workers may experience higher exposure that can worsen underlying
+      health conditions.
+  smoke_at_risk_addition:
+    doc: tad
+    pdf_page: 12
+    printed_page: 7
+    text: "During a smoke event, EPA recommends including pregnant people as an at-risk group"
+    quote: "During a smoke event, EPA recommends including pregnant people as an at-risk group"
+  indoors_note:
+    doc: tad
+    pdf_page: 17
+    printed_page: 12
+    text: >-
+      If you don't have an air conditioner, staying indoors with the windows closed may be dangerous in extremely hot
+      weather. If you are hot, go someplace with air conditioning or check with your local government to find out if
+      cooling centers are available in your community.
+    quote: "staying indoors with the windows closed may be dangerous in extremely hot weather"
+  higher_levels_include_lower:
+    doc: guide
+    pdf_page: 57
+    printed_page: 45
+    text: "Higher advisory levels automatically incorporate all of the guidance offered at lower levels."
+    quote: "Higher advisory levels automatically incorporate all of the guidance offered at lower levels."
+
+categories:
+  - category: Good
+    aqi: [0, 50]
+    pm25_ug_m3: [0.0, 9.0]
+    colour: Green
+    rgb: [0, 228, 0]
+    breakpoint_quote: {doc: tad, pdf_page: 19, printed_page: 14, quote: "0.0 – 9.0 0 - 54 0.0 - 4.4 0 - 35 0 - 53 0 - 50 Good"}
+    descriptor_quote: {doc: tad, pdf_page: 8, printed_page: 3, quote: "0 to 50"}
+    rgb_quote: {doc: tad, pdf_page: 9, printed_page: 4, quote: "Green 0 228 0"}
+    tad_statement:
+      doc: tad
+      pdf_page: 13
+      printed_page: 8
+      text: "It’s a great day to be active outside."
+      quote: "It’s a great day to be active outside."
+    guide_health_effects:
+      doc: guide
+      pdf_page: 56
+      printed_page: 44
+      text: "None expected"
+      quote: "None expected"
+    guide_cautionary:
+      doc: guide
+      pdf_page: 56
+      printed_page: 44
+      text: "None"
+      quote: "None"
+    guide_printed_pm25: {doc: guide, pdf_page: 58, printed_page: 46, text: "0–12", quote: "0–12"}
+
+  - category: Moderate
+    aqi: [51, 100]
+    pm25_ug_m3: [9.1, 35.4]
+    colour: Yellow
+    rgb: [255, 255, 0]
+    breakpoint_quote: {doc: tad, pdf_page: 19, printed_page: 14, quote: "9.1 – 35.4 55 - 154 4.5 - 9.4 36 - 75 54 - 100 51 - 100 Moderate"}
+    descriptor_quote: {doc: tad, pdf_page: 8, printed_page: 3, quote: "51 to 100"}
+    rgb_quote: {doc: tad, pdf_page: 9, printed_page: 4, quote: "Yellow 255 255 0"}
+    tad_statement:
+      doc: tad
+      pdf_page: 13
+      printed_page: 8
+      text: >-
+        Unusually sensitive people: Consider making outdoor activities shorter and less intense. Go inside if you have
+        symptoms such as coughing or shortness of breath.
+      quote: >-
+        Unusually sensitive people: Consider making outdoor activities shorter and less intense. Go inside if you have
+        symptoms such as coughing or shortness of breath.
+    guide_health_effects:
+      doc: guide
+      pdf_page: 56
+      printed_page: 44
+      text: "Possible aggravation of heart or lung disease"
+      quote: "Possible aggravation of heart or lung disease"
+    guide_cautionary:
+      doc: guide
+      pdf_page: 56
+      printed_page: 44
+      text: >-
+        Unusually sensitive individuals should consider limiting prolonged or heavy exertion. People with heart or lung
+        disease should pay attention to symptoms. Individuals with symptoms of lung or heart disease, including
+        repeated coughing, shortness of breath or difficulty breathing, wheezing, chest tightness or pain,
+        palpitations, nausea, unusual fatigue or lightheadedness, should contact a health care provider.
+      quote: >-
+        Unusually sensitive individuals should consider limiting prolonged or heavy exertion. People with heart or lung
+        disease should pay attention to symptoms. Individuals with symptoms of lung or heart disease, including
+        repeated coughing, shortness of breath or difficulty breathing, wheezing, chest tightness or pain,
+        palpitations, nausea, unusual fatigue or lightheadedness, should contact a health care provider.
+    guide_printed_pm25: {doc: guide, pdf_page: 58, printed_page: 46, text: "12.1–35.4", quote: "12.1–35.4"}
+
+  - category: Unhealthy for Sensitive Groups
+    aqi: [101, 150]
+    pm25_ug_m3: [35.5, 55.4]
+    colour: Orange
+    rgb: [255, 126, 0]
+    breakpoint_quote: {doc: tad, pdf_page: 19, printed_page: 14, quote: "35.5 – 55.4 155 - 254"}
+    descriptor_quote: {doc: tad, pdf_page: 8, printed_page: 3, quote: "101 to 150"}
+    rgb_quote: {doc: tad, pdf_page: 9, printed_page: 4, quote: "Orange 255 126 0"}
+    tad_statement:
+      doc: tad
+      pdf_page: 14
+      printed_page: 9
+      text: >-
+        Sensitive groups: Make outdoor activities shorter and less intense. It’s OK to be active outdoors but take more
+        breaks. Watch for symptoms such as coughing or shortness of breath. People with asthma: Follow your asthma
+        action plan and keep quick relief medicine handy. People with heart disease: Symptoms such as palpitations,
+        shortness of breath, or unusual fatigue may indicate a serious problem. If you have any of these, contact your
+        health care provider.
+      quote: >-
+        Sensitive groups: Make outdoor activities shorter and less intense. It’s OK to be active outdoors but take more
+        breaks. Watch for symptoms such as coughing or shortness of breath. People with asthma: Follow your asthma
+        action plan and keep quick relief medicine handy. People with heart disease: Symptoms such as palpitations,
+        shortness of breath, or unusual fatigue may indicate a serious problem. If you have any of these, contact your
+        health care provider.
+    guide_health_effects:
+      doc: guide
+      pdf_page: 56
+      printed_page: 44
+      text: >-
+        Increasing likelihood of respiratory or cardiac symptoms in sensitive individuals, aggravation of heart or lung
+        disease, and premature mortality in people with heart or lung disease and older adults
+      quote: >-
+        Increasing likelihood of respiratory or cardiac symptoms in sensitive individuals, aggravation of heart or lung
+        disease, and premature mortality in people with heart or lung disease and older adults
+    guide_cautionary:
+      doc: guide
+      pdf_page: 56
+      printed_page: 44
+      text: >-
+        Sensitive Groups: People with heart or lung disease, the elderly, children, and pregnant women should limit
+        prolonged or heavy exertion. Limit time spent outdoors. Avoid physical exertion. People with asthma should
+        follow their asthma management plan. Individuals with symptoms of lung or heart disease that may be related to
+        excess smoke exposure, including repeated coughing, shortness of breath or difficulty breathing, wheezing,
+        chest tightness or pain, heart palpitations, nausea, unusual fatigue or lightheadedness, should contact a
+        health care provider.
+      quote: >-
+        Sensitive Groups: People with heart or lung disease, the elderly, children, and pregnant women should limit
+        prolonged or heavy exertion. Limit time spent outdoors. Avoid physical exertion. People with asthma should
+        follow their asthma management plan. Individuals with symptoms of lung or heart disease that may be related to
+        excess smoke exposure, including repeated coughing, shortness of breath or difficulty breathing, wheezing,
+        chest tightness or pain, heart palpitations, nausea, unusual fatigue or lightheadedness, should contact a
+        health care provider.
+    guide_printed_pm25: {doc: guide, pdf_page: 58, printed_page: 46, text: "35.5–55.4", quote: "35.5–55.4"}
+
+  - category: Unhealthy
+    aqi: [151, 200]
+    pm25_ug_m3: [55.5, 125.4]
+    colour: Red
+    rgb: [255, 0, 0]
+    # As printed: "(55.5 -" over "125.4)3", in parentheses with a superscript 3; the parentheses and the mark belong to
+    # the SO2 column's 24-hour footnote in Appendix G's own table. The values are the 2024 revision's.
+    breakpoint_quote: {doc: tad, pdf_page: 19, printed_page: 14, quote: "(55.5 125.4)3 255 - 354"}
+    descriptor_quote: {doc: tad, pdf_page: 8, printed_page: 3, quote: "151 to 200"}
+    rgb_quote: {doc: tad, pdf_page: 9, printed_page: 4, quote: "Red 255 0 0"}
+    tad_statement:
+      doc: tad
+      pdf_page: 15
+      printed_page: 10
+      text: >-
+        Sensitive groups: Consider rescheduling or moving all activities inside. Go inside if you have symptoms. People
+        with asthma: Follow your asthma action plan and keep quick-relief medicine handy. People with heart disease:
+        Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious problem. If you
+        have any of these, contact your health care provider. Everyone else: Keep outdoor activities shorter and less
+        intense. Go inside if you have symptoms.
+      quote: >-
+        Sensitive groups: Consider rescheduling or moving all activities inside. Go inside if you have symptoms. People
+        with asthma: Follow your asthma action plan and keep quick-relief medicine handy. People with heart disease:
+        Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious problem. If you
+        have any of these, contact your health care provider. Everyone else: Keep outdoor activities shorter and less
+        intense. Go inside if you have symptoms.
+    guide_health_effects:
+      doc: guide
+      pdf_page: 57
+      printed_page: 45
+      text: >-
+        Increased aggravation of heart or lung disease and premature mortality in persons with heart or lung disease
+        and older adults; increased respiratory effects in general population.
+      quote: >-
+        Increased aggravation of heart or lung disease and premature mortality in persons with heart or lung disease
+        and older adults; increased respiratory effects in general population.
+    guide_cautionary:
+      doc: guide
+      pdf_page: 57
+      printed_page: 45
+      text: >-
+        Sensitive Groups: Should avoid prolonged or heavy exertion. Everyone: Should limit prolonged or heavy exertion.
+        Limit time spent outdoors. Individuals with symptoms of lung or heart disease that may be related to excess
+        smoke exposure, including repeated coughing, shortness of breath or difficulty breathing, wheezing, chest
+        tightness or pain, palpitations, nausea or unusual fatigue or lightheadedness, should contact your health care
+        provider.
+      quote: >-
+        Sensitive Groups: Should avoid prolonged or heavy exertion Everyone: Should limit prolonged or heavy exertion
+        Limit time spent outdoors. Individuals with symptoms of lung or heart disease that may be related to excess
+        smoke exposure, including repeated coughing, shortness of breath or difficulty breathing, wheezing, chest
+        tightness or pain, palpitations, nausea or unusual fatigue or lightheadedness, should contact your health care
+        provider.
+    guide_printed_pm25: {doc: guide, pdf_page: 58, printed_page: 46, text: "55.5–150.4", quote: "55.5–150.4"}
+
+  - category: Very Unhealthy
+    aqi: [201, 300]
+    pm25_ug_m3: [125.5, 225.4]
+    colour: Purple
+    rgb: [143, 63, 151]
+    # As printed: "(125.5 -" over "(225.4)3"; see Unhealthy.
+    breakpoint_quote: {doc: tad, pdf_page: 19, printed_page: 14, quote: "(125.5 (225.4)3 355 - 424"}
+    descriptor_quote: {doc: tad, pdf_page: 8, printed_page: 3, quote: "201 to 300"}
+    rgb_quote: {doc: tad, pdf_page: 9, printed_page: 4, quote: "Purple 143 63 151"}
+    tad_statement:
+      doc: tad
+      pdf_page: 16
+      printed_page: 11
+      text: >-
+        Sensitive groups: Avoid all physical activity outdoors. Reschedule to a time when air quality is better or move
+        activities indoors.* People with asthma: Follow your asthma action plan and keep quick-relief medicine handy.
+        People with heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate
+        a serious problem. If you have any of these, contact your health care provider. Everyone else: Limit outdoor
+        physical activity. Go indoors* if you have symptoms.
+      quote: >-
+        Sensitive groups: Avoid all physical activity outdoors. Reschedule to a time when air quality is better or move
+        activities indoors.* People with asthma: Follow your asthma action plan and keep quick-relief medicine handy.
+        People with heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate
+        a serious problem. If you have any of these, contact your health care provider. Everyone else: Limit outdoor
+        physical activity. Go indoors* if you have symptoms.
+    guide_health_effects:
+      doc: guide
+      pdf_page: 57
+      printed_page: 45
+      text: >-
+        Significant aggravation of heart or lung disease, premature mortality in persons with heart or lung disease and
+        older adults; significant increase in respiratory effects in general population.
+      quote: >-
+        Significant aggravation of heart or lung disease, premature mortality in persons with heart or l u n g disease
+        and older adults; significant increase in respiratory effects in general population.
+    guide_cautionary:
+      doc: guide
+      pdf_page: 57
+      printed_page: 45
+      text: >-
+        Everyone: Should avoid prolonged or heavy exertion and stay indoors, preferably in a space with filtered air.
+      quote: >-
+        Everyone: Should avoid prolonged or heavy exertion and stay indoors, preferably in a space with filtered air.
+    guide_printed_pm25: {doc: guide, pdf_page: 58, printed_page: 46, text: "150.5–250.4", quote: "150.5–250.4"}
+
+  - category: Hazardous
+    aqi: [301, 500]
+    # 225.5 and above; Table 6 prints "225.5+"; AQI 500 is 325.4 (method.aqi_500), and above 500 the equation runs on.
+    pm25_ug_m3: [225.5, 325.4]
+    colour: Maroon
+    rgb: [126, 0, 35]
+    breakpoint_quote: {doc: tad, pdf_page: 19, printed_page: 14, quote: "225.5+ 425+"}
+    descriptor_quote: {doc: tad, pdf_page: 8, printed_page: 3, quote: "301+"}
+    rgb_quote: {doc: tad, pdf_page: 9, printed_page: 4, quote: "Maroon 126 0 35"}
+    tad_statement:
+      doc: tad
+      pdf_page: 17
+      printed_page: 12
+      text: >-
+        Sensitive groups: Stay indoors and keep activity levels light. Follow tips for keeping particle levels low
+        indoors.* People with asthma: Follow your asthma action plan and keep quick-relief medicine handy. People with
+        heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious
+        problem. If you have any of these, contact your health care provider. Everyone: Avoid all physical activity
+        outdoors.*
+      quote: >-
+        Sensitive groups: Stay indoors and keep activity levels light. Follow tips for keeping particle levels low
+        indoors.* People with asthma: Follow your asthma action plan and keep quick-relief medicine handy. People with
+        heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious
+        problem. If you have any of these, contact your health care provider. Everyone: Avoid all physical activity
+        outdoors.*
+    guide_health_effects:
+      doc: guide
+      pdf_page: 57
+      printed_page: 45
+      text: >-
+        Serious aggravation of heart or lung disease, premature mortality in persons with heart or lung disease and
+        older adults; serious risk of respiratory effects in general population.
+      quote: >-
+        Serious aggravation of heart or lung disease, premature mortality in persons with heart or lung disease and
+        older adults; serious risk of respiratory effects in general population.
+    guide_cautionary:
+      doc: guide
+      pdf_page: 57
+      printed_page: 45
+      text: "Everyone: Should avoid any outdoor activity, and stay indoors, preferably in a space with filtered air."
+      quote: "Everyone: Should avoid any outdoor activity, and stay indoors, preferably in a space with filtered air."
+    guide_printed_pm25: {doc: guide, pdf_page: 58, printed_page: 46, text: "250.5>500", quote: "250.5>500"}

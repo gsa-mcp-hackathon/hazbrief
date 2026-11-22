@@ -1,0 +1,253 @@
+/* The live page's own rules (HB-130R Part B step 4; HB-131R; HB-141; HB-154), after the
+   static page's stylesheet (render.page_css), whose banner, chips and sections it reuses.
+   HB-154 (DN-019 ADDENDUM-03): a fixed shell that fills the window and never scrolls; each
+   region scrolls inside itself. Sizes and the two breakpoints are `web.shell`, written by
+   web.shell_css after this file. */
+body.shell { display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
+             grid-template-columns: minmax(0, 1fr);
+             height: 100vh; overflow: hidden; }
+body.shell #top { position: static; height: auto; overflow: hidden; min-width: 0; }
+body.shell #bottom { position: static; }
+#top .bar { align-items: center; flex-wrap: nowrap; }
+#top h1 { white-space: nowrap; }
+#top h1 { font-size: 18px; }
+#head-facts, .chip { font-size: 13px; min-width: 0; white-space: nowrap; overflow: hidden;
+                     text-overflow: ellipsis; flex: 0 1 auto; }
+#head-facts > * + *::before { content: " \00b7  "; }
+/* HB-158: the facts give way first, so the wind chip and the status strip stay read */
+#head-facts { flex: 1 1 0; }
+.chip { font-size: 12px; border: 1px solid #999999; border-radius: 10px; padding: 1px 8px;
+        max-width: 40%; }
+.chip[hidden] { display: none; }
+#print-ics { margin-left: auto; font: inherit; font-size: 13px; flex: none; }
+/* the Sources and MCP servers view (HB-154 item 9; HB-158 item 7): marks, names, times */
+#sources-table table { width: 100%; table-layout: fixed; }
+#sources-table table.data-sources th:nth-child(1) { width: 26%; }
+#sources-table table.data-sources th:nth-child(3) { width: 22%; }
+#sources-table table.mcp-servers th:nth-child(1) { width: 22%; }
+#sources-table table.mcp-servers th:nth-child(3) { width: 24%; }
+#sources-table table.mcp-servers th:nth-child(4) { width: 18%; }
+#sources-table ul.tools { list-style: none; padding: 0; margin: 0; }
+#sources-table ul.tools li { display: inline-block; margin-right: 12px; white-space: nowrap; }
+#sources-table h3 { font-size: 14px; margin: 8px 0 2px; }
+details.trow > summary { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+details.trow[open] > summary { white-space: normal; }
+details.trow .srcs { color: var(--grey); }
+/* The replay banner (HB-141 F4): one line in the header on a served replay */
+#replay-banner { background: #fff4d6; border-top: 1px solid #c9a227;
+                 padding: 3px 16px; font-size: 13px; font-weight: bold; }
+
+/* the one row: layers, centre, checklist */
+#shell { display: flex; min-height: 0; border-top: 1px solid #cccccc; }
+.col { position: relative; flex: none; overflow-y: auto; overflow-x: hidden;
+       background: #ffffff; font-size: 14px; }
+#col-layers { width: var(--left); border-right: 1px solid #cccccc; }
+#col-checklist { width: var(--right); border-left: 1px solid #cccccc; }
+.col-body { padding: 4px 12px 16px; }
+.col-toggle { font: inherit; font-size: 12px; margin: 6px 12px 0; }
+#col-layers[data-open="0"], #col-checklist[data-open="0"] { width: var(--strip);
+                                                           overflow: hidden; }
+.col[data-open="0"] .col-body { display: none; }
+.col[data-open="0"] .col-toggle { writing-mode: vertical-rl; margin: 8px auto; display: block;
+                                 padding: 6px 2px; }
+.strip-count { display: none; }
+.col[data-open="0"] .strip-count { display: block; writing-mode: vertical-rl;
+                                   margin: 8px auto; font-size: 12px; font-weight: bold;
+                                   color: var(--accent); }
+
+/* the centre: the map takes what the columns and the panel leave */
+#centre { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
+#map-region { position: relative; flex: 1 1 auto; min-height: 0; }
+body.shell #section-map { position: absolute; inset: 0; margin: 0; }
+body.shell #workbench { height: 100%; }
+body.shell #map-wrap { height: 100%; }
+#map-wait { padding: 16px; }
+/* the layer control lives in the left column, not over the map (HBD-216 as amended);
+   the column's own button opens and closes it, so its summary is not shown */
+#layers-slot #layer-control { position: static; width: auto; max-height: none;
+                              box-shadow: none; border: none; padding: 0; overflow: visible; }
+#layers-slot #layer-control > summary { display: none; }
+body.shell #map-note { right: 12px; top: 56px; }
+
+/* the view switch and the live overlays at the map's top right (item 6) */
+#map-switches { position: absolute; top: 10px; right: 10px; z-index: 1001;
+                display: flex; gap: 8px; }
+.switch-group { display: flex; background: #ffffff; border: 1px solid #999999;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
+.switch-group:empty { display: none; }
+.switch-group button, #view-switch label { font: inherit; font-size: 13px; padding: 3px 10px;
+                                           border: none; border-left: 1px solid #dddddd;
+                                           background: #ffffff; cursor: pointer; }
+.switch-group > :first-child, #view-switch label:first-of-type { border-left: none; }
+#view-switch #basemaps { display: flex; border: none; margin: 0; padding: 0; }
+#view-switch #basemaps[hidden] { display: none; }
+#view-switch legend, #view-switch .n { display: none; }
+#view-switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+#view-switch label:has(input:checked), .switch-group button[aria-pressed="true"] {
+  background: #333333; color: #ffffff; }
+#view-switch label:has(input:focus-visible) { outline: 2px solid var(--accent); }
+#view-switch #basemap-note { position: absolute; top: 34px; right: 0; width: 280px;
+                             background: #ffffff; padding: 4px 6px; margin: 0;
+                             border: 1px solid #999999; }
+
+/* the under-map panel: the tab bar always shows; the body opens to a fixed height */
+#under { flex: none; border-top: 1px solid #999999; background: #ffffff; position: relative; }
+#tabs { display: flex; flex-wrap: wrap; align-items: center; gap: 2px; padding: 4px; }
+.tab { font: inherit; font-size: 12px; padding: 2px 4px; border: 1px solid #cccccc;
+       border-radius: 3px 3px 0 0; background: #f4f4f4; cursor: pointer; }
+.tab[aria-selected="true"] { background: #ffffff; border-color: #333333;
+                             border-bottom-color: #ffffff; font-weight: bold; }
+.tab .st { font-size: 11px; margin-left: 3px; }
+#progress { border: none; padding: 0 0 0 8px; margin-left: auto; }
+#progress .count { font-size: 12px; font-weight: bold; }
+#progress .count.done { font-weight: normal; color: var(--grey); }
+#progress .count.failed { color: var(--accent); }
+#tab-hide { font: inherit; font-size: 12px; position: absolute; right: 22px; top: 34px; z-index: 2; }
+#tab-hide[hidden], .tab-panel[hidden] { display: none; }
+#tab-body { box-sizing: border-box; height: var(--panel); overflow-y: auto; padding: 4px 16px 12px;
+            border-top: 1px solid #dddddd; }
+#tab-body[hidden] { display: none; }
+#tab-body section > details { margin-top: 8px; }
+#tab-body p, #tab-body li, #tab-body td, #tab-body th { font-size: 14px; line-height: 1.4;
+                                                       overflow-wrap: anywhere; }
+#detail-slot #panel { border: none; padding: 0; overflow: visible; flex: none; }
+
+/* the guide panels (HB-141 item 6), inside the ERG guide tab */
+#guide-chips { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px 0; }
+#guide-chips button, .item-action { font: inherit; font-size: 12px; padding: 1px 8px; }
+#guide-chips button[hidden] { display: none; }
+#panel-view { border: 1px solid #999999; padding: 4px 12px; margin: 4px 0 8px; }
+#panel-view[hidden] { display: none; }
+#panel-close { float: right; font: inherit; font-size: 13px; }
+#panel-view h2 { font-size: 16px; margin: 4px 0; border-bottom: 2px solid var(--accent); }
+
+/* the checklist (HB-141; HB-154 item 8) */
+.panel h2 { font-size: 16px; margin: 8px 0 4px; border-bottom: 2px solid var(--accent);
+            padding-bottom: 2px; }
+.purpose { font-weight: bold; font-size: 14px; margin: 4px 0; }
+.panel-note { color: var(--grey); font-size: 12px; margin: 2px 0 8px; }
+#checklist details.group { margin: 0 0 8px; }
+#checklist details.group > summary { font-weight: bold; font-size: 14px; }
+ol.items { list-style: none; padding-left: 0; margin: 0; }
+ol.items li { font-size: 14px; line-height: 1.35; margin: 0 0 8px; overflow-wrap: anywhere; }
+ol.items li.item-flag .item-text, ol.items li.item-degraded .item-text { font-weight: bold; }
+ol.items li.item-degraded .item-text { color: var(--accent); }
+/* a withdrawn item is struck through, not removed, and its tick stays visible */
+ol.items li.withdrawn .item-text { text-decoration: line-through; }
+.receipt { display: block; color: var(--grey); font-size: 12px; overflow-wrap: anywhere; }
+.report-first { font-weight: bold; }
+
+/* HB-158 item 3: a checklist item is one line, cut at the column's edge, that opens onto
+   its whole text, its receipt and its action */
+ol.items li { margin: 0 0 2px; }
+ol.items li > details > summary { list-style: none; display: flex; align-items: baseline;
+                                  gap: 4px; }
+ol.items li > details > summary::-webkit-details-marker { display: none; }
+ol.items li > details:not([open]) .item-text { white-space: nowrap; overflow: hidden;
+                                              text-overflow: ellipsis; min-width: 0; }
+ol.items li > details[open] { padding-bottom: 4px; }
+ol.items li > details > .receipt, ol.items li > details > .item-action,
+ol.items li > details > .pin { margin-left: 22px; }
+.upd { flex: none; font-size: 11px; color: var(--accent); font-weight: bold; }
+.pin { font: inherit; font-size: 11px; padding: 0 6px; margin: 2px 0 2px 22px; display: block; }
+details.about > summary { font-size: 12px; color: var(--grey); }
+#checklist details.group > summary .n { font-weight: normal; }
+/* the layer groups fold on the live page (item 9); a folded group's rows are hidden */
+#layers-slot li.lgroup h3 { cursor: pointer; }
+#layers-slot li.lgroup h3::before { content: "\25BE  "; color: var(--grey); }
+#layers-slot li.lgroup.lclosed h3::before { content: "\25B8  "; }
+#layers-slot li[hidden] { display: none; }
+
+/* HB-158 item 6 and ADDENDUM-01 item 5: the wind chip's hour and the status strip */
+#wind-chip { display: inline-flex; align-items: center; gap: 2px; max-width: 34%;
+             flex: 0 0 auto; }
+#wind-chip-text { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+#wind-chip button { font: inherit; font-size: 10px; padding: 0 4px; flex: none; }
+#wind-chip button[hidden] { display: none; }
+#wind-chip-hour { flex: none; font-weight: bold; padding: 0 2px; }
+#status-strip { font: inherit; font-size: 12px; flex: none; white-space: nowrap;
+                border: 1px solid #999999; border-radius: 10px; background: #ffffff;
+                padding: 1px 8px; cursor: pointer; }
+#strip-marks .st { margin: 0 1px; }
+#strip-marks .st[data-server] { margin-right: 5px; font-size: 1.15em; }
+#progress { font-size: 12px; flex: none; white-space: nowrap; border: none; padding: 0; }
+
+/* ADDENDUM-01 item 4: the brief is presented finished. Until the critical set is in the
+   map carries the assembling view; the layer list, the checklist and the tabs wait */
+#assembling { position: absolute; z-index: 1500; top: 20%; left: 50%;
+              transform: translateX(-50%); width: 340px; background: #ffffff;
+              border: 1px solid #999999; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+              padding: 8px 14px; font-size: 13px; }
+#assembling h2 { font-size: 15px; margin: 2px 0 4px; }
+#assembling ul { list-style: none; padding: 0; margin: 4px 0; }
+body.shell[data-stage] #assembling { display: none; }
+body.shell:not([data-stage]) #map-region::after { content: ""; position: absolute;
+  inset: 0; z-index: 1400; background: rgba(255, 255, 255, 0.55); }
+body.shell:not([data-stage]) #layers-slot,
+body.shell:not([data-stage]) #checklist,
+body.shell:not([data-stage]) #tabs .tab,
+body.shell:not([data-stage]) #tab-body { visibility: hidden; }
+
+/* item 8: the ICS 201 tab shows the form once; the report carries it once loaded */
+body[data-report="loaded"] #tab-ics201 > #section-ics201 { display: none; }
+.tab-sum { margin: 2px 60px 6px 0; display: flex; flex-wrap: wrap; gap: 2px 14px;
+           font-size: 13px !important; }
+.tab-sum:empty { display: none; }
+.sum-row { font-weight: bold; }
+
+/* the evidence log: fixed columns, so a long word breaks inside its cell */
+#log { width: 100%; table-layout: fixed; }
+#log th, #log td { font-size: 12px; padding: 2px 6px 2px 0; overflow-wrap: break-word;
+                   word-break: break-word; }
+#log th:nth-child(1) { width: 24%; }
+#log th:nth-child(2) { width: 26%; }
+#log th:nth-child(3) { width: 9%; }
+#log th:nth-child(4) { width: 15%; }
+#log th:nth-child(5) { width: 12%; }
+#log th:nth-child(6) { width: 14%; }
+#log td:nth-child(4) a { font-family: monospace; font-size: 11px; }
+#log pre { font-size: 11px; white-space: pre-wrap; margin: 2px 0; }
+#log .asked { display: block; }
+
+/* The print view (HB-131R item 3; HB-154 ADDENDUM-01 section 1): the commander's report
+   under the EXERCISE banner, top and bottom, and nothing else. */
+@media print {
+  body.shell { display: block; height: auto; overflow: visible; }
+  #top > :not(.banner), #shell > :not(#centre), #centre > :not(#under),
+  #under > :not(#tab-body), #tab-body > :not(#tab-ics201),
+  #tab-ics201 > :not(#report) { display: none !important; }
+  #shell, #centre, #under, #tab-body, #tab-ics201 { display: block !important;
+    height: auto !important; overflow: visible !important; border: none !important; }
+  /* HB-158: #under is positioned on screen (for the Hide button); printed it is not,
+     so the footer banner prints after the report, in order */
+  #under { position: static !important; }
+}
+
+/* HB-155 (ADDENDUM-05 items 1, 2 and 7): the suggested points' block under the checklist,
+   closed to one line; each point a one-line row that opens; the Area radius steps under
+   Responders as buttons (HBD-328: no menu, no form) */
+#siting { margin-top: 4px; }
+#siting > details > summary { font-weight: 600; cursor: pointer; white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; }
+#siting .srow > summary { white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  line-height: 20px; cursor: pointer; }
+#siting .sfig, #siting .smark { color: #374151; }
+#siting .sdetail p { margin: 2px 0; }
+#siting .sbtn, .area-control .sbtn { font: inherit; font-size: 12px; margin: 1px 2px;
+  padding: 0 4px; }
+#siting .scand { display: block; text-align: left; max-width: 100%; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap; }
+.area-control { font-size: 11px; font-weight: 400; margin-left: 6px; }
+.area-control .sbtn { font-size: 11px; margin: 0 1px; padding: 0 3px; line-height: 14px; }
+.area-control button[aria-pressed="true"] { font-weight: 700; }
+.area-control button:disabled { text-decoration: line-through; }
+.area-control .vh, #siting .vh { position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); }
+/* HB-207 item 13: the sections still working, by name; the start time used; and, where no cloud is
+   drawn, one sentence where the Play control stands (static/shell.js) */
+#progress .working { color: #595959; }
+#start-used { padding: 0 16px 2px; font-size: 13px; font-weight: 600; }
+#no-cloud-why { position: absolute; left: 50%; transform: translateX(-50%); bottom: 30px;
+  z-index: 800; margin: 0; max-width: 60%; padding: 4px 8px; background: #ffffff;
+  border: 1px solid #999999; font-size: 13px; }
+#time-control #no-cloud-why { position: static; max-width: none; }

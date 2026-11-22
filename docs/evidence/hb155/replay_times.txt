@@ -1,0 +1,15 @@
+HB-155 ADDENDUM-01 item 5: the reference pair's replayed assembly (0 calls), wall seconds,
+two runs each, measured back to back on 2026-11-11 while the full gate ran on the same
+machine (both trees under the same load), by the HB-155 evidence (held privately).
+
+main (git archive of main at this task's base, in /tmp/hb155_base):
+csx-point-of-rocks-day [10.2, 7.4]
+csx-point-of-rocks-night [17.5, 17.5]
+
+this branch (every kept and in-hand service timed; the siting derivation; stage two):
+csx-point-of-rocks-day [9.7, 8.4]
+csx-point-of-rocks-night [18.9, 19.1]
+
+HB-151's measured 4.2 s and 6.2 s predate HB-157's SLAB runs and time steps, so main is the
+comparison: the branch adds about 1 to 1.5 s to night and nothing measurable to day. Every
+row's free-flow time is computed (one Dijkstra from the incident gives all of them).

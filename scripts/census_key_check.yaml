@@ -1,0 +1,5 @@
+# scripts/census_key_check.py: the one geography its data request asks for (HB-215 ADDENDUM-02 item 2).
+# Frederick County, Maryland: the county of csx-point-of-rocks-day, the demo's reference scenario; one row answers.
+name: "Frederick County, Maryland"
+for: "county:021"
+in: "state:24"

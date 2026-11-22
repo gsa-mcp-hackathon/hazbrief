@@ -1,0 +1,171 @@
+# HB-196 Part A items 1 and 2: which graph records docs/FUTURE_WORK.md renders, and under which list. Each item names
+# its record (an Issue by its id prefix, or a decision of the register by its id); the item's text is that record's own
+# text, read by future_work.py (a build tool held privately), never typed here. `heading` is a label only. A known limit names the committed
+# files that show it (`evidence`); the generator refuses a file `git ls-files` does not list. `operator_issue` names
+# the operator's review Issue a finding came from, whose name carries the date the operator stated it.
+#
+# An item with no record gets its Issue first (the HB-196 evidence (held privately)), then appears here.
+
+output: docs/FUTURE_WORK.md
+issue_source: "seldon issue list --json"
+decision_source: the decision register (held privately)
+
+known_limits:
+  - heading: "Under a stable class, SCICHEM is below every measured trial arc and is not converged"
+    issue: c998e714
+    evidence:
+      - docs/evidence/hb176/summary.tsv
+      - docs/evidence/hb180/statistics_c.tsv
+      - docs/evidence/hb187/q2_convergence.tsv
+  - heading: "By day, SCICHEM is below every trial arc, and on Goldfish the shortfall is not its layer"
+    issue: f04a469c
+    evidence:
+      - docs/evidence/hb185/statistics.tsv
+      - docs/evidence/hb185/by_material.tsv
+  - heading: "Held field trials not run: daytime, instantaneous, passive and Jack Rabbit II"
+    issue: e7b9f583
+    evidence:
+      - docs/evidence/hb176/trials.tsv
+  - heading: "Night clouds leave the engine's domain, so reach and residents are lower bounds"
+    issue: d5bcfffb
+    evidence:
+      - docs/evidence/hb189/levels.tsv
+  - heading: "A day-start brief's SLAB check reads its daytime class"
+    issue: c21aae38
+    evidence:
+      - docs/evidence/hb189/levels.tsv
+  - heading: "The moving cloud's status line mid-run is seen only in a live run"
+    issue: e4d4cf16
+    evidence:
+      - docs/evidence/hb192/csx_night_status_mid_run.png
+      - docs/evidence/hb192/frames.tsv
+  - heading: "Twelve reoriented briefs await a live recording for population and facilities"
+    issue: 8b992307
+    evidence:
+      - docs/evidence/hb133/section_states.tsv
+  # HB-210: Google's traffic draws on a live page with the operator's key (Issue 550a34b4 resolved); what remains is
+  # that it draws only on a page that carries a key, and the key's localhost referrer
+  - heading: "Google traffic draws only on a page served with a key, and the key is refused on localhost"
+    issue: 0844dcb5
+    evidence:
+      - docs/evidence/hb210/key_check.tsv
+      - docs/evidence/hb210/traffic_on.png
+  - heading: "Load-sensitive gate findings still open in the graph (HB-194 grouped their tests; three gates in a row were green)"
+    issue: 15c1fdae
+    evidence:
+      - docs/evidence/hb194/failures.tsv
+      - docs/evidence/hb194/three_gates.tsv
+  - heading: "A Chrome shell test ran past 240 s under the parallel gate"
+    issue: 5a64c9ca
+    evidence:
+      - docs/evidence/hb194/failures.tsv
+      - docs/evidence/hb194/load_sensitive.tsv
+  - heading: "A night brief counts residents in the modelled area beyond the places it names"
+    issue: 9e099dd6
+    evidence:
+      - docs/evidence/hb189/levels.tsv
+      - docs/briefs/csx-point-of-rocks-night/brief.html
+  - heading: "Main received three merges with no whole-suite pass (HB-197, HB-198, HB-199); a later gate covered them"
+    issue: 34e2fddc
+    evidence:
+      - docs/evidence/hb203/merges.tsv
+      - docs/evidence/hb202/gate_tail.txt
+  - heading: "A Chrome test's hang in HB-196's gate 2 is not classified"
+    issue: 41b8c056
+    evidence:
+      - docs/evidence/hb196/chrome_hang.md
+      - docs/evidence/hb196/gate2_tail.txt
+  - heading: "A gate needs the linked corpus files on disk, and iCloud can evict them"
+    issue: b1d59a95
+    evidence:
+      - docs/evidence/hb198/placeholders.txt
+      - docs/evidence/hb198/gate_ledger.tsv
+  - heading: "A test worker that dies leaves its headless Chrome running"
+    issue: ce3a04e4
+    evidence:
+      - docs/evidence/hb201/orphan_check.tsv
+  - heading: "A gate's disk need is swap, so the dispatcher's check before a launch does not predict a finish"
+    issue: b87dbb10
+    evidence:
+      - docs/evidence/hb202/gate_swap.tsv
+      - docs/evidence/hb202/gate2_swap.tsv
+      - the HB-202 evidence (held privately)
+  - heading: "A release under one minute is modelled as one minute, which lowers the peak near the source"
+    issue: 9c191e24
+    evidence:
+      - docs/evidence/hb206/README.md
+      - docs/evidence/hb206/trial7_scores.tsv
+      - docs/evidence/hb206/protocol.md
+  - heading: "A live brief draws no census block, rail line or other shape read from a source's answer"
+    issue: 8907cf6c
+    evidence:
+      - docs/evidence/hb207/failures.tsv
+
+future_work:
+  # HB-209: Trial 7 is run and scored (HB-206; the record's own appended segment says so), so the label names the
+  # trials still to run
+  - heading: "Evaluate the dense cloud on Jack Rabbit II trials 1 and 6 against the benchmark requirement (Trial 7 is run)"
+    issue: b6415bb8
+  - heading: "A third dispersion engine, exploratory (cut 2026-11-15)"
+    issue: 207422dc
+  - heading: "The six browser-list works still held only as metadata"
+    issue: b4d6c6dc
+  - heading: "An optional finest-setting replot after triage, with its wait stated"
+    issue: d32210c2
+  - heading: "Speeding one dense night run, why the step limit binds, and the tiling question"
+    issue: f33d9e86
+  - heading: "The day-start run's domain top"
+    issue: aeef615f
+  - heading: "A page of every candidate block as a table and a map"
+    issue: 71e5b794
+  - heading: "One assembly per brief per gate, shared across test modules"
+    issue: "30123239"
+  - heading: "Where a live brief's assembly time goes"
+    issue: a682da2b
+  - heading: "A finer frame mesh for the closest first views"
+    issue: fc3dba92
+  - heading: "Tests that wait on the page's own finished signal, not a fixed clock"
+    issue: d0475c31
+  - heading: "Uncertainty zones around the cloud: an ensemble or a variance model"
+    issue: 05fd0f12
+  - heading: "Evacuation and shelter-in-place procedure as linked knowledge"
+    issue: 8bea7709
+  - heading: "A worst-case scenario builder"
+    issue: d54dbcb8
+    operator_issue: "69466498"
+  - heading: "Occupancy from a place's own calendar and schedules"
+    issue: 2e8eba4d
+  - heading: "Smoke from a fire (VSMOKE)"
+    decision: "hazbrief-mcp:HBD-317"
+    issue: 72c4947d
+  - heading: "Subscription traffic providers (511, NPMRDS)"
+    issue: 6dc5186b
+    operator_issue: "605428b3"
+  - heading: "Live responder positions and alerting a responder in the path"
+    issue: 5dd2f66e
+    operator_issue: "605428b3"
+  - heading: "Display refinement in design sessions with responders"
+    issue: 0de95d2f
+  - heading: "A knowledge graph over hazmat response laws, regulations and policies"
+    issue: 5f76d715
+  - heading: "A task that copies the repository deletes the copy before it ends"
+    issue: b7bd2fd4
+  - heading: "The export versions table names files archived out of the exports folder"
+    issue: df0d0319
+  - heading: "The timed decision view on the brief page"
+    issue: 35e5f362
+  # HB-209 item 10: the hz-20 handoff's cuts with no record before; each Issue filed by the HB-209 evidence (held privately)
+  - heading: "One population layer on the brief page"
+    issue: d0f23564
+  - heading: "Times on SLAB's area, and DN-028 ADDENDUM-14's \"no times\" wording"
+    issue: 01f48797
+  - heading: "A first responder's table of suggested actions"
+    issue: fbcf4c20
+  - heading: "Review of the suggested actions table by a practising incident commander"
+    issue: 210d546c
+  # HB-214 item 12: Part B left out by DN-030 ADDENDUM-02 decision 22, so the whole camera layer is here with the reason
+  # (its Issue's description); video analysis and credentialed feeds stay future work under Issue 72025338
+  - heading: "Traffic cameras on the brief map, Maryland CHART"
+    issue: 856ab26b
+  - heading: "Traffic camera video and credentialed camera feeds"
+    issue: "72025338"

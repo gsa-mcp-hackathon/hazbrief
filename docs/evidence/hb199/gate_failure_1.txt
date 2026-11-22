@@ -1,0 +1,21 @@
+HB-199 gate 1, parallel step: not a test failure; stopped by the dispatcher (ADDENDUM-01's record, HB-198 ADDENDUM-04 item 3l)
+
+started             2026-11-18 12:25:20 EST (logs/hb199/gate1_parallel.log, gitignored)
+stop                dispatcher hard stop for task 3161ca30, reason disk_ceiling, seen at the 12:30:36 poll's successor
+                    (about 12:31): free_bytes 970,129,408, need_bytes 4,994,026,628 (factor 2 x footprint 2,497,013,314),
+                    probe statvfs on /Users/brock/GitHub/hazbrief-mcp
+progress at stop    about 42 percent of the parallel step's tests; no failure or error printed (no F or E in the log)
+failing test ids    none
+read at 12:32:24 EST, after the stop:
+  load average      9.90 8.72 6.81 (uptime)
+  free disk         8,061,180 KiB available on /System/Volumes/Data (df -k .), back above the need
+  memory pressure   "System-wide memory free percentage: 17%" (memory_pressure)
+  placeholders      0 under the linked corpus paths at 12:25 (placeholders.txt, "before gate 1, parallel step")
+  processes         this gate's pytest (uv pid 1287, python pid 1289, 6:48 elapsed, and its xdist workers); Chrome
+                    helpers 1725 (4:15) and 2040 (0:28) started inside the gate's window; the operator's own Chrome
+                    (pid 68706, up 5 days) and its long-lived helpers; no SCICHEM or SLAB process
+action              this gate's pytest stopped (SIGTERM to pid 1289 and 1287) so it writes no more to the volume; the
+                    load-sensitive step, ruff and seldon verify were not run
+reading             free disk fell from 10,421,956,608 bytes at 12:25:12 to 970,129,408 within about six minutes and
+                    was 8.25 GB a minute later: a transient draw during the parallel step (this run's workers or
+                    another process on the volume); not diagnosed here

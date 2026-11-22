@@ -1,0 +1,16 @@
+future-work-one-population-layer-on-the-brief-page EXIT=0 :: Created Issue: d0f23564-3efd-4df8-a781-b18a7ebff9fa
+  name: future-work-one-population-layer-on-the-brief-page
+  description: Future work (the hz-20 handoff of 2026-11-19, its list of what is cut to future work and stated on the deck; HB-209 item 10): one population layer on the brief page. A brief now draws three block layers from the same census blocks, population, residential density and workplaces (HB-208 RESULT: on its live runs the three layers drew 174, 160 and 38 blocks each; docs/evidence/hb208/live/runs.tsv). Not built.
+  type: missing_content
+  quadrant: BACKLOG (importance=medium, urgency=low)
+  detection: review
+  target: code
+  state: open
+future-work-times-on-slabs-area-and-dn028-addendum14s-no-times-wording EXIT=0 :: Created Issue: 01f48797-d7e0-4a84-bdfa-56e3b0dd245d
+  name: future-work-times-on-slabs-area-and-dn028-addendum14s-no-times-wording
+  description: Future work (the hz-20 handoff of 2026-11-19, its list of what is cut to future work and stated on the deck; HB-209 item 10): times on SLAB's area, and DN-028 ADDENDUM-14's 'no times' wording. Where any hour of a brief's horizon is stable, SLAB checks how far, a dashed outline with no times beside the moving cloud (DN-028 ADDENDUM-14; src/hazbrief/brief/conditions.yaml: SLAB's part 'gives no times and does not turn with the forecast, so a place inside it only is listed with no time'). Arrival times from SLAB's own run, and the wording restated where they are drawn. Not built.
+  type: missing_content
+  quadrant: BACKLOG (importance=medium, urgency=low)
+  detection: review
+  target: code
+  state: open

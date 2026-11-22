@@ -1,0 +1,641 @@
+# HB-127 Part B: the base-rate rows, read by the HB-127 evidence (held privately).
+# page: the PDF page (1-based, as pdftotext counts it) for a PDF, or the section heading for an HTML page.
+# printed: the page number printed on the page, where it differs and was read. quote: verbatim.
+# calc: a derived value; the tool recomputes expr over inputs and refuses a value that differs.
+# value not_held: the note names the primary that would hold it and its rung.
+scopes:
+  national: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  hsees16: HSEES, 16 states (10 for all of 1993-2000, 6 for part of it)
+  rmp: RMP-covered facilities (40 CFR part 68), as reported to EPA's RMP database
+t55_years:
+- '2010'
+- '2017'
+- '2018'
+- '2019'
+- '2020'
+- '2021'
+- '2022'
+- '2023'
+rows:
+- measure: Hazmat transportation incidents reported to PHMSA, all modes
+  value: '14805'
+  unit: incidents per year
+  period: '2010'
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-tsar-2024
+  page: '161'
+  printed: 5-24
+  quote: Reported TOTAL 14,805 17,485 18,652 22,776 21,892 25,157 25,161 24,265
+  note: 'Table 5-5, row TOTAL, column 2010. The source line: PHMSA HAZMAT Intelligence Portal as reported in National
+    Transportation Statistics table 2-6, as of July 2024.'
+- measure: Hazmat transportation incidents reported to PHMSA, all modes
+  value: '25161'
+  unit: incidents per year
+  period: '2022'
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-tsar-2024
+  page: '161'
+  printed: 5-24
+  quote: Reported TOTAL 14,805 17,485 18,652 22,776 21,892 25,157 25,161 24,265
+  note: 'Table 5-5, row TOTAL, column 2022. The table''s note: 2021 and 2022 Highway and Rail data are revised.'
+- measure: Hazmat transportation incidents reported to PHMSA, all modes
+  value: '24265'
+  unit: incidents per year
+  period: 2023 (latest held)
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-tsar-2024
+  page: '161'
+  printed: 5-24
+  quote: Table 5-5 shows that, in 2023, 24,265 hazardous materials incidents (excluding pipeline incidents) associated
+    with these shipments were reported to PHMSA—down about 900 from 2022
+  note: Also Table 5-5, row TOTAL, column 2023.
+- measure: Hazmat transportation incidents per day, all modes
+  value: null
+  unit: incidents per day
+  period: '2023'
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-tsar-2024
+  page: '161'
+  printed: 5-24
+  quote: Table 5-5 shows that, in 2023, 24,265 hazardous materials incidents
+  calc:
+    expr: n / 365
+    inputs:
+      n: 24265
+    decimals: 1
+  note: 'Derived: 24,265 / 365 days. An average; the source prints no daily rate.'
+- measure: Vehicular accident- or derailment-related share of incidents
+  value: '0.5'
+  unit: percent
+  period: '2023'
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-tsar-2024
+  page: '161'
+  printed: 5-24
+  quote: TOTAL number of 358 290 303 261 169 127 98 126
+  note: 'Table 5-5: 126 of 24,265 incidents in 2023 were vehicular accident- or derailment-related; the table''s own percentage
+    row prints 0.5 (2.4 in 2010). The text: most incidents occur in loading, unloading and storage (about 4,100 loading,
+    11,000 unloading, nearly 800 storage in 2023).'
+- measure: Highway share of incidents
+  value: null
+  unit: percent
+  period: '2023'
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-tsar-2024
+  page: '161'
+  printed: 5-24
+  quote: Highway Overall 12,658 15,744 16,754 20,684 19,879 23,122 23,407 22,815
+  calc:
+    expr: 100 * h / t
+    inputs:
+      h: 22815
+      t: 24265
+    decimals: 1
+  note: 'Derived: Table 5-5 Highway Overall 22,815 / TOTAL 24,265 x 100.'
+- measure: Highway share of incidents
+  value: null
+  unit: percent
+  period: '2010'
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-tsar-2024
+  page: '161'
+  printed: 5-24
+  quote: Highway Overall 12,658 15,744 16,754 20,684 19,879 23,122 23,407 22,815
+  calc:
+    expr: 100 * h / t
+    inputs:
+      h: 12658
+      t: 14805
+    decimals: 1
+  note: 'Derived: Table 5-5 Highway Overall 12,658 / TOTAL 14,805 x 100.'
+- measure: Rail share of incidents
+  value: null
+  unit: percent
+  period: '2023'
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-tsar-2024
+  page: '161'
+  printed: 5-24
+  quote: Rail Overall 747 573 479 413 372 397 368 332
+  calc:
+    expr: 100 * r / t
+    inputs:
+      r: 332
+      t: 24265
+    decimals: 2
+  note: 'Derived: Table 5-5 Rail Overall 332 / TOTAL 24,265 x 100.'
+- measure: Rail share of incidents
+  value: null
+  unit: percent
+  period: '2010'
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-tsar-2024
+  page: '161'
+  printed: 5-24
+  quote: Rail Overall 747 573 479 413 372 397 368 332
+  calc:
+    expr: 100 * r / t
+    inputs:
+      r: 747
+      t: 14805
+    decimals: 2
+  note: 'Derived: Table 5-5 Rail Overall 747 / TOTAL 14,805 x 100.'
+- measure: Hazmat transportation fatalities
+  value: not_held
+  unit: deaths per year
+  period: 2010, 2022, 2023
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-nts-table-2-6
+  page: ''
+  quote: ''
+  note: 'TSAR 2024 Table 5-5 as printed carries incidents only. The primary is NTS table 2-6 (bts-nts-table-2-6) or the
+    Table 5-5 workbook (bts-tsar-2024-t5-5-xlsx); www.bts.gov refuses this client (HTTP 403): rung 2 (acquisition.md).
+    PHMSA''s biennial report (phmsa-hazmat-biennial-report-2021) is also refused (rung 2).'
+- measure: Hazmat transportation injuries
+  value: not_held
+  unit: injuries per year
+  period: 2010, 2022, 2023
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-nts-table-2-6
+  page: ''
+  quote: ''
+  note: 'As for fatalities: NTS table 2-6 or the Table 5-5 workbook, rung 2.'
+- measure: Hazmat transportation property damage
+  value: not_held
+  unit: dollars per year (with the deflator the source used)
+  period: 2010, 2022, 2023
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-nts-table-2-6
+  page: ''
+  quote: ''
+  note: 'As for fatalities: NTS table 2-6 or the Table 5-5 workbook, rung 2. The deflator is whatever that table''s note
+    states; none is held.'
+- measure: Highway and rail shares of damages
+  value: not_held
+  unit: percent
+  period: '2023'
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: bts-tsar-2024-t5-5-xlsx
+  page: ''
+  quote: ''
+  note: 'Damages by mode are in the Table 5-5 workbook and NTS table 2-6, not in the printed table: rung 2.'
+- measure: Incidents with a death or major injury
+  value: not_held
+  unit: incidents per year
+  period: 2015-2018
+  scope: national (all modes reported to PHMSA on Form F 5800.1, excluding pipelines)
+  doc_id: phmsa-hazmat-biennial-report-2021
+  page: ''
+  quote: ''
+  note: 'PHMSA''s January 2021 biennial report, sections 3.3 and 3.7; hazmat.dot.gov and www.phmsa.dot.gov refuse this
+    client (HTTP 403): rung 2. PHMSA''s 10 Year Incident Summary Reports (OBIEE portal) are rung 2 too.'
+- measure: RMP facility accident damages, monetized, EPA's figure
+  value: '540.23'
+  unit: million dollars per year (2022 dollars)
+  period: 2016-2020 (annual average)
+  scope: RMP-covered facilities (40 CFR part 68), as reported to EPA's RMP database
+  doc_id: epa-rmp-sccap-final-rule-2024-prepub
+  page: '21'
+  quote: In total, EPA estimated monetized damages from RMP facility accidents of $540.23 million per year
+  note: 'The final rule''s Table 3, Summary of Quantified Damages [Millions, 2022 dollars]: five-year total $2,701.14
+    million. The rule says these omit responder costs, property-value losses, unmonetized evacuation and sheltering costs
+    and health risks (PDF p.35). The RIA itself (epa-rmp-sccap-ria-2024, Exhibit ES-3) is refused by regulations.gov:
+    rung 2.'
+- measure: RMP facility accident damages, offsite part
+  value: '42.33'
+  unit: million dollars per year (2022 dollars)
+  period: 2016-2020 (annual average)
+  scope: RMP-covered facilities (40 CFR part 68), as reported to EPA's RMP database
+  doc_id: epa-rmp-sccap-final-rule-2024-prepub
+  page: '22'
+  quote: EPA estimated total, average annual offsite damages of $42.33 million
+  note: 'Onsite: $497.90 million per year (PDF p.21-22). Offsite property damage $35.71 million, evacuations $3.80 million,
+    sheltering in place $2.52 million.'
+- measure: Offsite share of RMP accident damages
+  value: null
+  unit: percent
+  period: 2016-2020
+  scope: RMP-covered facilities (40 CFR part 68), as reported to EPA's RMP database
+  doc_id: epa-rmp-sccap-final-rule-2024-prepub
+  page: '21'
+  quote: Offsite Total $211.66 $42.33 $0.43
+  calc:
+    expr: 100 * off / tot
+    inputs:
+      'off': 42.33
+      tot: 540.23
+    decimals: 1
+  note: 'Derived: offsite $42.33 million / total $540.23 million per year x 100 (Table 3). A share of damages, not of
+    accidents.'
+- measure: RMP accidents, 2016-2020
+  value: null
+  unit: accidents (five years)
+  period: 2016-2020
+  scope: RMP-covered facilities (40 CFR part 68), as reported to EPA's RMP database
+  doc_id: epa-rmp-sccap-final-rule-2024-prepub
+  page: '21'
+  quote: Total $2,701.14 $540.23 $5.54
+  calc:
+    expr: tot / per
+    inputs:
+      tot: 2701.14
+      per: 5.54
+    decimals: 0
+  note: 'Derived, approximate: Table 3''s five-year total $2,701.14 million / average per accident $5.54 million (rounded
+    in print) = about 488, so about 98 a year. A cross-check on PDF p.22: 86 small-entity accidents were ''about 18 percent
+    of all accidents'' (86 / 0.18 = about 478). The rule prints no count; the RIA does (rung 2).'
+- measure: RMP accidents with offsite consequences, share
+  value: not_held
+  unit: percent
+  period: 2016-2020
+  scope: RMP-covered facilities (40 CFR part 68), as reported to EPA's RMP database
+  doc_id: epa-rmp-sccap-ria-2024
+  page: ''
+  quote: ''
+  note: 'The RIA (docket EPA-HQ-OLEM-2022-0174-0587); downloads.regulations.gov refuses this client (HTTP 403): rung 2.
+    The held rule states offsite damages, not the share of accidents with offsite consequences.'
+- measure: RMP accidents with reportable impacts; injuries and deaths; accidents with property damage
+  value: not_held
+  unit: accidents, persons, accidents
+  period: 2004-2013
+  scope: RMP-covered facilities (40 CFR part 68), as reported to EPA's RMP database
+  doc_id: ''
+  page: ''
+  quote: ''
+  note: 'The Technical Background Document for the 2016 NPRM (docket EPA-HQ-OEM-2015-0725, regulations.gov: rung 2) and
+    the NPRM preamble, 81 FR 13637 (2016-03-14, www.govinfo.gov: rung 1 with that host on a task''s Network line). Not
+    found on epa.gov (acquisition.md item 10).'
+- measure: Largest evacuation ever from an RMP-reportable accident
+  value: '50000'
+  unit: persons
+  period: 2019 (TPC Group, Port Neches, Texas)
+  scope: RMP-covered facilities (40 CFR part 68), as reported to EPA's RMP database
+  doc_id: epa-rmp-sccap-final-rule-2024-prepub
+  page: '45'
+  quote: reported the largest number of persons ever evacuated (50,000 people) as the result of an RMP-reportable incident,
+    as well as $153 million in offsite property damage
+  note: One event, not a rate.
+- measure: Chlorine-related events, share of all HSEES events
+  value: '2.2'
+  unit: percent
+  period: 1993-2000
+  scope: HSEES, 16 states (10 for all of 1993-2000, 6 for part of it)
+  doc_id: atsdr-hsees-chlorine-1993-2000
+  page: '5'
+  printed: '5'
+  quote: A total of 44,164 events was reported to the HSEES system from January 1, 1993 through December 31, 2000. Of
+    these events, 952 (2.2%) were chlorine-related; 865 involved actual releases of chlorine only.
+  note: 952 of 44,164 events; 865 were releases of chlorine only, the paper's 'chlorine events'.
+- measure: Chlorine-only events with victims
+  value: '31.8'
+  unit: percent of chlorine events
+  period: 1993-2000
+  scope: HSEES, 16 states (10 for all of 1993-2000, 6 for part of it)
+  doc_id: atsdr-hsees-chlorine-1993-2000
+  page: '5'
+  printed: '5'
+  quote: In the 865 chlorine events, 275 (31.8%) involved 1,071 victims.
+  note: Relative risk against non-chlorine single-substance events 4.5 (95% CI 4.1-5.0), the highest of 11 substance categories
+    (Table 3, PDF p.15). No deaths from chlorine events were reported (PDF p.6).
+- measure: Non-chlorine single-substance events with victims
+  value: null
+  unit: percent of those events
+  period: 1993-2000
+  scope: HSEES, 16 states (10 for all of 1993-2000, 6 for part of it)
+  doc_id: atsdr-hsees-chlorine-1993-2000
+  page: '15'
+  printed: '15'
+  quote: Total 41,471¶ 100.0 3147 100.0 --- --- 7.6
+  calc:
+    expr: 100 * (vt - vc) / (et - ec)
+    inputs:
+      vt: 3147
+      vc: 275
+      et: 41471
+      ec: 865
+    decimals: 1
+  note: 'Derived from Table 3: (3,147 events with victims - 275 chlorine) / (41,471 single-substance events - 865 chlorine)
+    x 100 = 2,872 / 40,606. Table 3 prints 7.6 for all single-substance events, chlorine included; the paper''s text says
+    non-chlorine single-substance events numbered 40,606 (PDF p.5).'
+- measure: Chlorine-only events with ordered evacuations
+  value: '39.5'
+  unit: percent of chlorine events with a known evacuation status
+  period: 1993-2000
+  scope: HSEES, 16 states (10 for all of 1993-2000, 6 for part of it)
+  doc_id: atsdr-hsees-chlorine-1993-2000
+  page: '6'
+  printed: '6'
+  quote: Of the 856 events, 338 (39.5%) involved ordered evacuations
+  note: Relative risk of an evacuation against non-chlorine events 4.8 (95% CI 4.3-5.3), same page.
+- measure: People evacuated in chlorine-only events
+  value: '20469'
+  unit: persons (at least)
+  period: 1993-2000
+  scope: HSEES, 16 states (10 for all of 1993-2000, 6 for part of it)
+  doc_id: atsdr-hsees-chlorine-1993-2000
+  page: '6'
+  printed: '6'
+  quote: There were at least 20,469 known people evacuated, ranging from one to 1,840 people per event (median = 20.0).
+  note: Counted over the 287 ordered evacuations with a known number of evacuees.
+- measure: Evacuation duration in chlorine-only events, median
+  value: '2.0'
+  unit: hours
+  period: 1993-2000
+  scope: HSEES, 16 states (10 for all of 1993-2000, 6 for part of it)
+  doc_id: atsdr-hsees-chlorine-1993-2000
+  page: '6'
+  printed: '6'
+  quote: The length of evacuations during these events ranged from one to 400 hours (median = 2.0).
+  note: Known for 272 of the 287 events with a known number of evacuees.
+- measure: Chlorine share of releases; chlorine releases with victims; injuries and deaths
+  value: not_held
+  unit: percent; percent; persons
+  period: 1993-1997
+  scope: HSEES states 1993-1997
+  doc_id: atsdr-hsees-cumulative-1993-1997
+  page: ''
+  quote: ''
+  note: 'ATSDR''s HSEES Cumulative Report 1993-1997, Table 2: its URL answers HTTP 404 and www.atsdr.cdc.gov is off the
+    Network line; a UNT End of Term 2008 capture exists (rung 1 with webarchive.library.unt.edu on a task''s Network line).
+    The 1993-2000 paper above covers the same states and years and more.'
+- measure: HSEES events
+  value: '13808'
+  unit: events (two years)
+  period: 1999-2000
+  scope: HSEES, 13 states in 1999 and 15 in 2000
+  doc_id: atsdr-hsees-biennial-1999-2000
+  page: '3'
+  quote: A total of 13,808 events was reported.
+  note: ''
+- measure: HSEES events with victims
+  value: '9.1'
+  unit: percent of events
+  period: 1999-2000
+  scope: HSEES, 13 states in 1999 and 15 in 2000
+  doc_id: atsdr-hsees-biennial-1999-2000
+  page: '3'
+  quote: 1,256 events (9.1% of all reported events) resulted in a total of 4,425 victims.
+  note: ''
+- measure: Deaths in HSEES events
+  value: '74'
+  unit: persons (two years)
+  period: 1999-2000
+  scope: HSEES, 13 states in 1999 and 15 in 2000
+  doc_id: atsdr-hsees-biennial-1999-2000
+  page: '3'
+  quote: A total of 74 persons died as a result of all events, and 622 (4.5%) events required evacuations.
+  note: ''
+- measure: HSEES events with evacuations
+  value: '4.5'
+  unit: percent of events
+  period: 1999-2000
+  scope: HSEES, 13 states in 1999 and 15 in 2000
+  doc_id: atsdr-hsees-biennial-1999-2000
+  page: '3'
+  quote: A total of 74 persons died as a result of all events, and 622 (4.5%) events required evacuations.
+  note: 622 events.
+- measure: HSEES events
+  value: '3125'
+  unit: events (three years)
+  period: 1990-1992
+  scope: HSEES, 5 states from 1990 and 9 in 1992
+  doc_id: cdc-mmwr-hsees-1990-1992
+  page: RESULTS
+  quote: A total of 3,125 events were reported from participating states to the HSEES system during 1990-1992.
+  note: MMWR CDC Surveillance Summaries 43(SS-2), an HTML page.
+- measure: HSEES events with injuries
+  value: '15'
+  unit: percent of events
+  period: 1990-1992
+  scope: HSEES, 5 states from 1990 and 9 in 1992
+  doc_id: cdc-mmwr-hsees-1990-1992
+  page: RESULTS
+  quote: In 467 events (15% of all events), 1,446 persons were injured.
+  note: ''
+- measure: HSEES events with evacuations
+  value: '15'
+  unit: percent of events
+  period: 1990-1992
+  scope: HSEES, 5 states from 1990 and 9 in 1992
+  doc_id: cdc-mmwr-hsees-1990-1992
+  page: RESULTS
+  quote: Approximately 457 (15%) of events resulted in evacuations, of which 400 (88%) were ordered by an official (e.g.,
+    a police officer or firefighter).
+  note: 88 percent of those evacuations (400) were ordered by an official.
+- measure: Evacuation duration, HSEES events
+  value: '9.4'
+  unit: hours, mean (median 3; range 1-240)
+  period: 1990-1992
+  scope: HSEES, 5 states from 1990 and 9 in 1992
+  doc_id: cdc-mmwr-hsees-1990-1992
+  page: RESULTS
+  quote: 'evacuations lasted an average of 9.4 hours (median: 3 hours; range: 1-240 hours)'
+  note: Median number evacuated 25 (range 12 to more than 9,999), same paragraph.
+- measure: 'Graniteville: liquefied chlorine released before responders arrived'
+  value: '120000'
+  unit: pounds (about 9,218 gallons)
+  period: '2005-01-06'
+  scope: one event (NTSB/RAR-05/04)
+  doc_id: ntsb-rar-05-04-graniteville
+  page: '57'
+  printed: '49'
+  quote: Thus, approximately 120,000 pounds (9,218 gallons) of liquefied chlorine were released before the responders
+    arrived on scene.
+  note: About two-thirds of the tank car's 180,000-pound load.
+- measure: 'Graniteville: deaths'
+  value: '9'
+  unit: persons
+  period: '2005-01-06'
+  scope: one event (NTSB/RAR-05/04)
+  doc_id: ntsb-rar-05-04-graniteville
+  page: '7'
+  printed: v
+  quote: The train engineer and eight other people died as a result of chlorine gas inhalation.
+  note: Executive summary.
+- measure: 'Graniteville: people taken to hospitals'
+  value: '554'
+  unit: persons (about; 75 admitted)
+  period: '2005-01-06'
+  scope: one event (NTSB/RAR-05/04)
+  doc_id: ntsb-rar-05-04-graniteville
+  page: '7'
+  printed: v
+  quote: About 554 people complaining of respiratory difficulties were taken to local hospitals. Of these, 75 were admitted
+    for treatment.
+  note: Executive summary.
+- measure: 'Graniteville: people evacuated'
+  value: '5400'
+  unit: persons (about), within 1 mile, for several days
+  period: '2005-01-06'
+  scope: one event (NTSB/RAR-05/04)
+  doc_id: ntsb-rar-05-04-graniteville
+  page: '7'
+  printed: v
+  quote: about 5,400 people within a 1-mile radius of the derailment site were evacuated for several days. Total damages
+    exceeded $6.9 million.
+  note: Executive summary; total damages exceeded $6.9 million (same sentence pair).
+- measure: 'East Palestine: residents in the evacuation zone'
+  value: '2000'
+  unit: residents (about), 1-mile zone
+  period: '2023-02-03'
+  scope: one event (NTSB/RIR-24-05)
+  doc_id: ntsb-rir-24-05-east-palestine
+  page: '11'
+  printed: x
+  quote: Emergency responders established a 1-mile evacuation zone that affected about 2,000 residents.
+  note: The zone was later expanded for the vent and burn of five vinyl chloride tank cars (February 6); no injuries were
+    reported during the derailment or response (same page). The evacuation lifted 2023-02-08 at 5:28 p.m. (timeline, PDF
+    p.47).
+- measure: 'East Palestine: equipment damage, Norfolk Southern''s estimate'
+  value: '3.4'
+  unit: million dollars (about)
+  period: '2023-02-03'
+  scope: one event (NTSB/RIR-24-05)
+  doc_id: ntsb-rir-24-05-east-palestine
+  page: '17'
+  printed: '2'
+  quote: NS estimated the damage to equipment to be about $3.4 million.
+  note: Equipment only. The NTSB does not assess environmental impacts (footnote 5).
+- measure: 'East Palestine: Norfolk Southern''s stated total cost'
+  value: not_held
+  unit: dollars
+  period: 2023 onward
+  scope: one event
+  doc_id: ''
+  page: ''
+  quote: ''
+  note: 'A Norfolk Southern 10-K or 10-Q on www.sec.gov; off this task''s Network line (blocked_host): the Desktop''s
+    cell (rung 2, or rung 1 with www.sec.gov on a task''s Network line).'
+t55:
+- category: Reported incidents
+  mode: TOTAL
+  label: Reported TOTAL
+  values:
+  - 14805
+  - 17485
+  - 18652
+  - 22776
+  - 21892
+  - 25157
+  - 25161
+  - 24265
+- category: Reported incidents
+  mode: TOTAL vehicular accident/derailment-related
+  label: TOTAL number of
+  values:
+  - 358
+  - 290
+  - 303
+  - 261
+  - 169
+  - 127
+  - 98
+  - 126
+- category: Reported incidents
+  mode: Percentage vehicular accident/derailment-related
+  label: Percentage of vehicular
+  values:
+  - 2.4
+  - 1.7
+  - 1.6
+  - 1.1
+  - 0.8
+  - 0.5
+  - 0.4
+  - 0.5
+- category: Air
+  mode: Overall
+  label: Air Overall
+  values:
+  - 1295
+  - 1159
+  - 1414
+  - 1673
+  - 1639
+  - 1633
+  - 1381
+  - 1111
+- category: Air
+  mode: Vehicular accident-related
+  label: Vehicular accident-related
+  values:
+  - 2
+  - 15
+  - 5
+  - 10
+  - 4
+  - 2
+  - 2
+  - 1
+- category: Highway
+  mode: Overall
+  label: Highway Overall
+  values:
+  - 12658
+  - 15744
+  - 16754
+  - 20684
+  - 19879
+  - 23122
+  - 23407
+  - 22815
+- category: Highway
+  mode: Vehicular accident-related
+  label: Vehicular accident-related
+  values:
+  - 320
+  - 251
+  - 273
+  - 228
+  - 139
+  - 97
+  - 79
+  - 110
+- category: Rail
+  mode: Overall
+  label: Rail Overall
+  values:
+  - 747
+  - 573
+  - 479
+  - 413
+  - 372
+  - 397
+  - 368
+  - 332
+- category: Rail
+  mode: Vehicular accident/derailment-related
+  label: Vehicular accident/
+  values:
+  - 35
+  - 24
+  - 25
+  - 23
+  - 26
+  - 28
+  - 17
+  - 15
+- category: Water (packages, nonbulk marine)
+  mode: Overall
+  label: Water1 Overall
+  values:
+  - 105
+  - 9
+  - 5
+  - 6
+  - 2
+  - 5
+  - 5
+  - 7
+- category: Water (packages, nonbulk marine)
+  mode: Vehicular accident-related
+  label: Vehicular accident-related
+  values:
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0

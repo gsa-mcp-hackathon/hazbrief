@@ -1,0 +1,37 @@
+You are the rung-2 acquisition session of hazbrief-mcp task HB-107 Part B (DN-002 ADDENDUM-00: the operator's browser, driven by the session). Your only job: open each URL below in Chrome through the Claude in Chrome tools and save the page into the inbox directory as a file. Touch nothing else: no other file, no git, no repository edits, no shell commands that change anything outside the inbox, and install nothing.
+
+Inbox directory (absolute): /Users/brock/GitHub/hazbrief-mcp/corpus/inbox/
+
+First: load the Chrome tools (ToolSearch for "claude-in-chrome", then load the mcp__claude-in-chrome__* tools you need). If there are no Claude in Chrome tools, or the extension is not connected, print one line `CHROME_UNAVAILABLE: <the exact error or message you received>` and stop at once. Do not try any other way to drive a browser, and do not fetch the URLs by any other means (no WebFetch, no curl).
+
+Work in a new tab. For each row:
+1. Navigate to the URL and wait for the page to finish rendering. PyPI first shows a JavaScript "Client Challenge" page to automated clients; in a real browser it usually passes by itself within a few seconds. Wait up to about 20 seconds for the real project page (it has the project name as its heading, a "pip install" line and a sidebar with "Meta" or "License").
+2. If the page shows a sign-in, a payment, a CAPTCHA or "verify you are human" challenge that does not pass by itself, or a legal/terms gate that requires accepting something, STOP for that row: do not solve, click through or accept anything, enter no credential. Record the gate in words and move to the next row.
+3. If the page is PyPI's "404 Not Found" / "We looked everywhere but couldn't find this page" page, do not save it; record ERROR not found.
+4. Otherwise read the page's full visible text (get_page_text, or read_page if that fails) and write it with the Write tool to the inbox under the file name given, in this exact form (a Markdown clipping):
+
+---
+created: <now as ISO 8601 with UTC offset, e.g. 2026-11-06T11:10:00 (UTC -05:00)>
+tags: []
+source: <the URL exactly as given in the row>
+title: <the page's own title>
+---
+
+# <the page's own title>
+
+<the page's full visible main text, verbatim, in reading order, as Markdown: the project heading and version, the pip install line, the release date, the summary, the whole project description, and the sidebar's Navigation-free details (Meta: License, Author, Requires; Classifiers; the Project links, written with their URLs). Do not summarise, abridge, paraphrase or add commentary. Leave out only the site navigation menus, the search box, cookie banners and the site footer.>
+
+Rows (doc_id | URL | file name to write):
+1. pypi-slabs | https://pypi.org/project/slabs/ | hb107_pypi-slabs.md
+2. pypi-slabx | https://pypi.org/project/slabx/ | hb107_pypi-slabx.md
+
+Never overwrite an existing file in the inbox; if the target name exists, add the suffix _2.
+
+Budget: be economical; this whole list must fit well inside 120,000 tokens and 8 minutes. Do not re-read a page you have already saved. Do not follow links off PyPI.
+
+When done, print a final report, one line per row, in this exact form:
+ROW <n> | <doc_id> | SAVED <file name> <character count> | <version> | <release date> | <licence as the page states it> | <repository or homepage URL, or none> | <is this the SLAB dense-gas dispersion model? answer yes or no, with the page's own summary line quoted>
+or
+ROW <n> | <doc_id> | GATE <what it was>
+or
+ROW <n> | <doc_id> | ERROR <what the page showed>

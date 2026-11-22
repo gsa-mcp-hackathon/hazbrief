@@ -1,0 +1,71 @@
+section	model	arc_km	observed_ppm	saturated	predicted_ppm	ratio_pred_over_obs	within_factor_2	source_or_statistics
+arc	HPAC	0.2	72580	no	3.137e+04	0.4322	no	mazzola 17-model Table 5 p. 20
+arc	HPAC	0.5	22686	no	6314	0.2783	no	mazzola 17-model Table 5 p. 20
+arc	HPAC	1	2621	yes	2633	1.005	yes	mazzola 17-model Table 5 p. 20
+arc	HPAC	2	1417	no	1005	0.7092	yes	mazzola 17-model Table 5 p. 20
+arc	HPAC	5	373	no	278	0.7453	yes	mazzola 17-model Table 5 p. 20
+arc	HPAC	11	50	yes	66	1.32	yes	mazzola 17-model Table 5 p. 20
+arc	ALOHA	0.2	72580	no	5.23e+04	0.7206	yes	mazzola 17-model Table 5 p. 20
+arc	ALOHA	0.5	22686	no	1.41e+04	0.6215	yes	mazzola 17-model Table 5 p. 20
+arc	ALOHA	1	2621	yes	3470	1.324	yes	mazzola 17-model Table 5 p. 20
+arc	ALOHA	2	1417	no	497	0.3507	no	mazzola 17-model Table 5 p. 20
+arc	ALOHA	5	373	no	41	0.1099	no	mazzola 17-model Table 5 p. 20
+arc	ALOHA	11	50	yes	6	0.12	no	mazzola 17-model Table 5 p. 20
+arc	P_scichem	0.2	72580	no	2.326e+04	0.3205	no	runs/P_scichem.json.gz
+arc	P_scichem	0.5	22686	no	6466	0.285	no	runs/P_scichem.json.gz
+arc	P_scichem	1	2621	yes	1924	0.7342	yes	runs/P_scichem.json.gz
+arc	P_scichem	2	1417	no	531.7	0.3752	no	runs/P_scichem.json.gz
+arc	P_scichem	5	373	no	74.3	0.1992	no	runs/P_scichem.json.gz
+arc	P_scichem	11	50	yes	14.94	0.2988	no	runs/P_scichem.json.gz
+arc	P_slab_rh20	0.2	72580	no	5.6e+04	0.7716	yes	runs/P_slab_rh20.json.gz
+arc	P_slab_rh20	0.5	22686	no	1.25e+04	0.5511	yes	runs/P_slab_rh20.json.gz
+arc	P_slab_rh20	1	2621	yes	3540	1.351	yes	runs/P_slab_rh20.json.gz
+arc	P_slab_rh20	2	1417	no	957.1	0.6754	yes	runs/P_slab_rh20.json.gz
+arc	P_slab_rh20	5	373	no	159.4	0.4273	no	runs/P_slab_rh20.json.gz
+arc	P_slab_rh20	11	50	yes	32.63	0.6526	yes	runs/P_slab_rh20.json.gz
+arc	P_slab_rh80	0.2	72580	no	5.703e+04	0.7857	yes	runs/P_slab_rh80.json.gz
+arc	P_slab_rh80	0.5	22686	no	1.288e+04	0.5676	yes	runs/P_slab_rh80.json.gz
+arc	P_slab_rh80	1	2621	yes	3633	1.386	yes	runs/P_slab_rh80.json.gz
+arc	P_slab_rh80	2	1417	no	961.4	0.6785	yes	runs/P_slab_rh80.json.gz
+arc	P_slab_rh80	5	373	no	157.4	0.422	no	runs/P_slab_rh80.json.gz
+arc	P_slab_rh80	11	50	yes	32.56	0.6512	yes	runs/P_slab_rh80.json.gz
+arc	S_scichem	0.2	72580	no	2.954e+04	0.407	no	runs/S_scichem.json.gz
+arc	S_scichem	0.5	22686	no	6807	0.3	no	runs/S_scichem.json.gz
+arc	S_scichem	1	2621	yes	2022	0.7715	yes	runs/S_scichem.json.gz
+arc	S_scichem	2	1417	no	488.1	0.3445	no	runs/S_scichem.json.gz
+arc	S_scichem	5	373	no	74.83	0.2006	no	runs/S_scichem.json.gz
+arc	S_scichem	11	50	yes	13.43	0.2685	no	runs/S_scichem.json.gz
+arc	S_slab_rh20	0.2	72580	no	6.218e+04	0.8567	yes	runs/S_slab_rh20.json.gz
+arc	S_slab_rh20	0.5	22686	no	1.358e+04	0.5985	yes	runs/S_slab_rh20.json.gz
+arc	S_slab_rh20	1	2621	yes	3468	1.323	yes	runs/S_slab_rh20.json.gz
+arc	S_slab_rh20	2	1417	no	878.1	0.6197	yes	runs/S_slab_rh20.json.gz
+arc	S_slab_rh20	5	373	no	144.2	0.3865	no	runs/S_slab_rh20.json.gz
+arc	S_slab_rh20	11	50	yes	none	none	none	no prediction (runs/S_slab_rh20.json.gz)
+arc	S_slab_rh80	0.2	72580	no	6.111e+04	0.842	yes	runs/S_slab_rh80.json.gz
+arc	S_slab_rh80	0.5	22686	no	1.449e+04	0.6386	yes	runs/S_slab_rh80.json.gz
+arc	S_slab_rh80	1	2621	yes	3630	1.385	yes	runs/S_slab_rh80.json.gz
+arc	S_slab_rh80	2	1417	no	907.1	0.6401	yes	runs/S_slab_rh80.json.gz
+arc	S_slab_rh80	5	373	no	144.7	0.388	no	runs/S_slab_rh80.json.gz
+arc	S_slab_rh80	11	50	yes	none	none	none	no prediction (runs/S_slab_rh80.json.gz)
+statistics	HPAC	0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)						N=5 FAC2=0.6 FAC5=1 MG=1.733 VG=1.663 FB=0.8221 NMSE=2.371
+statistics	ALOHA	0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)						N=5 FAC2=0.6 FAC5=0.8 MG=2.129 VG=3.586 FB=0.3442 NMSE=0.3467
+statistics	P_scichem	0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)						N=5 FAC2=0.2 FAC5=0.8 MG=2.884 VG=3.691 FB=1.022 NMSE=4.194
+statistics	P_slab_rh20	0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)						N=5 FAC2=0.8 FAC5=1 MG=1.433 VG=1.32 FB=0.3068 NMSE=0.2603
+statistics	P_slab_rh80	0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)						N=5 FAC2=0.8 FAC5=1 MG=1.414 VG=1.318 FB=0.287 NMSE=0.228
+statistics	S_scichem	0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)						N=5 FAC2=0.2 FAC5=1 MG=2.737 VG=3.347 FB=0.8765 NMSE=2.713
+statistics	S_slab_rh20	0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)						N=5 FAC2=0.8 FAC5=1 MG=1.438 VG=1.349 FB=0.216 NMSE=0.1201
+statistics	S_slab_rh80	0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)						N=5 FAC2=0.8 FAC5=1 MG=1.401 VG=1.332 FB=0.2156 NMSE=0.125
+statistics	HPAC	all six arcs						N=6 FAC2=0.6667 FAC5=1 MG=1.51 VG=1.548 FB=0.8212 NMSE=2.839
+statistics	ALOHA	all six arcs						N=6 FAC2=0.5 FAC5=0.6667 MG=2.673 VG=6.132 FB=0.3446 NMSE=0.4158
+statistics	P_scichem	all six arcs						N=6 FAC2=0.1667 FAC5=0.8333 MG=2.956 VG=3.787 FB=1.022 NMSE=5.028
+statistics	P_slab_rh20	all six arcs						N=6 FAC2=0.8333 FAC5=1 MG=1.449 VG=1.299 FB=0.3069 NMSE=0.3121
+statistics	P_slab_rh80	all six arcs						N=6 FAC2=0.8333 FAC5=1 MG=1.433 VG=1.298 FB=0.2871 NMSE=0.2734
+statistics	S_scichem	all six arcs						N=6 FAC2=0.1667 FAC5=1 MG=2.881 VG=3.651 FB=0.8766 NMSE=3.253
+statistics	S_slab_rh20	all six arcs						N=5 FAC2=0.8 FAC5=1 MG=1.438 VG=1.349 FB=0.216 NMSE=0.1201
+statistics	S_slab_rh80	all six arcs						N=5 FAC2=0.8 FAC5=1 MG=1.401 VG=1.332 FB=0.2156 NMSE=0.125
+arrival	observed; HPAC (simpson Table 7 p. 16, MWG StabE); each run (s after release)	0.2	none		HPAC none; P_scichem 67; P_slab_rh20 92.48; P_slab_rh80 92.35; S_scichem 70; S_slab_rh20 37.68; S_slab_rh80 37.68	HPAC none; P_scichem none; P_slab_rh20 none; P_slab_rh80 none; S_scichem none; S_slab_rh20 none; S_slab_rh80 none		no observed arrival held at this arc
+arrival	observed; HPAC (simpson Table 7 p. 16, MWG StabE); each run (s after release)	0.5	93		HPAC 162; P_scichem 161; P_slab_rh20 178; P_slab_rh80 177.2; S_scichem 143; S_slab_rh20 111.9; S_slab_rh80 111.4	HPAC 1.742; P_scichem 1.731; P_slab_rh20 1.914; P_slab_rh80 1.906; S_scichem 1.538; S_slab_rh20 1.203; S_slab_rh80 1.198		simpson Table 7 p. 16
+arrival	observed; HPAC (simpson Table 7 p. 16, MWG StabE); each run (s after release)	1	258		HPAC 274; P_scichem 263; P_slab_rh20 299; P_slab_rh80 299.4; S_scichem 264; S_slab_rh20 232.7; S_slab_rh80 233	HPAC 1.062; P_scichem 1.019; P_slab_rh20 1.159; P_slab_rh80 1.16; S_scichem 1.023; S_slab_rh20 0.9019; S_slab_rh80 0.9031		simpson Table 7 p. 16
+arrival	observed; HPAC (simpson Table 7 p. 16, MWG StabE); each run (s after release)	2	443		HPAC 473; P_scichem 498; P_slab_rh20 509.8; P_slab_rh80 511.8; S_scichem 492; S_slab_rh20 444.7; S_slab_rh80 445	HPAC 1.068; P_scichem 1.124; P_slab_rh20 1.151; P_slab_rh80 1.155; S_scichem 1.111; S_slab_rh20 1.004; S_slab_rh80 1.005		simpson Table 7 p. 16
+arrival	observed; HPAC (simpson Table 7 p. 16, MWG StabE); each run (s after release)	5	1055		HPAC 1057; P_scichem 1062; P_slab_rh20 1063; P_slab_rh80 1065; S_scichem 1061; S_slab_rh20 998.1; S_slab_rh80 996.8	HPAC 1.002; P_scichem 1.007; P_slab_rh20 1.008; P_slab_rh80 1.01; S_scichem 1.006; S_slab_rh20 0.9461; S_slab_rh80 0.9449		simpson Table 7 p. 16
+arrival	observed; HPAC (simpson Table 7 p. 16, MWG StabE); each run (s after release)	11	2052		HPAC 2023; P_scichem 2156; P_slab_rh20 2040; P_slab_rh80 2043; S_scichem 2123; S_slab_rh20 none; S_slab_rh80 none	HPAC 0.9859; P_scichem 1.051; P_slab_rh20 0.9943; P_slab_rh80 0.9957; S_scichem 1.035; S_slab_rh20 none; S_slab_rh80 none		simpson Table 7 p. 16

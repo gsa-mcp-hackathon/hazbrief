@@ -1,0 +1,17 @@
+# HB-203 item 4 (HB-198 item 5, ADDENDA 05 and 06): the clean clone of main, its offline install, its whole gate.
+# key<TAB>value lines; package_manifest.py (a build tool held privately) reads them. Logs (gitignored): logs/hb203/clone_install.log,
+# logs/hb203/clone_gate.log. Disk readings: docs/evidence/hb203/disk.txt. Tools: HB-198's, unchanged
+# (the HB-198 evidence (held privately), gate.sh, detach.sh, disk.py).
+commit	ae27a5f7
+commit_line	main on 2026-11-18 at 16:00 EST, after HB-202's merge (5ea81383) and the dispatcher's record commits; `git clone --branch main` into /private/tmp/hb203_clone
+install	exit 0 in 1 s, 95 packages from uv's local cache with no network (a judge's machine without that cache needs PyPI)
+threshold	free 90,382,200,832 bytes before the clone, against 22,086,507,230: the dispatcher's need 4,995,377,886 (2 x the tree, HB-198's disk.py) + 2 x 3,819,651,072 (HB-198's clone at deletion, larger than this one's 3,404,922,880 after install) + 9,451,827,200 (HB-199's draw, the largest HB-202 recorded); started
+gate	started 16:01:23 EST, done 16:51:12 EST; the parallel step failed 18 cases of one test, every other step passed (docs/evidence/hb203/gate_failure_1.txt during the step, gate_failure_2.txt after it)
+parallel	18 failed, 7897 passed, 169 skipped, 97 deselected, 5 xfailed, 2 warnings in 2195.33s (0:36:35)
+load_sensitive	85 passed, 1886 deselected in 788.57s (0:13:08)
+ruff	All checks passed!
+format	1056 files already formatted
+failed_test	test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text, all 18 quotations: FileNotFoundError on the corpus graph (held privately)<doc>.json, gitignored data a clone does not hold
+fix	the test now skips naming the absent file (HB-203, test_hb171_threat_timeline.py (a test held privately)); run alone in the clone with the fixed file: 18 skipped, 23 deselected in 23.82s; with the data present (this worktree): 18 passed
+clone_size	3,404,922,880 bytes after its install, 3,451,191,296 after its gate
+deleted	deleted at 16:53 EST; free disk 82,200,793,088 before, 84,822,089,728 after

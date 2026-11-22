@@ -1,0 +1,79 @@
+brief	request	role	sensors	vertical_setting_m	hour1_on_page_s	hour6_on_page_s	whole_run_s	staged_hours_equal_final	alone
+csx-point-of-rocks-night	1ab3ae1616e7	A (first run, shown hour by hour)	121	1.25	129.405	192.892	200.93	yes	yes
+csx-point-of-rocks-night	db7eef90d2b9	lines	820	1.25	168.609	441.64	516.0	no contours (lines run)	yes
+csx-point-of-rocks-night	1cb074988275	B (drawn)	257	1.25	131.178	207.618	219.95	yes	yes
+csx-point-of-rocks-night	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 55.557661 km2 (HB-186 30.249792 km2)	first arrival 2.0 min (HB-186 2.0 min)
+csx-point-of-rocks-night	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 392.950081 km2 (HB-186 331.05284 km2)	first arrival 2.0 min (HB-186 2.0 min)
+csx-point-of-rocks-night	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 557.085634 km2 (HB-186 480.385233 km2)	first arrival 2.0 min (HB-186 2.0 min)
+i495-wilson-bridge-night	e299d4f64df8	A (first run, shown hour by hour)	122	1.25	92.929		122.53	yes	yes
+i495-wilson-bridge-night	cc28873ffd52	lines	820	1.25	132.5		326.8	no contours (lines run)	yes
+i495-wilson-bridge-night	a4287c11c32b	B (drawn)	291	1.25	98.424		147.91	yes	yes
+i495-wilson-bridge-night	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 15.237085 km2 (HB-186 15.148973 km2)	first arrival 12.0 min (HB-186 50.0 min)
+i495-wilson-bridge-night	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 130.000135 km2 (HB-186 182.00075 km2)	first arrival 8.0 min (HB-186 8.0 min)
+i495-wilson-bridge-night	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 288.811391 km2 (HB-186 286.642778 km2)	first arrival 8.0 min (HB-186 8.0 min)
+i81-md-pa-line-night	85331d217411	A (first run, shown hour by hour)	116	1.25	82.339		108.55	yes	yes
+i81-md-pa-line-night	9ff9b3f2718b	lines	820	1.25	124.39		319.13	no contours (lines run)	yes
+i81-md-pa-line-night	db0646724643	B (drawn)	240	1.25	86.843		127.93	yes	yes
+i81-md-pa-line-night	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 15.617792 km2 (HB-186 15.580882 km2)	first arrival 4.0 min (HB-186 4.0 min)
+i81-md-pa-line-night	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 130.95686 km2 (HB-186 176.310316 km2)	first arrival 4.0 min (HB-186 4.0 min)
+i81-md-pa-line-night	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 273.249495 km2 (HB-186 269.981365 km2)	first arrival 2.0 min (HB-186 2.0 min)
+i83-md-pa-line-night	f9bc1edb6801	A (first run, shown hour by hour)	74	1.25	79.907		95.26	yes	yes
+i83-md-pa-line-night	bbb60e25e0bc	lines	820	1.25	124.878		257.44	no contours (lines run)	yes
+i83-md-pa-line-night	4fc9398743f2	B (drawn)	208	1.25	82.709		107.22	yes	yes
+i83-md-pa-line-night	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 15.623099 km2 (HB-186 17.676682 km2)	first arrival 4.0 min (HB-186 6.0 min)
+i83-md-pa-line-night	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 131.076668 km2 (HB-186 158.54115 km2)	first arrival 4.0 min (HB-186 4.0 min)
+i83-md-pa-line-night	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 228.005802 km2 (HB-186 231.702881 km2)	first arrival 2.0 min (HB-186 4.0 min)
+csx-point-of-rocks-day	0e814dc802c9	A (first run, shown hour by hour)	92	1.25	19.828		37.48	yes	yes
+csx-point-of-rocks-day	8e894e9fe488	lines	820	1.25	58.488		164.08	no contours (lines run)	yes
+csx-point-of-rocks-day	2651c6bda220	B (drawn)	96	1.25	19.941		37.67	yes	yes
+csx-point-of-rocks-day	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 2.220407 km2 (HB-186 1.507878 km2)	first arrival 2.0 min (HB-186 2.0 min)
+csx-point-of-rocks-day	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 11.043946 km2 (HB-186 8.468477 km2)	first arrival 2.0 min (HB-186 2.0 min)
+csx-point-of-rocks-day	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 78.969188 km2 (HB-186 88.905114 km2)	first arrival 2.0 min (HB-186 2.0 min)
+i495-wilson-bridge-day	7bedd60d90d9	A (first run, shown hour by hour)	83	1.25	10.697		19.18	yes	yes
+i495-wilson-bridge-day	18a6d569ffb4	lines	820	1.25	53.418		105.63	no contours (lines run)	yes
+i495-wilson-bridge-day	75ab071559c5	B (drawn)	111	1.25	12.546		22.56	yes	yes
+i495-wilson-bridge-day	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 1.444863 km2 (HB-186 0.993192 km2)	first arrival None min (HB-186 None min)
+i495-wilson-bridge-day	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 8.332616 km2 (HB-186 5.636154 km2)	first arrival 16.0 min (HB-186 None min)
+i495-wilson-bridge-day	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 19.628215 km2 (HB-186 19.536473 km2)	first arrival 14.0 min (HB-186 None min)
+i81-md-pa-line-day	99b9d82f9442	A (first run, shown hour by hour)	96	1.25	9.598		20.52	yes	yes
+i81-md-pa-line-day	94f143b29d84	lines	820	1.25	48.815		118.85	no contours (lines run)	yes
+i81-md-pa-line-day	c865d312fccb	B (drawn)	116	1.25	10.559		23.51	yes	yes
+i81-md-pa-line-day	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 1.486251 km2 (HB-186 1.150225 km2)	first arrival 4.0 min (HB-186 4.0 min)
+i81-md-pa-line-day	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 6.94468 km2 (HB-186 5.492147 km2)	first arrival 4.0 min (HB-186 4.0 min)
+i81-md-pa-line-day	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 17.221903 km2 (HB-186 19.05288 km2)	first arrival 4.0 min (HB-186 4.0 min)
+i83-md-pa-line-day	98f0e376b1fc	A (first run, shown hour by hour)	51	1.25	9.088		16.42	yes	yes
+i83-md-pa-line-day	bd7a89179842	lines	820	1.25	53.971		115.33	no contours (lines run)	yes
+i83-md-pa-line-day	ad992e62ebc1	B (drawn)	62	1.25	9.598		18.09	yes	yes
+i83-md-pa-line-day	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 1.493567 km2 (HB-186 0.993387 km2)	first arrival 4.0 min (HB-186 None min)
+i83-md-pa-line-day	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 7.779842 km2 (HB-186 5.482093 km2)	first arrival 4.0 min (HB-186 None min)
+i83-md-pa-line-day	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 19.355001 km2 (HB-186 20.31758 km2)	first arrival 4.0 min (HB-186 None min)
+csx-point-of-rocks-crossing	406b1d0f555f	A (first run, shown hour by hour)	54	1.25	18.957		34.65	yes	yes
+csx-point-of-rocks-crossing	8fc494da6343	lines	820	1.25	61.984		174.36	no contours (lines run)	yes
+csx-point-of-rocks-crossing	de6fb6459df8	B (drawn)	55	1.25	18.943		36.05	yes	yes
+csx-point-of-rocks-crossing	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 2.231431 km2 (HB-186 1.507853 km2)	first arrival 2.0 min (HB-186 None min)
+csx-point-of-rocks-crossing	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 11.017676 km2 (HB-186 8.468367 km2)	first arrival 2.0 min (HB-186 None min)
+csx-point-of-rocks-crossing	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 79.068378 km2 (HB-186 88.903041 km2)	first arrival 2.0 min (HB-186 None min)
+i495-wilson-bridge-address	0fc9b5ac29dd	A (first run, shown hour by hour)	89	1.25	12.203		21.81	yes	yes
+i495-wilson-bridge-address	dd97f44fb706	lines	820	1.25	55.974		114.61	no contours (lines run)	yes
+i495-wilson-bridge-address	2c2fe8186011	B (drawn)	127	1.25	14.802		28.17	yes	yes
+i495-wilson-bridge-address	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 1.444832 km2 (HB-186 0.993183 km2)	first arrival None min (HB-186 None min)
+i495-wilson-bridge-address	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 8.027578 km2 (HB-186 5.636063 km2)	first arrival 14.0 min (HB-186 None min)
+i495-wilson-bridge-address	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 19.493374 km2 (HB-186 19.536935 km2)	first arrival 4.0 min (HB-186 None min)
+i495-wilson-bridge-cross-streets	cddf33eca272	A (first run, shown hour by hour)	88	1.25	12.251		24.51	yes	yes
+i495-wilson-bridge-cross-streets	55f0f8df2038	lines	820	1.25	56.34		112.24	no contours (lines run)	yes
+i495-wilson-bridge-cross-streets	251b1f7fe730	B (drawn)	122	1.25	14.206		26.41	yes	yes
+i495-wilson-bridge-cross-streets	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 1.444853 km2 (HB-186 0.993204 km2)	first arrival None min (HB-186 None min)
+i495-wilson-bridge-cross-streets	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 7.929799 km2 (HB-186 5.636286 km2)	first arrival 6.0 min (HB-186 None min)
+i495-wilson-bridge-cross-streets	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 19.560469 km2 (HB-186 19.538708 km2)	first arrival 4.0 min (HB-186 None min)
+i81-md-pa-line-milepost	06f0867e9474	A (first run, shown hour by hour)	67	1.25	10.671		23.49	yes	yes
+i81-md-pa-line-milepost	23cf3996b7ba	lines	820	1.25	51.809		126.44	no contours (lines run)	yes
+i81-md-pa-line-milepost	16c6717378ce	B (drawn)	71	1.25	10.663		21.68	yes	yes
+i81-md-pa-line-milepost	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 1.478627 km2 (HB-186 1.150129 km2)	first arrival 6.0 min (HB-186 None min)
+i81-md-pa-line-milepost	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 6.964423 km2 (HB-186 5.455692 km2)	first arrival 6.0 min (HB-186 None min)
+i81-md-pa-line-milepost	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 17.312271 km2 (HB-186 18.819368 km2)	first arrival 4.0 min (HB-186 None min)
+un1005-i81	6ca55b1ae67c	A (first run, shown hour by hour)	61	1.25	10.045		18.41	yes	yes
+un1005-i81	96e4bf172107	lines	820	1.25	51.35		123.55	no contours (lines run)	yes
+un1005-i81	0a0be2d70c55	B (drawn)	69	1.25	10.044		19.44	yes	yes
+un1005-i81	level AEGL-3	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 0.200029 km2 (HB-186 0.166734 km2)	first arrival 2.0 min (HB-186 2.0 min)
+un1005-i81	level AEGL-2	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 0.927138 km2 (HB-186 0.682437 km2)	first arrival 2.0 min (HB-186 2.0 min)
+un1005-i81	level AEGL-1	the moving cloud, 1.25 m now / 250 m in HB-186's drawn record						area any time 2.93131 km2 (HB-186 2.193933 km2)	first arrival 2.0 min (HB-186 2.0 min)

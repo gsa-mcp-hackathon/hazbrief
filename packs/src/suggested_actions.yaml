@@ -1,0 +1,188 @@
+# HB-207 Part E (DN-029 ADDENDUM-00 section 3): the suggested actions to consider, a table beside the flags.
+#
+# Each entry: the condition that brings it up, as a test on values a tool result holds (`when`, in words; `reads`,
+# the tool fields it reads); the action, a quotation of a held document verified on its page at build (`quote`, with
+# `doc`, `page` and `block`, the parsed block a test reads it in) or the cell of the ERG guide the server already
+# returns (`guide_cell`); who acts, only where the source says (`who`, the source's own words); the sources' order
+# (`order`: isolation first; the public alerted as soon as word is received; those closest first, then downwind); and
+# by when, only a held range or the source's own words for it (`by_when`, with its quote), never a clock time
+# (decision 4). A model never writes, rewords, ranks or adds an entry (decision 2).
+#
+# Read in full for this table (HB-207 item 15; the addendum's Prior art rows and DN-029 section 2): erg2024-en-pdf
+# blocks 51, 4263 to 4268, 4281, 4292, 4295, 4302, 4346 to 4349, 4595; ornl-tm-2002-144-sorensen-evacuate-or-shelter
+# blocks 33, 34, 42, 81, 87, 102, 130; nrt-1-hazmat-emergency-planning-guide-2001 blocks 837, 873, 874, 929, 930, 933,
+# 934; llnl-mass-casualty-framework-2016 blocks 148, 219, 230, 295; nws-10-518 blocks 117, 289; dod-mil-std-1472h
+# block 6905; faa-hf-std-001b block 568. Blocks read and not used, with the reason, are listed in
+# the HB-207 evidence (held privately).
+label: "Suggested actions to consider"
+demonstration: "A demonstration, not a protocol: no incident commander has reviewed this table."
+decides: "The incident commander decides."
+no_entry: "No held source gives an action for this."
+# Conditions a tool result can hold that no entry here answers (decision 5: the output names each that holds, with
+# `no_entry`, and does not stay silent). Each as a test on the fields it reads.
+uncovered:
+  - "the material was spilled in water and ERG Table 2 lists it (material_response_guidance: table2_note)"
+  - "a waterway crosses the footprint (facilities_in_footprint: counts.waterways)"
+  - "a rail line crosses the footprint (facilities_in_footprint: counts.rail_segments)"
+  - "the wind the footprint is oriented by was stated by the caller, not forecast or observed (protective_action_footprint: wind.origin)"
+  - "the material is not identified, or the ERG lists it under several entries (assess_incident: error, or several candidates)"
+actions:
+  isolate:
+    when: "an ERG guide is named"
+    reads: ["assess_incident: guide.number"]
+    order: 1
+    quote: "Isolate hazard area and deny entry means to keep everybody away from the area if they are not directly involved in emergency response operations. Unprotected emergency responders should not be allowed to enter the isolation zone."
+    doc: erg2024-en-pdf
+    page: 285
+    block: 4263
+    by_when: "This is the first step for any protective actions that may follow."
+    by_when_source: {doc: erg2024-en-pdf, page: 285, block: 4264}
+  guide_public_safety:
+    when: "an ERG guide is named"
+    reads: ["material_response_guidance: public_safety"]
+    order: 2
+    guide_cell: {tool: material_response_guidance, section: public_safety}
+  closest_first:
+    when: "the footprint holds a protective action zone (a Table 1 material)"
+    reads: ["protective_action_footprint: zones.protective_action_zone"]
+    order: 3
+    quote: "Initiate protective actions beginning with those closest to the spill site and working away in a downwind direction."
+    doc: erg2024-en-pdf
+    page: 291
+    block: 4348
+  alert_public:
+    when: "people live or work inside the footprint"
+    reads: ["population_at_risk: daytime and nighttime counts"]
+    order: 4
+    quote: "one organization must be assigned the responsibility of alerting the public as soon as word of the accidental release is received. Delay in alerting the public can lead to the loss of life."
+    doc: nrt-1-hazmat-emergency-planning-guide-2001
+    page: 63
+    block: 874
+    who: "one organization must be assigned the responsibility of alerting the public"
+    by_when: "as soon as word of the accidental release is received"
+    by_when_source: {doc: nrt-1-hazmat-emergency-planning-guide-2001, page: 63, block: 874}
+  warning_means:
+    when: "people live or work inside the footprint"
+    reads: ["population_at_risk: daytime and nighttime counts"]
+    order: 5
+    quote: "The SIP warning should be disseminated without delay using a variety of means- reverse 911 on landlines, text messages to cell phones in the area, PA broadcast, police car PA systems, etc."
+    doc: llnl-mass-casualty-framework-2016
+    page: 25
+    block: 219
+    by_when: "without delay"
+    by_when_source: {doc: llnl-mass-casualty-framework-2016, page: 25, block: 219}
+  nws_relay:
+    when: "people live or work inside the footprint"
+    reads: ["population_at_risk: daytime and nighttime counts"]
+    order: 6
+    quote: "A NWEM is a nonscheduled product and will be relayed at the request of alerting authorities over NWS dissemination systems."
+    doc: nws-10-518
+    page: 12
+    block: 117
+    who: "at the request of alerting authorities"
+  begin_evacuating:
+    when: "people live or work inside the footprint"
+    reads: ["population_at_risk: daytime and nighttime counts"]
+    order: 7
+    quote: "Begin evacuating people nearby and those who are outdoors in direct view of the scene. When additional help arrives, expand the area to be evacuated downwind and crosswind to at least the extent recommended in this guidebook."
+    doc: erg2024-en-pdf
+    page: 285
+    block: 4266
+  # the ERG's table prints its column heading and its cells apart (PDF p. 287); each cell is quoted under its heading
+  outdoors:
+    when: "people live or work inside the footprint"
+    reads: ["population_at_risk: daytime and nighttime counts"]
+    order: 8
+    heading: "Consider Evacuation:"
+    quote: "For anyone outdoors."
+    doc: erg2024-en-pdf
+    page: 287
+    block: 4302
+  indoors:
+    when: "people live or work inside the footprint"
+    reads: ["population_at_risk: daytime and nighttime counts"]
+    order: 8
+    heading: "Consider Sheltering-in-place:"
+    quote: "For anyone already indoors."
+    doc: erg2024-en-pdf
+    page: 287
+    block: 4302
+  definite_place:
+    when: "people live or work inside the footprint"
+    reads: ["population_at_risk: daytime and nighttime counts"]
+    order: 9
+    quote: "Send evacuees to a definite place, by a specific route, far enough away so they will not have to relocate again if the wind shifts."
+    doc: erg2024-en-pdf
+    page: 285
+    block: 4267
+  sheltered_communications:
+    when: "people live or work inside the footprint"
+    reads: ["population_at_risk: daytime and nighttime counts"]
+    order: 10
+    quote: "It is vital for first responders to maintain communications with sheltered-in-place people so that they are advised about changing conditions."
+    doc: erg2024-en-pdf
+    page: 285
+    block: 4268
+    who: "first responders"
+  shelter_time:
+    when: "people live or work inside the footprint"
+    reads: ["population_at_risk: daytime and nighttime counts"]
+    order: 11
+    quote: "Several analyses suggest that it will take 5 to 10 minutes on average to implement shelter-in-place, once a sheltering decision is made by a household."
+    doc: ornl-tm-2002-144-sorensen-evacuate-or-shelter
+    page: 22
+    block: 87
+    by_when: "5 to 10 minutes on average to implement shelter-in-place, once a sheltering decision is made by a household"
+    by_when_source: {doc: ornl-tm-2002-144-sorensen-evacuate-or-shelter, page: 22, block: 87}
+  warning_time:
+    when: "people live or work inside the footprint"
+    reads: ["population_at_risk: daytime and nighttime counts"]
+    order: 12
+    quote: "once a decision is made to protect the public, a considerable amount of time (up to one to two hours using conventional warning practices) may elapse before most people in the affected area hear, absorb, and decide to respond to the instructions"
+    doc: ornl-tm-2002-144-sorensen-evacuate-or-shelter
+    page: 21
+    block: 81
+    by_when: "up to one to two hours using conventional warning practices"
+    by_when_source: {doc: ornl-tm-2002-144-sorensen-evacuate-or-shelter, page: 21, block: 81}
+  institutions:
+    when: "a school, hospital, nursing home or group quarters lies inside the footprint"
+    reads: ["facilities_in_footprint: counts.schools, counts.hospitals, counts.nursing_homes; group_quarters"]
+    order: 13
+    quote: "Each institutional facility (such as hospitals, schools, day care centers, correctional facilities, assisted living facilities or nursing homes) in the community should be considered separately to determine what special protective actions may be necessary."
+    doc: ornl-tm-2002-144-sorensen-evacuate-or-shelter
+    page: 12
+    block: 33
+  special_attention:
+    when: "a hospital or nursing home lies inside the footprint"
+    reads: ["facilities_in_footprint: counts.hospitals, counts.nursing_homes"]
+    order: 14
+    quote: "Special attention must also be paid to evacuating hospitals, nursing homes, and homes for the physically or mentally disabled."
+    doc: nrt-1-hazmat-emergency-planning-guide-2001
+    page: 66
+    block: 929
+  schools:
+    when: "a school lies inside the footprint"
+    reads: ["facilities_in_footprint: counts.schools"]
+    order: 15
+    quote: "If schools are located in the risk zone, the plan must identify the location to which students will be moved in an evacuation and how parents will be notified of this location."
+    doc: nrt-1-hazmat-emergency-planning-guide-2001
+    page: 66
+    block: 929
+  traffic:
+    when: "a road crosses the footprint (the load is on a highway, or the footprint holds grade crossings)"
+    reads: ["assess_incident: incident.container", "facilities_in_footprint: counts.grade_crossings"]
+    order: 16
+    quote: "Provisions must be made for quickly moving traffic out of the risk zone and also for preventing outside traffic from entering the risk zone."
+    doc: nrt-1-hazmat-emergency-planning-guide-2001
+    page: 66
+    block: 929
+  fire:
+    when: "fire is involved"
+    reads: ["assess_incident: incident.fire_involved", "material_response_guidance: public_safety (EVACUATION, Fire)"]
+    order: 17
+    guide_cell: {tool: material_response_guidance, section: public_safety, heading: "Fire"}
+  fire_response:
+    when: "fire is involved"
+    reads: ["assess_incident: incident.fire_involved", "material_response_guidance: emergency_response (FIRE)"]
+    order: 18
+    guide_cell: {tool: material_response_guidance, section: emergency_response, heading: "FIRE"}

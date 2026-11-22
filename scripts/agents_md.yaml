@@ -1,0 +1,120 @@
+# HB-209 Part A item 1: AGENTS.md, the file for a model asked to look over and evaluate the whole project.
+#
+# `uv run python agents_md.py (a build tool held privately)` writes AGENTS.md from this file; `--check` compares it with a fresh render.
+# Edit this file, never AGENTS.md. The operator's words (2026-11-19 11:27 EST, the task file): a "for agents" file in
+# the repository, like the instructions of the coding sessions (held privately), to help a model look over and evaluate the whole project, with a README line saying
+# it exists.
+#
+# Placeholders the generator fills from the repository (agents_md.py (a build tool held privately) COUNTS; test_hb209_agents_md.py (a test held privately)
+# recounts each one from its source): {tools}, {tool_names}, {prompts}, {prompt_names}, {resources}, {scenarios},
+# {briefs}, {dn_last}, {limits}, {future}, {bench_rows}. A command under `run` is copied as given, and the test holds
+# that README.md or the instructions of the coding sessions (held privately) prints it verbatim. Every backticked path must exist (the test checks each).
+
+output: AGENTS.md
+title: "AGENTS.md: for a model asked to review hazbrief-mcp"
+
+what:
+  - >-
+    An MCP server for the GSA Model Context Protocol Server and SI Agent Government Hackathon (2026), Dataset Access
+    Server category: {tools} tools, {prompts} prompts and {resources} resources, all read-only.
+  - >-
+    Given a transported-hazmat accident (material, container, location, time), the tools fuse public federal data into
+    a protective action footprint, a set of sourced flags and a draft ICS 201 Incident Briefing.
+  - >-
+    Every distance a tool returns is a cell of the ERG 2024 tables or guides; the server runs no dispersion model and
+    calls no model.
+  - >-
+    The `hazbrief brief` application is a client of the server, not part of it: it writes a brief page beside the ERG
+    footprint with one labelled modelled cloud, a TEVV page and a timeline.
+  - >-
+    It is decision support: what to know and suggested actions to consider, each with its source; the person in the
+    chair checks and decides.
+
+map:
+  - path: main.py
+    what: the server's entry point (stdio, or HTTP when `PORT` is set)
+  - path: src/hazbrief/app.py
+    what: the thin application object; tools, prompts and resources are wired through their packages
+  - path: src/hazbrief/tools/
+    what: "{tools} tools, one module each: {tool_names}"
+  - path: src/hazbrief/prompts/
+    what: "{prompts} prompts: {prompt_names}"
+  - path: src/hazbrief/resources/
+    what: "{resources} resources: the commander stylebook and the attribution notices"
+  - path: packs/
+    what: the exported knowledge packs the server reads at runtime (no database at runtime); `packs/SCHEMA.md`
+  - path: src/hazbrief/brief/
+    what: >-
+      the brief application, a client the server never imports: the orchestrator, the modelled layers, the live page
+  - path: src/hazbrief/brief/start.py
+    what: the start page, the application's entry point (`uv run hazbrief brief --serve`)
+  - path: src/hazbrief/brief/live_exchanges.py
+    what: the live exchanges route, which records what a live brief read so its layers draw
+  - path: src/hazbrief/evidence/
+    what: the application's evidence store, labels and recording client
+  - path: docs/briefs/
+    what: "{briefs} committed briefs, each with `brief.html`, `tevv.html`, `timeline.html` and its scenario"
+  - path: fixtures/scenarios/
+    what: "{scenarios} frozen synthetic scenarios, replayed with no network"
+  - path: corpus/sources.yaml
+    what: every source document, with its url and sha256; the bytes are not committed
+  - path: docs/evidence/
+    what: one folder per task, holding what that task measured and the tools that measured it
+  - path: cc_tasks
+    what: the task specifications and their RESULTs, named by date and HB number
+  - path: a session handoff (held privately)
+    what: the session handoffs
+  - path: design
+    what: "the design notes, DN-001 (scope) to {dn_last}, with their addenda"
+  - path: docs/evidence/hb213/lifted/decisions.md
+    what: the decision register (HBD numbers)
+  - path: docs/REQUIREMENTS_TRACE.md
+    what: every requirement with what satisfies it, what checks it and its state
+  - path: tests/
+    what: the test suite; the gate is two pytest steps and ruff (the instructions of the coding sessions (held privately), "The gate")
+
+run:
+  - label: install
+    command: uv sync --group dev
+  - label: the server (stdio)
+    command: uv run python main.py
+  - label: the tests, parallel step
+    command: >-
+      uv run pytest tests/ -q -n auto --maxprocesses 6 --dist loadfile -m 'not slow and not load_sensitive'
+  - label: the tests, load-sensitive step
+    command: uv run pytest tests/ -q -n 3 --dist loadgroup -m 'load_sensitive and not slow'
+  - label: the brief application's start page
+    command: uv run hazbrief brief --serve
+
+evidence:
+  - path: docs/submission/EVALUATION.md
+    what: the evaluation document; every number in it cites the committed file that holds it
+  - path: docs/briefs/csx-point-of-rocks-night/tevv.html
+    what: >-
+      a TEVV page: one section per layer or method the brief draws, with what was checked, what was not, and its
+      conditions of use; every committed brief has one
+  - path: docs/evidence/hb192/benchmark_rows.md
+    what: "the benchmark requirement and its {bench_rows} rows, projected from the graph"
+  - path: docs/evidence/hb206/trial7_scores.tsv
+    what: the Jack Rabbit II Trial 7 runs scored arc by arc beside HPAC and ALOHA
+  - path: docs/evidence/hb209/trial7_intervals.tsv
+    what: the same runs' 95 percent limits by Hanna, Strimaitis and Chang (1993)
+  - path: docs/REQUIREMENTS_TRACE.md
+    what: the requirement register
+  - path: docs/evidence/hb213/lifted/decisions.md
+    what: the decision register
+  - path: docs/ARCHITECTURE.md
+    what: the system as built; read it first
+
+known:
+  path: docs/FUTURE_WORK.md
+  what: >-
+    {limits} known limits of what ships, each with the files that show it, and {future} future work items, each with
+    its Issue; generated from the graph by `future_work.py (a build tool held privately)`
+
+assume_not:
+  - The server runs no dispersion model; no tool result and no ICS 201 carries a modelled value.
+  - The modelled cloud is the application's, drawn from the one engine a held criterion names for the release.
+  - None of the modelled layers is validated against observations of a release.
+  - >-
+    A number in a document is a claim until its cited file is opened; the documents cite the file for each number.

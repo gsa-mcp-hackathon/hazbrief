@@ -1,0 +1,7 @@
+case	tier	slab_reach_m	scichem_before_60min_reach_m	scichem_after_60min_reach_m	scichem_before_instantaneous_reach_m	scichem_after_instantaneous_reach_m	engine_input_changed
+csx-day	AEGL-1 0.5 ppm (60 min)	13110	13337	13337	beyond 25000	beyond 25000	no: class B is not a stable class
+csx-day	AEGL-2 2 ppm (60 min)	5555	3714	3714	6331	6331	no: class B is not a stable class
+csx-day	AEGL-3 20 ppm (60 min)	1480	1256	1256	1962	1962	no: class B is not a stable class
+csx-night	AEGL-1 0.5 ppm (60 min)	beyond 25000	beyond 25000	beyond 25000	beyond 25000	beyond 25000	yes: BL_TYPE OBS, PGT column
+csx-night	AEGL-2 2 ppm (60 min)	beyond 25000	beyond 25000	beyond 25000	beyond 25000	beyond 25000	yes: BL_TYPE OBS, PGT column
+csx-night	AEGL-3 20 ppm (60 min)	19926	4910	7151	5859	9880	yes: BL_TYPE OBS, PGT column

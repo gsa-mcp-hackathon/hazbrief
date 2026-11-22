@@ -1,0 +1,7 @@
+regime	configuration	n	trials	mg (observed over predicted, geometric)	mg_low95	mg_high95	vg	fac2	fac3
+daytime	hazbrief (HB-180 shipped)	11	DT1 DT2 DT3 GF1 GF2 GF3	2.65093	2.43594	2.88491	2.82618	0.181818	0.636364
+daytime	hazbrief, cause fields at the report's values	11	DT1 DT2 DT3 GF1 GF2 GF3	2.11936	1.90061	2.36328	1.87203	0.545455	0.818182
+daytime	the report's printed SLAB	11	DT1 DT2 DT3 GF1 GF2 GF3	2.09732	1.88093	2.3386	1.84133	0.636364	0.909091
+stable	hazbrief (HB-180 shipped)	8	DT4 TC45 TC47	0.867632	0.755218	0.996778	1.10463	1	1
+stable	hazbrief, cause fields at the report's values	8	DT4 TC45 TC47	0.847866	0.736852	0.975605	1.13335	1	1
+stable	the report's printed SLAB	8	DT4 TC45 TC47	0.83989	0.729033	0.967604	1.13708	1	1

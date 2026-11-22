@@ -1,0 +1,238 @@
+# HB-195 Part A: the nine browser-list documents the Desktop thread saved into corpus/inbox/ on 2026-11-17 (rung 2,
+# DN-002 ADDENDUM-00), one row per work, landed in corpus/sources.yaml by tools/land_rows.py.
+# - plan: operator_download, so the manifest's acquired_by reads `operator` (scripts/register_inbox.py).
+# - Each is identified by its own first pages (identify.text); the url is the open copy docs/evidence/hb190/browser_list.md
+#   names, which the file's browser origin (kMDItemWhereFroms) confirms where it is more than a host
+#   (docs/evidence/hb195/inbox.tsv).
+# - same_work_as: the OpenAlex record row HB-190 already holds for the same work (IFLA LRM: two manifestations of one
+#   work; OpenAlex's one work id across a work's locations, as squiddy identity.py elects it). The record row stays.
+#   Argonne's 2013 report has no record row (HB-190: no DOI, no record), so it names none.
+# - Licences, read from each file's own pages:
+#   - public-release: Argonne's ANL/DIS-13/22 (a DOE laboratory report, as Argonne 2001, HB-190);
+#   - reproduction-permitted: Atkinson 2017 (Crown Copyright, Open Government Licence v3, as HSE RR1174, HB-190);
+#   - reference-only (bytes held, text withheld): the four Elsevier accepted manuscripts (the Elsevier user licence;
+#     HB-170 held the Distribution Statement A Jack Rabbit II manuscript the same way), Hanna 2021 (CC BY-NC-ND, not on
+#     the graph's licence allowlist, as jia2025-fast-gaussian-puff), Hanna and Chowdhury 2014 (A&WMA copyright) and
+#     Sigg 2018 (Royal Meteorological Society copyright).
+sources:
+- doc_id: simpson-2020-hpac-jack-rabbit-ii-accepted-manuscript
+  priority: 5
+  title: HPAC model studies of selected Jack Rabbit II (JRII) releases and comparisons to test data (accepted manuscript)
+  publisher: 'Atmospheric Environment 243 (2020) 117675, doi:10.1016/j.atmosenv.2020.117675 (Elsevier); Simpson, Miner,
+    Mazzola and Meris (ARA, SAIC and DTRA)'
+  edition: accepted manuscript (ScienceDirect's open manuscript copy; PDF created 2020-10-14), not the typeset article
+  url: https://www.sciencedirect.com/science/article/am/pii/S1352231020304076
+  format: pdf
+  identify:
+    text: HPAC MODEL STUDIES OF SELECTED JACK RABBIT II
+  structured_alternative: none
+  plan: operator_download
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2020.117675
+  held_as: full text
+  same_work_as: simpson-2020-hpac-model-studies-selected-jack-rabbit-openalex-record
+  notes: 'HB-195: saved by the Desktop thread through the operator''s browser on 2026-11-17 from ScienceDirect''s "View
+    Open Manuscript" (docs/evidence/hb190/browser_list.md item 1) and registered by content. The accepted manuscript
+    (its first page names the version of record and a manuscript id; 30 pages with line numbers): page and line numbers
+    are the manuscript''s. Every page reads "Distribution Statement A. Approved for public release; distribution is
+    unlimited"; its first page also says it "is made available under the Elsevier user license", so the text is withheld
+    (reference-only), as HB-170 held the Jack Rabbit II 17-model manuscript. The same work''s OpenAlex record stays
+    (same_work_as). Its HPAC scores are read in docs/evidence/hb195/hpac_jr2_scores.tsv.'
+  role: comparator
+  kb_reason: DTRA's HPAC (SCIPUFF) runs of Jack Rabbit II Trials 1, 6 and 7 and their published scores (HB-188 R3, HB-192).
+- doc_id: weil-2022-iddm-jack-rabbit-ii-accepted-manuscript
+  priority: 6
+  title: The Integral Dense-gas Dispersion Model (IDDM) and comparison with Jack Rabbit II data (accepted manuscript)
+  publisher: 'Atmospheric Environment 296 (2023) 119563, doi:10.1016/j.atmosenv.2022.119563 (Elsevier); Weil and Alessandrini
+    (NCAR)'
+  edition: accepted manuscript with the authors' revision marks (ScienceDirect's open manuscript copy; PDF created 2023-01-12),
+    not the typeset article
+  url: https://www.sciencedirect.com/science/article/am/pii/S1352231022006288
+  format: pdf
+  identify:
+    text: Integral Dense-gas Dispersion Model.{0,120}with Jack Rabbit II Data
+  structured_alternative: none
+  plan: operator_download
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2022.119563
+  held_as: full text
+  same_work_as: weil-2022-integral-dense-gas-dispersion-model-iddm-openalex-record
+  notes: 'HB-195: saved by the Desktop thread through the operator''s browser on 2026-11-17 from ScienceDirect''s "View
+    Open Manuscript" (browser_list.md item 6) and registered by content. The accepted manuscript ("Preprint submitted to
+    Elsevier", 40 pages, its revision marks still in the text); page numbers are the manuscript''s. Made available under
+    the Elsevier user license, so the text is withheld (reference-only). The same work''s OpenAlex record stays
+    (same_work_as).'
+  role: comparator
+  kb_reason: IDDM against Jack Rabbit II Trials 1, 6 and 7 arc maxima (HB-188 R1-112).
+- doc_id: fox-2021-jack-rabbit-ii-overview-accepted-manuscript
+  priority: 6
+  title: Overview of the Jack Rabbit II (JR II) field experiments and summary of the methods used in the dispersion model
+    comparisons (accepted manuscript)
+  publisher: 'Atmospheric Environment 269 (2022) 118783, doi:10.1016/j.atmosenv.2021.118783 (Elsevier); Fox, Hanna, Mazzola,
+    Spicer, Chang and Gant'
+  edition: accepted manuscript (ScienceDirect's open manuscript copy; PDF created 2021-11-16), not the typeset article
+  url: https://www.sciencedirect.com/science/article/am/pii/S1352231021006051
+  format: pdf
+  identify:
+    text: Overview of the Jack Rabbit II \(JR II\) field experiments
+  structured_alternative: none
+  plan: operator_download
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2021.118783
+  held_as: full text
+  same_work_as: fox-2021-overview-jack-rabbit-jr-field-experiments-openalex-record
+  notes: 'HB-195: saved by the Desktop thread through the operator''s browser on 2026-11-17 from ScienceDirect''s "View
+    Open Manuscript" (browser_list.md item 10) and registered by content. The accepted manuscript (30 pages with line
+    numbers); page numbers are the manuscript''s. Made available under the Elsevier user license, so the text is withheld
+    (reference-only). The same work''s OpenAlex record stays (same_work_as).'
+  role: comparator
+  kb_reason: The Jack Rabbit II trials, arcs and recommended model inputs for the dense-gas model comparison (HB-188 R6).
+- doc_id: mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript
+  priority: 6
+  title: Cloud dimensions from Jack Rabbit II field trial data (accepted manuscript)
+  publisher: Atmospheric Environment 237 (2020) 117614, doi:10.1016/j.atmosenv.2020.117614 (Elsevier); Mazzola (SAIC)
+  edition: accepted manuscript (ScienceDirect's open manuscript copy; PDF created 2020-08-10), not the typeset article
+  url: https://www.sciencedirect.com/science/article/am/pii/S1352231020303484
+  format: pdf
+  identify:
+    text: Cloud Dimensions from Jack Rabbit II Field Trial Data
+  structured_alternative: none
+  plan: operator_download
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1016/j.atmosenv.2020.117614
+  held_as: full text
+  same_work_as: mazzola-2020-cloud-dimensions-jack-rabbit-field-trial-openalex-record
+  notes: 'HB-195: saved by the Desktop thread through the operator''s browser on 2026-11-17 from ScienceDirect''s "View
+    Open Manuscript" (browser_list.md item 11) and registered by content. The accepted manuscript (33 pages with line
+    numbers); page numbers are the manuscript''s. Its pages read "Distribution Statement A. Approved for public release;
+    distribution is unlimited", and its first page says it is made available under the Elsevier user license, so the text
+    is withheld (reference-only), as HB-170 held the Jack Rabbit II 17-model manuscript. The same work''s OpenAlex record
+    stays (same_work_as). Not the same work as mazzola-2020-jack-rabbit-ii-17-dense-gas-models-manuscript.'
+  role: comparator
+  kb_reason: The observed Jack Rabbit II cloud widths and heights a model comparison is made against (HB-188 R6).
+- doc_id: atkinson-2017-heavy-vapour-clouds-very-low-wind
+  priority: 6
+  title: Development of heavy vapour clouds in very low wind speeds
+  publisher: 'Journal of Loss Prevention in the Process Industries 48 (2017) 162-172, doi:10.1016/j.jlp.2017.04.011 (Elsevier);
+    Atkinson (Health and Safety Executive)'
+  edition: published article (the journal's own PDF, open access; available online 2017-04-21)
+  url: https://www.sciencedirect.com/science/article/pii/S0950423017301365/pdf
+  format: pdf
+  identify:
+    text: Development of heavy vapour clouds in very low wind speeds.{0,40}Graham Atkinson
+  structured_alternative: none
+  plan: operator_download
+  route: reference
+  reuse: reproduction-permitted
+  source_page: https://doi.org/10.1016/j.jlp.2017.04.011
+  held_as: full text
+  same_work_as: atkinson-2017-development-heavy-vapour-clouds-very-low-openalex-record
+  notes: 'HB-195: saved by the Desktop thread through the operator''s browser on 2026-11-17 from ScienceDirect, the
+    article''s own PDF (browser_list.md item 12), and registered by content. The published version. Licence: "Crown
+    Copyright (c) 2017 Published by Elsevier Ltd. This is an open access article under the Open Government License (OGL)"
+    version 3 (its first page), so the text is admitted, as HSE RR1174 was (HB-190). The same work''s OpenAlex record
+    stays (same_work_as).'
+  role: comparator
+  kb_reason: A gravity-driven heavy-vapour cloud in near-calm wind, the low-wind limit of the dense layer (HB-188 R1).
+- doc_id: hanna-2021-gaps-toxic-industrial-chemical-model-systems
+  priority: 6
+  title: 'Gaps in toxic industrial chemical model systems: Improvements and changes over past 10 years'
+  publisher: 'Process Safety Progress 41(1) (2022) 151-166, doi:10.1002/prs.12289 (AIChE / Wiley); Hanna, Mazzola, Chang,
+    Spicer, Gant and Batt'
+  edition: published article (received 2021-03-19, accepted 2021-06-17; Wiley's PDF)
+  url: https://aiche.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/prs.12289
+  format: pdf
+  identify:
+    text: Gaps in toxic industrial chemical model systems.{0,80}Steven Hanna
+  structured_alternative: none
+  plan: operator_download
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1002/prs.12289
+  held_as: full text
+  same_work_as: hanna-2021-gaps-toxic-industrial-chemical-model-systems-openalex-record
+  notes: 'HB-195: saved by the Desktop thread through the operator''s browser on 2026-11-17 from Wiley''s pdfdirect
+    (browser_list.md item 7; the browser''s recorded origin) and registered by content. The published version. Licence:
+    "an open access article under the terms of the Creative Commons Attribution-NonCommercial-NoDerivs License" (its first
+    page); non-commercial no-derivatives is not on the graph''s licence allowlist, so the text is withheld
+    (reference-only), as jia2025-fast-gaussian-puff. The same work''s OpenAlex record, which holds its abstract, stays
+    (same_work_as).'
+  role: comparator
+  kb_reason: Which toxic-industrial-chemical model gaps the Jack Rabbit trials closed, by the models' own authors (HB-188).
+- doc_id: hanna-chowdhury-2014-minimum-turbulence-low-wind-stable
+  priority: 6
+  title: Minimum turbulence assumptions and u* and L estimation for dispersion models during low-wind stable conditions
+  publisher: 'Journal of the Air & Waste Management Association 64(3) (2014) 309-321, doi:10.1080/10962247.2013.872709 (Taylor
+    & Francis); Hanna and Chowdhury'
+  edition: published article (published online 2014-02-18; Taylor & Francis's PDF)
+  url: https://www.tandfonline.com/doi/pdf/10.1080/10962247.2013.872709?needAccess=true&role=button
+  format: pdf
+  identify:
+    text: Minimum turbulence assumptions and u\* and L estimation for dispersion models during low-wind stable conditions.{0,40}Hanna
+  structured_alternative: none
+  plan: operator_download
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1080/10962247.2013.872709
+  held_as: full text
+  same_work_as: hanna-2013-minimum-turbulence-assumptions-u-l-estimation-openalex-record
+  notes: 'HB-195: saved by the Desktop thread through the operator''s browser on 2026-11-17 from Taylor & Francis
+    (browser_list.md item 13; the browser''s recorded origin) and registered by content. The published version, with the
+    publisher''s cover page. Licence: "Copyright (c) 2014 A&WMA", so the text is withheld (reference-only). The same
+    work''s OpenAlex record (dated 2013, the online-first year), which holds its abstract, stays (same_work_as).'
+  role: comparator
+  kb_reason: SCICHEM's low-wind stable minimum turbulence and its u* and L estimates (HB-188 R5; HB-190 abstracts.md).
+- doc_id: sigg-2018-hazmat-risk-area-latin-hypercube-weather-ensemble
+  priority: 7
+  title: Hazmat risk area assessment by atmospheric dispersion modelling using Latin hypercube sampling with weather ensemble
+  publisher: 'Meteorological Applications 25(4) (2018) 575-585, doi:10.1002/met.1722 (Royal Meteorological Society / Wiley);
+    Sigg, Lindgren, von Schoenberg, Persson, Burman, Grahn, Brannstrom and Bjornham (FOI)'
+  edition: published article (received 2017-10-19, accepted 2018-02-23; Wiley's PDF)
+  url: https://rmets.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/met.1722
+  format: pdf
+  identify:
+    text: Hazmat risk area assessment by atmospheric dispersion modelling using Latin hypercube sampling with weather ensemble.{0,20}Robert Sigg
+  structured_alternative: none
+  plan: operator_download
+  route: reference
+  reuse: reference-only
+  source_page: https://doi.org/10.1002/met.1722
+  held_as: full text
+  same_work_as: sigg-2018-hazmat-risk-area-assessment-atmospheric-dispersion-openalex-record
+  notes: 'HB-195: saved by the Desktop thread through the operator''s browser on 2026-11-17 from Wiley''s pdfdirect
+    (browser_list.md item 8; the browser''s recorded origin) and registered by content. The task file found only Chrome''s
+    temporary file; by the time this task ran, Chrome had finished the download under its own name and the temporary file
+    was gone. The file is whole: 11 pages (575 to 585), its title page Sigg 2018''s, its last page
+    ending with the article''s own "How to cite" line. The published version. Licence: "(c) 2018 Royal Meteorological Society", so the text is withheld
+    (reference-only). The same work''s OpenAlex record, which holds its abstract, stays (same_work_as).'
+  role: comparator
+  kb_reason: A runtime weather-ensemble risk area by forecast time (HB-188 R4, O4).
+- doc_id: anl-2013-erg2012-table-of-protective-action-distances
+  priority: 6
+  title: Development of the Table of Initial Isolation and Protective Action Distances for the 2012 Emergency Response Guidebook
+    (ANL/DIS-13/22; Brown, Freeman and Haney)
+  publisher: Argonne National Laboratory, Decision and Information Sciences Division (served by the US DOT PHMSA)
+  edition: December 2013 (cover page)
+  url: https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/docs/Argonne_Report.pdf
+  format: pdf
+  identify:
+    text: Changes in the TIH List for the ERG2012
+    pages: 12
+  structured_alternative: none
+  plan: operator_download
+  route: deterministic
+  reuse: public-release
+  source_page: https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/docs/Argonne_Report.pdf
+  held_as: full text
+  notes: 'HB-195: saved by the Desktop thread through the operator''s browser on 2026-11-17 from phmsa.dot.gov
+    (browser_list.md item 15; the fetcher had 403, HB-188), and registered by content. HB-188 and HB-190 knew it only as
+    "PHMSA''s Argonne_Report.pdf"; its cover names it: ANL/DIS-13/22, Brown, Freeman and Haney, December 2013, 176 pages.
+    Its first three pages are images with no text layer (read by eye: cover, availability page, title page), so it is
+    identified by its table of contents. Licence: an Argonne report under DOE contract DE-AC02-06CH11357, served by PHMSA,
+    as Argonne 2001 (HB-190). No DOI and no OpenAlex record: no record row to link.'
+  role: method
+  kb_reason: The guidebook's distances as computed for ERG2012, between the 2000 edition held (HB-190) and ERG 2024 (HB-188 R4).

@@ -1,0 +1,282 @@
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+[factory] plan: 32 node(s) decided in 15.69s (slowest F-01 catalog, 4.36s)
+[factory] disk preflight: floor 25.0 GB (the kit's default (disk.yaml floor_gb_default)); graph root (the data volume) /Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus: 64.94 GB free
+[factory] F-20 seeds: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-21 seed_select: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-23 seed_propose: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-24 seed_relookup: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-25 seed_reselect: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-26 seed_context: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-22 seed_search: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-27 shelf_screen: SKIPPED-BY-CONFIG -- this graph declares no shelf_screen intake (DN-035 R-162)
+[factory] F-01 catalog: 416 of 416 item(s) pending; every file in the declared intake becomes a manifest entry
+[factory] F-01 catalog: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+cataloged 0 new entries; 416 already present: erg2024-en-pdf, erg2024-methodology, erg2024-summary-of-changes, erg2024-landing, erg2024-pubchem-index, erg-distances-background, erg-guide-115, erg-guide-120, erg-guide-124, erg-guide-125, erg-guide-128, cameo-unna-1017, cameo-unna-1005, cameo-unna-1075, cameo-unna-1978, cameo-unna-1203, cameo-unna-1202, cameo-unna-1977, cameo-unna-1951, cameo-chem-2862, cameo-chem-4860, cameo-chem-987, cameo-chem-9018, cameo-chem-11498, cameo-chem-11452, cameo-chem-4069, cameo-chem-2509, cfr49-172-101-ecfr-html, cfr49-172-101-ecfr-xml, cfr49-172-101-ecfr-versions, cfr49-govinfo-bulk, ics-201, ics-202, ics-204, ics-209, ics-208hm, ics-forms-instructions, ics-forms-booklet, nws-api-docs, nws-api-openapi, nws-api-points, census-api-user-guide, census-acs5-2024-dataset, census-acs5-2024-b01003, census-acs5-2024-b01001, census-acs5-2024-b18101, census-acs5-2024-b08201, census-acs5-2024-c16002, census-acs5-2024-b26001, census-dhc-2020-p18, census-acs-api-endpoint, census-tigerweb-docs, census-tigerweb-rest, tiger2025-rails, tiger2025-prisecroads, usgs-structures-mapserver, usgs-structures-content-spec, cms-pos-layout, cms-pos-api, nhsn-facility-capacity-archived, nhsn-jurisdiction-archived, nhsn-hrd-reporting, svi-2022-documentation, svi-flanagan-2011, svi-variables-comparison, svi-2022-tract-data, cre-2024-methodology, cre-2024-file-layout, cre-2024-tract, cre-response-2024-quick-guide, cre-response-2024-file-layout, cre-response-2024-tract, lodes8-techdoc, lodes8-data, cfs-2022-hazmat-tables, cfs-2022-tables-page, cfs-2022-help, phmsa-incident-statistics, fra-safety-data, usgs-nhd-access, usgs-3dhp, usgs-nhdplus-hr-guide, epa-dwmaps, epa-drinking-water-intakes, nims-doctrine-2017, ar-25-50, nws-10-518, nws-wea, fema-ipaws-wea, cfr47-10-430, cdc-cci-user-guide, cdc-cci-full-score-sheet, cdc-everyday-words, phmsa-wetlines-awareness, phmsa-liquefied-compressed-gases-guide, phmsa-ctmv-loading-unloading-guide, dot-chart-17, erg2024-state-coordinators, phmsa-commercial-suppliers-list-2020, cre-2024-quick-guide, cre-2024-techdoc, cre-2024-rankings-file-layout, cre-2024-ranking-top100-tract, cre-2024-ranking-top25-county, nws-disclaimer, nws-alerts-docs, nws-api-faq, census-api-terms, census-api-query-limits, census-api-key-signup, tigerweb-rest-docs, tigerweb-current-mapserver, lodes-data-landing, lodes8-techdoc-8-4, usgs-copyrights-credits, cms-api-docs, cms-api-faq, socrata-app-tokens, pubchem-pug-view-limits, usgs-3dhp-mapserver, pubchem-programmatic-access, hazbrief-api-catalog, hazbrief-workbench-api-catalog, hazbrief-api-probe-log, epa-marplot-software, epa-rmp-affected-populations, noaa-marplot, calwater-paws21-appendix-f, calcupa-2026-oca-becker, esri-erg-web-tool-blog, esri-community-erg-web-tool, esri-erg-materials-csv, esri-wab-erg-widget-doc, esri-solutions-erg-widget-repo, esri-solutions-erg-widget-commit, esri-solutions-erg-widget-readme, esri-solutions-erg-widget-license, esri-solutions-erg-widget-version, esri-solutions-erg-widget-materials, esri-solutions-erg-widget-sources, otm-em-app, otmem-data-sources, otmem-statistical-methodology, lehd-announcements, vlahi-ceres-hazmat-teams, juvare-webeoc-iap-board, juvare-webeoc-rest-api, veoci-iap-ics, fortworth-veoci-contract-amendment-a1, d4h-linked-fields, dhs-saver-ims-msr-2022, phmsa-erg2020-data-files-page, phmsa-erg-api-definition, erg2020-yellow-numerical-xlsx, erg2020-blue-alphabetical-xlsx, erg2020-orange-guides-xls, erg2020-table1-xlsx, erg2020-table2-xls, erg2020-table3-xls, omni-responder-commit, omni-responder-readme, omni-responder-license, omni-responder-hazmat-db, github-topics-erg, erg2016-anl-technical-report, trid-erg2016-anl, llnl-mass-casualty-framework-2016, lakecounty-cop-2021, census-data-api-mcp-commit, census-data-api-mcp-readme, census-data-api-mcp-license, nws-weather-mcp-commit, nws-weather-mcp-readme, nws-weather-mcp-license, census-mcp-cyanheads-commit, census-mcp-cyanheads-readme, census-mcp-cyanheads-license, usgs-structures-cartowfs, cms-hospital-general-info-page, cms-hospital-general-info-metastore, census-acs-general-handbook-2020, bts-ntad-rail-lines-layer, bts-ntad-grade-crossings-layer, cms-nursing-home-provider-info-metastore, census-geocoder-api-docs, usgs-3dhp-waterbody-layer, usgs-3dhp-flowline-layer, epa-rmp-oca-guidance-2009, epa-rmp-oca-guidance-appendices-1999, erg2020-anl-technical-report, noaa-aloha-technical-documentation, cameo-chemicals-help-locs, epa-marplot-users-manual-2007, epa-marplot-4-to-5-update, census-acs-state-local-handbook-2020, census-dhc-2020-techdoc, census-sehsd-wp2022-25-cre-indices, census-cares-helene-quick-guide-2025, otmem-user-guide, otmem-selection-methodology, otmem-faq, otmem-glossary, otmem-tech-overview, atsdr-mmg-ammonia, atsdr-mmg-chlorine, atsdr-mmg-ethylene-oxide, atsdr-mmg-hydrogen-chloride, atsdr-mmg-hydrogen-fluoride, atsdr-mmg-sulfur-dioxide, atsdr-toxfaqs-ammonia, atsdr-toxfaqs-chlorine, atsdr-toxfaqs-ethylene-oxide, atsdr-toxfaqs-hydrogen-chloride, atsdr-toxfaqs-fluorides-hf, atsdr-toxfaqs-sulfur-dioxide, niosh-npg-2005-149, niosh-npg-ammonia, niosh-npg-chlorine, niosh-npg-ethylene-oxide, niosh-npg-hydrogen-chloride, niosh-npg-hydrogen-fluoride, niosh-npg-sulfur-dioxide, niosh-idlh-hydrogen-chloride-2025, epa-aegl-values, epa-aegl-compiled-2018, aegl-tsd-ammonia, aegl-tsd-chlorine, aegl-tsd-ethylene-oxide, aegl-tsd-hydrogen-chloride, aegl-tsd-hydrogen-fluoride, aegl-tsd-sulfur-dioxide, ntsb-rar-05-04-graniteville, ntsb-rar-14-01-paulsboro, ntsb-rir-24-05-east-palestine, csb-2002-04-i-mo-dpc-festus, csb-2004-02-i-az-dpc-glendale, csb-2003-13-i-la-honeywell-baton-rouge, csb-2010-13-a-al-millard-ammonia, csb-2017-01-i-ks-mgpi-atchison, csb-2024-03-i-va-cuisine-solutions-ammonia, csb-2024-04-i-ga-biolab-conyers, phmsa-dot-f-5800-1-form, phmsa-dot-f-5800-1-instructions, fema-is-200c-course-zip, nrt-1-hazmat-emergency-planning-guide-2001, cfr29-1910-120-govinfo-2025, epa-tier2-instructions-2027, epa-tier2-instructions-2017, nfpa-472-2018, nfpa-470-2022, nfpa-704-2027, ansi-isa-18-2-2016, fema-elg-0300-student-manual, fema-is-200c-student-manual, fema-is-200c-sample-ics-201, atsdr-tp-ammonia-2004, atsdr-tp-chlorine-2010, atsdr-tp-ethylene-oxide-2022, atsdr-tp-fluorides-hf-fluorine-2003, atsdr-tp-sulfur-dioxide-1998, fema-elg-0400-student-manual, fema-is-700b-student-manual, fema-is-800d-student-manual, cfr40-part68-govinfo-2025, cfr29-1910-119-govinfo-2025, fr-2024-04458-rmp-safer-communities, fr-2026-03633-rmp-common-sense-proposed, phmsa-hmr-overview-page, census-acs-design-methodology-2024, census-tiger-line-techdoc-2020, lehd-onthemap-help-faqs, lehd-onthemap-data-overview-lodes8, lehd-tp-2006-01-infrastructure-files-qwi, census-ces-wp-14-38-lodes-acs-design-comparison, census-ces-wp-17-34-two-perspectives-commuting, lehd-onthemap-synthetic-data-protection-2009, ntsb-rar-04-01-minot, ntsb-rar-06-03-macdona, ntsb-hzm-02-01-riverview, ntsb-hzm-04-01-calamus, ntsb-hzb-04-01-middletown, ntsb-hzm-12-01-sum-swansea, ntsb-hzm-19-01-new-martinsville, ntsb-hzir-22-01-beach-park, ntsb-hir-25-06-teutopolis, ntsb-rir-26-07-bordulac, csb-2004-11-i-ca-sterigenics-ontario, csb-2023-03-i-la-dow-plaquemine, csb-2019-04-i-pa-pes-philadelphia, csb-2023-02-i-la-honeywell-geismar, csb-2008-06-i-tx-goodyear-houston, csb-2003-11-i-ky-dd-williamson-louisville, csb-2020-05-i-la-biolab-westlake, csb-2005-06-i-la-chlorine-esd-bulletin, csb-2009-14-i-tx-citgo-corpus-christi-urgent-recs, ajem-2021-woodman-skill-decay, arthur-1998-skill-decay-meta-analysis, national-edu-hpac-cbr-certificate, ics-206, noaa-aloha-examples, noaa-aloha-threat-zones-output, noaa-marplot-fact-sheet, noaa-communicating-with-aloha, noaa-cameo-suite, klein-1988-ari-tr-796-fireground, klein-2008-naturalistic-decision-making, johnston-2005-analytic-culture, klein-1993-decision-making-in-action, google-maps-platform-pricing, google-maps-platform-march-2025-changes, google-maps-platform-terms, osmf-tile-usage-policy, esri-uc2000-cats-pap722, fgdc-std-007-3-1998-nssda, gps-sps-performance-standard-2020, fra-crossing-inventory-guide, census-mtaip-centerline-metadata, census-geocoder-documentation, census-geocoder-api-pdf, census-geocoder-user-guide, census-geocoder-faq, osm-wiki-zoom-levels, penndot-location-referencing-system, iso-19157-1-2023-catalogue, mdot-sha-milepoints-layer, pasda-penndot-interstate-mile-markers-layer, pasda-penndot-interstate-mile-markers-metadata, pasda-penndot-state-roads-metadata, vdot-mile-marker-signs-layer, vdot-mile-marker-signs-metadata, usgs-nldi-navigation-docs, usgs-3dhp-flowline-data-dictionary, census-mtfcc-code-list, census-cbp-api-docs, usgs-epqs-api-docs, usgs-3dep-13-arcsec-dem-metadata, mrlc-data-services-page, mrlc-nlcd-class-legend, nowcoast-weather-radar-wms, epa-mmgrma-1999, epa-pcrammet-users-guide, usgs-3dep-elevation-imageserver, esri-imageserver-get-samples, geoserver-wcs-reference, fmh1-2019, usgs-annual-nlcd-access, nlcd-cog-mirror-stac, source-coop-cboettig-land-cover, fastgaussianpuff-repo, jia2025-fast-gaussian-puff, epa-aegl-compiled-page, epa-aegl-results-chlorine, epa-aegl-results-ammonia, epa-aegl-results-propane, epa-aegl-results-gasoline, aegl-tsd-propane, aegl-tsd-gasoline-proposed, nist-webbook-1005, nist-webbook-1017, nist-webbook-1978, nist-webbook-1951, nist-webbook-1977, turner-sigma-curves, epa-isc3-users-guide-vol2, epa-degadis-source, epa-degadis-testcases, epa-degadis-readme, epa-slab-code, epa-slab-users-guide-1990, epa-dense-gas-evaluation-1991, epa-scram-alternative-models, scichem-repo, epa-scipuff-overview-2000, usgs-3dep-quality-levels, narac-dense-gas, hse-skylark-co2-phmsa, fowler-circuit-breaker, nngroup-response-time-limits, weiss-2001-tpi, nygard-release-it, nielsen-1993-usability-engineering, scichem-commit, scichem-tree, scichem-readme, scichem-3rd-party-software, scichem-compile-instructions, scichem-flags-fd, scichem-read-flags, scichem-scipuff-fi, us-standard-atmosphere-1976, cfr-1910-134, epri-dispersion-sourceforge, noaa-aloha-program-page, noaa-aloha-fact-sheet, noaa-cameo-chemicals-program-page, noaa-cameo-chemicals-fact-sheet, noaa-cameo-suite-fact-sheet, llnl-hotspot-osti-965071, dtra-jsto-ebook, iaea-inis-6qhm6-7fs92, osd-ncbdp-specialized-radiological, scribd-hpac-101-dtra, nrc-nureg-0700-r4, dod-mil-std-1472h, faa-hf-std-001b, fema-nims-eoc-quick-reference-guide, endsley-1991-ntrs-sa-teleoperations, endsley-1998-sa-requirements-airline-pilots, endsley-1995-sa-theory, endsley-jones-2012-designing-for-sa, sweller-1988-cognitive-load-problem-solving, sweller-1994-clt-instructional-design, tufte-2001-visual-display-quantitative-information, tufte-1990-envisioning-information, nasa-granaas-1991-crt-display-usability, epa-aloha-users-manual-2007; 1 revised (SQ-023 R-213): fema-nims-eoc-quick-reference-guide
+  atsdr-mmg-ammonia: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url)
+  atsdr-mmg-chlorine: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url)
+  atsdr-mmg-ethylene-oxide: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url)
+  atsdr-mmg-hydrogen-chloride: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url)
+  atsdr-mmg-hydrogen-fluoride: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url)
+  atsdr-mmg-sulfur-dioxide: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url)
+  bts-ntad-grade-crossings-layer: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  bts-ntad-rail-lines-layer: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  calcupa-2026-oca-becker: kept: no catalog basis under this digest scheme says which side the catalog carried (title)
+  calwater-paws21-appendix-f: kept: no catalog basis under this digest scheme says which side the catalog carried (title)
+  cameo-chem-11452: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-chem-11498: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-chem-2509: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-chem-2862: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-chem-4069: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-chem-4860: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-chem-9018: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-chem-987: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-chemicals-help-locs: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  cameo-unna-1005: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-unna-1017: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-unna-1075: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-unna-1202: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-unna-1203: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-unna-1951: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-unna-1977: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cameo-unna-1978: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cdc-everyday-words: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-acs5-2024-b01001: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-acs5-2024-b01003: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-acs5-2024-b08201: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-acs5-2024-b18101: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-acs5-2024-b26001: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-acs5-2024-c16002: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-acs5-2024-dataset: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-api-key-signup: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-api-query-limits: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-api-terms: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-api-user-guide: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-cbp-api-docs: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-data-api-mcp-license: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-data-api-mcp-readme: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-dhc-2020-p18: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-geocoder-api-docs: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-geocoder-documentation: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-mcp-cyanheads-commit: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-mcp-cyanheads-license: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-mcp-cyanheads-readme: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-mtaip-centerline-metadata: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  census-tigerweb-docs: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cfr-1910-134: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cfr29-1910-120-govinfo-2025: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cfr49-172-101-ecfr-versions: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cfr49-172-101-ecfr-xml: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  cfr49-govinfo-bulk: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cfs-2022-tables-page: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cms-hospital-general-info-metastore: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cms-nursing-home-provider-info-metastore: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cre-2024-methodology: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cre-2024-ranking-top100-tract: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cre-2024-ranking-top25-county: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  cre-response-2024-file-layout: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes, title)
+  cre-response-2024-quick-guide: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, title)
+  csb-2004-02-i-az-dpc-glendale: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  csb-2005-06-i-la-chlorine-esd-bulletin: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  csb-2009-14-i-tx-citgo-corpus-christi-urgent-recs: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  csb-2010-13-a-al-millard-ammonia: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  csb-2017-01-i-ks-mgpi-atchison: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  csb-2020-05-i-la-biolab-westlake: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  csb-2024-04-i-ga-biolab-conyers: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  d4h-linked-fields: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url, title)
+  dod-mil-std-1472h: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  dtra-jsto-ebook: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, title)
+  epa-aegl-compiled-page: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  epa-aegl-results-ammonia: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  epa-aegl-results-chlorine: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  epa-aegl-results-gasoline: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  epa-aegl-results-propane: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  epa-aegl-values: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  epa-dwmaps: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  epa-marplot-software: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  epa-rmp-affected-populations: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  epa-scram-alternative-models: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  erg2016-anl-technical-report: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  erg2020-anl-technical-report: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  erg2020-blue-alphabetical-xlsx: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  erg2020-orange-guides-xls: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  erg2020-table1-xlsx: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  erg2020-table2-xls: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  erg2020-table3-xls: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  erg2020-yellow-numerical-xlsx: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  erg2024-en-pdf: kept: no catalog basis under this digest scheme says which side the catalog carried (reuse)
+  erg2024-landing: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  erg2024-methodology: kept: no catalog basis under this digest scheme says which side the catalog carried (reuse)
+  erg2024-pubchem-index: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  esri-community-erg-web-tool: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url, title)
+  esri-erg-web-tool-blog: kept: no catalog basis under this digest scheme says which side the catalog carried (title)
+  esri-solutions-erg-widget-commit: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  esri-solutions-erg-widget-license: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  esri-solutions-erg-widget-materials: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  esri-solutions-erg-widget-readme: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  esri-solutions-erg-widget-version: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  fema-elg-0300-student-manual: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  fema-elg-0400-student-manual: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, title)
+  fema-ipaws-wea: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  fema-is-800d-student-manual: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url)
+  fra-safety-data: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes, source_url)
+  google-maps-platform-march-2025-changes: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  google-maps-platform-pricing: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  hazbrief-api-catalog: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, retrieved_at)
+  hazbrief-api-probe-log: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, retrieved_at)
+  hazbrief-workbench-api-catalog: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, retrieved_at)
+  iaea-inis-6qhm6-7fs92: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, title)
+  klein-1988-ari-tr-796-fireground: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url)
+  lehd-announcements: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  lehd-onthemap-help-faqs: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  lodes-data-landing: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  mrlc-data-services-page: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  mrlc-nlcd-class-legend: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  national-edu-hpac-cbr-certificate: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url, title)
+  nhsn-facility-capacity-archived: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  nhsn-hrd-reporting: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  nhsn-jurisdiction-archived: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  niosh-npg-ammonia: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  niosh-npg-chlorine: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  niosh-npg-ethylene-oxide: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  niosh-npg-hydrogen-chloride: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  niosh-npg-hydrogen-fluoride: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  niosh-npg-sulfur-dioxide: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  nlcd-cog-mirror-stac: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  noaa-aloha-program-page: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  noaa-aloha-threat-zones-output: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  noaa-cameo-chemicals-program-page: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  noaa-cameo-suite: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  noaa-marplot: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+
+  ntsb-hzm-12-01-sum-swansea: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  ntsb-rir-24-05-east-palestine: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  ntsb-rir-26-07-bordulac: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  nws-alerts-docs: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  nws-api-docs: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  nws-api-openapi: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  nws-disclaimer: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  nws-wea: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  nws-weather-mcp-commit: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  nws-weather-mcp-license: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  nws-weather-mcp-readme: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  omni-responder-commit: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  omni-responder-hazmat-db: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  omni-responder-license: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  omni-responder-readme: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  osd-ncbdp-specialized-radiological: kept: no catalog basis under this digest scheme says which side the catalog carried (notes, source_url, title)
+  otm-em-app: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  phmsa-dot-f-5800-1-form: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  phmsa-dot-f-5800-1-instructions: kept: no catalog basis under this digest scheme says which side the catalog carried (notes)
+  phmsa-erg-api-definition: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, retrieved_at, url_basis)
+  phmsa-erg2020-data-files-page: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  phmsa-hmr-overview-page: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  phmsa-incident-statistics: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes, notes)
+  pubchem-pug-view-limits: kept: no catalog basis under this digest scheme says which side the catalog carried (acquired_by, acquisition_reason, retrieved_at, unit_key)
+  source-coop-cboettig-land-cover: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  svi-variables-comparison: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  tigerweb-current-mapserver: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  tigerweb-rest-docs: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-3dep-elevation-imageserver: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-3dep-quality-levels: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-3dhp: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-3dhp-flowline-data-dictionary: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-3dhp-flowline-layer: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-3dhp-mapserver: kept: no catalog basis under this digest scheme says which side the catalog carried (acquired_by, acquisition_reason, retrieved_at, unit_key)
+  usgs-3dhp-waterbody-layer: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-annual-nlcd-access: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-copyrights-credits: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-nhd-access: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-nldi-navigation-docs: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-structures-cartowfs: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-structures-content-spec: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+  usgs-structures-mapserver: kept: no catalog basis under this digest scheme says which side the catalog carried (bytes)
+[factory] F-01 catalog: done (11.7s; 416/416 complete by their records)
+[factory] F-19 routes: SKIPPED-BY-CONFIG -- this graph declares no `engine.acquire.text_routes` block (ACQ-001): no route is recorded before admit, and acquire takes OpenAlex's locations as before
+[factory] F-02 assess: 2 of 421 item(s) pending; the graph's own criterion decides each cataloged entry
+[factory] F-02 assess: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-02 assess: in_progress (8.66s; 420/421 complete by their records)
+[factory] F-03 acquire: 1 of 1 item(s) pending; the declared resolvers answer, one keyed row per entry, through the call layer
+[factory] F-03 acquire: network buckets (api.openalex.org, arxiv.org, export.arxiv.org); proxy variables -> the allowlisting forwarder http://127.0.0.1:61314 (3 host(s)); every other host refused and logged
+[2026-11-01T07:33:45Z] acquire final: 1/1 units (0 already done), 7.50 units/s, eta 0s, failures 0, spend {'http.api.openalex.org': 0.0, 'http.arxiv.org': 0.0, 'http.default': 0.0, 'http.export.arxiv.org': 0.0}
+[factory] F-03 acquire: done (2.44s; 1/1 complete by their records)
+[factory] F-16 resolve: SKIPPED-BY-CONFIG -- this graph declares no `engine.resolve.merge_plans`; no identity merge is recorded for it
+[factory] F-06 write: 1 of 1 item(s) pending; the emitter's instances, appended through the single write path
+[factory] F-06 write: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-06 write: done (5.72s; 1/1 complete by their records)
+[factory] F-04 admin: SKIPPED-BY-CONFIG -- this graph declares no `engine.admin_layer` block
+[factory] F-18 rulings: ALREADY-COMPLETE (decided in 1.67s)
+[factory] F-28 headings: SKIPPED-BY-CONFIG -- this graph declares no `engine.mesh_headings` block (SQ-005, DN-040 R-173)
+[factory] F-30 parse_text: ALREADY-COMPLETE (decided in 2.38s)
+[factory] F-05 parse: 1 of 727 item(s) pending; the index's units: one checkpointed line per text and metadata document
+[factory] F-05 parse: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-05 parse: done (3.44s; 727/727 complete by their records)
+[factory] F-17 concepts: 1 of 1 item(s) pending; the vocabularies from the held bytes, then HV-006's text-mention scan (zero calls)
+[factory] F-17 concepts: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-17 concepts: done (7.67s; 1/1 complete by their records)
+[factory] F-32 derivations: ALREADY-COMPLETE (decided in 1.06s)
+[factory] F-07 project: 1 of 1 item(s) pending; the ledger replayed into the graph's classes
+[factory] F-07 project: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-07 project: done (5.32s; 1/1 complete by their records)
+[factory] F-08 extract: SKIPPED-BY-CONFIG -- the extract block is not a daemon control plane: FATAL: /Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/extract/control.yaml is missing ['rate.tokens_per_hour', 'rate.papers_in_flight', 'ceiling.toke/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+
+[factory] F-09 preview: ALREADY-COMPLETE
+[factory] F-10 commit: ALREADY-COMPLETE
+[factory] F-29 mentions: 1 of 1 item(s) pending; S-008 Part E's node-field mention scan over the held vocabularies (zero calls)
+[factory] F-29 mentions: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-29 mentions: done (12.68s; 1/1 complete by their records)
+[factory] F-31 rate: SKIPPED-BY-VALVE -- valves.rate is closed
+[factory] F-11 release: 1 of 1 item(s) pending; export; the cheap gates, all reported before the index (R-175); index, index-parity, anchors; diff, registers, seal
+[factory] F-11 release: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+stage 13 export: pass (6.73s)
+stage 14 conform: pass (5.9s)
+stage 15 dangling: pass (5.64s)
+stage 15 conformance: pass (4.89s)
+stage 15 presence: pass (2.46s)
+stage 15 halts: pass (1.29s)
+stage 15 text_held: pass (1.5s)
+stage 15 anchors-by-id: pass (1.34s)
+stage 15 index: pass (46.95s)
+stage 15 index-parity: pass (4.41s)
+stage 15 anchors: pass (10.99s)
+stage 15 claims-reachable: pass (6.82s)
+stage 16 diff: pass (2.12s)
+stage 17 registers: pass (1.15s)
+stage 18 seal: pass (2.0s)
+[factory] F-11 release: done (105.57s; 1/1 complete by their records)
+[factory] F-12 serve-check: 1 of 1 item(s) pending; one verb answered over the graph's declared read surface
+[factory] F-12 serve-check: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-12 serve-check: done (3.14s; 1/1 complete by their records)
+[factory] F-13 questions: SKIPPED-BY-CONFIG -- this graph's factory control declares no `test:` block (the arms the demand test compares are the graph's to name)
+[factory] F-14 test: SKIPPED-BY-CONFIG -- this graph's factory control declares no `test:` block (the arms the demand test compares are the graph's to name)
+[factory] F-15 publish: SKIPPED-BY-VALVE -- valves.publish is closed
+squiddy build hb01b_52: 10 node(s) ran, rc=0, 188.5s. Record: /Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/prancy-sprouting-garden/graphs/hazbrief-corpus/evidence/hb01b_52/build_record.json
+EXIT 0 SECONDS 216

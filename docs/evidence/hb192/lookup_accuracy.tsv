@@ -1,0 +1,53 @@
+brief	request	set	place_frames	median_ratio	worst_ratio	outside_mesh	sensor_height_m	mesh_height_m
+csx-point-of-rocks-night	1ab3ae1616e7	named places	42	0.847	1.894	0	1.5	0.0
+csx-point-of-rocks-night	1ab3ae1616e7	named places, innermost band	4	1.444	1.894	0	1.5	0.0
+csx-point-of-rocks-night	1ab3ae1616e7	every measured point	715	0.857	2.203	1	1.5	0.0
+csx-point-of-rocks-night	1ab3ae1616e7	every measured point, innermost band	187	1.43	2.203	0	1.5	0.0
+i495-wilson-bridge-night	e299d4f64df8	named places	6	0.757	0.693	0	1.5	0.0
+i495-wilson-bridge-night	e299d4f64df8	named places, innermost band	0	None	None	0	1.5	0.0
+i495-wilson-bridge-night	e299d4f64df8	every measured point	201	0.779	0.543	0	1.5	0.0
+i495-wilson-bridge-night	e299d4f64df8	every measured point, innermost band	2	1.088	1.56	0	1.5	0.0
+i81-md-pa-line-night	85331d217411	named places	76	0.783	0.556	1	1.5	0.0
+i81-md-pa-line-night	85331d217411	named places, innermost band	0	None	None	0	1.5	0.0
+i81-md-pa-line-night	85331d217411	every measured point	249	0.826	0.556	1	1.5	0.0
+i81-md-pa-line-night	85331d217411	every measured point, innermost band	19	1.494	1.783	0	1.5	0.0
+i83-md-pa-line-night	f9bc1edb6801	named places	0	None	None	1	1.5	0.0
+i83-md-pa-line-night	f9bc1edb6801	named places, innermost band	0	None	None	0	1.5	0.0
+i83-md-pa-line-night	f9bc1edb6801	every measured point	50	0.848	1.434	1	1.5	0.0
+i83-md-pa-line-night	f9bc1edb6801	every measured point, innermost band	8	1.342	1.422	0	1.5	0.0
+i81-md-pa-line-day	99b9d82f9442	named places	1	0.945	0.945	0	1.5	0.0
+i81-md-pa-line-day	99b9d82f9442	named places, innermost band	0	None	None	0	1.5	0.0
+i81-md-pa-line-day	99b9d82f9442	every measured point	9	0.729	0.677	0	1.5	0.0
+i81-md-pa-line-day	99b9d82f9442	every measured point, innermost band	0	None	None	0	1.5	0.0
+csx-point-of-rocks-day	0e814dc802c9	named places	0	None	None	0	1.5	0.0
+csx-point-of-rocks-day	0e814dc802c9	named places, innermost band	0	None	None	0	1.5	0.0
+csx-point-of-rocks-day	0e814dc802c9	every measured point	16	0.899	0.579	0	1.5	0.0
+csx-point-of-rocks-day	0e814dc802c9	every measured point, innermost band	4	1.084	1.661	0	1.5	0.0
+i495-wilson-bridge-day	7bedd60d90d9	named places	0	None	None	0	1.5	0.0
+i495-wilson-bridge-day	7bedd60d90d9	named places, innermost band	0	None	None	0	1.5	0.0
+i495-wilson-bridge-day	7bedd60d90d9	every measured point	3	0.898	0.891	0	1.5	0.0
+i495-wilson-bridge-day	7bedd60d90d9	every measured point, innermost band	0	None	None	0	1.5	0.0
+i83-md-pa-line-day	98f0e376b1fc	named places	0	None	None	0	1.5	0.0
+i83-md-pa-line-day	98f0e376b1fc	named places, innermost band	0	None	None	0	1.5	0.0
+i83-md-pa-line-day	98f0e376b1fc	every measured point	0	None	None	0	1.5	0.0
+i83-md-pa-line-day	98f0e376b1fc	every measured point, innermost band	0	None	None	0	1.5	0.0
+csx-point-of-rocks-crossing	406b1d0f555f	named places	0	None	None	0	1.5	0.0
+csx-point-of-rocks-crossing	406b1d0f555f	named places, innermost band	0	None	None	0	1.5	0.0
+csx-point-of-rocks-crossing	406b1d0f555f	every measured point	11	0.907	6.105	0	1.5	0.0
+csx-point-of-rocks-crossing	406b1d0f555f	every measured point, innermost band	3	0.983	6.105	0	1.5	0.0
+i495-wilson-bridge-address	0fc9b5ac29dd	named places	0	None	None	0	1.5	0.0
+i495-wilson-bridge-address	0fc9b5ac29dd	named places, innermost band	0	None	None	0	1.5	0.0
+i495-wilson-bridge-address	0fc9b5ac29dd	every measured point	4	0.931	0.858	0	1.5	0.0
+i495-wilson-bridge-address	0fc9b5ac29dd	every measured point, innermost band	0	None	None	0	1.5	0.0
+i495-wilson-bridge-cross-streets	cddf33eca272	named places	0	None	None	0	1.5	0.0
+i495-wilson-bridge-cross-streets	cddf33eca272	named places, innermost band	0	None	None	0	1.5	0.0
+i495-wilson-bridge-cross-streets	cddf33eca272	every measured point	6	0.958	0.8	0	1.5	0.0
+i495-wilson-bridge-cross-streets	cddf33eca272	every measured point, innermost band	0	None	None	0	1.5	0.0
+i81-md-pa-line-milepost	06f0867e9474	named places	0	None	None	0	1.5	0.0
+i81-md-pa-line-milepost	06f0867e9474	named places, innermost band	0	None	None	0	1.5	0.0
+i81-md-pa-line-milepost	06f0867e9474	every measured point	8	0.629	0.507	0	1.5	0.0
+i81-md-pa-line-milepost	06f0867e9474	every measured point, innermost band	0	None	None	0	1.5	0.0
+un1005-i81	6ca55b1ae67c	named places	0	None	None	0	1.5	0.0
+un1005-i81	6ca55b1ae67c	named places, innermost band	0	None	None	0	1.5	0.0
+un1005-i81	6ca55b1ae67c	every measured point	0	None	None	0	1.5	0.0
+un1005-i81	6ca55b1ae67c	every measured point, innermost band	0	None	None	0	1.5	0.0

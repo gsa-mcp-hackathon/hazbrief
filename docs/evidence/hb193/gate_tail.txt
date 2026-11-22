@@ -1,0 +1,49 @@
+GATE START 2026-11-17T01:29:20Z at 8de7748f
+============================= slowest 40 durations =============================
+935.08s call     test_brief_dense_gas_layer.py (a test held privately)::test_the_routing_outcome_does_not_depend_on_the_vapour_heat_capacity
+410.32s call     test_hb163_one_cloud.py (a test held privately)::test_engine_by_brief_lists_every_brief_and_its_class
+333.51s call     test_hb115_cue_block.py (a test held privately)::test_the_lower_bound_line_prints_the_legends_own_number
+237.42s call     test_hb158_less_at_once.py (a test held privately)::test_rows_are_one_line_at_1440
+230.87s call     test_evidence_replay.py (a test held privately)::test_the_migration_is_idempotent_and_deterministic
+189.57s call     test_hb155_siting.py (a test held privately)::test_the_radius_event_round_trips_through_a_replay
+184.78s call     test_hb131_panels.py (a test held privately)::test_a_killed_recording_resumes_to_the_uninterrupted_output
+180.92s call     tests/test_brief.py::test_each_committed_brief_equals_a_fresh_replay_build[i81-md-pa-line-night]
+170.31s call     test_hb185_daytime_layer.py (a test held privately)::test_every_table_re_derives_byte_for_byte
+166.42s call     test_hb171_threat_timeline.py (a test held privately)::test_no_row_heading_or_label_is_an_imperative_outside_a_quotation[csx-point-of-rocks-night]
+163.70s call     test_eval_puff.py (a test held privately)::test_the_puff_failures_family_passes
+153.78s call     test_hb186_planning_area.py (a test held privately)::test_each_level_plans_on_slabs_area_together_with_scichems[i81-md-pa-line-night]
+148.62s call     test_hb180_diagnosis.py (a test held privately)::test_every_diagnostic_run_s_key_re_derives
+136.65s call     test_protective_action_footprint.py (a test held privately)::test_recorded_fixtures_carry_no_key_or_email
+136.61s call     test_hb115_cue_block.py (a test held privately)::test_no_brief_prints_more_than_six_lines_and_each_has_a_receipt[i81-md-pa-line-day]
+133.60s call     test_hb131_panels.py (a test held privately)::test_a_tool_or_a_view_the_brief_does_not_have_is_refused
+132.94s call     tests/test_brief.py::test_each_committed_brief_equals_a_fresh_replay_build[csx-point-of-rocks-day]
+130.16s call     test_hb178_material_keyed_and_off_pair.py (a test held privately)::test_no_candidate_stands_inside_a_zone_or_the_area_it_guards[csx-point-of-rocks-night]
+129.25s setup    test_scenario_manifest.py (a test held privately)::test_the_committed_manifest_is_what_the_script_derives
+128.55s call     tests/test_brief_footprint_citation.py::test_every_reader_record_a_brief_cites_used_its_own_footprint[csx-point-of-rocks-night]
+123.05s call     test_hb131_panels.py (a test held privately)::test_every_call_is_recorded_and_a_replay_answers_with_no_call
+119.47s call     test_hb157_plume_over_time.py (a test held privately)::test_no_dense_gas_band_ends_at_slabs_table_unless_drawn_open[csx-point-of-rocks-night]
+115.34s call     test_hb132_load_read.py (a test held privately)::test_every_committed_brief_keeps_its_numbers_and_receipts_in_every_section[csx-point-of-rocks-night]
+115.12s call     tests/test_hb152_symbols.py::test_every_drawn_marker_on_the_pair_references_its_class_svg[csx-point-of-rocks-night]
+110.38s call     tests/test_brief.py::test_each_committed_brief_equals_a_fresh_replay_build[csx-point-of-rocks-night]
+109.23s call     test_hb184_stable_levels.py (a test held privately)::test_the_checklist_carries_no_two_methods_warning_under_a_stable_class[csx-point-of-rocks-night]
+107.19s call     test_hb187_evidence.py (a test held privately)::test_every_table_re_derives_byte_for_byte
+105.68s call     tests/test_brief_footprint_citation.py::test_every_reader_record_a_brief_cites_used_its_own_footprint[un1057-fire-unresolved-i81]
+104.15s call     test_hb155_siting.py (a test held privately)::test_on_the_pair_three_points_outside_every_drawn_hazard_and_the_sweep[csx-point-of-rocks-day]
+99.65s call     test_hb154_shell.py (a test held privately)::test_the_data_sources_rows_are_the_evidence_logs_channels_each_with_one_of_four[csx-point-of-rocks-night]
+99.16s call     tests/test_brief_footprint_citation.py::test_every_record_row_of_the_appendix_is_the_request_this_brief_made[csx-point-of-rocks-night]
+98.40s call     test_hb158_less_at_once.py (a test held privately)::test_every_empty_layer_reason_is_held_to_a_rule[csx-point-of-rocks-night]
+96.85s call     test_hb141_checklist.py (a test held privately)::test_the_checklist_is_the_alert_events_minus_withdrawals_grouped_by_kind[csx-point-of-rocks-night]
+96.01s call     test_hb186_planning_area.py (a test held privately)::test_by_day_slabs_run_is_still_cut_at_the_horizons_travel[csx-point-of-rocks-crossing]
+90.76s call     tests/test_brief_footprint_citation.py::test_every_record_row_of_the_appendix_is_the_request_this_brief_made[i81-md-pa-line-day]
+90.59s call     test_hb154_shell.py (a test held privately)::test_each_collapse_button_toggles_and_the_collapsed_checklist_counts_unticked
+90.26s call     test_hb139_weather_source.py (a test held privately)::test_a_scenario_files_block_with_a_basis_is_read_and_printed
+89.06s call     test_hb171_threat_timeline.py (a test held privately)::test_rows_are_in_time_order_then_worst_level_first[csx-point-of-rocks-night]
+88.81s call     test_hb131_panels.py (a test held privately)::test_a_view_proposal_is_a_layer_or_an_hour_the_page_has
+88.33s call     test_hb130_event_stream.py (a test held privately)::test_every_sections_last_fragment_is_the_static_pages_byte_for_byte[csx-point-of-rocks-night]
+7980 passed, 14 skipped, 12 deselected, 17 xfailed, 2 warnings in 3938.31s (1:05:38)
+PYTEST EXIT=0
+All checks passed!
+RUFF EXIT=0
+960 files already formatted
+FORMAT EXIT=0
+GATE END 2026-11-17T02:35:02Z

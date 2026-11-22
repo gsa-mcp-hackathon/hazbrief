@@ -1,0 +1,76 @@
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[csx-point-of-rocks-crossing]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[csx-point-of-rocks-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[csx-point-of-rocks-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[i495-wilson-bridge-address]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[i495-wilson-bridge-cross-streets]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[i495-wilson-bridge-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[i495-wilson-bridge-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[i81-md-pa-line-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[i81-md-pa-line-milepost]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[i81-md-pa-line-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[i83-md-pa-line-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[i83-md-pa-line-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_every_number_resolves_and_every_section_is_referred_to[un1005-i81]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[csx-point-of-rocks-crossing]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[csx-point-of-rocks-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[csx-point-of-rocks-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[i495-wilson-bridge-address]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[i495-wilson-bridge-cross-streets]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[i495-wilson-bridge-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[i495-wilson-bridge-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[i81-md-pa-line-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[i81-md-pa-line-milepost]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[i81-md-pa-line-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[i83-md-pa-line-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[i83-md-pa-line-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_a_number_means_the_same_section_on_every_brief[un1005-i81]
+FAILED test_hb158_less_at_once.py (a test held privately)::test_every_empty_layer_reason_is_held_to_a_rule[csx-point-of-rocks-crossing]
+FAILED test_hb161_tevv.py (a test held privately)::test_each_moved_string_is_on_its_section_byte_for_byte
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[csx-point-of-rocks-crossing]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[csx-point-of-rocks-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[csx-point-of-rocks-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[i495-wilson-bridge-address]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[i495-wilson-bridge-cross-streets]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[i495-wilson-bridge-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[i495-wilson-bridge-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[i81-md-pa-line-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[i81-md-pa-line-milepost]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[i81-md-pa-line-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[i83-md-pa-line-day]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[i83-md-pa-line-night]
+FAILED test_hb161_tevv.py (a test held privately)::test_no_tool_hazbrief_does_not_run_is_named_on_the_brief[un1005-i81]
+FAILED test_hb158_less_at_once.py (a test held privately)::test_every_empty_layer_reason_is_held_to_a_rule[csx-point-of-rocks-day]
+FAILED test_hb158_less_at_once.py (a test held privately)::test_every_empty_layer_reason_is_held_to_a_rule[i83-md-pa-line-day]
+FAILED test_hb158_less_at_once.py (a test held privately)::test_csx_day_sorts_its_empty_layers_into_none_gaps_and_unlisted
+FAILED test_hb158_less_at_once.py (a test held privately)::test_each_layer_gap_is_a_data_gaps_item_worded_the_same
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[anfo-fire-i81]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[brush-fire-co-canal-point-of-rocks]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[guide-111-wilson-bridge]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[placard-2-3-i81]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[propane-unresolved-i81]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[scranton-i81-nws-wind]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[scranton-i81-stated-wind]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[un1057-fire-unresolved-i81]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[un1075-fire-i81]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[un1203-fire-i83]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[un1203-i83]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[un1746-small-i81-land]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[un1746-small-i81-water]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[un1823-solid-i81]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[un1977-wilson-bridge]
+FAILED test_hb189_night_clock.py (a test held privately)::test_no_brief_without_a_stable_hour_moved_but_its_tevv_page[un2915-i81]
+FAILED test_hb157_plume_over_time.py (a test held privately)::test_the_candidate_the_operator_saw_is_marked_an_inner_cordon
+FAILED test_hb178_material_keyed_and_off_pair.py (a test held privately)::test_the_audit_re_derives_and_every_hit_has_a_verdict
+FAILED test_hb142_nearby_roadblocks.py (a test held privately)::test_each_offset_is_at_least_the_minimum_and_the_popup_prints_it[csx-point-of-rocks-day]
+FAILED test_hb142_nearby_roadblocks.py (a test held privately)::test_each_offset_is_at_least_the_minimum_and_the_popup_prints_it[csx-point-of-rocks-night]
+FAILED test_hb142_nearby_roadblocks.py (a test held privately)::test_each_offset_is_at_least_the_minimum_and_the_popup_prints_it[i81-md-pa-line-day]
+FAILED test_hb167_scichem.py (a test held privately)::test_the_brief_never_reads_the_engine - A...
+67 failed, 7933 passed, 14 skipped, 97 deselected, 17 xfailed, 2 warnings in 3871.44s (1:04:31)
+PYTEST EXIT=1
+load_sensitive step:
+FAILED test_hb162r_passive_follows_the_forecast.py (a test held privately)::test_animate_plays_the_puffs_cloud_with_the_clock_and_the_wind_and_restores@chrome
+FAILED test_hb163_one_cloud.py (a test held privately)::test_animate_leaves_only_its_set_drawn_and_stopping_restores_the_readers_set@chrome
+2 failed, 83 passed, 1886 deselected in 1010.65s (0:16:50)
+PYTEST2 EXIT=1
+RUFF EXIT=1
+FORMAT EXIT=1

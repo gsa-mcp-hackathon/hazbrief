@@ -1,0 +1,66 @@
+# scripts/ingest_corpus.py settings (HB-01b step 4). Every key is required; a missing key is
+# fatal at startup (standards s2, s4). The checkpoint plan these implement is the task file's
+# "Checkpoint plan (section 15)".
+
+# The interpreter that has the squiddy kit (and seldon's model accessor) installed. Squiddy is
+# not a dependency of this repository (as for arnold KG-001 and squiddy's governed graph: its
+# fastmcp/mcp pins would collide with the server's). The environment variable SQUIDDY_PYTHON
+# overrides this path.
+squiddy_python: /Users/brock/GitHub/squiddy/.venv/bin/python
+
+# The Squiddy graph, relative to the repository root, and the files the ingest writes into it
+# (relative to the graph). The candidates file is the factory's `candidates` intake
+# (graph.yaml `intake:`); the records file is `acquire.texts.records`; texts/ holds the
+# form-feed derivatives of held HTML, JSON, CSV, XML and XLSX (gitignored, regenerable).
+graph_dir: the corpus graph (held privately)
+candidates_file: corpus/candidates/hazbrief.yaml
+text_records_file: corpus/text_records.json
+texts_dir: texts
+
+# Each `squiddy build` is one release, named <version_prefix>_<NN>.
+version_prefix: hb01b
+
+# The candidates file's recorded decision (squiddy intake): who decided these go in, and where.
+recorded_decision: >-
+  DN-002 section 3a (operator and Desktop session, 2026-10-20): every located document is
+  admitted with its metadata; text for every held document except a stated reason
+  (copyrighted, not_held). HB-01b ADDENDUM-01: the operator's inbox extras likewise. HB-01d
+  (HB-01d step 1): LN-01's prior-art sources likewise,
+  vendor, commercial and non-federal documents held as reference-only (metadata, no text).
+
+# Touchpoint 3 (squiddy DN-027 R-127) pauses a build until the control file names the count of
+# entries nobody has decided. The decision for these entries is the one above, recorded before
+# the build, so the ingest writes the count, and only when every undecided entry is this
+# ingest's own (plan.json `by_cataloged_by` names only `recorded_decision`); anything else
+# stops the run for the operator.
+touchpoint3_basis: DN-002 section 3a (the recorded decision above)
+
+# Pilot (section 15.4): the five ERG orange-guide PDFs, small and structurally identical (the
+# task file's choice). Measured seconds per page and index rows per page are projected onto
+# the rest before it runs.
+pilot_doc_ids: [erg-guide-115, erg-guide-120, erg-guide-124, erg-guide-125, erg-guide-128]
+
+# Progress (section 15.3): every N units, and every build.
+progress_every_units: 5
+
+# Ceilings (section 15.5). Crossing one stops new units and exits 3. The token ceiling is the
+# task's 100M stop line; the ingest makes no model call (the extract valve must be closed, and
+# the script refuses to run otherwise), so the ceiling guards a configuration change, not a
+# measured spend.
+ceiling_wall_clock_seconds: 10800
+ceiling_weighted_tokens: 100000000
+
+# One build's own bound. A Squiddy build that has not returned in this time is killed and
+# recorded as a failed batch; its own records are its resume (squiddy the instructions of the coding sessions (held privately)).
+build_timeout_seconds: 7200
+
+# HB-122: OCR of a held PDF whose source entry declares `text_converter: ocr` (a scan with no
+# text layer). One form-feed page per PDF page, written to texts/<doc_id>.txt; the text record's
+# `extractor` names these settings. HB-102's measured settings: 300 dpi greyscale renderings,
+# page segmentation mode 6 (one uniform block, which keeps table rows together). The version is
+# the installed engine's; a different installed version is refused, not silently used.
+ocr:
+  engine: tesseract
+  version: "5.5.0"
+  dpi: 300
+  psm: 6

@@ -1,0 +1,35 @@
+Wed Nov 18 16:01:23 EST 2026
+dir: /private/tmp/hb203_clone
+commit: ae27a5f7370ad2bf948f0160e8009a3395a28a52
+STEP1 START=1795035683
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[institution-{'doc': 'ornl-tm-2002-144-sorensen-evacu]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[special_populations-{'doc': 'erg2024-en-pdf', 'page': 286, ']
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[roadblock-{'doc': 'erg2024-en-pdf', 'page': 285, ']
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[residents-{'doc': 'erg2024-en-pdf', 'page': 287, ']
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[clear-{'doc': 'ornl-tm-2002-144-sorensen-evacu]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[alert_public-{'doc': 'nrt-1-hazmat-emergency-planning]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[warning_means-{'doc': 'llnl-mass-casualty-framework-20]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[nws_relay-{'doc': 'nws-10-518', 'page': 12, 'block]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[traffic-{'doc': 'nrt-1-hazmat-emergency-planning]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[time_shelter-{'doc': 'ornl-tm-2002-144-sorensen-evacu]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[time_warning-{'doc': 'ornl-tm-2002-144-sorensen-evacu]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[plume_duration-{'doc': 'ornl-tm-2002-144-sorensen-evacu]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[school:0-{'doc': 'nces-ntps-2021-school-start-tim]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[school:0-{'doc': 'fema-hazus-earthquake-technical]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[school:3-{'doc': 'fema-hazus-earthquake-technical]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[group_quarters:0-{'doc': 'fema-hazus-earthquake-technical]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[population:0-{'doc': 'fema-hazus-earthquake-technical]
+FAILED test_hb171_threat_timeline.py (a test held privately)::test_every_quotation_is_its_held_blocks_text[population:1-{'doc': 'otmem-user-guide', 'page': 5, ']
+18 failed, 7897 passed, 169 skipped, 97 deselected, 5 xfailed, 2 warnings in 2195.33s (0:36:35)
+PYTEST EXIT=1
+STEP1 END=1795037881
+load_sensitive step:
+STEP2 START=1795037881
+85 passed, 1886 deselected in 788.57s (0:13:08)
+PYTEST2 EXIT=0
+STEP2 END=1795038671
+All checks passed!
+RUFF EXIT=0
+1056 files already formatted
+FORMAT EXIT=0
+GATE DONE

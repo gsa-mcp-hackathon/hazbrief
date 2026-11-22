@@ -1,0 +1,244 @@
+# The eval harness's settings (HB-05; eval_harness.py (a build tool held privately)). Every value a run depends on is here,
+# so a change is a reviewed diff of this file, not of the code.
+
+# HB-36: `--commit-report` also writes each part's summary to <reports_dir>/<date>_<part>.json, a tracked directory,
+# so the evaluation document cites the harness's own numbers (logs/ is gitignored). It names the commit, and is refused
+# when any of these paths has uncommitted changes, so the numbers describe the commit they name.
+reports_dir: eval/reports
+reports_provenance_paths: [src, packs, fixtures/scenarios, fixtures/lodes, fixtures/cms, eval/harness.yaml, eval/known_findings.yaml]
+
+# ── Part A: exhaustive invariant checks (network-free) ─────────────────────────────────────────────
+invariants:
+  # Where and when every synthetic incident happens: HB-05 section A item 2 fixes the I-81 point
+  # (fixtures/scenario_points.yaml) and the worked-example wind (COMMANDER_STYLEBOOK.md section 7).
+  point_id: i81-md-pa-line
+  # A time that is day and one that is night at the point (the HB-09 scenario times; the harness
+  # checks that day_or_night agrees before it uses them).
+  times:
+    day: "2026-10-21T14:00:00-04:00"
+    night: "2026-10-22T02:00:00-04:00"
+  wind:
+    direction_deg_from: 270
+    speed_kmh: 13
+    observed_at: "2026-10-20T13:40:00-04:00"
+    source: eval harness fixed wind
+  # Table 3 is read by wind band, and one fixed speed reaches only the moderate band. One speed
+  # inside each band, so every Table 3 cell is reached (ERG Table 3 bands, packs/erg.json
+  # table3_wind_bands: low below 10 km/h, moderate 10 to 20, high above 20). The harness checks
+  # each speed lands in its band.
+  table3_band_speeds_kmh:
+    low: 5
+    moderate: 13
+    high: 30
+  # Part 3's input combinations (HB-05 section A item 3).
+  guidance_combinations:
+    fire_involved: [false, true]
+    spill_size: [small, large, unknown]
+    where_spilled: [land, water]
+  # Part 2b: the guide-distance branch of the footprint (no Table 1 row) for every ID number,
+  # with and without fire. Parts 2b and 3 take one input per ID number (the ID, or each name of
+  # an ID listed under several guides): the output depends on the material, not the name. Part 1
+  # and the Table 1 branch take every name, since a name selects a Table 1 entry.
+  guide_branch_fire: [false, true]
+  # Part 5 checks that every drawn zone is its distance: a circle's vertices lie at the radius
+  # from the spill, the square's upwind corners at half its side and its downwind corners at
+  # side times sqrt(5)/2, by the WGS84 geodesic (the shapes are laid out in an azimuthal
+  # equidistant projection about the spill, where those distances are exact; DN-005 section 4).
+  # The tolerance is the vertex rounding: src/hazbrief/geometry.py COORDINATE_DECIMALS = 6, about
+  # 0.11 m of latitude per coordinate, on both the vertex and the spill point.
+  provenance_tolerance_m: 0.5
+  # Vertices of each circle checked, evenly spaced (every vertex would be 72 geodesics per circle
+  # on about 40,000 outputs).
+  provenance_vertices_checked: 4
+  # How many failures of one check the report prints in full; the JSON report keeps all.
+  report_examples_per_check: 25
+  # A progress line at least this often within a part (standards section 15 item 3).
+  progress_seconds: 30
+
+# ── Part B: scenario regression (network-free) ────────────────────────────────────────────────────
+regression:
+  # The golden-master snapshot of every tool output on every scenario (characterization tests,
+  # Feathers 2004): fixtures/scenarios/<scenario>.json. Written only by `regression --approve`.
+  snapshot_dir: fixtures/scenarios
+  # Differences printed per cell; the JSON report keeps all.
+  report_differences_per_cell: 20
+
+# ── Part D: the first-order puff's failure cases (HB-68 step 3; DN-018 section 10 item 5) ─────────
+# Each case removes one input the puff channel reads from a replayed brief and asserts: the ERG footprint's layers
+# are byte-identical to the baseline brief's, the puff's two layers hold no contour, and the page prints the line
+# that names the input. A replayed brief's tool calls are keyed by their parameters, so an input is removed where the
+# channel reads it (the derived forecast and class; a copy of an application pack), not from the scenario file,
+# whose change would remove the recorded call instead (HB-68 RESULT section 3).
+puff_failures:
+  scenarios: [csx-point-of-rocks-day, un1977-wilson-bridge, un1203-i83]
+  # remove: forecast (no wind in the window), stability (class not determined), material (outside the pack), threshold
+  # (a threshold not held), release (no release block). HB-69 adds two release cases: quantity_no_hole (a stated quantity
+  # and no hole: the worst case draws, the alternative names the hole) and quantity_no_source (a quantity without its
+  # source: the block is refused). HB-70 adds three stated-wind cases, each with a stated quantity: stated_wind (a stated
+  # wind and the forecast taken away: the worst case draws on the stated wind alone, and the panel's first assumption
+  # names it), stated_wind_no_source (refused) and stated_wind_calm (a stated 0: the calm line, nothing drawn). HB-75
+  # adds three calm-forecast cases, each with a stated quantity and every forecast hour set to 0:
+  # forecast_calm_observation_used (the station's observation reads a wind: the worst case draws on it and the first
+  # assumption names it), forecast_calm_observation_calm (it reads 0: the calm line) and forecast_calm_no_observation
+  # (none held: the calm line).
+  cases: [forecast, stability, material, threshold, release, quantity_no_hole, quantity_no_source, stated_wind,
+    stated_wind_no_source, stated_wind_calm, forecast_calm_observation_used, forecast_calm_observation_calm,
+    forecast_calm_no_observation]
+  # The line each case's page must print, by case; {un} is the scenario's UN number, {station} its nearest station.
+  lines:
+    forecast: "Puff not drawn: no forecast wind for the 60-minute window"
+    stability: "Puff not drawn: stability class not determined: sky cover not held"
+    material: "Puff not drawn: UN{un} is not in the puff's materials pack"
+    threshold:
+      pressure_liquefied_toxic: "Puff not drawn: AEGL-2 at 30 minutes for UN{un} not held"
+      cryogenic_asphyxiant: "Puff not drawn: oxygen threshold for UN{un} not held"
+      flammable: "Puff not drawn: LFL for UN{un} not held"
+    release: "Puff not drawn: release quantity not given. The quantity is on the shipping papers or the train consist"
+    quantity_no_hole: "Puff not drawn: alternative release: hole size not given"
+    quantity_no_source: "Puff not drawn: the release block is refused (quantity_kg is given without quantity_source)"
+    stated_wind: "Wind: stated, 3.0 m/s from 90 degrees, by the puff_failures harness's stated wind; it replaces the NWS forecast for every hour of the window"
+    stated_wind_no_source: "Puff not drawn: the stated wind block is refused (speed_m_s is given without source)"
+    stated_wind_calm: "wind 0: no puff released; state a scene wind to draw it"
+    forecast_calm_observation_used: "reads calm for both hours of the window; station {station}'s observation, 10.8 km/h (3.0 m/s) from 90 degrees"
+    forecast_calm_observation_calm: "wind 0: no puff released; state a scene wind to draw it"
+    forecast_calm_no_observation: "wind 0: no puff released; state a scene wind to draw it"
+  # What the nearest station's observation is in HB-75's cases, merged over the scenario's own (its station, distance
+  # and observed time are kept).
+  observations:
+    forecast_calm_observation_used: {usable: true, wind_ms: 3.0, wind_from_deg: 90.0}
+    forecast_calm_observation_calm: {usable: true, wind_ms: 0.0, wind_from_deg: 90.0}
+    forecast_calm_no_observation: {station: null, usable: false, reason: "removed by the puff_failures harness"}
+  # What each case's release block is (null: none); others keep the scenario's own.
+  release_blocks:
+    release: null
+    quantity_no_hole: {quantity_kg: 20000, quantity_source: "the puff_failures harness's stated quantity"}
+    quantity_no_source: {quantity_kg: 20000}
+    stated_wind: {quantity_kg: 20000, quantity_source: "the puff_failures harness's stated quantity"}
+    stated_wind_no_source: {quantity_kg: 20000, quantity_source: "the puff_failures harness's stated quantity"}
+    stated_wind_calm: {quantity_kg: 20000, quantity_source: "the puff_failures harness's stated quantity"}
+    forecast_calm_observation_used: {quantity_kg: 20000, quantity_source: "the puff_failures harness's stated quantity"}
+    forecast_calm_observation_calm: {quantity_kg: 20000, quantity_source: "the puff_failures harness's stated quantity"}
+    forecast_calm_no_observation: {quantity_kg: 20000, quantity_source: "the puff_failures harness's stated quantity"}
+  # What each case's stated_wind block is (HB-70); others keep the scenario's own (none).
+  stated_wind_blocks:
+    stated_wind: {speed_m_s: 3.0, direction_deg_from: 90, source: "the puff_failures harness's stated wind"}
+    stated_wind_no_source: {speed_m_s: 3.0, direction_deg_from: 90}
+    stated_wind_calm: {speed_m_s: 0, source: "the puff_failures harness's stated calm"}
+  # The envelopes a case draws (every other case draws none).
+  # HB-110: where a source term exists (the scenario's container, quantity, class and properties, and the forecast's
+  # air temperature) it draws in the worst case's place, so either may be the case's first envelope.
+  draws:
+    quantity_no_hole: [worst_case, source_term]
+    stated_wind: [worst_case, source_term]
+    forecast_calm_observation_used: [worst_case, source_term]
+  # Per scenario, where it differs: un1977-wilson-bridge's source term is a 20,000 kg cryogenic pool that boils off in
+  # one minute (docs/evidence/hb110/methods.md section 6), and by the threshold's 10 minutes its puff nowhere takes the
+  # oxygen below 19.5 %, so it draws no contour (docs/evidence/hb110/puff_vs_erg.tsv). Its stated_wind case has no
+  # forecast temperature, so the worst case draws as before.
+  draws_by_scenario:
+    un1977-wilson-bridge:
+      quantity_no_hole: []
+      forecast_calm_observation_used: []
+  # Where an earlier input is already missing, the channel names that one first (derive.puff's order: material, class,
+  # wind, molecular weight, threshold, the ERG distance, the release block), so the case expects that line.
+  expect_instead: {}
+
+# ── Part C: live pilot and drift check (network, recorded) ─────────────────────────────────────────
+live:
+  # HB-05 section C: recorded into fixtures/exchanges_live/<date>/, never into fixtures/exchanges/.
+  root: fixtures/exchanges_live
+  # The upstream APIs a live run may call (config.py upstream names). The task's network list:
+  # api.census.gov, tigerweb.geo.census.gov, carto.nationalmap.gov, hydro.nationalmap.gov,
+  # services.arcgis.com. NWS was not on it while every scenario supplied its wind; HB-18 (A-2)
+  # added it: build_ics_201 reads NWS's points endpoint for the spill point's time zone (one
+  # call per point, api.weather.gov).
+  allowed_apis: [census, tigerweb, usgs_structures, usgs_3dhp, bts_ntad, nws]
+  # The task's ceiling, cumulative over every run into one dated directory (calls.jsonl counts
+  # them), so resuming never buys more calls than the task allowed.
+  max_calls: 120
+  # Courtesy between live calls; none of these services publishes a rate.
+  pace_seconds: 0.5
+  # The pilot runs first and is projected onto the rest (standards section 15 item 4): the
+  # worked example, whose replay baseline exists for every source, so the pilot already measures
+  # drift.
+  pilot: i81-md-pa-line-day
+  # Then the five footprints HB-04 declared gaps for (their population and facility exchanges
+  # were never recorded), then every other incident scenario, until the ceiling.
+  priority:
+    - un1075-fire-i81
+    - un1203-i83
+    - un1977-wilson-bridge
+    - un1746-small-i81-land
+    - un1746-small-i81-water
+  # A progress line at least this often, besides one per scenario (standards section 15 item 3).
+  progress_seconds: 60
+  # Wall-clock ceiling of one run (standards section 15 item 5): 120 calls at the pace above and
+  # these services' latencies take a few minutes; a run past this has hung.
+  wall_clock_seconds: 1800
+  # Output paths that change with every fetch, not with the data: reported apart from drift, in
+  # the exchanges (a source's `volatile` count) and in the tool outputs (`volatile_paths`).
+  # HB-37: NWS's points response carries that day's sunrise, sunset and twilight
+  # (`properties.astronomicalData`), which move with the date asked; HB-36's run reported all three
+  # NWS exchanges "changed" on those paths alone, with the `timeZone` the server reads unchanged.
+  volatile_keys: [recorded_at, fetched_at, Date, Expires, Cache-Control, properties.astronomicalData]
+  # Field differences printed per exchange; the JSON report keeps all.
+  report_differences_per_exchange: 10
+
+# ── Part D: the agent-level evaluation (HB-16; model calls, replayed tools) ────────────────────────
+agent:
+  prompts: eval/agent_prompts.yaml
+  # Traces: <root>/<date>/<model>/<prompt>/<run>.json (HB-16 step 3), and beside them the episode
+  # ledger (episodes.jsonl), progress.log, scores.jsonl and summary.json.
+  root: eval/agent_runs
+  # The agent is the Claude Code CLI the operator's model lock pins (seldon models/models.lock.yaml),
+  # connected to this server over stdio, the interface a judge's Claude client uses. The operator's
+  # model policy (squiddy model_client.py; seldon AD-035): the subscription OAuth session, no API key
+  # (none is held: ~/.secrets/master.env holds CENSUS_API_KEY only), the id from the lock, never an
+  # alias, and every call's served model checked. Launch blocks come from
+  # `seldon.models.launch_spec_for(<id>)` (the family's documented default effort), run by this
+  # interpreter because seldon is not a dependency of this project.
+  seldon_python: /opt/anaconda3/bin/python
+  # At most three (HB-16), the demo model first. The demo model is Opus 5.5: the family seldon's
+  # `primary` role (the Claude Code session on this machine) resolves to. Sonnet and Haiku are the
+  # other two families the subscription serves; Fable is the operator's judge family and is not an
+  # agent under test here.
+  models: [claude-opus-5-5, claude-sonnet-5-5, claude-haiku-5-5]
+  demo_model: claude-opus-5-5
+  runs: 3
+  # Pilot (standards section 15 item 4): one model, five prompts (one per family, two scenarios),
+  # one run. Its episodes are the matrix's first five units (same keys), so they are not repeated.
+  pilot:
+    model: claude-opus-5-5
+    prompts: [s-i81-md-pa-line-day, s-un1203-i83, a-inhalation-hazard, o-dispersion-cloud, x-injected-instruction]
+  # The system prompt, the same for every model and never mentioning a tool or the domain: the
+  # agent knows the server only through its tools, schemas and instructions (HB-16 purpose).
+  system_prompt: "You are an assistant with access to tools. Answer the user's message."
+  max_turns: 25
+  # One episode's wall clock; past it the CLI is killed and the episode is a failed row.
+  episode_timeout_s: 900
+  # Concurrent episodes. The subscription's rate limit is the bound; a rate-limited episode waits
+  # `rate_limit_backoff_s` (doubling) and is retried, at most `max_retries` times.
+  concurrency: 3
+  max_retries: 2
+  rate_limit_backoff_s: 60
+  progress_seconds: 60
+  ceilings:
+    # HB-16's own bound was 3 models x 30 prompts x 3 runs (270). HB-16b's is 3 x 34 x 3 (306);
+    # its plan is 3 x 32 x 3 = 288 (HB-16b RESULT: HB-15's scenarios were already in the set).
+    episodes: 306
+    wall_clock_s: 28800
+    # After the pilot: stop when the run's cost (the CLI's total_cost_usd, the API-equivalent price
+    # of the subscription's tokens) passes this multiple of the pilot's projection for the matrix.
+    # HB-36: 1.3, HB-29's rule (a run's hard cap is its estimate times 1.3; the pilot's projection is
+    # the measured estimate). HB-16b ran at 1.5.
+    cost_over_projection: 1.3
+    # HB-36: the run's declared hard cap in dollars, binding whichever ceiling is lower. HB-29's rule on HB-16b's
+    # measured cost for the same 288 episodes: $21.06 x 1.3 = $27.38. The pilot projects at the pilot model's
+    # (Opus) rate for all three models ($58.03 on 2026-10-25), so the projection's ceiling alone sat above it.
+    cost_usd: 27.38
+  # The server, launched by the CLI over stdio, replaying every upstream exchange (no live source).
+  server:
+    name: hazbrief
+    command: /Users/brock/.local/bin/uv
+    args: [run, --frozen, --quiet, --directory, ".", python, main.py]
+    env: {HAZBRIEF_HTTP_MODE: replay}

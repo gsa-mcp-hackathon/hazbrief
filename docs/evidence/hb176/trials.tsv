@@ -1,0 +1,282 @@
+trial	row	field	value	mark	source	found_as	note
+BU8	trial	title	Burro 8, LNG spilled on water, China Lake		volume_ii		evaporating pool (MDA source type EP; SLAB IDSPL 1)
+BU8	trial	class	E	stated	p201		
+BU8	trial	class_number	5	stated	p201	5.	
+BU8	trial	verdict	runnable: every input a run needs is stated in held text				
+BU8	input:slab_deck	idspl	1	stated	held_text	IDSPL : 1 1 bs 1 1 i 2 2	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	wms	0.01812	stated	held_text	0.01812	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	cps	2238.0	stated	held_text	2238.0	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	tbp	111.6	stated	held_text	111.60	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	cmedo	1.0	stated	held_text	1.00000	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	dhe	511900.0	stated	p201	512900,	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	cpsl	3348.5	stated	held_text	3348.5	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	rhosl	438.5	stated	held_text	438.5	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	spb	983.89	stated	held_text	983.89	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	spc	0.1	stated	held_text	0.1000	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	ts	111.6	stated	held_text	111.60	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	qs	116.93	stated	p201	116.93	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	as	1375.56	stated	held_text	1375.56	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	tsd	107.0	stated	p201	107.	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	hs	0.0	stated	held_text	0.00000	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	tav	80.0	stated	p201	80 so.	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	xffm	1300.0	stated	held_text	1300.	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	zp1	1.0	stated	held_text	1.00000	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	z0	0.0002	stated	held_text	0.00020	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	za	2.0	stated	held_text	2.00000	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	ua	1.8	stated	held_text	1.800	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	ta	306.0	stated	held_text	306.0	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	rh	4.5	stated	held_text	4.50	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	stab	0.0	stated	held_text	0.00000	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:slab_deck	ala	0.0646	stated	held_text	0.0646	Appendix B, SLAB INPUT DATA FOR Burro, printed p. 275 (PDF p. 292)
+BU8	input:mda	date_local	1980-09-03T19:03	stated	p201	19 18	Appendix A, MDA Burro, printed p. 184 (PDF p. 201)
+BU8	input:mda	time_zone_h	8	stated	p201	8.	Appendix A, MDA Burro, printed p. 184 (PDF p. 201)
+BU8	input:mda	latitude_deg	35.9	stated	p201	35.9	Appendix A, MDA Burro, printed p. 184 (PDF p. 201)
+BU8	input:mda	longitude_deg_west	117.7	stated	p201	117.7	Appendix A, MDA Burro, printed p. 184 (PDF p. 201)
+BU8	input:mda	peak_averaging_s	1.0	stated	p201	1.0	Appendix A, MDA Burro, printed p. 184 (PDF p. 201)
+BU8	input:mda	receptor_height_m	1.0	stated	p201	1.0	Appendix A, MDA Burro, printed p. 184 (PDF p. 201)
+BU8	input:mda	cloud_cover_pct		not stated	p201	15. z cloud cover	Appendix A, MDA Burro, printed p. 184 (PDF p. 201)
+BU8	input:mda	hole_diameter_m		not stated	p201	not stated	Appendix A, MDA Burro, printed p. 184 (PDF p. 201)
+BU8	observed:C-2	57 m	558740	stated	p317	556740	Appendix C-2; outside the report's statistic (x < 200 m); read: page image; the third digit is 8 or 0 in the print; outside the statistic (x < 200 m)
+BU8	slab_printed:C-2	57 m	230600	stated	p317	230600	Appendix C-2; outside the report's statistic (x < 200 m); read: page image; the third digit is 8 or 0 in the print; outside the statistic (x < 200 m)
+BU8	observed:C-2	140 m	164110	stated	p317	164110	Appendix C-2; outside the report's statistic (x < 200 m)
+BU8	slab_printed:C-2	140 m	118900	stated	p317	118900	Appendix C-2; outside the report's statistic (x < 200 m)
+BU8	observed:C-2	400 m	35810	stated	p317	35610	Appendix C-2; in the report's statistic (x >= 200 m); read: page image; Appendix D-9 block 1 (MG 1.064) reproduces with 35810
+BU8	slab_printed:C-2	400 m	43420	stated	p317	43420	Appendix C-2; in the report's statistic (x >= 200 m); read: page image; Appendix D-9 block 1 (MG 1.064) reproduces with 35810
+BU8	observed:C-2	800 m	21160	stated	p317	21160	Appendix C-2; in the report's statistic (x >= 200 m)
+BU8	slab_printed:C-2	800 m	15410	stated	p317	15410	Appendix C-2; in the report's statistic (x >= 200 m)
+BU8	observed:C-1	57 m	294660	stated	p306	294660	Appendix C-1; outside the report's statistic (x < 200 m)
+BU8	slab_printed:C-1	57 m	230600	stated	p306	230600	Appendix C-1; outside the report's statistic (x < 200 m)
+BU8	observed:C-1	140 m	162250	stated	p306	162250	Appendix C-1; outside the report's statistic (x < 200 m)
+BU8	slab_printed:C-1	140 m	117700	stated	p306	117700	Appendix C-1; outside the report's statistic (x < 200 m)
+BU8	observed:C-1	400 m	29160	stated	p306	29160	Appendix C-1; in the report's statistic (x >= 200 m)
+BU8	slab_printed:C-1	400 m	42030	stated	p306	42030	Appendix C-1; in the report's statistic (x >= 200 m)
+BU8	observed:C-1	800 m	20896	stated	p306	20896	Appendix C-1; in the report's statistic (x >= 200 m)
+BU8	slab_printed:C-1	800 m	14900	stated	p306	14900	Appendix C-1; in the report's statistic (x >= 200 m)
+DT4	trial	title	Desert Tortoise 4, pressurised liquid ammonia, horizontal two-phase jet, Frenchman Flat		volume_ii		horizontal two-phase jet (MDA source type HJ; SLAB IDSPL 2)
+DT4	trial	class	E	stated	p203		
+DT4	trial	class_number	5	stated	p203	4 4 4 S	
+DT4	trial	verdict	runnable: every input a run needs is stated in held text				
+DT4	input:slab_deck	idspl	2	stated	held_text	TpseL 3 2 2 2 2	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	wms	0.01703	stated	held_text	0.01703	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	cps	2190.0	stated	held_text	2190.0	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	tbp	239.7	stated	held_text	239.7	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	cmedo	0.804	stated	held_text	0.804	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	dhe	1370000.0	stated	held_text	1370000.	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	cpsl	4490.0	stated	held_text	4490.0	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	rhosl	682.8	stated	held_text	682.8	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	spb	2132.52	stated	held_text	2132.52	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	spc	-32.96	stated	held_text	-32.96	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	ts	297.3	stated	held_text	297.30	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	qs	96.7	stated	held_text	96.70	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	as	1.21	stated	held_text	2.21	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	tsd	381.0	stated	p203	381	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	hs	0.79	stated	held_text	8.79	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	tav	300.0	stated	held_text	300,	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	xffm	1300.0	stated	held_text	1300.	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	zp1	1.0	stated	held_text	1.00000	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	z0	0.003	stated	held_text	0.00300	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	za	2.0	stated	held_text	2.00000	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	ua	4.5	stated	held_text	4.50	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	ta	305.6	stated	held_text	305.6	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	rh	21.3	stated	held_text	21.30	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	stab	0.0	stated	held_text	0.00000	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:slab_deck	ala	0.0244	stated	held_text	0.0244	Appendix B, SLAB INPUT DATA FOR Desert Tortoise, printed p. 276 (PDF p. 293)
+DT4	input:mda	date_local	1983-09-06T18:15	stated	p203	16 i 15 18	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	input:mda	time_zone_h	8	stated	p203	8.	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	input:mda	latitude_deg	36.7	stated	p203	36.7	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	input:mda	longitude_deg_west	116.0	stated	p203	116.0	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	input:mda	peak_averaging_s	1.0	stated	p203	1.00	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	input:mda	receptor_height_m	1.0	stated	p203	1.00	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	input:mda	cloud_cover_pct	1.0	stated	p203	1.00	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	input:mda	hole_diameter_m	0.0945	stated	p203	0.0945	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	input:mda	storage_temperature_k	297.3	stated	p203	297.3	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	input:mda	exit_pressure_atm	11.64	stated	p203	11.64	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	input:mda	ambient_pressure_atm	0.891	stated	p203	0.891	Appendix A, MDA Desert Tortoise, printed p. 186 (PDF p. 203)
+DT4	observed:C-2	100 m	84260	stated	p318	84260	Appendix C-2; outside the report's statistic (x < 200 m)
+DT4	slab_printed:C-2	100 m	192500	stated	p318	192500	Appendix C-2; outside the report's statistic (x < 200 m)
+DT4	observed:C-2	800 m	20910	stated	p318	20910	Appendix C-2; in the report's statistic (x >= 200 m); read: page image (12390); Appendix D-9 block 2 MG 1.688 reproduces with 20910/12390
+DT4	slab_printed:C-2	800 m	12390	stated	p318	12330	Appendix C-2; in the report's statistic (x >= 200 m); read: page image (12390); Appendix D-9 block 2 MG 1.688 reproduces with 20910/12390
+DT4	observed:C-1	100 m	57300	stated	p307	57300	Appendix C-1; outside the report's statistic (x < 200 m)
+DT4	slab_printed:C-1	100 m	192500	stated	p307	192500	Appendix C-1; outside the report's statistic (x < 200 m)
+DT4	observed:C-1	800 m	16678	stated	p307	16678	Appendix C-1; in the report's statistic (x >= 200 m); read: page image
+DT4	slab_printed:C-1	800 m	11890	stated	p307	11899	Appendix C-1; in the report's statistic (x >= 200 m); read: page image
+TC45	trial	title	Thorney Island 045, Freon-12 and nitrogen, continuous ground-level release with no momentum		volume_ii		gas area source (MDA source type AS, phase G; the report's SLAB deck IDSPL 2 with no liquid)
+TC45	trial	class	E	stated	p215		
+TC45	trial	class_number	5	stated	p215	5.	
+TC45	trial	verdict	runnable: every input a run needs is stated in held text				
+TC45	input:slab_deck	idspl	2	stated	held_text	IDsPL H 2 2	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	wms	0.0578	stated	held_text	0.08780 0.05780	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	cps	610.0	stated	held_text	610.0	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	tbp	243.4	stated	held_text	243.4	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	cmedo	0.0	stated	held_text	0,000 0.000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	dhe	165000.0	stated	held_text	165000.	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	cpsl	970.0	stated	held_text	970.0	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	rhosl	1520.0	stated	held_text	1520.0	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	spb	-1.0	stated	held_text	-1.00	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	spc	0.0	stated	held_text	0,00 0.00	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	ts	286.3	stated	held_text	286.3	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	qs	10.67	stated	held_text	10.6700	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	as	3.14	stated	held_text	3.14	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	tsd	455.0	stated	held_text	455.	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	hs	0.0	stated	held_text	0.00000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	tav	30.0	stated	held_text	30.000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	xffm	972.0	stated	held_text	972.	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	zp1	0.4	stated	held_text	0.400	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	z0	0.01	stated	held_text	0.01000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	za	10.0	stated	held_text	10.00000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	ua	2.3	stated	held_text	2.30	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	ta	286.3	stated	held_text	286.3	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	rh	100.0	stated	held_text	100.000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	stab	0.0	stated	held_text	0.00000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:slab_deck	ala	0.0461	stated	held_text	0.0461	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC45	input:mda	date_local	1984-06-09T19:59	stated	p215	19 20	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC45	input:mda	time_zone_h	0	stated	p215	0.0	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC45	input:mda	latitude_deg	51.0	stated	p215	$1. 51.	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC45	input:mda	longitude_deg_west	1.0	stated	p215	1.0	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC45	input:mda	peak_averaging_s	30.0	stated	p215	30.	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC45	input:mda	receptor_height_m	0.4	stated	p215	0.4	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC45	input:mda	cloud_cover_pct	13.0	stated	p215	13,	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC45	input:mda	hole_diameter_m	2.0	stated	p215	2.	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC45	observed:C-1	40 m	200000	stated	p314	200000	Appendix C-1; outside the report's statistic (x < 200 m)
+TC45	slab_printed:C-1	40 m	77400	stated	p314	77400	Appendix C-1; outside the report's statistic (x < 200 m)
+TC45	observed:C-1	53 m	129000	stated	p314	129000	Appendix C-1; outside the report's statistic (x < 200 m); read: page image
+TC45	slab_printed:C-1	53 m	59590	stated	p314	$9590	Appendix C-1; outside the report's statistic (x < 200 m); read: page image
+TC45	observed:C-1	72 m	89000	stated	p314	89000	Appendix C-1; outside the report's statistic (x < 200 m)
+TC45	slab_printed:C-1	72 m	43580	stated	p314	43580	Appendix C-1; outside the report's statistic (x < 200 m)
+TC45	observed:C-1	90 m	62000	stated	p314	62000	Appendix C-1; outside the report's statistic (x < 200 m)
+TC45	slab_printed:C-1	90 m	33870	stated	p314	33870	Appendix C-1; outside the report's statistic (x < 200 m)
+TC45	observed:C-1	112 m	37900	stated	p314	37900	Appendix C-1; outside the report's statistic (x < 200 m)
+TC45	slab_printed:C-1	112 m	26140	stated	p314	26140	Appendix C-1; outside the report's statistic (x < 200 m)
+TC45	observed:C-1	158 m	26200	stated	p314	26200	Appendix C-1; outside the report's statistic (x < 200 m)
+TC45	slab_printed:C-1	158 m	16910	stated	p314	16910	Appendix C-1; outside the report's statistic (x < 200 m)
+TC45	observed:C-1	250 m	7600	stated	p314	7600	Appendix C-1; in the report's statistic (x >= 200 m)
+TC45	slab_printed:C-1	250 m	9297	stated	p314	9297	Appendix C-1; in the report's statistic (x >= 200 m)
+TC45	observed:C-1	335 m	5000	stated	p314	¥000	Appendix C-1; in the report's statistic (x >= 200 m); read: page image (first digit damaged); only 5000 reproduces Appendix D-9 (all 10: mean ln 9.07, SLAB MG 0.881, VG 1.12; block 3: mean ln 8.62, SLAB MG 0.760, VG 1.11) with 3600 at 472 m
+TC45	slab_printed:C-1	335 m	6456	stated	p314	6456	Appendix C-1; in the report's statistic (x >= 200 m); read: page image (first digit damaged); only 5000 reproduces Appendix D-9 (all 10: mean ln 9.07, SLAB MG 0.881, VG 1.12; block 3: mean ln 8.62, SLAB MG 0.760, VG 1.11) with 3600 at 472 m
+TC45	observed:C-1	472 m	3600	stated	p314	3600	Appendix C-1; in the report's statistic (x >= 200 m); read: page image (first digit faint); see 335 m
+TC45	slab_printed:C-1	472 m	4144	stated	p314	4144	Appendix C-1; in the report's statistic (x >= 200 m); read: page image (first digit faint); see 335 m
+TC47	trial	title	Thorney Island 047, Freon-12 and nitrogen, continuous ground-level release with no momentum		volume_ii		gas area source (MDA source type AS, phase G; the report's SLAB deck IDSPL 2 with no liquid)
+TC47	trial	class	F	stated	p215		
+TC47	trial	class_number	6	stated	p215	6.	
+TC47	trial	verdict	runnable: every input a run needs is stated in held text				
+TC47	input:slab_deck	idspl	2	stated	held_text	IDsPL H 2 2	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	wms	0.0578	stated	held_text	0.08780 0.05780	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	cps	610.0	stated	held_text	610.0	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	tbp	243.4	stated	held_text	243.4	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	cmedo	0.0	stated	held_text	0,000 0.000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	dhe	165000.0	stated	held_text	165000.	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	cpsl	970.0	stated	held_text	970.0	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	rhosl	1520.0	stated	held_text	1520.0	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	spb	-1.0	stated	held_text	1.00	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	spc	0.0	stated	held_text	0,00 0.00	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	ts	287.5	stated	held_text	286.3 267.5	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	qs	10.22	stated	p215	10,22	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	as	3.14	stated	held_text	3.24	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	tsd	465.0	stated	held_text	465.00	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	hs	0.0	stated	held_text	0.00000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	tav	30.0	stated	held_text	30.000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	xffm	972.0	stated	held_text	972.	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	zp1	0.4	stated	held_text	0.400	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	z0	0.01	stated	held_text	0.01000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	za	10.0	stated	held_text	10.00000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	ua	1.5	stated	held_text	1.5000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	ta	287.5	stated	held_text	287.5	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	rh	97.4	stated	held_text	97,4	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	stab	0.0	stated	held_text	0.00000	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:slab_deck	ala	0.0923	stated	held_text	0.0923	Appendix B, SLAB INPUT DATA FOR Thorney Island (continuous), printed p. 279 (PDF p. 296)
+TC47	input:mda	date_local	1984-06-15T20:08	stated	p215	19 20	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC47	input:mda	time_zone_h	0	stated	p215	0.0	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC47	input:mda	latitude_deg	51.0	stated	p215	$1. 51.	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC47	input:mda	longitude_deg_west	1.0	stated	p215	1.0	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC47	input:mda	peak_averaging_s	30.0	stated	p215	30.	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC47	input:mda	receptor_height_m	0.4	stated	p215	0.4	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC47	input:mda	cloud_cover_pct	0.0	stated	p215	13, Q.	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC47	input:mda	hole_diameter_m	2.0	stated	p215	2.	Appendix A, MDA Thorney Island (continuous), printed p. 198 (PDF p. 215)
+TC47	observed:C-1	50 m	159000	stated	p314	159000	Appendix C-1; outside the report's statistic (x < 200 m)
+TC47	slab_printed:C-1	50 m	73340	stated	p314	73340	Appendix C-1; outside the report's statistic (x < 200 m)
+TC47	observed:C-1	90 m	74000	stated	p314	74000	Appendix C-1; outside the report's statistic (x < 200 m); read: page image
+TC47	slab_printed:C-1	90 m	44290	stated	p314	94290	Appendix C-1; outside the report's statistic (x < 200 m); read: page image
+TC47	observed:C-1	212 m	14700	stated	p314	14700	Appendix C-1; in the report's statistic (x >= 200 m)
+TC47	slab_printed:C-1	212 m	14160	stated	p314	14160	Appendix C-1; in the report's statistic (x >= 200 m)
+TC47	observed:C-1	250 m	6700	stated	p314	6700	Appendix C-1; in the report's statistic (x >= 200 m)
+TC47	slab_printed:C-1	250 m	10960	stated	p314	10960	Appendix C-1; in the report's statistic (x >= 200 m)
+TC47	observed:C-1	335 m	4800	stated	p314	4800	Appendix C-1; in the report's statistic (x >= 200 m)
+TC47	slab_printed:C-1	335 m	6924	stated	p314	6924	Appendix C-1; in the report's statistic (x >= 200 m)
+TC47	observed:C-1	472 m	2400	stated	p314	2400	Appendix C-1; in the report's statistic (x >= 200 m); read: page image
+TC47	slab_printed:C-1	472 m	3958	stated	p314	3956	Appendix C-1; in the report's statistic (x >= 200 m); read: page image
+TI7	trial	title	Thorney Island 007, instantaneous release of a 2000 m3 cloud of Freon-12 and nitrogen		volume_ii		instantaneous release (MDA source type IR; SLAB IDSPL 4)
+TI7	trial	class	E	stated	p216		
+TI7	trial	class_number	5	stated	p216	4 5 4 6 $ 4 4 4 4	
+TI7	trial	verdict	not run: every input is stated (Appendix A PDF p. 216, Appendix B printed p. 280), but hazbrief's code paths take no instantaneous source: dense_gas.slab_input writes IDSPL 1 (pool) or 2 (two-phase jet) and QTIS 0, and scichem.jet_source refuses anything but a two-phase jet				
+TI7	observed:C-1	224 m	19800	stated	p314	19800	Appendix C-1; in the report's statistic (x >= 200 m)
+TI7	slab_printed:C-1	224 m	11320	stated	p314	11320	Appendix C-1; in the report's statistic (x >= 200 m)
+TI7	observed:C-1	361 m	11900	stated	p314	11900	Appendix C-1; in the report's statistic (x >= 200 m); read: page image
+TI7	slab_printed:C-1	361 m	5657	stated	p314	5687	Appendix C-1; in the report's statistic (x >= 200 m); read: page image
+TI7	observed:C-1	500 m	6020	stated	p314	6020	Appendix C-1; in the report's statistic (x >= 200 m)
+TI7	slab_printed:C-1	500 m	3394	stated	p314	3394	Appendix C-1; in the report's statistic (x >= 200 m)
+TI9	trial	title	Thorney Island 009, instantaneous release		volume_ii		instantaneous release (MDA source type IR; SLAB IDSPL 4)
+TI9	trial	class	F	stated	p216		
+TI9	trial	class_number	6	stated	p216	4 5 4 6 $ 4 4 4 4	
+TI9	trial	verdict	not run: as TI7				
+TI9	observed:C-1	224 m	20700	stated	p315	20700	Appendix C-1; in the report's statistic (x >= 200 m)
+TI9	slab_printed:C-1	224 m	13490	stated	p315	13490	Appendix C-1; in the report's statistic (x >= 200 m)
+TI9	observed:C-1	316 m	11400	stated	p315	11400	Appendix C-1; in the report's statistic (x >= 200 m); read: page image
+TI9	slab_printed:C-1	316 m	8155	stated	p315	8iS$	Appendix C-1; in the report's statistic (x >= 200 m); read: page image
+TI9	observed:C-1	503 m	5450	stated	p315	5450	Appendix C-1; in the report's statistic (x >= 200 m)
+TI9	slab_printed:C-1	503 m	3899	stated	p315	3899	Appendix C-1; in the report's statistic (x >= 200 m)
+TI12	trial	title	Thorney Island 012, instantaneous release		volume_ii		instantaneous release (MDA source type IR; SLAB IDSPL 4)
+TI12	trial	class	E	stated	p216		
+TI12	trial	class_number	5	stated	p216	4 5 4 6 $ 4 4 4 4	
+TI12	trial	verdict	not run: as TI7				
+TI12	observed:C-1	200 m	18500	stated	p315	18400	Appendix C-1; in the report's statistic (x >= 200 m); read: page image; D-10 reproduces
+TI12	slab_printed:C-1	200 m	9723	stated	p315	9723	Appendix C-1; in the report's statistic (x >= 200 m); read: page image; D-10 reproduces
+TI12	observed:C-1	361 m	9990	stated	p315	9990	Appendix C-1; in the report's statistic (x >= 200 m)
+TI12	slab_printed:C-1	361 m	4627	stated	p315	4627	Appendix C-1; in the report's statistic (x >= 200 m)
+TI12	observed:C-1	500 m	3680	stated	p315	3680	Appendix C-1; in the report's statistic (x >= 200 m)
+TI12	slab_printed:C-1	500 m	3002	stated	p315	3002	Appendix C-1; in the report's statistic (x >= 200 m)
+JR2-1	trial	title	Jack Rabbit II Trial 1, 4547 kg of pressurised chlorine downward from a tank, Dugway, 2015 (CONEX array)		jr2		
+JR2-1	trial	class	E or F	stated	jr2		
+JR2-1	trial	class_number	E or F	stated	jr2	E or F	
+JR2-1	trial	verdict	not runnable: the ambient air temperature and the relative humidity are not stated in the held manuscript (they are in Hanna (2020) and the JR II specification, not held); the observed arc maxima for Trial 1 are only plotted (Figure 3), not tabulated, and are saturated at 0.2 and 5 km				Table 2 (p. 6): wind 1.5 m/s at 2 m, 1/L 0.0678, mixing height 1000 m; Table 3 (p. 7): 224 kg/s for 20.3 s, -37.3 C, vapour fraction 0.171, area 0.241 m2; text p. 5 line 113: roughness 0.5 mm; Table 4: 4547 kg
+JR2-6	trial	title	Jack Rabbit II Trial 6, 8372 kg, 2016		jr2		
+JR2-6	trial	class	E	stated	jr2		
+JR2-6	trial	class_number	E	stated	jr2	2.4       0.056         E	
+JR2-6	trial	verdict	not runnable: as Trial 1 (air temperature and humidity not stated); the observed arc maxima are only plotted (Figure 4), saturated at 0.5 and 5 km				Table 2: wind 2.4 m/s at 2 m, 1/L 0.056; Table 3: 260 kg/s for 32.2 s, -37.4 C, vapour fraction 0.172, area 0.324 m2
+JR2-7	trial	title	Jack Rabbit II Trial 7, 8625 kg, jet 45 degrees downward, 2016		jr2		
+JR2-7	trial	class	D or E	stated	jr2		
+JR2-7	trial	class_number	D or E	stated	jr2	D or E	
+JR2-7	trial	verdict	not runnable: air temperature and humidity not stated; and its class is D or E, not E or F				Table 2: wind 4.0 m/s at 2 m, 1/L 0.0229; Table 3: 259 kg/s for 33.3 s; Table 5 (p. 20): observed arc maxima at 0.2, 0.5, 1, 2, 5, 11 km (72580, 22686, 2621, 1417, 373, 50 ppm), SLAB-I and SLAB-R printed
+BU2	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Burro, LNG pool, class C; hazbrief's paths: SLAB only (pool)
+BU3	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Burro, LNG pool, class C; hazbrief's paths: SLAB only (pool)
+BU4	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Burro, LNG pool, class C; hazbrief's paths: SLAB only (pool)
+BU5	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Burro, LNG pool, class C; hazbrief's paths: SLAB only (pool)
+BU6	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Burro, LNG pool, class C; hazbrief's paths: SLAB only (pool)
+BU7	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Burro, LNG pool, class C/D; hazbrief's paths: SLAB only (pool)
+BU9	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Burro, LNG pool, class D; hazbrief's paths: SLAB only (pool)
+CO3	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Coyote, LNG pool, classes C, C, D; hazbrief's paths: SLAB only (pool)
+CO5	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Coyote, LNG pool, classes C, C, D; hazbrief's paths: SLAB only (pool)
+CO6	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Coyote, LNG pool, classes C, C, D; hazbrief's paths: SLAB only (pool)
+DT1	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Desert Tortoise, ammonia two-phase jet, class D; hazbrief's paths: both engines (two-phase jet)
+DT2	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Desert Tortoise, ammonia two-phase jet, class D; hazbrief's paths: both engines (two-phase jet)
+DT3	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Desert Tortoise, ammonia two-phase jet, class D; hazbrief's paths: both engines (two-phase jet)
+GF1	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Goldfish, hydrogen fluoride two-phase jet, class D; HF is not in the properties pack, its properties are in the report; hazbrief's paths: both engines (two-phase jet)
+GF2	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Goldfish, hydrogen fluoride two-phase jet, class D; HF is not in the properties pack, its properties are in the report; hazbrief's paths: both engines (two-phase jet)
+GF3	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Goldfish, hydrogen fluoride two-phase jet, class D; HF is not in the properties pack, its properties are in the report; hazbrief's paths: both engines (two-phase jet)
+MS27	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS29	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS34	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS35	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS42	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS43	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS46	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS47	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS49	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS50	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS52	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+MS54	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Maplin Sands, LNG and LPG on the sea; hazbrief's paths: SLAB only (pool)
+TI6	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Thorney Island instantaneous, class D or D/E; hazbrief's paths: neither (instantaneous)
+TI8	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Thorney Island instantaneous, class D or D/E; hazbrief's paths: neither (instantaneous)
+TI13	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Thorney Island instantaneous, class D or D/E; hazbrief's paths: neither (instantaneous)
+TI17	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Thorney Island instantaneous, class D or D/E; hazbrief's paths: neither (instantaneous)
+TI18	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Thorney Island instantaneous, class D or D/E; hazbrief's paths: neither (instantaneous)
+TI19	trial	verdict	not run: outside this task (not class E or F)		volume_ii		Thorney Island instantaneous, class D or D/E; hazbrief's paths: neither (instantaneous)

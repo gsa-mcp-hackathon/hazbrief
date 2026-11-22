@@ -1,0 +1,6 @@
+config	subset	n	trials	mg	mg_low95	mg_high95	vg	fac2	fac3	note
+slab_hb	all	10	BU8 DT4 TC45 TC47	0.900075	0.787295	1.02901	1.09406	1	1	
+slab_hb	scichem_arcs	8	DT4 TC45 TC47	0.867632	0.755218	0.996778	1.10463	1	1	SLAB on the arcs SCICHEM ran (BU8 is a pool: SCICHEM's path refuses it)
+scichem_calc	all	8	DT4 TC45 TC47	3.68548	3.15193	4.30934	5.72823	0	0.25	
+scichem_pgt	all	8	DT4 TC45 TC47	3.5032	2.87361	4.27073	5.28586	0.125	0.25	
+calc_vs_pgt	rule	8	DT4 TC45 TC47	0.0507229	-0.0178728	0.119319				|ln MG_calc| - |ln MG_pgt| with its 95 percent limits (sigma 0.02714); tie on MG (the 95 percent limits of the difference include zero); by VG PGT is nearer

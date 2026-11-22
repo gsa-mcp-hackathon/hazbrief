@@ -1,0 +1,20 @@
+.......................................                                  [100%]
+=================================== FAILURES ===================================
+E   AssertionError: L6-12: docs/submission/EVALUATION.md does not name the local gate `uv run pytest tests/ -q -p no:cacheprovider && uv run ruff check . && uv run ruff format --check .`
+      L6-12: docs/ARCHITECTURE.md does not name the local gate `uv run pytest tests/ -q -p no:cacheprovider && uv run ruff check . && uv run ruff format --check .`
+      L6-12: docs/SECURITY.md does not name the local gate `uv run pytest tests/ -q -p no:cacheprovider && uv run ruff check . && uv run ruff format --check .`
+    assert ['L6-12: docs...t --check .`'] == []
+      
+      Left contains 3 more items, first extra item: 'L6-12: docs/submission/EVALUATION.md does not name the local gate `uv run pytest tests/ -q -p no:cacheprovider && uv run ruff check . && uv run ruff format --check .`'
+      Use -v to get more diff
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/fluffy-inventing-engelbart/tests/test_judge_facing_documents.py:837: AssertionError: L6-12: docs/submission/EVALUATION.md does not name the local gate `uv run pytest tests/ -q -p no:cacheprovider && uv run ruff check . && uv run ruff format --check .`
+=============================== warnings summary ===============================
+test_double_wrap_hint.py (a test held privately)::test_the_tool_surface_is_hb36s
+  /Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/fluffy-inventing-engelbart/scripts/agent_eval.py:172: FastMCPDeprecationWarning: Accessing `Tool.inputSchema` is deprecated; MCP SDK v2 renamed this field to `input_schema`. Update your code to read `.input_schema` instead.
+    {"name": t.name, "description": t.description, "schema": t.inputSchema}
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_judge_facing_documents.py (a test held privately)::test_l6_12_no_document_says_ci_runs_on_push_and_the_gate_is_named
+1 failed, 2032 passed, 9 skipped, 12 deselected, 13 xfailed, 1 warning in 775.44s (0:12:55)
+EXIT 1

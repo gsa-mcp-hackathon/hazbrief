@@ -1,0 +1,16 @@
+=========================== short test summary info ============================
+FAILED test_hb150_triage.py (a test held privately)::test_what_is_still_in_the_inbox_is_accounted_for
+1 failed, 7919 passed, 12 skipped, 97 deselected, 17 xfailed, 2 warnings in 3810.25s (1:03:30)
+PYTEST_PARALLEL_EXIT=1
+bringing up nodes...
+bringing up nodes...
+
+........................................................................ [ 84%]
+.............                                                            [100%]
+85 passed, 1886 deselected in 937.27s (0:15:37)
+PYTEST_LOAD_SENSITIVE_EXIT=0
+All checks passed!
+RUFF_EXIT=0
+1001 files already formatted
+FORMAT_EXIT=0
+EXIT 0

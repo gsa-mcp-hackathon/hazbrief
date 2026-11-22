@@ -1,0 +1,29 @@
+setting	first_hours	engine_wall_s_to_this_hour	AEGL-3_area_over_benchmark_at_this_hour	AEGL-2_area_over_benchmark	AEGL-1_area_over_benchmark	place-level arrivals within the hours, in both	median_arrival_difference_s	largest_arrival_difference_s	place-levels reached within the hours by one and not the other	timing
+250 m (shipped)	1	1.38	0.455	0.689	0.755	101	120	1.68e+03	38	alone
+250 m (shipped)	2	1.49	0.00215	0.608	0.738	116	120	1.68e+03	74	alone
+250 m (shipped)	4	1.71		0.83	0.982	150	120	1.68e+03	103	alone
+250 m (shipped)	8	2.12				417	1.56e+03	3.48e+03	132	alone
+10 m (HPAC 3.2's published setting for a 2 m passive stable release, R3-079, R3-080; a labelled point, not a dense setting)	1	1.87	0.51	0.72	0.774	114	120	1.08e+03	25	with 3 other runs
+10 m (HPAC 3.2's published setting for a 2 m passive stable release, R3-079, R3-080; a labelled point, not a dense setting)	2	3.04	0.0528	0.674	0.783	130	120	1.08e+03	60	with 3 other runs
+10 m (HPAC 3.2's published setting for a 2 m passive stable release, R3-079, R3-080; a labelled point, not a dense setting)	4	6.48		1.01	1.06	174	120	1.2e+03	77	with 3 other runs
+10 m (HPAC 3.2's published setting for a 2 m passive stable release, R3-079, R3-080; a labelled point, not a dense setting)	8	12.3				484	1.92e+03	3.84e+03	95	with 3 other runs
+5 m	1	4.02	0.553	0.749	0.802	118	120	1.32e+03	21	with 3 other runs
+5 m	2	6.77	0.326	0.739	0.799	137	120	1.32e+03	51	with 3 other runs
+5 m	4	13.7		0.982	1.03	183	120	1.32e+03	59	with 3 other runs
+5 m	8	24.4				491	1.2e+03	2.88e+03	74	with 3 other runs
+2.5 m	1	11.3	0.706	0.829	0.862	133	0	720	6	alone
+2.5 m	2	18.3	0.387	0.792	0.859	158	120	960	22	alone
+2.5 m	4	28.5		0.948	0.984	210	120	960	22	alone
+2.5 m	8	46				515	480	1.08e+03	40	alone
+1.25 m	1	136	0.827	0.896	0.91	139	0	360	0	alone
+1.25 m	2	182	0.555	0.841	0.887	167	0	720	12	alone
+1.25 m	4	210		1.03	1.02	220	120	720	11	alone
+1.25 m	8	252				531	240	720	29	alone
+1.25 m, OpenMP 2 threads	1	124	0.827	0.896	0.91	139	0	360	0	alone
+1.25 m, OpenMP 2 threads	2	169	0.555	0.841	0.887	167	0	720	12	alone
+1.25 m, OpenMP 2 threads	4	190		1.03	1.02	220	120	720	11	alone
+1.25 m, OpenMP 2 threads	8	222				531	240	720	29	alone
+0.625 m (the benchmark)	1	2.58e+03	1	1	1	139	0	0	0	alone
+0.625 m (the benchmark)	2	3.18e+03	1	1	1	172	0	0	0	alone
+0.625 m (the benchmark)	4	3.25e+03		1	1	231	0	0	0	alone
+0.625 m (the benchmark)	8	3.31e+03				549	0	0	0	alone

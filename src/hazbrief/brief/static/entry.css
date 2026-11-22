@@ -1,0 +1,13 @@
+/* The entry form (HB-132R Part B): the map beside the form, the parsed spans marked. */
+#entry { display: grid; grid-template-columns: minmax(320px, 1fr) minmax(320px, 460px); gap: 16px; padding: 12px 16px; }
+#entry-map { min-height: 70vh; border: 1px solid #cccccc; }
+#entry-form label { display: block; margin: 6px 0; }
+#entry-form input, #entry-form select { min-width: 60%; }
+#entry-form fieldset { margin: 10px 0; border: 1px solid #dddddd; }
+#line-shown mark { background: #fff2a8; padding: 0 2px; }
+#entry-form button { margin: 6px 0; }
+@media (max-width: 800px) { #entry { grid-template-columns: 1fr; } #entry-map { min-height: 40vh; } }
+/* HB-207: the ERG entries offered for confirmation, one per line, the radio and the checkbox at their text
+   (the form's inputs are at least 60 percent wide, which pushed the text to the right) */
+#candidates input, #confirm-label input { min-width: 0; margin-right: 6px; }
+#entry-top:empty, #material-reason:empty { display: none; }

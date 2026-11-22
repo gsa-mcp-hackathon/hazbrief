@@ -1,0 +1,594 @@
+# The controlled vocabulary of the commander stylebook (HB-02 deliverable 2; COMMANDER_STYLEBOOK.md
+# section 4). One term per object. Each term carries its definition, the authority whose term it
+# is, a Squiddy receipt (`squiddy.index search --graph the corpus graph (held privately)`; the row a search
+# returned) with a short quote of the passage behind it, and the synonyms the brief never writes for
+# it. src/hazbrief/stylecheck.py reads `forbidden_synonyms` (rule SB-TRM-02) and `never_written`
+# (rule SB-NEV-01) from this file.
+#
+# Authorities, in order of precedence when two name the same object (SB-TRM-03): ERG for hazards,
+# zones, distances and protective actions; ICS (the FEMA form instructions) for the ICS 201 blocks;
+# NIMS for organization, facilities and resources. A `project` term is this server's own, and is
+# defined on top of the ERG objects it draws (DN-001 section 4 invariant 1).
+#
+# Definitions are this project's short statements of the cited passage; the quote is verbatim from
+# the held document, and test_stylebook.py (a test held privately) matches it to the receipt row in the local index by
+# src/hazbrief/receipt_quotes.py (HB-19: the parse can render a passage differently from the page;
+# a receipt in the page-text form `doc#p<page>:<row>:<start>-<end>` is one HB-19 could not
+# re-anchor to a parsed block). HB-03 extends this
+# file with the terms its packs emit; tests check the two agree.
+#
+# HB-20 imports this file into the corpus graph as its concept vocabularies (one per authority,
+# derived by scripts/build_concept_vocab.py into the corpus graph (held privately); the project
+# term is not imported). `alt_labels` are other names the authority itself prints for the same
+# object, each with the parsed row it is printed in; they are what the concept layer matches besides
+# the term. A singular or plural form of a term is not listed here: the build script finds it in
+# the authority's own rows (ANSI/NISO Z39.19-2005 section 6.5).
+schema: hazbrief-vocabulary/1
+
+terms:
+  # ── ICS 201 blocks (ics-201) ────────────────────────────────────────────────────────────────────
+  - term: Incident Briefing
+    definition: >-
+      The ICS 201 form. It gives the Incident Commander and the Command and General Staffs basic
+      information on the incident situation and the resources allocated to it.
+    authority: ICS
+    receipt: ics-201#b48:2223-2600
+    quote: "The Incident Briefing (ICS 201) provides the Incident Commander (and the Command and General Staffs) with basic information regarding the incident situation"
+    forbidden_synonyms: [incident report form, briefing sheet]
+    alt_labels:
+      - {label: ICS 201, receipt: "ics-201#b0:0-27"}
+  - term: Incident Name
+    definition: ICS 201 block 1. The name assigned to the incident.
+    authority: ICS
+    receipt: ics-201#p5:16:1202-1377
+    quote: "1 Incident Name Enter the name assigned to the incident."
+    forbidden_synonyms: []
+  - term: Incident Number
+    definition: ICS 201 block 2. The number assigned to the incident.
+    authority: ICS
+    receipt: ics-201#p5:16:1202-1377
+    quote: "2 Incident Number Enter the number assigned to the incident."
+    forbidden_synonyms: []
+  - term: Date/Time Initiated
+    definition: ICS 201 block 3. The date (month/day/year) and time (24-hour clock) the incident began.
+    authority: ICS
+    receipt: ics-201#b54:3371-5294
+    quote: "Enter date initiated (month/day/year)"
+    forbidden_synonyms: []
+  - term: Map/Sketch
+    definition: >-
+      ICS 201 block 4. The graphic of the total area of operations, the incident site, and the
+      impacted and threatened areas. The server fills it with the protective action footprint.
+    authority: ICS
+    receipt: ics-201#b6:99-348
+    quote: "4. Map/Sketch (include sketch, showing the total area of operations, the incident site/area, impacted and threatened areas"
+    forbidden_synonyms: []
+  - term: Situation Summary and Health and Safety Briefing
+    definition: >-
+      ICS 201 block 5. The situation summary, and the health and safety hazards with the measures
+      that protect responders from them.
+    authority: ICS
+    receipt: ics-201#b7:350-649
+    quote: "5. Situation Summary and Health and Safety Briefing (for briefings or transfer of command)"
+    forbidden_synonyms: []
+  - term: Prepared by
+    definition: >-
+      ICS 201 block 6. The name, ICS position/title and signature of the person who prepares the
+      form. The server leaves the name and signature for the Incident Commander.
+    authority: ICS
+    receipt: ics-201#b54:3371-5294
+    quote: "Enter the name, ICS position/title, and signature of the person preparing the form."
+    forbidden_synonyms: []
+  - term: Current and Planned Objectives
+    definition: ICS 201 block 7. The objectives used on the incident and any specific problem areas.
+    authority: ICS
+    receipt: ics-201#b54:3371-5294
+    quote: "Enter the objectives used on the incident and note any specific problem areas."
+    forbidden_synonyms: []
+  - term: Current and Planned Actions, Strategies, and Tactics
+    definition: >-
+      ICS 201 block 8. The current and planned actions, strategies and tactics, with the time each
+      may or did occur.
+    authority: ICS
+    receipt: ics-201#b55:5296-7512
+    quote: "Enter the current and planned actions, strategies, and tactics and time they may or did occur to attain the objectives."
+    forbidden_synonyms: []
+  - term: Current Organization
+    definition: ICS 201 block 9. The organization chart of the incident's ICS positions.
+    authority: ICS
+    receipt: ics-201#p6:36:119-437
+    quote: "9 Current Organization (fill in additional organization as appropriate)"
+    forbidden_synonyms: [org chart]
+  - term: Resource Summary
+    definition: ICS 201 block 10. The resources allocated to the incident.
+    authority: ICS
+    receipt: ics-201#p6:41:1003-1411
+    quote: "10 Resource Summary Enter the following information about the resources allocated to the incident."
+    forbidden_synonyms: []
+
+  # ── NIMS organization, facilities, resources (nims-doctrine-2017) ───────────────────────────────
+  - term: incident
+    definition: An occurrence, natural or manmade, that needs a response to protect life or property.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b739:166238-166467
+    quote: "Incident: An occurrence, natural or manmade, that necessitates a response to protect life or property."
+    forbidden_synonyms: []
+  - term: hazard
+    definition: Something potentially dangerous or harmful.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b738:166139-166236
+    quote: "Hazard: Something potentially dangerous or harmful, often the root cause of an unwanted outcome."
+    forbidden_synonyms: []
+  - term: Incident Commander
+    definition: >-
+      The individual responsible for on-scene incident activities, with overall authority and
+      responsibility for incident operations.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b745:167945-168205
+    quote: "Incident Commander: The individual responsible for on-scene incident activities"
+    forbidden_synonyms: [incident manager, on-scene commander, scene commander]
+  - term: Unified Command
+    definition: The ICS application used when more than one agency has incident jurisdiction.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b829:187022-187164
+    quote: "Unified Command: An ICS application used when more than one agency has incident jurisdiction"
+    forbidden_synonyms: [joint command]
+  - term: Command Staff
+    definition: >-
+      The incident personnel the Incident Commander assigns to support the command function: often
+      the Public Information Officer, the Safety Officer and the Liaison Officer.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b713:160838-161154
+    quote: "Command staff often include a PIO, a Safety Officer, and a Liaison Officer"
+    forbidden_synonyms: []
+  - term: General Staff
+    definition: >-
+      The incident personnel organized by function and reporting to the Incident Commander: the
+      Operations, Planning, Logistics and Finance/Administration Section Chiefs.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b736:165581-165869
+    quote: "General Staff: A group of incident personnel organized according to function and reporting to the Incident Commander or Unified Command."
+    forbidden_synonyms: []
+  - term: Safety Officer
+    definition: >-
+      The Command Staff member who monitors incident operations and advises the Incident Commander
+      on operational safety.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b809:183209-183550
+    quote: "Safety Officer: In ICS, a member of the Command Staff responsible for monitoring incident operations"
+    forbidden_synonyms: []
+  - term: Public Information Officer
+    definition: The Command Staff member who works with the public and the media.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b799:181493-181677
+    quote: "Public Information Officer: A member of the ICS Command Staff responsible for interfacing with the public and media"
+    forbidden_synonyms: [press officer, media officer, spokesperson]
+  - term: Liaison Officer
+    definition: >-
+      The incident command's point of contact for agencies and organizations that are not in the
+      Unified Command.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b339:85097-85720
+    quote: "The Liaison Officer is the incident command's point of contact for representatives of governmental agencies"
+    forbidden_synonyms: []
+  - term: Planning Section
+    definition: The ICS Section that collects, evaluates and disseminates operational information.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b792:180025-180341
+    quote: "Planning Section: The ICS Section that collects, evaluates, and disseminates operational information related to the incident"
+    forbidden_synonyms: []
+  - term: Operations Section
+    definition: The ICS Section that carries out tactical incident operations.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b787:178986-179193
+    quote: "Operations Section: The ICS Section responsible for implementing tactical incident operations"
+    forbidden_synonyms: []
+  - term: Incident Command Post
+    definition: The field location where the primary functions of incident command are performed.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b743:167185-167369
+    quote: "Incident Command Post: The field location where the primary functions of incident command are performed."
+    forbidden_synonyms: [command center, field headquarters]
+  - term: Staging Area
+    definition: A temporary location where available resources wait for an operational assignment.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b814:184176-184309
+    quote: "Staging Area: A temporary location for available resources in which personnel, supplies, and equipment await operational assignment."
+    forbidden_synonyms: [rally point]
+  - term: resources
+    definition: >-
+      Personnel, equipment, teams, supplies and facilities available for assignment to incident
+      operations.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b807:182747-183056
+    quote: "Resources: Personnel, equipment, teams, supplies, and facilities available or potentially available for assignment to incident operations"
+    forbidden_synonyms: [assets]
+  - term: incident objective
+    definition: A statement of an outcome to be accomplished.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b750:169033-169309
+    quote: "Incident Objective: A statement of an outcome to be accomplished or achieved."
+    forbidden_synonyms: []
+  - term: strategy
+    definition: The general course of action that accomplishes the incident objectives.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b818:185064-185151
+    quote: "Strategy: The general course of action or direction to accomplish incident objectives."
+    forbidden_synonyms: []
+  - term: tactics
+    definition: The deployment and direction of resources to accomplish the objectives.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b822:185616-185712
+    quote: "Tactics: The deployment and directing of resources on an incident to accomplish the objectives."
+    forbidden_synonyms: []
+  - term: operational period
+    definition: The time scheduled for a given set of operation actions; typically 12 to 24 hours.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b785:178452-178645
+    quote: "Operational Period: The time scheduled for executing a given set of operation actions, as specified in the IAP."
+    forbidden_synonyms: []
+  - term: Incident Action Plan
+    definition: >-
+      An oral or written plan with the Incident Commander's objectives and the tactics and support
+      activities for the operational period.
+    authority: NIMS
+    receipt: nims-doctrine-2017#b740:166469-166706
+    quote: "Incident Action Plan: An oral or written plan containing the objectives established by the Incident Commander or Unified Command"
+    forbidden_synonyms: []
+
+  # ── ERG zones, distances and protective actions (erg2024-en-pdf; erg-guide-124) ─────────────────
+  - term: initial isolation zone
+    definition: >-
+      The area around the incident in which people may be exposed to dangerous (upwind) and
+      life-threatening (downwind) concentrations of the material. Its radius is the initial
+      isolation distance.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4221:747661-747848
+    quote: "The Initial Isolation Zone defines an area surrounding the incident in which people may be exposed to dangerous (upwind) and life-threatening (downwind) concentrations of material."
+    forbidden_synonyms: [isolation radius, isolation perimeter]
+  - term: initial isolation distance
+    definition: >-
+      The radius of the initial isolation zone. Inside it, protective clothing and respiratory
+      protection are required.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4590:881015-881337
+    quote: "This distance defines the radius of the \"initial isolation zone\" surrounding the spill"
+    forbidden_synonyms: []
+  - term: protective action zone
+    definition: >-
+      The area downwind of the incident in which people may become incapacitated and unable to take
+      protective action, or incur serious or irreversible health effects. For practical purposes it
+      is a square whose side is the protective action distance.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4222:747850-748136
+    quote: "The Protective Action Zone defines an area downwind from the incident in which people may become incapacitated"
+    # "threat zone" is the dispersion-model term for a modeled footprint (ALOHA; DN-001 section 2).
+    forbidden_synonyms: [threat zone, danger zone, evacuation zone, impact zone]
+  - term: protective action distance
+    definition: >-
+      The downwind distance from the spill or leak source within which responders could carry out
+      protective actions. ERG Table 1 and Table 3 give it by material, spill size, day or night,
+      and (Table 3) container and wind.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4593:881442-881592
+    quote: "The \"protective action distances\" are downwind distances from the spill or leak source, within which responders could carry out protective actions"
+    # "PAD" also abbreviates "protective action decision"; an abbreviation with two meanings is
+    # never written (SB-SEN-06).
+    forbidden_synonyms: [PAD, PADs, downwind hazard distance]
+  - term: protective action footprint
+    definition: >-
+      This server's GeoJSON drawing of the ERG initial isolation zone and protective action zone for
+      an incident, oriented by the NWS wind. It is drawn from ERG table distances, never from a
+      dispersion model.
+    authority: project
+    receipt: erg2024-en-pdf#b4346:763368-763878
+    quote: "For practical purposes, the protective action zone (i.e., the area in which people are at risk of harmful exposure) is a square."
+    forbidden_synonyms: [hazard footprint, threat footprint]
+  - term: protective actions
+    definition: >-
+      The steps taken to preserve the health and safety of emergency responders and the public
+      during a hazardous materials release.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4261:752554-752744
+    quote: "Protective actions are the steps taken to preserve the health and safety of emergency responders and the public"
+    forbidden_synonyms: []
+  - term: Protective Action Decision
+    definition: >-
+      The choice of protective actions for an incident, made by officials from the ERG decision
+      factors: the material, the population threatened and the weather. The server states the ERG
+      basis; the Incident Commander decides.
+    authority: ERG
+    receipt: erg2024-en-pdf#p286:6291:10-953
+    quote: "PROTECTIVE ACTION DECISION FACTORS TO CONSIDER The choice of protective actions for a given situation depends on a number of factors."
+    forbidden_synonyms: [protective action recommendation, PAR]
+  - term: isolate
+    definition: >-
+      Set a zone of no entry for the public and for responders who are not equipped, trained and
+      prepared to mitigate the incident.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4899:938194-940417
+    quote: "Isolate indicates a zone of no entry that applies to the public and first responders who are not equipped, trained, and prepared to mitigate the incident."
+    forbidden_synonyms: [cordon off]
+  - term: evacuate
+    definition: >-
+      Move all people from a threatened area to a safer place. Evacuation needs enough time for
+      people to be warned, get ready and leave.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4265:753364-753612
+    quote: "Evacuate means to move all people from a threatened area to a safer place."
+    forbidden_synonyms: [evac]
+  - term: shelter-in-place
+    definition: >-
+      People go inside a building and stay inside until the danger passes. It is used when
+      evacuation would cause greater risk, or cannot be performed.
+    authority: ERG
+    receipt: erg2024-en-pdf#p379:7923:20-1314
+    quote: "Shelter-in-place People should seek shelter inside a building and remain inside until the danger passes."
+    forbidden_synonyms: [in-place protection, shelter in place]
+  - term: immediate precautionary measure
+    definition: >-
+      The orange guide's first isolation distance, in all directions, before the spill or fire
+      distances apply.
+    authority: ERG
+    receipt: erg-guide-124#b28:1753-1833
+    quote: "Isolate spill or leak area for at least 100 meters (330 feet) in all directions."
+    forbidden_synonyms: []
+  - term: small spill
+    definition: A spill of 208 liters (55 US gallons) or less.
+    authority: ERG
+    receipt: erg2024-en-pdf#p379:7924:1316-1556
+    quote: "Small spill A spill that involves quantities that are 208 liters (55 US gallons) or less."
+    forbidden_synonyms: [minor spill]
+  - term: large spill
+    definition: A spill of more than 208 liters (55 US gallons).
+    authority: ERG
+    receipt: erg2024-en-pdf#p376:7886:300-495
+    quote: "Large spill A spill that involves quantities that are greater than 208 liters (55 US gallons)."
+    forbidden_synonyms: [major spill]
+  - term: daytime
+    definition: After sunrise and before sunset. ERG distances differ for daytime and nighttime.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4596:881784-882461
+    quote: "Daytime is after sunrise and before sunset."
+    forbidden_synonyms: []
+  - term: nighttime
+    definition: Between sunset and sunrise.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4596:881784-882461
+    quote: "Nighttime is between sunset and sunrise."
+    forbidden_synonyms: []
+  - term: low wind
+    definition: ERG Table 3 wind category, less than 10 km/h (6 mph).
+    authority: ERG
+    receipt: erg2024-en-pdf#p342:7462:1281-1362
+    quote: "< 6 < 10 Low wind"
+    forbidden_synonyms: [light wind]
+  - term: moderate wind
+    definition: ERG Table 3 wind category, 10 to 20 km/h (6 to 12 mph).
+    authority: ERG
+    receipt: erg2024-en-pdf#p342:7463:1364-1445
+    quote: "6 - 12 10 - 20 Moderate wind"
+    forbidden_synonyms: []
+  - term: high wind
+    definition: ERG Table 3 wind category, more than 20 km/h (12 mph).
+    authority: ERG
+    receipt: erg2024-en-pdf#p342:7464:1447-1694
+    quote: "> 12 > 20 High wind"
+    forbidden_synonyms: [strong wind]
+  - term: TIH
+    definition: >-
+      Toxic Inhalation Hazard: gases and volatile liquids that are toxic when inhaled. The ERG's
+      term; the US regulations' "PIH" names the same materials.
+    authority: ERG
+    receipt: erg2024-en-pdf#p380:7931:864-1399
+    quote: "TIH Toxic Inhalation Hazard. Term used to describe gases and volatile liquids that are toxic when inhaled (same as PIH)."
+    forbidden_synonyms: [PIH, poison inhalation hazard]
+    alt_labels:
+      - {label: Toxic Inhalation Hazard, receipt: "erg2024-en-pdf#b4245:751184-751343"}
+  - term: Hazard Zone
+    definition: >-
+      A TIH toxicity class (A to D for gases, A and B for liquids) set by the material's LC50. It is
+      not an area or a distance, and the brief never uses it for one.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4898:935975-938192
+    quote: "hazard zones are not an actual area or distance."
+    forbidden_synonyms: []
+  - term: control zones
+    definition: >-
+      The areas set at a hazardous materials incident by safety and degree of hazard: the hot zone,
+      the warm zone and the cold zone.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4897:933635-935973
+    quote: "Many terms are used to describe control zones; however, in this guidebook, these zones are defined as"
+    forbidden_synonyms: []
+  - term: hot zone
+    definition: >-
+      The area immediately around the incident, far enough out to prevent adverse effects on
+      personnel outside it.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4898:935975-938192
+    quote: "This zone is also referred to as exclusion zone, red zone or restricted zone in other documents."
+    forbidden_synonyms: [exclusion zone, red zone, restricted zone]
+  - term: warm zone
+    definition: >-
+      The area between the hot zone and the cold zone, where decontamination and hot zone support
+      take place.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4905:948725-950938
+    quote: "Also referred to as the contamination reduction corridor (CRC), contamination reduction zone (CRZ), yellow zone or limited access zone in other documents."
+    forbidden_synonyms:
+      [contamination reduction corridor, contamination reduction zone, yellow zone, limited access zone]
+  - term: cold zone
+    definition: The area where the command post and the support functions are located.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4895:930212-931733
+    quote: "This is also referred to as the clean zone, green zone or support zone in other documents."
+    forbidden_synonyms: [clean zone, green zone, support zone]
+  - term: potential hazards
+    definition: >-
+      The first section of an orange guide: fire or explosion and health hazards, the primary
+      hazard first.
+    authority: ERG
+    receipt: erg2024-en-pdf#p348:7514:10-74
+    quote: "Each guide is divided into 3 main sections: POTENTIAL HAZARDS:"
+    forbidden_synonyms: []
+  - term: public safety
+    definition: >-
+      The second section of an orange guide: initial precautions, protective clothing and
+      evacuation distances.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4572:879353-879452
+    quote: "Provides general information on initial precautionary measures to be taken by those first on scene."
+    forbidden_synonyms: []
+  - term: emergency response
+    definition: >-
+      The third section of an orange guide: precautions for fire, spill or leak, and first aid.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4577:879922-880020
+    quote: "Outlines special precautions for incidents that involve FIRE, SPILL OR LEAK or chemical exposure."
+    forbidden_synonyms: []
+  - term: guide
+    definition: >-
+      One of the 62 ERG orange-section guides. Each applies to a group of materials with similar
+      chemical and toxicological characteristics.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4563:878544-878924
+    quote: "It is made up of 62 individual guides."
+    forbidden_synonyms: []
+  - term: ID number
+    definition: The 4-digit UN or NA identification number of a material.
+    authority: ERG
+    receipt: erg2024-en-pdf#b9:762-824
+    quote: "4-digit identification number, UN or NA (go to yellow section)"
+    forbidden_synonyms: [DOT number]
+  - term: protective clothing
+    definition: >-
+      In the ERG, both respiratory and physical protection, assigned as one level (A to D).
+    authority: ERG
+    receipt: erg2024-en-pdf#b4901:942397-944570
+    quote: "In this guidebook, protective clothing includes both respiratory and physical protection."
+    forbidden_synonyms: []
+  - term: SCBA
+    definition: Self-contained breathing apparatus.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4901:942397-944570
+    quote: "SCBA: Self-contained breathing apparatus."
+    forbidden_synonyms: [air pack]
+  - term: BLEVE
+    definition: Boiling Liquid Expanding Vapor Explosion.
+    authority: ERG
+    receipt: erg2024-en-pdf#p371:7828:1947-2132
+    quote: "BLEVE Boiling Liquid Expanding Vapor Explosion"
+    forbidden_synonyms: []
+  - term: water-reactive material
+    definition: A material that produces toxic gas on contact with water.
+    authority: ERG
+    receipt: erg2024-en-pdf#b4585:880598-880672
+    quote: "water-reactive materials which produce toxic gases upon contact with water"
+    forbidden_synonyms: []
+  - term: cryogenic liquid
+    definition: >-
+      A refrigerated liquefied gas with a boiling point colder than -90°C (-130°F) at atmospheric
+      pressure.
+    authority: ERG
+    receipt: erg2024-en-pdf#p374:7854:670-897
+    quote: "Cryogenic liquid A refrigerated, liquefied gas that has a boiling point colder than -90°C (-130°F) at atmospheric pressure"
+    forbidden_synonyms: []
+  - term: flammable liquid
+    definition: A liquid with a flash point of 60°C (140°F) or lower.
+    authority: ERG
+    receipt: erg2024-en-pdf#p375:7863:20-856
+    quote: "Flammable liquid A liquid that has a flash point of 60°C (140°F) or lower."
+    forbidden_synonyms: []
+  # Added by HB-03 (a pack term: the cfr172 pack's packing_group field).
+  - term: Packing Group
+    definition: >-
+      The danger grade assigned to a hazardous material: PG I great danger, PG II medium danger,
+      PG III minor danger. Column 5 of the 49 CFR 172.101 table.
+    authority: ERG
+    receipt: erg2024-en-pdf#p377:7898:505-658
+    quote: "Packing Group The Packing Group (PG) is assigned based on the degree of danger presented by the hazardous material/dangerous good"
+    forbidden_synonyms: [packaging group]
+  # Added by HB-20 (the concept layer's wind topic): PHMSA's ERG app definition, the authority for
+  # the two wind parameters the ERG map takes (windSpeed, windDir).
+  - term: wind speed
+    definition: >-
+      The speed of the wind at the spill location. The ERG app takes it as a Table 3 wind category
+      (low, moderate or high).
+    authority: ERG
+    receipt: phmsa-erg-api-definition#b68:7186-7329
+    quote: "windSpeed | The wind speed at the spill location"
+    forbidden_synonyms: []
+  - term: wind direction
+    definition: >-
+      The direction the wind blows from, in degrees clockwise from due north.
+    authority: ERG
+    receipt: phmsa-erg-api-definition#b39:5742-6058
+    quote: "Wind direction is reported by the direction from which it originates."
+    forbidden_synonyms: []
+
+  # ── Numbers (cre-2024-file-layout) ──────────────────────────────────────────────────────────────
+  - term: margin of error
+    definition: >-
+      The sampling uncertainty of a survey estimate, stated with the estimate. Census margins of
+      error are at the 90 percent confidence level.
+    authority: Census
+    receipt: cre-2024-file-layout#b14:2904-2971
+    quote: "Margins of error are calculated at the 90 percent confidence level."
+    forbidden_synonyms: [error margin]
+  # Added by HB-03 (a pack term: flag rule FR-CRE-01). The Census Bureau's own group, not an
+  # invented index (DN-002 section 4).
+  - term: high social vulnerability
+    definition: >-
+      The Community Resilience Estimates High group: people with three or more of the ten
+      components of social vulnerability (CRE file variable PRED3).
+    authority: Census
+    receipt: cre-2024-quick-guide#p4:30:1133-1185
+    quote: "High Individuals with three or more components of SV"
+    forbidden_synonyms: [high vulnerability score, vulnerable population index]
+  # Added by HB-20 (the concept layer's group quarters and community resilience topics).
+  - term: components of social vulnerability
+    definition: >-
+      The ten individual and household attributes, from the ACS, that the Community Resilience
+      Estimates count per person (0 or 1 each); the count sets a person's group.
+    authority: Census
+    receipt: cre-2024-quick-guide#b18:4236-4658
+    quote: "we designed population estimates based on individual and household-level components of SV using variables from the ACS"
+    forbidden_synonyms: []
+    alt_labels:
+      - {label: components of SV, receipt: "cre-2024-quick-guide#b25:6754-6904"}
+      - {label: component of social vulnerability, receipt: "cre-2024-techdoc#b87:18145-18192"}
+      - {label: social vulnerability component, receipt: "cre-2024-techdoc#b57:9713-10095"}
+      - {label: social vulnerability components, receipt: "cre-2024-techdoc#b104:21868-22304"}
+  - term: group quarters
+    definition: >-
+      Places where people live or stay in a group living arrangement owned or managed by an
+      entity or organization that provides housing or services for the residents; institutional
+      or noninstitutional.
+    authority: Census
+    receipt: census-acs-general-handbook-2020#b916:238518-238909
+    quote: "Group quarters are places where people live or stay, in a group living arrangement that is owned or managed by an entity or organization providing housing and/or services for the residents."
+    forbidden_synonyms: []
+
+# Words the brief never writes, under any sense (SB-NEV-01). Matched as whole words, any case.
+never_written:
+  - term: plume
+    rule: SB-NEV-01
+    reason: >-
+      The server runs no dispersion model (DN-001 section 4 invariant 1). The ERG uses "plume" for
+      the atmospheric analysis behind Table 1 (erg2024-en-pdf#b4327:760600-760733); the area people
+      act in is the protective action zone.
+  - term: plumes
+    rule: SB-NEV-01
+    reason: As for "plume".
+  - term: dispersion
+    rule: SB-NEV-01
+    reason: >-
+      Names the modeling the server does not do. The ERG verb "disperse" stays allowed: it is a
+      response action in the guides ("disperse vapors" with water spray).
+  - term: dispersion model
+    rule: SB-NEV-01
+    reason: As for "dispersion".
+  - term: dispersion modeling
+    rule: SB-NEV-01
+    reason: As for "dispersion".

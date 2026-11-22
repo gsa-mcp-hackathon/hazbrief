@@ -1,0 +1,64 @@
+backlog-evaluate-the-dense-cloud-on-jack-rabbit-ii-trials-1-6-and-7-by-the-published-statistics EXIT=0 :: Created Issue: b6415bb8-3e41-47c1-a4ae-fb81fb51033f
+  name: backlog-evaluate-the-dense-cloud-on-jack-rabbit-ii-trials-1-6-and-7-by-the-published-statistics
+  description: Future work (HB-196 ADDENDUM-03 item 5; HB-192 RESULT, 'What could not be built'): evaluate the modelled dense cloud, as hazbrief runs it, on Jack Rabbit II trials 1, 6 and 7 against the benchmark requirement BENCH-0 (minimum: equivalence with each accepted tool's published performance on its own trials by the same statistic; objective: better). hazbrief's status against all seven published rows is 'not yet evaluated' (docs/evidence/hb192/benchmark_rows.md). Held for it: Trial 7's observed arc maxima at 0.2 to 11 km (the 17-model manuscript's Table 5, p. 20), the trials' recommended meteorological inputs (Table 2, p. 6) and averaged emission rates (Table 3, p. 7) (docs/evidence/hb192/observed_arc_maxima.md); the scoring equations (Simpson et al. 2020, p. 9: FB, MG, VG, FAC2) and BOOT as the comparison uses it. Not held: Trials 1 and 6's arc maxima, which the manuscript only plots (Figures 3 and 4); Chang et al. (2021) is to be acquired through the acquisition ladder. Not run.
+  type: missing_content
+  quadrant: BACKLOG (importance=medium, urgency=low)
+  detection: review
+  target: code
+  state: open
+backlog-the-day-start-runs-domain-top-needs-a-build-with-more-vertical-levels-and-the-daytime-aegl1-fall-is-unexplained EXIT=0 :: Created Issue: aeef615f-9465-4cb2-8063-7b195182c2c4
+  name: backlog-the-day-start-runs-domain-top-needs-a-build-with-more-vertical-levels-and-the-daytime-aegl1-fall-is-unexplained
+  description: Future work (HB-196 ADDENDUM-03 item 5; HB-192 ADDENDUM-02 item 6; docs/evidence/hb192/vertical_top.md, tops_i81_day.tsv): the engine's own daytime mixed layer on i81-md-pa-line-day is 1,035 and 1,100 m, four times the 250 m domain top a day-start brief runs at, so the shipped run holds no mass above 250 m by construction. A taller top cannot be run at the 1.25 m vertical setting in this build: the number of levels is min(ZMAX/VRES, 200) (set_grid.f90, MAXGZ 200), so past 250 m the cell coarsens (2.5 m at 500 m, 5 m at 1,000 m), and those runs shrink the AEGL-1 area further (17.22, 16.40, 15.80 km2) rather than restoring it. So the 250 m top does not explain the fall of the daytime AEGL-1 area between the 250 m and the 1.25 m settings, and that fall is unexplained. Proposed, not run: the same measurement in a models-image build with MAXGZ raised to 1,000, so the top can rise at 1.25 m. Related: Issue c21aae38 (a day-start brief's SLAB check reads its daytime class).
+  type: missing_content
+  quadrant: BACKLOG (importance=medium, urgency=low)
+  detection: review
+  target: code
+  state: open
+backlog-where-a-live-briefs-48-to-73-s-assembly-time-goes-is-not-measured EXIT=0 :: Created Issue: a682da2b-9a7a-4bde-bfe6-099c93c13a78
+  name: backlog-where-a-live-briefs-48-to-73-s-assembly-time-goes-is-not-measured
+  description: Future work (HB-196 ADDENDUM-03 item 5; HB-192 RESULT): HB-192 halved the night pages (csx night brief.html 6.62 to 3.39 MB; docs/evidence/hb189/live_load.tsv before, docs/evidence/hb192/live_load.tsv after) and their live load time did not move (csx night 71.4 to 73.1 s; the five measured briefs 47.7 to 73.1 s after), because the time is the brief being assembled by replay, not the page's bytes. Where the assembly's time goes, channel by channel and derivation by derivation, is not measured. The measurement comes before any change. Related: Issue 06aa3a83 (a live build's time budget and a coarser first pass) and Issue 30123239 (one assembly per brief per gate).
+  type: missing_content
+  quadrant: BACKLOG (importance=medium, urgency=low)
+  detection: review
+  target: code
+  state: open
+backlog-a-finer-frame-mesh-for-the-closest-first-views EXIT=0 :: Created Issue: fc3dba92-4d70-40b9-b5c5-803b547b0a47
+  name: backlog-a-finer-frame-mesh-for-the-closest-first-views
+  description: Future work (HB-196 ADDENDUM-03 item 5; HB-192 Part B item 5): the moving cloud's frames are held on a 25 m mesh and its level outlines are drawn within 25 m of the outline before simplifying (worst 23.2 m; docs/evidence/hb192/outline_tolerance.tsv). Measured at the map's real size, the first view is 10.5 to 49.4 m per pixel over the 13 dense briefs (docs/evidence/hb192/first_view_m_per_px.txt), so the tolerance is 0.5 to 2.4 pixels, and 2.4 on the I-495 address and cross-streets briefs at 10.5 m per pixel. A 10 m mesh would be about six times the points and bytes; not built (the operator asked for a coarse plot).
+  type: missing_content
+  quadrant: ELIMINATE (importance=low, urgency=low)
+  detection: review
+  target: code
+  state: open
+limit-the-moving-clouds-status-line-mid-run-is-seen-only-in-a-live-run EXIT=0 :: Created Issue: e4d4cf16-59a3-456b-b061-b92a10a55cdf
+  name: limit-the-moving-clouds-status-line-mid-run-is-seen-only-in-a-live-run
+  description: Known limit (HB-196 ADDENDUM-03 item 5; HB-192 RESULT, 'What could not be built'): a live page rewrites the moving cloud's status line as each 15-minute frame lands ('Computing: to H+1 h 15 min of H+6 h ...; frame 5 of 24') and draws that frame's outlines. A replay of a committed brief hands every held frame to the page in one burst before the map is drawn, so the status line mid-run is seen only in a live run with the engine in the models image; the committed screenshot of it (docs/evidence/hb192/csx_night_status_mid_run.png) is frame 5's own event replayed through the page's handler after the run. What would show it without the engine: a replay that paces the held frames at their recorded engine times (docs/evidence/hb192/frames.tsv, engine_wall_s).
+  type: missing_content
+  quadrant: ELIMINATE (importance=low, urgency=low)
+  detection: review
+  target: code
+  state: open
+backlog-tests-that-wait-on-a-fixed-clock-should-wait-on-the-pages-own-finished-signal EXIT=0 :: Created Issue: d0475c31-61e6-4c83-a76c-ee763db5fa71
+  name: backlog-tests-that-wait-on-a-fixed-clock-should-wait-on-the-pages-own-finished-signal
+  description: Future work (HB-196 ADDENDUM-03 item 5; HB-194 RESULT): every one-step gate failure HB-194 classified was on the clock under the parallel step's load: headless Chrome past its 120 s or 240 s timeout, an assembly past the harness's 60 s bound, a channel past its timeout (docs/evidence/hb194/failures.tsv). HB-194 grouped these 85 tests into a second step, at most one of a kind at a time (docs/evidence/hb194/load_sensitive.tsv), and three gates in a row were green; the fixed clocks remain. The lasting form: a test waits on the page's own finished signal (the brief's run state in the DOM, which HB-192's live-load measurement already reads: docs/evidence/hb192/live_load.tsv run_state_in_dom) or on the process's own completion, with a generous outer bound only as a hang guard. Not built.
+  type: missing_content
+  quadrant: BACKLOG (importance=medium, urgency=low)
+  detection: review
+  target: code
+  state: open
+backlog-six-browser-list-works-are-still-held-only-as-their-metadata EXIT=0 :: Created Issue: b4d6c6dc-e68f-44f8-83dc-b4b42344412f
+  name: backlog-six-browser-list-works-are-still-held-only-as-their-metadata
+  description: Future work (HB-196 ADDENDUM-03 item 5; HB-195 RESULT): six works on the browser list are still held as metadata only (docs/evidence/hb195/held_now.tsv, rows with hb190_category 'on the browser list' and held_now not 'full text'): TWODEE-2 (Folch et al. 2008; Earth-prints offers 'Request a copy' only), the three TWODEE papers (Hankin and Britter 1999, Parts 1 to 3; publications.eng.cam.ac.uk did not answer the browser), Wang et al. 2014 (Surrey's download is behind a consent banner) and DISPLAY-2 (Venetsanos et al. 2003). They bear on the third, exploratory engine (Issue 207422dc). Their next rung is the operator's browser or the authors.
+  type: missing_content
+  quadrant: ELIMINATE (importance=low, urgency=low)
+  detection: review
+  target: code
+  state: open
+limit-by-day-scichem-is-below-every-trial-arc-and-on-goldfish-the-shortfall-is-not-its-layer EXIT=0 :: Created Issue: f04a469c-ca63-478d-8ca4-feb75179bdd2
+  name: limit-by-day-scichem-is-below-every-trial-arc-and-on-goldfish-the-shortfall-is-not-its-layer
+  description: Known limit (HB-196 Part A item 2; HB-183, HB-185; T58 of every dense brief's TEVV page, src/hazbrief/brief/conditions.yaml): on the daytime two-phase field trials (Desert Tortoise 1 to 3, Goldfish 1 to 3; 11 arcs at 300 to 3,000 m), SCICHEM as hazbrief runs it is below every arc: MG 2.66 (95 percent 1.98 to 3.59) scored as its authors score a peak, and the mean a brief draws 4.33 (docs/evidence/hb185/statistics.tsv). On Desert Tortoise the layer the engine computes was convective where the measured one was weakly stable; given the measured Monin-Obukhov length those trials score 1.78, the stable trials' level. On Goldfish the computed layer was already stable and the shortfall (2.24) is not the layer, and it is unexplained (docs/evidence/hb185/by_material.tsv, layer.tsv). These runs were at the 250 m vertical setting; none has been repeated at the 1.25 m setting every dense brief now runs at. Whether a brief's computed layer misstates its own surface layer is not tested. A later version needs an evaluation of a brief's computed layer against observed surface-layer stability.
+  type: missing_content
+  quadrant: BACKLOG (importance=medium, urgency=low)
+  detection: review
+  target: code
+  state: open

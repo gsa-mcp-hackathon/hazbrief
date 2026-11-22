@@ -1,0 +1,28 @@
+# csx-point-of-rocks-night: grid {'half_width_m': 60807.5, 'step_m': 273.3, 'cells': 445}; release 26.65 min
+# minute, metres from the spill to each level's outline (None: no outline)
+5 {'AEGL-1': None, 'AEGL-2': None, 'AEGL-3': None} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+10 {'AEGL-1': 387, 'AEGL-2': 387, 'AEGL-3': 387} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': True}
+15 {'AEGL-1': 387, 'AEGL-2': 387, 'AEGL-3': 387} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': True}
+20 {'AEGL-1': 387, 'AEGL-2': 387, 'AEGL-3': 387} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': True}
+25 {'AEGL-1': 387, 'AEGL-2': 387, 'AEGL-3': 387} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': True}
+30 {'AEGL-1': 387, 'AEGL-2': 387, 'AEGL-3': 387} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': True}
+35 {'AEGL-1': 387, 'AEGL-2': 387, 'AEGL-3': 387} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': True}
+40 {'AEGL-1': 773, 'AEGL-2': 773, 'AEGL-3': 775} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+45 {'AEGL-1': 985, 'AEGL-2': 986, 'AEGL-3': 988} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+50 {'AEGL-1': 1315, 'AEGL-2': 1367, 'AEGL-3': 1367} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+55 {'AEGL-1': 1376, 'AEGL-2': 1406, 'AEGL-3': 1597} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+60 {'AEGL-1': 1752, 'AEGL-2': 1759, 'AEGL-3': 1843} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+# csx-point-of-rocks-day: grid {'half_width_m': 46565.2, 'step_m': 156.5, 'cells': 595}; release 22.283 min
+# minute, metres from the spill to each level's outline (None: no outline)
+5 {'AEGL-1': 0, 'AEGL-2': 0, 'AEGL-3': 1} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': True}
+10 {'AEGL-1': 0, 'AEGL-2': 0, 'AEGL-3': 1} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': True}
+15 {'AEGL-1': 0, 'AEGL-2': 0, 'AEGL-3': 1} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': True}
+20 {'AEGL-1': 0, 'AEGL-2': 0, 'AEGL-3': 1} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': True}
+25 {'AEGL-1': 172, 'AEGL-2': 221, 'AEGL-3': 340} covers {'AEGL-1': True, 'AEGL-2': True, 'AEGL-3': False}
+30 {'AEGL-1': 868, 'AEGL-2': 1001, 'AEGL-3': 1364} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+35 {'AEGL-1': 1662, 'AEGL-2': 1887, 'AEGL-3': None} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+40 {'AEGL-1': 2475, 'AEGL-2': 2848, 'AEGL-3': None} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+45 {'AEGL-1': 3359, 'AEGL-2': 3893, 'AEGL-3': None} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+50 {'AEGL-1': 4276, 'AEGL-2': 5056, 'AEGL-3': None} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+55 {'AEGL-1': 5227, 'AEGL-2': 6413, 'AEGL-3': None} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}
+60 {'AEGL-1': 6216, 'AEGL-2': None, 'AEGL-3': None} covers {'AEGL-1': False, 'AEGL-2': False, 'AEGL-3': False}

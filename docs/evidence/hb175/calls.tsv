@@ -1,0 +1,15 @@
+recorder	host	admitted	answered	failed	refused	declared_ceilings
+hb175_record_requests	api.census.gov	1	1	0	0	60 (manifest request, un1005-i81); 80 (brief requests, both)
+hb175_record_requests	carto.nationalmap.gov	21	21	0	0	60 (manifest request, un1005-i81); 80 (brief requests, both)
+hb175_record_requests	hydro.nationalmap.gov	6	6	0	0	60 (manifest request, un1005-i81); 80 (brief requests, both)
+hb175_record_requests	services.arcgis.com	6	6	0	0	60 (manifest request, un1005-i81); 80 (brief requests, both)
+hb175_record_requests	tigerweb.geo.census.gov	12	12	0	0	60 (manifest request, un1005-i81); 80 (brief requests, both)
+record_derivations	carto.nationalmap.gov	12	12	0	0	300; 300; 100; 100 (runs 3 to 6: the first stopped on SLAB's unheld deck, the last two the fixed-point passes)
+record_derivations	elevation.nationalmap.gov	0	0	0	8	300; 300; 100; 100 (runs 3 to 6: the first stopped on SLAB's unheld deck, the last two the fixed-point passes)
+record_derivations	epqs.nationalmap.gov	0	0	0	8	300; 300; 100; 100 (runs 3 to 6: the first stopped on SLAB's unheld deck, the last two the fixed-point passes)
+record_derivations	hydro.nationalmap.gov	1	1	0	0	300; 300; 100; 100 (runs 3 to 6: the first stopped on SLAB's unheld deck, the last two the fixed-point passes)
+record_derivations	services.arcgis.com	1	1	0	0	300; 300; 100; 100 (runs 3 to 6: the first stopped on SLAB's unheld deck, the last two the fixed-point passes)
+record_derivations	tigerweb.geo.census.gov	20	20	0	0	300; 300; 100; 100 (runs 3 to 6: the first stopped on SLAB's unheld deck, the last two the fixed-point passes)
+hb175_record_requests	TOTAL	46	46	0	0	60 (manifest request, un1005-i81); 80 (brief requests, both)
+record_derivations	TOTAL	34	34	0	16	300; 300; 100; 100 (runs 3 to 6: the first stopped on SLAB's unheld deck, the last two the fixed-point passes)
+ALL	TOTAL	80	80	0	16	

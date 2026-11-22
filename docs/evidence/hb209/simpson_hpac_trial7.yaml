@@ -1,0 +1,29 @@
+# HB-209 Part C item 6: the two published HPAC runs of Jack Rabbit II Trial 7, as the held manuscript prints them.
+#
+# Source: simpson-2020-hpac-jack-rabbit-ii-accepted-manuscript (corpus/sources.yaml), the held PDF
+# corpus/raw/simpson-2020-hpac-jack-rabbit-ii-accepted-manuscript.pdf, sha256 below, PDF p. 8 (printed p. 8), manuscript
+# lines 216 to 223. Read with `pdftotext -layout` (poppler 26.02.0); each `line` is the Trial 7 row exactly as that text
+# layer prints it, and `ppm` is the same numbers in the order of `arcs_km`.
+#
+# The manuscript, lines 216 to 217: "Maximum concentrations per arc (no averaging) for these two sets of models (simple
+# and complex) are given for Trials 1, 6, and 7 in Tables 3 and 4." Lines 226 to 228: "The MWG data collection and
+# model inter-comparison centered on using the complex (Jet + Stack) release source term and the MWG StabE weather
+# set." So Table 4's Trial 7 row is the HPAC row of the 17-model comparison's Table 5 (p. 20), which
+# docs/evidence/hb199/trial7.yaml `tools.HPAC` holds rounded to the ppm; Table 3's is the second published HPAC run.
+
+source: simpson-2020-hpac-jack-rabbit-ii-accepted-manuscript
+pdf_sha256: 5bbc6cbfe56347e771def35c2021d99c0157cbeb25e6b0a2ad4d69a28474ffb8
+page: "PDF p. 8, lines 221 to 223"
+columns: "11.0 km (ppm) | 5.0 km (ppm) | 2.0 km (ppm) | 1.0 km (ppm) | 0.5 km (ppm) | 0.2 km (ppm)"
+arcs_km: [0.2, 0.5, 1, 2, 5, 11]
+runs:
+  HPAC_simple:
+    table: "Table 3: Maximum arc-concentrations from our modeling results – Simple Model (MWG StabE Weather)."
+    what: HPAC, simple (jet-only) source, the working group's weather with stability class E
+    line: "7          63.6        270.4       930.7       2,229.9      6,399.0    55,915.6"
+    ppm: [55915.6, 6399.0, 2229.9, 930.7, 270.4, 63.6]
+  HPAC_complex:
+    table: "Table 4: Maximum arc-concentrations from our modeling results – Complex Model (MWG StabE Weather)."
+    what: HPAC, complex (jet and stack) source, the working group's weather with stability class E
+    line: "7          65.7        278.3       1,004.6     2,633.4      6,314.1    31,372.5"
+    ppm: [31372.5, 6314.1, 2633.4, 1004.6, 278.3, 65.7]

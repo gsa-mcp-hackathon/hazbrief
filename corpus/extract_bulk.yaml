@@ -1,0 +1,65 @@
+# RETIRED (HB-71, 2026-10-30): bulk_extract.py (a build tool held privately) is retired in favour of the kit's `squiddy extract --all` (squiddy SQ-050R). This file is kept as
+# the record of the run(s) it configured; nothing reads it now.
+# The bulk extraction run's plan (HB-14b ADDENDUM-00, "the bulk run, as the operator wants it"), read by
+# bulk_extract.py (a build tool held privately). The instrument (prompts, segment rule, roles, transport) is the graph's; the page exclusion
+# and the spend node are the pilot plan's (`plan`), read from there so there is one copy. The spend baseline (HB-29) is
+# the graph's, extract/control.yaml `baseline:` (HB-64).
+
+#: The pilot plan whose `exclude_segments` and `spend_node`
+#: bind this run too (ERG 2024 Table 1, pp. 292-335, stays out).
+plan: corpus/extract_pilot.yaml
+
+#: The evidence directory under the graph's `evidence_dir`. Each batch's extraction evidence goes in
+#: `<evidence_version>/batch_NN/`, so the per-batch rater reads one batch; the checkpoint is at the root.
+evidence_version: hb14b_bulk
+
+#: The prefix of every spend job (`<prefix>:<key16>:extract:<doc>:p<pass>a<attempt>`).
+job_prefix: hb14b
+
+#: Release labels are `<release_prefix>_NN`, through the kit's `resume_version` (DN-044 R-193).
+release_prefix: hb14b_bulk
+
+#: ADDENDUM-00: "A release every ten finished documents and at the end."
+release_every: 10
+
+#: Units already extracted under the current CLI: a `done` row under the same unit key in one of these evidence
+#: versions' checkpoints is skipped (HB-14b step 4 committed them to hb01b_09).
+already_extracted: [hb14_pilot_cli309]
+
+#: The positive control the per-batch rater gate is given: the pilot's, under the same CLI (2.1.309).
+control: hb14_pilot_cli309/extract_control.json
+
+#: The model lock. The run records its CLI at start (the `start` row). HB-31: it no longer stops when the lock moves, and
+#: HB-14b's `stop_starting_after_utc` deadline before the next bump is gone with that stop; under squiddy R-232 (HB-30)
+#: every client holds the run's piloted binary and a bump is logged once (`cli_lock_moved`).
+lock_file: ../seldon/models/models.lock.yaml
+
+#: ADDENDUM-00: a first pass, a second over every failed row with its approval, a third only for rows that failed
+#: differently the second time.
+passes: 3
+
+#: A session failure (auth, the subscription's five-hour window) is not the document's: wait this long and retry the
+#: same document, recording the stop and the resume with their times (HB-14 ADDENDUM-01). Bounded by the deadline.
+systemic_wait_seconds: 600
+
+#: Constitution 15.3, and ADDENDUM-00's log.
+progress_seconds: 60
+progress_log: logs/2026-10-22_HB-14b_bulk_progress.log
+
+#: The checkpoint, inside the evidence directory: one fsynced row per event (extracted, committed, failed, gate,
+#: release, stop, resume).
+state_file: bulk_state.jsonl
+
+#: The approval the second and third passes carry, one per document job (HB-14 ADDENDUM-01: "one approval directory
+#: per document job"). Its ceiling is the job's own declared token cap, which still binds.
+approval:
+  operator: Brock Webb
+  date: "2026-10-22"
+  words: >-
+    HB-14b ADDENDUM-00 (operator, 2026-10-22 22:12): "if it has a problem, just kick it out to the try again and
+    save whatever's saved on the checkpoint, and then just pick up the next one and keep on going." HB-14
+    ADDENDUM-01 (operator, 2026-10-22 18:05): budget open, no limits.
+
+#: HB-22 step 4 added tier ordering (`order_units`): units named in an earlier tier run first, smallest first within a
+#: tier. HB-14b's run had no tiers: smallest first over all.
+tiers: []

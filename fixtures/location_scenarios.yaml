@@ -1,0 +1,142 @@
+# Scenarios whose location is given as a milepost or a crossing, not a point (HB-49 step 5; DN-013 sections 2, 5.3).
+# HAND-AUTHORED. Each is a copy of a scenario in fixtures/scenarios.yaml (`base`) with its location replaced by
+# `given`, so the two briefs differ only in how the incident was located.
+#
+# These are not in the scenario manifest (fixtures/scenarios.yaml): the manifest runs each tool once at one point
+# (scenario_manifest.py (a build tool held privately)), and a shape is one footprint call per sample plus one call of each other tool over
+# their union (src/hazbrief/brief/union.py). Their calls are recorded by scripts/record_location_scenarios.py into the
+# scenario-brief seed (evidence/seed_briefs/), and their briefs are built and checked by
+# scripts/build_scenario_briefs.py beside the other committed briefs.
+#
+# not_run: a channel the brief does not call, with the reason its sections print (orchestrator.yaml not_run_label).
+
+scenarios:
+  - id: i81-md-pa-line-milepost
+    origin: HB-49
+    base: i81-md-pa-line-day
+    given: {kind: milepost, state: PA, route: I-81, from_mile: 0, to_mile: 1}
+    incident:
+      material: UN1017
+      container: Highway tank truck or trailer
+      incident_time: '2026-10-21T14:00:00-04:00'
+      fire_involved: false
+      spill_size: large
+    wind:
+      direction_deg_from: 270
+      speed_kmh: 13
+      observed_at: '2026-10-20T13:40:00-04:00'
+      source: worked example wind
+    as_given: '2026-10-21T14:00:00-04:00'
+    not_run:
+      build_ics_201: >-
+        the frozen ICS 201 takes a point and draws its footprint around it, which over a segment is the bare-point
+        error DN-013 section 2 forbids; it takes a location record after 2026-11-20 (DN-013 section 6)
+
+  - id: csx-point-of-rocks-crossing
+    origin: HB-49
+    base: csx-point-of-rocks-day
+    given: {kind: crossing, state: MD, city: Point of Rocks, street: Canal Road}
+    incident:
+      material: UN1017
+      container: Rail tank car
+      incident_time: '2026-10-21T14:00:00-04:00'
+      fire_involved: false
+      spill_size: large
+    wind:
+      direction_deg_from: 270
+      speed_kmh: 13
+      observed_at: '2026-10-20T13:40:00-04:00'
+      source: worked example wind
+    as_given: '2026-10-21T14:00:00-04:00'
+    not_run:
+      build_ics_201: >-
+        the frozen ICS 201 takes a point and draws its footprint around it, without the crossing's stated accuracy
+        (DN-013 section 2); it takes a location record after 2026-11-20 (DN-013 section 6)
+
+  # HB-50: the same Wilson Bridge incident located by an address and by cross streets, both within a kilometre of
+  # i495-wilson-bridge-day's point (DN-013 section 5.4).
+  - id: i495-wilson-bridge-address
+    origin: HB-50
+    base: i495-wilson-bridge-day
+    given: {kind: address, address: '100 Jones Point Dr, Alexandria, VA 22314'}
+    incident:
+      material: UN1017
+      container: Highway tank truck or trailer
+      incident_time: '2026-10-21T14:00:00-04:00'
+      fire_involved: false
+      spill_size: large
+    wind:
+      direction_deg_from: 270
+      speed_kmh: 13
+      observed_at: '2026-10-20T13:40:00-04:00'
+      source: worked example wind
+    as_given: '2026-10-21T14:00:00-04:00'
+    not_run:
+      build_ics_201: >-
+        the frozen ICS 201 takes a point and draws its footprint around it, which over an address range's segment is
+        the bare-point error DN-013 section 2 forbids; it takes a location record after 2026-11-20 (DN-013 section 6)
+
+  - id: i495-wilson-bridge-cross-streets
+    origin: HB-50
+    base: i495-wilson-bridge-day
+    given: {kind: intersection, street_a: Jefferson St, street_b: S Lee St, place: Alexandria, state: VA}
+    incident:
+      material: UN1017
+      container: Highway tank truck or trailer
+      incident_time: '2026-10-21T14:00:00-04:00'
+      fire_involved: false
+      spill_size: large
+    wind:
+      direction_deg_from: 270
+      speed_kmh: 13
+      observed_at: '2026-10-20T13:40:00-04:00'
+      source: worked example wind
+    as_given: '2026-10-21T14:00:00-04:00'
+    not_run:
+      build_ics_201: >-
+        the frozen ICS 201 takes a point and draws its footprint around it, without the intersection's 7.6 m disc
+        (DN-013 section 2); it takes a location record after 2026-11-20 (DN-013 section 6)
+
+  # HB-60: one scenario whose wind is NWS's own at record time (HB-56 RESULT section 7 item 5: every other fixture gives
+  # the worked example's wind, from 2026-10-20, and flags against the later grids). No `wind`: the footprint reads the
+  # NWS gridpoint wind at the as-given time itself (nws.wind_at, HB-08), from the forecast grid recorded with it. The
+  # place was chosen from a scan of ten corridor grids for one whose forecast stayed within FMH-1's 45 degrees over the
+  # window at record time (HB-60 RESULT section 5; a first choice at Hagerstown veered 90 degrees and was dropped). The
+  # station nearest the spill is KAVP (9.4 km); the as-given time is 45 minutes after its recorded latest observation
+  # (04:00Z), so that observation is usable for the stability class.
+  - id: scranton-i81-nws-wind
+    origin: HB-60
+    base: i81-md-pa-line-night
+    given: {kind: address, address: '235 Penn Ave, Scranton, PA 18503'}
+    incident:
+      material: UN1017
+      container: Highway tank truck or trailer
+      incident_time: '2026-10-28T00:45:00-04:00'
+      fire_involved: false
+      spill_size: large
+    as_given: '2026-10-28T00:45:00-04:00'
+    not_run:
+      build_ics_201: >-
+        the frozen ICS 201 takes a point and draws its footprint around it, which over an address range's segment is
+        the bare-point error DN-013 section 2 forbids; it takes a location record after 2026-11-20 (DN-013 section 6)
+
+  # HB-70 step 3 (renumbered HB-72): scranton-i81-nws-wind's sibling, identical except that it states a scene wind
+  # (fixtures/scenario_stated_winds.yaml), so the puff is driven by it where the held forecast reads 0 km/h through the
+  # window. Its tool calls are the same calls, so it replays from the seed records scranton-i81-nws-wind recorded
+  # (evidence records are keyed by tool and parameters); nothing is recorded for it. The ERG footprint does not read the
+  # stated wind, so the two briefs' footprints are the same.
+  - id: scranton-i81-stated-wind
+    origin: HB-72
+    base: scranton-i81-nws-wind
+    given: {kind: address, address: '235 Penn Ave, Scranton, PA 18503'}
+    incident:
+      material: UN1017
+      container: Highway tank truck or trailer
+      incident_time: '2026-10-28T00:45:00-04:00'
+      fire_involved: false
+      spill_size: large
+    as_given: '2026-10-28T00:45:00-04:00'
+    not_run:
+      build_ics_201: >-
+        the frozen ICS 201 takes a point and draws its footprint around it, which over an address range's segment is
+        the bare-point error DN-013 section 2 forbids; it takes a location record after 2026-11-20 (DN-013 section 6)

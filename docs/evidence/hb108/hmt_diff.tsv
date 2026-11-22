@@ -1,0 +1,4 @@
+kind	identification_number	description	hazard_class	field	old	new
+changed	UN0101	Fuse, non-detonating instantaneous or quickmatch	1.3G	special_provisions		200
+changed	UN0335	Fireworks	1.3G	special_provisions	108	108,200
+changed	UN0431	Articles, pyrotechnic for technical purposes	1.4G	special_provisions	381	200,381

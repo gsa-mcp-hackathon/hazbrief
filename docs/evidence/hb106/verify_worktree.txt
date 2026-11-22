@@ -1,0 +1,35 @@
+
+seldon verify — hazbrief-mcp
+
+  ✓ File hashes          All 36 tracked files in sync
+  ✓ Ontology             Up to date (epoch 6)
+  ✓ Glossary             No violations (validity)
+  ✓ References           No PaperSection files to check
+  ✓ Stale artifacts      None
+  ✓ Blocking tasks       None
+  ✓ Blocks and waits     1 blocked or waiting task(s), every block with a reason
+  ✓ Unregistered files   No tracked content directories found — skipping
+  ✓ Relationship types   All canonical (uppercase)
+  ✓ Precedence           134 edges, acyclic
+  ⚠ Task source files    8 open tasks name a source_file that is not on disk — unexecutable as specified
+      09689581... [proposed] HB-109
+      33adc848... [proposed] HB-110
+      215d8e5e... [proposed] HB-111
+      bbcf205f... [proposed] HB-112
+      c0aab0cb... [proposed] HB-113
+      0978e182... [proposed] HB-114
+      c6637830... [proposed] HB-115
+      625ccfef... [proposed] HB-116
+  ✓ Event log            2487 events readable
+  ✓ Governed docs        No governed graph in this project — skipping (AD-030 is opt-in per project)
+  ✓ Binding constraints  No governed graph in this project — skipping (AD-030 is opt-in per project)
+  ✓ Decision register    No decision register in this project — skipping (AD-033-R1)
+  ✓ Prior art            16 note(s) outside the baseline, each with a passing verdict (AD-036-R4)
+  ✓ Commit hook          installed (.githooks); no design note committed past it
+  ✓ Tracked dirs         cc_tasks and a session handoff (held privately) tracked (AD-039)
+  ✓ Pass ledger          no pass_ledger declared; skipping (squiddy DN-052 R-237)
+  ✓ Replay               Skipped (expensive) — run `seldon verify --replay`
+
+  1 warning.
+
+EXIT 1

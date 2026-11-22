@@ -1,0 +1,117 @@
+# HB-156 Part B: every sentence claims_checked.md quotes, with the held file it is read from.
+# Checked by tools/locate_quotes.py (output: locate_quotes.txt).
+- id: C1-a  # 40 CFR 68.20
+  file: corpus/raw/cfr40-part68-govinfo-2025.pdf
+  quote: >-
+    The owner or operator of a stationary source subject to this part shall prepare a worst-case release scenario
+    analysis as provided in § 68.25 of this part and complete the five-year accident history as provided in § 68.42.
+- id: C1-b  # 40 CFR 68.25(a)
+  file: corpus/raw/cfr40-part68-govinfo-2025.pdf
+  quote: >-
+    (a) The owner or operator shall analyze and report in the RMP: (1) For Program 1 processes, one worst-case
+    release scenario for each Program 1 process;
+- id: C1-c  # 40 CFR 68.165(a)
+  file: corpus/raw/cfr40-part68-govinfo-2025.pdf
+  quote: >-
+    § 68.165 Offsite consequence analysis. (a) The owner or operator shall submit in the RMP information: (1) One
+    worst-case release scenario for each Program 1 process;
+- id: C1-d  # 42 U.S.C. 7412(r)(7)(B)(ii)(I)
+  file: corpus/raw/usc-42-7412-caa-112-2024.pdf
+  quote: >-
+    (I) a hazard assessment to assess the potential effects of an accidental release of any regulated substance.
+    This assessment shall include an estimate of potential release quantities and a determination of downwind
+    effects, including potential exposures to affected populations.
+- id: C1-e  # 42 U.S.C. 7412(r)(7)(B)(ii)(I), end
+  file: corpus/raw/usc-42-7412-caa-112-2024.pdf
+  quote: and shall include an evaluation of worst case accidental releases;
+- id: C1-f  # 65 FR 48108, background
+  file: corpus/raw/fr-2000-19785-oca-distribution-final-rule.pdf
+  quote: >-
+    Congress further mandated that facilities perform an off-site consequences analysis (OCA) for one or more
+    hypothetical accidental worst case and/ or alternative release scenarios and report the results of the analysis
+    in a risk management plan (RMP)
+- id: C2-a  # Pub. L. 106-40 sec. 3(a), CAA 112(r)(7)(H)(ii)(I)
+  file: corpus/raw/plaw-106-40-csissfrra-1999.pdf
+  quote: >-
+    the increased risk of terrorist and other criminal activity associated with the posting of off-site consequence
+    analysis information on the Internet;
+- id: C2-b  # Pub. L. 106-40 sec. 3(a), CAA 112(r)(7)(H)(iii)(II)
+  file: corpus/raw/plaw-106-40-csissfrra-1999.pdf
+  quote: >-
+    off-site consequence analysis information covered by the regulations, and any ranking of stationary sources
+    derived from the information, shall not be made available under section 552 of title 5, United States Code,
+    after the end of that period.
+- id: C2-c  # Pub. L. 106-40 sec. 3(a), CAA 112(r)(7)(H)(v)(I)
+  file: corpus/raw/plaw-106-40-csissfrra-1999.pdf
+  quote: >-
+    a covered person shall not disclose to the public off-site consequence analysis information in any form, or any
+    statewide or national ranking of identified stationary sources derived from such information, except as
+    authorized by this subparagraph
+- id: C2-d  # Pub. L. 106-40 sec. 3(a), CAA 112(r)(7)(H)(v)(III)
+  file: corpus/raw/plaw-106-40-csissfrra-1999.pdf
+  quote: >-
+    If the owner or operator of a stationary source makes off-site consequence analysis information relating to
+    that stationary source available to the public without restriction
+- id: C2-e  # Pub. L. 106-40 sec. 3(a), CAA 112(r)(7)(H)(i)(III)
+  file: corpus/raw/plaw-106-40-csissfrra-1999.pdf
+  quote: >-
+    The term 'off-site consequence analysis information' means those portions of a risk management plan, excluding
+    the executive summary of the plan, consisting of an evaluation of 1 or more worst-case release scenarios or
+    alternative release scenarios, and any electronic data base created by the Administrator from those portions.
+- id: C2-f  # Pub. L. 106-40 sec. 4(a)
+  file: corpus/raw/plaw-106-40-csissfrra-1999.pdf
+  quote: >-
+    each owner or operator of a stationary source covered by section 112(r)(7)(B)(ii) of the Clean Air Act shall
+    convene a public meeting, after reasonable public notice, in order to describe and discuss the local
+    implications of the risk management plan
+- id: C2-g  # 42 U.S.C. 7412(r)(7)(H)(v)(I), codified
+  file: corpus/raw/usc-42-7412-caa-112-2024.pdf
+  quote: >-
+    a covered person shall not disclose to the public off-site consequence analysis information in any form
+- id: C2-h  # 65 FR 48108-48109, background
+  file: corpus/raw/fr-2000-19785-oca-distribution-final-rule.pdf
+  quote: >-
+    the Federal Bureau of Investigation and other representatives of the law enforcement and intelligence
+    communities raised concerns that releasing the OCA portions of RMPs via the Internet would enable individuals
+    anywhere in the world anonymously to search electronically for industrial facilities in the U.S. to target for
+    purposes of causing an intentional industrial chemical release.
+- id: C2-i  # 40 CFR 1400.1 as promulgated, 65 FR 48131
+  file: corpus/raw/fr-2000-19785-oca-distribution-final-rule.pdf
+  quote: >-
+    Stationary sources subject to the Chemical Accident Prevention Provisions of 40 CFR part 68 are required to
+    analyze the potential harm to public health and welfare of hypothetical chemical accidents and submit the
+    results of their analyses to the U.S. Environmental Protection Agency as part of risk management plans.
+- id: C2-j  # 40 CFR 1400.3(c) as promulgated
+  file: corpus/raw/fr-2000-19785-oca-distribution-final-rule.pdf
+  quote: >-
+    (c) Limited number. Any person shall be provided with access to a paper copy of the OCA information for up to
+    10 stationary sources located anywhere in the country, without geographical restriction, in a calendar month.
+- id: C2-k  # 40 CFR 1400.10 as promulgated
+  file: corpus/raw/fr-2000-19785-oca-distribution-final-rule.pdf
+  quote: >-
+    federal, state, and local government officials, and qualified researchers are prohibited from disseminating OCA
+    information and OCA rankings to the public.
+- id: C2-l  # 2024 SCCAP final rule, pre-publication copy
+  file: corpus/raw/epa-rmp-sccap-final-rule-2024-prepub.pdf
+  quote: >-
+    This OCA information remains accessible to the public only in Federal Reading Rooms
+- id: C2-m  # 2024 SCCAP final rule, pre-publication copy
+  file: corpus/raw/epa-rmp-sccap-final-rule-2024-prepub.pdf
+  quote: >-
+    By policy, EPA has restricted access to the RMP database, even though only a portion of the database is
+    restricted by CAA section 112(r)(7)(H) and its implementing regulations in 40 CFR part 1400.
+- id: C1-g  # 40 CFR 68.22(b)
+  file: corpus/raw/cfr40-part68-govinfo-2025.pdf
+  quote: a wind speed of 1.5 meters per second and F atmospheric stability class
+- id: C1-h  # 40 CFR 68.22
+  file: corpus/raw/cfr40-part68-govinfo-2025.pdf
+  quote: highest daily maximum temperature
+- id: C2-n  # Pub. L. 106-40, CAA 112(r)(7)(H)(ii)(I)(bb); the sentence runs on to 113 Stat. 209 past the running
+  # header ("information for reduction in the risk of accidental releases"), so only the 113 Stat. 208 part is matched
+  file: corpus/raw/plaw-106-40-csissfrra-1999.pdf
+  quote: the incentives created by public disclosure of off-site consequence analysis
+- id: C2-o  # 65 FR 48109
+  file: corpus/raw/fr-2000-19785-oca-distribution-final-rule.pdf
+  quote: >-
+    concluded that public disclosure of OCA information would likely lead to a significant reduction in the number
+    and severity of accidental chemical releases

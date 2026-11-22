@@ -1,0 +1,336 @@
+# scripts/build_packs.py settings (HB-03). Every top-level key is required; a missing key is fatal at
+# startup (standards s2, s4). Paths are relative to the repository root. Source ids are
+# corpus/sources.yaml doc_ids; the build resolves each to its held file, raw sha256 and licence
+# through squiddy_intake.py (a build tool held privately)'s join (never through the Squiddy manifest; HB-01c section 1).
+
+# The pack schema version this build writes. src/hazbrief/packs.py refuses any other value
+# (SUPPORTED_SCHEMA_VERSIONS there); bump both together, with a SCHEMA.md change note.
+schema_version: 8
+
+# Output and input locations.
+paths:
+  packs_dir: packs
+  schema_dir: packs/schema
+  flag_rules: packs/src/flag_rules.yaml
+  # HB-12: the rule kinds and inputs, the hand-written table rules, and the mined rules the
+  # admission test admitted (written by `scripts/mine_flag_rules.py admit`).
+  flag_kinds: packs/src/flag_kinds.yaml
+  flag_rules_table: packs/src/flag_rules_table.yaml
+  flag_rules_mined: packs/src/flag_rules_mined.jsonl
+  vocabulary: packs/src/vocabulary.yaml
+  # HB-120: the release routing table, authored one block per ERG orange guide (DN-020 ADDENDUM-02 item 3).
+  release_routing: packs/src/release_routing.yaml
+  # HB-155: the siting rules, each with its held quote or operator record (DN-023 section 4).
+  siting_rules: packs/src/siting_rules.yaml
+  # HB-207: the suggested actions to consider, each a held quotation or the guide's cell (DN-029 ADDENDUM-00).
+  suggested_actions: packs/src/suggested_actions.yaml
+  hydrography_probe_log: corpus/api_probe_log.jsonl
+  probe_config: corpus/probe_config.yaml
+
+# Pack content versions (SCHEMA.md "version"): `<edition of the governing source>.<build revision>`.
+# Bump the revision when the parse or the content rules change for the same source edition.
+pack_versions:
+  erg: "erg2024.5"
+  cfr172: "cfr2025.1"
+  cameo: "cameo3.1.0.1"
+  hazard_classes: "dn001.1"
+  flag_rules: "hb18.1"
+  vocabulary: "hb03.1"
+  # HB-207: the suggested actions to consider (DN-029 ADDENDUM-00 section 3).
+  suggested_actions: "hb207.1"
+  # HB-66: the workbench puff's packs (DN-018 sections 3 to 5).
+  # HB-109: the thermodynamics and levels of concern; every app-pack receipt carries its file's sha256.
+  # HB-124: the liquid heat capacity and density (NIST Fluid Systems; the SLAB guide's chlorine test input), argon's
+  # enthalpy of vaporisation, and each held thermodynamic value's source_tier.
+  # HB-126: the vapour heat capacity (SLAB's CPS) from the same Fluid Systems row and the same SLAB test input; a
+  # Shomate row alone no longer counts it held.
+  materials_properties: "hb126.1"
+  sigma_curves: "isc3v2.2"
+  release_scenarios: "rmpoca2009.2"
+  # HB-120: every ERG guide routed to a release model or to "no dispersion model applies" (DN-020 ADDENDUM-02 item 3).
+  release_routing: "hb120.1"
+  # HB-155: the command post, triage and staging siting rules (DN-023 section 4).
+  # HB-178: a source about one material keyed by the material (Issue 1f99f2f8); a general source drawn from one
+  # material's incident carries its note.
+  siting_rules: "hb178.1"
+
+# The eight seed UN numbers (DN-001 section 3; HB-01's seed set, test_corpus_intake.py (a test held privately) SEED_UN).
+seed_un_numbers: ["1005", "1017", "1075", "1202", "1203", "1951", "1977", "1978"]
+
+# ── ERG 2024 (erg2024-en-pdf), read by PDF page (1-based; printed page = PDF page - 2) ────────────
+# Schema version 3 (HB-03b): every ID number's rows and every orange guide come from the
+# triple-keyed, adjudicated rows (`keys_config`: the page ranges, the three keys and their
+# outputs). HB-03's seed-only locators (yellow_index_pages, table1_pages, table3_pages,
+# guide_pages) are retired: the pages are `keya.pages` in that file.
+erg:
+  doc_id: erg2024-en-pdf
+  keys_config: packs/src/erg_keys.yaml
+  # HB-15: the Table of Markings, Labels and Placards (PDF pp. 10-11), Key B; Key A is read from
+  # the PDF by scripts/erg_placards.py, and the build refuses unless the two agree.
+  placards_key_b: packs/src/erg_placards_keyB.yaml
+  # HB-17: the yellow-index rows with no ID number (p. 31), the explosives. Note 2 on p. 30 says
+  # why; the build checks this text is on that page and every row's guide is a packed guide.
+  unnumbered_note: {page: 30, quote: "Explosives are not individually listed by their ID number"}
+  # Another name a row answers to, only where a held source prints the pair. 49 CFR 173.59
+  # ("Description of terms for explosives", held as cfr49-govinfo-bulk) gives the term with its
+  # abbreviation; the build checks the quote is in that section of the held XML.
+  unnumbered_aliases:
+    - name: "Ammonium nitrate-fuel oil mixtures"
+      alias: "ANFO"
+      doc_id: cfr49-govinfo-bulk
+      section: "173.59"
+      quote: "Ammonium-nitrate—fuel oil mixture (ANFO)."
+  # The reuse notice (back matter p. 382, "REPRODUCTION AND RESALE"), carried in the attribution
+  # block verbatim: from the start heading up to the end of the page.
+  reuse_notice: {page: 382, start: "REPRODUCTION AND RESALE"}
+  # Guide-page furniture that is not guide content: the ERAP note on the right page.
+  guide_trailer_patterns: ['^In Canada, an Emergency Response Assistance Plan', '^Please consult the shipping paper']
+  # The three sections the task names, by the heading that opens each.
+  guide_sections:
+    potential_hazards: "POTENTIAL HAZARDS"
+    public_safety: "PUBLIC SAFETY"
+    emergency_response: "EMERGENCY RESPONSE"
+
+# ── Cross-check sources (DN-003 section 5) ───────────────────────────────────────────────────────
+pubchem:
+  doc_id: erg2024-pubchem-index
+cameo:
+  unna_doc_prefix: cameo-unna-
+  guide_doc_prefix: erg-guide-
+  # The held CAMEO chemical datasheets. Each is matched to seed UN numbers by the UN/NA numbers
+  # its own Chemical Identifiers table lists, not by this list's order.
+  chemical_doc_ids:
+    - cameo-chem-2862
+    - cameo-chem-4860
+    - cameo-chem-987
+    - cameo-chem-9018
+    - cameo-chem-11498
+    - cameo-chem-11452
+    - cameo-chem-4069
+    - cameo-chem-2509
+  # The Response Recommendations subsections the server surfaces (the page's own field labels).
+  # The DuPont Tychem permeation subsection is a separate label and is not surfaced: it is
+  # DuPont's data, "(DuPont, 2024)", not a federal work.
+  response_sections:
+    - Isolation and Evacuation
+    - Firefighting
+    - Non-Fire Response
+    - Protective Clothing
+    - First Aid
+
+# ── 49 CFR 172.101 (cfr49-govinfo-bulk) ──────────────────────────────────────────────────────────
+cfr:
+  doc_id: cfr49-govinfo-bulk
+  section: "§ 172.101"
+  # The Hazardous Materials Table is the GPOTABLE in the section whose leaf column headings
+  # include all of these (read from its BOXHD).
+  table_columns:
+    symbols: "Symbols"
+    description: "Hazardous materials descriptions and proper shipping names"
+    hazard_class: "Hazard class or Division"
+    identification_number: "Identification Numbers"
+    packing_group: "PG"
+    label_codes: "Label Codes"
+    special_provisions: "Special provisions (§ 172.102)"
+  identification_prefix: "UN"
+  # The edition notice carried verbatim in the attribution block (front matter, "Legal Status and
+  # Use of Seals and Logos"): the paragraph containing this text.
+  reuse_notice_contains: "It is prohibited to use NARA"
+
+# ── Hazard classes (DN-001 section 3) ────────────────────────────────────────────────────────────
+# Membership is computed from the built erg and cfr172 packs, never listed by hand. Classes are
+# tested in this order and a UN number joins the first class whose criteria it meets.
+hazard_classes:
+  - class_id: tih_gas
+    title: toxic inhalation hazard gases
+    rule_set_id: rules.tih_gas
+    criteria: {erg_tih: true}
+  - class_id: flammable_liquefied_gas
+    title: flammable liquefied gases
+    rule_set_id: rules.flammable_liquefied_gas
+    criteria: {cfr_hazard_class: "2.1"}
+  - class_id: flammable_liquid
+    title: flammable liquids
+    rule_set_id: rules.flammable_liquid
+    criteria: {cfr_hazard_class: "3"}
+  - class_id: cryogenic_asphyxiant
+    title: cryogenic asphyxiants
+    rule_set_id: rules.cryogenic_asphyxiant
+    criteria: {cfr_hazard_class: "2.2", erg_name_contains: "cryogenic liquid"}
+
+# ── Hydrography (DN-002 section 4; HB-03 step 5) ────────────────────────────────────────────────
+# One GET each to the two candidate services' descriptions (metadata, no data), sent by
+# scripts/probe_apis.py's `run` with the server's User-Agent and recorded in the probe log. The
+# hosts are this task's declared network for the probes only; they are not added to
+# corpus/allowlist.txt, which governs the corpus fetcher (DN-002 section 1). URLs: NHDPlus HR from
+# its user's guide (usgs-nhdplus-hr-guide p. 35); 3DHP from the corpus entry usgs-3dhp-mapserver.
+hydrography:
+  probe_hosts: [hydro.nationalmap.gov]
+  services:
+    - id: usgs_nhdplus_hr
+      probe:
+        url: https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer?f=json
+        as_of: {json: [copyrightText]}
+    - id: usgs_3dhp
+      probe:
+        url: https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer?f=json
+        as_of: {json: [copyrightText]}
+
+# ── The workbench puff's packs (HB-66; DN-018 sections 3 to 5) ──────────────────────────────────────────────
+# Three application packs the first-order puff reads (`hazbrief.packs.load_app_pack`); the server never loads them
+# (DN-009 section 2: the tool surface is frozen). Every number is parsed from a held page by the locators below and
+# verified there at build; a value no held page states is `not_held` with the reason, and nothing is filled from
+# elsewhere (HB-66 step 1). Pages are PDF pages, or the form-feed blocks of a converted file (packs/SCHEMA.md).
+# `rendered:` marks a page with no usable text layer: its `quote` is the reading of the rendered page image, recorded
+# here once (HB-66 RESULT section 2), as HB-03b's Key B records a reading of the ERG's rendered pages.
+puff:
+  # DN-018 section 3, the routing table: the class each seed material is drawn as, the thresholds the class names and
+  # whether its label carries the dense-gas clause.
+  classes:
+    pressure_liquefied_toxic:
+      thresholds: [AEGL-2, AEGL-3]
+      dense_gas_caveat: true
+      basis: "DN-018 section 3, row 1: passive puff to AEGL-2 and AEGL-3; dense-gas slumping not modelled"
+    cryogenic_asphyxiant:
+      thresholds: [oxygen_deficiency]
+      dense_gas_caveat: true
+      basis: "DN-018 section 3, row 2: passive puff to an oxygen-displacement threshold (29 CFR 1910.134(b))"
+    flammable:
+      thresholds: [LFL]
+      dense_gas_caveat: false
+      basis: "DN-018 section 3, row 3: passive puff to the LFL, drawn as a flash-fire envelope"
+  # The AEGL exposure durations the contours are drawn at (DN-018 section 4 item 4).
+  aegl_minutes: ["10", "30", "60"]
+  # HB-109: the thermodynamics a source term needs and the level of concern per class, each with its held page, and the
+  # application packs' licence gate (review L5-10).
+  properties_source: packs/src/materials_properties.yaml
+  materials:
+    "1005":
+      class: pressure_liquefied_toxic
+      molecular_weight: {doc: nist-webbook-1005, pattern: 'Molecular weight: ([0-9.]+)'}
+      aegl:
+        doc: epa-aegl-compiled-2018
+        page: 42
+        anchor: "7664-41-7 Ammonia (ppm)"
+        columns_quote: "10 min 30 min 60 min 4 hr 8 hr"
+        status: {doc: epa-aegl-results-ammonia, pattern: '[0-9]+-[0-9]+-[0-9] \(([A-Za-z]+)\)'}
+        cross_check: {doc: epa-aegl-results-ammonia, anchor: "Ammonia"}
+      ppm_factor: {doc: niosh-npg-2005-149, page: 45, pattern: 'Ammonia Formula: NH3 CAS#: 7664-41-7 RTECS#: [A-Z0-9]+ IDLH: [0-9]+ ppm Conversion: 1 ppm = ([0-9.]+) mg/m3'}
+    "1017":
+      class: pressure_liquefied_toxic
+      molecular_weight: {doc: nist-webbook-1017, pattern: 'Molecular weight: ([0-9.]+)'}
+      aegl:
+        doc: epa-aegl-compiled-2018
+        page: 43
+        anchor: "7782-50-5 Chlorine (ppm)"
+        columns_quote: "10 min 30 min 60 min 4 hr 8 hr"
+        status: {doc: epa-aegl-results-chlorine, pattern: '[0-9]+-[0-9]+-[0-9] \(([A-Za-z]+)\)'}
+        cross_check: {doc: epa-aegl-results-chlorine, anchor: "Chlorine"}
+      ppm_factor: {doc: niosh-npg-2005-149, page: 89, pattern: 'Chlorine Formula: Cl2 CAS#: 7782-50-5 RTECS#: [A-Z0-9]+ IDLH: [0-9]+ ppm Conversion: 1 ppm = ([0-9.]+) mg/m3'}
+    "1951":
+      class: cryogenic_asphyxiant
+      molecular_weight: {doc: nist-webbook-1951, pattern: 'Molecular weight: ([0-9.]+)'}
+    "1977":
+      class: cryogenic_asphyxiant
+      molecular_weight: {doc: nist-webbook-1977, pattern: 'Molecular weight: ([0-9.]+)'}
+    "1978":
+      class: flammable
+      molecular_weight: {doc: nist-webbook-1978, pattern: 'Molecular weight: ([0-9.]+)'}
+      lfl:
+        doc: epa-aegl-compiled-2018
+        page: 10
+        anchor: "74-98-6 Propane (ppm)"
+        pattern: 'Lower Explosive Limit \(LEL\) = ([0-9,]+) ppm'
+        unit: ppm
+      lfl_cross_check: {doc: cameo-chem-9018, pattern: 'Lower Explosive Limit \(LEL\): ([0-9.]+) %'}
+    "1075":
+      class: flammable
+      # HB-69 step 3: no held text states one molecular weight for LPG; CAMEO's datasheet prints only "greater than 44"
+      # (cameo-chem-987), which is a bound, not a value. Nothing is computed from a composition assumption.
+      molecular_weight: {not_held: "mixture; no held molecular weight (CAMEO prints only \"greater than 44\")"}
+      # CAMEO prints a value per component and no LFL for the mixture; the mixture's own LFL needs its composition,
+      # which no held source states for a shipment.
+      lfl: {not_held: "a mixture: no held source states one LFL for it", quote_doc: cameo-chem-987, quote_pattern: 'Lower Explosive Limit \(LEL\): (Propane: [0-9.]+ %; butane: [0-9.]+ %)'}
+    "1203":
+      class: flammable
+      # HB-69 step 3: the gasoline AEGL TSD's Table 1 (p. 9) converts gasoline vapour by "average molecular weights of
+      # 108 and 73, respectively" (whole gasoline, vapour); the puff draws the vapour, so 73. Cross-checked against the
+      # TSD's own "Gasoline vapor: 1 ppm = 2.99 mg/m3".
+      molecular_weight: {doc: aegl-tsd-gasoline-proposed, page: 9, pattern: 'Calculated \(based on average molecular weights of [0-9]+ and ([0-9]+), respectively\)'}
+      ppm_factor_check: {doc: aegl-tsd-gasoline-proposed, page: 9, pattern: 'Gasoline vapor: 1 ppm = ([0-9.]+) mg/m3'}
+      lfl:
+        doc: epa-aegl-compiled-2018
+        page: 72
+        anchor: "8006-61-9 Automotive Gasoline (unleaded)"
+        pattern: 'Lower Explosive Limit \(LEL\) = ([0-9,]+) ppm'
+        unit: ppm
+      lfl_cross_check: {doc: cameo-chem-11498, pattern: 'Lower Explosive Limit \(LEL\): ([0-9.]+) %'}
+    "1202":
+      class: flammable
+      molecular_weight: {not_held: "mixture; no held molecular weight (CAMEO prints \"data unavailable\")"}
+      # The compiled AEGL table lists no diesel fuel; the held statement of its LEL is CAMEO's datasheet.
+      lfl: {doc: cameo-chem-11452, pattern: 'Lower Explosive Limit \(LEL\): ([0-9.]+) %', unit: "%"}
+  oxygen_deficiency:
+    doc: cfr-1910-134
+    pattern: 'Oxygen deficient atmosphere means an atmosphere with an oxygen content below ([0-9.]+)% by volume'
+  air:
+    conversion_basis: {doc: niosh-npg-2005-149, page: 11, pattern: 'at ([0-9]+)°C and ([0-9]+) atmosphere'}
+    conversion_temperature_k: {doc: epa-rmp-oca-guidance-2009, page: 78, pattern: '\(77 F\) is ([0-9]+) K'}
+    # U.S. Standard Atmosphere, 1976 (us-standard-atmosphere-1976): a scan whose text layer is unusable (HB-65 RESULT
+    # section 2), read from the rendered pages. Table 2 (printed p. 2, PDF p. 18); Table 3 (printed p. 3, PDF p. 19).
+    # R* is computed as k x N_A: the scan's exponent of R* itself is ambiguous at print resolution.
+    boltzmann: {doc: us-standard-atmosphere-1976, page: 18, rendered: "k 1.380622 x 10^-23 N·m/K"}
+    avogadro: {doc: us-standard-atmosphere-1976, page: 18, rendered: "N_A 6.022169 x 10^26 kmol^-1"}
+    sea_level_pressure: {doc: us-standard-atmosphere-1976, page: 18, rendered: "P_0 1.013250 x 10^5 N/m^2 (or Pa)"}
+    oxygen_fraction: {doc: us-standard-atmosphere-1976, page: 19, rendered: "O2 31.9988 .209476"}
+  # The Pasquill-Gifford sigma curves as EPA states them for rural sources: ISC3 Volume II section 1.1.5.1, Table 1-1
+  # (sigma-y) and Table 1-2 (sigma-z). epa-mmgrma-1999 carries no coefficients and SCREEN3's guide (turner-sigma-curves)
+  # defers to the ISC guide (HB-65 RESULT section 2).
+  sigma:
+    doc: epa-isc3-users-guide-vol2
+    sigma_y_page: 29
+    sigma_z_pages: [30, 31]
+    sigma_y_scale_quote: "Fy = 465.11628 (x)tan(TH)"
+    theta_quote: "TH = 0.017453293 [c - d ln(x)]"
+    cap_quote: "If the calculated value of Fz exceed 5000 m, Fz is set to 5000 m."
+    fixed_quote: "Fz is equal to 5000 m."
+    # How a downwind distance picks its band: the table prints rounded bounds ("0.10 - 0.15", "0.16 - 0.20"), so a
+    # distance takes the first band whose printed upper bound it does not exceed; the last band has none.
+    band_rule: "a distance takes the first band whose printed upper bound (km) it does not exceed; the last band has none"
+    urban_not_built: "ISC3's urban sigma curves (Briggs) are not built: no held land-cover rule selects urban dispersion for a spill yet (HB-66 step 4)"
+  # EPA's RMP Offsite Consequence Analysis Guidance (ccps-discharge-reference, held as these two documents; HB-65 RESULT
+  # section 2). DN-018 section 5: both envelopes from this one authority.
+  release:
+    authority: "EPA, Risk Management Program Guidance for Offsite Consequence Analysis (epa-rmp-oca-guidance-2009, epa-rmp-oca-guidance-appendices-1999)"
+    worst_case_definition: {doc: epa-rmp-oca-guidance-2009, page: 23, quote: "the duration of the release (always 10 minutes for gas releases)", pattern: 'always ([0-9]+) minutes for gas releases'}
+    alternative_method: {doc: epa-rmp-oca-guidance-2009, page: 77, quote: "To estimate a hole size you might assume, for example, the hole size that would result from shearing off a valve or pipe from a vessel containing a regulated substance."}
+    alternative_duration: {doc: epa-rmp-oca-guidance-2009, page: 24, quote: "Estimate the release rate and duration of the release of the toxic gas, based on your scenario and site-specific conditions."}
+    transport_scope: {doc: epa-rmp-oca-guidance-appendices-1999, page: 74, quote: "A stationary source includes transportation containers used for storage not incident to transportation"}
+    # The container strings the fixtures carry (fixtures/scenarios.yaml); each is in the pack, covered or not.
+    containers: ["Rail tank car", "Highway tank truck or trailer", "unknown"]
+    worst_case_quantity_not_held: "EPA's RMP guidance states no release quantity for a {container}: the rule covers a transportation container only when it is used for storage at a stationary source (40 CFR 68.3, appendices p. 74), and the quantity is the facility's own"
+    unknown_container: "the container is not known, so no quantity applies"
+    alternative_hole_not_held: "EPA's RMP guidance states no hole size: it is the facility's choice (\"you might assume, for example, the hole size that would result from shearing off a valve or pipe\", p. 77)"
+    alternative_duration_not_held: "EPA's RMP guidance states no alternative-release duration: it is \"based on your scenario and site-specific conditions\" (p. 24)"
+    # Held and considered, not adopted (HB-66 RESULT section 3).
+    not_adopted:
+      - doc: erg2024-methodology
+        locator: "erg2024-methodology#p22 (Table 2.3)"
+        what: "shipment amounts: DOT Class 105/112 tank car 80,000 kg; MC331 cargo tank 20,000 kg"
+        why: "an example profile ('Data provided are for chlorine trifluoride (UN 1749)'); chlorine and ammonia have chemical-specific profiles the methodology does not print, and DN-018 section 5 names one authority"
+
+# HB-119 step 4 and ADDENDUM-00: the threshold tables the brief's materials resolver reads for a material the
+# properties pack does not seed, each row with its page and the row as printed (scripts/build_packs.py `thresholds`).
+# The level of concern for a toxic material is taken in this order, each from a held page: AEGL-2 from the EPA's
+# compiled table; then the NIOSH Pocket Guide's IDLH; nothing else (ERPG and PAC values are not held).
+thresholds:
+  aegl:
+    doc: epa-aegl-compiled-2018
+    out: packs/src/thresholds_aegl_compiled_2018.json
+    # The columns line every entry prints under its name (p. 8 onward).
+    columns_quote: "10 min 30 min 60 min 4 hr 8 hr"
+    # A page header names the program status of the entries on it ("July 27, 2018 Final AEGLs").
+    status_pattern: '(Final|Interim|Proposed|Holding) AEGLs'
+  idlh:
+    doc: niosh-npg-2005-149
+    out: packs/src/thresholds_niosh_npg_idlh.json

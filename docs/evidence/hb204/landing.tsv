@@ -1,0 +1,2 @@
+task	event	time	outcome	reason	files	issue	landed_by	gate_tail
+HB-203	f8c99bea	2026-11-18T22:47:47Z	merge_blocked	uncommitted_changes	the event log of the graph (held privately)	788e113b	HB-204	docs/evidence/hb204/gate_tail.txt

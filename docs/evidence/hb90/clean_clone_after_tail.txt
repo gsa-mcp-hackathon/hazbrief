@@ -1,0 +1,57 @@
+SKIPPED [1] tests/test_brief_release.py:285: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_build_ics_201.py (a test held privately):888: local Squiddy index not built
+SKIPPED [18] test_corpus_claims.py (a test held privately):437: gitignored graph data absent: the corpus graph (held privately), the corpus graph (held privately)
+SKIPPED [1] test_corpus_claims.py (a test held privately):452: gitignored graph data absent: the corpus graph (held privately), the corpus graph (held privately)
+SKIPPED [1] test_corpus_concepts.py (a test held privately):96: local Squiddy index or interpreter not present
+SKIPPED [1] test_corpus_concepts.py (a test held privately):187: the release export is not present (it is not in CI)
+SKIPPED [8] test_corpus_concepts.py (a test held privately):194: the release export is not present (it is not in CI)
+SKIPPED [1] test_corpus_concepts.py (a test held privately):226: the release export is not present (it is not in CI)
+SKIPPED [1] test_corpus_intake.py (a test held privately):76: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_corpus_intake.py (a test held privately):86: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_corpus_intake.py (a test held privately):91: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_corpus_intake.py (a test held privately):96: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_corpus_intake.py (a test held privately):110: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_corpus_intake.py (a test held privately):202: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_corpus_intake.py (a test held privately):207: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_corpus_intake.py (a test held privately):227: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_corpus_intake.py (a test held privately):252: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_corpus_intake.py (a test held privately):280: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_deck.py (a test held privately):55: no .git here: the deck's trace reads `git ls-files`
+SKIPPED [1] test_deck.py (a test held privately):71: no .git here: the deck's trace reads `git ls-files`
+SKIPPED [1] test_deck.py (a test held privately):103: no .git here: the deck's trace reads `git ls-files`
+SKIPPED [1] test_deck.py (a test held privately):119: no .git here: the deck's trace reads `git ls-files`
+SKIPPED [1] test_deck.py (a test held privately):143: no .git here: the deck's trace reads `git ls-files`
+SKIPPED [1] test_deck.py (a test held privately):180: no .git here: the deck's trace reads `git ls-files`
+SKIPPED [1] test_deck.py (a test held privately):187: no .git here: the deck's trace reads `git ls-files`
+SKIPPED [1] test_deck.py (a test held privately):198: no .git here: the deck's trace reads `git ls-files`
+SKIPPED [1] tests/test_erg_any_un.py:102: corpus/raw/ absent
+SKIPPED [1] test_erg_units.py (a test held privately):115: packs/build/ absent: the adjudicated rows are gitignored by size
+SKIPPED [1] test_eval_puff.py (a test held privately):100: corpus/raw/jia2025-fast-gaussian-puff.html absent: corpus/raw/ is gitignored
+SKIPPED [1] test_evaluation_document.py (a test held privately):263: no .git here: the evaluation's citations read `git ls-files`
+SKIPPED [1] test_evaluation_document.py (a test held privately):268: no .git here: the evaluation's citations read `git ls-files`
+SKIPPED [1] test_evaluation_document.py (a test held privately):291: no .git here: the evaluation's citations read `git ls-files`
+SKIPPED [1] test_evaluation_document.py (a test held privately):345: no .git here: the evaluation's citations read `git ls-files`
+SKIPPED [5] test_extract_pilot_measure.py (a test held privately):89: gitignored graph data absent: the corpus graph (held privately), the corpus graph (held privately)
+SKIPPED [1] test_fetch_allowlisted.py (a test held privately):426: corpus/raw holds no HTML (gitignored; present on the build host)
+SKIPPED [1] test_hb76_derivations.py (a test held privately):92: the served export is not here (/private/tmp/hb90/after/graphs/hazbrief-corpus/exports/hazbrief_corpus_graph.json; gitignored, absent in CI)
+SKIPPED [6] test_packs.py (a test held privately):102: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_packs.py (a test held privately):118: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_packs.py (a test held privately):217: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_packs.py (a test held privately):391: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_packs.py (a test held privately):481: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_packs.py (a test held privately):653: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [3] test_packs_materials.py (a test held privately):232: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_packs_materials.py (a test held privately):244: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_population_at_risk.py (a test held privately):224: corpus/raw/ absent: the held group metadata is gitignored
+SKIPPED [1] test_population_at_risk.py (a test held privately):247: corpus/raw/ absent: the held group metadata is gitignored
+SKIPPED [1] test_receipt_text.py (a test held privately):82: corpus/raw/ absent: binaries are gitignored; provenance is url + sha256
+SKIPPED [1] test_receipt_text.py (a test held privately):102: packs/build/keyA/guides.jsonl absent: packs/build/ is gitignored by size
+SKIPPED [1] test_receipts_against_verdicts.py (a test held privately):143: the served export is not built here (/private/tmp/hb90/after/graphs/hazbrief-corpus/exports/hazbrief_corpus_graph.json)
+SKIPPED [2] test_receipts_against_verdicts.py (a test held privately):152: the served export is not built here (/private/tmp/hb90/after/graphs/hazbrief-corpus/exports/hazbrief_corpus_graph.json)
+SKIPPED [1] test_receipts_against_verdicts.py (a test held privately):157: the served export is not built here (/private/tmp/hb90/after/graphs/hazbrief-corpus/exports/hazbrief_corpus_graph.json)
+SKIPPED [1] test_stylebook.py (a test held privately):218: local Squiddy index not built
+SKIPPED [1] test_stylebook.py (a test held privately):269: local Squiddy index not built
+SKIPPED [1] tests/test_unidentified_load.py:185: corpus/raw/ ERG PDF absent
+SKIPPED [1] tests/test_unidentified_load.py:195: corpus/raw/ ERG PDF absent
+1751 passed, 91 skipped, 12 deselected, 2 xfailed, 1 warning in 580.06s (0:09:40)
+EXIT 0

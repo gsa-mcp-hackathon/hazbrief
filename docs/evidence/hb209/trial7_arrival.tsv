@@ -1,0 +1,16 @@
+arc_km	observed_s	model	arrival_s	ratio_to_observed
+0.5	93	HPAC	162	1.74
+0.5	93	P_scichem	161	1.73
+0.5	93	P_slab_rh20	178	1.91
+1	258	HPAC	274	1.06
+1	258	P_scichem	263	1.02
+1	258	P_slab_rh20	299	1.16
+2	443	HPAC	473	1.07
+2	443	P_scichem	498	1.12
+2	443	P_slab_rh20	509.8	1.15
+5	1055	HPAC	1057	1.00
+5	1055	P_scichem	1062	1.01
+5	1055	P_slab_rh20	1063	1.01
+11	2052	HPAC	2023	0.99
+11	2052	P_scichem	2156	1.05
+11	2052	P_slab_rh20	2040	0.99

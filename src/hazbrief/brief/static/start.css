@@ -1,0 +1,11 @@
+/* The start page (HB-208): the two doors, the prepared scenarios as one table. */
+#start { max-width: 1240px; }
+#start h2 { margin: 12px 0 4px; }
+#door-two { border: 1px solid #dddddd; padding: 4px 12px 8px; }
+#new-incident { font-weight: bold; margin-left: 6px; }
+#scenarios { border-collapse: collapse; width: 100%; }
+#scenarios th, #scenarios td { text-align: left; vertical-align: top; padding: 4px 10px 4px 0;
+  border-bottom: 1px solid #eeeeee; }
+#scenarios td.doors { white-space: nowrap; }
+#scenarios td.doors a { margin-left: 6px; }
+#start-error:empty { display: none; }

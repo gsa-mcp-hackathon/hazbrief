@@ -1,0 +1,101 @@
+# The load read's rule file (HB-132R Part A; HB-115 ADDENDUM-01 section 3; DN-022 sections 6 and 7).
+#
+# Starting file: HB-115's rule set, docs/evidence/hb115/load_read/RULES.md, with its mechanical first pass
+# (the HB-115 evidence (held privately)). The four rules, their thresholds and their patterns are HB-115's,
+# unchanged, so the candidate counts on a page equal that tool's (test_hb132_load_read.py (a test held privately)). What this file adds
+# is what HB-115 did by hand: which candidate is cut, and which is only proposed.
+#
+# Prior art: the rules follow DN-019 section 2's two consequences of HB-83's held standards on cognitive load
+# ("fewer things on by default than can be shown"; Sweller 1988, cited by DN-019's library receipts) and the
+# redundancy principle of the same literature: text that restates text a reader already has adds load and no
+# information (RULES.md, "Prior art").
+#
+# Its sha256 is printed in every brief's appendix beside the word counts (`load_read.rules_sha256`): a change here
+# moves every committed brief's appendix, by design.
+version: 1
+source: "docs/evidence/hb115/load_read/RULES.md (HB-115 ADDENDUM-01 section 3)"
+
+# HB-115's MIN_WORDS: shorter sentences ("Not held.", a heading) repeat by design and are not R1 candidates
+min_words: 6
+
+rules:
+  R1:
+    name: a duplicated sentence
+    kind: lexical
+    # HB-115's test: the same sentence, case and whitespace folded, of at least min_words words, printed more than
+    # once. Candidates are counted page-wide, as HB-115 counted them. A cut is made only inside one section: every
+    # later printing of a sentence its own section already printed. A duplicate across sections is proposed, not
+    # cut: each section streams and is swapped in on its own (DN-022 section 3) and is read alone, so the sentence
+    # a later section repeats is the only copy its reader has.
+    cut: later_in_same_section
+    # A cut is made only in prose: a paragraph or a list item. A table cell, a caption, a heading or a summary is a
+    # data row or a name, which HB-115 read as "data rows and per-row receipts, not prose" and proposed no cut for
+    # (L-09: NAICS sector names in two tables, the forecast cell on two wind rows); cutting one empties a cell.
+    prose_tags: [p, li]
+  R2:
+    name: a sentence about the sentence before it
+    kind: model
+    # HB-115's screen, unchanged: a sentence opening "This line", "That is", "In other words", ... after another in
+    # the same block. The screen finds the candidate; the model decides whether it is a sentence about the sentence
+    # before it (HB-132R item 1: "a sentence about a sentence" needs reading). The model's verdict is a recorded call
+    # through HB-131R's route (`model_author.ModelAuthor`), replayed with no call.
+    screen: '^(this (line|sentence|value|number|figure|entry|label)|that is\b|in other words|i\.e\.|put another way|said differently|the (line|sentence) above)'
+    cut: the_sentence
+  R3:
+    name: a label that restates its value
+    kind: lexical
+    # HB-115's test: a two-cell table row (th, td), or a "Label: value" block, whose value begins with its own
+    # label's words. Proposed, never cut: the cut drops a table's header cell or a block's label, which changes the
+    # table's or the block's shape, not only its words; the review decides the shape (HB-115 L-08 was filed so).
+    label_pattern: '^([A-Z][^:]{2,40}):\s+(.+)$'
+    cut: never
+  R4:
+    name: three receipts where one carries the fact
+    kind: lexical
+    # HB-115's test: a list item, cell or paragraph carrying min_receipts or more receipts. Proposed, never cut: the
+    # cut removes receipts, which the invariant below forbids by definition.
+    min_receipts: 3
+    cut: never
+
+# What a receipt is (HB-115's RECEIPT): a bracketed ERG/CFR/NWS/Census/CMS/HIFLD/EPA tag, a "p. N" page, a 12-hex
+# record hash. The invariant compares the set of these before and after a cut.
+receipt_pattern: '\[(?:ERG|49 CFR|NWS|Census|CMS|HIFLD|EPA)[^\]]*\]|\bpp?\. \d+|\b[0-9a-f]{12}\b'
+
+# The block-level tags a sentence is read within (HB-115's BLOCK set) and the tags whose bodies are not read.
+block_tags: [p, li, td, th, h1, h2, h3, h4, summary, caption, div, pre]
+skip_tags: [script, style, svg, template, noscript]
+
+# What a cut may never touch (RULES.md, "What a cut may do"). A candidate here is proposed, with the reason, and
+# becomes an Issue line; it is never applied.
+protected:
+  # class 1: the ICS 201's text is the server's `build_ics_201` output, not the application's ("the frozen ICS 201",
+  # DN-013 section 6); a cut there is a server change, and the brief application changes no tool
+  sections:
+    ics201: "the ICS 201's text is the server's build_ics_201 output (RULES.md class 1; DN-013 section 6)"
+    # HB-132R's reading of class 1 for the one other section that prints a tool's text verbatim: the guidance section
+    # is the ERG orange guide as the server's material_response_guidance returns it. The guide prints some lines
+    # under two headings (FIRE and SPILL OR LEAK: "DO NOT GET WATER INSIDE CONTAINERS"); a cut would drop the line
+    # from one heading and misquote the guide.
+    guidance: "the guidance section is the ERG orange guide's text as material_response_guidance returns it; a duplicate there is the guide's own, under another heading (RULES.md class 1, by its reason)"
+  # class 2: a modelled layer's label, whose sentences DN-018, DN-020 and the the instructions of the coding sessions (held privately) paragraph require; the layer
+  # list carries the legend entries the same labels print, and its "Not drawn" list each layer's own reason
+  classes:
+    puff-label: "a modelled layer's label (RULES.md class 2; DN-018, DN-020)"
+    missing: "the Not drawn list names each layer with its own reason, the layer's label (RULES.md class 2; HB-120)"
+  ids:
+    layer-list: "the layer list's legend entries print the modelled layers' labels (RULES.md class 2)"
+  # class 2, by heading: the map panel's modelled-layer panels open with an h3 "Modelled, ..." and are not wrapped in
+  # an element of their own. Every block from such a heading to the next heading is the layer's text: its label, its
+  # legend line, its run record, or (HB-120) the guide's own words for why the layer is not drawn.
+  headings:
+    "^Modelled\\b": "a modelled layer's panel (RULES.md class 2; DN-018, DN-020, HB-120)"
+  # class 3: a sentence another task's test pins; it moves with that task's rule, by addendum. Matched against the
+  # sentence (case folded). test_hb132_load_read.py (a test held privately) also refuses any applied cut whose sentence a test file
+  # holds as a literal, so a pin not listed here still stops the cut at the gate.
+  pinned:
+    - pattern: 'no snapshot (is )?recorded'
+      why: "test_hb103_weather_map.py (a test held privately) pins one no-snapshot line per layer (HB-115 L-06)"
+
+# The invariant (HB-132R item 2): a cut is applied only when the section's numbers and receipts are the same sets
+# after it as before. Numbers are read by `model_author.numbers`, HB-131R's normalisation (thousands separators and
+# sign dropped), so the two checks cannot disagree on what a number is.

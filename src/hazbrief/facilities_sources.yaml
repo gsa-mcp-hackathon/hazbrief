@@ -1,0 +1,193 @@
+# facilities_in_footprint and receiving_hospitals sources (HB-10;
+# HB-10). Every service, layer, field,
+# vintage and as-of date the two tools read, in one place (standards s2). Every key is required:
+# src/hazbrief/facilities.py refuses a file missing one. Layer ids, field names and as-of dates were
+# read from each service's own description on 2026-10-21 (logs/2026-10-21_HB-10_probe.log), not
+# from memory; corpus/api_catalog.yaml's probe re-verifies each as-of.
+
+structures:
+  # USGS National Structures Dataset (corpus/api_catalog.yaml usgs_structures). Points, one layer
+  # per feature class; each feature carries `loaddate`, the date it was loaded, returned as that
+  # facility's as-of.
+  api: usgs_structures
+  service: structures/MapServer
+  label: USGS National Structures Dataset
+  as_of: "Data Refreshed October, 2026"  # the service's copyrightText, 2026-10-21
+  page_size: 2000  # the layers' maxRecordCount
+  out_fields: "OBJECTID,PERMANENT_IDENTIFIER,NAME,FTYPE,FCODE,ADDRESS,CITY,STATE,LOADDATE"
+  # Category -> layer ids (structures/MapServer/layers?f=json). There is no nursing home layer;
+  # nursing homes come from CMS (`cms.nursing_homes`).
+  categories:
+    schools: {21: College / University, 22: Technical / Trade School, 23: School}
+    hospitals: {14: Hospital / Medical Center}
+    emergency_services: {15: Ambulance Service, 16: Fire Station / EMS Station, 18: Police Station}
+  # FCode -> the type the layer's domain names (the same coded-value domain on every layer).
+  fcode_types:
+    73002: School
+    73003: "School: Elementary"
+    73004: "School: Middle School"
+    73005: "School: High School"
+    73006: College / University
+    73007: Technical / Trade School
+
+hydrography:
+  # USGS 3D Hydrography Program (corpus/api_catalog.yaml usgs_3dhp; HB-03 chose it over NHDPlus HR).
+  api: usgs_3dhp
+  service: 3DHP_all/MapServer
+  label: USGS 3D Hydrography Program (3DHP)
+  as_of: "Data refreshed September 4, 2026"  # the service's copyrightText
+  # Server-side generalization (ArcGIS `maxAllowableOffset`, degrees): about 1.1 m. Measured on
+  # the HB-10 scenarios at full resolution: flowline length -0.06 %, waterbody area +0.0002 %,
+  # polygon payload 60 % smaller. A wide river's polygon at full resolution is 1.8 MB, and a page
+  # of them neared the client's 5 MB response cap (settings.upstream_max_response_bytes).
+  max_allowable_offset_deg: 0.00001
+  # Pages well under the 5 MB cap: the service's maxRecordCount is 2500.
+  page_size: 1000
+  flowlines:
+    layer: 50
+    out_fields: "OBJECTID,id3dhp,gnisidlabel,featuretypelabel,mainstemid,lengthkm"
+  waterbodies:
+    layer: 60
+    page_size: 100
+    out_fields: "OBJECTID,id3dhp,gnisidlabel,featuretypelabel,areasqkm"
+    # A wide river is drawn both as a waterbody polygon of this type and as the flowline
+    # (artificial path) that runs through it; it counts once, by its flowline, and the polygon
+    # is listed with `counted: false` (Potomac River at Point of Rocks, HB-10 pilot).
+    counted_by_flowline: [River]
+    # HB-17: ... but only when that flowline is inside too. A 100 m circle on the Wilson Bridge
+    # lies inside the Potomac's River polygon, and the river's artificial path runs more than 100 m
+    # away; the polygon was left uncounted and the form said "0 waterways". Now a River polygon
+    # counts by flowline when a flowline inside the footprint runs within it (decided on the
+    # geometry already read). Otherwise one more query reads the flowlines near the footprint: the
+    # flowline layer names the waterbody each runs through (`waterbodyid3dhp`) and carries
+    # NHDPlus's main-path attributes (`streamlevel`, `arbolatesum`;
+    # corpus/raw/usgs-3dhp-flowline-layer.json). The polygon's river is the main path among the
+    # flowlines that run through it (facilities.main_path); the polygon counts itself under that
+    # river's name, unless the river has a flowline inside the footprint elsewhere (by name, else
+    # mainstem). The polygon has no name of its own (gnisidlabel null).
+    flowlines_through:
+      field: waterbodyid3dhp
+      out_fields: "OBJECTID,id3dhp,gnisidlabel,mainstemid,waterbodyid3dhp,streamlevel,arbolatesum"
+      # The query's envelope is the footprint grown by this many metres: it has to reach the
+      # river's own flowline from a point on the water. The narrowest chord across the Potomac's
+      # polygon through the Wilson Bridge point is 1,145 m (HB-17 RESULT), so its artificial path is
+      # nearer than that. Past this distance the polygon still counts; it is listed without a name.
+      # The query asks for no geometry and filters on the waterbody here: a service-side filter on
+      # waterbodyid3dhp read the whole river and failed at the client's 30 s timeout (HB-17).
+      search_m: 2000
+      # The service's maxRecordCount; attributes only, so a page is small.
+      page_size: 2500
+
+rail:
+  # BTS National Transportation Atlas Database, from FRA (corpus/api_catalog.yaml bts_ntad).
+  api: bts_ntad
+  page_size: 2000  # each layer's maxRecordCount
+  lines:
+    service: NTAD_North_American_Rail_Network_Lines/FeatureServer/0
+    label: NTAD North American Rail Network Lines
+    as_of: "2026-10-19"  # "updated on October 19, 2026" (layer description)
+    out_fields: "OBJECTID,FRAARCID,RROWNER1,SUBDIV,YARDNAME,NET,TRACKS,STATEAB"
+  crossings:
+    service: NTAD_Railroad_Grade_Crossings/FeatureServer/0
+    label: NTAD Railroad Grade Crossings (FRA National Highway-Rail Crossing Inventory)
+    as_of: "2026-10-09"  # "updated on October 09, 2026" (layer description)
+    out_fields: "OBJECTID,CrossingID,CrossingPosition,CrossingType,HighwayName,STREET,RailroadCode,LATITUDE,Longitude"
+    # A grade crossing is one at grade; "RR Over" and "RR Under" are grade-separated
+    # (CrossingPosition; 159,782 + 38,790 at grade nationally, 2026-10-21 statistics query).
+    at_grade: At Grade
+
+arcgis:
+  # The page cap of every ArcGIS layer query above (HB-89; review L3-2): facilities.arcgis_features
+  # reads at most ceil(max_features_per_layer / page_size) pages of a layer, then stops with an
+  # error. Expressed in features so a layer with a small page (waterbodies, 100) is not capped
+  # sooner than one with a large page. 50,000 features in the 485 km2 bounding box of the largest
+  # footprint geo.footprint_shape admits is over 100 per km2 of one layer; the same budget as
+  # population_sources.yaml's TIGERweb blocks.
+  max_features_per_layer: 50000
+
+cms:
+  # CMS files cached by scripts/fetch_cms.py into settings.hazbrief_cms_dir (fixtures/cms/), as
+  # LODES is cached for HB-09: the Provider Data Catalog datastore answered a two-row query in
+  # 20.8 s (HB-10 step 0), too slow to call per incident, and Hospital General Information carries
+  # no coordinates, so its addresses are geocoded once, at build.
+  hospitals:
+    file: hospitals.json
+    dataset: xubh-q36u
+    label: CMS Hospital General Information
+    metastore: https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/xubh-q36u
+    # Hospital General Information columns, by the CSV header (HOSPITAL_Data_Dictionary.pdf).
+    columns:
+      ccn: Facility ID
+      name: Facility Name
+      address: Address
+      city: City/Town
+      state: State
+      zip: ZIP Code
+      type: Hospital Type
+      emergency_services: Emergency Services
+  pos:
+    # Provider of Services (corpus/api_catalog.yaml cms_data): beds by CCN. Category 01 is
+    # "Hospital"; termination code 00 is "Active Provider" (cms-pos-layout).
+    dataset: 8ba0f9b4-9493-4aa0-9f82-44ea9468d1b5
+    label: CMS Provider of Services, hospital and non-hospital
+    # The release the data API served: "Last-Modified: Fri, 16 Oct 2026" (corpus/api_catalog.yaml
+    # cms_data as_of, api_probe_log 2026-10-20). DN-002 section 4: beds are reported with this date.
+    as_of: "2026-10-16"
+    category_field: PRVDR_CTGRY_CD
+    category: "01"
+    # The street address is the geocoder's second try for a hospital whose Hospital General
+    # Information address does not match (scripts/fetch_cms.py `second_pass`).
+    columns:
+      ccn: PRVDR_NUM
+      beds: BED_CNT
+      certified_beds: CRTFD_BED_CNT
+      termination: PGM_TRMNTN_CD
+      address: ST_ADR
+      city: CITY_NAME
+      state: STATE_CD
+      zip: ZIP_CD
+    page_size: 5000
+  nursing_homes:
+    file: nursing_homes.json
+    dataset: 4pq5-n9py
+    label: CMS Nursing Home Provider Information
+    metastore: https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/4pq5-n9py
+    columns:
+      ccn: CMS Certification Number (CCN)
+      name: Provider Name
+      address: Provider Address
+      city: City/Town
+      state: State
+      zip: ZIP Code
+      type: Provider Type
+      beds: Number of Certified Beds
+      latitude: Latitude
+      longitude: Longitude
+  nsd_join:
+    # The third try for a hospital neither geocoder pass placed (scripts/fetch_cms.py
+    # `nsd_join`): the USGS National Structures Dataset hospital point with the same 5-digit ZIP,
+    # house number and first street-name word, when exactly one has them. Every hospital point
+    # nationally, paged.
+    url: https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/14/query
+    out_fields: "OBJECTID,PERMANENT_IDENTIFIER,NAME,ADDRESS,CITY,STATE,ZIPCODE"
+    page_size: 2000
+  geocoder:
+    # Census Geocoder batch (corpus/api_catalog.yaml census_geocoder): "up to 10,000 records" per
+    # file; a smaller batch is a smaller unit to lose and redo.
+    url: https://geocoding.geo.census.gov/geocoder/locations/addressbatch
+    benchmark: Public_AR_Current
+    batch_size: 1000
+    # One batch's wait. The service publishes no time; a 1,000-address batch is answered in
+    # minutes, not seconds, so the corpus fetcher's per-request timeout is too short for it.
+    timeout_seconds: 600
+
+receiving:
+  # receiving_hospitals: the default search radius (the task's), and the cap on hospitals listed.
+  max_km: 50
+  limit: 25
+  # A straight line from the footprint's upwind edge "crosses the footprint" when more than this
+  # many metres of it lie in the protective action zone outside the isolation zone: a line that
+  # only grazes the zone's corner by a few metres (a drawing tolerance) does not.
+  crossing_tolerance_m: 50
+  # Vertex spacing of the geodesic drawn from the spill to a hospital (facilities.geodesic_line).
+  line_step_m: 250

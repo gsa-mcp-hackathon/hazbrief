@@ -1,0 +1,57 @@
+# Keep the build context small and reproducible.
+.git
+.gitignore
+.venv
+venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.env
+deploy/
+# HB-111: the models image (SLAB, its build gate and Dockerfile) is a second image beside the
+# server, never part of it. `deploy/` above already holds it; named here so the fence stands if
+# that line is ever narrowed. test_container_image.py (a test held privately) holds both.
+deploy/models/
+eval/
+tests/
+.github/
+.agents/
+
+.ruff_cache/
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+
+# The pack build's local artifacts (gitignored; 34 MB on a workstation). The runtime reads
+# packs/*.json only (src/hazbrief/packs.py); a build from a checkout never holds them.
+packs/build/
+
+# The application (DN-010 D2, DN-011 section 3; HB-87R): the evidence store, the brief and
+# the first-order puff (DN-018), a client of the server that the server never imports. The
+# image is the server alone. `src/hazbrief/command.py` stays: it is the `hazbrief` console
+# entry and imports the application only inside `hazbrief brief`. The three packs below are
+# the puff's (`hazbrief.models.APP_PACK_MODELS`), read only by `packs.load_app_pack`.
+# test_container_image.py (a test held privately) builds the image's file list and holds all of this.
+src/hazbrief/brief/
+src/hazbrief/evidence/
+packs/materials_properties.json
+packs/sigma_curves.json
+packs/release_scenarios.json
+# HB-120: the brief's release routing table (every ERG guide to a release model or to "no dispersion model applies"),
+# read only by `packs.load_app_pack`, and its authored source.
+packs/release_routing.json
+packs/src/release_routing.yaml
+# HB-155: the brief's siting rules (the command post, triage and staging; DN-023), read only by
+# `packs.load_app_pack`, and its authored source.
+packs/siting_rules.json
+packs/src/siting_rules.yaml
+# HB-119: the brief's materials resolver's threshold tables (built from the held AEGL table and NIOSH Pocket Guide) and
+# its runtime cache of fetched entries (gitignored, written on a workstation by any brief that resolves a material).
+packs/src/thresholds_*.json
+packs/cache/
+# HB-128: the PM2.5 AQI categories, breakpoints and messages the smoke layer will read (DN-021 section 4); the
+# application's, never the server's.
+packs/src/aqi_pm25_breakpoints.json

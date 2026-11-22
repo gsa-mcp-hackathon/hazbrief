@@ -1,0 +1,45 @@
+# HB-199: Jack Rabbit II Trial 7, every value the harness (tools/runs199.py) reads, each with its held source.
+# trial7_inputs.tsv is the table of the same values with what is not held; protocol.md says how each is used.
+# "fox" = fox-2021-jack-rabbit-ii-overview-accepted-manuscript (PDF pages); "m17" =
+# mazzola-2020-jack-rabbit-ii-17-dense-gas-models-manuscript (PDF page = printed page); "simpson" =
+# simpson-2020-hpac-jack-rabbit-ii-accepted-manuscript (PDF pages).
+
+trial: JR2-7
+material_un: "1017"            # chlorine; m17 p. 3 line 84
+material_name: CL2             # the SCICHEM material name in the request
+release:
+  start_utc: "2016-09-02T13:56:00+00:00"   # fox Table 2 p. 23
+  local_utc_offset_h: -6                   # MDT = UTC - 6 (m17 Table 2 p. 6)
+  quantity_kg: 9100.0                      # tank inventory, fox Table 2 p. 23
+  storage_temperature_c: 15.9              # liquid temperature, fox Table 2 p. 23 (saturated, note 1)
+  hole_diameter_m: 0.152                   # fox Table 2 p. 23 ("6.0 in = 0.152 m")
+  mass_released_kg: 8625.0                 # m17 Table 4 p. 14 (printed beside the route's release, not an input)
+  recommended_rate_kg_s: 259.0             # m17 Table 3 p. 7 (printed beside, not an input)
+  recommended_duration_s: 33.3             # m17 Table 3 p. 7 (printed beside, not an input)
+site:
+  lat: 40.134347                           # fox Table 2 p. 23
+  lon: -113.487076
+weather:
+  wind_speed_m_s: 3.98                     # fox Table 2 p. 23, at z = 2 m, 10-min average at release
+  wind_height_m: 2.0                       # fox Table 2 p. 23
+  wind_direction_deg_from: 149.6           # fox Table 2 p. 23
+  air_temperature_c: 18.7                  # fox Table 2 p. 23, at z = 2 m
+  pressure_mbar: 868.5                     # fox Table 2 p. 23
+  z0_m: 0.0005                             # fox Table 2 p. 23; text p. 22 line 481; m17 p. 4 line 113
+  stability_class: E                       # simpson p. 5 lines 121 to 123 (the working group's assigned class);
+                                           # m17 Table 2 p. 6 and fox Table 2 p. 23: "D or E" (protocol section 2)
+observed:
+  sampler_height_m: 0.3                    # m17 p. 15 lines 332 to 333
+  averaging_s: 1.0                         # m17 p. 4 lines 100 to 101 (the averaging time every model was asked for)
+  arcs_m: [200, 500, 1000, 2000, 5000, 11000]
+  arc_max_ppm: [72580, 22686, 2621, 1417, 373, 50]     # m17 Table 5 p. 20, row Observed
+  saturated_m: [1000, 11000]                           # m17 Table 5 p. 20 (orange); Figure 1 caption p. 18
+  arrival_s: {500: 93, 1000: 258, 2000: 443, 5000: 1055, 11000: 2052}   # simpson Table 7 p. 16, "ToA JRII Data"
+tools:
+  # m17 Table 5 p. 20: the tool's arc maximum (ppm) at each arc of `observed.arcs_m`
+  HPAC: [31372, 6314, 2633, 1005, 278, 66]
+  ALOHA: [52300, 14100, 3470, 497, 41, 6]
+tool_arrival_s:
+  # simpson Table 7 p. 16, "ToA MWG StabE" (HPAC, simple jet-only source, the working group's weather with class E)
+  HPAC: {500: 162, 1000: 274, 2000: 473, 5000: 1057, 11000: 2023}
+statistic_arcs_m: [200, 500, 1000, 2000, 5000]   # m17 Table 7 p. 26: "arcs at 0.2, 0.5, 1, 2, and 5 km"

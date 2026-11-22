@@ -1,0 +1,15 @@
+task	event	time	outcome	merge_commit	regated	gate	stops	range_on_main
+HB-189	915366be	2026-11-16T11:37:32Z	stop_gate_unpassed		None	null	none	
+HB-189	93965f23	2026-11-16T18:38:26Z	merge_blocked		None	null	none	
+HB-193	1da09495	2026-11-17T02:40:24Z	merged	96ec9c31	False	null	none	96ec9c31..96ec9c31 (1 commits)
+HB-190	e1eba905	2026-11-17T05:41:05Z	merged	44b650d7	False	null	none	028b4315..44b650d7 (12 commits)
+HB-194	ccf4a4c1	2026-11-17T16:01:58Z	merged	316cd97f	False	null	none	64f6064a..316cd97f (13 commits)
+HB-191	11caee37	2026-11-17T16:14:05Z	merged	fa37c3dc	False	null	none	3710c90c..fa37c3dc (6 commits)
+HB-195	ebd440f9	2026-11-17T21:44:17Z	merged	68bf2958	False	null	none	01b7b3c8..68bf2958 (13 commits)
+HB-192	e7501a78	2026-11-18T04:15:22Z	merged	7655bbc2	False	null	none	b6122a3e..7655bbc2 (44 commits)
+HB-196	3366083a	2026-11-18T11:46:11Z	merged	c98748d0	False	null	none	fc77873f..c98748d0 (32 commits)
+HB-201	1bc5db8b	2026-11-18T14:02:38Z	merged	7b9244ec	False	null	none	9c72414e..7b9244ec (13 commits)
+HB-197	e214e7d7	2026-11-18T15:37:12Z	merged	163d6adf	False	null	c3163e6c 2026-11-18T15:29:25Z disk_ceiling free=4073521152 need=4982399604	ff124467..163d6adf (12 commits)
+HB-198	b650f591	2026-11-18T16:07:09Z	merged	6f92c46f	False	null	5d755186 2026-11-18T16:02:46Z disk_ceiling free=4563726336 need=4993114036	8cd31c66..6f92c46f (8 commits)
+HB-199	74aa541e	2026-11-18T17:34:27Z	merged	adca13bf	False	null	a9f3a805 2026-11-18T17:26:41Z disk_ceiling free=970129408 need=4994026628	5bf1e0f2..adca13bf (16 commits)
+HB-202	7f41a17e	2026-11-18T20:49:19Z	merged	5ea81383	False	null	none	fd4ee404..5ea81383 (16 commits)

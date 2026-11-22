@@ -1,0 +1,42 @@
+name: Eval (nightly)
+
+# HB-05 part A: the exhaustive invariant checks (test_eval_invariants.py (a test held privately)) and every other
+# test marked `slow` (HB-96), kept out of the default gate by pyproject.toml's `addopts`. Run locally before any release tag.
+# CI holds neither corpus/raw/ nor packs/build/ (gitignored), so part 4 checks receipts against
+# the pack text only and says so in its counts.
+#
+# No schedule, push or pull request runs this workflow (HB-85, 2026-10-31): during development no
+# GitHub run is worth the Actions minutes, and the dispatcher's local gate is the gate. To run it
+# by hand: the repository's Actions tab, "Eval (nightly)", "Run workflow"
+# (`gh workflow run eval-nightly.yml` does the same). The name is kept so the run history stays
+# under one workflow.
+
+on:
+  workflow_dispatch:
+
+# HB-96 (review L3-10): the job token reads the repository and nothing else.
+permissions:
+  contents: read
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@38f3f104447c67c051c4a08e39b64a148898af3a # v4.2.0
+        with:
+          # the uv the Dockerfile pins by version and digest (HB-96, review L3-10)
+          version: "0.10.7"
+
+      - name: Install Python
+        run: uv python install 3.11
+
+      - name: Install dependencies
+        run: uv sync --locked --group dev
+
+      # HB-96 (review L4-3): every `slow` test, not one file: the paged-form sweep over
+      # all 18 scenarios (test_build_ics_201.py) ran in no workflow
+      - name: Every slow test (the exhaustive invariants among them)
+        run: uv run pytest tests/ -m slow -v

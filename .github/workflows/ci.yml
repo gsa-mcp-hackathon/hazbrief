@@ -1,0 +1,47 @@
+# CI: lint, format check and the full suite as a clean GitHub runner sees it (HB-35 RESULT
+# section 1). It runs only when a person starts it.
+#
+# No push and no pull request runs this workflow (HB-85, 2026-10-31; it narrows HB-81's
+# paths-ignore to no push trigger at all). The dispatcher's local gate is the gate: the Seldon configuration (held privately)
+# `dispatch.gate_command` runs the full suite in the task's worktree before every merge, and it
+# sees the gitignored data a GitHub runner cannot (HB-78). Residual, recorded in HB-85's RESULT:
+# that gate runs pytest only; `ruff check` and `ruff format --check` run where a task's gate
+# step names them, not on every merge. During development no GitHub run is worth the minutes.
+# To run a clean-runner check by hand: the repository's Actions tab, "CI", "Run workflow"
+# (`gh workflow run ci.yml` does the same).
+# HB-81's measurement of the old push trigger stays in the HB-81 evidence (held privately).
+name: CI
+
+on:
+  workflow_dispatch:
+
+# HB-96 (review L3-10): the job token reads the repository and nothing else.
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@38f3f104447c67c051c4a08e39b64a148898af3a # v4.2.0
+        with:
+          # the uv the Dockerfile pins by version and digest (HB-96, review L3-10)
+          version: "0.10.7"
+
+      - name: Install Python
+        run: uv python install 3.11
+
+      - name: Install dependencies
+        run: uv sync --locked --group dev
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Format check
+        run: uv run ruff format --check .
+
+      - name: Run tests
+        run: uv run pytest tests/ -v -n auto --maxprocesses 6 --dist loadfile

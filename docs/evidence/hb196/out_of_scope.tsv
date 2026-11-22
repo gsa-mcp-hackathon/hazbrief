@@ -1,0 +1,4 @@
+model	episodes	strict_refusal	lenient_only	neither	called_a_tool	drew_a_footprint	a_number_no_tool_output_holds	key_terms_missing	forbidden_pattern_matched	asked_for_clarification
+claude-haiku-5-5	15	6	6	3	15	13	8	2	1	not recorded
+claude-opus-5-5	15	3	9	3	15	15	11	2	0	not recorded
+claude-sonnet-5-5	15	5	3	7	15	12	8	3	1	not recorded

@@ -1,0 +1,188 @@
+# Parameters of src/hazbrief/stylecheck.py (HB-02 deliverable 4). Every threshold and word list the
+# checker uses is here, never in code (standards s2). Each key names the COMMANDER_STYLEBOOK.md rule
+# it enforces; the stylebook states the same values, and test_stylebook.py (a test held privately) fails if the two
+# disagree. Every key is required: a missing key is fatal at load (standards s4).
+schema: hazbrief-stylecheck/1
+
+# SB-SEN-01. The longest sentence, in words. AR 25-50 sets an AVERAGE of about 15 words
+# (ar-25-50#b259:41157-41238); a hard ceiling must sit above an average, and 20 leaves room for a
+# road name and a distance with both units without letting a second clause in.
+max_sentence_words: 20
+
+# SB-NUM-04, SB-NUM-03, SB-NUM-02. The source tag: square brackets at the end of the sentence,
+# before its full stop: "... east of the spill [ERG 2024 Table 3]." Numbers inside a tag are
+# edition years, table ids and dates, and are not checked for units.
+source_tag_open: "["
+source_tag_close: "]"
+# SB-NUM-03. The words a tag carries before the as-of date of a live value.
+as_of_marker: "as of"
+# SB-NUM-02. The words a sentence carries before the margin of error of an estimate.
+margin_of_error_marker: "margin of error"
+# SB-NUM-02. Source-tag words that name a survey whose estimates carry a margin of error
+# (ACS: cre-2024-techdoc#b19:6407-6837; CRE: cre-2024-file-layout#b14:2904-2971). Matched as whole
+# words, case-sensitive, inside the tag.
+margin_of_error_sources: [ACS, CRE]
+
+# SB-NUM-03. Words that mark a value read from a live call (NWS, Census, USGS, CMS). A sentence that
+# has one of these and a number needs an as-of date in its tag. Whole words, case-insensitive.
+live_value_terms:
+  - wind
+  - winds
+  - temperature
+  - residents
+  - population
+  - workers
+  - households
+  - beds
+
+# SB-NUM-01. What may follow a number: a unit of measure or the noun that names what is counted,
+# immediately after the number (one space at most; "%" and degrees may touch it). Case-insensitive;
+# multi-word entries match as phrases.
+units:
+  - m
+  - km
+  - ft
+  - mi
+  - meter
+  - meters
+  - kilometer
+  - kilometers
+  - foot
+  - feet
+  - mile
+  - miles
+  - km/h
+  - mph
+  - "%"
+  - °C
+  - °F
+  - L
+  - gal
+  - kg
+  - lb
+  - ppm
+  - minute
+  - minutes
+  - hour
+  - hours
+  - day
+  - days
+  # HB-11: an age threshold ("people aged 65 years and over", ACS B01001).
+  - year
+  - years
+counted_nouns:
+  - residents
+  - people
+  - persons
+  - workers
+  - households
+  - beds
+  - schools
+  - school
+  - hospitals
+  - hospital
+  - nursing homes
+  - nursing home
+  - facilities
+  - facility
+  - casualties
+  - responders
+  - vehicles
+  - tank cars
+  - tank car
+  - cylinders
+  - cylinder
+  - containers
+  - container
+  # HB-11: the nouns build_ics_201 counts in Block 5 (population_at_risk's daytime count is jobs,
+  # not workers: a worker with two jobs counts twice, HB-09 RESULT section 7 item 4), with the
+  # singular of each noun above that a count of one takes.
+  - jobs
+  - job
+  - resident
+  - person
+  - household
+  - worker
+  - bed
+  - waterways
+  - waterway
+  - rail segments
+  - rail segment
+  - grade crossings
+  - grade crossing
+  - emergency services
+  - emergency service
+  - flags
+  - flag
+  # HB-18: an ambiguous load's count ("matches 4 candidates", FR-AMB-01).
+  - candidates
+  - candidate
+
+# SB-NUM-01. A number right after one of these is an identifier, not a quantity (UN 1017, Guide 124,
+# Table 3, Block 5, ICS 201, mile marker 59). Case-insensitive, matched as the last words before
+# the number. A digit run glued to letters or a hyphen (UN1017, I-81) is never read as a number.
+identifier_prefixes:
+  - UN
+  - NA
+  - ID
+  - Guide
+  - Guides
+  - Table
+  - Tables
+  - Block
+  - Blocks
+  - ICS
+  - ICS Form
+  - ERG
+  - mile marker
+  - exit
+  - route
+  - page
+  - section
+  - operational period
+  # HB-11: a station number in a facility's name ("Carroll Manor Fire Company Station 28", USGS
+  # National Structures Dataset) is an identifier, as an exit or route number is.
+  - Station
+  # HB-15: a hazard class or division as a placard prints it ("the placard is Class 2.3"; ERG 2024
+  # p. 8, Hazard Classification System) names a class, as Guide 123 names a guide.
+  - Class
+  # HB-17: Guide 112's title, "Explosives* - Division 1.1, 1.2, 1.3 or 1.5" (ERG 2024 p. 156).
+  - Division
+  - Divisions
+
+# SB-NUM-01. After one of these prefixes and a dotted number, a list of dotted numbers ("Division
+# 1.1, 1.2, 1.3 or 1.5") is identifiers too. Only dotted numbers continue a list, so "Guide 112,
+# 500 in all directions" still reads 500 as a quantity.
+identifier_list_prefixes:
+  - Class
+  - Division
+  - Divisions
+
+# SB-NUM-06. Time zones a clock time must carry (ics-209#b131:19846-22984: "Enter the time zone of the
+# incident (e.g., EDT, PST)").
+time_zones: [EDT, EST, CDT, CST, MDT, MST, PDT, PST, AKDT, AKST, HST, UTC]
+
+# SB-NEV-03. Words that state confidence. Each needs a source tag in its sentence; without one the
+# confidence is the writer's, which the brief never states. Whole words, case-insensitive.
+confidence_words:
+  - likely
+  - unlikely
+  - probably
+  - possibly
+  - certainly
+  - almost certainly
+  - definitely
+  - surely
+  - confident
+  - guaranteed
+
+# SB-NEV-04. Contact details. Python regular expressions; a match anywhere in the text is a finding.
+contact_patterns:
+  phone: '(?<!\d)(?:\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}(?!\d)'
+  email: '[\w.+-]+@[\w-]+(?:\.[\w-]+)+'
+
+# SB-STR-07. Characters in a public alert text (fema-ipaws-wea#b0:0-9953: "no more than 360
+# characters"; fema-ipaws-wea#b1:9955-10697: a 90-character version for older phones).
+public_alert_limits:
+  wea_long: 360
+  wea_short: 90

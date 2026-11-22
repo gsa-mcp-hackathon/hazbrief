@@ -1,0 +1,12 @@
+check	result
+disk before	free 72,071,016,448 bytes in /var/folders/s1/yqb3d76d7053f7dyy9fwtkzw0000gp/T; need 10,333,652,840 (2 x the tree, 440,912,820, + HB-202's largest swap draw, 9,451,827,200)
+copy	the built tree copied into a new temporary directory (hb213_clean_zds_l2zb); 440,912,820 bytes, 6001 files
+git clone (README Run, line 1)	not run: the copy is the clone; the public tree carries no history
+uv sync --group dev	exit 0 in 0.8 s, offline from uv's local cache
+uv run ruff check .	exit 0 in 0.7 s: All checks passed!
+uv run pytest tests/ -q -n auto --maxprocesses 6 --dist loadfile (the product test set)	exit 0 in 654 s: 3850 passed, 11 skipped in 653.05s (0:10:53)
+uv run python main.py (stdio, README's client line)	answered in 2.7 s: 7 tools (assess_incident, build_ics_201, facilities_in_footprint, material_response_guidance, population_at_risk, protective_action_footprint, receiving_hospitals); 2 prompts (decision_support, ics201_brief)
+README's pack line	exit 0 in 0.1 s: ['attribution', 'built_at', 'data', 'kind', 'pack_id', 'schema_version', 'sha256', 'sources', 'version']
+uv run hazbrief brief docs/briefs/csx-point-of-rocks-day/scenario.json --out /tmp/brief --replay --now 2026-10-26T12:00:00Z --no-google	exit 0 in 26.8 s; brief.html, tevv.html and appendix.html equal the committed docs/briefs/csx-point-of-rocks-day/: yes
+docker build -t hazbrief-mcp . (README)	not run: the image's dependency layer needs PyPI, and this task's Network is none
+copy deleted	yes; free 71,913,312,256 bytes after

@@ -1,0 +1,18 @@
+epa-degadis-readme|metadata|1
+epa-degadis-source|metadata|1
+epa-degadis-testcases|metadata|1
+epa-slab-code|metadata|1
+164682
+id: epa-degadis-readme
+kind: work
+title: DEGADIS readme
+source_url: https://gaftp.epa.gov/aqmg/SCRAM/models/other/degadis/DEGADISreadme.pdf
+disposition: metadata_only
+cited_in: hazbrief-mcp DN-002 s3a; corpus/sources.yaml
+hb_doc_id: epa-degadis-readme
+publisher: U.S. EPA SCRAM (alternative models)
+edition: as served 2026-10-28
+format: pdf
+acquisition: fetched
+raw_sha256: 7511c062b24ceb97f91bc98b6cfef5bcb80e7aa8762b72e78e40e0b82fa7a63a
+withheld_reason: reference-only

@@ -1,0 +1,1036 @@
+# HB-38: the deck, GSA deliverable 2 (DN-009 section 2; DN-001 section 1).
+#
+# The one source of docs/submission/deck.html and docs/submission/deck.pptx, both written by
+# `uv run python build_deck.py (a build tool held privately)`. Edit this file, never the outputs.
+#
+# The rule (the operator's, HB-38): a slide is a translation of the evidence. Every sentence on a
+# slide is a quotation of a committed document (`quote`), or a label beside a number read from a
+# committed file (`label` and `value`, or a table row). Every item names its `source`; a JSON
+# source names the `field` (a key path) its numbers sit under. The build refuses a slide the trace
+# cannot follow (test_deck.py (a test held privately); the reader is test_evaluation_document.py (a test held privately)'s).
+#
+# A quotation matches its source after whitespace is collapsed, `**` emphasis and blockquote
+# markers are dropped, and a parenthetical citation that names a file in backticks is removed, so
+# that a sentence ending "... as the ERG directs (`docs/SECURITY.md` section 4)." is quoted as
+# "... as the ERG directs." Nothing else is normalised.
+#
+# Item kinds: quote | label + value | code | table | figure | diagram. `accent: true` marks the
+# one item per slide drawn in the accent colour (house style: one accent per slide).
+#
+# HB-197: a slide's `notes` are items of the same kinds (quote, or label and value), traced the
+# same way and printed in the speaker notes, each with its file: the detail the body leaves out.
+# A `record` on a quote names a record of docs/FUTURE_WORK.md (an Issue or a decision): the quote
+# is that record's own label there and the slide's notes print the id beside it (ADDENDUM-02 item 2;
+# test_deck.py (a test held privately); HB-219 moved the id off the body). A figure may be a committed screenshot (PNG), drawn as
+# committed.
+#
+# HB-219: plain words. No title or body prints a project id, a file path, a word coined in the project's working
+# notes, or an acronym not spelled out on the slide where it first appears (docs/submission/plain_words.yaml;
+# test_hb219_plain_words.py (a test held privately)); the notes and the sources line may. A line said in plain words quotes
+# docs/evidence/hb219/plain_words.md, which quotes the sentence it restates from each file in the line's `restates`;
+# those files stay on the slide's sources line.
+
+build:
+  # GSA's sample deliverable deck, the template the PPTX is built on. The operator saved it into
+  # corpus/inbox/ on 2026-10-25 (HB-38 run list); HB-38 moved it here, because corpus/inbox/ is
+  # gitignored and a build must run from a clean checkout. sha256 is checked before every build.
+  template: docs/submission/template/MCP-hackathon-sample-deck.pptx
+  template_sha256: 58c2c2356fd474c32c919a1ad7cff1183edf2619e2f7961397d1f9296af6e246
+  html_out: docs/submission/deck.html
+  pptx_out: docs/submission/deck.pptx
+  # HB-38 step 2: twelve to sixteen slides. HB-197 raised the ceiling to seventeen: its item 2
+  # adds four kinds of slide (base rates, the brief's clock and timeline, what is true and what
+  # is not, the operator's contention, other uses) beside GSA's four parts, one slide each.
+  # HB-209 item 9 raised it to twenty: three backup slides the operator asked for (2026-11-19, the
+  # hz-20 handoff): the model use table, Trial 7 concentration by arc, and Trial 7 timing.
+  # HB-215 (Part C; ADDENDUM-03 item 1) raised it to twenty-one: the statement of the problem, first after the
+  # title, which the operator asked for on 2026-11-20 21:49 EST ("we really need that statement of the problem");
+  # no other slide is cut for it.
+  # HB-216 (item 1) raised it to twenty-two: the planning uses, straight after the statement of the problem, which the
+  # operator asked for on 2026-11-21 07:17 EST ("Part of the problem/benefit statement should include the (10k ?
+  # filing?) that all plants and things must do"); no other slide is cut for it, and the body-word cap is unchanged.
+  slide_count: [12, 22]
+  # HB-197 item 3: no slide is a wall of text. The words a slide's body prints (items, table
+  # header and cells; not the title, the part's name, the sources line or the notes;
+  # build_deck.body_words) are at most this many. About half of what the body area holds at
+  # body size by the builder's own estimate (_text_height: 9.3 in by 3.8 in at 15 pt is about 13
+  # lines of 14 words); the detail goes in the notes. HB-212 raised it from 100 to 110: the
+  # benchmark slide prints the minimum's state, eleven words by DN-030 section 2 item 4, and each
+  # Trial 7 row's ratio with its limits, the size its state stands for (108 words); 110 is still
+  # under the body area's 13 lines of 14. HB-213 (ADDENDUM-02 item 5) raised it to 120, measured
+  # first: the Census Bureau's words with the confidence level on every line (HB-212 ADDENDUM-01
+  # items 1 and 2) make the benchmark slide 117 words and the Trial 7 arcs backup 114; 120 is
+  # still under the body area's 13 lines of 14 (182). HB-214 (ADDENDUM-01 item 4, ADDENDUM-02 item 3) condensed the
+  # benchmark slide to four rows and four columns (57 words) and set the cap from the new measured maximum
+  # (docs/evidence/hb214/deck_words.tsv): the Trial 7 arcs backup, 114 words, the largest body; no slide may grow
+  # past it without a measurement and a reason here
+  max_body_words: 114
+  # The template's layout names (inventory in the HB-38 RESULT, section 1).
+  layouts:
+    title: TITLE
+    body: TITLE_AND_BODY
+    title_only: TITLE_ONLY
+  # House style (DN-009 section 2): Calibri, white, black or grey text, one orange accent.
+  # Carlito is Calibri's metric-compatible open font; the rest of the stack is the fallback.
+  font: Calibri
+  font_stack: "Calibri, Carlito, 'Segoe UI', Arial, sans-serif"
+  code_font: Consolas
+  code_font_stack: "Consolas, 'Liberation Mono', Menlo, monospace"
+  colors:
+    background: "FFFFFF"
+    text: "000000"
+    muted: "595959"
+    rule: "BFBFBF"
+    header_fill: "F2F2F2"
+    # Orange with 5.2:1 contrast on white (WCAG 2.1 relative luminance), which meets AA for body
+    # text; the lighter Office orange C55A11 is 4.3:1 and does not.
+    accent: "C2410C"
+  # Point sizes on the PPTX's 10 in by 5.625 in slide (the template's size).
+  pptx_pt:
+    title: 26
+    subtitle: 16
+    body: 15
+    body_dense: 13
+    label: 13
+    table: 11
+    code: 13
+    notes: 11
+  # The HTML deck's canvas (reveal.js scales it to the window) and its sizes in px.
+  html:
+    width: 1280
+    height: 720
+    title_px: 40
+    body_px: 24
+    body_dense_px: 21
+    table_px: 18
+    small_px: 14
+    # HB-197: a screenshot's width beside its text (a 1440 by 1043 window at this width)
+    shot_px: 640
+  # Pinned CDN builds; the HTML deck needs no build step and opens from file://.
+  cdn:
+    reveal_css: https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css
+    reveal_js: https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js
+    reveal_notes: https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js
+    mermaid_js: https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js
+  # Mermaid's theme, shared by the browser render and the build-time PNG for the PPTX.
+  mermaid_theme:
+    theme: base
+    themeVariables:
+      fontFamily: "Calibri, Carlito, Arial, sans-serif"
+      fontSize: 16px
+      primaryColor: "#FFFFFF"
+      primaryTextColor: "#000000"
+      primaryBorderColor: "#595959"
+      lineColor: "#595959"
+      clusterBkg: "#F2F2F2"
+      clusterBorder: "#BFBFBF"
+      edgeLabelBackground: "#FFFFFF"
+  # Build-time renderers for the PPTX's pictures (the PPTX format holds no Mermaid, and
+  # python-pptx inserts raster images only). Each is looked up on PATH and refused loudly if absent.
+  renderers:
+    mermaid_cli: mmdc
+    mermaid_width_px: 2400
+    svg_to_png: rsvg-convert
+    svg_width_px: 1200
+
+# GSA's four required parts, in order (DN-001 section 1; DN-009 section 2).
+parts:
+  problem: Problem statement
+  solution: Solution overview
+  technical: Technical approach and key decisions
+  demonstration: Demonstration of functionality
+
+slides:
+  - id: title
+    part: title
+    title: hazbrief-mcp
+    accent_title: true
+    items:
+      - quote: >-
+          A Model Context Protocol (MCP) server for a 2026 government hackathon, in its Dataset Access Server
+          category.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [DN-001]
+      - quote: https://github.com/brockwebb/hazbrief-mcp
+        source: server.json
+    notes:
+      # HB-219: the hackathon's full name, which holds two acronyms no held text expands (GSA, SI)
+      - quote: >-
+          An MCP server for the GSA Model Context Protocol Server and SI Agent Government
+          Hackathon (2026), Dataset Access Server category.
+        source: DN-001
+
+  # ---- 1. Problem statement (HB-197 item 2: the base rates, the hotspot map, the hand work)
+
+  # HB-215 Part C: the statement of the problem, first after the title (the operator, 2026-11-20 21:49 EST: "the
+  # number of accidents per year ... put it up on a US map ... a marker could represent the quantity at that point";
+  # "How big of a problem is this?"). Every number is read from scripts/build_problem_map.py's record, which reads
+  # HB-127's base rates and HB-136R's points; at most 30 words besides the numbers (tests/test_hb215_problem_slide.py)
+  - id: problem-scale
+    part: problem
+    title: How big the problem is
+    dense: true
+    items:
+      # HB-219: "PHMSA" said in plain words
+      - label: Hazmat transportation incidents reported to the federal hazmat safety agency, all modes, 2023
+        value: "24,265"
+        source: docs/incidents/problem_scale.tsv
+        accent: true
+      - label: Rail accidents releasing hazmat, 2016-2025
+        value: "146 (14.6 a year)"
+        source: docs/incidents/problem_scale.tsv
+      - label: Their reported damage
+        value: "$209.5 million ($20.9 million a year)"
+        source: docs/incidents/problem_scale.tsv
+      - figure:
+          path: docs/incidents/problem_us_damage.svg
+          alt: >-
+            Map of the conterminous United States, 2016-2025: one circle for each of the 146 rail accidents in which
+            a car released hazmat, its area its reported damage (largest $15.8 million), over grey cells where any
+            rail equipment accident happened.
+          alt_source: docs/incidents/problem_scale.md
+    notes:
+      - quote: >-
+          Their damage in dollars is not held: BTS NTS table 2-6 and the Table 5-5 workbook were refused to the
+          fetcher (HB-127, rung 2).
+        source: docs/incidents/problem_scale.md
+      - quote: >-
+          Mark area: reported damage to equipment and track (Blocks 36 and 37), dollars as reported.
+        source: docs/incidents/problem_scale.md
+      - quote: Highway, air and water releases (PHMSA 5800.1) are not held.
+        source: docs/incidents/problem_scale.md
+
+  # HB-216: the planning uses, straight after the statement of the problem (the operator, 2026-11-21 07:17 EST: "the
+  # (10k ? filing?) that all plants and things must do -- and that this could be used for all those things --
+  # including pre-planning for zoning, etc."). A slide of its own rather than a row on "How often, how large, what it
+  # costs": that slide is a table of rates, and this one says who already has to plan and what hazbrief offers them.
+  # Every line is a sentence of HB-216's record, whose held sentences are located in the held bytes
+  # (docs/evidence/hb216/locate_quotes.txt); at most 40 words besides citations and numbers
+  # (test_hb216_planning_slide.py (a test held privately))
+  - id: planning-uses
+    part: problem
+    title: Already required to plan
+    items:
+      # HB-219 (ADDENDUM-01 items 1 to 4): the two citations spelled out, the Issue id moved to the notes, and the
+      # further uses marked as the author's; each line is the record's, edited first
+      - label: Facilities filing a worst-case release scenario (title 40 Code of Federal Regulations, section 68.25)
+        value: about 11,740
+        source: docs/evidence/hb216/planning_uses.md
+      - quote: >-
+          Local emergency planning committees plan for releases (Emergency Planning and Community Right-to-Know Act,
+          section 303).
+        source: docs/evidence/hb216/planning_uses.md
+      - quote: "Built: a what-if brief from a stated wind."
+        source: docs/evidence/hb216/planning_uses.md
+        accent: true
+      - quote: "Next: a worst-case scenario builder."
+        source: docs/evidence/hb216/planning_uses.md
+      - quote: "The author also proposes: exercises, pre-incident plans, siting, zoning."
+        source: docs/evidence/hb216/planning_uses.md
+    notes:
+      - quote: >-
+          The fixed conditions of the worst case are in 40 CFR 68.22: a wind speed of 1.5 meters per second and F
+          atmospheric stability class.
+        source: docs/evidence/hb216/planning_uses.md
+      - quote: >-
+          EPA's 2026 proposed rule counts 11,510 registered facilities in 2023, down from 12,396 in 2014
+        source: docs/evidence/hb216/planning_uses.md
+      - quote: "Not built: the worst-case scenario builder is Issue `d54dbcb8`."
+        source: docs/evidence/hb216/planning_uses.md
+      - quote: >-
+          These are the author's statement of where hazbrief could be used, not a held source's claim.
+        source: docs/evidence/hb216/planning_uses.md
+      - quote: So the zoning use stays as the author's statement, and an Issue records that no source is held.
+        source: docs/evidence/hb216/planning_uses.md
+
+  - id: problem-rates
+    part: problem
+    title: How often, how large, what it costs
+    items:
+      # HB-127's held base rates, each row read from its table; what is not held (transport
+      # deaths, injuries and damages) is said in the notes
+      - table:
+          header: [Measure, Value, Period]
+          rows:
+      # HB-219: each label in plain words ("PHMSA", "RMP-reportable", "Chlorine-only events"); the numbers unchanged
+            - cells: ["Hazmat transportation incidents reported to the federal hazmat safety agency, all modes", "24,265", "2023"]
+              source: docs/evidence/hb127/base_rates.tsv
+              accent: true
+            - cells: ["Hazmat transportation incidents per day, all modes", "66.5", "2023"]
+              source: docs/evidence/hb127/base_rates.tsv
+            - cells: ["Share of incidents related to a vehicle accident or a derailment", "0.5 percent", "2023"]
+              source: docs/evidence/hb127/base_rates.tsv
+            - cells: ["Events with chlorine alone in which an evacuation was ordered", "39.5 percent", "1993-2000"]
+              source: docs/evidence/hb127/base_rates.tsv
+            - cells: ["Largest evacuation ever from an accident at a facility under the Environmental Protection Agency's (EPA) risk management rule", "50,000 persons", "2019"]
+              source: docs/evidence/hb127/base_rates.tsv
+            - cells: ["Accident damages at those facilities, in dollars, EPA's figure", "$540.23 million a year", "2016-2020"]
+              source: docs/evidence/hb127/base_rates.tsv
+    notes:
+      - quote: TSAR 2024 Table 5-5 as printed carries incidents only.
+        source: docs/evidence/hb127/base_rates.tsv
+      - quote: "Derived: 24,265 / 365 days. An average; the source prints no daily rate."
+        source: docs/evidence/hb127/base_rates.tsv
+      - quote: >-
+          The rule says these omit responder costs, property-value losses, unmonetized evacuation
+          and sheltering costs and health risks
+        source: docs/evidence/hb127/base_rates.tsv
+
+  - id: problem
+    part: problem
+    title: "Today's tools draw the area, not who is inside it"
+    dense: true
+    items:
+      # HB-136R step 4: where rail hazmat releases have happened in the region the fixtures
+      # cover, from the held FRA Form 54 extract
+      - figure:
+          path: docs/incidents/incident_hotspots_mid_atlantic.svg
+          alt: >-
+            Map of the Mid-Atlantic region, 2016-2025: 4 rail hazmat releases (Washington DC
+            2016, Reading, PA 2017, Hyndman, PA 2017, Baltimore, MD 2019) coloured by severity
+            over the grey trace of every rail equipment accident, with the Point of Rocks and
+            Wilson Bridge fixtures marked; no Gi* hot cell lies in the region
+          alt_source: docs/incidents/incident_hotspots.md
+      - quote: >-
+          From 2016 to 2025, 146 rail incidents released hazmat in the contiguous United States; 4 of them in the
+          Mid-Atlantic region our test scenarios cover.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/incidents/incident_hotspots.md]
+      - quote: >-
+          Today's tools draw the area at risk; they do not say who is inside it: residents, workers, schools in
+          session, hospitals.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [DN-001]
+      - quote: Today the incident's planning staff put that picture together by hand.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [DN-001]
+        accent: true
+      - quote: This server automates that work, not the physics.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [DN-001]
+    notes:
+      - quote: That fusion is done today by a Situation Unit by hand.
+        source: DN-001
+      - quote: >-
+          They do not say who is inside it, which group quarters cannot be moved, which schools
+          are in session, which hospital is inside the zone and therefore a casualty site rather
+          than a receiver, or what the daytime worker population is against the residential
+          count.
+        source: DN-001
+      - quote: >-
+          The reader is an Incident Commander or a Planning Section Chief under time pressure.
+        source: docs/stylebook/COMMANDER_STYLEBOOK.md
+
+  # ---- 2. Solution overview (HB-197 item 2: what goes in, what comes out, on one brief)
+
+  - id: solution
+    part: solution
+    title: "In: the incident. Out: a brief"
+    dense: true
+    items:
+      - figure:
+          path: docs/submission/demo/csx_night_first_view.png
+          alt: >-
+            the live page served in this process by replay (no network, no engine; 0 calls), its
+            first view once the run has finished: the EXERCISE banner, the header line, the
+            layers, the map with the ERG footprint and the modelled cloud, and the operator
+            checklist
+          alt_source: deck_screenshots.py (a build tool held privately)
+      - quote: >-
+          Given a hazmat accident in transport (material, container, place, time), it gathers public federal data
+          into the area to protect, warnings that each name their source, and a draft Incident Command System
+          briefing form (ICS 201).
+        source: docs/evidence/hb219/plain_words.md
+        restates: [DN-001]
+        accent: true
+      - quote: Every distance comes from the federal Emergency Response Guidebook (ERG).
+        source: docs/evidence/hb219/plain_words.md
+        restates: [DN-001]
+      - quote: The server runs no dispersion model; the application draws a labelled modelled cloud.
+        source: README.md
+      # review L6-4 (test_judge_facing_documents.py (a test held privately)): the disclosure, quoted from README
+      - quote: No tool result and no ICS 201 carries a modelled value.
+        source: README.md
+    notes:
+      - quote: >-
+          Under it, one row: the layers and their legend in a collapsible left column, the map in
+          the centre with its view and overlay switches at its top right and a tabbed panel under
+          it (closed on first paint), and the operator checklist in a collapsible right column.
+        source: docs/ARCHITECTURE.md
+      - quote: The header carries the EXERCISE banner
+        source: docs/ARCHITECTURE.md
+
+  - id: solution-clock
+    part: solution
+    title: The modelled gas cloud, by level of health effect, over time
+    dense: true
+    items:
+      - figure:
+          path: docs/evidence/hb192/csx_night_frame_180.png
+          alt: >-
+            after the run, the time control on the frames at 60 and 180 minutes (the steps Play
+            passes through, 15 minutes apart)
+          alt_source: the HB-192 evidence (held privately)
+      - quote: >-
+          The application draws one modelled cloud for each level of health effect (Acute Exposure Guideline
+          Levels AEGL-3, AEGL-2 and AEGL-1), from the one model a published test chooses for the release.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [README.md]
+      - quote: >-
+          The cloud is drawn for every 15 minutes of its time, each step shown as soon as it is computed, with a
+          Play control.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [README.md]
+        accent: true
+      - quote: The protective action distance is the guidebook's.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [README.md]
+    notes:
+      - quote: none of the modelled layers is validated against observations of a release
+        source: README.md
+
+  - id: solution-timeline
+    part: solution
+    # HB-209 item 5 (DN-029 ADDENDUM-00 decision 6): the timeline is described as evidence and the exercise events
+    # list, never as the commander's view
+    title: "The timeline, as evidence, and the checklist"
+    dense: true
+    items:
+      - figure:
+          path: docs/submission/demo/csx_night_timeline.png
+          alt: >-
+            the brief's Timeline page, what the modelled cloud reaches and when, in time order
+          alt_source: deck_screenshots.py (a build tool held privately)
+      - quote: >-
+          The timeline is evidence, and the list of events for an exercise; it is not the commander's view for
+          decisions.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [README.md]
+      - quote: Each row is one place reaching one health-effect level.
+        source: docs/briefs/csx-point-of-rocks-night/timeline.html
+      - quote: >-
+          The checklist exists to remind the reader to think critically about the brief and the quality of its
+          information.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/ARCHITECTURE.md]
+        accent: true
+      - quote: A line that later data made false is struck through, not removed.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/ARCHITECTURE.md]
+    notes:
+      - quote: >-
+          The checklist (HB-141) holds the cue lines, the integrity items, the flags in priority
+          order, each degraded section's label and one line per source, each with its receipt
+        source: docs/ARCHITECTURE.md
+
+  - id: thesis
+    part: solution
+    title: "The author's contention: the person checks"
+    dense: true
+    items:
+      - figure:
+          path: docs/evidence/hb192/csx_night_tevv_benchmarks.png
+          alt: the TEVV page the replay build wrote, at section T60, served as files
+          alt_source: the HB-192 evidence (held privately)
+      - quote: >-
+          This is the author's stated position; it is a contention, and this evaluation does not test it.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/submission/EVALUATION.md]
+      - quote: where the human's effort goes to validating what is shown rather than to setup.
+        source: docs/evidence/hb213/lifted/decisions.md
+        accent: true
+      - quote: A responder should not need training on this software.
+        source: docs/submission/EVALUATION.md
+    notes:
+      # HB-197 item 2: the checklist's purpose, in this slide's notes
+      - quote: >-
+          The checklist exists solely to remind the reader to think critically about the
+          situation report and to understand the quality of the information: the uncertainty of
+          the assumptions, the fidelity of the models, the timeliness of the data.
+        source: docs/evidence/hb213/lifted/decisions.md
+      - quote: >-
+          The expertise the brief asks of them is the chemistry and the response, and the one
+          cognitive act it is built around is checking
+        source: docs/submission/EVALUATION.md
+
+  - id: uses
+    part: solution
+    title: Other uses, from the author's decisions
+    items:
+      - quote: >-
+          A quick answer: the material's four-digit number and a place in, first actions out, short enough to read
+          aloud.
+        source: docs/evidence/hb219/plain_words.md
+        restates:
+          - DN-022
+        accent: true
+      - quote: "A drill generator: practice scenarios placed along a named rail line or road."
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/evidence/hb213/lifted/decisions.md]
+      - quote: "The list of events for an exercise, filled from the timeline: each event's number, time and message."
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/briefs/csx-point-of-rocks-night/timeline.html]
+      - quote: a worst-case scenario builder, perhaps a top-five list for exercises and planning.
+        source: docs/FUTURE_WORK.md
+      - quote: "Who is there by day: workers as well as residents."
+        source: docs/evidence/hb219/plain_words.md
+        restates: [DN-001]
+    notes:
+      - quote: >-
+          Climatology is not a wind source for a brief; it belongs to the deferred planning
+          product.
+        source: docs/evidence/hb213/lifted/decisions.md
+      - quote: >-
+          named on the deck's extensible-use-cases slide (operator direction 5), not built here.
+        source: DN-022
+
+  # ---- 3. Technical approach and key decisions
+
+  - id: tools
+    part: technical
+    title: Seven tools, each a question a commander asks
+    items:
+      - table:
+          # HB-219: each row's sources in plain words; the row it restates is in the record
+          header: [Tool, What it reads]
+          rows:
+            - cells: ["`assess_incident`", "bundled reference data; sunrise and sunset by the federal solar equations"]
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/ARCHITECTURE.md]
+              quoted: true
+            - cells:
+                - "`protective_action_footprint`"
+                - bundled reference data; the National Weather Service forecast when no wind is given
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/ARCHITECTURE.md]
+              quoted: true
+            - cells: ["`population_at_risk`", "Census Bureau maps and population counts; a cached file of where people work"]
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/ARCHITECTURE.md]
+              quoted: true
+            - cells:
+                - "`facilities_in_footprint`"
+                - federal maps of buildings, water and transport; a cached file of hospitals and nursing homes
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/ARCHITECTURE.md]
+              quoted: true
+            - cells: ["`receiving_hospitals`", "the cached file of hospitals and nursing homes only"]
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/ARCHITECTURE.md]
+              quoted: true
+            - cells: ["`material_response_guidance`", "bundled reference data only"]
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/ARCHITECTURE.md]
+              quoted: true
+            - cells:
+                - "`build_ics_201`"
+                - the six tools above; Census Bureau places, counties and roads; National Weather Service points
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/ARCHITECTURE.md]
+              quoted: true
+      - quote: The `hazbrief brief` application is a client of the server, not part of it.
+        source: README.md
+        accent: true
+    notes:
+      - quote: "Every tool is annotated `readOnlyHint: true`."
+        source: docs/ARCHITECTURE.md
+
+  - id: architecture
+    part: technical
+    title: Built ahead of time, served at run time
+    items:
+      - diagram:
+          source: docs/ARCHITECTURE.md
+          block: 0
+      - quote: >-
+          It reads six checked data files, two cached file sets and six live federal services. It writes nothing
+          back and calls no model.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/ARCHITECTURE.md]
+        accent: true
+      - quote: No database is opened at runtime
+        source: docs/ARCHITECTURE.md
+
+  - id: engines
+    part: technical
+    title: One model per release, and a source on every number
+    items:
+      - quote: >-
+          A published test (the critical Richardson number) classes the release as a dense gas, a gas that drifts
+          with the air, or not classed.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [README.md]
+      - quote: >-
+          A dense gas is modelled by SCICHEM, a dispersion model from the Electric Power Research Institute, on the
+          forecast wind, hour by hour.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [README.md]
+      - quote: A release the test cannot class is not modelled, and the brief says why.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [README.md]
+      - quote: >-
+          Every number carries its source: the tool output it came from, with its value, or a document and page.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/ARCHITECTURE.md]
+        accent: true
+      # HB-197 ADDENDUM-01 item 7, from HB-192's frames and live loads; HB-219: the label and units in plain words
+      - label: Point of Rocks night scenario, first picture of the cloud; the page's size before and after a fix
+        value: 14.2 seconds; 6.62 megabytes, then 3.39 megabytes
+        source: docs/submission/EVALUATION.md
+    notes:
+      - label: csx night, the engine's seconds to its first 15-minute frame
+        value: "14.207"
+        source: docs/evidence/hb192/frames.tsv
+      - label: csx night, brief.html MB before HB-192
+        value: "6.62"
+        source: docs/evidence/hb189/live_load.tsv
+      - label: csx night, brief.html MB after HB-192
+        value: "3.39"
+        source: docs/evidence/hb192/live_load.tsv
+      - quote: >-
+          Every ERG guide is routed: where its chemistry takes a release model, the modelled
+          layers apply; where it does not (explosives, radioactive materials, oxidisers, solids
+          and others), the brief says so in the guide's own words and draws neither
+        source: README.md
+
+  - id: decisions
+    part: technical
+    title: Three decisions the evaluation forced
+    items:
+      - quote: Reading the tables as data found the ERG's own errors.
+        source: docs/submission/EVALUATION.md
+      - quote: >-
+          A rule the language model is expected to follow is a hope. A rule the server applies, with its reason in
+          the output, is a guarantee, and the model only narrates it.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/submission/EVALUATION.md]
+      - quote: A tool result that is correct but over the model's size limit never reaches the model.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/submission/EVALUATION.md]
+        accent: true
+    notes:
+      - quote: >-
+          In 203 cells the metric value was revised and the US-unit value left at its 2020
+          figure.
+        source: docs/submission/EVALUATION.md
+      - quote: >-
+          In the final run every reply named every candidate, and the governing one with its
+          distance, 36 of 36.
+        source: docs/submission/EVALUATION.md
+      - quote: >-
+          In the first agent pilot, `build_ics_201` answered 255,690 characters. Claude Code
+          refused it, because it caps a tool result at 25,000 tokens by default.
+        source: docs/submission/EVALUATION.md
+
+  - id: testing
+    part: technical
+    title: "How it is tested: four levels, two steps"
+    items:
+      # above the table: the builder lays out words before a table by its height estimate,
+      # and a wrapped row would cover words placed after it
+      - quote: Every collected test runs in exactly one of the two steps, and both must pass.
+        source: docs/submission/EVALUATION.md
+        accent: true
+      - table:
+          header: [Level, What it tests]
+          rows:
+            - cells:
+                - "Part A: fixed rules on every output"
+                - Every output the tools can produce obeys the server's fixed rules.
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/submission/EVALUATION.md]
+              quoted: true
+            - cells:
+                - "Part B: saved scenarios rerun"
+                - No change moves any tool output on any saved scenario unnoticed.
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/submission/EVALUATION.md]
+              quoted: true
+            - cells:
+                - "Part C: live sources"
+                - >-
+                  Whether the federal sources the server reads still answer as they did when the test scenarios
+                  were recorded.
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/submission/EVALUATION.md]
+              quoted: true
+            - cells:
+                - "Part D: the language model's replies"
+                - Is every number and name in its reply backed by a tool output?
+              source: docs/evidence/hb219/plain_words.md
+              restates: [docs/submission/EVALUATION.md]
+              quoted: true
+    notes:
+      - label: Part A, footprint outputs checked
+        value: "24,846"
+        source: eval/reports/2026-10-25_invariants.json
+        field: [parts, 2_footprint, counts, outputs]
+      - label: Part A, distances traced to a pack cell
+        value: "106,174"
+        source: eval/reports/2026-10-25_invariants.json
+        field: [parts, 5_provenance, counts, distances]
+      - label: Part B, scenario-tool outputs compared and differences
+        value: 121 and 0
+        source: eval/reports/2026-10-25_regression.json
+        field: [counts]
+      - label: Part C, live calls made, failed
+        value: 120, 0
+        source: eval/reports/2026-10-25_live.json
+        field: [calls]
+      - label: Part D, the demo model's grounding, pooled
+        value: 94.2 % (3,459 of 3,673)
+        source: eval/agent_runs/2026-10-25/intervals_vs_hb16b.json
+        field: [measures, claude-opus-5-5, grounding_rate_pooled, new]
+      - label: Part D, scenario pass
+        value: 92.6 % (50 of 54)
+        source: eval/agent_runs/2026-10-25/intervals_vs_hb16b.json
+        field: [measures, claude-opus-5-5, scenario_pass, new]
+      - label: Latest full-suite gate in the evaluation document (HB-213), passed
+        value: "8,321"
+        source: docs/submission/EVALUATION.md
+      - quote: The gate takes 76 to 89 minutes on the build machine
+        source: docs/submission/EVALUATION.md
+
+  # HB-197 item 2; HB-212 and HB-213 (the states by statistical significance, scripts/benchmark_state.py).
+  # HB-214 ADDENDUM-01 item 4 (the operator, 2026-11-20 21:49 EST: "If we were to produce anything that was for a
+  # slide, it would have to be extremely condensed"): this slide does not carry the evidence table. It carries four
+  # rows of it, hazbrief's two engines against the measurements and the engine a stable brief draws first (SCICHEM)
+  # against HPAC and ALOHA, in four columns, and one line saying the full table is in the evidence; each cell is read
+  # from the table's own record (docs/evidence/hb214/benchmark_table.md, written by scripts/benchmark_table.py). The
+  # five-row cap leaves SLAB against the tools to the full table (every one of its six lines reads No). The notes
+  # are the table's numbered notes, in its words.
+  - id: benchmarks
+    part: technical
+    title: "Benchmarks: one field trial scored; others not yet"
+    dense: true
+    items:
+      - table:
+          header: [Compared, Ratio, 95 percent limits, "Statistically different?"]
+          rows:
+            - cells: ["SCICHEM against the measurements", "2.88", "1.58 to 5.27", "Yes, below"]
+              source: docs/evidence/hb214/benchmark_table.md
+              accent: true
+            - cells: ["SLAB against the measurements", "1.43", "0.83 to 2.47", "No"]
+              source: docs/evidence/hb214/benchmark_table.md
+            - cells: ["SCICHEM against HPAC", "1.66", "0.87 to 3.16", "No"]
+              source: docs/evidence/hb214/benchmark_table.md
+            - cells: ["SCICHEM against ALOHA", "1.35", "0.62 to 2.94", "No"]
+              source: docs/evidence/hb214/benchmark_table.md
+      # HB-219: the three names spelled out or explained where the deck first prints them; the full table's path
+      # moved to the notes (a body prints no file path)
+      - quote: >-
+          HPAC (Hazard Prediction and Assessment Capability) and ALOHA (Areal Locations of Hazardous Atmospheres)
+          are tools responders rely on; SLAB is hazbrief's second dense-gas model.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/evidence/hb214/benchmark_table.md, README.md]
+    notes:
+      - label: The full table, every test with its definitions and notes, is in the evidence
+        value: docs/evidence/hb214/benchmark_table.html
+        source: docs/evidence/hb214/benchmark_table.md
+      - quote: >-
+          Ratio: against the measurements, the geometric mean of measured over predicted concentration (MG); against
+          a tool, the run's MG divided by the tool's. 1 means no difference; above 1 means the run's concentrations
+          are lower.
+        source: docs/evidence/hb214/benchmark_table.md
+      - quote: >-
+          Statistically different?: Yes when the 95 percent limits leave out 1, with below or above for the run's
+          concentrations; No when they include 1; Not yet tested where no run is held.
+        source: docs/evidence/hb214/benchmark_table.md
+      - quote: >-
+          Jack Rabbit II Trial 7: one trial, five arcs at 0.2 to 5 km, all of one release, not five independent
+          releases.
+        source: docs/evidence/hb214/benchmark_table.md
+      - quote: >-
+          The limits are Hanna, Strimaitis and Chang (1993), equation 34, at the 95 percent confidence level; the
+          words are the Census Bureau's.
+        source: docs/evidence/hb214/benchmark_table.md
+      - quote: >-
+          Why HPAC and ALOHA, the operator: "the community tools that people have been relying on ... the gold
+          standard for the community."
+        source: docs/evidence/hb214/benchmark_table.md
+      - quote: >-
+          Two models can agree and both be wrong (Warner et al., page 40). The operator: "they can still be useful
+          for making decisions."
+        source: docs/evidence/hb214/benchmark_table.md
+      - quote: >-
+          BENCH-0's minimum, doing as well as each tool: not statistically significant at 95 percent against HPAC or
+          ALOHA (one trial, five arcs).
+        source: docs/evidence/hb214/benchmark_table.md
+      - quote: no hazbrief run is held on Jack Rabbit II trials 1 or 6
+        source: docs/evidence/hb192/benchmark_rows.md
+
+  # HB-197 item 2 and ADDENDUM-02 item 2, restated by HB-209 item 10: what is next and what is not validated, each
+  # line the label of a record docs/FUTURE_WORK.md is generated from; the hz-20 handoff's cuts first. The ensemble
+  # papers the handoff names (Galmarini 2004, Riccio 2007) are not held (corpus/sources.yaml has neither), so they are
+  # not named; F12, the ensemble or variance model, is.
+  - id: limits
+    part: technical
+    title: What is next
+    items:
+      - quote: The timed decision view on the brief page
+        source: docs/FUTURE_WORK.md
+        record: 35e5f362
+        accent: true
+      - quote: One population layer on the brief page
+        source: docs/FUTURE_WORK.md
+        record: d0f23564
+      - quote: Where a live brief's assembly time goes
+        source: docs/FUTURE_WORK.md
+        record: a682da2b
+      - quote: "Uncertainty zones around the cloud: an ensemble or a variance model"
+        source: docs/FUTURE_WORK.md
+        record: 05fd0f12
+      - quote: Evaluate the dense cloud on Jack Rabbit II trials 1 and 6 against the benchmark requirement (Trial 7 is run)
+        source: docs/FUTURE_WORK.md
+        record: b6415bb8
+    notes:
+      # HB-219: two records whose labels hold a design note's id or a server's address word ("localhost") moved from
+      # the body to the notes; a record's label is its own, so it is not reworded here
+      - quote: Times on SLAB's area, and DN-028 ADDENDUM-14's "no times" wording
+        source: docs/FUTURE_WORK.md
+        record: 01f48797
+      # HB-210: Google traffic draws with the operator's key (Issue 550a34b4 resolved); the limit is the record left
+      - quote: Google traffic draws only on a page served with a key, and the key is refused on localhost
+        source: docs/FUTURE_WORK.md
+        record: 0844dcb5
+      - quote: Under a stable class, SCICHEM is below every measured trial arc and is not converged
+        source: docs/FUTURE_WORK.md
+        record: c998e714
+      - quote: Night clouds leave the engine's domain, so reach and residents are lower bounds
+        source: docs/FUTURE_WORK.md
+        record: d5bcfffb
+      - quote: A release under one minute is modelled as one minute, which lowers the peak near the source
+        source: docs/FUTURE_WORK.md
+        record: 9c191e24
+      - quote: "Held field trials not run: daytime, instantaneous, passive and Jack Rabbit II"
+        source: docs/FUTURE_WORK.md
+        record: e7b9f583
+      - quote: Display refinement in design sessions with responders
+        source: docs/FUTURE_WORK.md
+        record: 0de95d2f
+      - quote: Smoke from a fire (VSMOKE)
+        source: docs/FUTURE_WORK.md
+        record: hazbrief-mcp:HBD-317
+      - quote: "A third dispersion engine, exploratory (cut 2026-11-15)"
+        source: docs/FUTURE_WORK.md
+        record: 207422dc
+
+  # ---- 4. Demonstration of functionality (two slides, HB-38 step 2)
+
+  # HB-197 item 2, restated by HB-209 item 3, restated by HB-219 item 1 (the operator, 2026-11-21 22:26 EST:
+  # "demonstration is a live path through the start page ... that has all the historical tests that we could use as
+  # templates or enter a new scenario"; of the old title "Demonstration: two doors, live": "That means nothing to
+  # me."): the slide says what the demonstration is, from the start page's own words and README's
+  - id: demo-outline
+    part: demonstration
+    title: "Demonstration: live, from the start page"
+    items:
+      - quote: "The start page lists the prepared scenarios: tests, each with a brief recorded at a past date."
+        source: docs/evidence/hb219/plain_words.md
+        restates: [README.md, docs/submission/EVALUATION.md]
+      - quote: Open one as it was recorded, with its recorded weather.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [src/hazbrief/brief/orchestrator.yaml]
+      - quote: "Or run the same one with today's conditions: now, on today's forecast, every field open to change."
+        source: docs/evidence/hb219/plain_words.md
+        restates: [README.md]
+        accent: true
+      - quote: "Or enter a new incident: a point on the map and a situation line."
+        source: docs/evidence/hb219/plain_words.md
+        restates: [src/hazbrief/brief/orchestrator.yaml]
+      - quote: Then the brief page, its checklist, its test and evaluation page, and what is next.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/submission/demo/OUTLINE.md]
+      - quote: The server on its own also answers any MCP client.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [README.md]
+    notes:
+      - quote: One server serves one brief; Ctrl-C, then start again
+        source: docs/submission/demo/OUTLINE.md
+      - quote: The cloud plays as it is computed; cut the wait
+        source: docs/submission/demo/OUTLINE.md
+      - label: A live brief with today's conditions (HB-208, i83-md-pa-line-day), first frame and last section
+        value: 135.7 s and 801.6 s
+        source: docs/evidence/hb208/live/runs.tsv
+      - label: The recorded run (HB-208, un1005-i81), last section
+        value: 6.2 s
+        source: docs/evidence/hb208/live/runs.tsv
+
+  - id: demo-fallback
+    part: demonstration
+    title: "If the live demo fails: recorded run or packaged server"
+    dense: true
+    items:
+      - figure:
+          path: docs/evidence/hb192/csx_night_status_mid_run.png
+          alt: >-
+            so the status line and the drawn outlines are those a live page shows at frame 5 of
+            24
+          alt_source: the HB-192 evidence (held privately)
+      - quote: "open the recorded run instead and say so."
+        source: docs/submission/demo/PREFLIGHT.md
+      - code: cp .env.example .env
+        source: README.md
+      - code: docker build -t hazbrief-mcp .
+        source: README.md
+      - code: docker run --rm -p 127.0.0.1:8080:8080 --env-file .env hazbrief-mcp
+        source: README.md
+      # HB-197 ADDENDUM-02 item 3 and ADDENDUM-03 item 0f: what HB-201 found and what is true
+      # after HB-197's change to .env.example; HB-219: in plain words, the task ids moved to the notes
+      - quote: >-
+          Before a fix, the instructions' run line started a server that did not answer: the connection closed
+          after 60.1 s.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/evidence/hb201/image.md]
+      - quote: >-
+          After the fix, the lines run: the health check answers, 7 tools are listed, and 0 of 20 fields compared
+          differ.
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/evidence/hb197/readme_container.md]
+        accent: true
+    notes:
+      - label: README's run line before HB-197, /health (HB-201)
+        value: RemoteDisconnected after 60.1 s
+        source: docs/evidence/hb201/image.md
+        quoted: true
+      - label: After, README's lines run again
+        value: /health 200, 7 tools listed, 0 differences on 20 fields
+        source: docs/evidence/hb197/readme_container.md
+      - quote: >-
+          The build asked for the network.
+        source: docs/evidence/hb197/readme_container.md
+      - label: If a page does not load
+        value: the committed screenshots PREFLIGHT lists
+        source: docs/submission/demo/PREFLIGHT.md
+
+  # ---- Backup slides (HB-209 item 9): each cell from a held record; test_hb209_backup_slides.py (a test held privately) holds every
+  # cell to its record. They follow the demonstration, under the technical part.
+
+  # (a) the model use table: each engine, what it provides, where it is appropriate, how it compares with the
+  # measured stable trials, and its limits, each cell a quotation of its row of src/hazbrief/brief/conditions.yaml,
+  # the one table every TEVV page's conditions-of-use sections are generated from
+  - id: backup-model-use
+    part: technical
+    title: "Backup: each model, where it is appropriate, and its limits"
+    dense: true
+    items:
+      # HB-219: "Engine" said as "Model"; MG explained where the deck first prints it (above the table: the builder
+      # lays out words before a table by its height estimate)
+      - quote: "MG: the geometric mean of measured over predicted concentration; 1 means no difference."
+        source: docs/evidence/hb219/plain_words.md
+        restates: [docs/evidence/hb214/benchmark_table.md]
+      - table:
+          header: [Model, Provides, Appropriate for, Stable trials, Limits]
+          rows:
+            - cells:
+                - SCICHEM
+                - the levels, their times and the cloud on the forecast wind hour by hour
+                - a dense release under classes A to D, at every wind speed
+                - "observed over predicted MG 3.50 (95 percent 2.87 to 4.27)"
+                - Not established under classes E and F
+              source: src/hazbrief/brief/conditions.yaml
+              quoted: true
+              accent: true
+            - cells:
+                - SLAB
+                - every level's extent check
+                - where any hour of the horizon is class E or F
+                - MG 0.87 (95 percent 0.76 to 1.00)
+                - it gives no times and does not turn with the forecast
+              source: src/hazbrief/brief/conditions.yaml
+              quoted: true
+    notes:
+      - quote: it is not a dense-gas model, and no committed brief is passive
+        source: README.md
+      - quote: No held evaluation of either engine beyond 5 km.
+        source: src/hazbrief/brief/conditions.yaml
+
+  # (b) Trial 7 concentration by arc: measured, both published HPAC runs, ALOHA, hazbrief's two runs, ppm
+  - id: backup-trial7-arcs
+    part: technical
+    title: "Backup: peak concentration on each arc, parts per million"
+    dense: true
+    items:
+      - table:
+          header: [Run, 0.2 km, 0.5 km, 1 km, 2 km, 5 km, 11 km]
+          rows:
+            - cells: ["Measured", "72,580", "22,686", "2,621", "1,417", "373", "50"]
+              source: docs/evidence/hb209/trial7_arcs.tsv
+              accent: true
+            - cells: ["HPAC, complex source", "31,372", "6,314", "2,633", "1,005", "278", "65.7"]
+              source: docs/evidence/hb209/trial7_arcs.tsv
+            - cells: ["HPAC, simple source", "55,916", "6,399", "2,230", "931", "270", "63.6"]
+              source: docs/evidence/hb209/trial7_arcs.tsv
+            - cells: ["ALOHA", "52,300", "14,100", "3,470", "497", "41", "6"]
+              source: docs/evidence/hb209/trial7_arcs.tsv
+            - cells: ["hazbrief, SCICHEM", "23,260", "6,466", "1,924", "532", "74.3", "14.9"]
+              source: docs/evidence/hb209/trial7_arcs.tsv
+            - cells: ["hazbrief, SLAB", "56,000", "12,500", "3,540", "957", "159", "32.6"]
+              source: docs/evidence/hb209/trial7_arcs.tsv
+      # HB-212 items 7 and 9: the line against the measurements first, the line against a tool second
+      # HB-214: the two lines are HB-212's record of the states (states.tsv), since the BENCH notes are one line each
+      - quote: "hazbrief's SCICHEM run is below the measurements, a difference that is statistically significant at the 95 percent confidence level (MG 2.88, 95 percent limits 1.58 to 5.27, which exclude 1, on 5 arcs)"
+        source: docs/evidence/hb212/states.tsv
+      - quote: "the difference between hazbrief's SCICHEM run and HPAC's complex-source run is not statistically significant at the 95 percent confidence level"
+        source: docs/evidence/hb212/states.tsv
+    notes:
+      # HB-214: the benchmark table's notes 1 and 4, in its words
+      - quote: >-
+          Jack Rabbit II Trial 7: one trial, five arcs at 0.2 to 5 km, all of one release, not five independent
+          releases.
+        source: docs/evidence/hb214/benchmark_table.md
+      - quote: >-
+          Two models can agree and both be wrong (Warner et al., page 40). The operator: "they can still be useful
+          for making decisions."
+        source: docs/evidence/hb214/benchmark_table.md
+      - label: Arcs within a factor of two, of the five the statistic uses, HPAC complex, HPAC simple, ALOHA, SCICHEM, SLAB
+        value: 3, 4, 3, 1 and 4 of 5
+        source: docs/evidence/hb209/trial7_intervals.tsv
+      - label: MG, observed over predicted, same order
+        value: 1.73, 1.63, 2.13, 2.88, 1.43
+        source: docs/evidence/hb209/trial7_intervals.tsv
+      - quote: "Table 3: Maximum arc-concentrations from our modeling results – Simple Model (MWG StabE Weather)."
+        source: docs/evidence/hb209/simpson_hpac_trial7.yaml
+      - quote: saturated_m
+        source: docs/evidence/hb199/trial7.yaml
+
+  # (c) Trial 7 timing: the arrival of each arc's maximum, observed, HPAC and hazbrief's two runs
+  - id: backup-trial7-timing
+    part: technical
+    title: "Backup: when each arc's peak concentration arrived"
+    dense: true
+    items:
+      - table:
+          header: [Run, 0.5 km, 1 km, 2 km, 5 km, 11 km]
+          rows:
+            - cells: ["Observed, s", "93", "258", "443", "1055", "2052"]
+              source: docs/evidence/hb209/trial7_arrival.tsv
+              accent: true
+            - cells: ["HPAC, s", "162", "274", "473", "1057", "2023"]
+              source: docs/evidence/hb209/trial7_arrival.tsv
+            - cells: ["hazbrief SCICHEM, s", "161", "263", "498", "1062", "2156"]
+              source: docs/evidence/hb209/trial7_arrival.tsv
+            - cells: ["hazbrief SLAB, s", "178", "299", "509.8", "1063", "2040"]
+              source: docs/evidence/hb209/trial7_arrival.tsv
+            - cells: ["HPAC over observed", "1.74", "1.06", "1.07", "1.00", "0.99"]
+              source: docs/evidence/hb209/trial7_arrival.tsv
+            - cells: ["SCICHEM over observed", "1.73", "1.02", "1.12", "1.01", "1.05"]
+              source: docs/evidence/hb209/trial7_arrival.tsv
+            - cells: ["SLAB over observed", "1.91", "1.16", "1.15", "1.01", "0.99"]
+              source: docs/evidence/hb209/trial7_arrival.tsv
+    notes:
+      # HB-214: EVALUATION section 2.7's reason BENCH-5 stays not yet evaluated (its note is one line since HB-214)
+      - quote: no held source states a criterion for it
+        source: docs/submission/EVALUATION.md
+      # HB-212 items 4 and 9: the arrival ratios are descriptive; beside the model-against-model line, the caution
+      # (HB-214: the benchmark table's notes 1 and 4)
+      - quote: hazbrief's arrival ratios are descriptive, with no interval
+        source: docs/evidence/hb192/benchmark_rows.md
+      - quote: >-
+          Jack Rabbit II Trial 7: one trial, five arcs at 0.2 to 5 km, all of one release, not five independent
+          releases.
+        source: docs/evidence/hb214/benchmark_table.md
+      - quote: >-
+          Two models can agree and both be wrong (Warner et al., page 40). The operator: "they can still be useful
+          for making decisions."
+        source: docs/evidence/hb214/benchmark_table.md

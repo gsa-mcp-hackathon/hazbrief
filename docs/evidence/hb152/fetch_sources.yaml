@@ -1,0 +1,67 @@
+# HB-152 Part A item 1: the FGDC HSWG Emergency Response Symbology v2.20 reference pages, fetched at rung 1 with this
+# file as the fetcher's source list (the HB-100 route HB-150 used for its deferred rows), because a corpus/sources.yaml
+# row cannot land until an ingest runs (HB-150 section 2; Issue b0f596cf) and the corpus graph (held privately) is not in this task's Touches.
+# The same rows are the drafts for that ingest. The log is fetch_log.jsonl beside this file; the bytes are
+# corpus/raw/<doc_id>.html. One fetch attempt per page (task rule); a refusal is recorded and the class falls to
+# hazbrief's own symbol.
+sources:
+  - doc_id: fgdc-hswg-ref-operations
+    priority: 6
+    title: FGDC HSWG Emergency Response Symbology, Operations reference page (name, four stages, key stroke, definition)
+    publisher: Federal Geographic Data Committee, Homeland Security Working Group
+    edition: ERS v2.20 (2003), page as served 2026-11-10
+    url: https://www.fgdc.gov/HSWG/ref_pages/Operations_ref.htm
+    format: html
+    structured_alternative: HTML table, one row per symbol
+    plan: fetch
+    route: deterministic
+    reuse: public-domain
+    kb_reason: The glyph-to-name map for the Operations fonts (Issue b1f7dc08, HBD-315); HB-152's map symbols cite it.
+  - doc_id: fgdc-hswg-ref-incidents
+    priority: 6
+    title: FGDC HSWG Emergency Response Symbology, Incidents reference page (name, four stages, key stroke, definition)
+    publisher: Federal Geographic Data Committee, Homeland Security Working Group
+    edition: ERS v2.20 (2003), page as served 2026-11-10
+    url: https://www.fgdc.gov/HSWG/ref_pages/Incidents_ref.htm
+    format: html
+    structured_alternative: HTML table, one row per symbol
+    plan: fetch
+    route: deterministic
+    reuse: public-domain
+    kb_reason: The glyph-to-name map for the Incidents fonts (Issue b1f7dc08, HBD-315); HB-152's map symbols cite it.
+  - doc_id: fgdc-hswg-ref-infrastructures
+    priority: 6
+    title: FGDC HSWG Emergency Response Symbology, Infrastructures reference page (name, four stages, key stroke, definition)
+    publisher: Federal Geographic Data Committee, Homeland Security Working Group
+    edition: ERS v2.20 (2003), page as served 2026-11-10
+    url: https://www.fgdc.gov/HSWG/ref_pages/Infrastructures_ref.htm
+    format: html
+    structured_alternative: HTML table, one row per symbol
+    plan: fetch
+    route: deterministic
+    reuse: public-domain
+    kb_reason: The glyph-to-name map for the Infrastructures fonts (Issue b1f7dc08, HBD-315); HB-152's map symbols cite it.
+  - doc_id: fgdc-hswg-ref-natural-events
+    priority: 6
+    title: FGDC HSWG Emergency Response Symbology, Natural Events reference page (name, four stages, key stroke, definition)
+    publisher: Federal Geographic Data Committee, Homeland Security Working Group
+    edition: ERS v2.20 (2003), page as served 2026-11-10
+    url: https://www.fgdc.gov/HSWG/ref_pages/NaturalEvents_ref.htm
+    format: html
+    structured_alternative: HTML table, one row per symbol
+    plan: fetch
+    route: deterministic
+    reuse: public-domain
+    kb_reason: The glyph-to-name map for the Natural Events fonts (Issue b1f7dc08, HBD-315); HB-152's map symbols cite it.
+  - doc_id: fgdc-hswg-ref-damage
+    priority: 6
+    title: FGDC HSWG Emergency Response Symbology, Damage (operational) reference page (name, four stages, key stroke, definition)
+    publisher: Federal Geographic Data Committee, Homeland Security Working Group
+    edition: ERS v2.20 (2003), page as served 2026-11-10
+    url: https://www.fgdc.gov/HSWG/ref_pages/DamageOperational_ref.htm
+    format: html
+    structured_alternative: HTML table, one row per symbol
+    plan: fetch
+    route: deterministic
+    reuse: public-domain
+    kb_reason: The glyph-to-name map for the Damage (operational) fonts (Issue b1f7dc08, HBD-315); HB-152's map symbols cite it.

@@ -1,0 +1,85 @@
+SCICHEM 3.4 in the hazbrief models image (HB-167 Part B item 8)
+=================================================================
+
+What this image holds of SCICHEM: two executables built from source (runsci, scipp), seven shared
+libraries built from the same source, and one data file (sciData/landuse_scichem.dat). They were built
+in this image from EPRI's repository at commit 156625eff47923d232dbe4f6d055707ea3bf6ff1
+(https://github.com/epri-dev/SCICHEM, committed 2025-10-23), with eleven patches
+(patches/ (held privately), each with its reason in docs/evidence/hb165/probe/why.tsv) and the
+build flags in deploy/models/scichem/build_engine.sh. The source of every byte is that commit and those
+patches; the image is built locally from them and is not distributed as a binary.
+
+The licence, as held
+--------------------
+EPRI's SourceForge project page "EPRI Air Dispersion Tools" (https://sourceforge.net/projects/epri-dispersion/,
+held as corpus document epri-dispersion-sourceforge, sha256 99bfc48a93dbc9d6695947db21fde382f264398446fe2353e49c6bec1d2f9d7d)
+states, verbatim:
+
+    License BSD License
+
+and
+
+    SCICHEM has been migrated to GitHub: https://github.com/epri-dev/SCICHEM/releases
+
+The GitHub repository at the commit above carries no licence file and no licence text at any depth
+(corpus document scichem-tree; HB-65, HB-167). No BSD licence text naming a copyright holder is
+published with SCICHEM, so none is reproduced here: a holder and terms would have to be invented.
+The licence is as EPRI's public page states it. The page was fetched on 2026-10-29 (HB-69) and is
+held under the key and hash above (HB-174, docs/evidence/hb174/what_is_held.md); no request to EPRI
+is planned (Issue 4104d9fe, closed won't-fix; the licence gate passed in DN-018 ADDENDUM-00
+section 4).
+
+SCICHEM's two manuals, held for citation with their text withheld (corpus documents
+scichem-technical-documentation-3-4 and scichem-users-guide-3-4), carry EPRI's own rights notice
+on their first pages, verbatim in each:
+
+    THIS REPORT CONTAINS PROPRIETARY INFORMATION THAT IS THE INTELLECTUAL PROPERTY OF EPRI
+
+and EPRI "reserves all rights in the Program as delivered" (HB-170,
+docs/evidence/hb170/citations_checked.tsv row C29; HB-174). That notice is the manuals'; the
+declared licence above is the code's.
+
+Copyright notices in the compiled source, verbatim
+--------------------------------------------------
+source/src/bin/SCIPUFFgui/rc/version.h (the version resource of EPRI's own build):
+
+    VALUE "CompanyName", "Sage Management"
+    VALUE "LegalCopyright", "Copyright (C) 2011"
+
+source/src/lib/SCIPUFFlib/SCIPUFF/drydep.f90 (lines 271 and 439, and 445 to 446):
+
+    !----Based on CAMx v6.30 160408, Copyright 1996 - 2016, Ramboll ENVIRON
+
+    !     Copyright 1996 - 2016
+    !     Ramboll ENVIRON
+
+source/src/lib/AQAER/AE5/aero/isocom.f and the other ISORROPIA files (isofwd.f, isorev.f, isrpia.inc):
+
+    C *** COPYRIGHT 1996-2012, UNIVERSITY OF MIAMI, CARNEGIE MELLON UNIVERSITY,
+    C *** GEORGIA INSTITUTE OF TECHNOLOGY
+    C *** WRITTEN BY ATHANASIOS NENES
+    C *** UPDATED BY CHRISTOS FOUNTOUKIS
+    C *** UPDATE|ADJOINT BY SHANNON CAPPS
+
+The CMAQ-derived files of source/src/lib/AQAER/ carry this header (isocom.f lines 1 to 17):
+
+    !------------------------------------------------------------------------!
+    !  The Community Multiscale Air Quality (CMAQ) system software is in     !
+    !  continuous development by various groups and is based on information  !
+    !  from these groups: Federal Government employees, contractors working  !
+    !  within a United States Government contract, and non-Federal sources   !
+    !  including research institutions.  These groups give the Government    !
+    !  permission to use, prepare derivative works of, and distribute copies !
+    !  of their work in the CMAQ system to the public and to permit others   !
+    !  to do so.  The United States Environmental Protection Agency          !
+    !  therefore grants similar permission to use the CMAQ system software,  !
+    !  but users are requested to provide copies of derivative works or      !
+    !  products designed to operate in the CMAQ system to the United States  !
+    !  Government without restrictions as to use by others.  Software        !
+    !  that is used with the CMAQ system but distributed under the GNU       !
+    !  General Public License or the GNU Lesser General Public License is    !
+    !  subject to their copyright restrictions.                              !
+    !------------------------------------------------------------------------!
+
+The runtime libraries the engine links (libgfortran5, libgomp1, libnetcdf22 and its dependencies) are
+Debian packages installed by apt; their copyright files are under /usr/share/doc/<package>/copyright.

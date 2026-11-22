@@ -1,0 +1,25 @@
+HB-202 gate 2: the whole gate (the Seldon configuration (held privately) dispatch.gate_command, by the HB-198 evidence (held privately)), green
+started 2026-11-18 14:30:51 EST on this worktree at commit 54c2491c (main 56aa46b1 plus HB-202's commits); log logs/hb202/gate2.log (gitignored)
+
+parallel step:
+8058 passed, 14 skipped, 97 deselected, 17 xfailed, 2 warnings in 3329.93s (0:55:29)
+PYTEST EXIT=0
+load_sensitive step: 85 passed, 1886 deselected in 882.94s (0:14:42)
+PYTEST2 EXIT=0
+All checks passed!
+RUFF EXIT=0
+1056 files already formatted
+FORMAT EXIT=0
+GATE DONE
+
+The two warnings are one: scripts/agent_eval.py:172 FastMCPDeprecationWarning (Tool.inputSchema), printed for two
+tests in this run and one in gate 1, by which worker ran them.
+
+What it covers: main's commits since HB-201's RESULT (7b9244ec), which reached main with no whole-suite pass:
+  HB-197  1cca9aeb .. 163d6adf (7 commits; RESULT 163d6adf)
+  HB-198  b74acf8a .. 6f92c46f (3 commits; RESULT 6f92c46f)
+  HB-199  0a64ca63 .. adca13bf (8 commits; RESULT e7b26580, ADDENDUM-01 record adca13bf)
+  and the dispatcher's and OODA's record commits to 56aa46b1.
+Main as it stands (56aa46b1) is not green alone: gate 1 on it plus HB-202's measurement commits failed two tests and
+both lint steps (gate_failure_1.txt, gate_failure_2.txt). It is green with HB-202's fixes (b03de388, 54c2491c) on it:
+this is main's first whole-suite pass since HB-201 when this branch lands.

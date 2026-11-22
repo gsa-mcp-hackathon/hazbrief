@@ -1,0 +1,177 @@
+reading	tool	run	criterion	source	tool_value	tool_meets	run_value	run_meets	status
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_scichem	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.2	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_scichem	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.2	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_scichem	0.25 < MG < 4	simpson p. 9 line 256	1.733	yes	2.884	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_scichem	VG < 6.8	simpson p. 9 line 257	1.663	yes	3.691	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_scichem	|FB| <= 0.30	simpson p. 9 line 253	0.8221	no	1.022	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_scichem	NMSE <= 3	simpson p. 9 line 254	2.371	yes	4.194	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_scichem	run status (HB-199 protocol section 5)						below
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh20	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh20	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh20	0.25 < MG < 4	simpson p. 9 line 256	1.733	yes	1.433	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh20	VG < 6.8	simpson p. 9 line 257	1.663	yes	1.32	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh20	|FB| <= 0.30	simpson p. 9 line 253	0.8221	no	0.3068	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh20	NMSE <= 3	simpson p. 9 line 254	2.371	yes	0.2603	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh20	run status (HB-199 protocol section 5)						exceeds
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh80	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh80	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh80	0.25 < MG < 4	simpson p. 9 line 256	1.733	yes	1.414	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh80	VG < 6.8	simpson p. 9 line 257	1.663	yes	1.318	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh80	|FB| <= 0.30	simpson p. 9 line 253	0.8221	no	0.287	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh80	NMSE <= 3	simpson p. 9 line 254	2.371	yes	0.228	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P_slab_rh80	run status (HB-199 protocol section 5)						exceeds
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	P	row status (the worse of P's runs; protocol.md section 5)						below
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_scichem	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.2	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_scichem	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.2	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_scichem	0.25 < MG < 4	simpson p. 9 line 256	1.733	yes	2.737	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_scichem	VG < 6.8	simpson p. 9 line 257	1.663	yes	3.347	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_scichem	|FB| <= 0.30	simpson p. 9 line 253	0.8221	no	0.8765	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_scichem	NMSE <= 3	simpson p. 9 line 254	2.371	yes	2.713	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_scichem	run status (HB-199 protocol section 5)						below
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh20	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh20	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh20	0.25 < MG < 4	simpson p. 9 line 256	1.733	yes	1.438	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh20	VG < 6.8	simpson p. 9 line 257	1.663	yes	1.349	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh20	|FB| <= 0.30	simpson p. 9 line 253	0.8221	no	0.216	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh20	NMSE <= 3	simpson p. 9 line 254	2.371	yes	0.1201	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh20	run status (HB-199 protocol section 5)						exceeds
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh80	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh80	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh80	0.25 < MG < 4	simpson p. 9 line 256	1.733	yes	1.401	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh80	VG < 6.8	simpson p. 9 line 257	1.663	yes	1.332	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh80	|FB| <= 0.30	simpson p. 9 line 253	0.8221	no	0.2156	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh80	NMSE <= 3	simpson p. 9 line 254	2.371	yes	0.125	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S_slab_rh80	run status (HB-199 protocol section 5)						exceeds
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	HPAC	S	S's words, beside (sets nothing; protocol.md section 3)						below
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_scichem	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.2	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_scichem	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.2	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_scichem	0.25 < MG < 4	simpson p. 9 line 256	2.129	yes	2.884	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_scichem	VG < 6.8	simpson p. 9 line 257	3.586	yes	3.691	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_scichem	|FB| <= 0.30	simpson p. 9 line 253	0.3442	no	1.022	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_scichem	NMSE <= 3	simpson p. 9 line 254	0.3467	yes	4.194	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_scichem	run status (HB-199 protocol section 5)						below
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh20	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh20	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh20	0.25 < MG < 4	simpson p. 9 line 256	2.129	yes	1.433	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh20	VG < 6.8	simpson p. 9 line 257	3.586	yes	1.32	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh20	|FB| <= 0.30	simpson p. 9 line 253	0.3442	no	0.3068	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh20	NMSE <= 3	simpson p. 9 line 254	0.3467	yes	0.2603	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh20	run status (HB-199 protocol section 5)						exceeds
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh80	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh80	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh80	0.25 < MG < 4	simpson p. 9 line 256	2.129	yes	1.414	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh80	VG < 6.8	simpson p. 9 line 257	3.586	yes	1.318	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh80	|FB| <= 0.30	simpson p. 9 line 253	0.3442	no	0.287	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh80	NMSE <= 3	simpson p. 9 line 254	0.3467	yes	0.228	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P_slab_rh80	run status (HB-199 protocol section 5)						exceeds
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	P	row status (the worse of P's runs; protocol.md section 5)						below
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_scichem	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.2	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_scichem	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.2	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_scichem	0.25 < MG < 4	simpson p. 9 line 256	2.129	yes	2.737	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_scichem	VG < 6.8	simpson p. 9 line 257	3.586	yes	3.347	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_scichem	|FB| <= 0.30	simpson p. 9 line 253	0.3442	no	0.8765	no	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_scichem	NMSE <= 3	simpson p. 9 line 254	0.3467	yes	2.713	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_scichem	run status (HB-199 protocol section 5)						below
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh20	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh20	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh20	0.25 < MG < 4	simpson p. 9 line 256	2.129	yes	1.438	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh20	VG < 6.8	simpson p. 9 line 257	3.586	yes	1.349	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh20	|FB| <= 0.30	simpson p. 9 line 253	0.3442	no	0.216	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh20	NMSE <= 3	simpson p. 9 line 254	0.3467	yes	0.1201	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh20	run status (HB-199 protocol section 5)						exceeds
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh80	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6	no	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh80	FAC2 >= 0.50	simpson p. 9 line 258	0.6	yes	0.8	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh80	0.25 < MG < 4	simpson p. 9 line 256	2.129	yes	1.401	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh80	VG < 6.8	simpson p. 9 line 257	3.586	yes	1.332	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh80	|FB| <= 0.30	simpson p. 9 line 253	0.3442	no	0.2156	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh80	NMSE <= 3	simpson p. 9 line 254	0.3467	yes	0.125	yes	
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S_slab_rh80	run status (HB-199 protocol section 5)						exceeds
+0.2 to 5 km (the 17-model statistic's arcs, Table 7 p. 26)	ALOHA	S	S's words, beside (sets nothing; protocol.md section 3)						below
+all six arcs	HPAC	P_scichem	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6667	yes	0.1667	no	
+all six arcs	HPAC	P_scichem	FAC2 >= 0.50	simpson p. 9 line 258	0.6667	yes	0.1667	no	
+all six arcs	HPAC	P_scichem	0.25 < MG < 4	simpson p. 9 line 256	1.51	yes	2.956	yes	
+all six arcs	HPAC	P_scichem	VG < 6.8	simpson p. 9 line 257	1.548	yes	3.787	yes	
+all six arcs	HPAC	P_scichem	|FB| <= 0.30	simpson p. 9 line 253	0.8212	no	1.022	no	
+all six arcs	HPAC	P_scichem	NMSE <= 3	simpson p. 9 line 254	2.839	yes	5.028	no	
+all six arcs	HPAC	P_scichem	run status (HB-199 protocol section 5)						below
+all six arcs	HPAC	P_slab_rh20	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6667	yes	0.8333	yes	
+all six arcs	HPAC	P_slab_rh20	FAC2 >= 0.50	simpson p. 9 line 258	0.6667	yes	0.8333	yes	
+all six arcs	HPAC	P_slab_rh20	0.25 < MG < 4	simpson p. 9 line 256	1.51	yes	1.449	yes	
+all six arcs	HPAC	P_slab_rh20	VG < 6.8	simpson p. 9 line 257	1.548	yes	1.299	yes	
+all six arcs	HPAC	P_slab_rh20	|FB| <= 0.30	simpson p. 9 line 253	0.8212	no	0.3069	no	
+all six arcs	HPAC	P_slab_rh20	NMSE <= 3	simpson p. 9 line 254	2.839	yes	0.3121	yes	
+all six arcs	HPAC	P_slab_rh20	run status (HB-199 protocol section 5)						equals
+all six arcs	HPAC	P_slab_rh80	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6667	yes	0.8333	yes	
+all six arcs	HPAC	P_slab_rh80	FAC2 >= 0.50	simpson p. 9 line 258	0.6667	yes	0.8333	yes	
+all six arcs	HPAC	P_slab_rh80	0.25 < MG < 4	simpson p. 9 line 256	1.51	yes	1.433	yes	
+all six arcs	HPAC	P_slab_rh80	VG < 6.8	simpson p. 9 line 257	1.548	yes	1.298	yes	
+all six arcs	HPAC	P_slab_rh80	|FB| <= 0.30	simpson p. 9 line 253	0.8212	no	0.2871	yes	
+all six arcs	HPAC	P_slab_rh80	NMSE <= 3	simpson p. 9 line 254	2.839	yes	0.2734	yes	
+all six arcs	HPAC	P_slab_rh80	run status (HB-199 protocol section 5)						exceeds
+all six arcs	HPAC	P	row status (the worse of P's runs; protocol.md section 5)						below
+all six arcs	HPAC	S_scichem	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6667	yes	0.1667	no	
+all six arcs	HPAC	S_scichem	FAC2 >= 0.50	simpson p. 9 line 258	0.6667	yes	0.1667	no	
+all six arcs	HPAC	S_scichem	0.25 < MG < 4	simpson p. 9 line 256	1.51	yes	2.881	yes	
+all six arcs	HPAC	S_scichem	VG < 6.8	simpson p. 9 line 257	1.548	yes	3.651	yes	
+all six arcs	HPAC	S_scichem	|FB| <= 0.30	simpson p. 9 line 253	0.8212	no	0.8766	no	
+all six arcs	HPAC	S_scichem	NMSE <= 3	simpson p. 9 line 254	2.839	yes	3.253	no	
+all six arcs	HPAC	S_scichem	run status (HB-199 protocol section 5)						below
+all six arcs	HPAC	S_slab_rh20	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6667	yes	0.8	yes	
+all six arcs	HPAC	S_slab_rh20	FAC2 >= 0.50	simpson p. 9 line 258	0.6667	yes	0.8	yes	
+all six arcs	HPAC	S_slab_rh20	0.25 < MG < 4	simpson p. 9 line 256	1.51	yes	1.438	yes	
+all six arcs	HPAC	S_slab_rh20	VG < 6.8	simpson p. 9 line 257	1.548	yes	1.349	yes	
+all six arcs	HPAC	S_slab_rh20	|FB| <= 0.30	simpson p. 9 line 253	0.8212	no	0.216	yes	
+all six arcs	HPAC	S_slab_rh20	NMSE <= 3	simpson p. 9 line 254	2.839	yes	0.1201	yes	
+all six arcs	HPAC	S_slab_rh20	run status (HB-199 protocol section 5)						exceeds
+all six arcs	HPAC	S_slab_rh80	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.6667	yes	0.8	yes	
+all six arcs	HPAC	S_slab_rh80	FAC2 >= 0.50	simpson p. 9 line 258	0.6667	yes	0.8	yes	
+all six arcs	HPAC	S_slab_rh80	0.25 < MG < 4	simpson p. 9 line 256	1.51	yes	1.401	yes	
+all six arcs	HPAC	S_slab_rh80	VG < 6.8	simpson p. 9 line 257	1.548	yes	1.332	yes	
+all six arcs	HPAC	S_slab_rh80	|FB| <= 0.30	simpson p. 9 line 253	0.8212	no	0.2156	yes	
+all six arcs	HPAC	S_slab_rh80	NMSE <= 3	simpson p. 9 line 254	2.839	yes	0.125	yes	
+all six arcs	HPAC	S_slab_rh80	run status (HB-199 protocol section 5)						exceeds
+all six arcs	HPAC	S	S's words, beside (sets nothing; protocol.md section 3)						below
+all six arcs	ALOHA	P_scichem	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.5	no	0.1667	no	
+all six arcs	ALOHA	P_scichem	FAC2 >= 0.50	simpson p. 9 line 258	0.5	yes	0.1667	no	
+all six arcs	ALOHA	P_scichem	0.25 < MG < 4	simpson p. 9 line 256	2.673	yes	2.956	yes	
+all six arcs	ALOHA	P_scichem	VG < 6.8	simpson p. 9 line 257	6.132	yes	3.787	yes	
+all six arcs	ALOHA	P_scichem	|FB| <= 0.30	simpson p. 9 line 253	0.3446	no	1.022	no	
+all six arcs	ALOHA	P_scichem	NMSE <= 3	simpson p. 9 line 254	0.4158	yes	5.028	no	
+all six arcs	ALOHA	P_scichem	run status (HB-199 protocol section 5)						below
+all six arcs	ALOHA	P_slab_rh20	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.5	no	0.8333	yes	
+all six arcs	ALOHA	P_slab_rh20	FAC2 >= 0.50	simpson p. 9 line 258	0.5	yes	0.8333	yes	
+all six arcs	ALOHA	P_slab_rh20	0.25 < MG < 4	simpson p. 9 line 256	2.673	yes	1.449	yes	
+all six arcs	ALOHA	P_slab_rh20	VG < 6.8	simpson p. 9 line 257	6.132	yes	1.299	yes	
+all six arcs	ALOHA	P_slab_rh20	|FB| <= 0.30	simpson p. 9 line 253	0.3446	no	0.3069	no	
+all six arcs	ALOHA	P_slab_rh20	NMSE <= 3	simpson p. 9 line 254	0.4158	yes	0.3121	yes	
+all six arcs	ALOHA	P_slab_rh20	run status (HB-199 protocol section 5)						exceeds
+all six arcs	ALOHA	P_slab_rh80	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.5	no	0.8333	yes	
+all six arcs	ALOHA	P_slab_rh80	FAC2 >= 0.50	simpson p. 9 line 258	0.5	yes	0.8333	yes	
+all six arcs	ALOHA	P_slab_rh80	0.25 < MG < 4	simpson p. 9 line 256	2.673	yes	1.433	yes	
+all six arcs	ALOHA	P_slab_rh80	VG < 6.8	simpson p. 9 line 257	6.132	yes	1.298	yes	
+all six arcs	ALOHA	P_slab_rh80	|FB| <= 0.30	simpson p. 9 line 253	0.3446	no	0.2871	yes	
+all six arcs	ALOHA	P_slab_rh80	NMSE <= 3	simpson p. 9 line 254	0.4158	yes	0.2734	yes	
+all six arcs	ALOHA	P_slab_rh80	run status (HB-199 protocol section 5)						exceeds
+all six arcs	ALOHA	P	row status (the worse of P's runs; protocol.md section 5)						below
+all six arcs	ALOHA	S_scichem	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.5	no	0.1667	no	
+all six arcs	ALOHA	S_scichem	FAC2 >= 0.50	simpson p. 9 line 258	0.5	yes	0.1667	no	
+all six arcs	ALOHA	S_scichem	0.25 < MG < 4	simpson p. 9 line 256	2.673	yes	2.881	yes	
+all six arcs	ALOHA	S_scichem	VG < 6.8	simpson p. 9 line 257	6.132	yes	3.651	yes	
+all six arcs	ALOHA	S_scichem	|FB| <= 0.30	simpson p. 9 line 253	0.3446	no	0.8766	no	
+all six arcs	ALOHA	S_scichem	NMSE <= 3	simpson p. 9 line 254	0.4158	yes	3.253	no	
+all six arcs	ALOHA	S_scichem	run status (HB-199 protocol section 5)						below
+all six arcs	ALOHA	S_slab_rh20	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.5	no	0.8	yes	
+all six arcs	ALOHA	S_slab_rh20	FAC2 >= 0.50	simpson p. 9 line 258	0.5	yes	0.8	yes	
+all six arcs	ALOHA	S_slab_rh20	0.25 < MG < 4	simpson p. 9 line 256	2.673	yes	1.438	yes	
+all six arcs	ALOHA	S_slab_rh20	VG < 6.8	simpson p. 9 line 257	6.132	yes	1.349	yes	
+all six arcs	ALOHA	S_slab_rh20	|FB| <= 0.30	simpson p. 9 line 253	0.3446	no	0.216	yes	
+all six arcs	ALOHA	S_slab_rh20	NMSE <= 3	simpson p. 9 line 254	0.4158	yes	0.1201	yes	
+all six arcs	ALOHA	S_slab_rh20	run status (HB-199 protocol section 5)						exceeds
+all six arcs	ALOHA	S_slab_rh80	FAC2 > 0.6	mazzola 17-model p. 25 lines 514 to 517 (rural; Chang and Hanna 2004)	0.5	no	0.8	yes	
+all six arcs	ALOHA	S_slab_rh80	FAC2 >= 0.50	simpson p. 9 line 258	0.5	yes	0.8	yes	
+all six arcs	ALOHA	S_slab_rh80	0.25 < MG < 4	simpson p. 9 line 256	2.673	yes	1.401	yes	
+all six arcs	ALOHA	S_slab_rh80	VG < 6.8	simpson p. 9 line 257	6.132	yes	1.332	yes	
+all six arcs	ALOHA	S_slab_rh80	|FB| <= 0.30	simpson p. 9 line 253	0.3446	no	0.2156	yes	
+all six arcs	ALOHA	S_slab_rh80	NMSE <= 3	simpson p. 9 line 254	0.4158	yes	0.125	yes	
+all six arcs	ALOHA	S_slab_rh80	run status (HB-199 protocol section 5)						exceeds
+all six arcs	ALOHA	S	S's words, beside (sets nothing; protocol.md section 3)						below

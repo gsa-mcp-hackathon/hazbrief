@@ -1,0 +1,2 @@
+brief	brief_html_bytes	brief_html_mb	tree	read_by
+csx-point-of-rocks-day	2784040	2.78	f63b4249 (HB-192's base, a git archive in /tmp)	stat -f %z docs/briefs/csx-point-of-rocks-day/brief.html

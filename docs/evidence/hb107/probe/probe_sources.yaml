@@ -1,0 +1,52 @@
+# HB-107 Part A probe: which commit is degadisx's default branch head, and does the repository name release 0.1.4?
+# Scratch rows, never corpus rows; the output and the log stay under docs/evidence/hb107/probe/.
+# github.com's Atom feeds are its own server-rendered commit and tag lists (api.github.com is off this task's Network line).
+sources:
+  - doc_id: hb107-degadisx-commits-atom
+    priority: 6
+    title: lyullee/degadisx default-branch commit feed (github.com Atom)
+    publisher: GitHub
+    url: https://github.com/lyullee/degadisx/commits.atom
+    format: xml
+    plan: fetch
+    route: reference
+  - doc_id: hb107-degadisx-tags-atom
+    priority: 6
+    title: lyullee/degadisx tag feed (github.com Atom)
+    publisher: GitHub
+    url: https://github.com/lyullee/degadisx/tags.atom
+    format: xml
+    plan: fetch
+    route: reference
+  - doc_id: hb107-degadisx-releases-atom
+    priority: 6
+    title: lyullee/degadisx release feed (github.com Atom)
+    publisher: GitHub
+    url: https://github.com/lyullee/degadisx/releases.atom
+    format: xml
+    plan: fetch
+    route: reference
+  - doc_id: hb107-degadisx-repo-page
+    priority: 6
+    title: lyullee/degadisx repository page (github.com)
+    publisher: GitHub
+    url: https://github.com/lyullee/degadisx
+    format: html
+    plan: fetch
+    route: reference
+  - doc_id: hb107-degadisx-tags-page
+    priority: 6
+    title: lyullee/degadisx tags page (github.com)
+    publisher: GitHub
+    url: https://github.com/lyullee/degadisx/tags
+    format: html
+    plan: fetch
+    route: reference
+  - doc_id: hb107-degadisx-info-refs
+    priority: 6
+    title: lyullee/degadisx smart-HTTP ref advertisement (github.com)
+    publisher: GitHub
+    url: https://github.com/lyullee/degadisx.git/info/refs?service=git-upload-pack
+    format: txt
+    plan: fetch
+    route: reference

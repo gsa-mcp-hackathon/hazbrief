@@ -1,0 +1,145 @@
+# Conditions of use, per engine (HB-184 Part C item 7; DN-028 ADDENDUM-10 decision 5). The one table the TEVV page's
+# "Conditions of use" sections are generated from (`hazbrief.brief.conditions`), never written per brief. Each row:
+#
+#   engine     the TEVV section it belongs to: scichem (section conditions_scichem) or slab (conditions_slab)
+#   condition  the condition, or the comparison, the row is about
+#   shows      what the evidence shows, in the page's words; a figure is stated under the configuration that produced
+#              it, never alone as "the model's error" (HB-184 ADDENDUM-01 section 3)
+#   file       the evidence file, a path in this repository
+#   find       strings that all occur on one line of `file`: the line that holds the figure (a TSV row, a sentence)
+#   key        the held source the row rests on: a corpus doc_id (corpus/sources.yaml) or a decision of the register
+#              (hazbrief-mcp:HBD-NNN)
+#
+# The prior art for the form: 40 CFR 51 Appendix W, section 3.1 and Addendum A: each model's summary states its
+# regulatory use and its accuracy against observations, and a preferred model "may be used without a formal
+# demonstration of applicability as long as they are used as indicated in each model summary"
+# (ecfr-40-cfr-51-appendix-w-2025 p. 15 #231, p. 78 #810 to #811); ALOHA's user's manual lists "Conditions that can
+# produce unreliable results", very stable atmospheric conditions and very low wind speeds among them
+# (epa-aloha-users-manual-2007 p. 28 #174 to #182); FAA HF-STD-001B 5.1.10.6, users should "understand the conditions
+# under which automation may be unreliable, and ... the conditions where it performs well" (faa-hf-std-001b pdf p. 53).
+# test_hb184_stable_levels.py (a test held privately) resolves every row: the file is held, the `find` line is in it, the key is held.
+
+# HB-213: where a row's `hazbrief-mcp:HBD-NNN` key is looked up, relative to the repository: the register's projection
+# and its records (pending ones included). The public tree's public mode points `register` at the register lines it
+# ships (docs/submission/public_citations.yaml), where the records directory is absent.
+register: docs/evidence/hb213/lifted/decisions.md
+register_records: the decision register (held privately)
+
+rows:
+  # ── SCICHEM ──────────────────────────────────────────────────────────────────────────────────────────────────────
+  - engine: scichem
+    condition: "Used for: a dense release under classes A to D, at every wind speed"
+    shows: "It draws the levels, their times and the cloud on the forecast wind hour by hour; it is the engine the held criterion names for a dense release and the one of the two that carries a cloud on a changing wind."
+    file: docs/evidence/hb213/lifted/decisions.md
+    find: ["hazbrief-mcp:HBD-375", "SCICHEM"]
+    key: "hazbrief-mcp:HBD-375"
+  # HB-189 (DN-028 ADDENDUM-14 decisions 1, 3 and 4): where any hour of the horizon is class E or F the moving cloud
+  # is the primary layer, run at a stated 1.25 m vertical setting, each hour shown as the engine computes it
+  - engine: scichem
+    condition: "Where any hour of the brief's horizon is class E or F (stable air, as at night or into the evening): the moving cloud, the primary layer, run at a 1.25 m vertical setting with the domain top at 250 m"
+    shows: "An approximation that is not converged. On csx night against the finest run held (0.625 m, itself not converged) its level areas at hour 1 are 0.83 to 0.91 of that run's and its first arrivals within 360 s in the first hour (720 s overall); hour 1 is on the page after 136 s and hour 4 after 210 s, against 2,580 s to hour 1 at 0.625 m. Every setting run reads below the measured stable trials. Its times are the brief's, each marked with the setting."
+    file: docs/evidence/hb187/o1_curve.tsv
+    find: ["1.25 m\t1\t136\t0.827\t0.896\t0.91"]
+    key: "hazbrief-mcp:HBD-444"
+  - engine: scichem
+    condition: "Why a vertical setting is stated: the stable answer moves with it"
+    shows: "At the 250 m setting shipped before HB-189 the vertical grid was 250 m for a cloud 2 to 27 m deep. Refined to 0.625 m, csx night's arc maxima rise 2.03, 2.97, 4.29 and 3.01 times at 100 m, 500 m, 1 km and 5 km, still rising; that run took 3,200 s (53 minutes) against 3 s, and the engine caps the grid at 200 levels. No converged answer was found; the brief now runs 1.25 m under the stable treatment and says it is not converged."
+    file: docs/evidence/hb180/convergence.tsv
+    find: ["csx-night", "\tvertical\t", "125x0.625", "1e+03", "4.29", "3.2e+03"]
+    key: "scichem-users-guide-3-4"
+  - engine: scichem
+    condition: "Against stable dense field trials: Desert Tortoise 4, Thorney Island 45 and 47 (classes E and F, winds 1.5 to 4.5 m/s), 8 arcs at 212 to 800 m"
+    shows: "The mean the brief draws is below every arc: observed over predicted MG 3.50 (95 percent 2.87 to 4.27). Scored as its authors score a peak: 1.80 (1.42 to 2.28), below 7 of 8 arcs."
+    file: docs/evidence/hb180/statistics_c.tsv
+    find: ["stable\tshipped\texpmax\t8\tDT4 TC45 TC47\t1.79822"]
+    key: "hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2"
+  - engine: scichem
+    condition: "The same stable trials with each trial's measured stability (its calculated layer in place of the class's PGT layer)"
+    shows: "Scored as a peak: 2.07 (1.69 to 2.55). The layer the stability takes moves the answer; this does not decide whether the grid or the model is the cause."
+    file: docs/evidence/hb183/scichem_score.tsv
+    find: ["stable\tcause fields at the report's values\texpmax\t8", "2.07462"]
+    key: "hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2"
+  - engine: scichem
+    condition: "Where the stable shortfall lies, and how it moves with the wind"
+    shows: "In the cloud's depth, which its own dense-gas terms make; under class F, SLAB over SCICHEM at 100 m falls from 7.59 at 0.5 m/s to 1.88 at 5 m/s, so the shortfall grows as the wind falls."
+    file: docs/evidence/hb180/sweep.tsv
+    find: ["F\t0.5\t100\t", "\t7.59\t"]
+    key: "scichem-technical-documentation-3-4"
+  - engine: scichem
+    condition: "Not established under classes E and F"
+    shows: "That a finer grid converges, or that a converged answer matches the measurements: whether the grid or the model is the cause is not decided. Nothing beyond 800 m against measurement at night; no held evaluation of either engine beyond 5 km."
+    file: docs/evidence/hb180/verdict.md
+    find: ["model as documented does so, is **not decided**"]
+    key: "scichem-technical-documentation-3-4"
+  # HB-196 (HB-185 "For Desktop", ADDENDUM-01 section 2; HB-196 ADDENDUM-03 item 2): the two daytime rows take
+  # HB-185's wording, each states the vertical setting its trials were run at, and a third row states, as an
+  # observation on the briefs, what the 1.25 m setting draws by day; no improvement against the trials is claimed
+  - engine: scichem
+    condition: "Against daytime two-phase field trials: Desert Tortoise 1 to 3 and Goldfish 1 to 3 (class D, winds 4.2 to 7.4 m/s), 11 arcs at 300 to 3,000 m, run at the 250 m vertical setting"
+    shows: "Below every arc: MG 2.66 (95 percent 1.98 to 3.59) scored as its authors score a peak; the mean the brief draws 4.33. Given each trial's measured Monin-Obukhov length by its authors' route, 2.02; Desert Tortoise 4.24 to 1.78, Goldfish 2.24 to 2.12. These runs were at the 250 m vertical setting; the comparison with these trials has not been repeated at the 1.25 m setting every dense brief now runs at."
+    file: docs/evidence/hb185/statistics.tsv
+    find: ["daytime\tmol\texpmax\t11", "2.01943"]
+    key: "hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2"
+  - engine: scichem
+    condition: "By day the cloud is drawn in the layer the engine computes"
+    shows: "On Desert Tortoise the computed layer was convective (L -166 to -23 m) where the measured one was weakly stable (L +84 to +833 m), and the cloud was 2.4 to 3.9 times too dilute at 800 m; with the measured length the trials score 1.78, the stable trials' level. On Goldfish the computed layer was already stable and the shortfall (2.24) is not the layer. Whether a brief's computed layer misstates its own surface layer is not tested. These runs were at the 250 m vertical setting and have not been repeated at 1.25 m."
+    file: docs/evidence/hb185/by_material.tsv
+    find: ["Desert Tortoise (ammonia)\tmol\texpmax\t3", "1.78167"]
+    key: "scichem-technical-documentation-3-4"
+  - engine: scichem
+    condition: "By day at the 1.25 m setting, on the committed day-start briefs: an observation, not a comparison with measurement"
+    shows: "On every day-start brief the moving cloud reaches past SLAB's area at every level (i81-md-pa-line-day AEGL-1: 8,697 m against SLAB's 5,974 m). No trial has been run at this setting, so no improvement against the trials is claimed."
+    file: docs/evidence/hb189/levels.tsv
+    find: ["i81-md-pa-line-day\tAEGL-1", "8,697 m"]
+    key: "hazbrief-mcp:HBD-447"
+  # ── SLAB ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+  # HB-189 (DN-028 ADDENDUM-14 decisions 5 and 6): SLAB checks how far, within the time the brief covers
+  - engine: slab
+    condition: "Used for: where any hour of the horizon is class E or F, its time-bounded area outside the moving cloud is every level's extent check, a dashed outline on the first view; by day with no stable hour it is the second method, a layer off by default"
+    shows: "Each level's planning area is the moving cloud's area together with SLAB's. SLAB's part is one time-averaged footprint on the release hour's wind: it gives no times and does not turn with the forecast, so a place inside it only is listed with no time. It is the engine of the two within a factor of two of every measured stable arc (below)."
+    file: docs/evidence/hb213/lifted/DN-028_ADDENDUM_14.md
+    find: ["6. **A level's planning area is the moving cloud's area over the horizon together with SLAB's time-bounded area.**"]
+    key: "hazbrief-mcp:HBD-447"
+  - engine: slab
+    condition: "Against stable dense field trials: Desert Tortoise 4, Thorney Island 45 and 47 (classes E and F, winds 1.5 to 4.5 m/s), 8 arcs at 212 to 800 m, with the class as hazbrief sets it"
+    shows: "Observed over predicted MG 0.87 (95 percent 0.76 to 1.00); every arc within a factor of two. With each trial's measured stability 0.85; the held report's own SLAB 0.84."
+    file: docs/evidence/hb183/score.tsv
+    find: ["stable\thazbrief (HB-180 shipped)\t8\tDT4 TC45 TC47\t0.867632"]
+    key: "hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2"
+  - engine: slab
+    condition: "The same comparison with Burro 8 added: four stable trials, 10 arcs at 212 to 800 m"
+    shows: "Every one of the 10 arcs within a factor of two."
+    file: docs/evidence/hb176/summary.tsv
+    find: ["slab_within_factor_two\t10"]
+    key: "hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2"
+  - engine: slab
+    condition: "Where hazbrief's class is more stable than the trial's measured length"
+    shows: "hazbrief's SLAB is high: 1.17 of the report's at Desert Tortoise 4, 800 m. That is conservative for a planning reach. It is a condition of use, not a validation."
+    file: docs/evidence/hb183/combo.tsv
+    find: ["stable\tDT4\thazbrief's deck\t\t800", "1.1733"]
+    key: "epa-slab-users-guide-1990"
+  - engine: slab
+    condition: "Against daytime two-phase field trials: Desert Tortoise 1 to 3 and Goldfish 1 to 3 (class D, winds 4.2 to 7.4 m/s), 11 arcs at 300 to 3,000 m"
+    shows: "Low by about a factor of 2.1, as the held report's own SLAB runs are: MG 2.12 (1.90 to 2.36) with each trial's measured stability and averaging time; the report's printed SLAB 2.10. The report: \"Models that Underpredict by Less Than a Factor of Two: SLAB, GPM, CHARM\" (printed p. 123)."
+    file: docs/evidence/hb183/score.tsv
+    find: ["daytime\tthe report's printed SLAB\t11", "2.09732"]
+    key: "hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2"
+  - engine: slab
+    condition: "Open by day: a brief's SLAB is as right as its stability class"
+    shows: "A quarter of a class toward stable moves its reach 12 to 20 percent: csx day AEGL-1 x1.20, un1005-i81 AEGL-1 x1.14. No one has evaluated a brief's forecast class against observed surface-layer stability. These are SLAB's reaches; the drawn daytime cloud is SCICHEM's, which this does not move."
+    file: docs/evidence/hb183/brief_evidence.tsv
+    find: ["csx-point-of-rocks-day", "downwind reach m at AEGL-1", "1.2004"]
+    key: "epa-slab-users-guide-1990"
+  # HB-189 (DN-028 ADDENDUM-14 decision 5, amending ADDENDUM-12 decision 1): how far its area is drawn
+  - engine: slab
+    condition: "How far its area is drawn where any hour of the horizon is class E or F"
+    shows: "To where its lowest level closes or to the release hour's wind's travel in the 6-hour horizon times 1.3 (the operator's \"20% over or 30% over\"), whichever is nearer; a level the time bound stops is drawn open there and every count over it is \"at least\". Its guide states no distance limit (printed p. 52). Closed, on one unchanging wind with no times, csx night's AEGL-1 would reach 159,676 m (XFFM 80 km), about 43 hours on its 1.03 m/s release-hour wind; its time bound is 28.9 km."
+    file: docs/evidence/hb186/closure_probe.tsv
+    find: ["csx-point-of-rocks-night\tAEGL-1\t0.5\t80000", "159676"]
+    key: "epa-slab-users-guide-1990"
+  - engine: slab
+    condition: "Not established"
+    shows: "Nothing beyond 800 m against measurement at night. Jack Rabbit II (three light-wind stable trials, 0.2 to 5 km): SLAB MG 1.13 and 0.65 by two users. No held evaluation of either engine beyond 5 km."
+    file: docs/evidence/hb213/lifted/DN-028_ADDENDUM_02.md
+    find: ["Jack Rabbit"]
+    key: "mazzola-2020-jack-rabbit-ii-17-dense-gas-models-manuscript"

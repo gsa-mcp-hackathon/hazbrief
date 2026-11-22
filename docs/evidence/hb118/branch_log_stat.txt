@@ -1,0 +1,132 @@
+commit cae8fee371f87d2b07e2b00d48191590fdfbe36c
+Author: Brock Webb <brockwebb45@gmail.com>
+Date:   Fri Nov 6 11:46:43 2026 -0500
+
+    HB-107 RESULT: note the probe's repository-page HTML is not committed
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+ ...ds_are_registered_and_degadisx_reproduction_record_is_read_RESULT.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 64142b4d839730d7acd2954b0cffb2f11294a3cb
+Author: Brock Webb <brockwebb45@gmail.com>
+Date:   Fri Nov 6 11:46:28 2026 -0500
+
+    HB-107: degadisx's repository record and the six PyPI pages held reference-only in release hb107_ports
+    
+    Part A: degadisx README, docs/reproduction.md, LICENSE and pyproject.toml fetched at
+    rung 1, pinned to 35ffd39b (tag v0.1.4 = main head, from github.com's ref advertisement),
+    and read in docs/evidence/hb107/degadisx.md. It does not mention the /ERROR/ padding or
+    EPSILON. Part B: one nested rung-2 session read slabs (not the model) and slabx (a SLAB
+    port with field evaluation). Part C: six clippings registered from a scoped inbox; build
+    hb107_ports: +10 Work, +20 SupportsDecision on them, parity 164692 = 164682 + 10
+    metadata rows; published. ports.md rewritten; baedd1b2 fixed; fa43a174 carried none.
+    Gate: 2033 passed, ruff clean, EXIT 0.
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+ ..._degadisx_reproduction_record_is_read_RESULT.md |   228 +
+ corpus/fetch_log.jsonl                             |    12 +
+ corpus/ingest_log.jsonl                            |    13 +
+ corpus/operator_downloads.jsonl                    |     6 +
+ corpus/sources.yaml                                |   195 +
+ docs/evidence/hb102/ports.md                       |    64 +-
+ docs/evidence/hb107/after_state.json               |   278 +
+ docs/evidence/hb107/before_after.txt               |    48 +
+ docs/evidence/hb107/before_state.json              |   246 +
+ docs/evidence/hb107/build_hb107_ports.log          |   103 +
+ docs/evidence/hb107/build_hb107_ports_tp3_stop.log |    26 +
+ docs/evidence/hb107/build_plan_dry_run.log         |    64 +
+ docs/evidence/hb107/collected_after.txt            |     1 +
+ docs/evidence/hb107/collected_before.txt           |     1 +
+ docs/evidence/hb107/degadisx.md                    |   113 +
+ docs/evidence/hb107/edges_added.txt                |    22 +
+ docs/evidence/hb107/index_parity.txt               |     1 +
+ docs/evidence/hb107/index_rows_after.txt           |    11 +
+ docs/evidence/hb107/index_rows_before.txt          |    11 +
+ docs/evidence/hb107/ingest_dry_run_after.log       |     1 +
+ docs/evidence/hb107/ledger_hb107_ports_events.txt  |    31 +
+ docs/evidence/hb107/ports/created_reset.txt        |     6 +
+ docs/evidence/hb107/ports/hb107_pypi-slabs.md      |   576 +
+ docs/evidence/hb107/ports/hb107_pypi-slabx.md      |   216 +
+ docs/evidence/hb107/ports/run_rung2.sh             |    27 +
+ docs/evidence/hb107/ports/rung2.times              |     3 +
+ docs/evidence/hb107/ports/rung2_prompt.txt         |    37 +
+ docs/evidence/hb107/ports/rung2_result.json        |     1 +
+ docs/evidence/hb107/probe/probe_fetch_log.jsonl    |    16 +
+ docs/evidence/hb107/probe/probe_sources.yaml       |    52 +
+ .../hb107/probe/raw/hb107-degadisx-info-refs.bin   |   Bin 0 -> 822 bytes
+ docs/evidence/hb107/publish.log                    |     5 +
+ docs/evidence/hb107/suite_final.txt                |    39 +
+ the HB-107 evidence (held privately)            |    30 +
+ the HB-107 evidence (held privately)               |    22 +
+ the HB-107 evidence (held privately)         |   113 +
+ the HB-107 evidence (held privately)           |    38 +
+ the HB-107 evidence (held privately)           |    86 +
+ the HB-107 evidence (held privately)            |    47 +
+ the HB-107 evidence (held privately)                |    21 +
+ the HB-107 evidence (held privately)                  |    30 +
+ the HB-107 evidence (held privately)               |    18 +
+ the HB-107 evidence (held privately) |    10 +
+ the HB-107 evidence (held privately)                   |    14 +
+ the HB-107 evidence (held privately)                |    13 +
+ the HB-107 evidence (held privately)          |    40 +
+ docs/evidence/hb107/verify_worktree.txt            |    28 +
+ docs/evidence/hb107/write_intake.log               |     1 +
+ the corpus graph (held privately)         |    10 +
+ .../corpus/candidates/hazbrief.yaml                |   381 +
+ docs/sources/manifest.tsv        |   420 +-
+ .../hb107_ports/anchors_by_id_hb107_ports.json     |    29 +
+ .../evidence/hb107_ports/anchors_hb107_ports.json  |    29 +
+ .../evidence/hb107_ports/assess.json               |    11 +
+ .../evidence/hb107_ports/assess.log                |     2 +
+ .../evidence/hb107_ports/build_record.json         |  1894 +
+ .../hb107_ports/claims_reachable_hb107_ports.json  |    29 +
+ .../hb107_ports/conformance_hb107_ports.json       |   224 +
+ .../hb107_ports/dangling_gate_hb107_ports.json     |    28 +
+ .../evidence/hb107_ports/decisions_applied.json    |    21 +
+ .../evidence/hb107_ports/halts_hb107_ports.json    |    16 +
+ .../hb107_ports/index_parity_hb107_ports.json      |    19 +
+ .../evidence/hb107_ports/node_field_mentions.json  | 70962 +++++++++++++++++++
+ .../evidence/hb107_ports/presence_hb107_ports.json |    15 +
+ .../evidence/hb107_ports/project.log               |     5 +
+ .../evidence/hb107_ports/project_counts.json       |    21 +
+ .../evidence/hb107_ports/run_summary.md            |  2586 +
+ .../hb107_ports/schema_gate_hb107_ports.json       |     6 +
+ .../evidence/hb107_ports/stage_13_export.json      |    34 +
+ .../evidence/hb107_ports/stage_14_conform.json     |    31 +
+ .../hb107_ports/stage_15_anchors-by-id.json        |    37 +
+ .../evidence/hb107_ports/stage_15_anchors.json     |    36 +
+ .../hb107_ports/stage_15_claims-reachable.json     |    35 +
+ .../evidence/hb107_ports/stage_15_conformance.json |    77 +
+ .../evidence/hb107_ports/stage_15_dangling.json    |    33 +
+ .../evidence/hb107_ports/stage_15_halts.json       |    29 +
+ .../hb107_ports/stage_15_index-parity.json         |    29 +
+ .../evidence/hb107_ports/stage_15_index.json       |    32 +
+ .../evidence/hb107_ports/stage_15_presence.json    |    29 +
+ .../evidence/hb107_ports/stage_15_text_held.json   |    35 +
+ .../evidence/hb107_ports/stage_16_diff.json        |    28 +
+ .../hb107_ports/stage_16_host-posture.json         |    27 +
+ .../evidence/hb107_ports/stage_17_registers.json   |    32 +
+ .../evidence/hb107_ports/stage_18_seal.json        |    25 +
+ .../hb107_ports/text_held_hb107_ports.json         |  4348 ++
+ .../evidence/hb107_ports/write.json                |    15 +
+ .../hazbrief-corpus/evidence/hb107_ports/write.log |    12 +
+ the corpus graph (held privately)  |     1 +
+ .../exports/diff_hb106_licences_hb107_ports.md     |    45 +
+ .../exports/host_posture_hb107_ports.md            |    10 +
+ the corpus graph (held privately)        |     2 +-
+ the corpus graph (held privately)          |     2 +-
+ the corpus graph (held privately)           |   270 +-
+ .../hazbrief-corpus/factory/records/acquire.jsonl  |    10 +
+ the corpus graph (held privately) |     5 +
+ .../hazbrief-corpus/factory/records/traces.jsonl   |     9 +
+ the corpus graph (held privately)             |    72 +
+ .../runs/factory_20261106T162314_39382883.json     |   842 +
+ .../runs/factory_20261106T162444_12a7a401.json     |  1894 +
+ the corpus graph (held privately)         |   106 +-
+ the corpus graph (held privately)    |    31 +
+ the corpus graph (held privately)           |    11 +
+ the event log of the graph (held privately)                                |     4 +
+ 103 files changed, 87826 insertions(+), 84 deletions(-)

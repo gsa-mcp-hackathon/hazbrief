@@ -1,0 +1,17 @@
+erg2024-en-pdf	[3]	APPROACH INCIDENT FROM UPWIND, AND UPHILL AND/OR UPSTREAM
+erg2024-en-pdf	[372]	Area where the command post and support functions that are necessary to control the incident are located.
+erg2024-en-pdf	[6]	Establish a command post and lines of communication.
+erg2024-en-pdf	[150, 162, 164, 166, 168, 170, 172, 176, 178, 180, 182, 184, 252, 268, 278, 280]	Many gases are heavier than air and will spread along the ground and collect in low or confined areas
+erg2024-en-pdf	[150, 154, 156, 158, 160, 162, 164, 166, 168, 170, 172, 176, 178, 180, 182, 184, 186, 188, 190, 192, 194, 196, 198, 200, 202, 204, 206, 208, 210, 212, 214, 216, 218, 220, 222, 224, 226, 228, 230, 232, 234, 236, 238, 240, 242, 244, 246, 248, 250, 252, 254, 256, 258, 260, 262, 264, 268, 270, 272, 274, 276, 278, 280]	Stay upwind, uphill and/or upstream.
+nims-doctrine-2017	[32]	Typical facilities include the Incident Command Post (ICP), incident base, staging areas, camps, mass casualty triage areas, points-of
+nims-doctrine-2017	[32]	direct their identification and location based on the incident
+nims-doctrine-2017	[41]	Typically, the ICP is located near the incident site
+nims-doctrine-2017	[41]	A staging area can be any location in which personnel, supplies, and equipment await assignment.
+nims-doctrine-2017	[41]	The Incident Commander or Unified Command determines the kinds and locations of facilities based on incident needs.
+fema-is-200c-student-manual	[91]	Location of Incident Command Post and Staging Area
+fema-is-200c-student-manual	[91]	Entrance and exit routes for responders
+cfr29-1910-120-govinfo-2025	[663]	site work zones (clean zone, transition or decontamination zone, work or hot zone)
+cfr29-1910-120-govinfo-2025	[663]	medical assistance and triage area
+atsdr-mmg-chlorine	[8]	They may be transferred immediately to the Support Zone.
+atsdr-mmg-chlorine	[10]	Only decontaminated patients or those not requiring decontamination should be transported to a medical facility.
+ntsb-rar-05-04-graniteville	[47]	at a staging area upwind of the toxic gas release site

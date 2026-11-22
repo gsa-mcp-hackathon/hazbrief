@@ -1,0 +1,13 @@
+brief	level	slab_reach_hb184	slab_reach_now	slab_closes_now	scichem_reach	planning_km2	slab_km2	turned_km2	residents_before_hb184_in_scichem_cloud	residents_before_hb184_planning_extra	residents_after_hb184_in_slab_area	residents_now	residents_now_in_slab_area	residents_now_in_forecast_turned_part	cut_by
+csx-point-of-rocks-night	AEGL-3	at least 18,400 m (SLAB's table ends)	19,978 m	yes	8,848 m	58.6	54.8	3.8	3,102	at least 324	at least 2,342	3,432	2,362	1,070	
+csx-point-of-rocks-night	AEGL-2	at least 18,400 m (SLAB's table ends)	73,334 m	yes	at least 39,957 m	492.0	314.3	177.7	at least 35,009	at least 1	at least 4,867	at least 233,641	220,061	at least 13,580	the engine's domain
+csx-point-of-rocks-night	AEGL-1	at least 18,400 m (SLAB's table ends)	159,676 m	yes	at least 40,305 m	1177.3	910.1	267.1	at least 82,712		at least 5,544	at least 520,834	492,995	at least 27,839	the engine's domain
+i495-wilson-bridge-night	AEGL-3	10,373 m	10,432 m	yes	7,724 m	16.9	10.5	6.4	6,571	1,554	5,905	8,248	6,002	2,246	
+i495-wilson-bridge-night	AEGL-2	at least 38,400 m (SLAB's table ends)	40,256 m	yes	at least 33,185 m	198.7	81.5	117.1	at least 101,526	at least 1,362	at least 40,746	at least 102,963	40,703	at least 62,260	the engine's domain
+i495-wilson-bridge-night	AEGL-1	at least 38,400 m (SLAB's table ends)	84,383 m	yes	at least 35,092 m	437.9	251.6	186.3	at least 135,157	at least 2,156	at least 56,907	at least 141,416	61,027	at least 80,389	the engine's domain
+i81-md-pa-line-night	AEGL-3	10,281 m	10,353 m	yes	7,932 m	17.0	10.3	6.7	8,908	865	6,821	9,775	6,796	2,979	
+i81-md-pa-line-night	AEGL-2	at least 38,600 m (SLAB's table ends)	40,001 m	yes	at least 31,366 m	186.3	79.8	106.5	at least 58,799	at least 495	at least 24,961	at least 59,353	24,967	at least 34,386	the engine's domain
+i81-md-pa-line-night	AEGL-1	at least 38,600 m (SLAB's table ends)	83,774 m	yes	at least 32,760 m	418.0	247.5	170.5	at least 80,474	at least 1,438	at least 32,640	at least 92,484	43,197	at least 49,287	the engine's domain
+i83-md-pa-line-night	AEGL-3	9,629 m	9,626 m	yes	10,490 m	17.8	8.1	9.6	1,149		500	1,154	502	652	
+i83-md-pa-line-night	AEGL-2	39,609 m	39,598 m	yes	at least 31,357 m	168.1	73.8	94.3	at least 13,442	at least 3,567	8,769	at least 17,280	9,049	at least 8,231	the engine's domain
+i83-md-pa-line-night	AEGL-1	at least 47,800 m (SLAB's table ends)	83,833 m	yes	at least 32,348 m	374.2	238.3	135.8	at least 20,213	at least 65,004	at least 73,561	at least 116,267	104,611	at least 11,656	the engine's domain

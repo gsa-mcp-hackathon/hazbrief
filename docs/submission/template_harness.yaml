@@ -1,0 +1,34 @@
+# HB-196 ADDENDUM-01 item 6a: the template's evaluation harness beside hazbrief's. The left column is the
+# participant aid IBM circulated (skill "mcp-eval-wxai", held in the primary checkout's corpus/inbox/SKILL.md as a
+# participant aid, not a corpus source); the right is hazbrief's equivalent and the committed file that shows it, or
+# "none". Rendered into docs/submission/EVALUATION.md section 1.4 by scripts/submission_tables.py; do not copy it by
+# hand. hazbrief adopts none of the template's code and runs no model outside Claude.
+
+rows:
+  - part: "An agent connected to the server over stdio (eval/phoenix/agent.py: a LangChain agent, MultiServerMCPClient)"
+    hazbrief: "The Claude Code CLI the operator's model lock pins, connected over stdio as a judge's Claude client connects; three Claude models, each prompt three times (level D)"
+    source: "eval/harness.yaml"
+  - part: "A dataset of questions with known answers (datasets/<name>/examples/<name>.csv from evaluation.xml)"
+    hazbrief: "The prompt set, version 3, in four families, each prompt with its allowed and expected tools, expected arguments, required facts and forbidden patterns, written before scoring"
+    source: "eval/agent_prompts.yaml"
+  - part: "Correctness: a model judges the answer against the expected one (judges/correctness_judge.py, match_expected_response)"
+    hazbrief: "By rule, with no model judging a model: tool choice (precision and recall), arguments against the expected ones, and every number and name in the reply grounded in a tool output of the episode"
+    source: "scripts/agent_eval.py"
+  - part: "Scope: a model judges whether the agent stayed in scope or refused (judges/relevance_judge.py, check_answer_scope)"
+    hazbrief: "By rule: the out-of-scope family, scored strict (the prompt's key terms present and no number a tool output does not hold) and lenient (key terms, without the number rule); its outcomes per episode are counted in section 1.4"
+    source: "docs/evidence/hb196/out_of_scope.tsv"
+  - part: "System prompts by version (prompts/system_prompt_v1.txt, v2 with scope boundaries)"
+    hazbrief: "One system prompt for every model and run, naming no tool and no domain, so the agent knows the server only through its tools, schemas and instructions; not versioned, because it was never varied"
+    source: "eval/harness.yaml"
+  - part: "Traces logged to Phoenix over OpenTelemetry"
+    hazbrief: "Every episode's trace is written to disk, keyed over prompt, model, CLI version and tool surface; the ledger, the scores and the traces' sha256 are committed"
+    source: "eval/agent_runs/2026-10-25/traces_sha256.txt"
+  - part: "A judge model kept distinct from the agent model (JUDGE_MODEL)"
+    hazbrief: "none: no model judges; the scorer is deterministic code"
+    source: "scripts/agent_eval.py"
+  - part: "Temperature 0 for reproducibility"
+    hazbrief: "none: the CLI takes no temperature; each prompt runs three times and pass^3 is reported"
+    source: "eval/harness.yaml"
+  - part: "A dataset registry and upload to a Phoenix server (datasets.yaml, create_dataset.py)"
+    hazbrief: "none: the prompt file is read directly by the scorer"
+    source: "eval/agent_prompts.yaml"

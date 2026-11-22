@@ -1,0 +1,143 @@
+# HB-136R: the incident hotspot map. Read by scripts/build_incident_map.py, which writes the committed points, the
+# Gi* cells, the kernel density grid, the count reconciliation and the two figures; test_hb136_incident_map.py (a test held privately)
+# holds them to this file. Every tunable value of the map is here (engineering standards section 2).
+
+# The held data (HB-135; docs/evidence/hb135/datasets_held.tsv). The bytes stay in corpus/raw/ (gitignored); the build
+# refuses a file whose sha256 is not the held one, so a re-fetch cannot move the map silently.
+dataset:
+  doc_id: fra-form54-rail-equipment-accidents
+  fields_doc_id: dot-fra-form54-85tf-25kj-metadata
+  path: corpus/raw/fra-form54-rail-equipment-accidents-2016-2026.csv
+  sha256: a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe
+  name: FRA Form 6180.54, Rail Equipment Accident/Incident Data (data.transportation.gov 85tf-25kj)
+  mode: rail
+# PHMSA's 5800.1 incident export is not held (HB-135 item 7, rung 2; Issue ff08a05d). The map is FRA's alone until it
+# is; the figure's caption and the RESULT say so.
+phmsa:
+  doc_id: phmsa-hazmat-incident-reports
+  issue: ff08a05d
+
+# HB-136R step 1: the last ten full years. The extract runs to 2026-08-31; 2026 is not a full year.
+period: {first: "2016-01-01", last: "2025-12-31", label: "2016-2025"}
+
+# The unit is the incident (`incidentkey`, "Unique key for the incident"): Form 54 has one report per railroad
+# involved, and the field list says to count an accident once. An incident is a release when any of its reports has
+# `hazmatreleasedcars` ("Number of cars that released hazmat", Block 10) above zero.
+release_field: hazmatreleasedcars
+
+# Severity: the dataset's own fields, highest that applies (HB-136R step 1: no composite index). Killed and injured
+# are Form 55a's per-accident totals (`totalpersonskilled`, `totalpersonsinjured`; the field list: use these to count
+# once per accident), from any cause, not only the hazmat; evacuated is Block 11, read as the largest any report of the
+# incident states (two railroads can report the same evacuation). A sequential scale, light to dark (the stylebook:
+# severity as colour on a sequential scale; ColorBrewer OrRd, 4 classes).
+severity:
+  # `short` is the figure legend's label, under the heading "Hazmat released, by severity:"
+  - {id: deaths, field: totalpersonskilled, words: "persons killed (any cause)", short: "deaths (any cause)", color: "#b30000"}
+  - {id: injuries, field: totalpersonsinjured, words: "persons injured (any cause)", short: "injuries (any cause)", color: "#e34a33"}
+  - {id: evacuation, field: personsevacuated, words: "persons evacuated", short: "evacuation", color: "#fc8d59"}
+  - {id: release, field: null, words: "release, none of the above reported", short: "release only", color: "#fdcc8a"}
+
+# The projection: Albers equal-area conic on GRS 80 with the conterminous-U.S. parameters of EPSG:5070 (Snyder 1987,
+# USGS PP 1395). A hexagon's count is compared with another's, so the cells must be equal in area.
+projection: {a: 6378137.0, inv_f: 298.257222101, lat1: 29.5, lat2: 45.5, lat0: 23.0, lon0: -96.0}
+# The grid's domain: the conterminous U.S., the projection's extent. A located incident outside it is counted and
+# listed, not gridded.
+conus: {south: 24.0, north: 50.0, west: -125.0, east: -66.0}
+
+hotspots:
+  # The cell: pointy-top hexagons whose centre spacing (sqrt(3) x circumradius) equals the median nearest-neighbour
+  # distance between released incidents, so a typical incident's nearest released neighbour falls inside its Gi*
+  # neighbourhood (the cell and its six neighbours). Computed from the data, then rounded to `round_km`.
+  spacing_rule: median_nearest_neighbour
+  round_km: 1
+  # The study area is the cells that hold at least one Form 54 accident of any kind in the period: where trains ran
+  # and had accidents. A cell where no train had an accident is not a zero for Gi*; it is outside the frame.
+  domain: cells_with_any_form54_accident
+  # Gi*'s p-value by permutation (Ord and Getis 1995 on the normal approximation's limits with sparse counts): the
+  # count field shuffled across the domain's cells this many times, seeded so the map rebuilds byte for byte.
+  permutations: 9999
+  seed: 136
+  # HB-136R step 4: hot cells at 99 and 95 percent only (one-sided permutation p, z above zero)
+  levels: [{p: 0.01, label: "99%", color: "#969696"}, {p: 0.05, label: "95%", color: "#d9d9d9"}]
+  # the multiple-comparison check reported beside them (Benjamini and Hochberg 1995), not used to classify
+  fdr_q: 0.05
+
+kde:
+  # Gaussian kernel; the bandwidth is the hexagons' centre spacing, so the surface and Gi* look at the same scale
+  bandwidth_rule: hex_spacing
+  # the national grid's cell, km; the density is written in released incidents per 10,000 km2 over the period
+  step_km: 25
+  per_km2: 10000
+
+# The deck figure's region (HB-136R step 4): the Mid-Atlantic the committed fixtures cover (fixtures/
+# scenario_points.yaml: I-81 and I-83 at the Maryland-Pennsylvania line, the Wilson Bridge, Point of Rocks), with
+# about 100 km around them (1 degree of latitude is 111 km; 1.2 degrees of longitude is about 100 km at 39 N).
+region:
+  label: Mid-Atlantic
+  south: 37.9
+  north: 40.7
+  west: -78.95
+  east: -75.45
+  # the fixture locations marked on the figure (HB-136R step 4 names these two), by their id in scenario_points.yaml
+  mark: [csx-point-of-rocks, i495-wilson-bridge]
+  mark_words: {csx-point-of-rocks: "Point of Rocks (fixture)", i495-wilson-bridge: "Wilson Bridge (fixture)"}
+  scale_bar_km: 50
+
+figure:
+  # the deck shows the region figure 380 px wide in the HTML and 3.8 in tall in the PPTX (deck.yaml), so the type is
+  # set large for a 760 px canvas: it is read at half size
+  width_px: 760
+  px: {title: 24, label: 19, legend: 18, note: 16}
+  # average glyph width over the font size, for wrapping the notes (Calibri's is about 0.5)
+  em: 0.5
+  pad_px: 12
+  # the map's frame is the region (or the accidents' extent) widened by this share of its width on each side
+  frame_margin_share: 0.02
+  font: "Calibri, Carlito, Arial, sans-serif"
+  text: "#000000"
+  muted: "#595959"
+  background_dot: "#a3a3a3"
+  background_r: 0.9
+  point_r: 5.5
+  mark_color: "#000000"
+  region_outline: "#595959"
+  national_width_px: 960
+
+outputs:
+  points: fixtures/incidents/fra_released_incidents_2016_2025.geojson
+  hot_cells: fixtures/incidents/gi_star_hot_cells.geojson
+  cells_tsv: docs/evidence/hb136/gi_star_cells.tsv
+  kde: docs/evidence/hb136/kde_national.json
+  counts: docs/evidence/hb136/counts_by_year.tsv
+  summary: docs/evidence/hb136/summary.json
+  region_svg: docs/incidents/incident_hotspots_mid_atlantic.svg
+  national_svg: docs/incidents/incident_hotspots_national.svg
+  # the figures' page: caption, counts, the reconciliation and the planning reading (the deck's alt_source)
+  page: docs/incidents/incident_hotspots.md
+
+# HB-127's table for the count reconciliation (HB-136R step 2): PHMSA's rail rows of BTS TSAR 2024 Table 5-5
+reconcile:
+  table: docs/evidence/hb127/base_rates_bts_t5_5.tsv
+  rows: [["Rail", "Overall"], ["Rail", "Vehicular accident/derailment-related"]]
+
+# The method's receipts (DN-005: a not_held row is cited by its row and DOI)
+receipts:
+  gi_star: [getis-ord-1992-distance-statistics, ord-getis-1995-local-spatial-autocorrelation]
+  kde_network: okabe-satoh-sugihara-2008-network-kde-csis-dp89
+
+# HB-136R step 5: the planning reading, one paragraph beside the figure (docs/incidents/incident_hotspots.md). Its
+# quotations are from the held page (usc-42-11003-epcra-303-2024, PDF p.1, printed page 8096; HB-135); NFPA 1620 is not
+# public (HB-135 item 4) and is cited by title only. No claim about the causes of a hot spot.
+planning_reading: >-
+  EPCRA section 303(c) asks every local emergency planning committee's plan for the "identification of routes likely
+  to be used for the transportation of substances on the list of extremely hazardous substances" and for "Methods for
+  determining the occurrence of a release, and the area or population likely to be affected by such release"
+  (usc-42-11003-epcra-303-2024, 42 U.S.C. 11003(c)(1) and (c)(5), PDF p.1, printed page 8096). NFPA 1620, Standard
+  for Pre-Incident Planning (nfpa-1620-pre-incident-planning; not public, cited by title only), is the standard such
+  a plan is written to. A hot cell on this map is a stretch of the rail network where released incidents have
+  clustered over ten years, relative to the cells where any rail equipment accident happened; it is where a
+  pre-incident plan for a rail release earns the most, and where a brief can be generated for a likely release point
+  and rated by an expert in advance, before any call comes. The map shows where releases were reported, not why: it
+  makes no claim about the causes of a hot spot, and a cell without a release is not shown to be safe, because ten
+  years of rail releases are few points and no cell survives a false-discovery-rate correction.
+planning_rows: [usc-42-11003-epcra-303-2024, nfpa-1620-pre-incident-planning]

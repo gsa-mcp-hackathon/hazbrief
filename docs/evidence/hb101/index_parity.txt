@@ -1,0 +1,1 @@
+index parity PASS: 164844 release units, 164844 index rows, 164844 vectors

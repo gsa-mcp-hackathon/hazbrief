@@ -1,0 +1,187 @@
+# Both engines for a dense release (HB-173; DN-028 ADDENDUM-04; the operator's direction of 2026-11-12 08:47 EST,
+# Issue ecb84787 item 3): SCICHEM draws the cloud, SLAB is a layer beside it, and the measure below says whether the
+# two agree. Read by hazbrief.brief.agreement. A file of its own, like scichem.yaml, so the measure's settings and
+# words are not spread through orchestrator.yaml. Every number below is a held source's or a stated choice of
+# DN-028 ADDENDUM-04, named where it is set.
+
+# ── the lines run (DN-028 ADDENDUM-04 section 3; HB-173 ADDENDUM-02 section 3) ───────────────────────────────────────
+# The brief's held SCICHEM record holds no centreline, so the measure reads a second run of the same request with
+# crosswind lines of sensors on the release hour's wind and no point sensors: HB-167's comparison sensors
+# (docs/evidence/hb167/cases.yaml `lines`), less the columns, which the measure does not read. The engine's sensors do
+# not change the dispersion (cloud.py's two requests rest on the same fact), so the lines run is the drawn cloud's.
+lines:
+  distances_m: [50, 100, 150, 200, 300, 400, 500, 700, 1000, 1500, 2000, 3000, 4000, 5000, 7000, 10000, 13000, 16000, 20000, 25000]
+  points: 41
+  min_half_width_m: 100.0
+  half_width_frac: 0.5
+  height_m: 0.0
+  column_heights_m: []
+# One JSON per lines request, named by the sha256 of the canonical request (scichem.request_sha256). It holds the
+# request, the engine's identity and, per line sensor, the largest instantaneous mean and the largest running mean over
+# the brief's averaging time (kg/m3): what the measure reads. The engine's whole sensor file is not kept (about 10 MB a
+# night run); the summary is the held record the measure re-derives from.
+recordings_dir: fixtures/evidence/scichem_lines
+
+# ── the measure (DN-028 ADDENDUM-04 decision 2) ──────────────────────────────────────────────────────────────────────
+measure:
+  # The quantity the held model-to-model statement is made on: the concentration at a given downwind distance. SCICHEM:
+  # the largest running mean over the brief's averaging time of any sensor on the crosswind line at that distance
+  # (HB-167's and HB-169's reading); SLAB: its time-averaged concentration on the centreline plane at that distance,
+  # log-linear between its table's rows (HB-169 bench.py `slab_summary`).
+  # The held factor: "within a factor of plus and minus three at any given downwind distance out to 20 km", of six models
+  # on the same release (Hanna et al. 2016, Atmospheric Environment 125, pp. 252 to 253; HB-170 citations_checked.tsv
+  # row C37, confirmed). It is stated for that distance range, so the measure pairs distances to 20 km only.
+  factor: 3.0
+  max_distance_m: 20000
+  factor_source:
+    key: hanna-2016-ae-jack-rabbit-lyme-bay
+    cite: "Hanna et al. (2016), Atmospheric Environment 125, pp. 252 to 253"
+    quote: "within a factor of plus and minus three at any given downwind distance out to 20 km"
+    row: C37
+  # The second held statement, quoted beside the first as a fact and not used as the threshold: it is stated on "plume
+  # parameters", not on a concentration at a distance (HB-170 row C38, confirmed).
+  second_source:
+    factor: 2.0
+    key: hanna-2007-cbis-tic-emissions-slides
+    cite: "Hanna et al. (2007), NDIA CBIS slides 11 to 12"
+    quote: "Models generally agree within a factor of two on plume parameters, assuming all are given the same source"
+    row: C38
+  # The distances the checklist line reports (HB-169's four; DN-028 ADDENDUM-01 section 3).
+  report_m: [100, 500, 1000, 5000]
+
+# ── like for like (HB-173 ADDENDUM-01 section 3; ADDENDUM-02 section 4) ──────────────────────────────────────────────
+# Both held factors are stated for models given the same inputs. The test compares what each request actually carries:
+# the stability (SCICHEM's boundary layer against SLAB's class), the release hour's wind speed, and the release (rate
+# and duration). The tolerances are the precision the records carry: SLAB's wind is the brief's one wind record, which
+# the footprint tool rounds to 0.1 km/h (src/hazbrief/tools/protective_action_footprint.py, `round(w.speed_kmh, 1)`),
+# while SCICHEM reads the gridpoint forecast's own value; two winds within half that step are the same wind as the
+# brief holds it (I-83 night: 9.26 km/h against 9.3). The jet source is computed from the SLAB problem, so the rate and
+# duration agree to rounding.
+like_for_like:
+  # SLAB's STAB 1 to 6 are the Pasquill classes A to F (dense_gas module docstring; SLAB user's guide section 3.1.5.6)
+  class_letters: "ABCDEF"
+  wind_record_step_kmh: 0.1
+  rate_tolerance_frac: 0.001
+  duration_tolerance_s: 1.0
+
+# ── which engine reaches farther (HBD-390; DN-028 ADDENDUM-04 decision 3) ────────────────────────────────────────────
+reach:
+  # A SCICHEM level is cut by the engine's domain when its area reached at any time touches the post-processor's grid
+  # edge (DN-028 ADDENDUM-03 section 2: "Both levels' areas reached at any time are cut by the domain"); within this
+  # many km of the edge, the record's rings being rounded to the metre.
+  edge_tolerance_km: 0.001
+  # HB-182 (Issue hb180-domain-cut-marks-the-outermost-contour-not-the-domain): the edge is read from the request's
+  # domain (meta.inputs.domain_half_width_km) and the post-processor's grid, never from a contour. scipp's horizontal
+  # slice of the whole domain is a base grid of SD_BASEGRID = 10 cells on its longer side (SCICHEM source,
+  # src/lib/SCIPUFFlib/PlotMgr/slice.f90 lines 63 and 85, nxs and dxs at 425 to 433), cell-centred (sliceh.f90 line
+  # 433, "(FLOAT(ix-1)+0.5)*dxs"), each cell refined into halves where a puff is narrower than it (sliceh.f90 lines
+  # 327 to 339 and 485 to 491). The field's outermost value therefore lies at hw - dx0 / 2**(L+1) for a refinement
+  # level L: 27, 28.5, 29.25 km ... on the 30 km domain (the held records end at 28.5 and 29.25 km; HB-180
+  # convergence.tsv, last table). A level touches the domain where its area holds points at one of those positions.
+  post_processor_base_cells: 10
+  # An open contour that meets the field's edge is closed along it, so a level touching the edge holds at least the
+  # two ends of that line there; a single point is an interpolated vertex that only happens to fall on that position.
+  min_points_on_edge: 2
+  # SLAB's level is cut where its table ends first (`beyond_table`, HB-112).
+  # The stability classes under which the planning shape applies (HBD-390: "a release whose stability class is E or
+  # F"), as the SLAB deck's STAB numbers.
+  stable_stab: [5, 6]
+
+# ── Volume II's continuous or instantaneous release (HB-173 ADDENDUM-01 section 2 item 2) ─────────────────────────────
+# Hanna, Strimaitis and Chang (1993), ESL-TR-91-28, Volume II, blocks 385 to 388 of the held parse: a release is
+# continuous where u T / x is at least 2.5, instantaneous where it is at most 0.6, and between them "Calculate both
+# ways" (u the wind speed, T the release duration, x the distance). The stable dense evaluation it reports covers 200
+# to 800 m (section IV.B.1.h; DN-028 ADDENDUM-02 section 3 item 6).
+release_kind:
+  key: hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2
+  blocks: "385 to 388"
+  continuous_at_least: 2.5
+  instantaneous_at_most: 0.6
+  evaluated_from_m: 200
+  evaluated_to_m: 800
+
+# ── what is known of each engine against observation (HB-173 ADDENDUM-01 sections 2 and 3) ──────────────────────────
+# Quoted in the pop-out as facts about each engine; never the alert's threshold (they are model against observation).
+evaluations:
+  continuous: "SLAB against observation, stable continuous dense releases (Volume II, Hanna, Strimaitis and Chang 1993, ESL-TR-91-28; N = 10, 200 to 800 m, winds 1.5 to 2.1 m/s): MG 0.881, VG 1.12, every point within a factor of two (DN-028 ADDENDUM-02 section 3 item 6)"
+  instantaneous: "SLAB against observation, stable instantaneous dense releases (Volume II; N = 9): MG 1.665, VG 1.34, 7 of 9 within a factor of two, an under-prediction (DN-028 ADDENDUM-02 section 3 item 6)"
+  jack_rabbit: "Both engines' models against observation on three light-wind stable chlorine trials, arcs 0.2 to 5 km (Jack Rabbit II, the authors' manuscript, mazzola-2020-jack-rabbit-ii-17-dense-gas-models-manuscript): the model inside SCICHEM, run by its own users, MG 1.04, FAC2 0.60; SLAB MG 1.13 and 0.65 by two users (DN-028 ADDENDUM-02 section 3 item 7)"
+  beyond: "Beyond 5 km no held evaluation of either engine exists; a shape beyond that distance is a model's extrapolation, drawn because it is the larger (HB-173 ADDENDUM-01 section 2)"
+
+# ── the reason shown (DN-028 ADDENDUM-04 decision 4) ──────────────────────────────────────────────────────────────────
+# Only a reason a held trace supports, quoted from the design record with its reference; no model writes a word of it.
+reasons:
+  stable:
+    stab: [5, 6]
+    key: "hazbrief-mcp:HBD-389"
+    note: DN-028 ADDENDUM-03
+    ref: "DN-028 ADDENDUM-03 section 1"
+    quotes:
+      - "On PGT F SCICHEM is still 2 to 4 times below its published curve"
+      - "hazbrief's departure is in its setup, and PGT is not shown to be the whole of it"
+  none: "not traced"
+
+# ── the words ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+words:
+  # the checklist item (a disagreement) and the one line where it would be (agreement); `measure` and `reaches` below
+  alert: "Two methods disagree: {measure}; {reaches}{like}"
+  agree: "Two methods agree: {measure}; {reaches}{like}"
+  # DN-028 ADDENDUM-10 decision 4: under a stable class a difference beyond the factor is a stated condition of use
+  # (sections T58 and T59), never a warning; the measure is stated as a fact
+  differ_stable: "Two methods differ beyond the held factor, a stated condition of use under a stable class and no warning: {measure}; {reaches}{like}"
+  # DN-028 ADDENDUM-10 decisions 2 to 4, as ADDENDUM-12 decisions 2 and 3 amend them: the one line under a stable
+  # class, in the checklist's place of the two-methods item and at the top of the Timeline page; no imperative (HB-173
+  # item 14)
+  # HB-189 (DN-028 ADDENDUM-14 decisions 1, 2, 3, 6 and 13): the line wherever any hour of the horizon is stable.
+  # HB-192 (ADDENDUM-02 item 5): at 37 of 531 place-levels on csx night the finest held run (0.625 m) arrives before
+  # the 1.25 m run the brief shows, by at most 720 s (360 s in the first hour); at 386 it arrives after.
+  stable_line: "{when}: the moving cloud is drawn hour by hour by level at a {vres:g} m vertical setting, an approximation that is not converged; each level's planning area is its area, filled, together with SLAB's extent check, dashed, on one wind with no times; every time on this brief is from that run, and an arrival may be earlier than shown by up to 12 minutes (6 in the first hour; against the finest run held, docs/evidence/hb192/arrival_sign.tsv) (Conditions of use, section {ref})"
+  stable_when_release: "Class {cls}"
+  stable_when_later: "Class {cls} from hour {hour} of the horizon"
+  measure: "SLAB over SCICHEM {ratios} at {distances}, {outside} of {pairs} distances to {max_km:g} km outside the held factor of {factor:g}"
+  ratio_none: "none"
+  reaches: "reach SCICHEM / SLAB: {tiers}"
+  reach_tier: "{tier} {scichem} / {slab}"
+  reach_m: "{m:,} m"
+  reach_cut: "at least {m:,} m ({by})"
+  reach_none: "not reached"
+  cut_domain: "the engine's domain"
+  cut_table: "SLAB's table ends"
+  # HB-189 (DN-028 ADDENDUM-14 decision 5): SLAB's part cut where the cloud would travel past the brief's time
+  cut_time: "the time bound (the release hour's wind's travel in the horizon and 30 percent over)"
+  not_like: "; not like for like: {inputs}"
+  like_bl: "the boundary layer (SCICHEM {sc}; SLAB class {cls})"
+  like_bl_calc: "calculates its own"
+  like_bl_obs: "the class's PGT layer, class {cls}"
+  like_wind: "the release hour's wind (SCICHEM {sc:.2f} m/s; SLAB {sl:.2f} m/s)"
+  like_release: "the release (SCICHEM {sc_q:.3g} kg/s for {sc_t:.0f} s; SLAB {sl_q:.3g} kg/s for {sl_t:.0f} s)"
+  not_computed: "Two methods: not compared ({why})"
+  not_recorded: "the lines run for this request ({sha}) is not recorded in {dir}; the brief never runs the engine itself"
+  no_slab: "SLAB's footprint is not drawn"
+  no_pairs: "no distance holds a concentration from both"
+  receipt: "{factor_cite}; {link_text} {ref}"
+  # the pop-out (the TEVV section of the measure)
+  pairs_line: "At {d:,.0f} m: SLAB {sl:.4g} ppm, SCICHEM {sc:.4g} ppm, SLAB over SCICHEM {r:.3g}{flag}"
+  flag_outside: " (outside the factor of {factor:g})"
+  only_one: "{n} of the distances to {max_km:g} km hold a concentration from one engine only; they are not paired"
+  tier_line: "{tier}: reach SCICHEM {sc_reach}, SLAB {sl_reach}; area SCICHEM {sc_area}, SLAB {sl_area}; {farther}"
+  area_km2: "{a:,.1f} km2"
+  farther_scichem: "SCICHEM's reaches farther"
+  farther_slab: "SLAB's reaches farther"
+  farther_undecided: "both reaches are lower bounds, so which reaches farther is not known"
+  farther_equal: "the reaches are equal"
+  # DN-028 ADDENDUM-14 decision 6: under the stable treatment every level's area is the moving cloud's together with
+  # SLAB's extent check, whichever reaches farther, stated with its parts
+  planning_on: "; this brief's area at this level is {what}"
+  planning_parts: "the planning area, {km2}: the moving cloud's area {cloud} and SLAB's extent check outside it {check}"
+  factor_line: "The measure: {factor_quote} ({factor_cite}; the threshold, factor {factor:g}). Beside it, not the threshold: \"{second_quote}\" ({second_cite})."
+  reason_line: "What is thought to be the reason: {quotes} ({ref}; {key})"
+  reason_none: "What is thought to be the reason: not traced"
+  kind_line: "By Volume II's criterion (u T / x, blocks {blocks}), this release is continuous to {cont:,.0f} m and instantaneous beyond {inst:,.0f} m; at the evaluated 200 to 800 m it is {which}"
+  kind_continuous: "continuous"
+  kind_instantaneous: "instantaneous"
+  kind_neither: "neither throughout, so both of Volume II's numbers are cited"
+  # no imperative (HB-173 item 14): the line names what is checked and the checklist items that check it
+  verify_line: "Inputs both engines share, each checked at the scene by an existing Verify item: the wind (\"{wind_item}\") and the stability class (\"{stab_item}\")"
+  verify_line_day: "Inputs both engines share, checked at the scene by an existing Verify item: the wind (\"{wind_item}\")"
+  like_line: "Not like for like: {like}; both held factors are stated for models given the same inputs (HB-173 ADDENDUM-01 section 3)"

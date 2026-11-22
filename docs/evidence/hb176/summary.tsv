@@ -1,0 +1,14 @@
+figure	value	from
+slab_arcs	10	statistics.tsv slab_hb all n
+slab_trials	4	statistics.tsv slab_hb all trials
+slab_within_factor_two	10	statistics.tsv slab_hb all fac2 times n
+slab_mg	0.90	statistics.tsv slab_hb all mg
+slab_vg	1.09	statistics.tsv slab_hb all vg
+scichem_arcs	8	statistics.tsv scichem_pgt all n
+scichem_trials	3	statistics.tsv scichem_pgt all trials
+scichem_below_every_arc	yes	against_observation.tsv, both layers
+scichem_pgt_mg	3.50	statistics.tsv scichem_pgt all mg
+scichem_pgt_factor_below	3.5	statistics.tsv scichem_pgt all mg, one decimal
+scichem_calc_mg	3.69	statistics.tsv scichem_calc all mg
+nearest_arc_m	212	against_observation.tsv in_statistic
+farthest_arc_m	800	against_observation.tsv in_statistic

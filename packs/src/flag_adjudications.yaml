@@ -1,0 +1,374 @@
+# HB-12b step 3: the adjudication of every sentence where the lexical pattern and HB-12's model
+# kind disagree, after the pattern revisions recorded in packs/src/flag_kinds.yaml. One entry per
+# (kind, sentence text): the guides repeat sentences, and one sentence means one thing wherever it
+# prints. `label` is the adjudicated truth for the kind; `reason` is the one-line ground.
+# Read by rationalize_flags.py (a build tool held privately) (precision and recall against these labels).
+- key: eef0bb12efd5
+  kind: heavier_than_air
+  sentence: Flammable/toxic gases may accumulate in confined areas (basement, tanks, hopper/tank cars,
+    etc.).
+  pattern: true
+  model: false
+  label: true
+  reason: gases collecting in confined areas is the kind as defined ("collect in low or confined areas");
+    the model labelled the same wording in guide 168
+- key: b8e3978ca14a
+  kind: heavier_than_air
+  sentence: Toxic fumes or dust may accumulate in confined areas (basement, tanks, hopper/tank cars, etc.).
+  pattern: true
+  model: false
+  label: true
+  reason: fumes collecting in confined areas, as above
+- key: af98bbb72c50
+  kind: heavier_than_air
+  sentence: Toxic/flammable fumes may accumulate in confined areas (basement, tanks, tank cars, etc.).
+  pattern: true
+  model: false
+  label: true
+  reason: fumes collecting in confined areas, as above
+- key: a97dee29927f
+  kind: may_explode_when_heated
+  sentence: Cargo may EXPLODE!
+  pattern: false
+  model: true
+  label: true
+  reason: 'the cargo explodes when fire reaches it (the sentence before says so); the pattern misses it
+    because this sentence names no heat or fire: a known false negative'
+- key: 94a364730b81
+  kind: may_explode_when_heated
+  sentence: DO NOT fight fire when fire reaches cargo!
+  pattern: false
+  model: true
+  label: false
+  reason: the response to the explosion hazard, not the hazard; it is the flag's response
+- key: 5020c44c6200
+  kind: may_explode_when_heated
+  sentence: May explode from heat, contamination or loss of temperature control.
+  pattern: true
+  model: false
+  label: true
+  reason: explodes from heat
+- key: 7d441649eed8
+  kind: may_explode_when_heated
+  sentence: May explode from heat, shock, friction or contamination.
+  pattern: true
+  model: false
+  label: true
+  reason: explodes from heat
+- key: 7098efe9cb7f
+  kind: may_explode_when_heated
+  sentence: Those substances designated with a (P) may polymerize explosively when heated or involved
+    in a fire.
+  pattern: true
+  model: false
+  label: true
+  reason: an explosion caused by heat; the model labelled the same sentence may_explode_when_heated in
+    8 guides and not in 6
+- key: 86242cc011e1
+  kind: oxidizer
+  sentence: May ignite combustibles (wood, paper, oil, clothing, etc.).
+  pattern: true
+  model: false
+  label: true
+  reason: igniting combustibles is the oxidizer hazard; the model labelled the same sentence oxidizer
+    in 3 guides
+- key: be4323b0ea7f
+  kind: oxidizer
+  sentence: Some will react violently with water.
+  pattern: false
+  model: true
+  label: false
+  reason: water reactivity, not oxidizing; the model's trigger ran on from the sentence before
+- key: 123241a3db5c
+  kind: polymerizes
+  sentence: May burn violently.
+  pattern: false
+  model: true
+  label: false
+  reason: burning, not polymerizing; the model's trigger spanned this sentence and the next
+- key: 46948200dea0
+  kind: polymerizes
+  sentence: These materials are particularly sensitive to temperature rises.
+  pattern: false
+  model: true
+  label: false
+  reason: temperature sensitivity; the polymerization is stated in the next sentence, which is a hit
+- key: 25ccd3de47de
+  kind: toxic_by_inhalation
+  sentence: Inhalation of decomposition products may cause severe injury or death.
+  pattern: true
+  model: false
+  label: true
+  reason: inhalation may cause death
+- key: 93cb20eb374f
+  kind: toxic_by_inhalation
+  sentence: Inhalation or contact with substance or decomposition products may cause severe injury or
+    death.
+  pattern: true
+  model: false
+  label: true
+  reason: inhalation may cause death
+- key: 338248d25be6
+  kind: toxic_by_inhalation
+  sentence: Inhalation or contact with vapors, substance or decomposition products may cause severe injury
+    or death.
+  pattern: true
+  model: false
+  label: true
+  reason: inhalation may cause death
+- key: 36d8d5a91a7b
+  kind: toxic_by_inhalation
+  sentence: Inhalation, ingestion or contact (skin, eyes) with vapors or substance may cause severe injury,
+    burns or death.
+  pattern: true
+  model: false
+  label: true
+  reason: inhalation may cause death
+- key: 4be4002b5f56
+  kind: toxic_by_inhalation
+  sentence: May cause toxic effects if inhaled or absorbed through skin.
+  pattern: true
+  model: false
+  label: true
+  reason: toxic if inhaled; the model labelled "May cause toxic effects if inhaled." in another guide
+- key: 468fc317fdd8
+  kind: toxic_by_inhalation
+  sentence: May cause toxic effects if inhaled or ingested.
+  pattern: true
+  model: false
+  label: true
+  reason: toxic if inhaled
+- key: a98c056a7ce0
+  kind: toxic_by_inhalation
+  sentence: TOXIC and/or CORROSIVE; ingestion of substance or inhalation of decomposition products will
+    cause severe injury or death.
+  pattern: true
+  model: false
+  label: true
+  reason: toxic; inhalation of decomposition products will cause death
+- key: 85c05f654639
+  kind: toxic_by_inhalation
+  sentence: TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or
+    substance may cause severe injury, burns or death.
+  pattern: true
+  model: false
+  label: true
+  reason: toxic by inhalation; the model labelled identical text in another guide
+- key: a662b289fdd0
+  kind: toxic_by_inhalation
+  sentence: TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe
+    injury or death.
+  pattern: true
+  model: false
+  label: true
+  reason: toxic by inhalation; the model labelled identical text in another guide
+- key: 3b96e8e12351
+  kind: water_reactive
+  sentence: (FOAM MAY BE USED FOR CHLOROSILANES, SEE BELOW)
+  pattern: false
+  model: true
+  label: false
+  reason: a note about foam, not water
+- key: 4b30a7b9a0cc
+  kind: water_reactive
+  sentence: Avoid allowing water runoff to contact spilled material.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: 01660c5c8da6
+  kind: water_reactive
+  sentence: 'CAUTION: For LNG - Liquefied natural gas (UN1972) pool fires, DO NOT USE water.'
+  pattern: false
+  model: true
+  label: false
+  reason: LNG is not water-reactive (water speeds its vaporization); a response for one material
+- key: f5118b48795c
+  kind: water_reactive
+  sentence: 'CAUTION: For LNG - Liquefied natural gas (UN1972), DO NOT apply water, regular or alcohol-resistant
+    foam directly on spill.'
+  pattern: false
+  model: true
+  label: false
+  reason: as above
+- key: 5d7fdb05c556
+  kind: water_reactive
+  sentence: 'CAUTION: Material may react with extinguishing agent.'
+  pattern: false
+  model: true
+  label: false
+  reason: any extinguishing agent, not water in particular (guide 111, mixed load)
+- key: ade9a8e045ae
+  kind: water_reactive
+  sentence: 'CAUTION: These materials do not burn but will support combustion.'
+  pattern: false
+  model: true
+  label: false
+  reason: an oxidizer statement; the model's trigger ran on into the next sentence
+- key: bddf0e144358
+  kind: water_reactive
+  sentence: Containers may explode when heated or if contaminated with water.
+  pattern: true
+  model: false
+  label: true
+  reason: water contamination may explode the container; the model labelled the same sentence water_reactive
+    in 3 guides
+- key: a8d95aaf0422
+  kind: water_reactive
+  sentence: DO NOT GET WATER INSIDE CONTAINERS.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: '926875491125'
+  kind: water_reactive
+  sentence: DO NOT GET WATER on spilled substance or inside containers.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: 9c933e441f73
+  kind: water_reactive
+  sentence: DO NOT USE WATER OR FOAM ON MATERIAL ITSELF.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: 461e23e5660b
+  kind: water_reactive
+  sentence: DO NOT USE WATER OR FOAM.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: cf45de5c52f4
+  kind: water_reactive
+  sentence: DO NOT USE WATER, CO2 OR FOAM ON MATERIAL ITSELF.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: 53f307aade99
+  kind: water_reactive
+  sentence: DO NOT USE WATER, FOAM OR CO2.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: a2533bfcfbde
+  kind: water_reactive
+  sentence: Do not direct water at spill or source of leak.
+  pattern: false
+  model: true
+  label: false
+  reason: a response common to many gas guides (keeps the liquid from boiling off), not a reaction with
+    water
+- key: 413ba4b1d768
+  kind: water_reactive
+  sentence: Do not direct water at the heated metal.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: df3063d947a6
+  kind: water_reactive
+  sentence: Do not get water inside containers or in contact with substance.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: e99d9bf83429
+  kind: water_reactive
+  sentence: Do not get water inside containers.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: 72e2509bc4ce
+  kind: water_reactive
+  sentence: Do not use water, except in life-threatening situations and then only in a fine spray.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: 64f8f00ca605
+  kind: water_reactive
+  sentence: FOR CHLOROSILANES, DO NOT USE WATER; use alcohol-resistant foam.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: e0a1f61ccc86
+  kind: water_reactive
+  sentence: FOR CHLOROSILANES, DO NOT USE WATER; use alcohol-resistant foam; DO NOT USE dry chemicals,
+    soda ash or lime on chlorosilane fires (large or small) as they may release large quantities of hydrogen
+    gas that may explode.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: 8af0e0070280
+  kind: water_reactive
+  sentence: Fire
+  pattern: false
+  model: true
+  label: false
+  reason: a sub-heading
+- key: d383be2dc7aa
+  kind: water_reactive
+  sentence: May produce corrosive solutions on contact with water.
+  pattern: true
+  model: false
+  label: true
+  reason: reacts with water to form corrosive solutions
+- key: 74035c366371
+  kind: water_reactive
+  sentence: 'Note: Most foams will react with the material and release corrosive/toxic gases.'
+  pattern: false
+  model: true
+  label: false
+  reason: reaction with foam, not water
+- key: 00c892b15de9
+  kind: water_reactive
+  sentence: Use a high-expansion foam if available to reduce vapors.
+  pattern: false
+  model: true
+  label: false
+  reason: a response about foam
+- key: 0ce4e8511d7e
+  kind: water_reactive
+  sentence: Use dry chemical or high-expansion foam.
+  pattern: false
+  model: true
+  label: false
+  reason: a response about extinguishing agents
+- key: 4f9aa77f6d73
+  kind: water_reactive
+  sentence: Use water spray to reduce vapors; do not put water directly on leak, spill area or inside
+    container.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard
+- key: 7f0a15d8bc1d
+  kind: water_reactive
+  sentence: When material is not involved in fire, do not use water on material itself.
+  pattern: false
+  model: true
+  label: false
+  reason: a response (what not to do with water), not a statement that the material reacts; it is the
+    flag's response, not a receipt of the hazard

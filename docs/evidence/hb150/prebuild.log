@@ -1,0 +1,6 @@
+intake written for 497 entries; label hb01b_58
+[factory] plan: 14 node(s) decided in 7.19s (slowest F-01 catalog, 7.04s)
+[factory] STOPPED before item 1 (ceiling disk: below the disk floor of 25.0 GB (the kit's default (disk.yaml floor_gb_default)): graph root (the data volume) /Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/structured-meandering-dragonfly/graphs/hazbrief-corpus has 19.55 GB free. Free space there or lower the spec's disk.floor_gb, then re-run the same command (DN-035 R-163)). Free space on the volume named above, or lower the spec's disk.floor_gb, then re-run the same command.
+squiddy build hb01b_58: 0 node(s) ran, rc=4, 0.0s. Record: /Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/structured-meandering-dragonfly/graphs/hazbrief-corpus/evidence/hb01b_58/build_record.json
+build --to F-06 rc 4
+EXIT=4

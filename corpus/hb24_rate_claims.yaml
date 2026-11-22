@@ -1,0 +1,127 @@
+# RETIRED (HB-71, 2026-10-30): rate_claims.py (a build tool held privately) is retired in favour of the kit's `squiddy rate` (squiddy SQ-049R). This file is kept as
+# the record of the run(s) it configured; nothing reads it now.
+# Its `rubrics:` list is still read: the pilot plan's `rubrics_file`, a measure-only gate's `--rubric-file`.
+# HB-24 (HB-24): every claim in the final
+# release rated under the graph's declared rubric, every disagreement adjudicated, the rulings written to the graph.
+# Read by rate_claims.py (a build tool held privately). The instrument is the kit's `pilot_gate` protocol (squiddy/extract.py) run over the
+# whole claim set instead of a sample: the rater rates every claim on the rubric's two questions; the adjudicator
+# decides each claim the rater did not rate yes on both, with the rater's answer in its prompt; an unparseable answer
+# counts as no. The kit's `fill`, `parse_rating` and the graph's `emit_rulings` are used unchanged.
+
+#: The claim set: the served export, which must be this release (its sealed copy is compared byte for byte).
+release: hb22_bulk_07
+#: Each claim's segment (the rater's `segment_text`) is the extraction evidence row whose claim id and run id match
+#: the claim's `prov_run_id`, searched under the graph's `evidence_dir`. A claim with no such row is FATAL.
+evidence_glob: "**/extract_*.jsonl"
+
+#: The graph's declared rubric (graph.yaml domain.extract, HB-21) and the kit's, as the control. The script checks
+#: each file's sha256 against these before any call, so a prompt edited after this file was written cannot be run
+#: under this file's name.
+rubric: hb21-operational-v1
+rubrics:
+  - name: hb21-operational-v1
+    rater_prompt: prompts/claim_rating_operational.md
+    rater_sha256: d25153d5a5a994967b9ec6f004fa46f4b20b412acafd7c032efdb87fbddf49cd
+    adjudicator_prompt: prompts/claim_adjudication_operational.md
+    adjudicator_sha256: f560b2fb1e1bb34e3b37ba46a656fa2d799603179b0aefa20ee97a4dafc5e951
+  - name: s007-rubric-v1
+    rater_prompt: prompts/claim_rating.md
+    rater_sha256: e239eabb9f92259f05fd16a54664442fe285841de4b0576a863f68bbb91704bd
+    adjudicator_prompt: prompts/claim_adjudication.md
+    adjudicator_sha256: c4ace3cda4e4116ace449e326f080dc765de73a8d4da0d21c8374a6466b059d6
+
+# ---- step 2: the pilot (both rubrics, held out) ----
+#: 200 claims drawn by the kit's sampler rule (`squiddy.extract.SAMPLE_RULE`: sorted by sha256 of the claim id, the
+#: first N) over every claim in the release, after removing the claims HB-21 wrote its rubric against (HB-14b's
+#: n = 100 gate sample, `exclude_from_pilot`), so the comparison HB-21 made in-sample is repeated on claims the
+#: rubric's author never saw. The pilot's operational-rubric calls are the full run's first calls (same unit keys);
+#: the control rubric's ratings stay in the evidence and are never written to the graph.
+pilot_size: 200
+exclude_from_pilot: hb14b_gate100/pilot_rater.jsonl
+
+# ---- output ----
+evidence_version: hb24_rate
+release_prefix: hb24_rate
+#: A batch of rated works is written and released every this many works, and at the end (HB-24 step 3).
+release_every: 10
+progress_log: logs/2026-10-23_HB-24_progress.log
+#: HB-24 step 4: every work whose rater agreement is below this is listed with its three worst claims.
+low_agreement_line: 0.7
+
+# ---- the checkpoint plan (constitution section 15) ----
+#: Unit: one model call (one role, one rubric, one claim). Key: sha256 of (role, the prompt file's sha256, the claim
+#: id, the requested model). Checkpoint: <evidence>/calls.jsonl, one fsynced row per settled call; the run's events
+#: (work rated, failed, written, released, deferred, held) in <evidence>/state.jsonl, fsynced. Re-running the same
+#: command is the resume: a key with an `ok` row is skipped, a written work is not written again.
+#: Runaway guard over the whole checkpoint: about 10,122 rater calls, at most as many adjudicator calls, the pilot's
+#: control rubric (at most 400) and retries.
+max_calls: 30000
+#: A failed call is a row and is retried on the work's next attempt, at most this many attempts in all.
+max_attempts: 3
+progress_seconds: 60
+#: Constitution 15.4. The pilot (step 2) is the measurement the projection is printed from.
+pilot_units: 20
+#: Per work, a stop on new calls past this wall clock (calls in flight land), then the work is retried in the
+#: retry pass.
+wall_seconds_max: 3600
+#: Calls in flight: the graph's measured extraction concurrency (graph.yaml extract.concurrency, HB-22; HB-23
+#: ADDENDUM-00 point 1 applies the same number to HB-24).
+workers: 8
+#: A session failure (auth, a dead CLI) fails every call; this many in a row ends the work's attempt. The run then
+#: waits `systemic_wait_seconds` and tries the same work again, at most `systemic_retries` times, then records the
+#: work failed and goes on (HB-14b ADDENDUM-00: failures are rows; the run continues). Failed works get a retry pass
+#: at the end.
+halt_after_consecutive_failures: 5
+systemic_wait_seconds: 600
+systemic_retries: 3
+
+# ---- the lock premise (as HB-14b) ----
+lock_file: ../seldon/models/models.lock.yaml
+#: HB-32: the lock is recorded at start, never obeyed; the deadline before the next bump is gone with the lock stop
+#: (rate_claims.py's docstring; HB-31 for bulk_extract.py). The run holds seldon's lock instead (HB-33).
+
+# ---- the model bucket (HB-23 ADDENDUM-00 point 2, applied to HB-24 by the same words) ----
+#: The factory's declared bucket is read from factory/control.yaml `buckets.model.tokens_per_hour`. Before each
+#: call is started, the settled weighted tokens of every job on this graph's lanes (`<graph name>:`, so HB-23's
+#: extraction counts too) over the trailing hour are read from the kit's spend ledger; while they are at or above the
+#: bucket, no call starts. Every hold is a state row.
+bucket_window_seconds: 3600
+#: How often the ledger is re-read while calls are flowing, and how long a hold waits before reading it again.
+bucket_refresh_seconds: 20
+bucket_hold_seconds: 30
+
+# ---- sharing the graph with HB-23 (hazbrief-mcp-67), agreed 2026-10-23 ----
+#: The runtime control, under the run's evidence directory, re-read at every use so the run follows the agreement
+#: without a restart: `write_pause: <reason>` (HB-23's ingest window: no sweep is opened, rating goes on) and
+#: `bucket_share: <fraction>` (0.5 while HB-23 extracts, 1.0 when unset). Each change is recorded with its reason.
+control_file: control.yaml
+#: At the end, rated works still unwritten (the lock held by another session, or a pause) are retried every poll
+#: until written or until this long has passed.
+final_write_wait_seconds: 21600
+final_write_poll_seconds: 60
+
+# ---- spend (squiddy SQ-009: every call reserves on a declared job) ----
+#: One declared job per work and role, its estimate, token cap and band from the graph's baseline (below). HB-22
+#: ADDENDUM-00: each job's approval is written before its first call; a stop by the governor or the band is
+#: `held`, never failed.
+spend_node: pilot_gate
+job_prefix: hb24
+#: HB-64 (2026-10-29; squiddy SQ-086R, DN-052 R-236): the run's estimate, hard cap and rate band are the kit's, priced
+#: by the graph's one declared baseline, the corpus graph (held privately) `baseline:` (HB-29's rule: units
+#: times each role's calls per unit times the measured rate times the CLI factor; the hard cap is the estimate times
+#: 1.3; a job, or the run's lane, is held outside 0.67x to 1.5x of the expected per-call rate). This config carried
+#: its own `baseline:` from HB-29 (2026-10-24) to HB-64; its rater and adjudicator rates were the graph's, which carries
+#: them unchanged.
+#: HB-24 **Spend:** "open; this is the deliberate burn". The approvals quote the rulings that make it open.
+approval:
+  operator: Brock Webb
+  date: "2026-10-23"
+  words: >-
+    HB-24 Spend line (2026-10-23): "open; this is the deliberate burn. Every claim in the final release ... gets a
+    rater call under the operational rubric and an adjudicator call where the rater and extractor disagree."
+    HB-22 ADDENDUM-00 (operator, 2026-10-23 10:08): "Those should never have been fails. Those should have been a
+    hold for authorization and start another document." Under an open budget the authorization is given in
+    advance. HB-14 ADDENDUM-01 (operator, 2026-10-22 18:05): budget open, no limits.
+    HB-29 (operator, 2026-10-24), which supersedes the open budget for every run from HB-29 on: "estimates for
+    any run on CLI 2.1.310 are made at twice HB-14's per-call rate until SQ-034 closes with a measurement; a run's
+    hard cap is its estimate times 1.3; a run holds, not fails, when its measured per-call rate leaves the band."

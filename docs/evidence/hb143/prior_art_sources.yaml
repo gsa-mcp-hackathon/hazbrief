@@ -1,0 +1,41 @@
+# HB-143 ADDENDUM-01 section 2 item 3: the published methods for combining nearby surface stations into a point wind,
+# asked of the allowlisted fetcher (scripts/fetch_allowlisted.py) into the HB-143 evidence (held privately) with
+# their own log (docs/evidence/hb143/prior_art_fetch_log.jsonl).
+#
+# Not corpus rows yet: a corpus/sources.yaml row reds test_corpus_intake.py (a test held privately) until a corpus ingest rewrites
+# the corpus graph (held privately) (outside this task's Touches; HB-100's precedent). These are the drafted rows; the ingest
+# that lands them is Issue-tracked (RESULT, "Issues").
+#
+# EPA's meteorological monitoring guidance for regulatory modelling (ADDENDUM-01's "EPA's meteorological monitoring
+# guidance") is already held: corpus row epa-mmgrma-1999 (EPA-454/R-99-005). It is read, not fetched again.
+sources:
+  - doc_id: barnes-1964-objective-analysis
+    title: A Technique for Maximizing Details in Numerical Weather Map Analysis
+    publisher: American Meteorological Society (Journal of Applied Meteorology 3(4), 396-409)
+    edition: 1964
+    url: https://journals.ametsoc.org/view/journals/apme/3/4/1520-0450_1964_003_0396_atfmdi_2_0_co_2.xml
+    format: html
+    plan: fetch
+  - doc_id: cressman-1959-objective-analysis
+    title: An Operational Objective Analysis System
+    publisher: American Meteorological Society (Monthly Weather Review 87(10), 367-374)
+    edition: 1959
+    url: https://journals.ametsoc.org/view/journals/mwre/87/10/1520-0493_1959_087_0367_aooas_2_0_co_2.xml
+    format: html
+    plan: fetch
+  - doc_id: shepard-1968-idw
+    title: A two-dimensional interpolation function for irregularly-spaced data
+    publisher: ACM (Proceedings of the 1968 23rd ACM National Conference, 517-524)
+    edition: 1968
+    url: https://dl.acm.org/doi/10.1145/800186.810616
+    format: html
+    plan: fetch
+  # EPA's Guideline on Air Quality Models (40 CFR Part 51 Appendix W), section 8.4, "Meteorological Input Data": the
+  # regulatory statement of which station's data a dispersion run takes (representativeness).
+  - doc_id: epa-appendix-w-2017
+    title: Guideline on Air Quality Models (40 CFR Part 51, Appendix W), 2017 revision
+    publisher: U.S. EPA
+    edition: 2017-01-17 (82 FR 5182)
+    url: https://www.epa.gov/sites/default/files/2020-09/documents/appw_17.pdf
+    format: pdf
+    plan: fetch

@@ -1,0 +1,70 @@
+# HB-219: the deck's plain-words rule, held by test_hb219_plain_words.py (a test held privately).
+#
+# The operator, 2026-11-21 22:26 EST: "We should never be using jargon. That is anti-Heilmeier question practice,
+# that we should be able to explain things simply without jargon, especially on briefing slides." The Heilmeier
+# Catechism's first question asks a proposer to articulate the objectives "using absolutely no jargon" (DARPA, "The
+# Heilmeier Catechism"; held as prior art by the operator's own statement, not re-fetched here).
+#
+# What the rule reads: every slide's title and every line its body prints, as the builder prints them
+# (build_deck.py (a build tool held privately) expected_lines, without the part's name). Not read: the sources line under a slide, the
+# speaker notes, and a figure's alternative text or a diagram's labels (pictures, whose words are their own tools'):
+# item 2 of HB-219 lets a citation line and the notes keep a file path, and they may keep an id.
+
+# A project id or a file path on a title or body. Each is a Python regular expression, searched case-sensitively.
+deny_patterns:
+  - {pattern: '\bHB-\d+', why: a task id}
+  - {pattern: '\bDN-\d+', why: a design note id}
+  - {pattern: '\bHBD-\d+', why: a decision id}
+  - {pattern: '\bBENCH-\d+', why: a benchmark requirement id}
+  - {pattern: '\bVR-\d+', why: a view requirement id}
+  - {pattern: '\bF-?\d+\b', why: a FUTURE_WORK record number (F14) or a finding id (F-07)}
+  - {pattern: '\bT\d+\b', why: a TEVV section number (T60)}
+  - {pattern: '\bL\d+-\d+\b', why: a judge-document check id (L6-4)}
+  - {pattern: '\bADDENDUM\b', why: an addendum of a task or a design note}
+  - {pattern: 'Issue\s+`?[0-9a-f]{8}`?', why: a Seldon Issue id (HB-219 ADDENDUM-01 item 1)}
+  - {pattern: '\b(?=[0-9a-f]*[a-f])(?=[0-9a-f]*\d)[0-9a-f]{8}\b', why: 'a bare record id, as the builder printed one beside a record''s label'}
+  - {pattern: '[\w.-]+/[\w./-]+\.(?:md|html|yaml|yml|tsv|json|jsonl|py|png|svg)\b', why: a file path}
+
+# Words coined in this project's working notes, which a reader outside the project would not know. Matched as whole
+# words, case-insensitively.
+deny_words:
+  - {word: door, why: the start page's two parts, in the HB-208 and HB-209 notes}
+  - {word: doors, why: the same}
+  - {word: the route, why: a brief's way through the tools, in the design notes}
+  - {word: the kit, why: the Squiddy build kit}
+  - {word: gate, why: the test suite as the dispatcher runs it}
+  - {word: projection, why: a table generated from the Seldon graph}
+  - {word: fixture, why: a recorded test scenario}
+  - {word: fixtures, why: the same}
+  - {word: settle, why: a section of the live page finishing}
+  - {word: packs, why: the bundled data files the server reads}
+  - {word: receipt, why: a number's source, in the server's own term}
+  - {word: invariants, why: the server's fixed rules, in the evaluation's term}
+  - {word: engine, why: a dispersion model, in the design notes}
+  - {word: operator, why: "the project's word for its owner (HB-219 ADDENDUM-01 item 2)"}
+  - {word: held, why: "in the corpus, in the project's sense (a held source, a held criterion)"}
+  - {word: TEVV page, why: the brief's test page, by its section's acronym}
+
+# Every acronym a title or body may print, with its expansion. An acronym is a run of two or more capital letters
+# (and &) standing as a word. The slide where it first appears, in deck order, prints the expansion on its title or
+# body, matched case-insensitively. An acronym not listed here, and not in `not_acronyms`, may not be printed.
+acronyms:
+  MCP: [Model Context Protocol]
+  EPA: [Environmental Protection Agency]
+  ERG: [Emergency Response Guidebook]
+  ICS: [Incident Command System]
+  AEGL: [Acute Exposure Guideline Levels]
+  SCICHEM: [dispersion model from the Electric Power Research Institute]
+  SLAB: [dense-gas model]
+  HPAC: [Hazard Prediction and Assessment Capability]
+  ALOHA: [Areal Locations of Hazardous Atmospheres]
+  MG: [geometric mean]
+  TEVV: [test, evaluation, verification and validation]
+
+# Capital runs that are not acronyms.
+not_acronyms:
+  II: the Roman numeral in the field trials' name, Jack Rabbit II
+
+# A title said in plain words is often longer. A title that wraps to a second line is drawn over the body in the
+# PPTX (HB-219's LibreOffice render: 64 and 85 characters wrapped; 59 and 60 fit on one line at the title's 26 pt).
+max_title_chars: 60

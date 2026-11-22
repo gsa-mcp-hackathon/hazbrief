@@ -1,0 +1,9 @@
+8011 passed, 14 skipped, 97 deselected, 17 xfailed, 2 warnings in 3868.80s (1:04:28)
+PYTEST EXIT=0
+load_sensitive step:
+FAILED test_hb103_weather_map.py (a test held privately)::test_the_drawn_arrow_layer_counts_one_symbol_per_cell@chrome
+1 failed, 84 passed, 1886 deselected in 1028.32s (0:17:08)
+PYTEST2 EXIT=1
+All checks passed!
+RUFF EXIT=0
+FORMAT EXIT=0

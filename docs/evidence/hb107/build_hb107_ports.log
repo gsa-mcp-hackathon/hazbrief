@@ -1,0 +1,103 @@
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+/Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/schema/generated/hazbrief_corpus_pydantic.py:419: UserWarning: Field name "register" in "Decision" shadows an attribute in parent "Node"
+  class Decision(Node):
+[factory] plan: 32 node(s) decided in 18.42s (slowest F-01 catalog, 6.74s)
+[factory] disk preflight: floor 25.0 GB (the kit's default (disk.yaml floor_gb_default)); graph root (the data volume) /Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus: 64.43 GB free
+[factory] F-20 seeds: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-21 seed_select: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-23 seed_propose: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-24 seed_relookup: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-25 seed_reselect: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-26 seed_context: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-22 seed_search: SKIPPED-BY-CONFIG -- this graph declares no mesh_seed intake (DN-033): its catalog reads its shelf sources only
+[factory] F-27 shelf_screen: SKIPPED-BY-CONFIG -- this graph declares no shelf_screen intake (DN-035 R-162)
+[factory] F-01 catalog: ALREADY-COMPLETE
+[factory] F-19 routes: SKIPPED-BY-CONFIG -- this graph declares no `engine.acquire.text_routes` block (ACQ-001): no route is recorded before admit, and acquire takes OpenAlex's locations as before
+[factory] F-02 assess: 11 of 431 item(s) pending; the graph's own criterion decides each cataloged entry
+[factory] F-02 assess: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-02 assess: in_progress (11.18s; 430/431 complete by their records)
+[factory] F-03 acquire: 10 of 10 item(s) pending; the declared resolvers answer, one keyed row per entry, through the call layer
+[factory] F-03 acquire: network buckets (api.openalex.org, arxiv.org, export.arxiv.org); proxy variables -> the allowlisting forwarder http://127.0.0.1:51694 (3 host(s)); every other host refused and logged
+[2026-11-06T16:25:16Z] acquire final: 10/10 units (0 already done), 132.16 units/s, eta 0s, failures 0, spend {'http.api.openalex.org': 0.0, 'http.arxiv.org': 0.0, 'http.default': 0.0, 'http.export.arxiv.org': 0.0}
+[factory] F-03 acquire: done (2.65s; 10/10 complete by their records)
+[factory] F-16 resolve: SKIPPED-BY-CONFIG -- this graph declares no `engine.resolve.merge_plans`; no identity merge is recorded for it
+[factory] F-06 write: 10 of 10 item(s) pending; the emitter's instances, appended through the single write path
+[factory] F-06 write: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-06 write: done (3.81s; 10/10 complete by their records)
+[factory] F-04 admin: SKIPPED-BY-CONFIG -- this graph declares no `engine.admin_layer` block
+[factory] F-18 rulings: ALREADY-COMPLETE (decided in 1.77s)
+[factory] F-28 headings: SKIPPED-BY-CONFIG -- this graph declares no `engine.mesh_headings` block (SQ-005, DN-040 R-173)
+[factory] F-30 parse_text: ALREADY-COMPLETE (decided in 2.25s)
+[factory] F-05 parse: 10 of 746 item(s) pending; the index's units: one checkpointed line per text and metadata document
+[factory] F-05 parse: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-05 parse: done (3.62s; 746/746 complete by their records)
+[factory] F-17 concepts: 1 of 1 item(s) pending; the vocabularies from the held bytes, then HV-006's text-mention scan (zero calls)
+[factory] F-17 concepts: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-17 concepts: done (8.21s; 1/1 complete by their records)
+[factory] F-32 derivations: ALREADY-COMPLETE (decided in 1.07s)
+[factory] F-07 project: 1 of 1 item(s) pending; the ledger replayed into the graph's classes
+[factory] F-07 project: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-07 project: done (5.58s; 1/1 complete by their records)
+[factory] F-08 extract: SKIPPED-BY-CONFIG -- the extract block is not a daemon control plane: FATAL: /Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/extract/control.yaml is missing ['rate.tokens_per_hour', 'rate.papers_in_flight', 'ceiling.
+[factory] F-09 preview: ALREADY-COMPLETE
+[factory] F-10 commit: ALREADY-COMPLETE
+[factory] F-29 mentions: 1 of 1 item(s) pending; S-008 Part E's node-field mention scan over the held vocabularies (zero calls)
+[factory] F-29 mentions: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-29 mentions: done (12.9s; 1/1 complete by their records)
+[factory] F-31 rate: SKIPPED-BY-VALVE -- valves.rate is closed
+[factory] F-11 release: 1 of 1 item(s) pending; export; the cheap gates, all reported before the index (R-175); index, index-parity, anchors; diff, registers, seal
+[factory] F-11 release: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+stage 13 export: pass (6.32s)
+stage 14 conform: pass (5.91s)
+stage 15 dangling: pass (5.14s)
+stage 15 conformance: pass (5.26s)
+stage 15 presence: pass (2.45s)
+stage 15 halts: pass (1.27s)
+stage 15 text_held: pass (1.6s)
+stage 15 anchors-by-id: pass (1.29s)
+stage 15 index: pass (16.9s)
+stage 15 index-parity: pass (4.34s)
+stage 15 anchors: pass (11.58s)
+stage 15 claims-reachable: pass (7.06s)
+stage 16 host-posture: pass (0.93s)
+stage 16 diff: pass (2.07s)
+stage 17 registers: pass (1.19s)
+stage 18 seal: pass (2.08s)
+[factory] F-11 release: done (76.67s; 1/1 complete by their records)
+[factory] F-12 serve-check: 1 of 1 item(s) pending; one verb answered over the graph's declared read surface
+[factory] F-12 serve-check: network none; proxy variables -> http://127.0.0.1:9 (closed), NO_PROXY empty
+[factory] F-12 serve-check: done (3.26s; 1/1 complete by their records)
+[factory] F-13 questions: SKIPPED-BY-CONFIG -- this graph's factory control declares no `test:` block (the arms the demand test compares are the graph's to name)
+[factory] F-14 test: SKIPPED-BY-CONFIG -- this graph's factory control declares no `test:` block (the arms the demand test compares are the graph's to name)
+[factory] F-15 publish: SKIPPED-BY-VALVE -- valves.publish is closed
+squiddy build hb107_ports: 9 node(s) ran, rc=0, 146.9s. Record: /Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/unified-giggling-sutherland/graphs/hazbrief-corpus/evidence/hb107_ports/build_record.json
+EXIT 0

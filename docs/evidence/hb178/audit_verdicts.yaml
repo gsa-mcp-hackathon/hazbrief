@@ -1,0 +1,269 @@
+# HB-178 Part A item 1: the verdict on every line the audit's scan finds (tools/audit.py joins them; a hit with no
+# verdict, or a verdict with no hit, fails the scan). Each verdict says what the line is, where it is applied, whether
+# it was keyed on the brief's material before this task, whether the held corpus has a source for the other materials
+# the committed briefs use, and what it does now.
+#
+# The committed briefs' materials (docs/briefs/*/scenario.json): chlorine (UN1017, 15 briefs), anhydrous ammonia
+# (UN1005), propane (UN1075 and the unresolved "propane"), gasoline (UN1203), bromine trifluoride (UN1746), sodium
+# hydroxide (UN1823), refrigerated nitrogen (UN1977), lighters (UN1057), radioactive material (UN2915), ANFO, and two
+# with no material (placard 2.3, Guide 111) and the brush fire. The held ATSDR Medical Management Guidelines are
+# ammonia's, chlorine's, ethylene oxide's, hydrogen chloride's, hydrogen fluoride's and sulfur dioxide's
+# (the HB-178 evidence (held privately)).
+#
+# kind: applied (a rule, string, citation or default a brief prints or computes with); comment (code or configuration
+# commentary, not applied); keyed-data (a table row a material's own key selects); example (an input placeholder or
+# an example in a tool's description).
+verdicts:
+  - id: A01
+    file: packs/src/siting_rules.yaml
+    match: ["doc: atsdr-mmg-", "it names no number, so none was taken from the chlorine document"]
+    says: "the triage rule's medical-guidance sources: ATSDR's Medical Management Guidelines, by material"
+    kind: applied
+    applied_to: "every brief that sites points (14 committed briefs)"
+    keyed: "no: atsdr-mmg-chlorine pp. 8 and 10 was cited on every siting brief, the ammonia brief included (Issue 1f99f2f8)"
+    held_for_others: "ammonia's MMG is held (pp. 8 and 10 carry the same two sentences); ethylene oxide's, hydrogen chloride's, hydrogen fluoride's and sulfur dioxide's are held but used by no committed brief; none for propane, gasoline, bromine trifluoride, sodium hydroxide, nitrogen, lighters, radioactive material or ANFO"
+    now: "keyed: each MMG keyed by the UN numbers its page 1 prints (a receipt), its quotes re-read on their pages at build; a brief whose material has none prints 'no material-specific source is held' beside the general 29 CFR 1910.120 source. The criterion names no number, so none was taken from the chlorine document (no Issue)"
+  - id: A02
+    file: packs/src/siting_rules.yaml
+    match: ["ntsb-rar-05-04-graniteville", "drawn from one chlorine incident"]
+    says: "the staging rule's third source, NTSB RAR-05/04 p. 47, the Graniteville chlorine derailment"
+    kind: applied
+    applied_to: "every brief that sites points"
+    keyed: "no, and it did not say what incident it was drawn from"
+    held_for_others: "the rule (staging upwind, farther out) is not a material's; it stands with two general sources (NIMS doctrine p. 41; IS-200.C p. 91)"
+    now: "named: printed as 'a general source drawn from a chlorine incident', a note whose own receipt is the report's p. 4 ('breached, releasing chlorine gas')"
+  - id: A03
+    file: src/hazbrief/brief/orchestrator.yaml
+    match: ["checked: [\"The models image's engine reproduces"]
+    says: "SCICHEM's check case, HB-165's chlorine case, on section T45"
+    kind: applied
+    applied_to: "every brief whose SCICHEM cloud is drawn (13 dense briefs)"
+    keyed: "no; it named chlorine as 'the chlorine case', true but read on an ammonia brief as the engine's check of this release (Issue d16f6882)"
+    held_for_others: "no SCICHEM check case of another material exists in the image"
+    now: "named as another material's: 'HB-165's check case, a chlorine release'; trials.yaml lists it by material, so section T45 says which held check or trial is of the brief's own material, or that none is"
+  - id: A04
+    file: src/hazbrief/brief/orchestrator.yaml
+    match: ["not_checked: [\"A field trial of this release"]
+    says: "the engine's own pooled field evaluation (SCICHEM TD section 13.4: Burro, Coyote, Maplin Sands, Thorney Island, Desert Tortoise, Goldfish)"
+    kind: applied
+    applied_to: "every SCICHEM-drawn brief"
+    keyed: "no; a pooled evaluation over several materials, reported by the engine's authors"
+    held_for_others: "not per material: the documentation pools them with no subset"
+    now: "unchanged (HB-178 ADDENDUM-01 section 1: the line stays true and is not reworded); the trials of the brief's own material are trials.yaml's line in 'checked against'"
+  - id: A05
+    file: src/hazbrief/brief/agreement.yaml
+    match: ["jack_rabbit: "]
+    says: "Jack Rabbit II, three stable chlorine trials, both engines' models against observation (the pop-out and section T57)"
+    kind: applied
+    applied_to: "every dense brief with an agreement record"
+    keyed: "no, but it names its trials' material (chlorine)"
+    held_for_others: "Desert Tortoise 4 (ammonia) for the ammonia brief; none for the other committed materials"
+    now: "kept as a named-as-other-material reference on the agreement pop-out; trials.yaml quotes it as chlorine's matching trial in T7 and T45 of a chlorine brief only"
+  - id: A06
+    file: src/hazbrief/brief/orchestrator.yaml
+    match: ["jet: \"1991 EPA evaluation", "releases of ammonia (Desert Tortoise), liquefied natural gas (Burro)"]
+    says: "the dense-gas legend's 1991 sentence for a pressurised jet: SLAB on Desert Tortoise and Goldfish"
+    kind: applied
+    applied_to: "every brief whose SLAB layer is a pressurised jet (the chlorine and ammonia briefs), and its checklist row"
+    keyed: "no, and the trials' materials were not named (ammonia, hydrofluoric acid)"
+    held_for_others: "the 1991 evaluation's words: 'controlled releases of ammonia (Desert Tortoise), liquefied natural gas (Burro), and hydrofluoric acid (Goldfish)' (PDF p12)"
+    now: "named: '0/6 Desert Tortoise (ammonia), 0/7 Goldfish (hydrofluoric acid)', as the cryogenic pool's sentence already names Burro's LNG"
+  - id: A07
+    file: src/hazbrief/brief/orchestrator.yaml
+    match: ["cryogenic_pool: \"1991 EPA evaluation"]
+    says: "the 1991 sentence for a cryogenic pool: Burro, LNG"
+    kind: applied
+    applied_to: "a brief whose SLAB layer is a cryogenic pool"
+    keyed: "names its material already"
+    held_for_others: "n/a"
+    now: "unchanged"
+  - id: A08
+    file: src/hazbrief/brief/orchestrator.yaml
+    match: ["\"1017\": {doc: epa-rmp-oca-guidance-appendices-1999", "\"1005\": {doc: epa-rmp-oca-guidance-appendices-1999"]
+    says: "the RMP OCA gas factors, one row per UN number"
+    kind: keyed-data
+    applied_to: "the brief whose material has a row"
+    keyed: "yes, by UN number"
+    held_for_others: "rows held for the seed materials; others print that none is held"
+    now: "unchanged"
+  - id: A09
+    file: src/hazbrief/brief/orchestrator.yaml
+    match: ["model-test-input: \"model-test-input"]
+    says: "the source term's note on the model-test-input tier, naming chlorine's SLAB PR4 inputs"
+    kind: applied
+    applied_to: "a brief one of whose property values carries the model-test-input tier (only chlorine's do)"
+    keyed: "yes, through the property's tier"
+    held_for_others: "the other materials' values are reference tables (NIST), so the note does not print"
+    now: "unchanged"
+  - id: A10
+    file: src/hazbrief/brief/trials.yaml
+    match: ["name: chlorine", "name: ammonia", "title: \"Desert Tortoise", "title: \"Thorney Island", "title: \"Burro", "title: \"Jack Rabbit", "id: epa_1991_goldfish", "title: \"Goldfish", "class F chlorine release"]
+    says: "HB-178's table of trial, material and source key"
+    kind: keyed-data
+    applied_to: "sections T7 and T45 of every dense brief"
+    keyed: "new: keyed by UN number"
+    held_for_others: "for a material with no row, the section says none is held and names what is held for other materials"
+    now: "new"
+  - id: A11
+    file: packs/src/build_config.yaml
+    match: ["Ammonia (ppm)", "epa-aegl-results-ammonia", "Ammonia Formula", "Chlorine (ppm)", "epa-aegl-results-chlorine", "Chlorine Formula"]
+    says: "the AEGL and IDLH threshold receipts, one block per material"
+    kind: keyed-data
+    applied_to: "the materials pack's rows of those materials"
+    keyed: "yes, by CAS number"
+    held_for_others: "a block per material held"
+    now: "unchanged"
+  - id: A12
+    file: packs/src/build_config.yaml
+    match: ["chlorine trifluoride (UN 1749)"]
+    says: "release scenarios: why the RMP methodology's chemical-specific profile is not used (its example is chlorine trifluoride's)"
+    kind: comment
+    applied_to: "the pack's provenance only"
+    keyed: "n/a"
+    held_for_others: "n/a"
+    now: "unchanged"
+  - id: A13
+    file: packs/src/materials_properties.yaml
+    match: ["Chlorine", "chlorine"]
+    says: "chlorine's liquid properties from the SLAB guide's PR4 test case (the tier model-test-input)"
+    kind: keyed-data
+    applied_to: "chlorine's row only"
+    keyed: "yes"
+    held_for_others: "the other materials read NIST Fluid Systems"
+    now: "unchanged"
+  - id: A14
+    file: packs/src/build_config.yaml
+    match: ["the SLAB guide's chlorine test input"]
+    says: "a comment on HB-124's liquid properties"
+    kind: comment
+    applied_to: "none"
+    keyed: "n/a"
+    held_for_others: "n/a"
+    now: "unchanged"
+  - id: A15
+    file: src/hazbrief/brief/orchestrator.yaml
+    match: ["HB-131R measured the chlorine", "the pack's chlorine TBP", "PR4, the guide's chlorine case", "test cases of methane and ammonia", "Its chlorine case (INPR4)", "Burro behind the cryogenic pool", "Goldfish behind the pressurised jets", "for chlorine the held", "the night chlorine extent is a lower bound"]
+    says: "configuration comments on why a value is what it is"
+    kind: comment
+    applied_to: "none"
+    keyed: "n/a"
+    held_for_others: "n/a"
+    now: "unchanged"
+  - id: A16
+    file: src/hazbrief/brief/scichem.yaml
+    match: ["chlorine run took", "Desert Tortoise 4 it moved", "(Desert Tortoise, Goldfish) the same way"]
+    says: "SCICHEM configuration comments (run time, the cone switch's effect, the documented cone method)"
+    kind: comment
+    applied_to: "none (the cone method applies to every two-phase jet by its physics)"
+    keyed: "n/a"
+    held_for_others: "n/a"
+    now: "unchanged"
+  - id: A17
+    file: src/hazbrief/brief/materials.yaml
+    match: ["Ammonia, anhydrous"]
+    says: "an example of the ERG's name convention"
+    kind: comment
+    applied_to: "none"
+    keyed: "n/a"
+    held_for_others: "n/a"
+    now: "unchanged"
+  - id: A18
+    file: src/hazbrief/brief/dense_gas.py
+    match: ["PR4's chlorine jet", "no reference table for chlorine's liquid properties is held"]
+    says: "code comments and a docstring example"
+    kind: comment
+    applied_to: "none (the sentence is built from the material's own name and tiers)"
+    keyed: "n/a"
+    held_for_others: "n/a"
+    now: "unchanged"
+  - id: A19
+    file: src/hazbrief/brief/scichem.py
+    match: ["section 13.4, Desert Tortoise", "and Goldfish):"]
+    says: "the module docstring citing the documented cone method"
+    kind: comment
+    applied_to: "none"
+    keyed: "n/a"
+    held_for_others: "n/a"
+    now: "unchanged"
+  - id: A20
+    file: src/hazbrief/brief/source_term.py
+    match: ["e.g., LPG, ammonia"]
+    says: "a comment quoting the ERG container chart"
+    kind: comment
+    applied_to: "none"
+    keyed: "n/a"
+    held_for_others: "n/a"
+    now: "unchanged"
+  - id: A21
+    file: src/hazbrief/brief/web.py
+    match: ["chlorine leaking from a rail tank car"]
+    says: "the entry box's placeholder text"
+    kind: example
+    applied_to: "the entry page's empty input (no brief)"
+    keyed: "n/a"
+    held_for_others: "n/a"
+    now: "unchanged"
+  - id: A22
+    file: src/hazbrief/models.py
+    match: ["(Chlorine; ", "the SLAB user's guide's chlorine case"]
+    says: "a tool input's description example, and a comment on the model-test-input tier"
+    kind: example
+    applied_to: "the MCP tool's input description (frozen surface)"
+    keyed: "n/a"
+    held_for_others: "n/a"
+    now: "unchanged"
+  # HB-184 (DN-028 ADDENDUM-10 decision 5): each engine's conditions of use name the field trials each engine was
+  # compared with; the table is per engine, so every dense brief's TEVV page prints the same rows
+  - id: A23
+    file: src/hazbrief/brief/conditions.yaml
+    # HB-196 (HB-185's wording for T58's daytime rows): the rows name the same daytime trials by name
+    match: ["Desert Tortoise 4, Thorney Island 45 and 47", "Desert Tortoise 1 to 3 and Goldfish 1 to 3", "Burro 8 added", "at Desert Tortoise 4, 800 m", "Jack Rabbit II (three light-wind", "find: [\"Jack Rabbit\"]", "Desert Tortoise 4.24 to 1.78, Goldfish 2.24 to 2.12", "On Desert Tortoise the computed layer was convective", "find: [\"Desert Tortoise (ammonia)"]
+    says: "the conditions of use name the held field trials each dense engine was compared with (Volume II; Jack Rabbit II)"
+    kind: applied
+    applied_to: "every dense brief's TEVV sections T58 and T59 (13 dense briefs)"
+    keyed: "no, by design: a condition of use is the engine's, not the release's, so the trials are named whatever the brief's material"
+    held_for_others: "the trials are the held stable and daytime dense trials hazbrief's two-phase and gas paths take; no held trial is of the other materials' releases"
+    now: "named as the engine's comparisons, each with its evidence file and line; no row names the brief's own material"
+  # HB-192 (Part C item 8): the Benchmarks and requirement section names the field trials the accepted tools' published
+  # scores are on; every dense brief's TEVV page prints the same section
+  # HB-202 (item 6): HB-199 reworded the line to state hazbrief's status on Trial 7 (below, its route names no engine)
+  # and left this verdict's match on the words it replaced; the match and the status follow HB-199's wording
+  - id: A24
+    file: src/hazbrief/brief/orchestrator.yaml
+    match: ["No hazbrief run on Jack Rabbit II trials 1 or 6 is held"]
+    says: "the benchmark section's statement of hazbrief's status on the Jack Rabbit II trials the accepted tools' published scores are on: below on Trial 7, where its route's SCICHEM run is below the tools and its SLAB run above them (HB-206); no run held on trials 1 or 6"
+    kind: applied
+    applied_to: "every dense brief's TEVV section T60 (13 dense briefs)"
+    keyed: "no, by design: the benchmark is the published trials' (chlorine), named whatever the brief's material"
+    held_for_others: "no held benchmark publishes a score for the other materials' releases"
+    now: "named as the benchmark's trials, beside the published values, with hazbrief's status: below on Trial 7, the worse of its SCICHEM and SLAB runs by the one-minute rule (HB-206; before it no engine, HB-199), not yet evaluated on the others; the BENCH-8 and BENCH-9 lines say on the same line why, from the row's note (HB-205)"
+  # HB-207 (Part B items 3 to 7): the index candidates and the server's lookup name materials only as examples of a
+  # typed name the yellow index does not print; nothing is selected by them
+  - id: A25
+    file: src/hazbrief/index_candidates.py
+    match: ["A typed name the index does not print (\"ammonia\", \"liquid nitrogen\", \"clorine\") is", "so \"clorine\" reaches \"chlorine\"", "shortlist the form's model chooses from must hold every ammonia solution", "\"clorine\" to \"chlorine\" is 0.93, \"ammonia\" to \"ammonium\" 0.80"]
+    says: "the index candidates' docstring and constants: examples of typed names (ammonia, liquid nitrogen, a misspelt chlorine) and the measured spelling ratios behind the cutoff"
+    kind: example
+    applied_to: "no brief: commentary on a lookup over every row of the ERG yellow index"
+    keyed: "no: the candidates are computed from the typed words over the whole index; no material is named in the code's logic"
+    held_for_others: "not applicable: the yellow index is held for every ID number"
+    now: "examples only (HB-207); the entry form's test lines and the server's lookup test exercise them"
+  - id: A26
+    file: src/hazbrief/tools/assess_incident.py
+    match: ["A material name the yellow index does not print (\"ammonia\", \"liquid nitrogen\") is not"]
+    says: "the assess_incident module's docstring: examples of a name the index does not print, for which the error now carries index_candidates"
+    kind: example
+    applied_to: "no brief: a module docstring (the tool description is unchanged while the surface is frozen)"
+    keyed: "no"
+    held_for_others: "not applicable"
+    now: "an example only (HB-207 item 7)"
+  # HB-207 (Part C item 8): the entry form's shipment-profile cells name the example material each held table prints
+  - id: A27
+    file: src/hazbrief/brief/orchestrator.yaml
+    match: ["example: \"chlorine trifluoride (UN 1749)\""]
+    says: "the ERG 2024 methodology Table 2.3's footnote: its shipment profile's data are for chlorine trifluoride (UN 1749); the form's proposed quantity says the profile is an example"
+    kind: applied
+    applied_to: "every form-built brief whose material is a gas and whose container is a rail tank car or a highway tank truck (the proposed quantity's source line)"
+    keyed: "no: the profile cells are by container and storage state, never by material; the footnote is quoted so the reader sees the example the methodology prints"
+    held_for_others: "the methodology names chemical-specific profiles for chlorine, ammonia and others (PDF p. 20) but does not print them; only the two example tables are held"
+    now: "stated with every proposed quantity, beside 'proposed by the entry form, not this load's papers'"

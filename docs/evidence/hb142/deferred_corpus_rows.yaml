@@ -1,0 +1,22 @@
+# HB-142R items 3 and 4 (DN-019 ADDENDUM-02 section 2): the published point symbology for emergency management and
+# the traffic-control chapter the roadblock offset cites, asked of the allowlisted fetcher (scripts/fetch_allowlisted.py)
+# into the HB-142 evidence (held privately) with their own log (docs/evidence/hb142/fetch_log.jsonl).
+#
+# Not corpus rows yet: a corpus/sources.yaml row reds test_corpus_intake.py (a test held privately) until a corpus ingest rewrites
+# the corpus graph (held privately), which is outside this task's Touches (HB-100's and HB-143's precedent). These are the
+# drafted rows; Issue 1613ac6c carries the acquisition (rung 2, docs/evidence/hb142/acquisition.md) and the ingest.
+sources:
+  - doc_id: fgdc-hswg-point-symbology
+    title: "Homeland Security Mapping Standard: Point Symbology for Emergency Management (ANSI INCITS 415-2006), FGDC Homeland Security Working Group symbology"
+    publisher: FGDC Homeland Security Working Group; INCITS
+    edition: ANSI INCITS 415-2006
+    url: https://www.fgdc.gov/HSWG/index.html
+    format: html
+    plan: fetch
+  - doc_id: fhwa-mutcd-2009-chapter-6i
+    title: "Manual on Uniform Traffic Control Devices, 2009 edition, Part 6, Chapter 6I: Control of Traffic Through Traffic Incident Management Areas"
+    publisher: FHWA
+    edition: 2009 (with Revisions 1 and 2, 2012)
+    url: https://mutcd.fhwa.dot.gov/htm/2009/part6/part6i.htm
+    format: html
+    plan: fetch

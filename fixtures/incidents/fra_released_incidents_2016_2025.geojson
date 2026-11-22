@@ -1,0 +1,5648 @@
+{
+ "type": "FeatureCollection",
+ "properties": {
+  "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+  "dataset_name": "FRA Form 6180.54, Rail Equipment Accident/Incident Data (data.transportation.gov 85tf-25kj)",
+  "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+  "fields_doc_id": "dot-fra-form54-85tf-25kj-metadata",
+  "period": "2016-2025",
+  "unit": "incident (incidentkey); a release when any report's hazmatreleasedcars > 0",
+  "severity": [
+   {
+    "id": "deaths",
+    "field": "totalpersonskilled",
+    "words": "persons killed (any cause)"
+   },
+   {
+    "id": "injuries",
+    "field": "totalpersonsinjured",
+    "words": "persons injured (any cause)"
+   },
+   {
+    "id": "evacuation",
+    "field": "personsevacuated",
+    "words": "persons evacuated"
+   },
+   {
+    "id": "release",
+    "field": null,
+    "words": "release, none of the above reported"
+   }
+  ],
+  "built_by": "scripts/build_incident_map.py (HB-136R)"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -114.809694,
+     34.079556
+    ]
+   },
+   "properties": {
+    "incident_key": "ARZCARZ038733D202203",
+    "report_keys": [
+     "ARZCARZ038733D202203"
+    ],
+    "released_report_key": "ARZCARZ038733D202203",
+    "csv_lines": [
+     20632
+    ],
+    "date": "2022-03-24",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "Arizona & California Railroad Company",
+    "accident_type": "Derailment",
+    "state": "CA",
+    "county": "SAN BERNARDINO",
+    "station": "RICE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 657009,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=ARZCARZ038733D20220324",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -116.139336,
+     34.72398
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFCA0321102202103",
+    "report_keys": [
+     "BNSFCA0321102202103"
+    ],
+    "released_report_key": "BNSFCA0321102202103",
+    "csv_lines": [
+     20368
+    ],
+    "date": "2021-03-03",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "CA",
+    "county": "SAN BERNARDINO",
+    "station": "LUDLOW",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 4077637,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFCA032110220210303",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -117.373628,
+     34.197644
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFCA0818108201808",
+    "report_keys": [
+     "BNSFCA0818108201808"
+    ],
+    "released_report_key": "BNSFCA0818108201808",
+    "csv_lines": [
+     20316
+    ],
+    "date": "2018-08-21",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "CA",
+    "county": "SAN BERNARDINO",
+    "station": "SAN BERNARDINO",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 4034947,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFCA081810820180821",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -117.036198,
+     34.903034
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFCA0925111202509",
+    "report_keys": [
+     "BNSFCA0925111202509"
+    ],
+    "released_report_key": "BNSFCA0925111202509",
+    "csv_lines": [
+     26341
+    ],
+    "date": "2025-09-13",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "CA",
+    "county": "SAN BERNARDINO",
+    "station": "BARSTOW",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 299265,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFCA092511120250913",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -88.079567,
+     41.546215
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFCH0219107201902",
+    "report_keys": [
+     "BNSFCH0219107201902"
+    ],
+    "released_report_key": "BNSFCH0219107201902",
+    "csv_lines": [
+     24416
+    ],
+    "date": "2019-02-08",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "IL",
+    "county": "WILL",
+    "station": "JOLIET",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 268968,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFCH021910720190208",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -96.755025,
+     40.807312
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFHL0724120202407",
+    "report_keys": [
+     "BNSFHL0724120202407"
+    ],
+    "released_report_key": "BNSFHL0724120202407",
+    "csv_lines": [
+     13103
+    ],
+    "date": "2024-07-23",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "NE",
+    "county": "LANCASTER",
+    "station": "LINCOLN",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 236450,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFHL072412020240723",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -101.334873,
+     35.360988
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFKS0616108201606",
+    "report_keys": [
+     "BNSFKS0616108201606",
+     "BNSFKS0616108201606"
+    ],
+    "released_report_key": "BNSFKS0616108201606",
+    "csv_lines": [
+     4724,
+     4761
+    ],
+    "date": "2016-06-28",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Head on collision",
+    "state": "TX",
+    "county": "CARSON",
+    "station": "PANHANDLE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 3,
+    "persons_injured": 1,
+    "damage_usd": 15828190,
+    "severity": "deaths",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFKS061610820160628",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -101.398009,
+     35.331589
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFKS0718110201807",
+    "report_keys": [
+     "BNSFKS0718110201807"
+    ],
+    "released_report_key": "BNSFKS0718110201807",
+    "csv_lines": [
+     10410
+    ],
+    "date": "2018-07-17",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "CARSON",
+    "station": "PANHANDLE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 553403,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFKS071811020180717",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.399961,
+     36.438983
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFKS0724105202407",
+    "report_keys": [
+     "BNSFKS0724105202407"
+    ],
+    "released_report_key": "BNSFKS0724105202407",
+    "csv_lines": [
+     7025
+    ],
+    "date": "2024-07-11",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "OK",
+    "county": "WOODWARD",
+    "station": "WOODWARD",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2084697,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFKS072410520240711",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.258125,
+     38.115468
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFKS0819109201908",
+    "report_keys": [
+     "BNSFKS0819109201908",
+     "BNSFKS0819109201908"
+    ],
+    "released_report_key": "BNSFKS0819109201908",
+    "csv_lines": [
+     24926,
+     25450
+    ],
+    "date": "2019-08-18",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "KS",
+    "county": "HARVEY",
+    "station": "WALTON",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 3389552,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFKS081910920190818",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -101.828799,
+     35.200443
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFKS0925102202509",
+    "report_keys": [
+     "BNSFKS0925102202509",
+     "BNSFKS0925102202509"
+    ],
+    "released_report_key": "BNSFKS0925102202509",
+    "csv_lines": [
+     10792,
+     10793
+    ],
+    "date": "2025-09-04",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Side collision",
+    "state": "TX",
+    "county": "POTTER",
+    "station": "AMARILLO",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 530009,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFKS092510220250904",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.639699,
+     48.916498
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFNW1220113202012",
+    "report_keys": [
+     "BNSFNW1220113202012"
+    ],
+    "released_report_key": "BNSFNW1220113202012",
+    "csv_lines": [
+     9258
+    ],
+    "date": "2020-12-22",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "WA",
+    "county": "WHATCOM",
+    "station": "CUSTER",
+    "hazmat_cars_released": 3,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1199108,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFNW122011320201222",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -106.952701,
+     44.817651
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFPR0423115202304",
+    "report_keys": [
+     "BNSFPR0423115202304"
+    ],
+    "released_report_key": "BNSFPR0423115202304",
+    "csv_lines": [
+     1226
+    ],
+    "date": "2023-04-30",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "WY",
+    "county": "SHERIDAN",
+    "station": "SHERIDAN",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 184848,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFPR042311520230430",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -104.987819,
+     39.77304
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFPR0720102202007",
+    "report_keys": [
+     "BNSFPR0720102202007",
+     "UP0720GP033202007"
+    ],
+    "released_report_key": "UP0720GP033202007",
+    "csv_lines": [
+     20964,
+     20974
+    ],
+    "date": "2020-07-09",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "CO",
+    "county": "DENVER",
+    "station": "COMMERCE CITY",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 690955,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0720GP03320200709",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -108.891716,
+     45.289013
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFPR0922109202209",
+    "report_keys": [
+     "BNSFPR0922109202209"
+    ],
+    "released_report_key": "BNSFPR0922109202209",
+    "csv_lines": [
+     7407
+    ],
+    "date": "2022-09-30",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "MT",
+    "county": "CARBON",
+    "station": "BRIDGER",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1657584,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFPR092210920220930",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.16284,
+     34.133441
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFRD0122107202201",
+    "report_keys": [
+     "BNSFRD0122107202201"
+    ],
+    "released_report_key": "BNSFRD0122107202201",
+    "csv_lines": [
+     10139
+    ],
+    "date": "2022-01-08",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "WILBARGER",
+    "station": "OKLAUNION",
+    "hazmat_cars_released": 28,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 4786675,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFRD012210720220108",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -96.930277,
+     30.830491
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFRD0221204202102",
+    "report_keys": [
+     "BNSFRD0221204202102"
+    ],
+    "released_report_key": "BNSFRD0221204202102",
+    "csv_lines": [
+     10096
+    ],
+    "date": "2021-02-23",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Hwy-rail crossing",
+    "state": "TX",
+    "county": "MILAM",
+    "station": "CAMERON",
+    "hazmat_cars_released": 5,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1161132,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFRD022120420210223",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.171975,
+     34.642453
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFRD0620109202006",
+    "report_keys": [
+     "BNSFRD0620109202006"
+    ],
+    "released_report_key": "BNSFRD0620109202006",
+    "csv_lines": [
+     5014
+    ],
+    "date": "2020-06-13",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "OK",
+    "county": "GARVIN",
+    "station": "WYNNEWOOD",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1176670,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFRD062010920200613",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -102.461743,
+     34.021209
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFRD0723207202307",
+    "report_keys": [
+     "BNSFRD0723207202307"
+    ],
+    "released_report_key": "BNSFRD0723207202307",
+    "csv_lines": [
+     2254
+    ],
+    "date": "2023-07-31",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Hwy-rail crossing",
+    "state": "TX",
+    "county": "LAMB",
+    "station": "SUDAN",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 1,
+    "persons_injured": 0,
+    "damage_usd": 1065265,
+    "severity": "deaths",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFRD072320720230731",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -94.112408,
+     31.588315
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFRD0817205201708",
+    "report_keys": [
+     "BNSFRD0817205201708"
+    ],
+    "released_report_key": "BNSFRD0817205201708",
+    "csv_lines": [
+     4451
+    ],
+    "date": "2017-08-21",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Hwy-rail crossing",
+    "state": "TX",
+    "county": "SAN AUGUSTINE",
+    "station": "SAN AUGUSTINE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 1,
+    "damage_usd": 1365942,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFRD081720520170821",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -98.505124,
+     31.362344
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFRD1221104202112",
+    "report_keys": [
+     "BNSFRD1221104202112"
+    ],
+    "released_report_key": "BNSFRD1221104202112",
+    "csv_lines": [
+     1815
+    ],
+    "date": "2021-12-06",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "MILLS",
+    "station": "GOLDTHWAITE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1017331,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFRD122110420211206",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -109.040431,
+     35.370084
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFSW0424111202404",
+    "report_keys": [
+     "BNSFSW0424111202404"
+    ],
+    "released_report_key": "BNSFSW0424111202404",
+    "csv_lines": [
+     26636
+    ],
+    "date": "2024-04-26",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "NM",
+    "county": "MCKINLEY",
+    "station": "MANUELITO",
+    "hazmat_cars_released": 6,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 4756995,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFSW042411120240426",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -108.799972,
+     35.51207
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFSW0718101201807",
+    "report_keys": [
+     "BNSFSW0718101201807"
+    ],
+    "released_report_key": "BNSFSW0718101201807",
+    "csv_lines": [
+     7795
+    ],
+    "date": "2018-07-03",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "NM",
+    "county": "MCKINLEY",
+    "station": "GALLUP",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 50974,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFSW071810120180703",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -95.245071,
+     45.013759
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFTC0323144202303",
+    "report_keys": [
+     "BNSFTC0323144202303"
+    ],
+    "released_report_key": "BNSFTC0323144202303",
+    "csv_lines": [
+     18311
+    ],
+    "date": "2023-03-30",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "MN",
+    "county": "KANDIYOHI",
+    "station": "RAYMOND",
+    "hazmat_cars_released": 5,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2473074,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFTC032314420230330",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -98.494919,
+     44.799673
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFTC0616108201606",
+    "report_keys": [
+     "BNSFTC0616108201606"
+    ],
+    "released_report_key": "BNSFTC0616108201606",
+    "csv_lines": [
+     4313
+    ],
+    "date": "2016-06-09",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "SD",
+    "county": "SPINK",
+    "station": "TULARE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 499488,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFTC061610820160609",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -96.234582,
+     43.258377
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFTC0618105201806",
+    "report_keys": [
+     "BNSFTC0618105201806"
+    ],
+    "released_report_key": "BNSFTC0618105201806",
+    "csv_lines": [
+     23641
+    ],
+    "date": "2018-06-22",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "IA",
+    "county": "LYON",
+    "station": "DOON",
+    "hazmat_cars_released": 10,
+    "persons_evacuated": 12,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2440369,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFTC061810520180622",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -92.108293,
+     46.637479
+    ]
+   },
+   "properties": {
+    "incident_key": "BNSFTC1016112201610",
+    "report_keys": [
+     "BNSFTC1016112201610",
+     "UP1016TC008201610"
+    ],
+    "released_report_key": "UP1016TC008201610",
+    "csv_lines": [
+     8972,
+     9126
+    ],
+    "date": "2016-10-24",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "WI",
+    "county": "DOUGLAS",
+    "station": "SUPERIOR",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 80556,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1016TC00820161024",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -87.77611,
+     41.7675
+    ]
+   },
+   "properties": {
+    "incident_key": "BRC14609202302",
+    "report_keys": [
+     "BRC14609202302"
+    ],
+    "released_report_key": "BRC14609202302",
+    "csv_lines": [
+     15023
+    ],
+    "date": "2023-02-24",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "Belt Railway Company Of Chicago",
+    "accident_type": "Broken train collision",
+    "state": "IL",
+    "county": "COOK",
+    "station": "BEDFORD PARK",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 458807,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BRC1460920230224",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.375635,
+     25.957407
+    ]
+   },
+   "properties": {
+    "incident_key": "BRGBRG223198202210",
+    "report_keys": [
+     "BRGBRG223198202210"
+    ],
+    "released_report_key": "BRGBRG223198202210",
+    "csv_lines": [
+     6780
+    ],
+    "date": "2022-10-01",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "BROWNSVILLE & RIO GRANDE INTERNATIONAL RAILROAD",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "CAMERON",
+    "station": "BROWNSVILLE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 72901,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BRGBRG22319820221001",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.762369,
+     39.171044
+    ]
+   },
+   "properties": {
+    "incident_key": "CINDCIN942624H202409",
+    "report_keys": [
+     "CINDCIN942624H202409"
+    ],
+    "released_report_key": "CINDCIN942624H202409",
+    "csv_lines": [
+     12377
+    ],
+    "date": "2024-09-24",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "THE CENTRAL RAILROAD COMPANY OF INDIANA",
+    "accident_type": "Fire/violent rupture",
+    "state": "OH",
+    "county": "HAMILTON",
+    "station": "CLEVES",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 46001,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CINDCIN942624H20240924",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.296947,
+     33.830663
+    ]
+   },
+   "properties": {
+    "incident_key": "CNRW1726969202507",
+    "report_keys": [
+     "CNRW1726969202507"
+    ],
+    "released_report_key": "CNRW1726969202507",
+    "csv_lines": [
+     13967
+    ],
+    "date": "2025-07-05",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "CANADIAN NATIONAL RAILWAY",
+    "accident_type": "Derailment",
+    "state": "MS",
+    "county": "TALLAHATCHIE",
+    "station": "GLENDORA",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 120,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2537662,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CNRW172696920250705",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.945598,
+     42.455978
+    ]
+   },
+   "properties": {
+    "incident_key": "CNRW1731224202510",
+    "report_keys": [
+     "CNRW1731224202510"
+    ],
+    "released_report_key": "CNRW1731224202510",
+    "csv_lines": [
+     15890
+    ],
+    "date": "2025-10-09",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "CANADIAN NATIONAL RAILWAY",
+    "accident_type": "Derailment",
+    "state": "IL",
+    "county": "JO DAVIESS",
+    "station": "NORA",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 25,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 3830389,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CNRW173122420251009",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -91.27495,
+     43.65296
+    ]
+   },
+   "properties": {
+    "incident_key": "CP1000338729201601",
+    "report_keys": [
+     "CP1000338729201601"
+    ],
+    "released_report_key": "CP1000338729201601",
+    "csv_lines": [
+     14218
+    ],
+    "date": "2016-01-26",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "Canadian Pacific Railway Company",
+    "accident_type": "Derailment",
+    "state": "MN",
+    "county": "HOUSTON",
+    "station": "BROWNSVILLE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 997953,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CP100033872920160126",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.126223,
+     47.44972
+    ]
+   },
+   "properties": {
+    "incident_key": "CP1000947670201903",
+    "report_keys": [
+     "CP1000947670201903"
+    ],
+    "released_report_key": "CP1000947670201903",
+    "csv_lines": [
+     3335
+    ],
+    "date": "2019-03-02",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Canadian Pacific Railway Company",
+    "accident_type": "Derailment",
+    "state": "ND",
+    "county": "FOSTER",
+    "station": "CARRINGTON",
+    "hazmat_cars_released": 3,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 3115743,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CP100094767020190302",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.343102,
+     41.598277
+    ]
+   },
+   "properties": {
+    "incident_key": "CP1001148695202001",
+    "report_keys": [
+     "CP1001148695202001"
+    ],
+    "released_report_key": "CP1001148695202001",
+    "csv_lines": [
+     23565
+    ],
+    "date": "2020-01-03",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Canadian Pacific Railway Company",
+    "accident_type": "Derailment",
+    "state": "IA",
+    "county": "SCOTT",
+    "station": "LE CLAIRE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 787975,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CP100114869520200103",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -92.383167,
+     43.03539
+    ]
+   },
+   "properties": {
+    "incident_key": "CP1001554059202108",
+    "report_keys": [
+     "CP1001554059202108"
+    ],
+    "released_report_key": "CP1001554059202108",
+    "csv_lines": [
+     23517
+    ],
+    "date": "2021-08-28",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "Canadian Pacific Railway Company",
+    "accident_type": "Derailment",
+    "state": "IA",
+    "county": "CHICKASAW",
+    "station": "NEW HAMPTON",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 36,
+    "persons_killed": 0,
+    "persons_injured": 2,
+    "damage_usd": 8703335,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CP100155405920210828",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -88.864999,
+     43.305878
+    ]
+   },
+   "properties": {
+    "incident_key": "CPKC1002438614202508",
+    "report_keys": [
+     "CPKC1002438614202508"
+    ],
+    "released_report_key": "CPKC1002438614202508",
+    "csv_lines": [
+     9044
+    ],
+    "date": "2025-08-15",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "CANADIAN PACIFIC KANSAS CITY",
+    "accident_type": "Derailment",
+    "state": "WI",
+    "county": "DODGE",
+    "station": "WATERTOWN",
+    "hazmat_cars_released": 4,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 3648630,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CPKC100243861420250815",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.327526,
+     39.759791
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000156963201602",
+    "report_keys": [
+     "CSX000156963201602"
+    ],
+    "released_report_key": "CSX000156963201602",
+    "csv_lines": [
+     18089
+    ],
+    "date": "2016-02-09",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "IN",
+    "county": "HENDRICKS",
+    "station": "AVON",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 252925,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00015696320160209",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.993878,
+     38.929578
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000159422201605",
+    "report_keys": [
+     "CSX000159422201605"
+    ],
+    "released_report_key": "CSX000159422201605",
+    "csv_lines": [
+     21409
+    ],
+    "date": "2016-05-01",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "DC",
+    "county": "WASHINGTON, DC",
+    "station": "WASHINGTON DC",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 908859,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00015942220160501",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.72203,
+     39.826327
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000170611201708",
+    "report_keys": [
+     "CSX000170611201708"
+    ],
+    "released_report_key": "CSX000170611201708",
+    "csv_lines": [
+     6915
+    ],
+    "date": "2017-08-02",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "PA",
+    "county": "BEDFORD",
+    "station": "HYNDMAN",
+    "hazmat_cars_released": 3,
+    "persons_evacuated": 1000,
+    "persons_killed": 0,
+    "persons_injured": 6,
+    "damage_usd": 2205216,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00017061120170802",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.608817,
+     32.852115
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000172715201711",
+    "report_keys": [
+     "CSX000172715201711"
+    ],
+    "released_report_key": "CSX000172715201711",
+    "csv_lines": [
+     22734
+    ],
+    "date": "2017-11-07",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "GA",
+    "county": "MERIWETHER",
+    "station": "MANCHESTER",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 71837,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00017271520171107",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.033728,
+     28.130937
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000173062201711",
+    "report_keys": [
+     "CSX000173062201711"
+    ],
+    "released_report_key": "CSX000173062201711",
+    "csv_lines": [
+     22204
+    ],
+    "date": "2017-11-27",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "FL",
+    "county": "POLK",
+    "station": "KATHLEEN",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 588871,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00017306220171127",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.790089,
+     33.543607
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000173843201801",
+    "report_keys": [
+     "CSX000173843201801"
+    ],
+    "released_report_key": "CSX000173843201801",
+    "csv_lines": [
+     782
+    ],
+    "date": "2018-01-05",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "AL",
+    "county": "JEFFERSON",
+    "station": "BIRMINGHAM",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 345505,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00017384320180105",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.591416,
+     30.582315
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000174412201801",
+    "report_keys": [
+     "CSX000174412201801"
+    ],
+    "released_report_key": "CSX000174412201801",
+    "csv_lines": [
+     22185
+    ],
+    "date": "2018-01-30",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "FL",
+    "county": "GADSDEN",
+    "station": "QUINCY",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 421349,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00017441220180130",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -87.575316,
+     38.320793
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000177060201806",
+    "report_keys": [
+     "CSX000177060201806",
+     "CSX000177060201806"
+    ],
+    "released_report_key": "CSX000177060201806",
+    "csv_lines": [
+     23705,
+     24834
+    ],
+    "date": "2018-06-17",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "IN",
+    "county": "GIBSON",
+    "station": "PRINCETON",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 32,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1803908,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00017706020180617",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.770737,
+     36.112142
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000177731201807",
+    "report_keys": [
+     "CSX000177731201807",
+     "CSX000177731201807"
+    ],
+    "released_report_key": "CSX000177731201807",
+    "csv_lines": [
+     4869,
+     6552
+    ],
+    "date": "2018-07-21",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Side collision",
+    "state": "TN",
+    "county": "DAVIDSON",
+    "station": "NASHVILLE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 198007,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00017773120180721",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.186736,
+     34.176776
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000178380201808",
+    "report_keys": [
+     "CSX000178380201808"
+    ],
+    "released_report_key": "CSX000178380201808",
+    "csv_lines": [
+     11624
+    ],
+    "date": "2018-08-25",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "SC",
+    "county": "GREENWOOD",
+    "station": "GREENWOOD",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 13,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 76618,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00017838020180825",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.005269,
+     35.857598
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000180519201812",
+    "report_keys": [
+     "CSX000180519201812"
+    ],
+    "released_report_key": "CSX000180519201812",
+    "csv_lines": [
+     18554
+    ],
+    "date": "2018-12-30",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "NC",
+    "county": "MCDOWELL",
+    "station": "MARION",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 42968,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00018051920181230",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.644661,
+     39.264326
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000182501201904",
+    "report_keys": [
+     "CSX000182501201904"
+    ],
+    "released_report_key": "CSX000182501201904",
+    "csv_lines": [
+     7488
+    ],
+    "date": "2019-04-21",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "MD",
+    "county": "BALTIMORE CITY",
+    "station": "BALTIMORE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 142770,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00018250120190421",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.396022,
+     37.338256
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000188437202002",
+    "report_keys": [
+     "CSX000188437202002"
+    ],
+    "released_report_key": "CSX000188437202002",
+    "csv_lines": [
+     6182
+    ],
+    "date": "2020-02-13",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "KY",
+    "county": "PIKE",
+    "station": "ELKHORN CITY",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 15,
+    "persons_killed": 0,
+    "persons_injured": 2,
+    "damage_usd": 2291431,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00018843720200213",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.017204,
+     31.485297
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000190672202006",
+    "report_keys": [
+     "CSX000190672202006"
+    ],
+    "released_report_key": "CSX000190672202006",
+    "csv_lines": [
+     23064
+    ],
+    "date": "2020-06-06",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "GA",
+    "county": "WAYNE",
+    "station": "SCREVEN",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 40,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 343859,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00019067220200606",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.762502,
+     34.198275
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000193998202011",
+    "report_keys": [
+     "CSX000193998202011",
+     "CSX000193998202011"
+    ],
+    "released_report_key": "CSX000193998202011",
+    "csv_lines": [
+     11636,
+     11637
+    ],
+    "date": "2020-11-23",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Rear end collision",
+    "state": "SC",
+    "county": "FLORENCE",
+    "station": "FLORENCE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 29868,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00019399820201123",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.165093,
+     34.188497
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000194728202012",
+    "report_keys": [
+     "CSX000194728202012"
+    ],
+    "released_report_key": "CSX000194728202012",
+    "csv_lines": [
+     15165
+    ],
+    "date": "2020-12-30",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "SC",
+    "county": "GREENWOOD",
+    "station": "GREENWOOD",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 46058,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00019472820201230",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.238134,
+     37.317538
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000214658202311",
+    "report_keys": [
+     "CSX000214658202311"
+    ],
+    "released_report_key": "CSX000214658202311",
+    "csv_lines": [
+     3829
+    ],
+    "date": "2023-11-22",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "KY",
+    "county": "ROCKCASTLE",
+    "station": "LIVINGSTON",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 100,
+    "persons_killed": 0,
+    "persons_injured": 20,
+    "damage_usd": 2040879,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00021465820231122",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.353557,
+     31.213509
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000223330202502",
+    "report_keys": [
+     "CSX000223330202502",
+     "CSX000223330202502"
+    ],
+    "released_report_key": "CSX000223330202502",
+    "csv_lines": [
+     22538,
+     22539
+    ],
+    "date": "2025-02-24",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Other impacts",
+    "state": "GA",
+    "county": "WARE",
+    "station": "WAYCROSS",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 167983,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00022333020250224",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -85.749136,
+     38.16074
+    ]
+   },
+   "properties": {
+    "incident_key": "CSX000226853202508",
+    "report_keys": [
+     "CSX000226853202508"
+    ],
+    "released_report_key": "CSX000226853202508",
+    "csv_lines": [
+     7525
+    ],
+    "date": "2025-08-30",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "KY",
+    "county": "JEFFERSON",
+    "station": "LOUISVILLE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 280181,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00022685320250830",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.47632,
+     43.4873
+    ]
+   },
+   "properties": {
+    "incident_key": "GRS20220110N1202201",
+    "report_keys": [
+     "GRS20220110N1202201"
+    ],
+    "released_report_key": "GRS20220110N1202201",
+    "csv_lines": [
+     14976
+    ],
+    "date": "2022-01-10",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "Pan Am Railways/Guilford System",
+    "accident_type": "Derailment",
+    "state": "ME",
+    "county": "YORK",
+    "station": "BIDDEFORD",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 77123,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=GRS20220110N120220110",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.92763,
+     34.461958
+    ]
+   },
+   "properties": {
+    "incident_key": "GRYR01202507",
+    "report_keys": [
+     "CNRW1727131202507",
+     "GRYR01202507"
+    ],
+    "released_report_key": "CNRW1727131202507",
+    "csv_lines": [
+     5807,
+     14226
+    ],
+    "date": "2025-07-06",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "CANADIAN NATIONAL RAILWAY",
+    "accident_type": "Derailment",
+    "state": "MS",
+    "county": "PANOLA",
+    "station": "SARDIS",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 200,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1722124,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CNRW172713120250706",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.74295,
+     30.023624
+    ]
+   },
+   "properties": {
+    "incident_key": "IC1117681202211",
+    "report_keys": [
+     "IC1117681202211"
+    ],
+    "released_report_key": "IC1117681202211",
+    "csv_lines": [
+     15904
+    ],
+    "date": "2022-11-02",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "Illinois Central Railroad Company",
+    "accident_type": "Derailment",
+    "state": "LA",
+    "county": "ST JAMES",
+    "station": "PAULINA",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 500,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 617627,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=IC111768120221102",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.208319,
+     33.650755
+    ]
+   },
+   "properties": {
+    "incident_key": "IC921033201704",
+    "report_keys": [
+     "IC921033201704",
+     "IC921033201704"
+    ],
+    "released_report_key": "IC921033201704",
+    "csv_lines": [
+     25256,
+     25381
+    ],
+    "date": "2017-04-30",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "Illinois Central Railroad Company",
+    "accident_type": "Rear end collision",
+    "state": "MS",
+    "county": "LEFLORE",
+    "station": "MONEY",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 1,
+    "damage_usd": 4416059,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=IC92103320170430",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.964198,
+     30.167011
+    ]
+   },
+   "properties": {
+    "incident_key": "IC924910201706",
+    "report_keys": [
+     "IC924910201706"
+    ],
+    "released_report_key": "IC924910201706",
+    "csv_lines": [
+     5634
+    ],
+    "date": "2017-06-05",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "Illinois Central Railroad Company",
+    "accident_type": "Derailment",
+    "state": "LA",
+    "county": "ASCENSION",
+    "station": "GEISMAR",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 431090,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=IC92491020170605",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.568967,
+     35.048146
+    ]
+   },
+   "properties": {
+    "incident_key": "INDYINDUSTRY202010",
+    "report_keys": [
+     "NS139496202010"
+    ],
+    "released_report_key": "NS139496202010",
+    "csv_lines": [
+     4800
+    ],
+    "date": "2020-10-21",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Other impacts",
+    "state": "TN",
+    "county": "FAYETTE",
+    "station": "ROSSVILLE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 17119,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS13949620201021",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.391851,
+     27.499951
+    ]
+   },
+   "properties": {
+    "incident_key": "KCS19091001201909",
+    "report_keys": [
+     "KCS19091001201909"
+    ],
+    "released_report_key": "KCS19091001201909",
+    "csv_lines": [
+     6754
+    ],
+    "date": "2019-09-10",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Kansas City Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "WEBB",
+    "station": "LAREDO",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 260726,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=KCS1909100120190910",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -93.867046,
+     30.202878
+    ]
+   },
+   "properties": {
+    "incident_key": "KCS20102903202010",
+    "report_keys": [
+     "KCS20102903202010"
+    ],
+    "released_report_key": "KCS20102903202010",
+    "csv_lines": [
+     10099
+    ],
+    "date": "2020-10-29",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Kansas City Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "ORANGE",
+    "station": "MAURICEVILLE",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 1000,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2157130,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=KCS2010290320201029",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -109.438329,
+     45.686944
+    ]
+   },
+   "properties": {
+    "incident_key": "MRL2023059202306",
+    "report_keys": [
+     "MRL2023059202306"
+    ],
+    "released_report_key": "MRL2023059202306",
+    "csv_lines": [
+     7420
+    ],
+    "date": "2023-06-24",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "Montana Rail Link",
+    "accident_type": "Derailment",
+    "state": "MT",
+    "county": "STILLWATER",
+    "station": "REEDPOINT",
+    "hazmat_cars_released": 10,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 0,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=MRL202305920230624",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.624,
+     41.455
+    ]
+   },
+   "properties": {
+    "incident_key": "NCRCOP052618NC201805",
+    "report_keys": [
+     "NCRCOP052618NC201805"
+    ],
+    "released_report_key": "NCRCOP052618NC201805",
+    "csv_lines": [
+     13942
+    ],
+    "date": "2018-05-26",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "Nebraska Central Railroad",
+    "accident_type": "Derailment",
+    "state": "NE",
+    "county": "PLATTE",
+    "station": "GENOA",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1005966,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NCRCOP052618NC20180526",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -83.622785,
+     32.813658
+    ]
+   },
+   "properties": {
+    "incident_key": "NS119221201602",
+    "report_keys": [
+     "NS119221201602",
+     "NS119221201602"
+    ],
+    "released_report_key": "NS119221201602",
+    "csv_lines": [
+     22334,
+     22335
+    ],
+    "date": "2016-02-03",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "GA",
+    "county": "BIBB",
+    "station": "MACON",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 110798,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS11922120160203",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.543969,
+     39.143378
+    ]
+   },
+   "properties": {
+    "incident_key": "NS119302201602",
+    "report_keys": [
+     "CSX000174443201602",
+     "NS119302201602"
+    ],
+    "released_report_key": "NS119302201602",
+    "csv_lines": [
+     7138,
+     12503
+    ],
+    "date": "2016-02-10",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "OH",
+    "county": "HAMILTON",
+    "station": "CINCINNATI",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 195704,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS11930220160210",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.707734,
+     42.265734
+    ]
+   },
+   "properties": {
+    "incident_key": "NS119566201603",
+    "report_keys": [
+     "NS119566201603"
+    ],
+    "released_report_key": "NS119566201603",
+    "csv_lines": [
+     18999
+    ],
+    "date": "2016-03-01",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "NY",
+    "county": "CHAUTAUQUA",
+    "station": "RIPLEY",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 45,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 707053,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS11956620160301",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.313794,
+     40.818952
+    ]
+   },
+   "properties": {
+    "incident_key": "NS122859201611",
+    "report_keys": [
+     "NS122859201611"
+    ],
+    "released_report_key": "NS122859201611",
+    "csv_lines": [
+     5179
+    ],
+    "date": "2016-11-22",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "OH",
+    "county": "STARK",
+    "station": "EAST CANTON",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 198130,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS12285920161122",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.070816,
+     38.841166
+    ]
+   },
+   "properties": {
+    "incident_key": "NS123350201612",
+    "report_keys": [
+     "NS123350201612"
+    ],
+    "released_report_key": "NS123350201612",
+    "csv_lines": [
+     17799
+    ],
+    "date": "2016-12-29",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "IL",
+    "county": "MADISON",
+    "station": "ROXANA",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 429070,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS12335020161229",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.923081,
+     40.34578
+    ]
+   },
+   "properties": {
+    "incident_key": "NS124199201703",
+    "report_keys": [
+     "NS124199201703"
+    ],
+    "released_report_key": "NS124199201703",
+    "csv_lines": [
+     7920
+    ],
+    "date": "2017-03-05",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "PA",
+    "county": "BERKS",
+    "station": "READING",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 18700,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS12419920170305",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.222794,
+     33.595938
+    ]
+   },
+   "properties": {
+    "incident_key": "NS125135201705",
+    "report_keys": [
+     "NS125135201705"
+    ],
+    "released_report_key": "NS125135201705",
+    "csv_lines": [
+     787
+    ],
+    "date": "2017-05-19",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "AL",
+    "county": "ST CLAIR",
+    "station": "RIVERSIDE",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1638148,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS12513520170519",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -85.266798,
+     35.060736
+    ]
+   },
+   "properties": {
+    "incident_key": "NS128026201801",
+    "report_keys": [
+     "NS128026201801",
+     "NS128026201801"
+    ],
+    "released_report_key": "NS128026201801",
+    "csv_lines": [
+     11387,
+     11388
+    ],
+    "date": "2018-01-06",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "TN",
+    "county": "HAMILTON",
+    "station": "CHATTANOOGA",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 1,
+    "damage_usd": 86775,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS12802620180106",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -83.817278,
+     36.033005
+    ]
+   },
+   "properties": {
+    "incident_key": "NS128159201801",
+    "report_keys": [
+     "NS128159201801"
+    ],
+    "released_report_key": "NS128159201801",
+    "csv_lines": [
+     11386
+    ],
+    "date": "2018-01-16",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "TN",
+    "county": "KNOX",
+    "station": "MASCOT",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 143620,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS12815920180116",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.246259,
+     40.647497
+    ]
+   },
+   "properties": {
+    "incident_key": "NS128387201802",
+    "report_keys": [
+     "NS128387201802"
+    ],
+    "released_report_key": "NS128387201802",
+    "csv_lines": [
+     7107
+    ],
+    "date": "2018-02-03",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "OH",
+    "county": "ASHLAND",
+    "station": "LOUDONVILLE",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 635857,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS12838720180203",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -77.441808,
+     37.188063
+    ]
+   },
+   "properties": {
+    "incident_key": "NS131653201811",
+    "report_keys": [
+     "NS131653201811"
+    ],
+    "released_report_key": "NS131653201811",
+    "csv_lines": [
+     1464
+    ],
+    "date": "2018-11-13",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "VA",
+    "county": "PETERSBURG",
+    "station": "PETERSBURG",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 3211685,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS13165320181113",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.926499,
+     35.339048
+    ]
+   },
+   "properties": {
+    "incident_key": "NS132243201901",
+    "report_keys": [
+     "CSX000180540201901",
+     "NS132243201901"
+    ],
+    "released_report_key": "CSX000180540201901",
+    "csv_lines": [
+     131,
+     133
+    ],
+    "date": "2019-01-01",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "CSX Transportation",
+    "accident_type": "Derailment",
+    "state": "NC",
+    "county": "BEAUFORT",
+    "station": "AURORA",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 742355,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=CSX00018054020190101",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.493887,
+     32.900986
+    ]
+   },
+   "properties": {
+    "incident_key": "NS132320201901",
+    "report_keys": [
+     "NS132320201901"
+    ],
+    "released_report_key": "NS132320201901",
+    "csv_lines": [
+     22957
+    ],
+    "date": "2019-01-06",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "GA",
+    "county": "JEFFERSON",
+    "station": "BARTOW",
+    "hazmat_cars_released": 4,
+    "persons_evacuated": 280,
+    "persons_killed": 0,
+    "persons_injured": 6,
+    "damage_usd": 3745986,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS13232020190106",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.836822,
+     36.060617
+    ]
+   },
+   "properties": {
+    "incident_key": "NS134864201907",
+    "report_keys": [
+     "NS134864201907"
+    ],
+    "released_report_key": "NS134864201907",
+    "csv_lines": [
+     14251
+    ],
+    "date": "2019-07-25",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "NC",
+    "county": "GUILFORD",
+    "station": "GREENSBORO",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 343873,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS13486420190725",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -85.978495,
+     41.67736
+    ]
+   },
+   "properties": {
+    "incident_key": "NS135158201908",
+    "report_keys": [
+     "NS135158201908",
+     "NS135158201908"
+    ],
+    "released_report_key": "NS135158201908",
+    "csv_lines": [
+     15159,
+     15168
+    ],
+    "date": "2019-08-19",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Other impacts",
+    "state": "IN",
+    "county": "ELKHART",
+    "station": "ELKHART",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 47545,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS13515820190819",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.895173,
+     32.467982
+    ]
+   },
+   "properties": {
+    "incident_key": "NS135813201910",
+    "report_keys": [
+     "NS135813201910",
+     "NS135813201910"
+    ],
+    "released_report_key": "NS135813201910",
+    "csv_lines": [
+     8283,
+     8284
+    ],
+    "date": "2019-10-12",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "AL",
+    "county": "DALLAS",
+    "station": "JONES",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 86100,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS13581320191012",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.271844,
+     31.346279
+    ]
+   },
+   "properties": {
+    "incident_key": "NS136924202001",
+    "report_keys": [
+     "NS136924202001"
+    ],
+    "released_report_key": "NS136924202001",
+    "csv_lines": [
+     13763
+    ],
+    "date": "2020-01-24",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Other (describe in narrative)",
+    "state": "MS",
+    "county": "FORREST",
+    "station": "PETAL",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 15,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 668238,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS13692420200124",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.923957,
+     37.277786
+    ]
+   },
+   "properties": {
+    "incident_key": "NS138168202006",
+    "report_keys": [
+     "NS138168202006"
+    ],
+    "released_report_key": "NS138168202006",
+    "csv_lines": [
+     1513
+    ],
+    "date": "2020-06-07",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "VA",
+    "county": "ROANOKE",
+    "station": "ROANOKE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1777038,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS13816820200607",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.275444,
+     31.511501
+    ]
+   },
+   "properties": {
+    "incident_key": "NS139888202012",
+    "report_keys": [
+     "NS139888202012"
+    ],
+    "released_report_key": "NS139888202012",
+    "csv_lines": [
+     13139
+    ],
+    "date": "2020-12-02",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "MS",
+    "county": "JONES",
+    "station": "MOSELLE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2245364,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS13988820201202",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.824428,
+     40.374233
+    ]
+   },
+   "properties": {
+    "incident_key": "NS141044202103",
+    "report_keys": [
+     "NS141044202103"
+    ],
+    "released_report_key": "NS141044202103",
+    "csv_lines": [
+     18571
+    ],
+    "date": "2021-03-27",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "IN",
+    "county": "TIPPECANOE",
+    "station": "DAYTON",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 411735,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS14104420210327",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.783207,
+     37.641092
+    ]
+   },
+   "properties": {
+    "incident_key": "NS142683202108",
+    "report_keys": [
+     "NS142683202108",
+     "NS142683202108"
+    ],
+    "released_report_key": "NS142683202108",
+    "csv_lines": [
+     15138,
+     15146
+    ],
+    "date": "2021-08-28",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Other (describe in narrative)",
+    "state": "KY",
+    "county": "BOYLE",
+    "station": "DANVILLE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 85235,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS14268320210828",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.683971,
+     33.555372
+    ]
+   },
+   "properties": {
+    "incident_key": "NS142774202109",
+    "report_keys": [
+     "NS142774202109",
+     "NS142774202109",
+     "NS142774202109"
+    ],
+    "released_report_key": "NS142774202109",
+    "csv_lines": [
+     928,
+     938,
+     939
+    ],
+    "date": "2021-09-06",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "AL",
+    "county": "JEFFERSON",
+    "station": "IRONDALE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 146240,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS14277420210906",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.847364,
+     40.531669
+    ]
+   },
+   "properties": {
+    "incident_key": "NS145376202205",
+    "report_keys": [
+     "NS145376202205"
+    ],
+    "released_report_key": "NS145376202205",
+    "csv_lines": [
+     11955
+    ],
+    "date": "2022-05-26",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Hwy-rail crossing",
+    "state": "PA",
+    "county": "ALLEGHENY",
+    "station": "HARMER",
+    "hazmat_cars_released": 4,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 3,
+    "damage_usd": 1412873,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS14537620220526",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.640287,
+     38.531871
+    ]
+   },
+   "properties": {
+    "incident_key": "NS146535202209",
+    "report_keys": [
+     "NS146535202209"
+    ],
+    "released_report_key": "NS146535202209",
+    "csv_lines": [
+     16055
+    ],
+    "date": "2022-09-19",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "IL",
+    "county": "CLINTON",
+    "station": "ALBERS",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2342446,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS14653520220919",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.686554,
+     41.437439
+    ]
+   },
+   "properties": {
+    "incident_key": "NS151086202210",
+    "report_keys": [
+     "NS151086202210"
+    ],
+    "released_report_key": "NS151086202210",
+    "csv_lines": [
+     19073
+    ],
+    "date": "2022-10-08",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "OH",
+    "county": "ERIE",
+    "station": "SANDUSKY",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2272270,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS15108620221008",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.526399,
+     40.835793
+    ]
+   },
+   "properties": {
+    "incident_key": "NS152207202302",
+    "report_keys": [
+     "NS152207202302"
+    ],
+    "released_report_key": "NS152207202302",
+    "csv_lines": [
+     12409
+    ],
+    "date": "2023-02-03",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "OH",
+    "county": "COLUMBIANA",
+    "station": "EAST PALESTINE",
+    "hazmat_cars_released": 8,
+    "persons_evacuated": 2100,
+    "persons_killed": 0,
+    "persons_injured": 18,
+    "damage_usd": 6234120,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS15220720230203",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.01427,
+     41.668491
+    ]
+   },
+   "properties": {
+    "incident_key": "NS153214202305",
+    "report_keys": [
+     "NS153214202305",
+     "NS153214202305"
+    ],
+    "released_report_key": "NS153214202305",
+    "csv_lines": [
+     24825,
+     24826
+    ],
+    "date": "2023-05-30",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Other impacts",
+    "state": "IN",
+    "county": "ELKHART",
+    "station": "ELKHART",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 84824,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS15321420230530",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.444441,
+     33.79352
+    ]
+   },
+   "properties": {
+    "incident_key": "NS157000202406",
+    "report_keys": [
+     "NS157000202406",
+     "NS157000202406"
+    ],
+    "released_report_key": "NS157000202406",
+    "csv_lines": [
+     22580,
+     22581
+    ],
+    "date": "2024-06-08",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Other impacts",
+    "state": "GA",
+    "county": "FULTON",
+    "station": "ATLANTA",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 171368,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS15700020240608",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -87.422625,
+     41.636991
+    ]
+   },
+   "properties": {
+    "incident_key": "NS158807202412",
+    "report_keys": [
+     "NS158807202412"
+    ],
+    "released_report_key": "NS158807202412",
+    "csv_lines": [
+     14893
+    ],
+    "date": "2024-12-22",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "IN",
+    "county": "LAKE",
+    "station": "GARY",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1387368,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS15880720241222",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.881617,
+     41.062914
+    ]
+   },
+   "properties": {
+    "incident_key": "NS159218202502",
+    "report_keys": [
+     "NS159218202502"
+    ],
+    "released_report_key": "NS159218202502",
+    "csv_lines": [
+     19100
+    ],
+    "date": "2025-02-11",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "OH",
+    "county": "SENECA",
+    "station": "ATTICA",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2606651,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS15921820250211",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -87.953838,
+     38.380637
+    ]
+   },
+   "properties": {
+    "incident_key": "NS160709202507",
+    "report_keys": [
+     "NS160709202507",
+     "NS160709202507"
+    ],
+    "released_report_key": "NS160709202507",
+    "csv_lines": [
+     15794,
+     26690
+    ],
+    "date": "2025-07-18",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "Norfolk Southern Railway Company",
+    "accident_type": "Derailment",
+    "state": "IL",
+    "county": "WABASH",
+    "station": "BROWNS",
+    "hazmat_cars_released": 3,
+    "persons_evacuated": 35,
+    "persons_killed": 0,
+    "persons_injured": 2,
+    "damage_usd": 2951467,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=NS16070920250718",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.539145,
+     40.670626
+    ]
+   },
+   "properties": {
+    "incident_key": "TPWTPW180317D201701",
+    "report_keys": [
+     "TPWTPW180317D201701"
+    ],
+    "released_report_key": "TPWTPW180317D201701",
+    "csv_lines": [
+     16188
+    ],
+    "date": "2017-01-06",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "Toledo, Peoria & Western Railway Corporation",
+    "accident_type": "Derailment",
+    "state": "IL",
+    "county": "TAZEWELL",
+    "station": "EAST PEORIA",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 90000,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=TPWTPW180317D20170106",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -93.890747,
+     32.200361
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0123HO029202301",
+    "report_keys": [
+     "UP0123HO029202301"
+    ],
+    "released_report_key": "UP0123HO029202301",
+    "csv_lines": [
+     15605
+    ],
+    "date": "2023-01-27",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "LA",
+    "county": "DE SOTO",
+    "station": "KEATCHIE",
+    "hazmat_cars_released": 3,
+    "persons_evacuated": 130,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1862075,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0123HO02920230127",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -100.395556,
+     29.163014
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0220SX018202002",
+    "report_keys": [
+     "BNSFRD0220123202002",
+     "UP0220SX018202002"
+    ],
+    "released_report_key": "BNSFRD0220123202002",
+    "csv_lines": [
+     1742,
+     11092
+    ],
+    "date": "2020-02-23",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "KINNEY",
+    "station": "SPOFFORD",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 463235,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFRD022012320200223",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -112.935682,
+     38.761421
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0221RM028202102",
+    "report_keys": [
+     "UP0221RM028202102"
+    ],
+    "released_report_key": "UP0221RM028202102",
+    "csv_lines": [
+     1694
+    ],
+    "date": "2021-02-20",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "UT",
+    "county": "MILLARD",
+    "station": "GARRISON",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 6243061,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0221RM02820210220",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -111.510657,
+     32.885643
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0222LA035202202",
+    "report_keys": [
+     "UP0222LA035202202"
+    ],
+    "released_report_key": "UP0222LA035202202",
+    "csv_lines": [
+     24306
+    ],
+    "date": "2022-02-21",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "AZ",
+    "county": "PINAL",
+    "station": "COOLIDGE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 6,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 885860,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0222LA03520220221",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -96.012366,
+     32.168728
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0317FW037201703",
+    "report_keys": [
+     "UP0317FW037201703"
+    ],
+    "released_report_key": "UP0317FW037201703",
+    "csv_lines": [
+     10652
+    ],
+    "date": "2017-03-29",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "HENDERSON",
+    "station": "MALAKOFF",
+    "hazmat_cars_released": 5,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1994581,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0317FW03720170329",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -94.722047,
+     43.21788
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0317TC008201703",
+    "report_keys": [
+     "UP0317TC008201703"
+    ],
+    "released_report_key": "UP0317TC008201703",
+    "csv_lines": [
+     6195
+    ],
+    "date": "2017-03-10",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "IA",
+    "county": "PALO ALTO",
+    "station": "GRAETTINGER",
+    "hazmat_cars_released": 14,
+    "persons_evacuated": 7,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1423871,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0317TC00820170310",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -112.200068,
+     39.75675
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0319RM047201903",
+    "report_keys": [
+     "UP0319RM047201903"
+    ],
+    "released_report_key": "UP0319RM047201903",
+    "csv_lines": [
+     9687
+    ],
+    "date": "2019-03-30",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "UT",
+    "county": "JUAB",
+    "station": "EUREKA",
+    "hazmat_cars_released": 4,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2142193,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0319RM04720190330",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.650537,
+     35.83669
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0320MA039202003",
+    "report_keys": [
+     "UP0320MA039202003"
+    ],
+    "released_report_key": "UP0320MA039202003",
+    "csv_lines": [
+     23966
+    ],
+    "date": "2020-03-28",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "AR",
+    "county": "CRAIGHEAD",
+    "station": "JONESBORO",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2307478,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0320MA03920200328",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.672393,
+     38.35111
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0323HL013202303",
+    "report_keys": [
+     "UP0323HL013202303"
+    ],
+    "released_report_key": "UP0323HL013202303",
+    "csv_lines": [
+     24634
+    ],
+    "date": "2023-03-12",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "KS",
+    "county": "MCPHERSON",
+    "station": "MCPHERSON",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1766886,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0323HL01320230312",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -92.221465,
+     34.775487
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0325MA013202503",
+    "report_keys": [
+     "UP0325MA013202503",
+     "UP0325MA013202503"
+    ],
+    "released_report_key": "UP0325MA013202503",
+    "csv_lines": [
+     16568,
+     16587
+    ],
+    "date": "2025-03-11",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Other impacts",
+    "state": "AR",
+    "county": "PULASKI",
+    "station": "NORTH LITTLE ROCK",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 49769,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0325MA01320250311",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.309297,
+     32.69898
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0419TO038201904",
+    "report_keys": [
+     "UP0419TO038201904"
+    ],
+    "released_report_key": "UP0419TO038201904",
+    "csv_lines": [
+     10579
+    ],
+    "date": "2019-04-24",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "TARRANT",
+    "station": "FORT WORTH",
+    "hazmat_cars_released": 3,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2814633,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0419TO03820190424",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -95.721462,
+     37.683023
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0519HL009201905",
+    "report_keys": [
+     "UP0519HL009201905"
+    ],
+    "released_report_key": "UP0519HL009201905",
+    "csv_lines": [
+     24720
+    ],
+    "date": "2019-05-07",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "KS",
+    "county": "WILSON",
+    "station": "BUFFALO",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1554266,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0519HL00920190507",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -93.348233,
+     43.66482
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0521GL012202105",
+    "report_keys": [
+     "UP0521GL012202105"
+    ],
+    "released_report_key": "UP0521GL012202105",
+    "csv_lines": [
+     7409
+    ],
+    "date": "2021-05-15",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "MN",
+    "county": "FREEBORN",
+    "station": "ALBERT LEA",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2448903,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0521GL01220210515",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -95.75958,
+     43.380432
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0521GL015202105",
+    "report_keys": [
+     "UP0521GL015202105"
+    ],
+    "released_report_key": "UP0521GL015202105",
+    "csv_lines": [
+     23522
+    ],
+    "date": "2021-05-16",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "IA",
+    "county": "OSCEOLA",
+    "station": "SIBLEY",
+    "hazmat_cars_released": 10,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 3418115,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0521GL01520210516",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -95.298813,
+     29.794252
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0525HO001202505",
+    "report_keys": [
+     "UP0525HO001202505",
+     "UP0525HO001202505"
+    ],
+    "released_report_key": "UP0525HO001202505",
+    "csv_lines": [
+     10997,
+     10998
+    ],
+    "date": "2025-05-01",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Other impacts",
+    "state": "TX",
+    "county": "HARRIS",
+    "station": "HOUSTON",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 226522,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0525HO00120250501",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.396595,
+     45.684417
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0616PD002201606",
+    "report_keys": [
+     "UP0616PD002201606"
+    ],
+    "released_report_key": "UP0616PD002201606",
+    "csv_lines": [
+     19236
+    ],
+    "date": "2016-06-03",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "OR",
+    "county": "WASCO",
+    "station": "MOSIER",
+    "hazmat_cars_released": 5,
+    "persons_evacuated": 100,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1851807,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0616PD00220160603",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -109.16555,
+     41.595484
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0620RM024202006",
+    "report_keys": [
+     "UP0620RM024202006"
+    ],
+    "released_report_key": "UP0620RM024202006",
+    "csv_lines": [
+     1158
+    ],
+    "date": "2020-06-13",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "WY",
+    "county": "SWEETWATER",
+    "station": "ROCK SPRINGS",
+    "hazmat_cars_released": 4,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1331408,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0620RM02420200613",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -95.918126,
+     40.780585
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0624HL016202406",
+    "report_keys": [
+     "UP0624HL016202406"
+    ],
+    "released_report_key": "UP0624HL016202406",
+    "csv_lines": [
+     13871
+    ],
+    "date": "2024-06-11",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "NE",
+    "county": "OTOE",
+    "station": "UNION",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2101160,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0624HL01620240611",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -111.944074,
+     33.435013
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0720LA037202007",
+    "report_keys": [
+     "UP0720LA037202007"
+    ],
+    "released_report_key": "UP0720LA037202007",
+    "csv_lines": [
+     24339
+    ],
+    "date": "2020-07-29",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "AZ",
+    "county": "MARICOPA",
+    "station": "TEMPE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 9270078,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0720LA03720200729",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.22957,
+     33.823054
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0724LA012202407",
+    "report_keys": [
+     "UP0724LA012202407",
+     "UP0724LA012202407"
+    ],
+    "released_report_key": "UP0724LA012202407",
+    "csv_lines": [
+     26312,
+     26313
+    ],
+    "date": "2024-07-07",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Other impacts",
+    "state": "CA",
+    "county": "LOS ANGELES",
+    "station": "LONG BEACH",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 133840,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0724LA01220240707",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.414285,
+     32.709292
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0825TO029202508",
+    "report_keys": [
+     "UP0825TO029202508",
+     "UP0825TO029202508"
+    ],
+    "released_report_key": "UP0825TO029202508",
+    "csv_lines": [
+     10831,
+     10832
+    ],
+    "date": "2025-08-31",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Other impacts",
+    "state": "TX",
+    "county": "TARRANT",
+    "station": "FORT WORTH",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 699563,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0825TO02920250831",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -117.348014,
+     34.066017
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0917LA016201709",
+    "report_keys": [
+     "UP0917LA016201709"
+    ],
+    "released_report_key": "UP0917LA016201709",
+    "csv_lines": [
+     19895
+    ],
+    "date": "2017-09-09",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "CA",
+    "county": "SAN BERNARDINO",
+    "station": "COLTON",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 588071,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0917LA01620170909",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.209247,
+     38.528708
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0919MA023201909",
+    "report_keys": [
+     "UP0919MA023201909",
+     "UP0919MA023201909"
+    ],
+    "released_report_key": "UP0919MA023201909",
+    "csv_lines": [
+     17456,
+     17457
+    ],
+    "date": "2019-09-10",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Broken train collision",
+    "state": "IL",
+    "county": "ST CLAIR",
+    "station": "DUPO",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 2158,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 821225,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0919MA02320190910",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.161972,
+     30.0068
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0921SX023202109",
+    "report_keys": [
+     "UP0921SX023202109"
+    ],
+    "released_report_key": "UP0921SX023202109",
+    "csv_lines": [
+     9872
+    ],
+    "date": "2021-09-26",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "BASTROP",
+    "station": "SMITHVILLE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 290674,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0921SX02320210926",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -93.231745,
+     42.815163
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0922GL007202209",
+    "report_keys": [
+     "UP0922GL007202209"
+    ],
+    "released_report_key": "UP0922GL007202209",
+    "csv_lines": [
+     23285
+    ],
+    "date": "2022-09-05",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "IA",
+    "county": "FRANKLIN",
+    "station": "SHEFFIELD",
+    "hazmat_cars_released": 5,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2411557,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0922GL00720220905",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -100.860041,
+     41.156801
+    ]
+   },
+   "properties": {
+    "incident_key": "UP0923GP016202309",
+    "report_keys": [
+     "UP0923GP016202309"
+    ],
+    "released_report_key": "UP0923GP016202309",
+    "csv_lines": [
+     15489
+    ],
+    "date": "2023-09-14",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Explosion-detonation",
+    "state": "NE",
+    "county": "LINCOLN",
+    "station": "NORTH PLATTE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 25,
+    "persons_killed": 0,
+    "persons_injured": 2,
+    "damage_usd": 124794,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0923GP01620230914",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -91.960362,
+     34.231048
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1018LK007201810",
+    "report_keys": [
+     "UP1018LK007201810"
+    ],
+    "released_report_key": "UP1018LK007201810",
+    "csv_lines": [
+     23754
+    ],
+    "date": "2018-10-06",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "AR",
+    "county": "JEFFERSON",
+    "station": "PINE BLUFF",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 166683,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1018LK00720181006",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -98.556394,
+     29.375722
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1022SX020202210",
+    "report_keys": [
+     "UP1022SX020202210",
+     "UP1022SX020202210"
+    ],
+    "released_report_key": "UP1022SX020202210",
+    "csv_lines": [
+     2260,
+     4347
+    ],
+    "date": "2022-10-22",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Other impacts",
+    "state": "TX",
+    "county": "BEXAR",
+    "station": "SAN ANTONIO",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 29588,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1022SX02020221022",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -100.837925,
+     41.150491
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1024GP017202410",
+    "report_keys": [
+     "UP1024GP017202410"
+    ],
+    "released_report_key": "UP1024GP017202410",
+    "csv_lines": [
+     5377
+    ],
+    "date": "2024-10-17",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "NE",
+    "county": "LINCOLN",
+    "station": "NORTH PLATTE",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1281252,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1024GP01720241017",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -110.997414,
+     31.805449
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1024LA017202410",
+    "report_keys": [
+     "UP1024LA017202410"
+    ],
+    "released_report_key": "UP1024LA017202410",
+    "csv_lines": [
+     24228
+    ],
+    "date": "2024-10-11",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "AZ",
+    "county": "PIMA",
+    "station": "SAHUARITA",
+    "hazmat_cars_released": 4,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1018210,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1024LA01720241011",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -95.017501,
+     29.79225
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1025HO002202510",
+    "report_keys": [
+     "UP1025HO002202510",
+     "UP1025HO002202510"
+    ],
+    "released_report_key": "UP1025HO002202510",
+    "csv_lines": [
+     10875,
+     10876
+    ],
+    "date": "2025-10-01",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Other impacts",
+    "state": "TX",
+    "county": "HARRIS",
+    "station": "BAYTOWN",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 79225,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1025HO00220251001",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -93.300617,
+     43.865614
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1116TC005201611",
+    "report_keys": [
+     "UP1116TC005201611"
+    ],
+    "released_report_key": "UP1116TC005201611",
+    "csv_lines": [
+     6120
+    ],
+    "date": "2016-11-11",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "MN",
+    "county": "STEELE",
+    "station": "ELLENDALE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 700,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 1573765,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1116TC00520161111",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -100.794809,
+     41.145843
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1118NP032201811",
+    "report_keys": [
+     "UP1118NP032201811"
+    ],
+    "released_report_key": "UP1118NP032201811",
+    "csv_lines": [
+     150
+    ],
+    "date": "2018-11-25",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "NE",
+    "county": "LINCOLN",
+    "station": "NORTH PLATTE",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 659599,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1118NP03220181125",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.431589,
+     36.367203
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1120NC028202011",
+    "report_keys": [
+     "UP1120NC028202011"
+    ],
+    "released_report_key": "UP1120NC028202011",
+    "csv_lines": [
+     20437
+    ],
+    "date": "2020-11-23",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "CA",
+    "county": "TULARE",
+    "station": "GOSHEN",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 487730,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1120NC02820201123",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -111.579789,
+     42.658415
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1122RM026202211",
+    "report_keys": [
+     "UP1122RM026202211"
+    ],
+    "released_report_key": "UP1122RM026202211",
+    "csv_lines": [
+     5710
+    ],
+    "date": "2022-11-18",
+    "year": 2022,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "ID",
+    "county": "CARIBOU",
+    "station": "SODA SPRINGS",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 94396,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1122RM02620221118",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -92.004868,
+     46.661583
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1218GL021201812",
+    "report_keys": [
+     "UP1218GL021201812",
+     "UP1218GL021201812"
+    ],
+    "released_report_key": "UP1218GL021201812",
+    "csv_lines": [
+     8930,
+     8931
+    ],
+    "date": "2018-12-14",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Other impacts",
+    "state": "WI",
+    "county": "DOUGLAS",
+    "station": "SUPERIOR",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 89972,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1218GL02120181214",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -93.526985,
+     41.748778
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1220GL020202012",
+    "report_keys": [
+     "UP1220GL020202012"
+    ],
+    "released_report_key": "UP1220GL020202012",
+    "csv_lines": [
+     23571
+    ],
+    "date": "2020-12-25",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "IA",
+    "county": "POLK",
+    "station": "ELKHART",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2172425,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1220GL02020201225",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.521461,
+     41.823713
+    ]
+   },
+   "properties": {
+    "incident_key": "UP1220PR015202012",
+    "report_keys": [
+     "UP1220PR015202012"
+    ],
+    "released_report_key": "UP1220PR015202012",
+    "csv_lines": [
+     15301
+    ],
+    "date": "2020-12-24",
+    "year": 2020,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "IL",
+    "county": "LEE",
+    "station": "DIXON",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 2484291,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1220PR01520201224",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -87.358109,
+     41.617869
+    ]
+   },
+   "properties": {
+    "incident_key": "WC1136765202307",
+    "report_keys": [
+     "WC1136765202307"
+    ],
+    "released_report_key": "WC1136765202307",
+    "csv_lines": [
+     18087
+    ],
+    "date": "2023-07-24",
+    "year": 2023,
+    "mode": "rail",
+    "railroad": "WISCONSIN CENTRAL LTD.",
+    "accident_type": "Derailment",
+    "state": "IN",
+    "county": "LAKE",
+    "station": "GARY",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 597631,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=WC113676520230724",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -87.69681,
+     41.494985
+    ]
+   },
+   "properties": {
+    "incident_key": "WC1152202202406",
+    "report_keys": [
+     "WC1152202202406"
+    ],
+    "released_report_key": "WC1152202202406",
+    "csv_lines": [
+     3892
+    ],
+    "date": "2024-06-27",
+    "year": 2024,
+    "mode": "rail",
+    "railroad": "WISCONSIN CENTRAL LTD.",
+    "accident_type": "Derailment",
+    "state": "IL",
+    "county": "COOK",
+    "station": "MATTESON",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 300,
+    "persons_killed": 0,
+    "persons_injured": 2,
+    "damage_usd": 2034252,
+    "severity": "injuries",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=WC115220220240627",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -88.096804,
+     41.564272
+    ]
+   },
+   "properties": {
+    "incident_key": "WC927769201706",
+    "report_keys": [
+     "WC927769201706"
+    ],
+    "released_report_key": "WC927769201706",
+    "csv_lines": [
+     3604
+    ],
+    "date": "2017-06-30",
+    "year": 2017,
+    "mode": "rail",
+    "railroad": "WISCONSIN CENTRAL LTD.",
+    "accident_type": "Derailment",
+    "state": "IL",
+    "county": "WILL",
+    "station": "PLAINFIELD",
+    "hazmat_cars_released": 5,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 4045013,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=WC92776920170630",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -92.150956,
+     46.649708
+    ]
+   },
+   "properties": {
+    "incident_key": "WC966595201807",
+    "report_keys": [
+     "WC966595201807"
+    ],
+    "released_report_key": "WC966595201807",
+    "csv_lines": [
+     8926
+    ],
+    "date": "2018-07-19",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "WISCONSIN CENTRAL LTD.",
+    "accident_type": "Derailment",
+    "state": "WI",
+    "county": "DOUGLAS",
+    "station": "SUPERIOR",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 621295,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=WC96659520180719",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.619458,
+     40.714825
+    ]
+   },
+   "properties": {
+    "incident_key": "WE160009201602",
+    "report_keys": [
+     "WE160009201602"
+    ],
+    "released_report_key": "WE160009201602",
+    "csv_lines": [
+     2904
+    ],
+    "date": "2016-02-01",
+    "year": 2016,
+    "mode": "rail",
+    "railroad": "Wheeling & Lake Erie Railway Company",
+    "accident_type": "Derailment",
+    "state": "OH",
+    "county": "STARK",
+    "station": "BREWSTER",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 250,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 430010,
+    "severity": "evacuation",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=WE16000920160201",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -95.175563,
+     29.729106
+    ]
+   },
+   "properties": {
+    "incident_key": "XABMINDUSTRY201906",
+    "report_keys": [
+     "PTRA2019000017201906"
+    ],
+    "released_report_key": "PTRA2019000017201906",
+    "csv_lines": [
+     2214
+    ],
+    "date": "2019-06-26",
+    "year": 2019,
+    "mode": "rail",
+    "railroad": "Port Terminal Railroad Association",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "HARRIS",
+    "station": "PASADENA",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 15000,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=PTRA201900001720190626",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -94.494271,
+     43.662753
+    ]
+   },
+   "properties": {
+    "incident_key": "XGPGINDUSTRY202110",
+    "report_keys": [
+     "UP1021GL037202110"
+    ],
+    "released_report_key": "UP1021GL037202110",
+    "csv_lines": [
+     7471
+    ],
+    "date": "2021-10-27",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "MN",
+    "county": "MARTIN",
+    "station": "FAIRMONT",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 593927,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP1021GL03720211027",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -95.261846,
+     29.723924
+    ]
+   },
+   "properties": {
+    "incident_key": "ZCNOINDUSTRY201802",
+    "report_keys": [
+     "PTRA2018000012201802"
+    ],
+    "released_report_key": "PTRA2018000012201802",
+    "csv_lines": [
+     1959
+    ],
+    "date": "2018-02-21",
+    "year": 2018,
+    "mode": "rail",
+    "railroad": "Port Terminal Railroad Association",
+    "accident_type": "Derailment",
+    "state": "TX",
+    "county": "HARRIS",
+    "station": "HOUSTON",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 101500,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=PTRA201800001220180221",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -98.842829,
+     38.896395
+    ]
+   },
+   "properties": {
+    "incident_key": "ZPFDINDUSTRY202506",
+    "report_keys": [
+     "UP0625HL039202506"
+    ],
+    "released_report_key": "UP0625HL039202506",
+    "csv_lines": [
+     24515
+    ],
+    "date": "2025-06-26",
+    "year": 2025,
+    "mode": "rail",
+    "railroad": "Union Pacific Railroad Company",
+    "accident_type": "Derailment",
+    "state": "KS",
+    "county": "RUSSELL",
+    "station": "RUSSELL",
+    "hazmat_cars_released": 2,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 310292,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=UP0625HL03920250626",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.604036,
+     40.635765
+    ]
+   },
+   "properties": {
+    "incident_key": "ZPTFINDUSTRY202107",
+    "report_keys": [
+     "BNSFPR0721105202107"
+    ],
+    "released_report_key": "BNSFPR0721105202107",
+    "csv_lines": [
+     15917
+    ],
+    "date": "2021-07-18",
+    "year": 2021,
+    "mode": "rail",
+    "railroad": "BNSF Railway Company",
+    "accident_type": "Derailment",
+    "state": "NE",
+    "county": "FILLMORE",
+    "station": "FAIRMONT",
+    "hazmat_cars_released": 1,
+    "persons_evacuated": 0,
+    "persons_killed": 0,
+    "persons_injured": 0,
+    "damage_usd": 398904,
+    "severity": "release",
+    "fra_report_url": "https://safetydata.fra.dot.gov/Officeofsafety/Publicsite/FORM54/F54Report.aspx?RepType=SQL&txtf54key=BNSFPR072110520210718",
+    "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+    "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+    "location_method": "reported_coordinates"
+   }
+  }
+ ]
+}

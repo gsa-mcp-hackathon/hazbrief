@@ -1,0 +1,53 @@
+# scripts/build_problem_map.py: the deck's problem slide's map and numbers (HB-215 Part C).
+#
+# Read only from committed records: HB-136R's points (one per FRA Form 54 incident in which a car released hazmat,
+# 2016-2025, each with its reported damage) and grid cells, and HB-127's base rates. No call, no held raw file.
+inputs:
+  points: fixtures/incidents/fra_released_incidents_2016_2025.geojson
+  cells: docs/evidence/hb136/gi_star_cells.tsv
+  summary: docs/evidence/hb136/summary.json
+  base_rates: docs/evidence/hb127/base_rates.tsv
+  # HB-136R's own settings: the projection and the hexagon size come from its config and summary, so both maps
+  # share one frame
+  incident_map: scripts/incident_map.yaml
+  # the base-rate row the slide prints, by its `measure` and `period` (BTS TSAR 2024 Table 5-5, PHMSA all modes)
+  phmsa_measure: "Hazmat transportation incidents reported to PHMSA, all modes"
+  phmsa_period: "2023 (latest held)"
+outputs:
+  svg: docs/incidents/problem_us_damage.svg
+  tsv: docs/incidents/problem_scale.tsv
+  json: docs/incidents/problem_scale.json
+  md: docs/incidents/problem_scale.md
+
+# One mark per place. A place is a point's reported coordinates rounded to this many decimals (0.01 degree is about
+# 1 km); incidents at one place are one mark, their damage summed. HB-136R's 146 points are 146 places.
+place_decimals: 2
+
+figure:
+  width_px: 960
+  pad_px: 16
+  # The quantity a mark's AREA is proportional to: the incident's reported damage to equipment and track, Form 54
+  # Blocks 36 and 37, in dollars as reported (not adjusted for inflation). Area, not radius, is proportional
+  # (Tufte 2001, the Lie Factor, held as metadata only: tufte-2001-visual-display-quantitative-information); no
+  # apparent-magnitude correction is applied, so the key's circles read exactly as the marks do.
+  quantity: damage_usd
+  # the largest place's mark's radius; every other mark's is this times sqrt(its damage / the largest's)
+  max_radius_px: 26
+  # a place whose damage would draw smaller than this is drawn at this radius, and the key says so; a mark is never
+  # dropped (one mark per place)
+  min_radius_px: 1.5
+  # the scale key's circles, dollars
+  key_usd: [1000000, 5000000, 15000000]
+  # one colour (the deck's accent, docs/submission/deck.yaml build.colors.accent), a fill and an edge at its full
+  # strength so overlapping marks stay countable
+  mark_color: "#C2410C"
+  mark_fill_opacity: 0.35
+  mark_stroke_px: 0.8
+  # the ground: HB-136R's 71 km cells that hold any Form 54 accident (where trains ran and had accidents), light
+  # grey, no edge; the United States' outline is not held, and this is the rail network's own extent
+  cell_color: "#EBEBEB"
+  text_color: "#595959"
+  font: "Calibri, Carlito, Arial, sans-serif"
+  font_px: 16
+  # the frame is the cells' extent widened by this share of its width on each side
+  margin: 0.01

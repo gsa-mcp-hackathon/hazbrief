@@ -1,0 +1,13 @@
+csx-point-of-rocks-night zoom 11.5 41.8 m/px
+i495-wilson-bridge-night zoom 12.75 17.7 m/px
+i81-md-pa-line-night zoom 12.0 29.4 m/px
+i83-md-pa-line-night zoom 11.25 49.4 m/px
+i81-md-pa-line-day zoom 12.0 29.4 m/px
+csx-point-of-rocks-day zoom 11.75 35.2 m/px
+csx-point-of-rocks-crossing zoom 11.75 35.2 m/px
+i495-wilson-bridge-day zoom 13.25 12.5 m/px
+i495-wilson-bridge-address zoom 13.5 10.5 m/px
+i495-wilson-bridge-cross-streets zoom 13.5 10.5 m/px
+i81-md-pa-line-milepost zoom 12.75 17.5 m/px
+i83-md-pa-line-day zoom 11.5 41.5 m/px
+un1005-i81 zoom 12.0 29.4 m/px

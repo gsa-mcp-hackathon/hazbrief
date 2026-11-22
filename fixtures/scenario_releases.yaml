@@ -1,0 +1,91 @@
+# The fixture scenarios' release blocks (DN-018 ADDENDUM-00 section 3; HB-69 step 2). AUTHORED by the scenario author.
+#
+# The release quantity is an input, stated by whoever knows it, never a default. The fixtures are synthetic scenarios
+# whose author states their inputs (the worked-example wind is one), so each fixture with a known container states one
+# here, with its basis. The basis is a held document: ERG 2024 methodology Table 2.3 (erg2024-methodology p. 22), the
+# mixed rail and highway shipment profile for gases, prints a shipment amount of 80,000 kg for a DOT Class 105/112 tank
+# car and 20,000 kg for an MC331 cargo tank. It is an example profile (its footnote: "Data provided are for chlorine
+# trifluoride (UN 1749)"), so the source says so, and that this is not the car's own papers.
+#
+# The fixtures whose container is `unknown` (and open water) state no block, on purpose: their briefs keep "release
+# quantity not given". No fixture states a hole size, on purpose: the alternative release keeps "hole size not given",
+# so the display review sees both states. The schema is docs/schema/scenario_release.schema.json
+# (hazbrief.brief.release); scenario_manifest.py (a build tool held privately) and scripts/build_scenario_briefs.py carry each block into
+# fixtures/scenarios.yaml and docs/briefs/<id>/scenario.json beside the server's `incident`, which does not change.
+
+releases:
+  csx-point-of-rocks-day:
+    quantity_kg: 80000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg"
+  csx-point-of-rocks-night:
+    quantity_kg: 80000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg"
+  csx-point-of-rocks-crossing:
+    quantity_kg: 80000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg"
+  i495-wilson-bridge-day:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  i495-wilson-bridge-night:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  i495-wilson-bridge-address:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  i495-wilson-bridge-cross-streets:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  i81-md-pa-line-day:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  i81-md-pa-line-night:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  i81-md-pa-line-milepost:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  i83-md-pa-line-day:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  i83-md-pa-line-night:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  scranton-i81-nws-wind:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  scranton-i81-stated-wind:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg"
+  # HB-110 Part 0 (DN-020 ADDENDUM-01 section 2 item 3; HB-110 ADDENDUM-00): the three fixtures that carry the other
+  # DN-001 classes state a container (test_build_ics_201.py (a test held privately) SCENARIOS: Highway tank truck or trailer) and a
+  # quantity, from the first held source on ADDENDUM-00's ladder that gives one: the ERG 2024 methodology's mixed rail
+  # and highway shipment profiles, which the methodology itself applies to a material with no profile of its own: "If
+  # no information other than data on packing authorizations within 49 CFR was known, and if the material was
+  # authorized for bulk transport, the mixed rail and highway shipment profile was used" (erg2024-methodology PDF
+  # p. 20). Each material is authorized for bulk (49 CFR 172.101 column 8C, cfr49-govinfo-bulk: LPG 314, 315; gasoline
+  # 242; nitrogen, refrigerated liquid 318). Each fixture is on a highway, so the profile's bulk highway row: Table 2.3
+  # (gases) row 2, MC331 cargo tank, 20,000 kg, PDF p. 22; Table 2.2 (liquids) row 2, DOT 312 cargo tank, 20,000 kg,
+  # PDF p. 21. The row's container is the profile's; where the ERG's road trailer chart (erg2024-en-pdf pp. 15-16)
+  # names another cargo tank for the material, the source says so. 49 CFR 178's cargo-tank specifications, the
+  # ladder's third rung, are not in the held bulk (cfr49-govinfo-bulk is volume 2, Parts 100 to 177) and were not
+  # needed. The masses are the table's; no gallons were converted.
+  un1075-fire-i81:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this tank's papers: MC331 cargo tank, 20,000 kg; the ERG road trailer chart gives LPG the MC331 (erg2024-en-pdf p. 15)"
+  un1203-i83:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.2 (an example profile for liquids), not this tank's papers: DOT 312 cargo tank, 20,000 kg; the ERG road trailer chart gives gasoline the DOT406 (erg2024-en-pdf p. 16), which no profile row names"
+  # HB-129: the same truck on fire (DN-021 section 7); a fixture with a known container states its block, as un1203-i83
+  un1203-fire-i83:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.2 (an example profile for liquids), not this tank's papers: DOT 312 cargo tank, 20,000 kg; the ERG road trailer chart gives gasoline the DOT406 (erg2024-en-pdf p. 16), which no profile row names"
+  # HB-175 Part A (Issue 30ffc074): anhydrous ammonia on the same ladder as un1075-fire-i81. Authorized for bulk (49 CFR
+  # 172.101 column 8C, cfr49-govinfo-bulk row 188: 314, 315), on a highway, a gas: Table 2.3 row 2, MC331 cargo tank,
+  # 20,000 kg (erg2024-methodology PDF p. 22). The ERG road trailer chart names ammonia under the MC331 ("For liquefied
+  # compressed gases (e.g., LPG, ammonia)", erg2024-en-pdf p. 15), so the profile's container is the material's own.
+  un1005-i81:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this tank's papers: MC331 cargo tank, 20,000 kg; the ERG road trailer chart gives ammonia the MC331 (erg2024-en-pdf p. 15)"
+  un1977-wilson-bridge:
+    quantity_kg: 20000
+    quantity_source: "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this tank's papers: MC331 cargo tank, 20,000 kg; the ERG road trailer chart gives refrigerated liquefied gases the MC338 (erg2024-en-pdf p. 15), which no profile row names"

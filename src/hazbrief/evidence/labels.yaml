@@ -1,0 +1,44 @@
+# hazbrief.evidence.labels: the constants the label and the evidence appendix read (DN-010 D4, D6; HB-40).
+
+# How many hex characters of an entity hash the appendix and the ICS 201 print (the full hash is in the label). 12
+# matches the tool surface prefix the repository already prints (fded04ec6c0e).
+hash_prefix_chars: 12
+
+# Time-zone abbreviations a tool's source tag may print after a time ("as of 10/20/2026 22:52 EDT"), as their fixed
+# UTC offsets in hours. These are the U.S. zones the tools name (NWS gives the zone per point) plus UTC; a tag in any
+# other abbreviation is refused, naming it, rather than read in a guessed zone.
+zone_offsets_h:
+  UTC: 0
+  GMT: 0
+  EST: -5
+  EDT: -4
+  CST: -6
+  CDT: -5
+  MST: -7
+  MDT: -6
+  PST: -8
+  PDT: -7
+  AKST: -9
+  AKDT: -8
+  HST: -10
+
+# The zone the appendix prints times in when the caller names none. A brief passes the incident's own zone (the one
+# NWS gives for the spill point, Block 3), so this applies only to an appendix printed with no incident.
+default_time_zone: UTC
+
+# The fixed instant the committed appendix fixtures are rendered at, so they are deterministic
+# (test_evidence_labels.py (a test held privately)): the day after the tool-call seed was recorded (2026-10-25).
+fixture_now: "2026-10-26T12:00:00Z"
+fixture_time_zone: America/New_York
+
+# The appendix's columns, in the stylebook's plain words (SB-SEN-05); a record's used entities follow it, indented once.
+appendix_columns: [Source, What was asked, As of, Current or old, Record]
+
+# build_ics_201's own reads, which its blocks cite as receipts beside the six tools (src/hazbrief/tools/build_ics_201.py
+# PLACE, BASEMAP, TZ and the flag evaluator), and the catalog rows each one reads. A block citing one is labelled
+# from build_ics_201's own record, restricted to these rows.
+ics201_internal_outputs:
+  tigerweb_place: [tigerweb:current]
+  tigerweb_basemap: [tigerweb:current]
+  nws_time_zone: [nws:points]
+  flag_evaluator: [pack:flag_rules]

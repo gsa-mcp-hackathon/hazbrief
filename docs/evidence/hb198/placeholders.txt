@@ -1,0 +1,18 @@
+## item 0, session start at 2026-11-18T10:48:00-05:00
+corpus/raw	files=550	placeholders=0
+the corpus graph (held privately)	files=375	placeholders=0
+the corpus graph (held privately)	files=174	placeholders=0
+the corpus graph (held privately)	files=2722	placeholders=0
+the corpus graph (held privately)	files=1	placeholders=0
+placeholders_before=0
+placeholders_after=0 (none to download)
+
+## before the clone's gate at 2026-11-18T10:53:22-05:00
+corpus/raw	files=550	placeholders=0
+the corpus graph (held privately)	files=375	placeholders=0
+the corpus graph (held privately)	files=174	placeholders=0
+the corpus graph (held privately)	files=2722	placeholders=0
+the corpus graph (held privately)	files=1	placeholders=0
+placeholders_before=0
+placeholders_after=0 (none to download)
+

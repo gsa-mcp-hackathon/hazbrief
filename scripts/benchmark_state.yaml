@@ -1,0 +1,47 @@
+# HB-212 Part A (DN-030 section 2, items 1 to 5): the words a benchmark status is printed in. Read by
+# scripts/benchmark_state.py; every generator that prints a benchmark status reads them through it.
+#
+# The three states and "not yet evaluated" (the operator, 2026-11-20 06:53 EST: "The only time we can use a word above
+# or below is if there is statistical significance"). "Above" or "below" is printed only where the 95 percent limits
+# exclude 1 (Hanna, Strimaitis and Chang 1993, equation 34, as HB-176's analyse.limits implements it), and then with
+# the Census Bureau's words, "statistically significant", the level and the direction; where they include 1 the state
+# is "not statistically significant" (HB-212 ADDENDUM-01, the operator's statement of 2026-11-20 15:17 EST, carried
+# by HB-213 ADDENDUM-02; the held blocks are quoted in docs/evidence/hb213/acs_blocks.md).
+#
+# Direction: MG is observed over predicted (HB-199's score199.statistics; Simpson et al. 2020 eq. 6 p. 9; the 17-model
+# comparison p. 25), so MG above 1 is under-prediction: the model's concentration is below the measured one. A ratio
+# of MGs, MG(hazbrief) over MG(tool), above 1 means hazbrief under-predicts by more than the tool, so hazbrief's
+# concentration is below the tool's. Hence: a ratio whose limits lie wholly above 1 reads "below", wholly below 1
+# reads "above" (tests/test_hb212_benchmark_state.py holds it against one hand-worked row).
+words:
+  above: statistically significant at 95 percent, above
+  below: statistically significant at 95 percent, below
+  same: not statistically significant at 95 percent
+  not_run: not yet evaluated
+# the direction word a significant difference is printed with
+direction:
+  above: above
+  below: below
+# the printed line for each state; {stat} is "MG" against the measurements and "MG ratio" against a tool. HB-213
+# ADDENDUM-02: the Census Bureau's words (ACS General Handbook 2020 b952: "statistically significant" and "not
+# statistically significant"; b568: "at the specified confidence level"), the level printed on every line
+line:
+  differs: "{subject} is {direction} {reference}, a difference that is statistically significant at the 95 percent confidence level ({stat} {ratio}, 95 percent limits {low} to {high}, which exclude 1, on {n} arcs)"
+  same: "the difference between {subject} and {reference} is not statistically significant at the 95 percent confidence level ({stat} {ratio}, 95 percent limits {low} to {high}, which include 1, on {n} arcs)"
+  not_run: "{subject} is not yet evaluated against {reference}: no run is held"
+# DN-030 section 2 item 3: the descriptive count stands beside the line with no status word
+count: "{k} arcs within a factor of two of the measured maximum"
+# HB-212 item 4: every line that rests on Trial 7
+trial7: "one trial, five arcs, and the five arcs are of one release, not five independent releases"
+# BENCH-0's minimum (its statement: equivalence with each accepted tool) where no hazbrief run's difference from a
+# tool's is statistically significant: the plain state with its level and "one trial, five arcs" (HB-212 ADDENDUM-01
+# item 3, carried by HB-213); never "met", "equivalent" or "the same"
+minimum_same: "not statistically significant at 95 percent against HPAC or ALOHA (one trial, five arcs)"
+# the name each run is printed under on a status line (its full label is trial7_intervals.tsv's `label` column)
+names:
+  HPAC_complex: "HPAC's complex-source run"
+  HPAC_simple: "HPAC's simple-source run"
+  ALOHA: "ALOHA's run"
+  P_scichem: "hazbrief's SCICHEM run"
+  P_slab_rh20: "hazbrief's SLAB run"
+  P_slab_rh80: "hazbrief's SLAB run at 80 percent relative humidity"

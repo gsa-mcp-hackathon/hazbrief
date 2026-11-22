@@ -1,0 +1,20 @@
+regime	configuration	statistic	n	trials	mg (observed over predicted, geometric)	mg_low95	mg_high95	vg	fac2	fac3
+daytime	cause fields at the report's values	expmax	11	DT1 DT2 DT3 GF1 GF2 GF3	2.69848	2.00463	3.63249	3.58601	0.272727	0.545455
+daytime	cause fields at the report's values	mean	11	DT1 DT2 DT3 GF1 GF2 GF3	4.37403	3.31245	5.77583	14.8988	0.181818	0.272727
+daytime	shipped (HB-180)	expmax	11	DT1 DT2 DT3 GF1 GF2 GF3	2.66391	1.97895	3.58596	3.42625	0.272727	0.545455
+daytime	shipped (HB-180)	mean	11	DT1 DT2 DT3 GF1 GF2 GF3	4.32776	3.2774	5.71473	13.9548	0.181818	0.272727
+stable	cause fields at the report's values	expmax	8	DT4 TC45 TC47	2.07462	1.68768	2.55027	1.83053	0.375	1
+stable	cause fields at the report's values	mean	8	DT4 TC45 TC47	3.7073	3.1706	4.33485	5.83037	0	0.25
+stable	shipped (HB-180)	expmax	8	DT4 TC45 TC47	1.79822	1.41946	2.27805	1.62752	0.375	1
+stable	shipped (HB-180)	mean	8	DT4 TC45 TC47	3.5032	2.87361	4.27073	5.28586	0.125	0.25
+
+trial	request_changed	unit
+DT1	yes	runs/scichem__DT1.json.gz
+DT2	yes	runs/scichem__DT2.json.gz
+DT3	yes	runs/scichem__DT3.json.gz
+GF1	no	docs/evidence/hb180/runs_c/GF1__shipped__scichem.json.gz
+GF2	no	docs/evidence/hb180/runs_c/GF2__shipped__scichem.json.gz
+GF3	no	docs/evidence/hb180/runs_c/GF3__shipped__scichem.json.gz
+DT4	yes	runs/scichem__DT4.json.gz
+TC45	yes	runs/scichem__TC45.json.gz
+TC47	yes	runs/scichem__TC47.json.gz

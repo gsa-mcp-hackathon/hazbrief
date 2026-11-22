@@ -1,0 +1,9 @@
+material	config	statistic	n_arcs	mg (observed over predicted, geometric)
+Desert Tortoise (ammonia)	shipped	mean	3	10.1837
+Desert Tortoise (ammonia)	shipped	expmax	3	4.24288
+Desert Tortoise (ammonia)	mol	mean	3	3.39105
+Desert Tortoise (ammonia)	mol	expmax	3	1.78167
+Goldfish (hydrogen fluoride)	shipped	mean	8	3.13976
+Goldfish (hydrogen fluoride)	shipped	expmax	8	2.23726
+Goldfish (hydrogen fluoride)	mol	mean	8	3.09709
+Goldfish (hydrogen fluoride)	mol	expmax	8	2.11656

@@ -1,0 +1,177 @@
+internal search: 'incident command post support zone location upwind'  (0 hit(s), 3.428 s)
+  seldon@417b84ad7f43: 491 file(s)
+  squiddy@cbe87f388c2f: 1210 file(s)
+  ai-readiness-kg@662295e212f7: 159 file(s)
+  arnold@7c8c991da773: 503 file(s)
+  icsp_notebook@97e7fb6d014a: 148 file(s)
+  wintermute@2a78c392f4d9: 228 file(s)
+  workbench-audit@tree:c03bc86: 16 file(s), 16 untracked read from disk
+
+Receipts:
+- internal receipt: query "incident command post support zone location upwind" | repo seldon@417b84ad7f4318720c440b6ff1f03154d0257648 | hits none
+- internal receipt: query "incident command post support zone location upwind" | repo squiddy@cbe87f388c2f72dde3f708f7b4f55738aec94216 | hits none
+- internal receipt: query "incident command post support zone location upwind" | repo ai-readiness-kg@662295e212f7c4bb132cbeb2ade1e75ff2a4f218 | hits none
+- internal receipt: query "incident command post support zone location upwind" | repo arnold@7c8c991da773c9c4fe7d91f1f87d5962e004c793 | hits none
+- internal receipt: query "incident command post support zone location upwind" | repo icsp_notebook@97e7fb6d014acc38757928205984a30be1f131f2 | hits none
+- internal receipt: query "incident command post support zone location upwind" | repo wintermute@2a78c392f4d998227d2433338ea45aee82c67f1e | hits none
+- internal receipt: query "incident command post support zone location upwind" | repo workbench-audit@tree:c03bc86f0e4d7087c6f9cc417ee42ef66f7bc07268d5316448b4344c744b5412 | hits none
+<All keys matched successfully>
+library search: 'incident command post support zone location upwind'  (49 hit(s), 28.953 s)
+  graph library: release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab..., 49 row(s)
+    lesson:2026-03-27_arXiv_2211_09110  '102https://huggingface.co/bigscience/bloom/blob/main/README.md.  103https://app.electricitymaps.com/zone/FR.'
+    lesson:2026-05-09_arXiv_2602_22302  'Zibo Xiao, Jun Sun, and Junjie Chen. AIR: Improving agent safety through incident response.  arXiv preprint arXiv:2602.1'
+    lesson:2024-11-04_10_6028_nist_ai_600_1  'Practice and follow incident response plans for addressing the generation of   inappropriate or harmful content and adap'
+    lesson:2026-03-17_arXiv_2601_04748  'Stage 1: High Efficiency Zone  Stage 2: Cognitive Overload   (Flat)'
+    lesson:2026-02-22_arXiv_2505_08638  '"category": "Context Handling Failures",  "location": "03d52712671e1730", '
+    lesson:2026-02-22_arXiv_2507_06261  'Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capab'
+    lesson:2026-02-22_arXiv_2504_21776  'Ah, the park is in Tarpon Springs, FL, within Pinellas County, and the zip code is 34689.  The first search result menti'
+    lesson:2026-08-25_arXiv_2606_28856  'participating dataset against quality, fairness, and ML-readiness criteria before a site enters the  federation, and aga'
+    lesson:2026-02-22_arXiv_2401_13649  'Figure 14: Homepage of the Classifieds site. Users can search for keywords, filter by category, or post location.  22'
+    lesson:2026-02-22_arXiv_2506_09049  '\'Grasp\': "Command [\'Grasp\', \'object\']: Robot R\'s end effector performs a  ,→ grasping operation on a specified object.",'
+    lesson:2026-02-22_arXiv_2505_22648  '"evidence": "1468741 FL Pinellas Gulf of America, Florida, Fred Howard Park 2018 03100207  Crystal-Pithlachascotee eradi'
+    lesson:2026-02-22_arXiv_2310_08901  'A CON - ANK, BUL, SMY  ### Current Supply, Unit, and WP Count (Supply  ,→ Centers/Units/Welfare Points) ###  Austria: 5/'
+    lesson:2026-02-22_arXiv_2405_20309  '1. Tell me the count of comments that  have received more downvotes than  upvotes for the user who made the  latest post'
+    lesson:2026-06-14_arXiv_2604_00186  '• P4 (−20%): Exception handling. The task involves crisis response, ambiguous situa-tions, or novel judgments outside th'
+    lesson:2026-02-22_arXiv_2301_04104  '16K  24K  Battle Zone  0'
+    lesson:2026-02-22_arXiv_2507_21206  'Figure 9: Service Requirement Zone.'
+    lesson:2026-02-22_arXiv_2305_18323  'Plan : Use Google to search for news articles about Jorge Soler entering the attacking zone.  #E1 = Google[Jorge Soler a'
+    lesson:2026-02-22_arXiv_2503_09572  'Reasoning: After initiating the direction-finding process, the next  step is to input the starting location, which is ’H'
+    lesson:2026-03-17_arXiv_2602_02474  'This research/project is supported by the NTU Start-Up  Grant (#023284-00001), Singapore, and the MOE AcRF  Tier 1 Seed '
+    lesson:2026-02-22_arXiv_2407_08735  'represent the alternate landing zone. By planning a trajectory  to the appropriate recovery set, potential safety hazard'
+  graph seldon-biblio: unavailable: release_unavailable: library graph seldon-biblio has no served index: FATAL: no served export at /Users/brock/GitHub/seldon/graphs/seldon-biblio/exports/seldon_biblio_graph.json; run an admission first
+
+Receipts:
+- library receipt: query "incident command post support zone location upwind" | graph library | release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab8822258c824656a1b80365d3a4707f0456ddb4f73d508a120cd3 | rows lesson:2026-03-27_arXiv_2211_09110#p139:2250:2950-3058, lesson:2026-03-27_arXiv_2211_09110#p73:1435:2174-2377, lesson:2026-03-27_arXiv_2211_09110#p139:2249:2903-2948, lesson:2026-05-09_arXiv_2602_22302#p66:1139:948-1079, lesson:2026-05-09_arXiv_2602_22302#p6:47:1538-2869, lesson:2026-05-09_arXiv_2602_22302#p53:799:2487-3870, lesson:2024-11-04_10_6028_nist_ai_600_1#p49:709:855-1173, lesson:2024-11-04_10_6028_nist_ai_600_1#p20:175:450-701, lesson:2024-11-04_10_6028_nist_ai_600_1#p52:746:172-191, lesson:2026-03-17_arXiv_2601_04748#p2:28:496-563, lesson:2026-02-22_arXiv_2505_08638#p3:61:2677-2751, lesson:2026-02-22_arXiv_2505_08638#p20:293:2683-2832, lesson:2026-02-22_arXiv_2505_08638#p1:0:0-195, lesson:2026-02-22_arXiv_2507_06261#p36:470:0-646, lesson:2026-02-22_arXiv_2507_06261#p16:255:759-891, lesson:2026-02-22_arXiv_2507_06261#p30:440:977-1782, lesson:2026-02-22_arXiv_2504_21776#p28:521:3175-4117, lesson:2026-02-22_arXiv_2504_21776#p28:518:1352-2352, lesson:2026-02-22_arXiv_2504_21776#p32:596:3744-4350, lesson:2026-08-25_arXiv_2606_28856#p13:339:2614-3675, lesson:2026-08-25_arXiv_2606_28856#p13:340:3677-4285, lesson:2026-08-25_arXiv_2606_28856#p14:343:1158-1824, lesson:2026-02-22_arXiv_2401_13649#p22:323:0-117, lesson:2026-02-22_arXiv_2506_09049#p24:432:1120-1404, lesson:2026-02-22_arXiv_2506_09049#p24:431:841-1118, lesson:2026-02-22_arXiv_2505_22648#p23:463:266-740, lesson:2026-02-22_arXiv_2505_22648#p23:476:2364-3196, lesson:2026-02-22_arXiv_2505_22648#p22:440:451-555, lesson:2026-02-22_arXiv_2310_08901#p57:1125:204-1004, lesson:2026-02-22_arXiv_2310_08901#p49:826:348-816, lesson:2026-02-22_arXiv_2310_08901#p48:800:0-363, lesson:2026-02-22_arXiv_2405_20309#p16:267:94-437, lesson:2026-02-22_arXiv_2405_20309#p21:408:1652-1753, lesson:2026-02-22_arXiv_2405_20309#p21:407:1538-1650, lesson:2026-06-14_arXiv_2604_00186#p8:98:1279-2338, lesson:2026-02-22_arXiv_2301_04104#p31:779:181-205, lesson:2026-02-22_arXiv_2301_04104#p25:524:229-261, lesson:2026-02-22_arXiv_2301_04104#p26:611:14-572, lesson:2026-02-22_arXiv_2507_21206#p25:295:322-357, lesson:2026-02-22_arXiv_2507_21206#p58:652:1501-2085, lesson:2026-02-22_arXiv_2507_21206#p44:503:249-449, lesson:2026-02-22_arXiv_2305_18323#p21:399:678-822, lesson:2026-02-22_arXiv_2305_18323#p21:396:158-444, lesson:2026-02-22_arXiv_2305_18323#p24:451:1477-1528, lesson:2026-02-22_arXiv_2503_09572#p14:238:620-902, lesson:2026-02-22_arXiv_2503_09572#p5:95:1294-1407, lesson:2026-03-17_arXiv_2602_02474#p9:263:1538-1712, lesson:2026-02-22_arXiv_2407_08735#p3:65:5041-5309, lesson:2026-02-22_arXiv_2407_08735#p24:600:1531-3249
+internal search: 'staging area location criteria'  (1 hit(s), 2.705 s)
+  seldon@417b84ad7f43: 491 file(s)
+  squiddy@cbe87f388c2f: 1210 file(s)
+  ai-readiness-kg@662295e212f7: 159 file(s)
+  arnold@7c8c991da773: 503 file(s)
+  icsp_notebook@97e7fb6d014a: 148 file(s)
+  wintermute@2a78c392f4d9: 228 file(s)
+  workbench-audit@tree:c03bc86: 16 file(s), 16 untracked read from disk
+     0.110  squiddy:docs/evidence/hb213/lifted/decisions.md:9  (lines 9-1089)
+
+Receipts:
+- internal receipt: query "staging area location criteria" | repo seldon@417b84ad7f4318720c440b6ff1f03154d0257648 | hits none
+- internal receipt: query "staging area location criteria" | repo squiddy@cbe87f388c2f72dde3f708f7b4f55738aec94216 | hits docs/evidence/hb213/lifted/decisions.md:9
+- internal receipt: query "staging area location criteria" | repo ai-readiness-kg@662295e212f7c4bb132cbeb2ade1e75ff2a4f218 | hits none
+- internal receipt: query "staging area location criteria" | repo arnold@7c8c991da773c9c4fe7d91f1f87d5962e004c793 | hits none
+- internal receipt: query "staging area location criteria" | repo icsp_notebook@97e7fb6d014acc38757928205984a30be1f131f2 | hits none
+- internal receipt: query "staging area location criteria" | repo wintermute@2a78c392f4d998227d2433338ea45aee82c67f1e | hits none
+- internal receipt: query "staging area location criteria" | repo workbench-audit@tree:c03bc86f0e4d7087c6f9cc417ee42ef66f7bc07268d5316448b4344c744b5412 | hits none
+<All keys matched successfully>
+library search: 'staging area location criteria'  (42 hit(s), 25.997 s)
+  graph library: release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab..., 42 row(s)
+    lesson:2026-02-22_arXiv_2404_04667  'the abdomen for staging. The query specifically asked for the size of the  primary tumor, presence of any metastases, an'
+    lesson:2026-03-13_arXiv_2204_07309  'Ingest staging  Entity store Entity Index orchestration Entity retrieval  Distributed   object store  Elastic '
+    lesson:2026-02-22_arXiv_2403_19267  'Table 18: Scoring criteria for stage performance tasks.'
+    lesson:2026-03-17_arXiv_2601_04748  'Stage 1: High Efficiency Zone  Stage 2: Cognitive Overload   (Flat)'
+    lesson:2026-02-22_arXiv_2305_16504  'This task is designed to replicate the process of searching for homes at a specific location based on  certain criteria.'
+    lesson:2026-02-22_arXiv_2310_08740  '7.6 Capacity of Staged Planning'
+    lesson:2026-02-22_arXiv_2504_21027  '[26] Hongyuan Su, Yu Zheng, Jingtao Ding, Depeng Jin, and Yong Li. 2024. Large-scale Urban Facility Location Selection w'
+    lesson:2026-02-22_arXiv_2507_07998  "Let's crop a region around the board and display it for better inspection.  It appears the crop region was incorrect; it"
+    lesson:2026-05-23_arXiv_2305_08703  '(Dr. Weldon,children,Charles)  (people,location,location)  (location,contains,location)  (people,children,person)  (peop'
+    lesson:2024-11-04_10_6028_nist_ai_600_1  'Establish minimum thresholds for performance or assurance criteria and review as   part of deployment approval (“go/”no-'
+    lesson:2026-02-22_arXiv_2406_04046  'location f1 4f and location f0 4f are connected, location f1 4f and location f2 4f are  connected, location f0 4f and lo'
+    dynsteer2026  '• Stage-wise Dynamic Evaluation: We segment rollouts at necessary execution-step nodes and  adapt multi-level review rou'
+    lesson:2026-03-17_arXiv_2602_03587  'THE PLAY AREA INCLUDES: Play area'
+    lesson:2026-02-22_arXiv_2504_15585  'bustness, a key dimension of deployment-stage evaluation  concerns the trustfulness and fairness of LLM-generated con-te'
+    openalex:W4292779060  'Area(g) The area of g'
+    lesson:2026-05-09_10_1145_3805621_3807648  'Phase 1 (structured staging): at eviction/downgrade bound-aries or lifecycle hooks (flush/reset/compaction), the harness'
+    pombal2026selfpref  '{"criteria_met": true},  {"criteria_met": false},  {"criteria_met": true}  ]'
+    lesson:2026-02-22_arXiv_2408_15971  'Metrics. In Stage 1 and Stage 2, we primarily use the For-ward Distance (F Dis) as the evaluation metric, since the  goa'
+    lesson:2026-03-01_arXiv_2602_23258  '**[Area of Concern]**: {trigger_condition}  —'
+    lesson:2026-02-22_arXiv_2312_05180  '(D) apartment  (E) roadblock  A: The answer must be a place with a lot of people. Of the above choices, only populated a'
+  graph seldon-biblio: unavailable: release_unavailable: library graph seldon-biblio has no served index: FATAL: no served export at /Users/brock/GitHub/seldon/graphs/seldon-biblio/exports/seldon_biblio_graph.json; run an admission first
+
+Receipts:
+- library receipt: query "staging area location criteria" | graph library | release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab8822258c824656a1b80365d3a4707f0456ddb4f73d508a120cd3 | rows lesson:2026-02-22_arXiv_2404_04667#p63:729:368-523, lesson:2026-02-22_arXiv_2404_04667#p58:660:85-133, lesson:2026-02-22_arXiv_2404_04667#p43:474:1570-1683, lesson:2026-03-13_arXiv_2204_07309#p6:200:880-990, lesson:2026-02-22_arXiv_2403_19267#p31:390:0-55, lesson:2026-02-22_arXiv_2403_19267#p29:371:2593-2909, lesson:2026-02-22_arXiv_2403_19267#p9:113:621-1073, lesson:2026-03-17_arXiv_2601_04748#p2:28:496-563, lesson:2026-02-22_arXiv_2305_16504#p15:278:2958-3125, lesson:2026-02-22_arXiv_2305_16504#p15:279:3127-3174, lesson:2026-02-22_arXiv_2305_16504#p21:370:1910-2009, lesson:2026-02-22_arXiv_2310_08740#p9:154:971-1002, lesson:2026-02-22_arXiv_2310_08740#p12:200:1037-1084, lesson:2026-02-22_arXiv_2310_08740#p8:151:2648-3357, lesson:2026-02-22_arXiv_2504_21027#p8:196:7273-7553, lesson:2026-02-22_arXiv_2507_07998#p6:68:997-1273, lesson:2026-02-22_arXiv_2507_07998#p26:429:1468-1576, lesson:2026-02-22_arXiv_2507_07998#p25:408:692-851, lesson:2026-05-23_arXiv_2305_08703#p3:37:407-602, lesson:2026-05-23_arXiv_2305_08703#p3:36:265-405, lesson:2026-05-23_arXiv_2305_08703#p4:79:1033-1074, lesson:2024-11-04_10_6028_nist_ai_600_1#p18:157:1999-2266, lesson:2026-02-22_arXiv_2406_04046#p21:315:677-1083, lesson:2026-02-22_arXiv_2406_04046#p32:481:608-759, lesson:2026-02-22_arXiv_2406_04046#p34:516:1172-1391, dynsteer2026#p2:25:1508-1758, dynsteer2026#p5:70:1463-1918, dynsteer2026#p6:129:1036-1551, lesson:2026-03-17_arXiv_2602_03587#p57:1184:2732-2765, lesson:2026-02-22_arXiv_2504_15585#p25:653:590-1056, lesson:2026-02-22_arXiv_2504_15585#p11:370:2075-3062, openalex:W4292779060#p3:29:376-397, lesson:2026-05-09_10_1145_3805621_3807648#p12:245:1720-2034, lesson:2026-05-09_10_1145_3805621_3807648#p12:246:2036-2583, pombal2026selfpref#p13:333:2244-2320, pombal2026selfpref#p16:392:2867-2961, pombal2026selfpref#p2:28:412-431, lesson:2026-02-22_arXiv_2408_15971#p5:109:240-1033, lesson:2026-02-22_arXiv_2408_15971#p3:65:178-281, lesson:2026-03-01_arXiv_2602_23258#p16:365:700-745, lesson:2026-03-01_arXiv_2602_23258#p17:377:812-857, lesson:2026-02-22_arXiv_2312_05180#p13:194:1221-1472
+internal search: 'triage casualty collection point location hazardous materials incident'  (0 hit(s), 2.305 s)
+  seldon@417b84ad7f43: 491 file(s)
+  squiddy@cbe87f388c2f: 1210 file(s)
+  ai-readiness-kg@662295e212f7: 159 file(s)
+  arnold@7c8c991da773: 503 file(s)
+  icsp_notebook@97e7fb6d014a: 148 file(s)
+  wintermute@2a78c392f4d9: 228 file(s)
+  workbench-audit@tree:c03bc86: 16 file(s), 16 untracked read from disk
+
+Receipts:
+- internal receipt: query "triage casualty collection point location hazardous materials incident" | repo seldon@417b84ad7f4318720c440b6ff1f03154d0257648 | hits none
+- internal receipt: query "triage casualty collection point location hazardous materials incident" | repo squiddy@cbe87f388c2f72dde3f708f7b4f55738aec94216 | hits none
+- internal receipt: query "triage casualty collection point location hazardous materials incident" | repo ai-readiness-kg@662295e212f7c4bb132cbeb2ade1e75ff2a4f218 | hits none
+- internal receipt: query "triage casualty collection point location hazardous materials incident" | repo arnold@7c8c991da773c9c4fe7d91f1f87d5962e004c793 | hits none
+- internal receipt: query "triage casualty collection point location hazardous materials incident" | repo icsp_notebook@97e7fb6d014acc38757928205984a30be1f131f2 | hits none
+- internal receipt: query "triage casualty collection point location hazardous materials incident" | repo wintermute@2a78c392f4d998227d2433338ea45aee82c67f1e | hits none
+- internal receipt: query "triage casualty collection point location hazardous materials incident" | repo workbench-audit@tree:c03bc86f0e4d7087c6f9cc417ee42ef66f7bc07268d5316448b4344c744b5412 | hits none
+<All keys matched successfully>
+library search: 'triage casualty collection point location hazardous materials incident'  (47 hit(s), 23.45 s)
+  graph library: release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab..., 47 row(s)
+    lesson:2026-02-22_arXiv_2502_08916  '1. Triage agent'
+    lesson:2026-05-09_arXiv_2602_22302  'Healthcare triage 20 0.9744 0.9540 0.0334 0.9755'
+    lesson:2026-02-03_arXiv_2311_07509  ', a standard model created by Object Management Group (OMG), a standards development organization. This  OMG specificati'
+    lesson:2026-08-25_arXiv_2606_28856  'autonomous triage   impossible without   auditable reasoning   chains.'
+    lesson:2026-02-22_arXiv_2506_01391  '"POINT": {  "$ref": "#/$defs/Location",  "description": "点击屏幕上的指定位置"  },'
+    lesson:2026-02-22_arXiv_2506_04405  'Acrapol Nimmolrat, Krongkarn Sutham, and Orawit Thinnukool. Patient triage system for supporting  the operation of dispa'
+    lesson:2024-11-04_10_6028_nist_ai_600_1  'Establish organizational policies and procedures for after action reviews of GAI   system incident response and incident'
+    lesson:2026-02-22_arXiv_2505_08638  '"category": "Context Handling Failures",  "location": "03d52712671e1730", '
+    lesson:2026-02-22_arXiv_2502_05453  '125 final_next_action_reason: str  126 final_target_material_to_collect: NavigationDestinationItems = Field(description='
+    lesson:2026-02-22_arXiv_2507_02616  'Richard C Wuerz, Leslie W Milne, David R Eitel, Deb-bie Travers, and Nicki Gilboy. 2000. Reliability and  validity of a '
+    lesson:2026-02-22_arXiv_2504_21776  '**Case Study from UNAIR Repository:** - **Location:** Rural villages in Indonesia, Vietnam, and the  Philippines - **Int'
+    lesson:2026-03-17_arXiv_2601_10338  'Toxicity Detects harmful content (configurable threshold)  Table 20: LLM-Guard scanner mapping. †Scanners con-tribute co'
+    lesson:2026-06-16_arXiv_2605_31468  'Feasibility triage – 184  op prompts → 156 feasi-ble; 28 screened by work-load mismatch or under-specification.  Outcome'
+    lesson:2026-02-22_arXiv_2411_07228  'Question: Is this compound classified as a hazardous substance with documented toxicity?  Observation'
+    lesson:2026-02-22_arXiv_2412_11716  'Upon receiving a chief complaint, the doctor agent  retrieves relevant historical triage data from the  library with sim'
+    lesson:2026-02-21_arXiv_2602_07755  '"Avoid stepping onto hazardous tiles (water/lava/traps) unless  necessary; prefer safe passable neighbors."  )'
+    lesson:2026-03-17_arXiv_2602_03587  'Class-4 Hazmat delivery violates safety protocols.'
+    lesson:2026-02-22_arXiv_2508_09736  '18: Remove all edges incident to f  19: end if'
+    lesson:2026-02-22_arXiv_2401_07128  'patients and 49,785 hospital admissions informa-tion in critical care units at the Beth Israel Dea-coness Medical Center'
+    lesson:2026-02-22_arXiv_2503_09572  'Reasoning: After initiating the direction-finding process, the next  step is to input the starting location, which is ’H'
+  graph seldon-biblio: unavailable: release_unavailable: library graph seldon-biblio has no served index: FATAL: no served export at /Users/brock/GitHub/seldon/graphs/seldon-biblio/exports/seldon_biblio_graph.json; run an admission first
+
+Receipts:
+- library receipt: query "triage casualty collection point location hazardous materials incident" | graph library | release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab8822258c824656a1b80365d3a4707f0456ddb4f73d508a120cd3 | rows lesson:2026-02-22_arXiv_2502_08916#p12:190:136-151, lesson:2026-02-22_arXiv_2502_08916#p12:194:707-734, lesson:2026-02-22_arXiv_2502_08916#p12:191:153-648, lesson:2026-05-09_arXiv_2602_22302#p27:452:561-609, lesson:2026-05-09_arXiv_2602_22302#p25:421:554-766, lesson:2026-05-09_arXiv_2602_22302#p66:1139:948-1079, lesson:2026-02-03_arXiv_2311_07509#p3:51:1125-1881, lesson:2026-02-03_arXiv_2311_07509#p2:28:2009-2075, lesson:2026-02-03_arXiv_2311_07509#p3:50:1008-1123, lesson:2026-08-25_arXiv_2606_28856#p25:494:2226-2296, lesson:2026-08-25_arXiv_2606_28856#p12:316:3121-3637, lesson:2026-08-25_arXiv_2606_28856#p25:498:2347-2539, lesson:2026-02-22_arXiv_2506_01391#p27:409:78-150, lesson:2026-02-22_arXiv_2506_04405#p14:264:297-507, lesson:2024-11-04_10_6028_nist_ai_600_1#p20:175:450-701, lesson:2024-11-04_10_6028_nist_ai_600_1#p52:746:172-191, lesson:2024-11-04_10_6028_nist_ai_600_1#p26:293:16-576, lesson:2026-02-22_arXiv_2505_08638#p3:61:2677-2751, lesson:2026-02-22_arXiv_2505_08638#p20:293:2683-2832, lesson:2026-02-22_arXiv_2505_08638#p3:71:3570-3639, lesson:2026-02-22_arXiv_2502_05453#p15:249:475-618, lesson:2026-02-22_arXiv_2502_05453#p227:3557:2126-2271, lesson:2026-02-22_arXiv_2502_05453#p339:5169:0-218, lesson:2026-02-22_arXiv_2507_02616#p11:188:0-461, lesson:2026-02-22_arXiv_2507_02616#p9:169:1989-2204, lesson:2026-02-22_arXiv_2507_02616#p13:225:1550-1628, lesson:2026-02-22_arXiv_2504_21776#p32:596:3744-4350, lesson:2026-02-22_arXiv_2504_21776#p32:586:564-850, lesson:2026-03-17_arXiv_2601_10338#p22:597:3488-3674, lesson:2026-03-17_arXiv_2601_10338#p20:541:4544-4560, lesson:2026-06-16_arXiv_2605_31468#p12:152:511-731, lesson:2026-02-22_arXiv_2411_07228#p21:381:1147-1248, lesson:2026-02-22_arXiv_2411_07228#p21:371:9-187, lesson:2026-02-22_arXiv_2412_11716#p14:225:2949-3335, lesson:2026-02-22_arXiv_2412_11716#p12:199:3487-3802, lesson:2026-02-22_arXiv_2412_11716#p1:25:2269-2391, lesson:2026-02-21_arXiv_2602_07755#p63:1287:1189-1299, lesson:2026-02-21_arXiv_2602_07755#p48:940:1354-1437, lesson:2026-02-21_arXiv_2602_07755#p50:981:1355-1523, lesson:2026-03-17_arXiv_2602_03587#p12:281:2185-2235, lesson:2026-03-17_arXiv_2602_03587#p12:273:1736-1780, lesson:2026-03-17_arXiv_2602_03587#p12:287:2516-3498, lesson:2026-02-22_arXiv_2508_09736#p29:607:934-980, lesson:2026-02-22_arXiv_2401_07128#p13:319:2897-3281, lesson:2026-02-22_arXiv_2401_07128#p13:322:3348-3765, lesson:2026-02-22_arXiv_2401_07128#p17:382:3356-3685, lesson:2026-02-22_arXiv_2503_09572#p14:238:620-902
+internal search: 'facility siting suitability analysis location allocation'  (0 hit(s), 2.267 s)
+  seldon@417b84ad7f43: 491 file(s)
+  squiddy@cbe87f388c2f: 1210 file(s)
+  ai-readiness-kg@662295e212f7: 159 file(s)
+  arnold@7c8c991da773: 503 file(s)
+  icsp_notebook@97e7fb6d014a: 148 file(s)
+  wintermute@2a78c392f4d9: 228 file(s)
+  workbench-audit@tree:c03bc86: 16 file(s), 16 untracked read from disk
+
+Receipts:
+- internal receipt: query "facility siting suitability analysis location allocation" | repo seldon@417b84ad7f4318720c440b6ff1f03154d0257648 | hits none
+- internal receipt: query "facility siting suitability analysis location allocation" | repo squiddy@cbe87f388c2f72dde3f708f7b4f55738aec94216 | hits none
+- internal receipt: query "facility siting suitability analysis location allocation" | repo ai-readiness-kg@662295e212f7c4bb132cbeb2ade1e75ff2a4f218 | hits none
+- internal receipt: query "facility siting suitability analysis location allocation" | repo arnold@7c8c991da773c9c4fe7d91f1f87d5962e004c793 | hits none
+- internal receipt: query "facility siting suitability analysis location allocation" | repo icsp_notebook@97e7fb6d014acc38757928205984a30be1f131f2 | hits none
+- internal receipt: query "facility siting suitability analysis location allocation" | repo wintermute@2a78c392f4d998227d2433338ea45aee82c67f1e | hits none
+- internal receipt: query "facility siting suitability analysis location allocation" | repo workbench-audit@tree:c03bc86f0e4d7087c6f9cc417ee42ef66f7bc07268d5316448b4344c744b5412 | hits none
+<All keys matched successfully>
+library search: 'facility siting suitability analysis location allocation'  (48 hit(s), 24.283 s)
+  graph library: release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab..., 48 row(s)
+    lesson:2026-02-22_arXiv_2410_12112  'Published as a conference paper at ICLR 2025  Table 1: Optimal rate (%) comparison of LLMFP with baselines on 5 multi-co'
+    lesson:2026-02-22_arXiv_2504_21027  '[26] Hongyuan Su, Yu Zheng, Jingtao Ding, Depeng Jin, and Yong Li. 2024. Large-scale Urban Facility Location Selection w'
+    lesson:2026-03-17_arXiv_2601_21557  '1. Superficial Pattern Matching: Model sees “$X facility” and selects MaximumBorrowingCapacity without deeper  analysis'
+    lesson:2026-02-22_arXiv_2501_09136  '• Resource Allocation: Efficiently distributing tasks among tiers to avoid bottlenecks is non-trivial.  Use Case: Financ'
+    lesson:2026-05-09_arXiv_2505_08245  'Suitability Validity'
+    lesson:2026-02-22_arXiv_2406_12276  '[20] book_hotel: Books a hotel based on location and preferences. Arguments: location (str), *preferences (variable numb'
+    lesson:2026-02-22_arXiv_2305_16504  '• set_location which sets the desired location;'
+    lesson:2026-02-22_10_18653_v1_2025_naacl_long_36  'root-3-1: Budget Allocation  root-3-2: Competitive Analysis  root-3-2-1: Assess Remaining Competitors  root-3-2-2: Estim'
+    lesson:2026-02-22_arXiv_2502_18836  '- Environment: Known campus map with fixed locations  - Goal: Visit all waypoints within time frame  - Constraints: Loca'
+    lesson:2026-02-22_arXiv_2505_05428  'Allocated Workers  Fig. 8: Execution trace of the Academy MOFA workflow. (Top)  Active tasks per agent. The vertical axi'
+    lesson:2026-02-22_arXiv_2504_21716  'The experiment is conducted in an artificial household  environment, where objects must be assigned to correct  destinat'
+    lesson:2026-02-21_arXiv_2506_15672  'As shown in Code 1, the ADAS-discovered workflow assigns distinct roles to specialized agents,  including itinerary, bud'
+    lesson:2026-02-22_arXiv_2307_01928  'with the correct label (here and in Section 3.3, we assume that there is a unique correct candidate plan;  we provide an'
+    lesson:2026-02-22_arXiv_2503_09572  'Reasoning: After initiating the direction-finding process, the next  step is to input the starting location, which is ’H'
+    lesson:2026-02-22_arXiv_2405_20309  '{{location/address_1}} to  {{location/address_2}} using  {{transportation}} options.  Capability #48:'
+    lesson:2026-02-22_arXiv_2505_24876  '1. Identify the type of location shown in the video.  2. Determine whether the setting appears open to customers or clos'
+    lesson:2026-02-22_arXiv_2506_24019  'Given the volume grid maintained in the semantic memory introduced in Section 4.1.1, we construct  the occupancy map and'
+    lesson:2026-06-14_arXiv_2604_00186  'A structural limitation of purely geography-based adoption models is that remote and hy-brid work arrangements decouple '
+    lesson:2026-03-17_arXiv_2303_18223  '• Position interpolation. This method downscales the po-sition indices within the original context window, to avoid  out'
+    lesson:2026-08-25_arXiv_2606_08317  'Location   intelligence  Low for   proximity and   containment   queries'
+  graph seldon-biblio: unavailable: release_unavailable: library graph seldon-biblio has no served index: FATAL: no served export at /Users/brock/GitHub/seldon/graphs/seldon-biblio/exports/seldon_biblio_graph.json; run an admission first
+
+Receipts:
+- library receipt: query "facility siting suitability analysis location allocation" | graph library | release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab8822258c824656a1b80365d3a4707f0456ddb4f73d508a120cd3 | rows lesson:2026-02-22_arXiv_2410_12112#p8:118:0-244, lesson:2026-02-22_arXiv_2410_12112#p21:278:661-798, lesson:2026-02-22_arXiv_2410_12112#p15:215:3868-4069, lesson:2026-02-22_arXiv_2504_21027#p8:196:7273-7553, lesson:2026-03-17_arXiv_2601_21557#p32:563:2466-2585, lesson:2026-03-17_arXiv_2601_21557#p29:521:2342-2458, lesson:2026-03-17_arXiv_2601_21557#p29:510:0-172, lesson:2026-02-22_arXiv_2501_09136#p19:217:906-1045, lesson:2026-05-09_arXiv_2505_08245#p27:450:521-541, lesson:2026-02-22_arXiv_2406_12276#p21:481:3758-4198, lesson:2026-02-22_arXiv_2406_12276#p21:480:3306-3756, lesson:2026-02-22_arXiv_2305_16504#p15:279:3127-3174, lesson:2026-02-22_arXiv_2305_16504#p15:282:3427-3905, lesson:2026-02-22_arXiv_2305_16504#p21:370:1910-2009, lesson:2026-02-22_10_18653_v1_2025_naacl_long_36#p19:501:1991-2138, lesson:2026-02-22_10_18653_v1_2025_naacl_long_36#p20:525:675-760, lesson:2026-02-22_10_18653_v1_2025_naacl_long_36#p18:480:3817-3868, lesson:2026-02-22_arXiv_2502_18836#p3:77:3837-4141, lesson:2026-02-22_arXiv_2502_18836#p22:699:138-450, lesson:2026-02-22_arXiv_2502_18836#p3:79:4275-4459, lesson:2026-02-22_arXiv_2505_05428#p9:258:1128-2365, lesson:2026-02-22_arXiv_2505_05428#p12:313:847-1251, lesson:2026-02-22_arXiv_2504_21716#p4:49:97-667, lesson:2026-02-22_arXiv_2504_21716#p4:64:4148-4732, lesson:2026-02-21_arXiv_2506_15672#p40:991:1199-2097, lesson:2026-02-21_arXiv_2506_15672#p33:845:919-1131, lesson:2026-02-21_arXiv_2506_15672#p31:769:53-1804, lesson:2026-02-22_arXiv_2307_01928#p5:130:0-223, lesson:2026-02-22_arXiv_2307_01928#p15:334:1305-1804, lesson:2026-02-22_arXiv_2307_01928#p16:356:0-641, lesson:2026-02-22_arXiv_2503_09572#p14:238:620-902, lesson:2026-02-22_arXiv_2503_09572#p17:292:999-1100, lesson:2026-02-22_arXiv_2503_09572#p17:291:788-997, lesson:2026-02-22_arXiv_2405_20309#p21:408:1652-1753, lesson:2026-02-22_arXiv_2405_20309#p21:394:530-616, lesson:2026-02-22_arXiv_2405_20309#p21:407:1538-1650, lesson:2026-02-22_arXiv_2505_24876#p46:900:217-649, lesson:2026-02-22_arXiv_2505_24876#p38:811:951-1386, lesson:2026-02-22_arXiv_2506_24019#p19:279:316-1051, lesson:2026-02-22_arXiv_2506_24019#p20:292:661-851, lesson:2026-06-14_arXiv_2604_00186#p9:105:3011-3373, lesson:2026-06-14_arXiv_2604_00186#p10:115:1726-2090, lesson:2026-06-14_arXiv_2604_00186#p11:132:508-862, lesson:2026-03-17_arXiv_2303_18223#p78:1433:4616-4901, lesson:2026-03-17_arXiv_2303_18223#p4:122:5171-5409, lesson:2026-08-25_arXiv_2606_08317#p12:241:2812-2884, lesson:2026-08-25_arXiv_2606_08317#p4:40:0-1012, lesson:2026-08-25_arXiv_2606_08317#p2:19:3428-4291

@@ -1,0 +1,43 @@
+# hazbrief.evidence: every path and constant the evidence store reads (DN-010; HB-39). Paths are relative to the
+# repository root. The server never reads this file (DN-010 D2, D7: the store is the application's).
+
+# The store (DN-010 D2). `HAZBRIEF_EVIDENCE_STORE` in the environment overrides it (a test, a second store).
+store_dir: evidence/store
+store_env: HAZBRIEF_EVIDENCE_STORE
+
+# The source catalog, the one place a horizon lives (DN-010 s3.2).
+catalog: docs/sources/catalog.yaml
+
+# The record's JSON Schema (DN-010 D3).
+schema: docs/schema/evidence_record.schema.json
+
+# The committed seed (DN-010 s3.4): the exchanges the migration reads, and the store it writes them into. The seed
+# is a store of its own, committed whole, so the working store (gitignored) never rewrites a tracked file: its
+# ro-crate-metadata.json describes the seed and only the seed (HB-39 RESULT, the seed's location).
+seed_exchanges_dir: fixtures/exchanges
+seed_store_dir: evidence/seed
+
+# The tool-call seed (HB-40 ADDENDUM-00 point 1): one scenario's seven tool calls, made by the recording client against
+# the recorded server (replay), each `used` pointing at the exchange records of evidence/seed it read. A store of its
+# own for the same reason as the seed: its times are the calls', so it is idempotent (a call already held is not
+# made again), not reproducible from nothing byte for byte. The scenario is the one HB-39's client test runs.
+seed_calls_store_dir: evidence/seed_calls
+seed_calls_scenario: csx-point-of-rocks-day
+
+# The scenario-brief seed (HB-45 step 8): the seven tool calls on every other fixture scenario that replays end to end,
+# made the same way into a store of their own, so the tool-call seed above stays one scenario (its tests and the
+# evidence fixtures read it as one). A tool that answers a structured error (an unresolved material) is recorded as
+# answered: the brief shows that section degraded. `hazbrief brief --replay` reads both seeds.
+seed_briefs_store_dir: evidence/seed_briefs
+
+# RO-Crate (DN-010 D6): the manifest written at the store root, and the spec version it declares.
+crate_manifest: ro-crate-metadata.json
+crate_context: https://w3id.org/ro/crate/1.1/context
+crate_conforms_to: https://w3id.org/ro/crate/1.1
+
+# The recording client (HB-39 step 4): the server it spawns over stdio, from the repository root.
+server_entry: main.py
+# Seconds a tool call may take before the client gives up on it. build_ics_201 composes six tools and the TIGERweb
+# roads image, each upstream call bounded by the server's own 30 s timeout (config.upstream_timeout_seconds); four
+# of those in sequence is the bound chosen here.
+call_timeout_s: 120

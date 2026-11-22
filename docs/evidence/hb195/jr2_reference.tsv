@@ -1,0 +1,79 @@
+source	trial	arc_m	quantity	value	unit	table	page	kind	note
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1, 6, 7	200, 500, 1000, 2000, 5000, 11000	arcs at which every model reported arc maximum C (raw, 20-s and 60-s averages)	0.2, 0.5, 1, 2, 5, and 11 km	km		17	stated	the comparison's distances
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1, 6, 7	same arcs	cloud widths and heights reported by every model	200 and 20 ppm	ppm		17	stated	to 200 and 20 ppm at the same distances
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1		release duration	20.3	s	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1		emission rate	224.0	kg/s	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1		mass	4,547	kg	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1		average wind speed near source at z = 2 m	1.5	m/s	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	6		release duration	32.2	s	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	6		emission rate	260.0	kg/s	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	6		mass	8,372	kg	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	6		average wind speed near source at z = 2 m	2.4	m/s	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	7		release duration	33.3	s	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	7		emission rate	259.0	kg/s	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	7		mass	8,625	kg	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	7		average wind speed near source at z = 2 m	4.0	m/s	1	13	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1		friction velocity u*	0.108	m/s	2	23	table	30-min average at release (note 3)
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	6		friction velocity u*	0.093	m/s	2	23	table	30-min average at release (note 3)
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	7		friction velocity u*	0.210	m/s	2	23	table	30-min average at release (note 3)
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1		inverse Monin-Obukhov length	0.068	1/m	2	23	table	the length to use for stability (note 5)
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	6		inverse Monin-Obukhov length	0.056	1/m	2	23	table	the length to use for stability (note 5)
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	7		inverse Monin-Obukhov length	0.0229	1/m	2	23	table	the length to use for stability (note 5)
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1		Pasquill class	E/F		2	23	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	6		Pasquill class	E		2	23	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	7		Pasquill class	D/E		2	23	table	
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1, 6, 7		meteorology held constant for the comparison	first 30 min after release			16	stated	and for the first 2 or 3 km of cloud travel; in reality varying over the one to two hours the cloud crossed the 11 km grid
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1, 6, 7	all	arc maximum C values reported saturated	6 out of 18	count		26	stated	so the actual arc max C likely exceeded the reported values; saturated data were retained
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1, 6	500	MiniRAE arc max C saturation level	3,300	ppm		26	stated	after correction (Chang et al. 2021)
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1, 6, 7	5000 or 11000	ToxiRAE saturation level	50	ppm		26	stated	about 50 ppm
+fox-2021-jack-rabbit-ii-overview-accepted-manuscript	1, 6, 7	all	measured arc maximum C	Chang et al. (2021)			26	not tabulated	Fox tabulates no measured arc maxima; it refers to Chang et al. (2021), which is not held
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	500	time of peak	300	s	1	10	table	peak sensor saturated; time of peak estimated (Table 1 note 1)
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	500	cloud width to 20 ppm	700	m	1	10	table	full extent not measurable; doubled half-width (Table 1 note 2); 1-sigma 15 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	500	cloud width to 200 ppm	618	m	1	10	table	full extent not measurable; doubled half-width (Table 1 note 2); 1-sigma 15 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	1000	time of peak	630	s	1	10	table	
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	1000	cloud width to 20 ppm	651	m	1	10	table	1-sigma 30 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	1000	cloud width to 200 ppm	568	m	1	10	table	1-sigma 30 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	2000	time of peak	936	s	1	10	table	
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	2000	cloud width to 20 ppm	763	m	1	10	table	1-sigma 60 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	2000	cloud width to 200 ppm	279	m	1	10	table	1-sigma 60 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	500	time of peak	222	s	1	10	table	peak sensor saturated; time of peak estimated (Table 1 note 1)
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	500	cloud width to 20 ppm	403	m	1	10	table	1-sigma 7.5 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	500	cloud width to 200 ppm	390	m	1	10	table	1-sigma 7.5 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	1000	time of peak	423	s	1	10	table	
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	1000	cloud width to 20 ppm	485	m	1	10	table	1-sigma 15 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	1000	cloud width to 200 ppm	390	m	1	10	table	1-sigma 15 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	2000	time of peak	735	s	1	10	table	
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	2000	cloud width to 20 ppm	495	m	1	10	table	1-sigma 30 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	2000	cloud width to 200 ppm	325	m	1	10	table	1-sigma 30 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	500	time of peak	135	s	1	10	table	peak sensor saturated; time of peak estimated (Table 1 note 1)
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	500	cloud width to 20 ppm	313	m	1	10	table	1-sigma 25 m (RSS of 11 and 22 m, Table 1 note 3)
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	500	cloud width to 200 ppm	292	m	1	10	table	1-sigma 25 m (Table 1 note 3)
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	1000	time of peak	249	s	1	10	table	peak sensor saturated; time of peak estimated (Table 1 note 1)
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	1000	cloud width to 20 ppm	364	m	1	10	table	1-sigma 25 m (Table 1 note 4)
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	1000	cloud width to 200 ppm	339	m	1	10	table	1-sigma 25 m (Table 1 note 4)
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	2000	time of peak	444	s	1	10	table	
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	2000	cloud width to 20 ppm	391	m	1	10	table	1-sigma 30 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	2000	cloud width to 200 ppm	301	m	1	10	table	1-sigma 30 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	200	cloud height to 20 ppm	9.2	m	2	14	table	averaging 2.0-2.4 min; uncertainty 3.0 m; peak at 0.3 m saturated (note 1)
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	1	200	cloud height to 200 ppm	5.5	m	2	14	table	uncertainty 1.5 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	500	cloud height to 20 ppm	9.9	m	2	14	table	averaging 3.0-4.0 min; uncertainty 3.0 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	6	500	cloud height to 200 ppm	5.1	m	2	14	table	uncertainty 1.5 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	500	cloud height to 20 ppm	11.5	m	2	14	table	averaging 2.0-3.0 min; uncertainty 3.0 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	500	cloud height to 200 ppm	6.2	m	2	14	table	uncertainty 1.5 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	500	cloud width to 20 ppm (LIDAR)	293	m	3	18	table	at 139 s; uncertainty 5 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	1000	cloud width to 20 ppm (LIDAR)	303	m	3	18	table	at 261 s; uncertainty 5 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	2000	cloud width to 20 ppm (LIDAR)	362	m	3	18	table	at 444 s; uncertainty 5 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	1000	cloud height to 200 ppm (LIDAR)	15.8	m	4	21	table	at 233 s; uncertainty 1.6 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	1000	cloud height to 20 ppm (LIDAR)	23.7	m	4	21	table	at 233 s; uncertainty 2.4 m
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	2000	cloud height to 200 ppm (LIDAR)	10	m	4	21	table	at 426 s; uncertainty 5 m; not resolved by LIDAR, estimated by visual interpolation with a point sensor (note 1)
+mazzola-2020-cloud-dimensions-jack-rabbit-ii-accepted-manuscript	7	2000	cloud height to 20 ppm (LIDAR)	27.6	m	4	21	table	at 426 s; uncertainty 2.8 m
+weil-2022-iddm-jack-rabbit-ii-accepted-manuscript	6	85, 120, 200, 500, 1000, 2000, 5000, 11000	distances of observations	0.085, 0.12, 0.2, 0.5, 1, 2, 5, 11	km	1	16	stated	Trial 7 the same (Table 2 caption, p. 21)
+weil-2022-iddm-jack-rabbit-ii-accepted-manuscript	1	50, 100, 200, 500, 1000, 2000, 5000, 11000	distances of observations	0.05, 0.1, 0.2, 0.5, 1, 2, 5, 11	km	2	21	stated	
+weil-2022-iddm-jack-rabbit-ii-accepted-manuscript	6	all 8	IDDM GM of Cpred/Cobs, alpha 0.10, N = 8	1.45	ratio	1	16	table	GM is predicted over observed (above 1 is over-prediction); GSD 1.87; Fac2 75 percent
+weil-2022-iddm-jack-rabbit-ii-accepted-manuscript	6	6 of 8	IDDM GM of Cpred/Cobs, alpha 0.10, N = 6	1.05	ratio	1	16	table	two outliers omitted; GSD 1.28; Fac2 100 percent
+weil-2022-iddm-jack-rabbit-ii-accepted-manuscript	1	all 8	IDDM GM of Cpred/Cobs (LSF5 met, fg 0.84)	1.36	ratio	2	21	table	GSD 1.55; Fac2 88 percent (Table 2 line 1)
+weil-2022-iddm-jack-rabbit-ii-accepted-manuscript	6	all 8	IDDM GM of Cpred/Cobs (LSF5 met, fg 0.78)	1.45	ratio	2	21	table	GSD 1.87; Fac2 75 percent (line 2)
+weil-2022-iddm-jack-rabbit-ii-accepted-manuscript	7	all 8	IDDM GM of Cpred/Cobs (LSF5 met, fg 0.76)	1.07	ratio	2	21	table	GSD 1.65; Fac2 88 percent (line 3)
+weil-2022-iddm-jack-rabbit-ii-accepted-manuscript	1, 6, 7	all 24	IDDM GM of Cpred/Cobs (LSF5 met, average fg 0.79)	1.28	ratio	2	21	table	GSD 1.72; Fac2 83 percent (line 4)
+weil-2022-iddm-jack-rabbit-ii-accepted-manuscript	1, 6, 7	all 24	IDDM GM of Cpred/Cobs (BASE met, average fg 0.79)	1.23	ratio	2	21	table	GSD 1.78; Fac2 71 percent (line 5)
+weil-2022-iddm-jack-rabbit-ii-accepted-manuscript	1, 6, 7	all	measured arc maximum concentrations	Chang (2017) and Chang et al. (2021)			20	not tabulated	plotted only (Figures 5 and 8); x < 200 m from Chang (2017), x >= 200 m from Chang et al. (2021), neither held

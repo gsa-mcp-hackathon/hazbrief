@@ -1,0 +1,277 @@
+# build_ics_201 and material_response_guidance (HB-11;
+# HB-11). Every form block, label, ERG locator,
+# heading rule and display limit the two tools use, in one place (standards s2). Every key is
+# required: src/hazbrief/ics201.py refuses a file missing one, naming it.
+schema: hazbrief-ics201/1
+
+form:
+  # The held FEMA form (corpus/sources.yaml `ics-201`, corpus/raw/ics-201.pdf, sha256 7dbcaf68...).
+  # Its block list is read from the form: each block's `receipt` is the Squiddy index row of the
+  # held form's page that prints "<number>. <title>" (test_build_ics_201.py (a test held privately) checks each against
+  # the local index; the parse drops the number, so the row holds the title and the page places it,
+  # HB-19). The commander stylebook numbers the blocks the same way (SB-STR-03).
+  doc_id: ics-201
+  name: Incident Briefing (ICS 201)
+  blocks:
+    - {number: 1, title: Incident Name, receipt: "ics-201#b1:29-43"}
+    - {number: 2, title: Incident Number, receipt: "ics-201#b2:45-61"}
+    - {number: 3, title: Date/Time Initiated, receipt: "ics-201#b3:63-83"}
+    - {number: 4, title: Map/Sketch, receipt: "ics-201#b6:99-348"}
+    - {number: 5, title: Situation Summary and Health and Safety Briefing, receipt: "ics-201#b7:350-649"}
+    - {number: 6, title: Prepared by, receipt: "ics-201#b8:651-663"}
+    - {number: 7, title: Current and Planned Objectives, receipt: "ics-201#b18:815-846"}
+    - {number: 8, title: "Current and Planned Actions, Strategies, and Tactics", receipt: "ics-201#b19:848-901"}
+    - {number: 9, title: Current Organization, receipt: "ics-201#b32:1097-1168"}
+    - {number: 10, title: Resource Summary, receipt: "ics-201#b47:1477-2221"}
+  # Who writes what public data cannot: the ICS position, never a name (SB-NEV-04).
+  blank_label: Incident Commander
+  # Blocks no public data fills: the incident number is assigned, and the actions and the
+  # organization are the Incident Commander's (ics-201#p6:36:119-437, #b55:5296-7512).
+  blank_blocks: [2, 8, 9]
+  # Block 1 when the caller names no incident (HB-11b step 4): radio traffic names a place, so
+  # <where> is the incorporated place or census designated place TIGERweb finds at the spill, else
+  # its county (section `place`). Without a TIGERweb answer the name falls back to the spill point
+  # as given, and Annex A says so.
+  incident_name: "{material} release, {where}, {state}, {date}"
+  incident_name_fallback: "{material} release, {latitude}, {longitude}, {date}"
+  # Printed after Block 10 (HB-11b step 1): every limit and every source, deduplicated. The form
+  # has no annex block; this is the briefing's own appendix, outside the form's numbering.
+  annex_title: "Annex A: Data limits and sources"
+  # Block 6 fields (ics-201#b54:3371-5294: name, ICS position/title, signature, date/time).
+  prepared_by:
+    statement: "hazbrief {version}, from public data; not a substitute for the ERG or for ICS procedures"
+    blank_fields: [Name, Position/Title, Signature, Date/Time]
+  # Block 10 columns (ics-201#p6:41:1003-1411 to #b55:5296-7512). Public data supports one
+  # resource line, the receiving hospitals; every column is the Incident Commander's.
+  resource_summary:
+    blank_fields: [Resource, Resource Identifier, Date/Time Ordered, ETA, Arrived, Notes]
+    # HB-11b step 3: the nearest receiving hospitals as a table; the rest are in the
+    # structured output (`receiving_hospitals`).
+    nearest: 5
+    columns: [Hospital, Beds, km, Bearing, Crosses zone]
+
+guidance:
+  # Where a source tag names the ERG, and the held document its locators point into.
+  erg_doc: erg2024-en-pdf
+  erg_label: ERG 2024
+  # HB-15: the page that says to use the placard's guide only until the material is known
+  # (step 5: "When specific information, such as ID number or proper shipping name, becomes
+  # available, the more specific Guide recommended for that material must be consulted.").
+  placard_table_use_locator: erg2024-en-pdf#p9
+  # ERG 2024 moved per-guide first aid to its General First Aid section (LN-02; HB-03b s3).
+  # Every guide prints "Refer to the “General First Aid” section." under FIRST AID; the section's
+  # heading is on PDF p. 152 (index row erg2024-en-pdf#b511:507494-507511 "GENERAL FIRST AID").
+  general_first_aid:
+    marker: General First Aid
+    title: General First Aid
+    locator: erg2024-en-pdf#p152
+  # The sentence that holds only for a material whose guide number carries the P (ERG p. 347;
+  # HB-12b section 4). Matched as a substring of a guide line.
+  p_sentence: designated with a (P)
+  # Sub-headings that open a spill-size block, matched case-insensitively against a heading line
+  # (guides print "Small Spill", "Large Spill", "Small Dry Spill", "Small Liquid Spill").
+  spill_headings:
+    small: '^small\b.*\bspill$'
+    large: '^large\b.*\bspill$'
+  # With fire involved, these top-level subsections move first in their section.
+  fire_subsections:
+    potential_hazards: FIRE OR EXPLOSION
+    emergency_response: FIRE
+  # The guide's fire evacuation: the EVACUATION sub-heading "Fire" in PUBLIC SAFETY. Printed only
+  # when fire is involved.
+  fire_evacuation:
+    section: public_safety
+    heading: Fire
+  # The EVACUATION sub-headings Block 7 quotes for a material with no Table 1 or Table 3 row.
+  immediate_precautionary_heading: Immediate precautionary measure
+
+briefing:
+  # Source tag labels of the held documents a printed quotation can come from.
+  doc_labels:
+    erg2024-en-pdf: ERG 2024
+  # Block 7 sentences from the ERG pages before Table 1, read from the flag pack (each must be a
+  # consequence, response or receipt there; ics201.py refuses the file otherwise).
+  objectives:
+    # ERG p. 290, How to use Table 1: printed for a material with a protective action zone.
+    crosswind: {doc_id: erg2024-en-pdf, page: 290, quote: "Evacuate the general public in a direction perpendicular to wind direction (crosswind) and away from the spill."}
+    # ERG p. 286, Protective Actions: printed when a population or facility flag is printed.
+    decision_factors: {doc_id: erg2024-en-pdf, page: 286, quote: "Proper evaluation of the factors listed below will determine the effectiveness of evacuation or in-place protection (shelter-in-place)."}
+    # The page the stylebook's worked example cites for "the ERG decision factors" (SB-STR-06).
+    decision_factors_page: 286
+  # Flag kinds (by prefix) whose printing brings in the decision-factors sentence.
+  decision_flag_kinds: [population., facilities.]
+  # Names printed per sentence, and in all, for a facility list; the rest are counted, not named
+  # (the full lists are in the tools' outputs). Keeps each sentence within SB-SEN-01's 20 words.
+  names_per_sentence: 3
+  max_names: 9
+  # The wind arrow drawn in Block 4: a line this long, from upwind, ending at the spill. HB-11b:
+  # 2,000 m, so that on the sketch it reaches well outside the largest initial isolation circle
+  # Table 1 or Table 3 commonly prints (1,000 m would lie mostly under a 600 m circle).
+  wind_arrow_m: 2000
+
+  # HB-11b step 1. A tool's limit sentence prints in the briefing only when it changes what the
+  # commander does with a number printed on that page; it then prints under what it qualifies
+  # (`place`: population and facilities in Block 5, hospitals in Block 10). Every other limit is
+  # class `annex`: Annex A prints every limit, and the JSON carries all of them. `match` is a
+  # regular expression searched in the tool's sentence. The ERG app's edition limit is printed in
+  # Block 4 by SB-STR-09's own sentence ("The app may use ERG 2020 distances."), so its full text
+  # is annex here.
+  limits:
+    max_printed: 8
+    briefing:
+      # how a partial block's residents are counted: the population numbers are area shares
+      - {tool: population_at_risk, match: "^Blocks partly inside the footprint count by the share", place: population}
+      # the daytime number is jobs, not people present
+      - {tool: population_at_risk, match: "^Daytime counts jobs located in the footprint", place: population}
+      # a printed zero (no school, no hospital) is not proof of none
+      - {tool: facilities_in_footprint, match: "^The structures dataset holds selected facilities", place: facilities}
+      # the km column is a straight line
+      - {tool: receiving_hospitals, match: "^Distances are straight lines from", place: hospitals}
+      # the "crosses zone" column reads no roads
+      - {tool: receiving_hospitals, match: "^Roads are not read, so a flagged hospital may have a route around", place: hospitals}
+      # the ranking leaves out hospitals with no position
+      - {tool: receiving_hospitals, match: "could not be placed by address and (is|are) not ranked", place: hospitals}
+
+  # HB-11b step 2: each printed flag's heading names its priority and its kind in words.
+  flag_kinds:
+    toxic_by_inhalation: toxic by inhalation
+    water_reactive: water reactive
+    may_explode_when_heated: may explode when heated
+    polymerizes: may polymerize
+    oxidizer: oxidizer
+    heavier_than_air: heavier than air
+    population.group_quarters: group quarters in the footprint
+    population.limited_english: limited English households in the footprint
+    population.no_vehicle: households without a vehicle in the footprint
+    population.social_vulnerability: social vulnerability in the footprint
+    facilities.schools: schools in the footprint
+    facilities.hospitals: hospitals in the footprint
+    facilities.waterways: waterways in the footprint
+    facilities.rail: rail in the footprint
+    identification.ambiguous_material: the load matches several ERG entries
+
+  # HB-11b step 2: the fired-on line, one clause per predicate input the rule read. `text` is a
+  # template over the value the tool supplied (`{value}`; `{ref}` for a comparison with another
+  # input); a pair is [one, many] by the value. The source tag is `tag`, or the `basis` tag of the
+  # named tool (with its PDF page where the basis has a locator). `moe` names the tool output path
+  # of an estimate's margin of error and its counted noun, [one, many] by the margin (SB-NUM-02;
+  # HB-17: "margin of error 1 people"). The guide_page clause is
+  # printed only when it is a cause's only term: the heading's rule id already names the guide.
+  fired_on:
+    guide_page: {text: "Guide {value} is the material's guide", basis: [assess_incident, "ID number, names and guide"]}
+    guide_designated_p: {text: "the material's guide number carries a P", basis: [assess_incident, "ID number, names and guide"]}
+    tih: {text: "ERG Table 1 lists the material", basis: [assess_incident, "listed in Table 1"]}
+    table3_listed: {text: "ERG Table 3 lists the material", basis: [protective_action_footprint, "initial isolation distance"]}
+    where_spilled_matters: {text: "ERG Table 2 lists the material"}
+    spill_size: {text: "the spill is {value}", tag: "[incident report]"}
+    fire_involved: {text: "fire is involved", tag: "[incident report]"}
+    where_spilled: {text: "the spill is on {value}", tag: "[incident report]"}
+    footprint_present: {text: "a protective action footprint is drawn"}
+    protective_action_distance: {text: "the protective action distance is {value}", basis: [protective_action_footprint, "protective action distance"]}
+    gq_population:
+      text: ["{value} person lives in group quarters in the footprint", "{value} people live in group quarters in the footprint"]
+      basis: [population_at_risk, group_quarters_population]
+      moe: [population_at_risk, characteristics.group_quarters_population.moe, [person, people]]
+    no_vehicle_households:
+      text: ["{value} household in the footprint has no vehicle", "{value} households in the footprint have no vehicle"]
+      basis: [population_at_risk, no_vehicle_households]
+      moe: [population_at_risk, flag_inputs.no_vehicle_households_moe, [household, households]]
+    limited_english_households:
+      text: ["{value} household in the footprint is limited English speaking", "{value} households in the footprint are limited English speaking"]
+      basis: [population_at_risk, limited_english_households]
+      moe: [population_at_risk, flag_inputs.limited_english_households_moe, [household, households]]
+    pred3_e:
+      text: ["{value} person has three or more components of social vulnerability", "{value} people have three or more components of social vulnerability"]
+      basis: [population_at_risk, resilience]
+    pred3_pe: {text: "{value} % have three or more components, against {ref} % nationally", basis: [population_at_risk, resilience]}
+    schools_in_footprint: {text: ["{value} school is inside the footprint", "{value} schools are inside the footprint"], basis: [facilities_in_footprint, schools]}
+    hospitals_in_footprint: {text: ["{value} hospital is inside the footprint", "{value} hospitals are inside the footprint"], basis: [facilities_in_footprint, hospitals]}
+    waterways_in_footprint: {text: ["{value} waterway is inside the footprint", "{value} waterways are inside the footprint"], basis: [facilities_in_footprint, waterways]}
+    rail_features_in_footprint: {text: ["{value} rail segment is inside the footprint", "{value} rail segments are inside the footprint"], basis: [facilities_in_footprint, rail lines]}
+    grade_crossings: {text: ["{value} grade crossing is inside the footprint", "{value} grade crossings are inside the footprint"], basis: [facilities_in_footprint, grade crossings]}
+    # HB-18: FR-AMB-01's cause; the tag is the yellow index's or the placard table's.
+    candidate_count: {text: ["{value} candidate matches the load as reported", "{value} candidates match the load as reported"], basis: [protective_action_footprint, candidates]}
+    governing_candidate: {text: "the largest distances are those of {value}", basis: [protective_action_footprint, governing candidate]}
+    low_lying_areas_in_footprint: {text: ["{value} low-lying area is inside the footprint", "{value} low-lying areas are inside the footprint"]}
+
+# HB-11b step 3: CMS prints hospital names in capitals. A name with no lower-case letter prints in
+# title case, word by word: these words keep their capitals (acronyms the CMS file prints), these
+# stay lower case after the first word, and these take a system's own casing. A name already in
+# mixed case prints as given.
+names:
+  upper: [VA, UPMC, UM, UMD, UVA, WVU, DC, MD, PA, WV, LLC, LLP, LP, ARH, SSM, OSF, AFB, AMC, UNC, UCSF, HSHS, SGMC, UH, USC, JFK, AHN, NMC, BMH, DCH, AHMC, UC, UCH, ER, ED, II, III, IV, CHI, HCA]
+  lower: [of, and, at, the, in, for, on, a, an, to, by]
+  mixed: {MEDSTAR: MedStar, WELLSPAN: WellSpan, CHRISTIANACARE: ChristianaCare}
+
+# HB-11b step 4: the place at the spill, from TIGERweb (already a runtime host, HB-09). Two calls:
+# an `identify` on the places layers at the point (an incorporated place or a census designated
+# place), then a `query` on the counties layer at the point, which also returns the county's
+# outline for the Block 4 sketch. Layer ids and the vintage are the held service description's
+# (corpus/sources.yaml `tigerweb-current-mapserver`, tigerWMS_Current/MapServer?f=json:
+# "Census Current (2026) WMS ...; January 1, 2026 vintage"; layers 28 "Incorporated Places", 30
+# "Census Designated Places", 82 "Counties"). The state's postal code is the county's STATE code,
+# read through hazbrief.lodes.STATE_POSTAL (ANSI INCITS 38).
+place:
+  doc_id: tigerweb-current-mapserver
+  service: tigerWMS_Current/MapServer
+  vintage: Census Current (2026), January 1, 2026 vintage
+  places_layers: {28: Incorporated Places, 30: Census Designated Places}
+  counties_layer: 82
+  counties_layer_name: Counties
+  # identify needs a map extent and image around the point; with tolerance 0 it is a
+  # point-in-polygon test, so these only frame the request.
+  identify_half_extent_deg: 0.01
+  identify_image: "400,400,96"
+  # The county outline drawn on the sketch, generalized to about 50 m (degrees, WGS84), at the
+  # footprint's six decimals.
+  outline_offset_deg: 0.0005
+
+# HB-11b step 5: the Block 4 sketch, rendered by hazbrief/ics201_map.py as SVG from the form's
+# GeoJSON over a TIGERweb `export` image of the roads and railroads (one call per incident). The
+# Transportation service holds roads and railroads and no boundaries, and an export reads one
+# service, so the county outline is drawn from the `place` query instead. Web Mercator (EPSG:3857)
+# for the image and the drawing, so a circle draws round.
+map:
+  service: Transportation/MapServer
+  # From the recorded service description (Transportation/MapServer?f=json, recorded 2026-10-21,
+  # fixtures/exchanges/tigerweb/bf84cbba...json); the recorder checks each id against the layer
+  # name, and the description, before it records anything else. The description states no
+  # vintage, so the sketch's source tag carries the date the image was retrieved as its as-of.
+  description: Primary roads, secondary roads, local roads, and railroads
+  # Each layer draws only inside its own scale range, so the export shows what the frame's scale
+  # allows: primary roads to 1:650,000, secondary roads at every scale, local roads to 1:90,000,
+  # railroads to 1:42,000 (the service's minScale values).
+  layers:
+    2: Primary Roads
+    4: Secondary Roads 578k scale
+    5: Secondary Roads 289_144k scale
+    6: Secondary Roads 72_1k scale
+    7: Local Roads 72k scale
+    8: Local Roads
+    9: Railroads
+  href: ics201_block4.svg
+  width_px: 960
+  min_height_px: 540
+  max_height_px: 1200
+  # Margin around the footprint, its facilities and the nearest receiving hospital, as a share
+  # of the larger side of the frame.
+  pad_fraction: 0.08
+  image_format: png8
+  dpi: 96
+  # About a fifth of the width, rounded to 1, 2 or 5 times a power of ten metres.
+  scale_bar_fraction: 0.2
+  style:
+    initial_isolation_zone: {fill: "#d7301f", fill_opacity: 0.35, stroke: "#b30000"}
+    protective_action_zone: {fill: "#fc8d59", fill_opacity: 0.25, stroke: "#d7301f"}
+    # the guide's fire isolation circle (a guide-only material with fire, e.g. UN1075)
+    fire_isolation: {fill: "#fee090", fill_opacity: 0.25, stroke: "#d7301f"}
+    county: {stroke: "#555555", dash: "6 4"}
+    # HB-18: another candidate of an unresolved load, a dashed outline (the governing
+    # candidate's zones are drawn as any footprint's)
+    candidate: {stroke: "#6a3d9a", dash: "8 5"}
+    spill: {fill: "#000000"}
+    wind: {stroke: "#1f4e9a"}
+    facility: {fill: "#2c7fb8"}
+    crossing: {fill: "#111111"}
+    hospital: {fill: "#238b45"}
+    text: {fill: "#111111", halo: "#ffffff", size: 13}

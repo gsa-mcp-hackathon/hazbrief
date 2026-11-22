@@ -1,0 +1,425 @@
+# HB-06 API access catalog (HB-06; DN-002 s3b).
+# HAND-AUTHORED from the held documentation (each `docs:` entry is a corpus/sources.yaml doc_id,
+# admitted to the corpus graph (held privately)) and from discovery of 2026-10-20. What a probe observed lives
+# in corpus/api_probe_log.jsonl (scripts/probe_apis.py); `last_verified` here is the date of the
+# latest probe row for the API and is checked against it by tests/test_api_catalog.py.
+#
+# Every API the server calls is catalogued before any tool calls it. `runtime: true` is a call the
+# server makes per incident; `false` is build-time reference or a candidate. The server identifies
+# itself on every call with settings.user_agent (DN-002 s1: `hazbrief-mcp/<version> (+repo url)`),
+# honors the documented limits below, and never enumerates.
+#
+# A quote is verbatim from the cited document; "(snippet)" marks a search-result snippet where the
+# page itself could not be read by this client.
+
+apis:
+  - id: nws
+    name: National Weather Service API
+    runtime: true
+    status: active
+    base_url: https://api.weather.gov
+    docs: [nws-api-docs, nws-alerts-docs, nws-api-faq, nws-api-openapi, nws-disclaimer]
+    documentation_url: https://www.weather.gov/documentation/services-web-api
+    auth:
+      type: none
+      key: none
+      env_var: null
+      signup_url: null
+      signup_procedure: null
+      notes: >-
+        "A User Agent is required to identify your application ... This will be replaced with an
+        API key in the future" (nws-api-docs). The OpenAPI spec (3.12.2) defines an `API-Key`
+        header "testing ... on certain endpoints"; no key is issued to the public as of 2026-10-20.
+    rate_limits:
+      documented: >-
+        "The rate limit is not public information, but allows a generous amount for typical use"
+        and a limited request "may be retried after the limit clears (typically within 5
+        seconds)" (nws-api-faq). Alerts: "no more than every 30 seconds" (nws-alerts-docs).
+      observed: none (one probe request)
+    terms:
+      url: https://www.weather.gov/disclaimer
+      doc: nws-disclaimer
+      clauses:
+        - NWS web content is "in the public domain, unless specifically noted otherwise".
+        - Logos may not be used without permission; do not imply endorsement or affiliation with NOAA/NWS.
+        - Information is provided "as is".
+    identification: >-
+      User-Agent required; a request without one can be refused 403 (nws-api-faq). The NWS asks for
+      an application identifier and a contact; DN-002 s1 fixes the server's as
+      `hazbrief-mcp/<version> (+https://github.com/brockwebb/hazbrief-mcp)`.
+    cadence: >-
+      Not documented. Gridpoint data carry `updateTime` (when the forecast office's grid was
+      received) and responses carry Last-Modified and Cache-Control; the server reports those, never
+      an assumed cadence. /points mappings "don't change very often" and may be cached.
+    as_of: >-
+      Gridpoint `updateTime`; alert `sent`/`effective`. The probed /points response carried no
+      Last-Modified, and "Cache-Control: public, max-age=86400" (api_probe_log, 2026-10-20): a
+      point mapping may be cached for a day.
+    formats: [application/geo+json (default), application/ld+json, CAP (alerts), application/problem+json (errors)]
+    errors: application/problem+json with type, title, status, detail, instance, correlationId.
+    probe:
+      url: https://api.weather.gov/points/38.8894,-77.0352
+      as_of: {header: Expires}
+    last_verified: "2026-10-20"
+
+  - id: census_data
+    name: Census Data API (ACS 5-year detailed tables; 2020 DHC; Community Resilience Estimates)
+    runtime: true
+    status: active
+    base_url: https://api.census.gov/data
+    docs: [census-api-user-guide, census-api-query-limits, census-api-terms, census-api-key-signup, census-acs5-2024-dataset, census-dhc-2020-p18]
+    documentation_url: https://www.census.gov/data/developers/guidance/api-user-guide.html
+    auth:
+      type: key
+      key: required
+      env_var: CENSUS_API_KEY
+      signup_url: https://api.census.gov/data/key_signup.html
+      signup_procedure: >-
+        Submit organization and an email address (ending .com, .net, .org, .gov or .edu) on the
+        signup page; the key arrives by email with a link that activates it. Append `&key=<key>`
+        to each query.
+      notes: >-
+        "An API key must be used with all data queries made to the Census Data API"
+        (census-api-query-limits, revised 2026-05). The keyless probe below shows what the
+        server sees without one.
+    rate_limits:
+      documented: '"You can include up to 50 variables in a single API query" (census-api-query-limits). No per-key rate is published.'
+      observed: none (one probe request)
+    terms:
+      url: https://www.census.gov/data/developers/about/terms-of-service.html
+      doc: census-api-terms
+      clauses:
+        - 'Required notice: "This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau."'
+        - The Census Bureau name may not be used to imply endorsement.
+        - Use of the API may be temporarily or permanently blocked for violations.
+    identification: none required beyond the key; the server sends its User-Agent.
+    cadence: >-
+      ACS 5-year annual (2020-2024 released 2026-01-29); 2020 DHC static; CRE annual (the 2024
+      dataset, /data/2024/cre, "modified" 2025-11-26 in api.census.gov/data.json). HB-09: the CRE
+      dataset publishes estimates and rates, no margin of error variable (variables.json,
+      2026-10-21).
+    as_of: the dataset vintage in the request path (/data/2024/acs/acs5).
+    formats: [application/json (array of rows, first row the header)]
+    errors: HTTP status with an HTML or text body.
+    probe:
+      url: https://api.census.gov/data/2024/acs/acs5?get=NAME,B01003_001E&for=county:001&in=state:11
+      as_of: {path_vintage: "/data/2024/"}
+    last_verified: "2026-10-20"
+
+  - id: tigerweb
+    name: Census TIGERweb REST (ArcGIS map services)
+    runtime: true
+    status: active
+    base_url: https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb
+    docs: [tigerweb-rest-docs, tigerweb-current-mapserver, census-tigerweb-docs, census-api-terms]
+    documentation_url: https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: 'None published. tigerWMS_Current "maxRecordCount": 100000 (tigerweb-current-mapserver).'
+      observed: none (one probe request)
+    terms:
+      url: https://www.census.gov/data/developers/about/terms-of-service.html
+      doc: census-api-terms
+      clauses:
+        - 'Service copyright text: "Source: U.S. Census Bureau".'
+        - The Census developer terms (no implied endorsement) are the ones linked from the service pages.
+    identification: none required; the server sends its User-Agent.
+    cadence: Annual vintage in practice; not stated as a cadence.
+    as_of: >-
+      serviceDescription vintage: "Census Current (2026) ... January 1, 2026 vintage". HB-09 reads
+      the 2020 tabulation geography from tigerWMS_Census2020 ("January 1, 2020 vintage"; layers
+      10 blocks, 8 block groups, 6 tracts), whose GEOIDs the 2020 DHC and the ACS 2020-2024 use.
+    formats: [JSON, GeoJSON, PBF]
+    errors: ArcGIS JSON error object with HTTP 200.
+    probe:
+      url: https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/8/query?geometry=-77.0352,38.8894&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=GEOID,NAME&returnGeometry=false&f=json
+      as_of: null
+    last_verified: "2026-10-20"
+
+  - id: lodes
+    name: LEHD LODES8 file access (static CSV files, not an API)
+    runtime: false
+    status: active
+    base_url: https://lehd.ces.census.gov/data/lodes/LODES8/
+    docs: [lodes8-techdoc-8-4, lodes8-techdoc, lodes-data-landing]
+    documentation_url: https://lehd.ces.census.gov/data/lodes/LODES8/LODESTechDoc8.4.pdf
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: None published; robots.txt allows all (`Disallow:` empty).
+      observed: none (one probe request)
+    terms:
+      url: https://lehd.ces.census.gov/data/
+      doc: lodes-data-landing
+      clauses:
+        - 'Requested citation: U.S. Census Bureau, "{File Name}," LEHD Origin-Destination Employment Statistics, {Vintage}, https://lehd.ces.census.gov/data/lodes, accessed on {Date}.'
+    identification: none required.
+    cadence: >-
+      Annual in practice (8.4 created 2025-12-03); years 2002-2023; Alaska and Michigan absent for
+      2022-2023 (lodes8-techdoc-8-4). Read at pack build time, not per incident (DN-001 invariant 3).
+    as_of: version.txt data vintage (YYYYMMDD) per the tech doc; Last-Modified on the listing.
+    formats: ["[ST]_od_[PART]_[TYPE]_[YEAR].csv.gz and the RAC/WAC equivalents"]
+    errors: HTTP status.
+    probe:
+      url: https://lehd.ces.census.gov/data/lodes/LODES8/
+      as_of: {header: Last-Modified}
+    last_verified: "2026-10-20"
+
+  - id: usgs_structures
+    name: USGS National Map Structures (ArcGIS MapServer)
+    runtime: true
+    status: active
+    base_url: https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer
+    docs: [usgs-structures-mapserver, usgs-structures-content-spec, usgs-copyrights-credits, usgs-structures-cartowfs]
+    documentation_url: https://www.usgs.gov/ngp-standards-and-specifications/national-map-structures-content
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: 'None published. "maxRecordCount": 2000 (usgs-structures-mapserver).'
+      observed: none (one probe request)
+    terms:
+      url: https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits
+      doc: usgs-copyrights-credits
+      clauses:
+        - USGS-authored or produced data and information are in the U.S. public domain.
+        - 'Credit requested: "U.S. Geological Survey".'
+        - The USGS visual identifier is trademarked.
+    identification: none required; the server sends its User-Agent.
+    cadence: Quarterly refresh targeted (USGS FAQ, snippet); the service states its own refresh.
+    as_of: >-
+      copyrightText: "Data Refreshed October, 2026". HB-01d (2026-10-21) confirmed the same text on
+      the WFS twin, cartowfs.nationalmap.gov/arcgis/rest/services/structures/MapServer (one layer,
+      "USGS TNM Structures"; usgs-structures-cartowfs), the host LN-01 section 5 cites.
+    formats: [JSON, GeoJSON, PBF]
+    errors: ArcGIS JSON error object.
+    probe:
+      url: https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer?f=json
+      as_of: {json: [copyrightText]}
+    last_verified: "2026-10-20"
+
+  - id: cms_data
+    name: CMS data API (Provider of Services, QIES hospital and non-hospital)
+    runtime: true
+    status: active
+    base_url: https://data.cms.gov/data-api/v1/dataset
+    docs: [cms-api-faq, cms-api-docs, cms-pos-layout]
+    documentation_url: https://data.cms.gov/api-docs
+    auth:
+      type: none
+      key: none
+      env_var: null
+      signup_url: null
+      signup_procedure: null
+      notes: >-
+        "No, you do not need to register for an API key. Providing a custom user-agent with
+        organization name, application name, and contact email is optional" (cms-api-faq).
+    rate_limits:
+      documented: >-
+        1,000 rows per request by default, `size` up to 5,000, with `offset`; on 429 "limit the
+        volume of your requests"; on 5xx "use an incremental and randomized back-off"
+        (cms-api-faq). robots.txt Crawl-delay 10 (crawlers only).
+      observed: none (one probe request)
+    terms:
+      url: https://data.cms.gov/api-docs
+      doc: cms-api-faq
+      clauses:
+        - Works of the U.S. Government are in the public domain; attribution to the agency is appreciated.
+        - Do not give the impression of government endorsement (42 U.S.C. 1320b-10).
+    identification: optional User-Agent with contact; the server sends its own.
+    cadence: Quarterly; the dataset-type id 8ba0f9b4-... always points at the latest release.
+    as_of: >-
+      Not in the data response; the release quarter is read from data.cms.gov/data.json (HB-01:
+      latest snapshot 2026-07-01, modified 2026-10-16) and reported with every answer. The
+      probed data response carried "Last-Modified: Fri, 16 Oct 2026 20:42:15 GMT", the same
+      date (api_probe_log, 2026-10-20).
+    formats: [JSON, JSON:API, CSV]
+    errors: HTTP status.
+    probe:
+      url: https://data.cms.gov/data-api/v1/dataset/8ba0f9b4-9493-4aa0-9f82-44ea9468d1b5/data?size=1
+      as_of: {header: Last-Modified}
+    last_verified: "2026-10-20"
+
+  - id: healthdata_socrata
+    name: healthdata.gov (Socrata SODA) NHSN datasets
+    runtime: false
+    status: reference
+    base_url: https://healthdata.gov
+    docs: [nhsn-facility-capacity-archived, nhsn-jurisdiction-archived, nhsn-hrd-reporting, socrata-app-tokens]
+    documentation_url: https://dev.socrata.com/docs/app-tokens.html
+    auth:
+      type: app_token
+      key: optional
+      env_var: HEALTHDATA_APP_TOKEN
+      signup_url: https://support.socrata.com/hc/en-us/articles/210138558
+      signup_procedure: >-
+        Sign in to healthdata.gov, open the profile's Developer Settings, and create an app token
+        (the Socrata support article above, read as a search snippet: it answers 403 to this
+        client). The direct healthdata.gov settings URL was not verified and is not given.
+      notes: >-
+        Not called at run time: no current facility-level public capacity source exists
+        (DN-002 s4; anag-cw7u frozen 2024-05-03). Without a token, SODA 2.1 requests share a
+        per-IP throttle pool; SODA 3.0 query requests require a token or a user (snippet).
+    rate_limits:
+      documented: Without a token, a "much lower throttling limit" per IP; with one, not throttled unless abusive; 429 when throttled (socrata-app-tokens, not held).
+      observed: none (one probe request)
+    terms:
+      url: https://dev.socrata.com/docs/app-tokens.html
+      doc: socrata-app-tokens
+      clauses:
+        - Send the token in the X-App-Token header (preferred) or $$app_token.
+    identification: app token when used.
+    cadence: anag-cw7u last updated 2024-05-03 and no longer updated (HB-01 s4).
+    as_of: rowsUpdatedAt in the dataset metadata.
+    formats: [JSON, CSV]
+    errors: HTTP status with a JSON body.
+    probe:
+      url: https://healthdata.gov/api/views/anag-cw7u.json
+      as_of: {json: [rowsUpdatedAt]}
+    last_verified: "2026-10-20"
+
+  - id: pubchem
+    name: PubChem ERG pages (PUG REST / PUG View)
+    runtime: false
+    status: reference
+    base_url: https://pubchem.ncbi.nlm.nih.gov
+    docs: [erg2024-pubchem-index, pubchem-programmatic-access, pubchem-pug-view-limits]
+    documentation_url: https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: 'No more than 5 requests per second and 400 per minute; 300 s running time per minute (pubchem-pug-view-limits, not held; the official page answers this client with a reCAPTCHA page).'
+      observed: robots.txt Crawl-delay 5 for `*`, honored by the fetcher.
+    terms:
+      url: https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access
+      doc: pubchem-programmatic-access
+      clauses:
+        - Requests above the limits are throttled dynamically; clients moderate by the throttling status in the response headers.
+    identification: none required.
+    cadence: ERG 2024 rendering; changes only with an ERG edition.
+    as_of: the ERG edition (2024).
+    formats: [HTML]
+    errors: HTTP status.
+    probe: null
+    probe_reason: Build-time reference only (the index is held as erg2024-pubchem-index); the server never calls PubChem.
+    last_verified: null
+
+  - id: usgs_3dhp
+    name: USGS 3D Hydrography Program services (the chosen hydrography service, HB-03)
+    runtime: true
+    status: active
+    base_url: https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer
+    docs: [usgs-3dhp-mapserver, usgs-3dhp, usgs-nhd-access, usgs-nhdplus-hr-guide, usgs-copyrights-credits]
+    documentation_url: https://www.usgs.gov/3d-hydrography-program
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: 'None published; "maxRecordCount": 2500 (discovery).'
+      observed: none
+    terms:
+      url: https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits
+      doc: usgs-copyrights-credits
+      clauses:
+        - USGS data are public domain; credit requested.
+    identification: none required.
+    cadence: '"New Elevation-Derived Hydrography data and attributes will be added quarterly" (discovery); "Data refreshed September 4, 2026".'
+    as_of: copyrightText refresh date.
+    formats: [JSON, GeoJSON, PBF]
+    errors: ArcGIS JSON error object.
+    probe:
+      url: https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer?f=json
+      as_of: {json: [copyrightText]}
+    probe_reason: >-
+      HB-03 chose 3DHP over NHDPlus HR on availability. HB-10 (2026-10-21) wires FR-WATER-01 to it:
+      hydro.nationalmap.gov is now on corpus/allowlist.txt, the probe above is set, and
+      `facilities_in_footprint` queries Flowline (layer 50) and Waterbody (layer 60) by envelope.
+      HB-10 step 0 re-read it: 200 in 379 ms, "Data refreshed September 4, 2026"
+      (logs/2026-10-21_HB-10_probe.log); the catalog's recorded probe is HB-03's (2026-10-20).
+    last_verified: "2026-10-20"
+
+  - id: bts_ntad
+    name: BTS National Transportation Atlas Database (NTAD) rail layers (ArcGIS FeatureServer)
+    runtime: true
+    status: active
+    base_url: https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services
+    docs: [bts-ntad-rail-lines-layer, bts-ntad-grade-crossings-layer]
+    documentation_url: https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_North_American_Rail_Network_Lines/FeatureServer/0?f=json
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: '"maxRecordCount": 2000 per query, paging by resultOffset (layer metadata).'
+      observed: none (HB-10 step 0, 7 requests)
+    terms:
+      url: https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_North_American_Rail_Network_Lines/FeatureServer/0?f=json
+      doc: bts-ntad-rail-lines-layer
+      clauses:
+        - '"This NTAD dataset is a work of the United States government as defined in 17 U.S.C. § 101 and as such are not protected by any U.S. copyrights. This work is available for unrestricted public use." (each layer''s copyrightText)'
+    identification: none required.
+    cadence: >-
+      Per layer, stated in its description: North American Rail Network Lines "updated on October
+      19, 2026 from the Federal Railroad Administration (FRA)"; Railroad Grade Crossings "updated
+      on October 09, 2026 ... by the Federal Railroad Administration (FRA)".
+    as_of: >-
+      The layer description's update date, recorded in src/hazbrief/facilities_sources.yaml when
+      the layer is probed and re-verified by this entry's probe (the description is not read per
+      query).
+    formats: [JSON, GeoJSON]
+    errors: ArcGIS JSON error object (HTTP 200).
+    layers:
+      rail_lines: NTAD_North_American_Rail_Network_Lines/FeatureServer/0
+      grade_crossings: NTAD_Railroad_Grade_Crossings/FeatureServer/0
+    probe:
+      url: https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0?f=json
+      as_of: {json: [description]}
+    last_verified: "2026-10-21"
+
+  - id: cms_provider_data
+    name: CMS Provider Data Catalog (Hospital General Information xubh-q36u; Nursing Home Provider Information 4pq5-n9py)
+    runtime: false
+    status: active
+    base_url: https://data.cms.gov/provider-data/api/1
+    docs: [cms-hospital-general-info-metastore, cms-nursing-home-provider-info-metastore, cms-api-faq]
+    documentation_url: https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/xubh-q36u
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: none published; datastore query pages by `limit` and `offset`.
+      observed: 'a 2-row Hospital General Information query took 20.8 s (HB-10 step 0).'
+    terms:
+      url: https://data.cms.gov/api-docs
+      doc: cms-api-faq
+      clauses:
+        - Works of the U.S. Government are in the public domain; attribution to the agency is appreciated.
+    identification: optional User-Agent; the server sends its own.
+    cadence: Quarterly releases; each dataset's metastore record states `modified` and `released`.
+    as_of: >-
+      The metastore `modified` date (Hospital General Information: modified 2026-07-22, released
+      2026-08-13, step 0). Not a runtime source: `scripts/fetch_cms.py` saves the hospitals
+      (joined to POS beds and geocoded) and the nursing homes under fixtures/cms/ with their
+      as-of, as HB-09 did for LODES.
+    formats: [JSON, CSV]
+    errors: HTTP status.
+    probe:
+      url: https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/xubh-q36u
+      as_of: {json: [modified]}
+    last_verified: "2026-10-21"
+
+  - id: census_geocoder
+    name: Census Geocoder (locations, batch)
+    runtime: false
+    status: active
+    base_url: https://geocoding.geo.census.gov/geocoder
+    docs: [census-geocoder-api-docs, census-api-terms]
+    documentation_url: https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: batch files up to 10,000 addresses (the service's documentation).
+      observed: none (one single-address request, HB-10 step 0)
+    terms:
+      url: https://www.census.gov/data/developers/about/terms-of-service.html
+      doc: census-api-terms
+      clauses:
+        - A public federal service; no key.
+    identification: none required.
+    cadence: The benchmark named in the request (Public_AR_Current).
+    as_of: The benchmark and the request date.
+    formats: [JSON, CSV]
+    errors: HTTP status; an unmatched address is a row with no match.
+    probe:
+      url: https://geocoding.geo.census.gov/geocoder/benchmarks
+      as_of: {json: [benchmarks]}
+    last_verified: "2026-10-21"
+

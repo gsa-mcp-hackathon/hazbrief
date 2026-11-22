@@ -1,0 +1,72 @@
+# scripts/fetch_allowlisted.py settings. Every key is required: a fetcher that defaulted a pace
+# because a key was misspelled is the failure this file exists to prevent (standards s2, s4).
+
+# The client's one identity, with a contact URL a host operator can reach (RFC 9309 practice;
+# ai-readiness-kg DD-060: the client never varies its identity to get a better answer, so a host
+# that refuses it is recorded as refusing it).
+user_agent: "hazbrief-mcp-corpus/0.1 (+https://github.com/brockwebb/hazbrief-mcp)"
+
+# Politeness, per host. The interval to a host is max(1 / requests_per_second_per_host,
+# that host's Crawl-delay for this agent). A Crawl-delay above crawl_delay_max_s sets the host
+# aside for the run rather than holding the run hostage (ai-readiness-kg params.yaml, same rule).
+requests_per_second_per_host: 1.0
+crawl_delay_max_s: 60
+
+connect_timeout_seconds: 10.0
+read_timeout_seconds: 60.0
+
+# 429 and 503 are the host asking for less; back off and retry, bounded.
+backoff_on_status: [429, 503]
+max_retries: 3
+backoff_base_seconds: 2.0
+
+follow_redirects: true
+max_redirects: 5   # RFC 9309 s2.3.1.2: "at least five"
+
+# A redirect is followed only to the page asked for (HB-47). A 200 whose final URL is a different
+# page from the requested one is recorded `redirected_elsewhere` and not stored (HB-46b:
+# proceedings.esri.com 301'd the CATS paper to Esri's proceedings index, which passed the HTML
+# check and was stored as the paper). Hosts whose URLs are web-archive captures,
+# /web/<datetime><modifier>/<original URL>: a redirect from one capture to another is the same
+# page when the original URL is and the modifier (`id_`, the original bytes) is kept (an archive's
+# TimeGate redirect to the nearest Memento, RFC 7089).
+memento_hosts: ["web.archive.org"]
+
+# The HTML check (HB-01c). HTML carries no format signature, so a 200 that is a soft 404 or a
+# JavaScript application shell (HB-06: data.cms.gov/api-docs, "Page Not Found | CMS Data") is
+# recorded `script_rendered`, not `fetched`. Visible characters are counted as
+# scripts/corpus_text.py's html_text counts them (the text Squiddy indexes). 250 is under half
+# the smallest HTML document the corpus held on 2026-10-20 (census-api-key-signup, 554 of 38
+# measured; test_fetch_allowlisted.py (a test held privately) re-checks every held page against it). Title
+# patterns are case-insensitive regular expressions for the soft-404 titles a server sends with
+# a 200 (Bar-Yossef et al., WWW 2004).
+html_min_visible_chars: 250
+html_shell_title_patterns:
+  - 'page not found'
+  - '\b404\b'
+  - 'page (?:can ?not|could not) be found'
+  - 'file not found'
+
+# The acquisition ladder (HB-62, DN-002 ADDENDUM-00). A unit this client could not take names the
+# next rung in its row, `next_rung`: `browser` (rung 2, the session in the operator's browser)
+# unless the response itself shows a credential gate, then `operator` (rung 3). A gate is an
+# authentication challenge (RFC 9110 s11.6.1 WWW-Authenticate on a 401, s11.7.1
+# Proxy-Authenticate on a 407), or a redirect whose final path matches one of these
+# case-insensitive regular expressions. Only Apereo CAS Protocol 3.0 s2.1 fixes a login path
+# (`/login`); SAML 2.0 and OAuth 2.0 (RFC 6749 s3.1) leave endpoints to the deployment, so the
+# rest are the common mounts. A gate this list misses reads as `browser`, the safe direction:
+# the browser rung meets the login page and names rung 3 itself.
+credential_gate_path_patterns:
+  - '/(?:log[-_]?in|log[-_]?on|sign[-_]?in)\b'
+  - '/saml2?/'
+  - '/sso/'
+  - '/oauth2?/authori[sz]e\b'
+
+# Section 15 (constitution): progress, pilot, ceilings. No model spend happens here, so the
+# ceilings are wall clock and bytes.
+progress_every_units: 5
+progress_every_seconds: 60
+pilot_units: 5
+ceiling_wall_clock_seconds: 3600
+ceiling_total_bytes: 524288000        # 500 MiB for the whole run
+ceiling_document_bytes: 157286400     # 150 MiB for one document; larger is bulk data, not a document

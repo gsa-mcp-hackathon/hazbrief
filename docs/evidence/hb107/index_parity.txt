@@ -1,0 +1,1 @@
+index parity PASS: 164692 release units, 164692 index rows, 164692 vectors (the corpus graph (held privately)); baseline hb106_licences 164682 (docs/evidence/hb106/index_parity.txt); delta +10 = one metadata row per new Work, no text row (index_rows_after.txt, from work/index/corpus.db)

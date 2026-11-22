@@ -1,0 +1,1437 @@
+# HB-23 step 1: the inventory, verified (HB-23).
+# One row per inventory line as found, tiers 5a to 5d. Discovery was by web search, landing-page reads and
+# host listings (the NTSB Reports list through its SharePoint API, 2,021 reports; CSB's completed investigations,
+# 132 entries), 2026-10-23, by three subagents of the executing session; each row's notes say what was checked.
+# `discovery_sha256` is the hash a discovery read measured, a cross-check only. `path`: fetcher, operator (the
+# operator's browser), held (already in the corpus), not_found, not_taken (a revision, excerpt or borderline row
+# deliberately not acquired; LN-09's near-duplicate accounting) or reference_only (by its licence). `outcome` is
+# written from the records by inventory_outcomes.py (a build tool held privately), never by hand. `screened_out` is what tier 5b's
+# search read and left out, so the inventory's boundary is stated.
+inventory:
+- line: 5a-1
+  tier: 5a
+  status: found
+  doc_id: atsdr-tp-ammonia-2004
+  title: Toxicological Profile for Ammonia
+  publisher: US DHHS, Public Health Service, Agency for Toxic Substances and Disease Registry (ATSDR)
+  edition: September 2004 (final; its update statement says it supersedes the September 2002 Draft for Public Comment)
+  url: https://www.atsdr.cdc.gov/toxprofiles/tp126.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxProfiles/ToxProfiles.aspx?id=11&tid=2
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 2768294
+  pages: 269
+  discovery_sha256: 9323de50fcf8c1e79c063868b1fceb416404c395513cae5a6d22e52fcaffaff3
+  notes: 'HEAD 200 application/pdf, Content-Length 2768294, Last-Modified 2023-04-05. GET with the fetcher''s user agent
+    200, same bytes; title page read (''TOXICOLOGICAL PROFILE FOR AMMONIA ... September 2004''). A GET with a bare ''Mozilla/5.0''
+    user agent was refused 403 by Akamai (HEAD still 200), so the scripted fetcher''s identified agent is the one that works.
+    No Wayback needed. No newer draft: the landing page cites ''ATSDR 2004'' only, and the ATSDR ''Public Comment Draft''
+    list (toxicological-profiles/about, Oct 2026) names cadmium, hexachlorocyclopentadiene, benzene, CDDs, cyanide, thallium,
+    xylenes, not ammonia. Not held (sources.yaml holds atsdr-mmg-ammonia and atsdr-toxfaqs-ammonia only). Per-chapter PDFs
+    also exist; the complete profile is the line.'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 419 grounded claims, committed in hb23_bulk_02"
+- line: 5a-2
+  tier: 5a
+  status: found
+  doc_id: atsdr-tp-chlorine-2010
+  title: Toxicological Profile for Chlorine
+  publisher: US DHHS, Public Health Service, ATSDR
+  edition: November 2010 (final; supersedes the October 2007 Draft for Public Comment)
+  url: https://www.atsdr.cdc.gov/toxprofiles/tp172.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxProfiles/ToxProfiles.aspx?id=1079&tid=36
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 7655231
+  pages: 269
+  discovery_sha256: 9993689f1457bf33ed7e814921bc28aba9dd2a41737d3f3efb07839c46448060
+  notes: HEAD 200 application/pdf, Content-Length 7655231, Last-Modified 2023-04-05; GET (fetcher UA) 200, title page 'TOXICOLOGICAL
+    PROFILE FOR CHLORINE ... November 2010'. Landing page cites ATSDR 2010; no draft update on the page or on the ATSDR
+    public-comment list. Not held (atsdr-mmg-chlorine, atsdr-toxfaqs-chlorine held).
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 502 grounded claims, committed in hb23_bulk_02"
+- line: 5a-3
+  tier: 5a
+  status: found
+  doc_id: atsdr-tp-ethylene-oxide-2022
+  title: Toxicological Profile for Ethylene Oxide
+  publisher: US DHHS, ATSDR
+  edition: August 2022 (final)
+  url: https://www.atsdr.cdc.gov/toxprofiles/tp137.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxProfiles/ToxProfiles.aspx?id=734&tid=133
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 3878785
+  pages: 243
+  discovery_sha256: c0ede185b36ff6e734fb719dcb7f3989bd41999b216734822681647da121b786
+  notes: HEAD 200 application/pdf, Content-Length 3878785, Last-Modified 2022-08-09; GET (fetcher UA) 200, title page 'Toxicological
+    Profile for Ethylene Oxide August 2022'. Landing page cites ATSDR 2022, last reviewed 2022-08-15; no newer draft. The
+    newest of the six. Not held (atsdr-mmg-ethylene-oxide, atsdr-toxfaqs-ethylene-oxide held).
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 394 grounded claims, committed in hb23_bulk_02"
+- line: 5a-4
+  tier: 5a
+  status: not_found
+  doc_id: null
+  title: null
+  publisher: ATSDR
+  edition: null
+  url: null
+  landing_url: https://wwwn.cdc.gov/TSP/substances/ToxSubstance.aspx?toxid=147
+  host: null
+  host_on_allowlist: null
+  licence: null
+  size_bytes: null
+  pages: null
+  notes: 'Searched as atsdr-tp-hydrogen-chloride. ATSDR has never issued a Toxicological Profile for hydrogen chloride.
+    Searches run: (1) web search ''ATSDR toxicological profile hydrogen chloride'' (returned only ToxFAQs tfacts173, the
+    archived MMG mmg173, a TCEQ DSD and a UK HPA overview); (2) the ATSDR A-Z index of Tox Profiles (https://www.atsdr.cdc.gov/toxicological-profiles/glossary/index.html):
+    hydrogen chloride not listed; (3) the ATSDR substance page toxid=147: offers only ToxFAQs (faqid=759) and the MMG (mmgid=758),
+    no profile. The ATSDR material for HCl is already held: atsdr-mmg-hydrogen-chloride and atsdr-toxfaqs-hydrogen-chloride.
+    No profile number exists, so no Wayback search was meaningful.'
+  path: not_found
+  outcome: "none (no document found; see notes)"
+- line: 5a-5
+  tier: 5a
+  status: found
+  doc_id: atsdr-tp-fluorides-hf-fluorine-2003
+  title: Toxicological Profile for Fluorides, Hydrogen Fluoride, and Fluorine
+  publisher: US DHHS, Public Health Service, ATSDR
+  edition: September 2003 (final; supersedes the September 2001 Draft for Public Comment)
+  url: https://www.atsdr.cdc.gov/toxprofiles/tp11.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxProfiles/ToxProfiles.aspx?id=212&tid=38
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 4966248
+  pages: 404
+  discovery_sha256: 328c5ff9820658d4698f5ae7cb1b1c823981a6bda101eb03e49f5820b46440f8
+  notes: HEAD 200 application/pdf, Content-Length 4966248, Last-Modified 2023-04-05; GET (fetcher UA) 200, title page 'TOXICOLOGICAL
+    PROFILE FOR FLUORIDES, HYDROGEN FLUORIDE, AND FLUORINE ... September 2003'. Landing page cites ATSDR 2003 (page last
+    reviewed 2014-05-06); no draft update or addendum listed, and not on the ATSDR public-comment list. Landing links the
+    complete profile as /ToxProfiles/tp11.pdf (capitalised path); the lowercase /toxprofiles/ path answers the same bytes.
+    Not held (atsdr-mmg-hydrogen-fluoride, atsdr-toxfaqs-fluorides-hf held).
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 657 grounded claims, committed in hb23_bulk_02"
+- line: 5a-6
+  tier: 5a
+  status: found
+  doc_id: atsdr-tp-sulfur-dioxide-1998
+  title: Toxicological Profile for Sulfur Dioxide
+  publisher: US DHHS, Public Health Service, ATSDR
+  edition: December 1998 (final)
+  url: https://www.atsdr.cdc.gov/toxprofiles/tp116.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxProfiles/ToxProfiles.aspx?id=253&tid=46
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 3650799
+  pages: 223
+  discovery_sha256: db2e52a4cb27743529b8a174122edc43c8bd8004726909acffd657502c76ace5
+  notes: HEAD 200 application/pdf, Content-Length 3650799, Last-Modified 2023-04-05; GET (fetcher UA) 200, title page 'TOXICOLOGICAL
+    PROFILE FOR SULFUR DIOXIDE ... December 1998' (PDF built 2001). Landing page cites ATSDR 1998; no newer draft on the
+    page or the public-comment list. Oldest of the six. Not held (atsdr-mmg-sulfur-dioxide, atsdr-toxfaqs-sulfur-dioxide
+    held).
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 410 grounded claims, committed in hb23_bulk_02"
+- line: '1'
+  tier: 5b
+  status: found
+  doc_id: ntsb-rar-04-01-minot
+  title: Derailment of Canadian Pacific Railway Freight Train 292-16 and Subsequent Release of Anhydrous Ammonia Near Minot,
+    North Dakota, January 18, 2002 (NTSB/RAR-04/01, PB2004-916301)
+  publisher: National Transportation Safety Board
+  edition: Adopted 2004-03-09 (Notation 7461A)
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/RAR0401.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA02MR002.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 1520861
+  pages: 92
+  discovery_sha256: bbf008879825027f14651bb09972b81ec78455ada2f4b7d3b0863ab43e012db7
+  notes: Title from the title page (p. 3); PDF metadata title matches. HEAD 200 application/pdf, Last-Modified 2022-08-29.
+    The landing page h1 matches. DCA02MR001 is a different accident (CN/IC collision).
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 263 grounded claims, committed in hb23_bulk_04"
+- line: '2'
+  tier: 5b
+  status: found
+  doc_id: ntsb-rar-06-03-macdona
+  title: Collision of Union Pacific Railroad Train MHOTU-23 With BNSF Railway Company Train MEAP-TUL-126-D With Subsequent
+    Derailment and Hazardous Materials Release, Macdona, Texas, June 28, 2004 (NTSB/RAR-06/03, PB2006-916303)
+  publisher: National Transportation Safety Board
+  edition: Adopted 2006-07-06 (Notation 7675D)
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/RAR0603.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA04MR010.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 3791764
+  pages: 74
+  discovery_sha256: 1ccaf884961349908b81c5444783c0e89e2b02cf3d7daaf0797d986f0c1f5d7d
+  notes: Title from the title page; PDF metadata title matches. Chlorine release (TIH). HEAD 200 application/pdf. The landing
+    page h1 matches.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 223 grounded claims, committed in hb23_bulk_04"
+- line: 3a
+  tier: 5b
+  status: not_found
+  doc_id: null
+  title: null
+  publisher: National Transportation Safety Board
+  edition: null
+  url: null
+  landing_url: null
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: null
+  size_bytes: null
+  pages: null
+  notes: 'No. The NTSB did not report the Festus MO 2002 chlorine release. Evidence: (1) none of the 2,021 items in the
+    NTSB Reports list (SharePoint API, all modes) has Festus, DPC or a 2002 Missouri accident location. The only Missouri
+    match near Festus is Crystal City MO 1983 (RAR-84-01, a BN derailment). (2) A web search for "NTSB Festus Missouri 2002
+    chlorine tank car hose DPC Enterprises NTSB investigation" returned only CSB and press items. (3) Hazmat-mode accident
+    IDs DCA02MZ003 to DCA02MZ005 return "Page not found". The CSB investigated it (report 2002-04-I-MO, held as csb-2002-04-i-mo-dpc-festus).
+    The accident was a fixed-facility railcar unloading hose failure, outside NTSB transportation jurisdiction as practised.'
+  path: not_found
+  outcome: "none (no document found; see notes)"
+- line: 3b
+  tier: 5b
+  status: found
+  doc_id: csb-2002-04-i-mo-dpc-festus-digest
+  title: DPC Enterprises Chlorine Release, Festus, Missouri, August 14, 2002 (CSB investigation digest)
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: undated (2003; accompanies the May 2003 report)
+  url: https://www.csb.gov/assets/1/20/dpc_digest.pdf
+  landing_url: https://www.csb.gov/dpc-enterprises-festus-chlorine-release/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 441592
+  pages: 2
+  discovery_sha256: 865493665b4b67bc634b5cc7983cc2059cf0e03d023b7aabf11abd1698deb08f
+  notes: 'Not taken: a two-page digest of the held csb-2002-04-i-mo-dpc-festus (an excerpt; LN-09). Optional. A 2-page digest
+    derived from the held report csb-2002-04-i-mo-dpc-festus, so little new content. Title from page 1; the PDF metadata
+    title is a stale "CSB_Tosco1". Found by the line-3 web search. HTTP 200 application/pdf.'
+  path: not_taken
+  outcome: "found, not acquired (a revision or companion not taken; see notes)"
+- line: 4a
+  tier: 5b
+  status: found
+  doc_id: ntsb-hzm-02-01-riverview
+  title: Hazardous Materials Release From Railroad Tank Car With Subsequent Fire at Riverview, Michigan, July 14, 2001 (NTSB/HZM-02/01,
+    PB2002-917002)
+  publisher: National Transportation Safety Board
+  edition: Adopted 2002-06-26 (Notation 7400A)
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/HZM0201.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA01MZ002.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 996430
+  pages: 58
+  discovery_sha256: 9769426178acaabaf525d5f000603dc4e27c961df5b06188309efa010011e2f2
+  notes: Hazardous Materials Accident Report (not a brief). Methyl mercaptan (TIH) released from a rail tank car unloading
+    line at the ATOFINA plant. The fire then burned hoses on an adjacent tank car and released chlorine. 3 killed. Title
+    from the title page; HEAD 200.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 127 grounded claims, committed in hb23_bulk_04"
+- line: 4b
+  tier: 5b
+  status: found
+  doc_id: ntsb-hzm-04-01-calamus
+  title: Nurse Tank Failure With Release of Hazardous Materials Near Calamus, Iowa, April 15, 2003 (NTSB/HZM-04/01, PB2004-917001)
+  publisher: National Transportation Safety Board
+  edition: Adopted 2004-06-22 (Notation 7564A)
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/HZM0401.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA03MZ001.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 471223
+  pages: 38
+  discovery_sha256: 821edc94328a035690b03895271991ef112692e769de601f14bc4c5c899f3abb
+  notes: Hazardous Materials Accident Report. About 1,300 gal anhydrous ammonia escaped when a nonspecification agricultural
+    nurse tank (a cargo tank) split open at the filling facility. Title from the title page; HEAD 200.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 84 grounded claims, committed in hb23_bulk_03"
+- line: 4c
+  tier: 5b
+  status: found
+  doc_id: ntsb-hzb-04-01-middletown
+  title: 'Hazardous Materials Accident Brief: Release of Hazardous Materials From Cargo Tank, Middletown, Ohio, August 22,
+    2003 (NTSB/HZB-04/01, DCA03MZ002)'
+  publisher: National Transportation Safety Board
+  edition: Adopted 2004-07-22 (per the NTSB Reports list; the brief's header carries no date)
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/HZB0401.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA03MZ002.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 341013
+  pages: 10
+  discovery_sha256: 8066de404e8a5fc59468dc1d2a145aafde0653a64a9c1ff77eb1b4fa9bdc8937
+  notes: Brief (HZB). An Amerigas MC-331 cargo tank head fractured during anhydrous ammonia transfer at AK Steel. 5 people
+    treated; about 100 evacuated downwind. The NTSB list spells the city "Middleton"; the brief reads Middletown. Title
+    from the brief header and the list; HEAD 200.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 26 grounded claims, committed in hb23_bulk_03"
+- line: 4d
+  tier: 5b
+  status: found
+  doc_id: ntsb-hzm-12-01-sum-swansea
+  title: Cargo Hose Rupture and Release of Anhydrous Ammonia During Offloading of a Werner Transportation Services Cargo
+    Tank Motor Vehicle at the Tanner Industries Plant, Swansea, South Carolina, July 15, 2009 (Hazardous Materials Accident
+    Summary Report NTSB/HZM-12/01/SUM, PB2012-917002)
+  publisher: National Transportation Safety Board
+  edition: Adopted 2012-04-12 (Notation 8391)
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/HZM1201S.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA09FZ002.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 969601
+  pages: 28
+  discovery_sha256: bb0f61a636d8e6acddca8171d33cd8bc048a17064155528a5675d8c31564c35e
+  notes: Summary report, the only edition. HZM1201.pdf (no S) returns a 200 text/html soft 404. Highway cargo-tank offload,
+    anhydrous ammonia. Title from the title page; HEAD 200.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 60 grounded claims, committed in hb23_bulk_03"
+- line: 4e
+  tier: 5b
+  status: found
+  doc_id: ntsb-hzm-19-01-new-martinsville
+  title: Rupture of a DOT-105 Rail Tank Car and Subsequent Chlorine Release at Axiall Corporation, New Martinsville, West
+    Virginia, August 27, 2016 (NTSB/HZM-19/01, PB2019-100294)
+  publisher: National Transportation Safety Board
+  edition: Adopted 2019-02-11 (Notation 58857)
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/HZM1901.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA16SH002.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 1682868
+  pages: 52
+  discovery_sha256: f2672c3828e533c02387da526459d95db445791a86ba6e5e5bb2f582d9652414
+  notes: Hazardous Materials Accident Report. The entire 178,400 lb chlorine load was released from a newly loaded rail
+    tank car at the Natrium plant. Title from the title page; HEAD 200.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 113 grounded claims, committed in hb23_bulk_04"
+- line: 4f
+  tier: 5b
+  status: found
+  doc_id: ntsb-hzir-22-01-beach-park
+  title: 'Hazardous Materials Investigation Report: Anhydrous Ammonia Release from a Nurse Tank Trailer During Transport,
+    Beach Park, Illinois, April 25, 2019 (HZIR-22/01)'
+  publisher: National Transportation Safety Board
+  edition: Issued 2022-08-29
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/HZIR2201.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/HMD19FR002.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 697091
+  pages: 9
+  discovery_sha256: 571579c1736e0cd0687b3271b9ba319aed3c75f4c5ae61b002bfc8a686bdbce2
+  notes: Short-format investigation report. About 650 gal anhydrous ammonia released on a public road from nurse tanks towed
+    by a farm tractor. The landing page h1 reads "Hazardous Material Release Anhydrous Ammonia". Title from page 1; HEAD
+    200.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 27 grounded claims, committed in hb23_bulk_03"
+- line: 4g
+  tier: 5b
+  status: found
+  doc_id: ntsb-hir-25-06-teutopolis
+  title: Cargo Tank Combination Vehicle Roadway Departure, Rollover, and Release of Anhydrous Ammonia, Teutopolis, Illinois,
+    September 29, 2023 (Highway Investigation Report HIR-25-06)
+  publisher: National Transportation Safety Board
+  edition: Dated 2025-09-16
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/HIR2506.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/HWY23MH017.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 3201466
+  pages: 27
+  discovery_sha256: e25d611ebd13cf30357c1c455182cf8ecf69f2028d7da50f71dee23f01132f41
+  notes: 'A highway TIH release with 5 fatalities among nearby residents/motorists: a cargo tank was punctured and released
+    anhydrous ammonia. Title from page 1; the landing page h1 matches; HEAD 200.'
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 69 grounded claims, committed in hb23_bulk_03"
+- line: 4h
+  tier: 5b
+  status: found
+  doc_id: ntsb-rir-26-07-bordulac
+  title: Canadian Pacific Kansas City Railroad Derailment with Subsequent Hazardous Materials Release and Fire, Bordulac,
+    North Dakota, July 5, 2024 (Railroad Investigation Report NTSB/RIR-26-07)
+  publisher: National Transportation Safety Board
+  edition: Dated 2026-05-18
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/RIR2607.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/RRD24LR012.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 5193266
+  pages: 107
+  discovery_sha256: f1e86eaf05b2f23ebb16a36cd44c99d9d52c1f71c58b5ce534895e23dfb93c3d
+  notes: Methanol from derailed DOT-111 cars fed a pool fire that led to anhydrous ammonia release from DOT-112 cars. A
+    residence was evacuated. The safety issues include the survivability of poison-inhalation-hazard tank cars and PIH cars
+    placed next to flammable-liquid cars. Title from page 1; HEAD 200.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 215 grounded claims, committed in hb23_bulk_04"
+- line: 4i
+  tier: 5b
+  status: found
+  doc_id: ntsb-hzm-04-02-freeport
+  title: Rupture of a Railroad Tank Car Containing Hazardous Waste, Freeport, Texas, September 13, 2002 (NTSB/HZM-04/02,
+    PB2004-917003)
+  publisher: National Transportation Safety Board
+  edition: 2004-12-01 per the NTSB Reports list (Notation 7661)
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/HZM0402.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA02MZ002.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 1290021
+  pages: 38
+  discovery_sha256: 36952791c247e63a18e0c6d7efb125afdada50b117ec7762211370f808321823
+  notes: 'Not taken: borderline (oleum from storage tanks a ruptured tank car damaged); HB-23 keeps a strict TIH-release
+    set. Borderline, include on the operator''s call. The ruptured tank car held non-TIH waste (cyclohexanone oxime, water,
+    cyclohexanone). The blast damaged two storage tanks that released about 660 gal of oleum (fuming sulfuric acid / sulfur
+    trioxide, a PIH material). 28 minor injuries; shelter or evacuation within 1 mile.'
+  path: not_taken
+  outcome: "found, not acquired (a revision or companion not taken; see notes)"
+- line: 4-held
+  tier: 5b
+  status: held
+  doc_id: ntsb-rar-05-04-graniteville
+  title: Collision of Norfolk Southern Freight Train 192 With Standing Norfolk Southern Local Train P22 With Subsequent
+    Hazardous Materials Release at Graniteville, South Carolina, January 6, 2005 (NTSB/RAR-05/04)
+  publisher: National Transportation Safety Board
+  edition: Adopted 2005-11-29
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/RAR0504.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA05MR008.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 1337655
+  pages: 68
+  notes: Held from HB-22 (chlorine). Paulsboro RAR-14-01 and East Palestine RIR-24-05 are also held; both are vinyl chloride,
+    which is not a TIH.
+  path: held
+  outcome: "operator browser download, registered by content; held before this run, extracted under CLI 2.1.309 in hb22_bulk"
+- line: 5a
+  tier: 5b
+  status: found
+  doc_id: csb-2004-11-i-ca-sterigenics-ontario
+  title: 'Investigation Report: Sterigenics (4 Employees Injured), Sterigenics, Ontario, California, August 19, 2004 (Report
+    No. 2004-11-I-CA)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: March 2006 (released 2006-03-30)
+  url: https://www.csb.gov/assets/1/20/sterigenics_report.pdf
+  landing_url: https://www.csb.gov/sterigenics-ethylene-oxide-explosion/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 1103203
+  pages: 59
+  discovery_sha256: 9dc20e2ff287fbf391706bcf9cc0f00522f5e358e67734310fd19825f1bcb217
+  notes: Investigation report. The landing summary names ethylene oxide (an explosion in the EtO sterilization chamber and
+    thermal oxidizer). Title from the cover. The listed /Sterigenics_Report.pdf 301s to the lowercase URL.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 98 grounded claims, committed in hb23_bulk_04"
+- line: 5b
+  tier: 5b
+  status: found
+  doc_id: csb-2023-03-i-la-dow-plaquemine
+  title: Explosions, Fires, and Toxic Ethylene Oxide Release at Dow Louisiana Operations, Plaquemine, Louisiana, Incident
+    Date July 14, 2023 (No. 2023-03-I-LA), Investigation Report
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: Released 2026-02-26
+  url: https://www.csb.gov/assets/1/20/dow_investigation_report-final_(002).pdf
+  landing_url: https://www.csb.gov/dow-louisiana-operations-explosions/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 3042444
+  pages: 52
+  discovery_sha256: 7219421ff7abac6930bfc4295fb5b7c46b99378db5122e108b49587d6cb7f641
+  notes: Investigation report. The landing summary names the Glycol II Ethylene Oxide Finishing unit. Title from the cover
+    ("CSB Public Record").
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 131 grounded claims, committed in hb23_bulk_04"
+- line: 5c
+  tier: 5b
+  status: found
+  doc_id: csb-2019-04-i-pa-pes-philadelphia
+  title: Fire and Explosions at Philadelphia Energy Solutions Refinery Hydrofluoric Acid Alkylation Unit, Philadelphia,
+    Pennsylvania, Incident Date June 21, 2019 (No. 2019-04-I-PA), Investigation Report
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: Published 2022-10-11
+  url: https://www.csb.gov/assets/1/20/pes_final_report_published_october_2022_r1.pdf
+  landing_url: https://www.csb.gov/philadelphia-energy-solutions-pes-refinery-fire-and-explosions-/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 7503916
+  pages: 107
+  discovery_sha256: c6f116a076a1539af8921319c1d03920bb5d5cf5e124640b22e3188341a772ca
+  notes: Investigation report. The short landing summary says only "alkylation unit"; the report title and the recommendations
+    on the landing page name hydrofluoric acid (549 HF mentions in the text). Appendix C (Anamet metallurgical report) and
+    a Factual Update are separate PDFs, not listed here.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 188 grounded claims, committed in hb23_bulk_04"
+- line: 5d
+  tier: 5b
+  status: found
+  doc_id: csb-2023-02-i-la-honeywell-geismar
+  title: Three Catastrophic Hydrogen Fluoride Incidents at Honeywell Geismar, Geismar, Louisiana (No. 2023-02-I-LA), Investigation
+    Report
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: Published May 2025 (released 2025-05-27)
+  url: https://www.csb.gov/assets/1/20/honeywell_geismar_investigation_report_-_final.pdf
+  landing_url: https://www.csb.gov/honeywell-geismar-chlorine-and-hydrogen-fluoride-releases/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 8419362
+  pages: 110
+  discovery_sha256: 070631208d739a15921437098fa80e3734c40d14ed083366eec239baae643998
+  notes: Investigation report covering 2021-10-21, 2023-01-23 and 2024-06-07. The landing summary names HF and chlorine.
+    This is not the held Honeywell Baton Rouge 2003 report (csb-2003-13-i-la-honeywell-baton-rouge). A 2024-07-10 investigation
+    update PDF also exists and is superseded by this report.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 267 grounded claims, committed in hb23_bulk_05"
+- line: 5e
+  tier: 5b
+  status: found
+  doc_id: csb-2018-02-i-wi-husky-superior
+  title: FCC Unit Explosion and Asphalt Fire at Husky Superior Refinery, Superior, WI, Incident Date April 26, 2018 (No.
+    2018-02-I-WI), Investigation Report
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: Published 2022-12-23
+  url: https://www.csb.gov/assets/1/20/husky_superior_refinery_report_2022-12-23_(1)1.pdf
+  landing_url: https://www.csb.gov/husky-energy-superior-refinery-explosion-and-fire/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 8785964
+  pages: 196
+  discovery_sha256: fba325bda0a4244932d5b5773283d349479ffd8b9aa39cfbf0df7e2a1a7f9977
+  notes: 'Not taken: HF was a risk, not a release (strict TIH-release set). Borderline. HF was a risk, not a release. The
+    landing summary does not name HF; the landing-page recommendations do, and the report has 69 HF mentions (debris near
+    the HF alkylation unit). Appendix D (brittle fracture) is a separate PDF.'
+  path: not_taken
+  outcome: "found, not acquired (a revision or companion not taken; see notes)"
+- line: 5f
+  tier: 5b
+  status: found
+  doc_id: csb-2015-02-i-ca-exxonmobil-torrance
+  title: 'Investigation Report: ExxonMobil Torrance Refinery Electrostatic Precipitator Explosion, Torrance, California,
+    Incident Date February 18, 2015 (No. 2015-02-I-CA)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: Published May 2017 (released 2017-05-03)
+  url: https://www.csb.gov/assets/1/20/exxonmobil_report_for_public_release.pdf
+  landing_url: https://www.csb.gov/exxonmobil-torrance-refinery-explosion-/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 5723881
+  pages: 73
+  discovery_sha256: 4d739d891b41ae13fb16dc7b7c10e023342a0572f04f2d8d19d1815d9d282f9e
+  notes: 'Not taken: a modified-HF near miss, not a release (strict TIH-release set). Borderline. The cover reads "Near
+    Miss in MHF Alkylation Unit" (modified HF); the landing summary refers only to the "alkylation unit" near miss. 40 HF
+    mentions in the text. No HF was released.'
+  path: not_taken
+  outcome: "found, not acquired (a revision or companion not taken; see notes)"
+- line: 5g
+  tier: 5b
+  status: found
+  doc_id: csb-2004-08-i-nm-giant-gallup
+  title: 'Case Study: Oil Refinery Fire and Explosion, Giant Industries Ciniza refinery (No. 2004-08-I-NM)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: October 2005 (released 2005-10-26)
+  url: https://www.csb.gov/assets/1/20/giant_case_study.pdf
+  landing_url: https://www.csb.gov/giant-industries-refinery-explosions-and-fire/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 702253
+  pages: 12
+  discovery_sha256: 0cb66f62eed0d9c34343330f64be876a73b448bcfc9b60fd33eac9bf5aa018ed
+  notes: 'Not taken: a hydrocarbon release at an HF alkylation unit (strict TIH-release set). Case study, not an investigation
+    report. The landing summary names the HF alkylation unit, but the release was flammable hydrocarbon from a pump.'
+  path: not_taken
+  outcome: "found, not acquired (a revision or companion not taken; see notes)"
+- line: 5h
+  tier: 5b
+  status: found
+  doc_id: csb-2008-06-i-tx-goodyear-houston
+  title: 'Case Study: Heat exchanger rupture and ammonia release in Houston, Texas (One Killed, Six Injured), The Goodyear
+    Tire and Rubber Company (2008-06-I-TX)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: January 2011 (released 2011-01-27)
+  url: https://www.csb.gov/assets/1/20/case_study.pdf
+  landing_url: https://www.csb.gov/goodyear-heat-exchanger-rupture/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 808139
+  pages: 10
+  discovery_sha256: 21a21f2fb87cc9ef2557d5106eaab541171c434de02fbbd81f685b00d8ed69ea
+  notes: Case study. The landing summary names ammonia. The file name is the generic case_study.pdf, so register by content.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 37 grounded claims, committed in hb23_bulk_03"
+- line: 5i
+  tier: 5b
+  status: found
+  doc_id: csb-2003-11-i-ky-dd-williamson-louisville
+  title: 'Investigation Report: Catastrophic Vessel Failure (1 Killed, Community Evacuation, and Shelter-in-Place), D. D.
+    Williamson & Co., Inc., Louisville, Kentucky, April 11, 2003 (Report No. 2003-11-I-KY)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: March 2004 (approved 2004-03-12)
+  url: https://www.csb.gov/assets/1/20/dd_report.pdf
+  landing_url: https://www.csb.gov/d-d-williamson-and-co-catastrophic-vessel-failure/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 713719
+  pages: 56
+  discovery_sha256: 89113b9c467ad7cd7a7298c93ef284ee0d09bf74bbcedbdf111af84d07151204
+  notes: Investigation report. Aqua (aqueous) ammonia release; 26 residents evacuated and 1,500 sheltered in place. Aqueous
+    ammonia is not anhydrous ammonia; it is kept here because the summary names ammonia.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 132 grounded claims, committed in hb23_bulk_03"
+- line: 5j
+  tier: 5b
+  status: found
+  doc_id: csb-2020-05-i-la-biolab-westlake
+  title: Chemical Reaction, Decomposition, and Toxic Gas Release at Bio-Lab, Inc., Westlake, LA, Incident Date August 27,
+    2020 (No. 2020-05-I-LA), Investigation Report
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: Published 2023-04-24
+  url: https://www.csb.gov/assets/1/20/biolab_investigation_report_2023-4-24_r11.pdf
+  landing_url: https://www.csb.gov/bio-lab-lake-charles-chemical-fire-and-release-/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 15058893
+  pages: 125
+  discovery_sha256: 5a90b7254fbd6cf822aaa663f22f777d583aeaa7954c43cd7f098788e4de6afc
+  notes: Investigation report; chlorine gas released after Hurricane Laura. The CSB list entry "Bio Lab Conyers Chemical
+    Release" (2020-09-14; https://www.csb.gov/bio-lab-conyers-chemical-release-/) links the same PDF as its final report,
+    so one row covers both. This is not the held 2024 Conyers report (csb-2024-04-i-ga-biolab-conyers).
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 242 grounded claims, committed in hb23_bulk_05"
+- line: 5k
+  tier: 5b
+  status: found
+  doc_id: csb-2009-12-i-nc-conagra-garner-bulletin
+  title: 'Safety Bulletin: Dangers of Purging Gas Piping into Buildings (No. 2009-12-I-NC)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: September 2009
+  url: https://www.csb.gov/assets/1/20/csb_safety_bulletin_final_embargoed_10_2_09.pdf
+  landing_url: https://www.csb.gov/conagra-natural-gas-explosion-and-ammonia-release/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 983095
+  pages: 5
+  discovery_sha256: 76ac8937d10ab49d0b56d249ed5d6ddd27716fb5801300e2a23e7e7a398fb3bb
+  notes: 'Not taken: ammonia is secondary to the natural gas explosion (strict TIH-release set). Safety bulletin; the landing
+    page names it the FINAL REPORT. The CSB list title names the ammonia release, about 18,000 lb of anhydrous ammonia from
+    the refrigeration system after the gas explosion. The bulletin is mostly about gas purging, so its TIH content is thin.
+    The landing page also holds presentations and transcripts, not listed here.'
+  path: not_taken
+  outcome: "found, not acquired (a revision or companion not taken; see notes)"
+- line: 5l
+  tier: 5b
+  status: found
+  doc_id: csb-2005-06-i-la-chlorine-esd-bulletin
+  title: 'Safety Bulletin: Emergency Shutdown Systems for Chlorine Transfer (No. 2005-06-I-LA)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: June 2007 (issued 2007-06-14)
+  url: https://www.csb.gov/assets/1/20/csbchlorineshutdownbulletin.pdf
+  landing_url: https://www.csb.gov/emergency-shutdown-systems-for-chlorine-transfer/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 381320
+  pages: 8
+  discovery_sha256: 60911f692b6977188023b1d1ccd7cd95f0fea3e9c1d932d6237d085dc9d0b086
+  notes: Safety bulletin derived from two investigations. It compares the held Festus 2002 release (ESD failed, 48,000 lb)
+    with the Honeywell Baton Rouge railcar hose rupture of 2005-08-11 (ESD worked). The 2005 event is not in the held Honeywell
+    Baton Rouge 2003 report.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 21 grounded claims, committed in hb23_bulk_03"
+- line: 5m
+  tier: 5b
+  status: found
+  doc_id: csb-2009-03-i-va-allied-terminals-chesapeake
+  title: 'Investigation Report: Allied Terminals, Inc. - Catastrophic Tank Collapse (Two Serious Injuries, Community Evacuation),
+    Chesapeake, Virginia, November 12, 2008 (Report No. 2009-03-I-VA)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: May 2009
+  url: https://www.csb.gov/assets/1/20/allied_terminals_report_final_7_13_09.pdf
+  landing_url: https://www.csb.gov/allied-terminals-fertilizer-tank-collapse/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 4112723
+  pages: 54
+  discovery_sha256: 0b3fc4f07dcfe42495bb5817c668eff58dab8e14dec5f6b0de663fd7ef32c2d9
+  notes: 'Not taken: ammonia vapor from liquid fertilizer, weak (strict TIH-release set). Weak match; include on the operator''s
+    call. The landing summary names "ammonia vapor from the released fertilizer" (liquid UAN fertilizer). The report mentions
+    ammonia twice. Not a TIH gas release.'
+  path: not_taken
+  outcome: "found, not acquired (a revision or companion not taken; see notes)"
+- line: 5n
+  tier: 5b
+  status: found
+  doc_id: csb-2009-14-i-tx-citgo-corpus-christi-urgent-recs
+  title: Urgent Recommendations (CITGO Corpus Christi East Refinery HF alkylation unit fire, July 19, 2009), Final Board
+    Vote Copy
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: Issued 2009-12-09; investigation closed at a public meeting 2015-01-28
+  url: https://www.csb.gov/assets/1/20/urgent_recommendations_to_citgo_-_final_board_vote_copy1.pdf
+  landing_url: https://www.csb.gov/citgo-refinery-hydrofluoric-acid-release-and-fire/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 22689
+  pages: 3
+  discovery_sha256: 6c2d1cb6340415eb7095bc9294ecf657a8c122e141068f0baa7d67c394b849db
+  notes: There is no investigation report; the landing page's FINAL REPORT is this 3-page urgent recommendations text. Report
+    number 2009-14-I-TX comes from the landing-page recommendation IDs. The ..._copy.pdf variant is the same size (22689
+    B). The other PDFs on the page are correspondence (TSA, CITGO) and legislation. The summary names HF.
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 0 grounded claims, committed in hb23_bulk_03"
+- line: 5-held-1
+  tier: 5b
+  status: held
+  doc_id: csb-2002-04-i-mo-dpc-festus
+  title: null
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: null
+  url: null
+  landing_url: https://www.csb.gov/investigations/completed-investigations/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  notes: All held from HB-22. The first five matched the word filter on their landing pages. MGPI and Bio-Lab Conyers 2024
+    did not (their landing pages say "toxic chemical"/"chemical release", not chlorine), so the word filter alone would
+    have missed them.
+  path: held
+  outcome: "operator browser download, registered by content; held before this run, extracted under CLI 2.1.309 in hb22_bulk"
+- line: 5-held-2
+  tier: 5b
+  status: held
+  doc_id: csb-2004-02-i-az-dpc-glendale
+  title: null
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: null
+  url: null
+  landing_url: https://www.csb.gov/investigations/completed-investigations/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  notes: All held from HB-22. The first five matched the word filter on their landing pages. MGPI and Bio-Lab Conyers 2024
+    did not (their landing pages say "toxic chemical"/"chemical release", not chlorine), so the word filter alone would
+    have missed them.
+  path: held
+  outcome: "operator browser download, registered by content; held before this run, extracted under CLI 2.1.309 in hb22_bulk"
+- line: 5-held-3
+  tier: 5b
+  status: held
+  doc_id: csb-2003-13-i-la-honeywell-baton-rouge
+  title: null
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: null
+  url: null
+  landing_url: https://www.csb.gov/investigations/completed-investigations/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  notes: All held from HB-22. The first five matched the word filter on their landing pages. MGPI and Bio-Lab Conyers 2024
+    did not (their landing pages say "toxic chemical"/"chemical release", not chlorine), so the word filter alone would
+    have missed them.
+  path: held
+  outcome: "operator browser download, registered by content; held before this run, extracted under CLI 2.1.309 in hb22_bulk"
+- line: 5-held-4
+  tier: 5b
+  status: held
+  doc_id: csb-2010-13-a-al-millard-ammonia
+  title: null
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: null
+  url: null
+  landing_url: https://www.csb.gov/investigations/completed-investigations/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  notes: All held from HB-22. The first five matched the word filter on their landing pages. MGPI and Bio-Lab Conyers 2024
+    did not (their landing pages say "toxic chemical"/"chemical release", not chlorine), so the word filter alone would
+    have missed them.
+  path: held
+  outcome: "operator browser download, registered by content; held before this run, extracted under CLI 2.1.309 in hb22_bulk"
+- line: 5-held-5
+  tier: 5b
+  status: held
+  doc_id: csb-2024-03-i-va-cuisine-solutions-ammonia
+  title: null
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: null
+  url: null
+  landing_url: https://www.csb.gov/investigations/completed-investigations/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  notes: All held from HB-22. The first five matched the word filter on their landing pages. MGPI and Bio-Lab Conyers 2024
+    did not (their landing pages say "toxic chemical"/"chemical release", not chlorine), so the word filter alone would
+    have missed them.
+  path: held
+  outcome: "operator browser download, registered by content; held before this run, extracted under CLI 2.1.309 in hb22_bulk"
+- line: 5-held-6
+  tier: 5b
+  status: held
+  doc_id: csb-2017-01-i-ks-mgpi-atchison
+  title: null
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: null
+  url: null
+  landing_url: https://www.csb.gov/investigations/completed-investigations/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  notes: All held from HB-22. The first five matched the word filter on their landing pages. MGPI and Bio-Lab Conyers 2024
+    did not (their landing pages say "toxic chemical"/"chemical release", not chlorine), so the word filter alone would
+    have missed them.
+  path: held
+  outcome: "operator browser download, registered by content; held before this run, extracted under CLI 2.1.309 in hb22_bulk"
+- line: 5-held-7
+  tier: 5b
+  status: held
+  doc_id: csb-2024-04-i-ga-biolab-conyers
+  title: null
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: null
+  url: null
+  landing_url: https://www.csb.gov/investigations/completed-investigations/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  notes: All held from HB-22. The first five matched the word filter on their landing pages. MGPI and Bio-Lab Conyers 2024
+    did not (their landing pages say "toxic chemical"/"chemical release", not chlorine), so the word filter alone would
+    have missed them.
+  path: held
+  outcome: "operator browser download, registered by content; held before this run, extracted under CLI 2.1.309 in hb22_bulk"
+- line: 6a
+  tier: 5b
+  status: found
+  doc_id: phmsa-crude-oil-rail-lessons-learned-2014
+  title: Crude Oil Rail Emergency Response Lessons Learned Roundtable Report
+  publisher: US DOT PHMSA, Office of Hazardous Materials Safety, Field Services Support
+  edition: 2014-07-01
+  url: https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/docs/Lessons_Learned_Roundtable_Report_FINAL_070114.pdf
+  landing_url: https://www.phmsa.dot.gov/safe-transportation-energy-products/phmsa-lessons-learned-report-crude-oil-rail-emergency-response
+  host: www.phmsa.dot.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 259507
+  pages: 12
+  discovery_sha256: 7a79da7d7afe5cb422326bd0f71c4ef23c4f713b67379b5bee963a6d7c3cdf03
+  requested_url_alt: http://web.archive.org/web/20260508072331id_/https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/docs/Lessons_Learned_Roundtable_Report_FINAL_070114.pdf
+  notes: 'Not taken: crude oil and ethanol, not TIH; the line''s premise of a PHMSA lessons-learned series is false (6b).
+    This is the only PHMSA hazmat document titled "Lessons Learned" found. It covers crude oil and ethanol rail incidents,
+    not TIH. www.phmsa.dot.gov 403s curl (Akamai); size, pages and title come from the Wayback id_ capture 20260508072331.
+    Found from the PHMSA Emergency Response and Training page (Wayback 20260929064016).'
+  path: not_taken
+  outcome: "found, not acquired (a revision or companion not taken; see notes)"
+- line: 6b
+  tier: 5b
+  status: not_found
+  doc_id: null
+  title: PHMSA hazmat "Lessons Learned" / incident summaries as a document series (ten most recent)
+  publisher: US DOT PHMSA
+  edition: null
+  url: null
+  landing_url: null
+  host: www.phmsa.dot.gov
+  host_on_allowlist: true
+  licence: null
+  size_bytes: null
+  pages: null
+  notes: 'PHMSA does not publish hazmat incident summaries or lessons learned as a document series, so "the ten most recent"
+    cannot be met. Searches run: WebSearch "PHMSA hazmat \"lessons learned\" incident summary site:phmsa.dot.gov" (found
+    only the 2014 crude-oil roundtable report (6a) and a 2026 HazMat Roundtable meeting report at /files/2026-08/2026_HazMat-Roundtable-Meeting-Report-07_30-2026.pdf,
+    which is meeting minutes, not incident summaries). WebSearch "PHMSA \"Hazmat Safety Advisory\" OR \"safety advisory
+    notice\" hazardous materials incident 2025 2026" (pipeline advisory bulletins only). Federal Register API, agency PHMSA,
+    type NOTICE, term "safety advisory notice": 32 hits. The recent ones cover cylinders (2013-2019), lithium batteries
+    (2016), explosives approvals (2023) and Ebola waste (2014); none is an incident summary. FR term "lessons learned" hazardous
+    materials incident: 16 hits, mostly pipeline (e.g. 2014-10248 Marshall MI). The PHMSA ER and Training page (Wayback
+    20260929064016) links one Lessons Learned report. PHMSA''s "Hazmat Yearly Incident Summary Reports" are statistical
+    tables from Form 5800.1 data (data.gov dataset hazmat-yearly-incident-summary-reports), not narratives; their index
+    page is held as phmsa-incident-statistics.'
+  path: not_found
+  outcome: "none (no document found; see notes)"
+- line: '1'
+  tier: 5c
+  status: found
+  doc_id: fema-elg-0400-student-manual
+  title: E/L/G 0400 Advanced Incident Command System for Command and General Staff - Complex Incidents, ICS 400, Student
+    Manual (April 2019, Version 1.0)
+  title_source: search-index snippet of the PDF (title page not read; the file is over WebFetch's 10 MB limit). Identify
+    by title-page text at registration, as for ICS 300.
+  publisher: FEMA Emergency Management Institute
+  edition: April 2019, Version 1.0
+  url: https://www.oem.nv.gov/siteassets/oem.nv.gov/training/ELG400_Complete_SM.pdf
+  landing_url: null
+  host: www.oem.nv.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105), a FEMA work on a state host; the state sites' own terms were not reviewed
+  size_bytes: 11804672
+  pages: null
+  mirror_url_alt: https://www.pa.gov/content/dam/copapwp-pagov/en/pema/documents/preparedness/training-exercises/for-students/student-manuals/ics400/documents/elg400_complete_sm.pdf
+  mirror_alt_note: Pennsylvania Emergency Management Agency copy, linked as "student manual" under ICS 400 on https://www.pa.gov/en/agencies/pema/emergency-managers/training-exercises/student-manuals.html;
+    200, application/pdf, 11803814 B, last-modified 2026-02-26 (858 B smaller than Nevada's; same filename, likely the same
+    document re-saved; not compared).
+  notes: 'State of Nevada DEM reprint of FEMA E/L/G 0400, same directory and pattern as the held ICS 300 copy. The published
+    link https://www.oem.nv.gov/uploadedFiles/demnvgov/content/raining/ELG400_Complete_SM.pdf 301s to the url; 200, application/pdf,
+    last-modified 2019-05-01 (the ICS 300 copy beside it is 2019-05-01 too). FEMA''s own old copy https://training.fema.gov/allhazards/courses/ics%20400/sm/ics400_sm_oct2013.pdf
+    (October 2013, the superseded edition) now 301s to the NIMS position-specific page, i.e. gone. No revision after the
+    April 2019 curriculum was found (University of Illinois FSI syllabus v3.1, January 2021, still cites the April 2019
+    E/L/G 0400 manual). Older reprints seen and not proposed: dem.nv.gov ICS400_CompleteSM_Sept2011-Part1.pdf (2011), content.civicplus.com
+    asset (2008, v2). Searches: ''"E/L/G 0400" Advanced Incident Command System Command and General Staff Complex Incidents
+    student manual pdf''; ''ICS 400 E/L/G 0400 revised course materials 2024 OR 2025 FEMA EMI new version student manual''.
+    Path as found: operator (host off the allowlist; browser download, registered by title-page content).'
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 256 grounded claims, committed in hb23_bulk_04"
+- line: '2'
+  tier: 5c
+  status: found
+  doc_id: fema-is-700b-student-manual
+  title: IS-0700.b An Introduction to the National Incident Management System, Student Manual, Date Released 06/2020
+  title_source: title page (read 2026-10-23 from WebFetch's cached copy outside the repo)
+  publisher: FEMA Emergency Management Institute
+  edition: IS-700.b, Date Released 06/2020 (course date 6/25/2018 on the course overview page)
+  url: https://training.fema.gov/programs/independent-study/_course-files/is-700.b/student%20manual/smis0700b.pdf
+  landing_url: https://training.fema.gov/programs/independent-study/courseMaterials.aspx?code=IS-700.b
+  host: training.fema.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 3134735
+  pages: 188
+  format: pdf (standalone)
+  zip_alternative: https://training.fema.gov/programs/independent-study/_course-files/is-700.b/IS-700b_Complete.zip (200,
+    application/x-zip-compressed, 31554564 B, last-modified 2022-02-24); also listed on the landing page. Not needed, because
+    the student manual is published standalone, unlike IS-200.c.
+  notes: 'The landing page links "/programs/independent-study/_course-files/is-700.b/Student Manual/SMIS0700b.pdf"; the
+    server 301s that to the lowercased url (200, application/pdf, last-modified 2020-06-10). The landing page also lists
+    Instructor Guide IGIS0700b.pdf, POI POIIS0700b.pdf, nine visuals .pptx and the NIMS Third Edition October 2017 handout
+    (held as nims-doctrine-2017). Contents: 8 lessons (NIMS fundamentals, resource management, management characteristics,
+    ICS, EOCs, MACS/JIS, communications and information management, summary). IS-700.b is current (courseoverview?code=IS-700.c
+    returns an empty overview).'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 141 grounded claims, committed in hb23_bulk_01"
+- line: '3'
+  tier: 5c
+  status: found
+  doc_id: fema-is-800d-student-manual
+  title: E/L0800 National Response Framework, An Introduction (IS-0800), Student Manual, Date Released 08/2020
+  title_source: search-index snippet of the FEMA PDF (title page not read; web.archive.org refuses WebFetch). Identify by
+    title-page text at registration.
+  publisher: FEMA Emergency Management Institute
+  edition: IS-800.d / EL0800.d, Date Released 08/2020 (course date 5/6/2020 on the course overview page)
+  url: https://training.fema.gov/emiweb/is/is800d/english/student%20manual/el0800.d%20sm.pdf
+  landing_url: https://training.fema.gov/programs/independent-study/courseoverview.aspx?code=IS-800.d&lang=en
+  host: training.fema.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 2618581
+  pages: null
+  archive_url: http://web.archive.org/web/20241213094734id_/https://training.fema.gov/emiweb/is/is800d/english/student%20manual/el0800.d%20sm.pdf
+  archive_note: 'Wayback capture 2024-12-13 of FEMA''s URL: 200, application/pdf, 2618581 B, x-archive-orig-last-modified
+    2020-09-01 (same digest DH3K7ZGJ... in captures 2024-07-06 through 2024-12-13). Do not use the 2023-09-26 capture: it
+    is truncated at 1048576 B (orig crawler length 2618581).'
+  notes: 'The url is 404 live (2026-10-23), as are the whole EMIWeb/IS/IS800d tree, the instructor guide and the IS-800d_Complete.zip;
+    no capture of FEMA''s URL is later than 2024-12-13. courseMaterials.aspx?code=IS-800.d lists no files (empty table),
+    and the course overview says "IS-800.d Online Course is Temporarily Unavailable ... students should download and review
+    the National Response Framework". Guessed _course-files paths (is-800.d/IS-800d_Complete.zip, is-800.d/Student%20Manual/SMIS0800d.pdf,
+    is-800.d/english/is-800d-complete-course.zip) are all 404. No newer course (IS-800.e overview empty). No live non-FEMA
+    copy of the 2020 manual was found (stxd14ares.org FMA-104.pdf is the October 2008 IS-800 manual, superseded). Searches:
+    ''"IS-800.d" student manual pdf National Response Framework An Introduction''; ''"EL0800.d" OR "IS-0800.d" "Student
+    Manual" National Response Framework pdf''; ''"EL0800" OR "E/L0800" "National Response Framework, An Introduction" student
+    manual pdf -training.fema.gov''; Wayback CDX training.fema.gov/emiweb/is/is800d/*. The NRF itself (Fourth Edition, 2019)
+    is not in corpus/sources.yaml either; www.fema.gov 403s scripted HEADs. Path as found: operator (FEMA URL is 404; browser
+    download of the archive_url, web.archive.org being off the allowlist; registered by title-page content).'
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 300 grounded claims, committed in hb23_bulk_04"
+- line: '4'
+  tier: 5c
+  status: found
+  doc_id: cfr40-part68-govinfo-2025
+  title: 40 CFR Part 68 Chemical Accident Prevention Provisions (CFR annual edition 2025, title 40 vol 17, revised as of
+    July 1, 2025)
+  title_source: XML header ("PART 68—CHEMICAL ACCIDENT PREVENTION PROVISIONS", DATE 2025-07-01) and govinfo package metadata
+    ("Title 40 - Protection of Environment", July 1, 2025)
+  publisher: Office of the Federal Register / GPO (EPA rule)
+  edition: '2025-07-01'
+  url: https://www.govinfo.gov/content/pkg/CFR-2025-title40-vol17/xml/CFR-2025-title40-vol17-part68.xml
+  url_pdf: https://www.govinfo.gov/content/pkg/CFR-2025-title40-vol17/pdf/CFR-2025-title40-vol17-part68.pdf
+  landing_url: https://www.govinfo.gov/app/details/CFR-2025-title40-vol17/CFR-2025-title40-vol17-part68
+  host: www.govinfo.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 309057
+  size_bytes_pdf: 342496
+  pages: 50
+  notes: 'XML: 200, application/xml, 309057 B (chunked; measured by a streamed GET), last-modified 2025-09-30, 63 <SECTION>
+    elements. PDF: 200, application/pdf, 342496 B, 50 pages, last-modified 2025-09-30. The 2025 edition is the latest published:
+    CFR-2026-title40-vol17 (and vol16, vol18) return govinfo''s "Page Not Found" (2026-10-23), and govinfo''s 2026 CFR browse
+    lists only titles revised January 1. Part 68 is in vol 17 in 2024 and 2025. The edition includes the 2024 Safer Communities
+    by Chemical Accident Prevention amendments (89 FR 17622, effective 2024-05-10): its source notes cite 89 FR 17685-17692,
+    Mar. 11, 2024. No later amendment: the FR API lists no final rule on 40 CFR 68 since 2024-03-12; EPA''s rollback is
+    only proposed (line 6b, 91 FR 8970, 2026-02-24, comments closed 2026-05-11, no final rule as of 2026-10-23). The live
+    text should match eCFR until a final rule issues.'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 153 grounded claims, committed in hb23_bulk_01"
+- line: '5'
+  tier: 5c
+  status: found
+  doc_id: cfr29-1910-119-govinfo-2025
+  title: 29 CFR 1910.119 Process safety management of highly hazardous chemicals (CFR annual edition 2025, title 29 vol
+    5, revised as of July 1, 2025)
+  title_source: XML (SECTNO "§ 1910.119", SUBJECT "Process safety management of highly hazardous chemicals.")
+  publisher: Office of the Federal Register / GPO (OSHA rule)
+  edition: '2025-07-01'
+  url: https://www.govinfo.gov/content/pkg/CFR-2025-title29-vol5/xml/CFR-2025-title29-vol5-sec1910-119.xml
+  url_pdf: https://www.govinfo.gov/content/pkg/CFR-2025-title29-vol5/pdf/CFR-2025-title29-vol5-sec1910-119.pdf
+  landing_url: https://www.govinfo.gov/app/details/CFR-2025-title29-vol5/CFR-2025-title29-vol5-sec1910-119
+  host: www.govinfo.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 119607
+  size_bytes_pdf: 339513
+  pages: 22
+  notes: 'XML: 200, application/xml, 119607 B, last-modified 2026-04-15, 255 <P> elements in one SECTION (the paragraph
+    structure is there; HB-22''s 4-segment parse of 1910.120 is a segmenter matter, so the PDF rendition is given as the
+    fallback). PDF: 200, application/pdf, 339513 B, 22 pages (includes appendices A-D), last-modified 2026-04-15 (govinfo
+    re-posted the 2025 title 29 vol 5 files in April 2026). Same volume as the held cfr29-1910-120-govinfo-2025. 2026 edition
+    not yet published (CFR-2026-title29-vol5 returns "Page Not Found"). Source note: 57 FR 6403, Feb. 24, 1992, as amended
+    through 78 FR 9313, Feb. 8, 2013 and later.'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 150 grounded claims, committed in hb23_bulk_01"
+- line: '6'
+  tier: 5c
+  status: found
+  doc_id: fr-2024-04458-rmp-safer-communities
+  title: 'Accidental Release Prevention Requirements: Risk Management Programs Under the Clean Air Act; Safer Communities
+    by Chemical Accident Prevention'
+  title_source: Federal Register API record for 2024-04458
+  publisher: US EPA (Federal Register, Office of the Federal Register / GPO)
+  edition: 89 FR 17622-17692, March 11, 2024; final rule; effective 2024-05-10; RIN 2050-AH22; docket EPA-HQ-OLEM-2022-0174
+  url: https://www.govinfo.gov/content/pkg/FR-2024-03-11/pdf/2024-04458.pdf
+  landing_url: https://www.federalregister.gov/documents/2024/03/11/2024-04458/accidental-release-prevention-requirements-risk-management-programs-under-the-clean-air-act-safer
+  host: www.govinfo.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 979684
+  pages: 71
+  notes: 'Citation verified: 89 FR 17622, FR document 2024-04458, type Rule. It is one document (one FR document number,
+    pages 17622-17692, page_length 71; the PDF''s page tree counts 71). 200, application/pdf, last-modified 2025-09-22.
+    The preamble runs to about 17684; the amendatory text (89 FR 17685-17692) is what the 2025 CFR edition cites. Related,
+    not proposed as rows: 89 FR 106479 (2024-31216, 2024-12-30), Final Action on Petition for Reconsideration (Notice);
+    87 FR 53556 (2022-18249), the 2022 proposed rule. EPA''s RMP page: https://www.epa.gov/rmp/risk-management-program-safer-communities-chemical-accident-prevention-final-rule.
+    Searches: FR API documents/2024-04458; FR API term "Safer Communities by Chemical Accident Prevention".'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 438 grounded claims, committed in hb23_bulk_02"
+- line: 6b
+  tier: 5c
+  status: found
+  doc_id: fr-2026-03633-rmp-common-sense-proposed
+  title: 'Accidental Release Prevention Requirements: Risk Management Programs Under the Clean Air Act; Common Sense Approach
+    to Chemical Accident Prevention'
+  title_source: Federal Register API record for 2026-03633
+  publisher: US EPA (Federal Register, Office of the Federal Register / GPO)
+  edition: 91 FR 8970-9011, February 24, 2026; proposed rule; RIN 2050-AH37; docket EPA-HQ-OLEM-2025-0313
+  url: https://www.govinfo.gov/content/pkg/FR-2026-02-24/pdf/2026-03633.pdf
+  landing_url: https://www.federalregister.gov/documents/2026/02/24/2026-03633/accidental-release-prevention-requirements-risk-management-programs-under-the-clean-air-act-common
+  host: www.govinfo.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 498395
+  pages: 42
+  notes: 'EPA''s reconsideration of the 2024 rule (announced 2025-03-12), proposing to roll back most of it (e.g. the safer
+    technologies and alternatives analysis for existing facilities, parts of employee participation, community notification
+    and public-information changes). 200, application/pdf, last-modified 2026-03-25. Comment period extended by 91 FR 16621
+    (2026-06444, 2026-04-02, 1 page) to 2026-05-11. No final rule found in the FR API as of 2026-10-23 (queries: agency
+    EPA + term "Accidental Release Prevention Requirements", since 2025-01-01; CFR title 40 part 68, since 2024-03-12).
+    The 2024 rule therefore remains the CFR text; this row is the pending direction, not the rule in force. EPA page: https://www.epa.gov/rmp/common-sense-approach-chemical-accident-prevention-proposed-rule.'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 323 grounded claims, committed in hb23_bulk_01"
+- line: '7'
+  tier: 5c
+  status: found
+  doc_id: phmsa-hmr-overview-page
+  title: Hazardous Materials Regulations
+  title_source: search-engine result title for the page (the page itself 403s every client here, curl and WebFetch)
+  publisher: US DOT PHMSA, Office of Hazardous Materials Safety
+  edition: null
+  url: https://www.phmsa.dot.gov/standards-rulemaking/hazmat/hazardous-materials-regulations
+  landing_url: null
+  host: www.phmsa.dot.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  format: html (clipping)
+  notes: 'HTTP 403 to curl and WebFetch (PHMSA refuses scripted clients). Per search snippets the page states that the Office
+    of Hazardous Materials Safety develops regulations and standards for the classifying, handling and packaging of over
+    1 million daily shipments, and links the eCFR (49 CFR Parts 100-185) and the annual CFR editions; it is a hub page and
+    may be thin, so check the clipping holds body text and not only navigation (the HB-01e phmsa-erg2020-data-files-page
+    lesson). The older path https://www.phmsa.dot.gov/hazmat/standards-rulemaking/regulations is indexed with the same description
+    (probably a redirect to the url; unverified). Not the HMR overview: https://www.phmsa.dot.gov/hazmat/regs is the Standards
+    and Rulemaking Division page ("Hazardous Materials Standards and Rulemaking Overview"). Fuller narrative overviews if
+    the hub is thin: PHMSA "Federal Hazmat Law: An Overview of Federal Laws for Hazardous Materials Transportation" (September
+    2021) at https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2021-09/Hazmat%20Law%20Overview_September-2021_0.pdf (403
+    to scripts; describes HMR parts 171-180 by area), and FMCSA "How to Comply with Federal Hazardous Materials Regulations"
+    at https://www.fmcsa.dot.gov/regulations/hazardous-materials/how-comply-federal-hazardous-materials-regulations (www.fmcsa.dot.gov
+    off the allowlist; 403 to scripts). Searches: ''PHMSA Hazardous Materials Regulations overview page 49 CFR parts 171-180
+    site:phmsa.dot.gov''; ''"Hazardous Materials Standards and Rulemaking Overview" PHMSA''; ''"phmsa.dot.gov/hazmat/standards-rulemaking/regulations"'';
+    ''PHMSA hazmat "standards-rulemaking/regulations" Hazardous Materials Regulations page 49 CFR eCFR''. Wayback CDX was
+    offline during discovery. Path as found: operator (browser clipping; www.phmsa.dot.gov 403s scripted clients).'
+  path: operator
+  outcome: "operator browser download, registered by content; extracted, 1 grounded claims, committed in hb23_bulk_03"
+- line: 5d-1
+  tier: 5d
+  status: found
+  doc_id: census-acs-design-methodology-2024
+  title: American Community Survey and Puerto Rico Community Survey Design and Methodology, Version 4.0
+  publisher: US Census Bureau, American Community Survey Office
+  edition: Version 4.0, Issued December 2024
+  url: https://www2.census.gov/programs-surveys/acs/methodology/design_and_methodology/2024/acs_design_methodology_report_2024.pdf
+  landing_url: https://www.census.gov/programs-surveys/acs/methodology/design-and-methodology.html
+  host: www2.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 3389279
+  pages: 258
+  discovery_sha256: 0df2378258a38b7e36baaa499335c3344dc235d68a67faa534dbefe42a26443b
+  notes: 'HEAD 200 application/pdf, Content-Length 3389279, Last-Modified 2025-06-18 (PDF created 2025-02-28). Title page
+    read. The landing page lists this as the current report and also offers it per chapter (ch01-ch16, glossary, same directory,
+    *_2024.pdf); the complete report is the line. Earlier versions: 2009/2010 (v1), 2014 (v2), 2022 (v3), on https://www.census.gov/library/publications/2010/acs/archive.html.
+    Not held (no design_methodology URL in sources.yaml; held ACS methods are the 2020 general and the session state (held privately) handbooks).'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 756 grounded claims, committed in hb23_bulk_02"
+- line: 5d-2
+  tier: 5d
+  status: held
+  doc_id: census-dhc-2020-techdoc
+  title: 2020 Census Demographic and Housing Characteristics File (DHC), 2020 Census of Population and Housing, Technical
+    Documentation (TD/DHC2020)
+  publisher: US Census Bureau
+  edition: Issued April 2023 (file Last-Modified 2024-06-24)
+  url: https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/complete-tech-docs/demographic-and-housing-characteristics-file-and-demographic-profile/2020census-demographic-and-housing-characteristics-file-and-demographic-profile-techdoc.pdf
+  landing_url: https://www.census.gov/programs-surveys/decennial-census/technical-documentation/complete-technical-documents.2020.html
+  host: www2.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 1806867
+  pages: 175
+  notes: 'Verified by content 2026-10-23: corpus/raw/census-dhc-2020-techdoc.pdf, sha256 ed0e521a1c59a6e4653cd1e0192fe85c537f657aaca33525ece577efce412864
+    (matches corpus/fetch_log.jsonl line 531, HB-22), 175 pp; its text carries the ''2020 Census Demographic Profile (DP)''
+    sections in the contents and body. There is no separate Demographic Profile technical documentation: the 2020 complete-technical-documents
+    page lists one combined item, ''2020 Census DHC File and DP Technical Documentation'' (this file), and the DP product
+    page (https://www.census.gov/data/tables/2023/dec/2020-census-demographic-profile.html) links the same techdoc plus
+    a data table guide (data-table-guide-dhc-dp.xlsx) and an access how-to PDF (2020-demographic-profile-and-dhc/accessing-data-from-the-2020-demographic-profile-in-data-census-gov.pdf),
+    neither a methods document. Searches run for a standalone DP techdoc: web search ''"2020 Census Demographic Profile"
+    technical documentation pdf census.gov''; both pages above. Adjacent, not held, not asked: ''Disclosure Avoidance for
+    the DHC and Guidance for Data Users'' (c2020br-08.pdf, www2.census.gov).'
+  path: held
+  outcome: "fetched (scripts/fetch_allowlisted.py); held before this run, extracted under CLI 2.1.309 in hb22_bulk"
+- line: 5d-3
+  tier: 5d
+  status: found
+  doc_id: census-tiger-line-techdoc-2025
+  title: TIGER/Line Shapefiles 2025 Technical Documentation
+  publisher: US Census Bureau, Geography Division
+  edition: 2025, Issued September 2025
+  url: https://www2.census.gov/geo/pdfs/maps-data/data/tiger/tgrshp2025/TGRSHP2025_TechDoc.pdf
+  landing_url: https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.2025.html
+  host: www2.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 4598419
+  pages: 175
+  discovery_sha256: 21476bdba82fe8072f8994ae59bda484260d1b932c13f31991f6414f8e04d551
+  notes: 'Not taken: an annual revision of census-tiger-line-techdoc-2020, largely the same text (LN-09); HB-09 reads the
+    2020 vintage. Vintage derivation: the TIGER/Line files the repo holds are 2025 (sources.yaml tiger2025-rails, tiger2025-prisecroads,
+    www2.census.gov/geo/tiger/TIGER2025/). The population tool (HB-09) reads TIGERweb tigerWMS_Census2020 (src/hazbrief/population_sources.yaml:
+    ''Census 2020 tabulation geography'', January 1, 2020 vintage), see 5d-3b; place.py / ics201.yaml read tigerWMS_Current
+    (''January 1, 2026 vintage''), see 5d-3c. HEAD 200 application/pdf, Content-Length 4598419, Last-Modified 2025-09-23;
+    title page read. No TIGER/Line technical documentation is held (sources.yaml holds only TIGERweb service docs).'
+  path: not_taken
+  outcome: "found, not acquired (a revision or companion not taken; see notes)"
+- line: 5d-3b
+  tier: 5d
+  status: found
+  doc_id: census-tiger-line-techdoc-2020
+  title: TIGER/Line Shapefiles 2020 Technical Documentation
+  publisher: US Census Bureau, Geography Division
+  edition: 2020, Issued February 2021 (file Last-Modified 2023-12-29, a re-issue of the PDF)
+  url: https://www2.census.gov/geo/pdfs/maps-data/data/tiger/tgrshp2020/TGRSHP2020_TechDoc.pdf
+  landing_url: https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html
+  host: www2.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 3690200
+  pages: 186
+  discovery_sha256: 33b68469cc654b3e4470adb8a30017436d1601c02b742b050919241af8884821
+  notes: The vintage matching the 2020 tabulation geography population_at_risk queries (tigerWMS_Census2020) and the 2020
+    DHC it joins. HEAD 200 application/pdf; title page read ('Issued February 2021'). Offered as the companion to 5d-3;
+    take both if the line means 'every vintage the repo uses'.
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 269 grounded claims, committed in hb23_bulk_02"
+- line: 5d-3c
+  tier: 5d
+  status: found
+  doc_id: census-tiger-line-techdoc-2026
+  title: TIGER/Line Shapefiles 2026 Technical Documentation
+  publisher: US Census Bureau, Geography Division
+  edition: 2026, Issued September 2026 (file Last-Modified 2026-10-13)
+  url: https://www2.census.gov/geo/pdfs/maps-data/data/tiger/tgrshp2026/TGRSHP2026_TechDoc.pdf
+  landing_url: https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html
+  host: www2.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 7975758
+  pages: 173
+  discovery_sha256: b4e33088a860e49a85de15f671b4951871f3cadd00a17ad2584109f73c817074
+  notes: 'Not taken: an annual revision of census-tiger-line-techdoc-2020 (LN-09). Newer than the held 2025 TIGER/Line files:
+    TIGER2026/ is published on www2.census.gov (HEAD 200). Matches the January 1, 2026 vintage the TIGERweb Current service
+    reports (ics201.yaml `place`). Not a supersession of anything held; recorded so the 2025 line is not mistaken for current.'
+  path: not_taken
+  outcome: "found, not acquired (a revision or companion not taken; see notes)"
+- line: 5d-4
+  tier: 5d
+  status: found_under_different_title
+  doc_id: lehd-onthemap-help-faqs
+  title: Frequently Asked Questions (FAQs) (OnTheMap Help and Documentation, 'FAQs and Bugs' section)
+  publisher: US Census Bureau, Center for Economic Studies, LEHD
+  edition: live HTML fragment, undated (accessed 2026-10-23); its data-availability answer lists years through 2023
+  url: https://lehd.ces.census.gov/applications/help/onthemap/faqs.html
+  landing_url: https://lehd.ces.census.gov/applications/help/onthemap.html
+  host: lehd.ces.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 27671
+  pages: null
+  discovery_sha256: d1ccb08b84e5f0cc7bd3c55cad78282ddc0cfb54166d9a98d3460918d92af311
+  notes: 'No PDF OnTheMap/LODES FAQ exists. Probed and 404: doc/help/onthemap/OnTheMapFAQ.pdf, OnTheMapFAQs.pdf, OTM_FAQ.pdf,
+    LODESFAQ.pdf; web searches ''lehd.ces.census.gov OnTheMap frequently asked questions pdf LODES FAQ'' and ''"OnTheMap"
+    "Frequently Asked Questions" LEHD census help'' found none. The help landing page is a shell: /js/js.js (LEHD.load_help_doc)
+    loads ''onthemap/<page>.html'' fragments into it, and the nav tree names ''faqs'' ''Frequently Asked Questions''. Fetch
+    the fragment URL, not the landing page (the landing page renders navigation only; the document-ingest trap). GET 200
+    text/html, no Content-Length header, 27671 B downloaded. Covers ''What is a job?'', ''primary job'', ''synthetic data'',
+    confidentiality, LODES vs ACS commuting, year comparability, the session state (held privately) gaps (Alaska 2017-2023, Michigan 2022-2023,
+    ...). Contains one server-side-include error string (''[an error occurred while processing this directive]'') in the
+    availability answer. Related held: otmem-faq (OnTheMap for Emergency Management FAQ, a different application''s FAQ,
+    corpus/raw/otmem-faq.pdf).'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 1 grounded claims, committed in hb23_bulk_01"
+- line: 5d-4b
+  tier: 5d
+  status: found
+  doc_id: lehd-onthemap-data-overview-lodes8
+  title: 'OnTheMap: Data Overview (LODES Version 8)'
+  publisher: US Census Bureau, CES/LEHD
+  edition: file Last-Modified 2025-12-05 (PDF created 2025-12-02)
+  url: https://lehd.ces.census.gov/doc/help/onthemap/OnTheMapDataOverview.pdf
+  landing_url: https://lehd.ces.census.gov/applications/help/onthemap.html
+  host: lehd.ces.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 332044
+  pages: 6
+  discovery_sha256: d5f63de3135ebf3c34116e7f12c97362096106d2f03fd4650acefa3516485f18
+  notes: 'Found while looking for the FAQ: the FAQ''s PDF-form companion, the job definition (positive earnings in the reference
+    and prior quarter), partially synthetic data, variables and scope. HEAD 200 application/pdf, Content-Length 332044;
+    first page read. Not held (sources.yaml has no OnTheMapDataOverview URL). Also on the host, not taken: doc/OnTheMapDataNotices.pdf
+    (84837 B, Last-Modified 2019-02-19).'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 17 grounded claims, committed in hb23_bulk_01"
+- line: 5d-5
+  tier: 5d
+  status: found
+  doc_id: lehd-tp-2006-01-infrastructure-files-qwi
+  title: The LEHD Infrastructure Files and the Creation of the Quarterly Workforce Indicators (LEHD Technical Paper No.
+    TP-2006-01)
+  publisher: US Census Bureau, LEHD Program (Abowd, Stephens, Vilhuber, Andersson, McKinney, Roemer, Woodcock)
+  edition: dated December 5, 2005 (PDF created 2006-09-26)
+  url: https://lehd.ces.census.gov/doc/technical_paper/tp-2006-01.pdf
+  landing_url: https://lehd.ces.census.gov/research/
+  host: lehd.ces.census.gov
+  host_on_allowlist: true
+  licence: Census Bureau technical paper; page 1 states it 'reports the results of research and analysis undertaken by the
+    U.S. Census Bureau staff'. Several authors held Cornell appointments; no copyright marking seen on page 1 (later pages
+    not checked). Treat as a US Government work unless the operator reads otherwise.
+  size_bytes: 785882
+  pages: 139
+  discovery_sha256: bf96e8e5aa7910aec2317e048eac8b05f1fbba41cc06c5a6d67b133eb5c4d251
+  notes: 'The job-location method: section 4.2 ''Allocating workers to workplaces: Unit-to-worker imputation (U2W)'' (19
+    U2W mentions) and the noise-infusion confidentiality protection (19 ''noise'' mentions). HEAD 200 application/pdf, Content-Length
+    785882; text read. The held LODES technical document (lodes8-techdoc-8-4, ''LODES Dataset Structure Format Version 8.4'',
+    14 pp, corpus/raw/lodes8-techdoc-8-4.pdf) is a file-structure document, not a methodology paper, so it does not answer
+    this line. Searches run: web search ''LODES methodology working paper workplace job location imputation multi-unit establishments
+    noise infusion Census CES working paper'' (returned acoustic-noise results only); the OnTheMap help ''Confidentiality
+    Protection'' fragment''s citations (5d-5c, 5d-5d); known CES working papers checked by URL (5d-5a, 5d-5b).'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 254 grounded claims, committed in hb23_bulk_01"
+- line: 5d-5a
+  tier: 5d
+  status: found
+  doc_id: census-ces-wp-14-38-lodes-acs-design-comparison
+  title: Design Comparison of LODES and ACS Commuting Data Products (CES 14-38)
+  publisher: US Census Bureau, Center for Economic Studies (Graham, Kutzbach, McKenzie)
+  edition: September 2014
+  url: https://www2.census.gov/ces/wp/2014/CES-WP-14-38.pdf
+  landing_url: https://www.census.gov/library/working-papers/2014/adrm/ces-wp-14-38.html
+  host: www2.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105); all three authors U.S. Census Bureau
+  size_bytes: 165618
+  pages: 14
+  discovery_sha256: 014c4bc81a36b8a7a2aa042367d5091b87015cd8391c38c436436b1150970b25
+  notes: LODES design as a commuting source; states that quarterly LEHD processing updates imputations such as establishment
+    assignments to workers. HEAD 200 application/pdf; first page read; landing 200. Not held.
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 47 grounded claims, committed in hb23_bulk_01"
+- line: 5d-5b
+  tier: 5d
+  status: found
+  doc_id: census-ces-wp-17-34-two-perspectives-commuting
+  title: 'Two Perspectives on Commuting: A Comparison of Home to Work Flows Across Job-Linked Survey and Administrative
+    Files (CES 17-34)'
+  publisher: US Census Bureau, Center for Economic Studies (Green, Kutzbach, Vilhuber)
+  edition: April 2017
+  url: https://www2.census.gov/ces/wp/2017/CES-WP-17-34.pdf
+  landing_url: https://www.census.gov/library/working-papers/2017/adrm/ces-wp-17-34.html
+  host: www2.census.gov
+  host_on_allowlist: true
+  licence: CES working paper; authors Green and Vilhuber are listed 'Cornell University & U.S. Census Bureau', Kutzbach
+    U.S. Census Bureau. No copyright marking on page 1. Treat as US Government work unless the operator reads otherwise.
+  size_bytes: 1479994
+  pages: 58
+  discovery_sha256: e1a4acac24c26a46c971755de79039e9682d02296f35d331098db61ee1b9d3e4
+  notes: 'Measures LODES workplace error against ACS: attributes the disagreement to workplace reporting and ''uncertainty
+    of establishment assignments in LEHD for workers at multi-unit employers'' (46 matches for ''unit-to-worker'' or ''U2W'').
+    HEAD 200 application/pdf; first page read; landing 200. Not held.'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 114 grounded claims, committed in hb23_bulk_01"
+- line: 5d-5c
+  tier: 5d
+  status: found
+  doc_id: lehd-icde2008-privacy-theory-meets-practice-on-the-map-preprint
+  title: 'Privacy: Theory meets Practice on the Map'
+  publisher: Machanavajjhala, Kifer, Abowd, Gehrke, Vilhuber (Cornell University); ICDE 2008, pp. 277-286; preprint hosted
+    by US Census Bureau LEHD
+  edition: ICDE 2008 conference preprint (PDF created 2007-11-22)
+  url: https://lehd.ces.census.gov/doc/help/ICDE08_conference_0768.pdf
+  landing_url: https://lehd.ces.census.gov/applications/help/onthemap/confidentiality_protection.html
+  host: lehd.ces.census.gov
+  host_on_allowlist: true
+  licence: 'NOT a US Government work: all five authors give Cornell affiliations; the final version is IEEE-published (ieeexplore
+    arnumber 4497436), copyright IEEE. Census hosts the preprint. Operator call before shipping text from it.'
+  size_bytes: 204971
+  pages: 10
+  discovery_sha256: 01fce7dffe244a9dd4838fdbe8ec5d92f0a99d98afb34bff306edd77e32a1918
+  notes: 'Reference-only by its licence: Cornell authors, IEEE-published (ICDE 2008); Census only hosts the preprint. Not
+    acquired. The formal privacy analysis of the OnTheMap synthetic residence data, cited by the OnTheMap ''Confidentiality
+    Protection'' help page. HEAD 200 application/pdf, Content-Length 204971; first page read. Host is allowlisted and answers
+    200, so the fetcher can take it; the licence flag is the reason to hold it for the operator.'
+  path: reference_only
+  outcome: "found, not acquired (reference-only by its licence; see notes)"
+- line: 5d-5d
+  tier: 5d
+  status: found
+  doc_id: lehd-onthemap-synthetic-data-protection-2009
+  title: 'OnTheMap: Synthetic Data Protection'
+  publisher: US Census Bureau, LEHD
+  edition: May 2009 (file name '05262009-jma'; describes OnTheMap version 3)
+  url: https://lehd.ces.census.gov/doc/help/OTMSyntheticData%2005262009-jma.pdf
+  landing_url: https://lehd.ces.census.gov/applications/help/onthemap/confidentiality_protection.html
+  host: lehd.ces.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 54820
+  pages: 2
+  discovery_sha256: 4a1ba3ec0a35c6676732c78110c9c87ca012cc84f83cca7c3bca926a805323e6
+  notes: 'Plain-language note on the synthetic residence data. HEAD 200 application/pdf; first page read. The URL holds
+    a space (%20). Companion on the same page, not taken: SyntheticDataDiagram%2006082009_JMA.pdf (94995 B). The ''Confidentiality
+    Protection'' help fragment itself (confidentiality_protection.html, 3878 B, 200) states the method in brief: synthetic
+    residences, noise-infused workplace data, BLS state controls.'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 8 grounded claims, committed in hb23_bulk_01"
+
+screened_out:
+  ntsb_tih_but_pipeline_mode:
+  - report: PAB-07-02
+    title: Anhydrous Ammonia Pipeline Rupture
+    place: Kingman KS
+    accident: 2004-10-27
+    adopted: 2007-06-14
+    url: https://www.ntsb.gov/investigations/AccidentReports/Reports/PAB0702.pdf
+    landing: https://www.ntsb.gov/investigations/Pages/DCA05MP001.aspx
+    size_bytes: 334685
+  - report: PAB-20-01
+    title: 'Pipeline Accident Brief: Magellan Pipeline Anhydrous Ammonia Release'
+    place: Tekamah NE
+    accident: 2016-10-17
+    adopted: 2020-01-29
+    url: https://www.ntsb.gov/investigations/AccidentReports/Reports/PAB2001.pdf
+    landing: https://www.ntsb.gov/investigations/Pages/DCA17FP001.aspx
+    size_bytes: 487883
+  ntsb_not_tih:
+  - 'HZM-02-02 Ramona OK 2001: hydrogen'
+  - 'HZB-03-01 South Charleston WV 2002: MC-307 cargo tank, 5,152 gal polypropylene glycol, no injuries'
+  - 'RAR-05-01 Tamaroa IL 2003: methanol, vinyl chloride, formaldehyde, hydrochloric acid solution (Class 8, not PIH); 850
+    evacuated. Override if HCl solution counts.'
+  - 'HAB-09-01 Elkridge MD 2004: gasoline tanker. This is the nearest "Bel Air"-area match; the list has no Bel Air entry.'
+  - 'HZB-05-01 Memphis 2004, HZB-20-01 / HZMSR-20-01 Brampton 2016: lithium batteries'
+  - 'RAB-05-04 East St. Louis IL 2004: vinyl acetate'
+  - 'RAR-08-02 New Brighton PA 2006, RAR-12-01 Cherry Valley IL 2009, RAB-13-02 Tiskilwa IL 2011, RAB-14-08 Columbus OH
+    2012, HZM-20-01 Fredericksburg VA 2016, RAR-18-02 Graettinger IA 2017, RAB-21-03 Fort Worth 2019, RIR-22-13 Draffin
+    KY 2020: ethanol'
+  - 'RAB-12-03 Shepherdsville KY 2007: butadiene; a car with chlorine residue derailed but did not release'
+  - 'HZB-09-01 Upper Pittsgrove NJ 2009, HAR-11-01 Indianapolis 2009, HAR-18-01 Stroud AL 2016, HZIR-25-01 Manuelito NM
+    2024: LPG/propane'
+  - 'RAB-16-01 Lynchburg VA 2014, RAB-17-01 Casselton ND 2013, RAB-17-12 Heimdal ND 2015, HZIR-23-01 Oklaunion TX 2022:
+    crude oil / flammable liquids'
+  - 'HZM-19-02 Diamond Bar CA 2018: hydrogen; RAR-20-04 Hyndman PA 2017: propane/molten sulfur; RIR-26-12 Sardis MS 2025:
+    sodium hydroxide; RIR-26-16 Browns IL 2025: molten sulfur, ethanol; HIR-23-04 Phoenix 2021: milk tanker'
+  - 'RAR-06-01 (WMATA Woodley Park 2004), RAR-06-02 (Gunter TX 2004), RAR-07-01 (Anding MS 2005): no hazmat release in the
+    title or opening pages; the line''s "RAR-06/01?" guess is not a TIH report'
+  - 'RAR-14-01 Paulsboro 2012, RIR-24-05 East Palestine 2023 (and its Illustrated Digest SPC2406.pdf): vinyl chloride, already
+    held'
+  csb_word_hit_not_in_summary:
+  - 'Valero McKee Refinery Propane Fire (Sunray TX 2007): chlorine appears only in a recommendation to replace chlorine
+    biocide'
+  csb_not_read: []

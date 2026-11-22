@@ -1,0 +1,11 @@
+degadisx-readme|none|0
+degadisx-reproduction|none|0
+degadisx-license|none|0
+degadisx-pyproject|none|0
+pypi-degadisx|none|0
+pypi-slab|none|0
+pypi-pyslab|none|0
+pypi-pyslabs|none|0
+pypi-slabs|none|0
+pypi-slabx|none|0
+total|rows|164682

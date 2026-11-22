@@ -1,0 +1,11 @@
+FAILED test_hb178_material_keyed_and_off_pair.py (a test held privately)::test_the_audit_re_derives_and_every_hit_has_a_verdict
+FAILED test_hb199_trial7.py (a test held privately)::test_the_protocol_was_committed_before_every_record_and_not_changed_after
+2 failed, 8056 passed, 14 skipped, 97 deselected, 17 xfailed, 1 warning in 4140.85s (1:09:00)
+PYTEST EXIT=1
+85 passed, 1886 deselected in 952.40s (0:15:52)
+PYTEST2 EXIT=0
+Found 31 errors.
+RUFF EXIT=1
+5 files would be reformatted, 1051 files already formatted
+FORMAT EXIT=1
+GATE DONE

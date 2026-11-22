@@ -1,0 +1,103 @@
+# population_at_risk sources (HB-09; HB-09). Every table,
+# cell, layer, vintage and as-of date the tool reads, in one place (standards s2). Every key is
+# required: src/hazbrief/census.py refuses a file missing one. Cell lists were read from the held
+# group metadata (corpus/raw/census-acs5-2024-*.json, census-dhc-2020-p18.json) by label, never from
+# memory, and test_population_at_risk.py (a test held privately) re-checks them against those files.
+
+tigerweb:
+  # 2020 tabulation geography: the blocks, block groups and tracts the 2020 DHC and the ACS
+  # 2020-2024 tabulate. Layer ids from the service's own listing (?f=json, 2026-10-21).
+  service: tigerWMS_Census2020/MapServer
+  vintage: Census 2020 tabulation geography
+  as_of: "January 1, 2020 vintage"  # the service's serviceDescription
+  layers: {block: 10, block_group: 8, tract: 6}
+  out_fields: {block: "GEOID,STATE,COUNTY,TRACT,BLKGRP,BLOCK", block_group: "GEOID,STATE,COUNTY,TRACT,BLKGRP", tract: "GEOID,STATE,COUNTY,TRACT"}
+  # One page of a query. The service's maxRecordCount is 100000; a smaller page keeps each response
+  # under settings.upstream_max_response_bytes.
+  page_size: 1000
+  # The page cap of one layer's query (HB-89; review L3-2): it reads at most
+  # ceil(max_features_per_layer / page_size) pages, here 50, then stops with an error. The
+  # bounding box of the largest footprint geo.footprint_shape admits (a 381 km2 disk) is 4/pi of
+  # it, 485 km2: 50,000 blocks there is a mean block under 1 ha across the whole box, smaller than
+  # a Manhattan grid block (about 80 by 274 m, 2.2 ha). The cap admits the densest box a
+  # footprint can sit in and stops a thin sliver whose envelope spans a state.
+  max_features_per_layer: 50000
+
+dhc:
+  dataset: 2020/dec/dhc
+  label: 2020 Census DHC
+  # 13 U.S.C. 141(a): the census counts the population "as of the first day of April" (Census Day).
+  as_of: "2020-04-01"
+  total: P1_001N
+  group_quarters_total: P18_001N
+  # P18 is GROUP QUARTERS POPULATION BY SEX BY AGE BY MAJOR GROUP QUARTERS TYPE, the DHC table
+  # published at block (the PCT tables stop at tract; groups.json, 2026-10-21). Each type is the sum
+  # of its six sex-by-age cells, by label.
+  group_quarters_types:
+    correctional_facilities_for_adults: [P18_005N, P18_015N, P18_025N, P18_036N, P18_046N, P18_056N]
+    juvenile_facilities: [P18_006N, P18_016N, P18_026N, P18_037N, P18_047N, P18_057N]
+    nursing_facilities: [P18_007N, P18_017N, P18_027N, P18_038N, P18_048N, P18_058N]
+    other_institutional_facilities: [P18_008N, P18_018N, P18_028N, P18_039N, P18_049N, P18_059N]
+    college_university_student_housing: [P18_010N, P18_020N, P18_030N, P18_041N, P18_051N, P18_061N]
+    military_quarters: [P18_011N, P18_021N, P18_031N, P18_042N, P18_052N, P18_062N]
+    other_noninstitutional_facilities: [P18_012N, P18_022N, P18_032N, P18_043N, P18_053N, P18_063N]
+
+acs:
+  # HB-94 (review L5-3): `dataset` is the one vintage constant. The label ("ACS 2020-2024 5-year") is derived from
+  # it (census.acs_label), and test_population_at_risk.py (a test held privately) checks that `as_of` is the release date
+  # corpus/api_catalog.yaml census_data states for that vintage and that the catalog row's endpoint is this dataset.
+  dataset: 2024/acs/acs5
+  as_of: "2026-01-29"  # release date (corpus/api_catalog.yaml census_data cadence)
+  # `geography` is the finest level the API publishes the table at: probed 2026-10-21
+  # (logs/2026-10-21_HB-09_acs_geography_probe.log): B18101, B08201 and B26001 return null at block
+  # group and values at tract; B01001 and C16002 return values at block group.
+  characteristics:
+    age_65_and_over:
+      table: B01001
+      geography: block_group
+      cells: [B01001_020, B01001_021, B01001_022, B01001_023, B01001_024, B01001_025,
+              B01001_044, B01001_045, B01001_046, B01001_047, B01001_048, B01001_049]
+      counts: people aged 65 and over
+    disability:
+      table: B18101
+      geography: tract
+      cells: [B18101_004, B18101_007, B18101_010, B18101_013, B18101_016, B18101_019,
+              B18101_023, B18101_026, B18101_029, B18101_032, B18101_035, B18101_038]
+      counts: civilian noninstitutionalized people with a disability
+    no_vehicle_households:
+      table: B08201
+      geography: tract
+      cells: [B08201_002]
+      counts: households with no vehicle available
+    limited_english_households:
+      table: C16002
+      geography: block_group
+      cells: [C16002_004, C16002_007, C16002_010, C16002_013]
+      counts: limited English speaking households
+    group_quarters_population:
+      table: B26001
+      geography: tract
+      cells: [B26001_001]
+      counts: people living in group quarters
+
+cre:
+  dataset: 2024/cre
+  label: Community Resilience Estimates 2024
+  as_of: "2025-11-26"  # the dataset's `modified` in api.census.gov/data.json (2026-10-21)
+  count: PRED3_E
+  rate: PRED3_PE
+  universe: POPUNI
+  # The API's CRE 2024 dataset has no margin-of-error variable (variables.json, 2026-10-21).
+  # PRED3_M is in the tract CSV (cre-2024-tract, an operator download: www2.census.gov is
+  # robots-disallowed to this project's fetcher).
+  moe_available: false
+
+lodes:
+  version: "8.4"
+  year: 2023
+  segment: S000
+  job_type: JT00
+  column: C000  # "Total number of jobs" (lodes8-techdoc-8-4, WAC file structure)
+  label: LEHD LODES8 workplace area characteristics
+  as_of: "2025-12-03"  # LODES 8.4 created (lodes8-techdoc-8-4); the files' Last-Modified agrees
+  url_template: "https://lehd.ces.census.gov/data/lodes/LODES8/{st}/wac/{st}_wac_{segment}_{job_type}_{year}.csv.gz"

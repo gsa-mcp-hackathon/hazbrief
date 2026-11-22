@@ -1,0 +1,46 @@
+table	element	kind	features	dash	colour	is_wind	grid	lat	lon	hour0_from_deg	hour0_kmh	read_at	record_from_deg	turn_deg	drawn_before	drawn_after
+dashed	puff_source_term	polygon	4	6 4	#6D28D9	no									dashed line	dashed line, unchanged
+dashed	dense_gas	polygon	3	1 6	#047857	no									dashed line	dashed line, unchanged
+dashed	fire_isolation	polygon	0	6 4	#9A3412	no									nothing (no feature)	nothing (no feature)
+dashed	downstream	line	1	2 6	#155E75	no									dashed line	dashed line, unchanged
+dashed	rail_lines	line	9	8 3	#3F3F46	no									dashed line	dashed line, unchanged
+dashed	wind_field (arrows read at another hour)	symbol	38	3 3	#1f4e79	yes, but not at the brief's hour									dashed arrow	open circle, muted; no arrow
+wind_cell	wind_field	symbol	1		#1f4e79	yes	LWX/77,86	39.27505	-77.5342	10	11.1		10	0	solid arrow	solid arrow, full (the record's cell)
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/75,82	39.19302	-77.60544	270	9.3	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	100	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/76,82	39.19018	-77.57721	280	11.1	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	90	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/77,82	39.18735	-77.5489	280	9.3	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	90	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/78,82	39.18452	-77.52059	290	7.4	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	80	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/79,82	39.18168	-77.49231	290	5.6	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	80	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/74,83	39.21778	-77.63011	260	9.3	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	110	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/75,83	39.21495	-77.6018	270	9.3	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	100	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/76,83	39.21212	-77.57349	170	11.1	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	160	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/77,83	39.20928	-77.54521	170	9.3	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	160	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/78,83	39.20645	-77.5169	170	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	160	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/79,83	39.2036	-77.4886	170	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	160	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/80,83	39.20075	-77.4603	280	5.6	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	90	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/74,84	39.23969	-77.62648	260	9.3	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	110	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/75,84	39.23688	-77.59816	260	9.3	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	110	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/76,84	39.23405	-77.56985	160	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	150	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/77,84	39.23122	-77.54154	170	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	160	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/78,84	39.22838	-77.51323	170	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	160	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/79,84	39.22552	-77.48492	170	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	160	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/74,85	39.26165	-77.62285	260	9.3	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	110	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/75,85	39.2588	-77.5945	150	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	140	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/76,85	39.25595	-77.5662	160	9.3	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	150	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/77,85	39.25315	-77.5379	160	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	150	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/78,85	39.25029	-77.50958	160	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	150	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/79,85	39.24744	-77.48128	160	5.6	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	150	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/74,86	39.28354	-77.61918	270	11.1	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	100	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/75,86	39.28075	-77.59085	150	5.6	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	140	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/76,86	39.2779	-77.56255	150	5.6	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	140	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/78,86	39.2722	-77.5059	160	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	150	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/79,86	39.26938	-77.47761	170	5.6	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	160	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/74,87	39.30546	-77.61552	270	9.3	read at 11/08/2026 21:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	100	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/75,87	39.30265	-77.5872	140	5.6	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	130	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/76,87	39.29979	-77.55888	150	5.6	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	140	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/77,87	39.29695	-77.53055	160	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	150	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/78,87	39.29413	-77.50221	180	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	170	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/79,87	39.29128	-77.47391	180	5.6	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	170	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/77,88	39.31889	-77.52688	170	13	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	160	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/78,88	39.31605	-77.49855	180	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	170	dashed arrow	open circle, muted
+wind_cell	wind_field	symbol	1	3 3	#1f4e79	yes	LWX/79,88	39.3132	-77.4702	180	7.4	read at 11/04/2026 03:00 EST, its grid's nearest covered hour, not 10/21/2026 14:00 EDT	10	170	dashed arrow	open circle, muted

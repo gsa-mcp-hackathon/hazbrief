@@ -1,0 +1,47 @@
+# HB-135 Part B: the data units, fetched at rung 1 into corpus/raw/ by tools/fetch_datasets.py.
+#
+# A dataset is data, not a document (`plan: deferred_bulk_data` in corpus/sources.yaml): it is held, not parsed into
+# text, and never extracted. Each unit is provenance-only and logs to corpus/landing_fetch_log.jsonl (HB-52; HB-128
+# deviation 5). `dataset` names the sources.yaml row the unit belongs to; `check` is what tools/check_datasets.py
+# requires of the held bytes (gzip: the gzip magic and a CSV header; csv: a header carrying the named columns).
+#
+# FRA Form 54: the user-friendly table (data.transportation.gov 85tf-25kj), every report dated 2016-01-01 or later,
+# ten full years and 2026 to date. The full table (225,558 rows from 1975, 157 columns) is not taken: latitude and
+# longitude are empty before 2002 (hb135-probe-fra54-years), and the map task's window is the last ten years. Ordered
+# by the Socrata row id, so a re-fetch of the same release is the same bytes. The row cap is far above the window
+# (about 28,000 rows), and tools/check_datasets.py refuses a file whose row count equals it (a possible truncation).
+#
+# LODES 8 WAC, all jobs (JT00), all workers (S000), the latest year LEHD publishes (2024; the LODES8 state directories
+# list 2024 files, hb135-probe-lodes8-md-wac-dir), for the fixtures' states (DC, MD, PA, VA, WV; HB-128's set and the
+# lodes8-data row's corridor states).
+units:
+  - doc_id: fra-form54-rail-equipment-accidents-2016-2026
+    dataset: fra-form54-rail-equipment-accidents
+    format: csv
+    url: "https://data.transportation.gov/resource/85tf-25kj.csv?$where=date%20%3E%3D%20%272016-01-01T00:00:00%27&$order=:id&$limit=100000"
+    check: {kind: csv, columns: [date, stateabbr, countyname, station, latitude, longitude, hazmatcars, hazmatcarsdamaged, hazmatreleasedcars, personsevacuated], row_cap: 100000}
+  - doc_id: lodes8-wac-2024-dc
+    dataset: lodes8-wac-2024
+    format: csv.gz
+    url: https://lehd.ces.census.gov/data/lodes/LODES8/dc/wac/dc_wac_S000_JT00_2024.csv.gz
+    check: {kind: gzip, columns: [w_geocode, C000, createdate]}
+  - doc_id: lodes8-wac-2024-md
+    dataset: lodes8-wac-2024
+    format: csv.gz
+    url: https://lehd.ces.census.gov/data/lodes/LODES8/md/wac/md_wac_S000_JT00_2024.csv.gz
+    check: {kind: gzip, columns: [w_geocode, C000, createdate]}
+  - doc_id: lodes8-wac-2024-pa
+    dataset: lodes8-wac-2024
+    format: csv.gz
+    url: https://lehd.ces.census.gov/data/lodes/LODES8/pa/wac/pa_wac_S000_JT00_2024.csv.gz
+    check: {kind: gzip, columns: [w_geocode, C000, createdate]}
+  - doc_id: lodes8-wac-2024-va
+    dataset: lodes8-wac-2024
+    format: csv.gz
+    url: https://lehd.ces.census.gov/data/lodes/LODES8/va/wac/va_wac_S000_JT00_2024.csv.gz
+    check: {kind: gzip, columns: [w_geocode, C000, createdate]}
+  - doc_id: lodes8-wac-2024-wv
+    dataset: lodes8-wac-2024
+    format: csv.gz
+    url: https://lehd.ces.census.gov/data/lodes/LODES8/wv/wac/wv_wac_S000_JT00_2024.csv.gz
+    check: {kind: gzip, columns: [w_geocode, C000, createdate]}

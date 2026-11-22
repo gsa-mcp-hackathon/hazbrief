@@ -1,0 +1,65 @@
+# HB-103 Part A: the two corpus rows the satellite service needs, drafted and not yet written.
+#
+# Why they wait: a new corpus/sources.yaml entry fails
+# test_corpus_intake.py (a test held privately)::test_the_graph_intake_names_every_source_entry until a corpus ingest rewrites
+# the corpus graph (held privately), and tests/test_api_catalog.py requires a
+# workbench_api_catalog.yaml row's `docs` to be sources.yaml entries. HB-103's Touches carry no the corpus graph (held privately), so it cannot
+# ingest (HB-100's precedent, 2026-11-04). The service's answer is held meanwhile as the recorded exchange
+# fixtures/exchanges/nowcoast/f43bb2fb0a3658adf963fb06cb186e10beab62045a140b9ebb62df79951e5efa.json (2026-11-04T15:32:34Z),
+# and docs/sources/catalog.yaml row nowcoast:satellite names `api_catalog: nowcoast_satellite` ahead of the row below
+# (marked KLUDGE there).
+#
+# The task that ingests: paste the first block into corpus/sources.yaml after nowcoast-weather-radar-wms, the second
+# into corpus/workbench_api_catalog.yaml after nowcoast_radar, add "nowcoast_satellite" to WORKBENCH_IN_SCOPE in
+# tests/test_api_catalog.py, run `scripts/probe_apis.py` for the row (it sets last_verified), ingest and release, then
+# remove the KLUDGE comment in docs/sources/catalog.yaml.
+
+sources_yaml_entry:
+  - doc_id: nowcoast-satellite-wms
+    priority: 5
+    title: NOAA nowCOAST Geostationary Satellite Imagery (WMS 1.3.0 GetCapabilities)
+    publisher: NOAA National Ocean Service (nowCOAST)
+    edition: live (HB-103)
+    url: https://nowcoast.noaa.gov/geoserver/observations/satellite/ows?service=WMS&version=1.3.0&request=GetCapabilities
+    format: xml (OGC WMS 1.3.0 capabilities)
+    structured_alternative: this is the structured form
+    plan: api_endpoint
+    route: reference
+    notes: >-
+      Called by the workbench, not fetched. nowcoast.noaa.gov's robots.txt (read 2026-11-04,
+      docs/evidence/hb103/nowcoast_robots_2026-11-04.txt) disallows /geoserver/ to crawlers and states "This does NOT
+      restrict GIS desktop clients (QGIS, ArcGIS) or web mapping APIs"; RFC 9309 scopes robots.txt to crawlers, as for
+      nowcoast-weather-radar-wms. The answer is held as the recorded exchange fixtures/exchanges/nowcoast/ (HB-103). Its
+      service block states the terms: "Fees NONE", "AccessConstraints NONE". A NOAA service: a US Government work.
+    role: method
+    kb_reason: The satellite layers (goes_visible_imagery by day, goes_longwave_imagery by night), their newest scan
+      times and the service's terms, which the workbench's satellite toggle and snapshot read (HB-103 Part A).
+
+workbench_api_catalog_row:
+  - id: nowcoast_satellite
+    name: NOAA nowCOAST Geostationary Satellite Imagery WMS (GOES East and West)
+    runtime: false
+    status: active
+    base_url: https://nowcoast.noaa.gov/geoserver/observations/satellite/ows
+    docs: [nowcoast-satellite-wms]
+    documentation_url: https://nowcoast.noaa.gov/geoserver/observations/satellite/ows?service=WMS&version=1.3.0&request=GetCapabilities
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: none stated.
+      observed: none (HB-103)
+    terms:
+      url: https://nowcoast.noaa.gov/geoserver/observations/satellite/ows?service=WMS&version=1.3.0&request=GetCapabilities
+      doc: nowcoast-satellite-wms
+      clauses:
+        - '"Fees NONE" and "AccessConstraints NONE" (the capabilities'' service block); a NOAA service.'
+    identification: none required.
+    cadence: 'GOES East and West, a new scan every 5 minutes: the time dimension of goes_visible_imagery and
+      goes_longwave_imagery lists 77 scans from 09:03Z to 15:23Z on 2026-11-04, and its default is the newest (HB-103
+      probe).'
+    as_of: The time dimension's default (the newest scan), printed on the layer list; Cache-Control max-age=240.
+    formats: [XML (GetCapabilities), PNG (GetMap)]
+    errors: OGC service exception.
+    probe:
+      url: https://nowcoast.noaa.gov/geoserver/observations/satellite/ows?service=WMS&version=1.3.0&request=GetCapabilities
+      as_of: {header: Expires}
+    last_verified: "set by scripts/probe_apis.py when the row is written"

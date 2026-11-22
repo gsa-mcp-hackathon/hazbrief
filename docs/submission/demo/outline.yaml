@@ -1,0 +1,188 @@
+# HB-197 Part B, restated by HB-209 Part B: the demo's one-page outline, its paste-ready lines and its preflight, as
+# data.
+#
+# `uv run python scripts/demo_outline.py` writes docs/submission/demo/OUTLINE.md, LINES.md and PREFLIGHT.md from this
+# file; `--check` compares them with a fresh render. Edit this file, never the outputs.
+# test_hb197_demo.py (a test held privately) holds the limits below, that every "show" cue's page prints its control, that every wait
+# is its record's, and that every demo line is one a held record says worked.
+#
+# The operator's statements (the HB-209 task file): bullets only, no script, no wall of text; he will demo, not read
+# (2026-11-17); the live run is "the whole demo" (2026-11-19 11:27 EST); hazbrief is a decision support system:
+# "suggested actions to consider"; the timeline is evidence (2026-11-19 11:15 EST). HB-209 item 3: a two-door live
+# demo, Claude Desktop with the hazbrief server, then the brief application's start page; the measured waits are
+# stated so the video can be cut around them; no prepared scenario is run live at its past date; the basemap named
+# is the one actually on. HB-213 item 7: since HB-210 and HB-211 the basemap is Google's where GOOGLE_MAPS_API_KEY
+# is set, with Google's traffic as a Traffic switch, and Leaflet's where it is not; the key draws only at
+# http://127.0.0.1 (Google refuses it at localhost, Issue 0844dcb5); the benchmark cue is in the Census Bureau's words
+# (HB-213 ADDENDUM-02).
+
+limits:
+  # HB-209: seven groups (the two doors and the waits added to HB-197's six) and 32 bullets (HB-197's 30, and two for
+  # the second door's measured waits). Words per bullet and the preflight's length are HB-197's, the preflight
+  # raised from 15 to 20 lines for the five checks HB-209 item 4 and ADDENDUM-01 item 3 add.
+  groups: 7
+  bullets: 32
+  words_per_bullet: 12
+  preflight_lines: 20
+
+outline:
+  title: "Demo outline: cues, not a script"
+  intro: "Run PREFLIGHT.md; paste lines from LINES.md; open 127.0.0.1, not localhost."
+  # A cue is `point` (the one thing to say) or `show` (what to show: `brief` is a committed brief under docs/briefs/,
+  # `page` where the control is: `live` the page `--serve` serves (its shell, src/hazbrief/brief/web.py, around the
+  # brief's own brief.html), `start` the start page (src/hazbrief/brief/orchestrator.yaml `start:`), or
+  # `timeline.html` or `tevv.html`, the pages its header links to; `control` the control's own words as the page
+  # prints them).
+  # HB-219: the two groups once titled "Door one" and "Door two" are titled in plain words (the operator, 2026-11-21
+  # 22:26 EST: "We should never be using jargon"); their cues are unchanged.
+  groups:
+    - title: The problem
+      cues:
+        - point: The ERG gives distances, not who or what is inside
+        - point: A Situation Unit fuses that picture by hand today
+    - title: "The server on its own, in Claude Desktop"
+      cues:
+        - point: Paste a demo line; Claude calls the tools, each result sourced
+        - point: The ICS 201 draft; every distance is an ERG cell
+        - point: "The decision_support prompt: what to know, actions to consider, by when"
+        - point: Each suggested action carries its source; the commander decides
+    - title: "The start page: a prepared scenario, or a new incident"
+      cues:
+        - show: {page: start, control: Open the recorded run}
+          cue: replayed, its recording date shown
+        - point: One server serves one brief; Ctrl-C, then start again
+        - show: {page: start, control: "Run it with today's conditions"}
+          cue: now, on today's forecast
+        - show: {page: start, control: Enter a new incident}
+          cue: paste a demo line
+        - point: Confirm the material; the assumptions show and can be corrected
+        - point: The cloud plays as it is computed; cut the wait
+        - point: "Google basemap and Traffic switch with the key; no key: Leaflet"
+    - title: The brief page
+      cues:
+        - show: {brief: csx-point-of-rocks-night, page: live, control: Initial isolation zone}
+          cue: the ERG footprint beside the modelled cloud
+        - show: {brief: csx-point-of-rocks-night, page: live, control: Hide layers}
+          cue: every layer labelled, each one switchable
+        - show: {brief: csx-point-of-rocks-night, page: live, control: Responders}
+          cue: who and what is inside the zones
+        - point: Every value carries its source; open one receipt
+        - show: {brief: csx-point-of-rocks-night, page: live, control: Play}
+          cue: steps the cloud's frames
+        - show: {brief: csx-point-of-rocks-night, page: live, control: Timeline}
+          cue: evidence, each place reaching each level, in time order
+        - show: {brief: csx-point-of-rocks-night, page: timeline.html, control: Exercise events list}
+          cue: the same record, for planners
+    - title: The checklist and the TEVV page
+      cues:
+        - show: {brief: csx-point-of-rocks-night, page: live, control: Operator checklist}
+          cue: a reminder to check, not a form
+        - show: {brief: csx-point-of-rocks-night, page: live, control: TEVV}
+          cue: how each layer was tested
+        - show: {brief: csx-point-of-rocks-night, page: tevv.html, control: Benchmarks and requirement}
+          cue: "Trial 7: not statistically significant"
+
+    - title: What is next
+      cues:
+        - point: The timed decision view on the brief page
+        - point: Evaluate the cloud on Jack Rabbit II trials one and six
+        - point: Refine the display in design sessions with responders
+        - point: "The server runs alone: README's three container lines"
+  # The seventh group, generated from the run records: each measured wait, read from its file, never typed. A wait
+  # is seconds from Build to the first frame of the cloud on the page (`first_frame_s`) and to the last section
+  # settled (`last_section_s`), the page HB-209 item 3 calls settled.
+  waits:
+    title: "The waits to cut around (settled: the last section)"
+    runs:
+      - file: docs/evidence/hb208/live/runs.tsv
+        run: run1_recorded_un1005
+        label: "HB-208, recorded run, un1005-i81"
+      - file: docs/evidence/hb208/live/runs.tsv
+        run: run2b_today_i83_day
+        label: "HB-208, today, i83-md-pa-line-day"
+      - file: docs/evidence/hb208/live/runs.tsv
+        run: run3_today_un1005_moved
+        label: "HB-208, today, un1005-i81 moved"
+      - file: docs/evidence/hb207/live/runs.tsv
+        run: run3_ammonia
+        label: "HB-207, typed ammonia line"
+      - file: docs/evidence/hb207/live/runs.tsv
+        run: run4_chlorine
+        label: "HB-207, typed chlorine line"
+
+lines:
+  title: "Demo lines: paste them as they are"
+  # HB-209 item 2 and ADDENDUM-01 item 1: the start line and its printed URL, from docs/evidence/hb208/demo_path.md
+  # step 1; the three typed lines and their points, from docs/evidence/hb207/demo_lines.md, each as typed there.
+  # The generator reads each from its file and refuses one the file does not print.
+  start:
+    from: docs/evidence/hb208/demo_path.md
+    command: uv run hazbrief brief --serve
+    prints: "serving the start page at http://127.0.0.1:8790/"
+  typed:
+    from: docs/evidence/hb207/demo_lines.md
+    runs: docs/evidence/hb207/live/runs.tsv
+    lines:
+      - ammonia tanker truck overturned and leaking
+      - chlorine rail car derailed, venting
+      - Liquid nitrogen truck flipped, rapid leak
+
+preflight:
+  title: Demo preflight
+  # each check: a command to paste and what it should print (HB-209 item 4; ADDENDUM-01 item 3)
+  checks:
+    # HB-215 ADDENDUM-02 item 2 (Issue 89d222a4): one real data request, the answer read; a placeholder fails it
+    - what: "The Census key, `CENSUS_API_KEY`, works (the live population tools need it)"
+      command: uv run python scripts/census_key_check.py
+      expect: "a line starting `key works`"
+    - what: "The models image is built (the modelled cloud runs in it)"
+      command: docker image ls hazbrief-models:latest
+      expect: "one row, `hazbrief-models` `latest`"
+    - what: "No models container is left from an earlier run (Issue `ddfdd4e3`)"
+      command: docker ps --filter ancestor=hazbrief-models
+      expect: "the header line only"
+    - what: "No earlier `--serve` holds the start page's port"
+      command: lsof -nP -iTCP:8790 -sTCP:LISTEN
+      expect: "nothing; otherwise stop that server with Ctrl-C"
+    - what: "Swap is not exhausted (HB-207's live runs met it exhausted and were stopped)"
+      command: sysctl vm.swapusage
+      expect: "`free` well above zero; if it is near zero, close other work or restart first"
+    - what: "The network answers and the forecast has wind at a prepared point"
+      command: uv run python the HB-208 evidence (held privately)
+      expect: "one line per prepared point with its forecast wind now"
+  # what to do when a live cloud is refused, in this order (ADDENDUM-01 item 3)
+  calm: >-
+    a calm forecast (0 km/h) draws no cloud by design (Issue `473bdfeb`; HB-208's run at Point of Rocks met it at
+    21:29 EST): pick a row whose point has wind, move the point, or choose `stated` weather with a direction, speed and
+    basis.
+  domain_edge: >-
+    A cloud refused at the engine's domain edge in a light night wind (Issue `d5bcfffb`): open the recorded run instead
+    and say so.
+  # A recorded brief by replay, for the fallback: no network, no engine, no model call
+  brief: csx-point-of-rocks-night
+  # The `--now` every committed brief is built and served at (src/hazbrief/evidence/labels.yaml fixture_now;
+  # docs/OPERATIONS.md section 2).
+  now: "2026-10-26T12:00:00Z"
+  # orchestrator.yaml web.host and web.port, where `--serve` serves the live page
+  url: http://127.0.0.1:8790/
+  # HB-192's live load times (headless Chrome, served by replay, 0 calls)
+  live_load: docs/evidence/hb192/live_load.tsv
+  # HB-192's and HB-173's screenshot window: 1440 by 1043, a viewport of 1440 by 900
+  # (the HB-173 evidence (held privately) WINDOW); the deck's six screenshots are this size
+  viewport: "1440 by 900"
+  fallback:
+    - docs/evidence/hb192/csx_night_status_mid_run.png
+    - docs/evidence/hb192/csx_night_frame_60.png
+    - docs/evidence/hb192/csx_night_frame_180.png
+    - docs/evidence/hb192/csx_night_tevv_benchmarks.png
+    - docs/submission/demo/csx_night_first_view.png
+    - docs/submission/demo/csx_night_timeline.png
+  container: docs/evidence/hb197/readme_container.md
+  # the recording lengths the arithmetic is printed for (minutes)
+  lengths_min: [5, 3]
+  # The re-encode, if the first export is over: H.264 at 1,000 kbit/s video (1,200 kbit/s peak)
+  # and 96 kbit/s sound averages about 1.1 Mbit/s, under a 5-minute recording's budget. Run on a
+  # 10 s 1440 by 900 test recording in HB-197 (the command exits 0; check_video.sh reads the result).
+  reencode: >-
+    ffmpeg -i recording.mov -c:v libx264 -preset slow -b:v 1000k -maxrate 1200k -bufsize 2400k
+    -pix_fmt yuv420p -c:a aac -b:a 96k -movflags +faststart demo.mp4

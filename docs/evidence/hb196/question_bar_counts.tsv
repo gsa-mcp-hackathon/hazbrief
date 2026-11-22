@@ -1,0 +1,26 @@
+point	family	meet	prompts
+independent	adversarial	5	5
+independent	ambiguity	4	4
+independent	out_of_scope	5	5
+independent	scenario	18	18
+independent	all	32	32
+read-only	adversarial	5	5
+read-only	ambiguity	4	4
+read-only	out_of_scope	5	5
+read-only	scenario	18	18
+read-only	all	32	32
+one verifiable answer	adversarial	2	5
+one verifiable answer	ambiguity	4	4
+one verifiable answer	out_of_scope	1	5
+one verifiable answer	scenario	18	18
+one verifiable answer	all	25	32
+stable over time	adversarial	5	5
+stable over time	ambiguity	4	4
+stable over time	out_of_scope	5	5
+stable over time	scenario	18	18
+stable over time	all	32	32
+needs more than one tool call	adversarial	0	5
+needs more than one tool call	ambiguity	0	4
+needs more than one tool call	out_of_scope	0	5
+needs more than one tool call	scenario	18	18
+needs more than one tool call	all	18	32

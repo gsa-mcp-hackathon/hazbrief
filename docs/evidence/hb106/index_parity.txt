@@ -1,0 +1,1 @@
+index parity PASS: 164682 release units, 164682 index rows, 164682 vectors (the corpus graph (held privately)); baseline hb101_manifest 164844 (docs/evidence/hb101/index_parity.txt); delta -162 = epa-degadis-readme's text rows (before_state.json index_rows)

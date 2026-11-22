@@ -1,0 +1,133 @@
+[project]
+name = "hazbrief"
+version = "0.1.0"
+description = "Hazmat incident briefing MCP server: ERG protective action footprint, sourced flags, ICS 201 draft"
+readme = "README.md"
+# The project's code is MIT (LICENSE), the license of the GSA template it was adapted from,
+# whose own notice is kept verbatim in LICENSE-TEMPLATE (README "Origin"). PEP 639 fields.
+license = "MIT"
+license-files = ["LICENSE", "LICENSE-TEMPLATE"]
+requires-python = ">=3.11"
+dependencies = [
+    # astral: sunrise and sunset by the NOAA solar calculator equations (DN-005 section 3); the
+    # ERG's day/night switch for Tables 1 and 3. The standard library has no solar position.
+    "astral>=3.2",
+    "fastmcp>=2.0.0",
+    # geographiclib: Karney's geodesic Direct/Inverse on WGS84, the ellipsoidal azimuthal
+    # equidistant projection the footprint is drawn in (DN-005 section 4). Pure Python; the
+    # standard library has no geodesic, and pyproj would ship PROJ for two function calls.
+    "geographiclib>=2.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    # pyyaml: stylecheck reads docs/stylebook/STYLECHECK.yaml and VOCABULARY.yaml (HB-02), which
+    # are YAML by task specification. Declared here rather than relied on through fastmcp.
+    "pyyaml>=6.0",
+    # shapely: polygon intersection of a footprint with Census blocks, block groups and tracts
+    # (HB-09, area-weighted allocation). The standard library has no polygon clipping; GEOS
+    # through shapely is the reference implementation the GIS field uses. Areas themselves are
+    # geodesic, by geographiclib (above), not planar.
+    "shapely>=2.0",
+    # starlette: routes.py imports its Request and JSONResponse for the /health and /version
+    # routes. It arrived only through fastmcp; a module the package imports is declared, not
+    # inherited (HB-34; deptry's DEP003, "transitive dependency").
+    "starlette>=1.0",
+    # tzdata: the IANA zone database for zoneinfo where the system has none (python:3.11-slim
+    # need not), as the zoneinfo documentation recommends. Source tags print the incident's
+    # zone ("EDT"), which NWS names per point (SB-NUM-06).
+    "tzdata>=2024.1",
+]
+
+[project.optional-dependencies]
+# HB-95 (review L1-10): what the `hazbrief brief` application imports and the server does not.
+# numpy: the land-cover reader decodes and counts a GeoTIFF's tiles as arrays, and the puff
+# grid is an array (hazbrief.brief.cog, derive, puff; HB-59 ADDENDUM-03). No server module
+# imports it (tests/test_requirements.py); shapely installs it for its own use, so the server's
+# environment holds it without the server declaring it. A module the application imports is
+# declared, not inherited (HB-34; deptry's DEP003, "transitive dependency"): here, as an extra.
+# starlette and uvicorn: the live page (hazbrief.brief.web; HB-130R, DN-022 section 8) is a Starlette
+# application served by uvicorn. starlette is also a server dependency above (routes.py, HB-34),
+# so it cannot be the extra's alone; it is named here because the application imports it for its
+# own route. uvicorn arrived only through mcp; the application imports it, so it is declared
+# (DEP003, as numpy). Neither adds a distribution to the lock.
+brief = ["numpy>=2.0", "starlette>=1.0", "uvicorn>=0.30"]
+
+[project.scripts]
+# `uv run hazbrief` runs the server; `uv run hazbrief brief SCENARIO.json --out DIR` writes a brief
+# (HB-41). The dispatcher imports the application only for `brief`.
+hazbrief = "hazbrief.command:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hazbrief"]
+
+[dependency-groups]
+# Dev + eval-only deps. Install with `uv sync --group dev`.
+# The Phoenix evaluation harness (see eval/) is not scaffolded in this template
+# on purpose — add these when you build it per the mcp-eval skill.
+dev = [
+    "pytest>=8.0.0",
+    # numpy: the application's tests import it directly (test_brief_puff, test_brief_cover,
+    # test_eval_puff), so the dev group declares it beside the `brief` extra.
+    "numpy>=2.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.6.0",
+    # Corpus acquisition (HB-01, scripts/). Build-time only; the server never imports these.
+    # protego: RFC 9309 robots.txt matching (wildcards, `$`, longest match), which the
+    # standard library's urllib.robotparser does not implement.
+    "protego>=0.3.0",
+    # pyyaml: corpus/sources.yaml, manifest.yaml and squiddy_queue.yaml are YAML by spec.
+    "pyyaml>=6.0",
+    # jsonschema: test_packs.py (a test held privately) validates every built pack against the published JSON
+    # Schemas in packs/schema/, independently of the Pydantic models they are generated from.
+    # Already in the lock through mcp; declared here because the tests import it directly.
+    "jsonschema>=4.0",
+    # pypdfium2: page and character counts that size the Squiddy queue, the reader Squiddy's
+    # own acquire stage uses (squiddy/pdftext.py), so the estimate counts what Squiddy counts.
+    "pypdfium2>=4.0",
+    # xlrd: reads BIFF8 `.xls` workbooks (HB-01d). PHMSA ships three ERG2020 tables only in that
+    # format (an OLE2 compound file the standard library cannot open); xlrd 2.x is the reader
+    # pandas itself uses for `.xls`. Build-time only, like the rest of this group.
+    "xlrd>=2.0",
+    "pdfplumber>=0.11",
+    # python-pptx: build_deck.py (a build tool held privately) writes the PPTX deck on GSA's template layouts and
+    # test_deck.py (a test held privately) reads it back (HB-38). The standard library cannot read or write
+    # OOXML presentations. Build-time only; the server never imports it.
+    "python-pptx>=1.0",
+    "pytest-xdist>=3.6",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = [".venv", ".agents"]
+# Don't reformat Python code fences inside Markdown docs (they're illustrative
+# snippets, not runnable modules).
+extend-exclude = [
+    "*.md",
+    # Squiddy graphs (HB-01b): emit.py and schema/generated/ are written by `squiddy init` from
+    # the graph spec and regenerated by it; they follow the kit's style, not this repository's.
+    "graphs",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+# HB-05: the exhaustive eval runs (test_eval_invariants.py (a test held privately)) are `slow` and stay out of
+# the default gate; run them with `uv run pytest -m slow` (nightly in CI, and before a
+# release tag). A `-m` on the command line replaces this default.
+# HB-149 (seldon AD-013-R5): a test declares the requirements it verifies with
+# `@pytest.mark.verifies("VR-012")`; `seldon req trace` turns the marker into the verified_by edge.
+# HB-194: a `load_sensitive` test launches headless Chrome, asserts a wall-clock bound, or starts a
+# server or binds a port (docs/evidence/hb194/load_sensitive.tsv), and carries its kind's `xdist_group`.
+# The gate runs them in a second step after the parallel one, one group per kind (`the Seldon configuration (held privately)`
+# `dispatch.gate_command`: `-m 'not slow and not load_sensitive'`, then `-n 3 --dist loadgroup
+# -m 'load_sensitive and not slow'`); a plain `uv run pytest tests/` still runs every test.
+markers = ["slow: exhaustive eval-harness runs, excluded from the default gate", "verifies(*ids): the requirements this test verifies (AD-013-R5)", "load_sensitive: launches headless Chrome, asserts a wall-clock bound, or starts a server or binds a port; the gate's second step runs it (HB-194)"]
+addopts = "-m 'not slow'"

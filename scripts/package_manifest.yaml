@@ -1,0 +1,128 @@
+# HB-198 item 4 (ADDENDA 03 and 05), executed by HB-203 items 4 and 6: what docs/submission/PACKAGE.md lists.
+# package_manifest.py (a build tool held privately) renders it; every sha256, every date and subject, every count is read from the tree,
+# the git history or a committed evidence file, never typed here. A file named here that git does not track is
+# refused. test_package_manifest.py (a test held privately) holds the rendered file to a fresh render.
+
+output: docs/submission/PACKAGE.md
+
+# The clean clone's record (HB-203 item 4): key<TAB>value lines the generator reads
+clone_record: docs/evidence/hb203/clone.txt
+# The event store's merges in the checkpoint's range (HB-203 item 6), by the HB-203 evidence (held privately)
+merges: docs/evidence/hb203/merges.tsv
+# Branches the dispatcher refused and the task that landed each (HB-204 item 3), by the HB-204 evidence (held privately)
+landings: docs/evidence/hb204/landing.tsv
+# The personal read (HB-198 ADDENDUM-03 3g)
+personal_read: docs/evidence/hb203/personal_read.tsv
+# The image (HB-198 ADDENDUM-05 item 5)
+image_record: docs/evidence/hb203/image.md
+
+deliverables:
+  - name: The repository
+    gsa: "a GitHub repository (DN-001 section 1)"
+    files:
+      - README.md
+      - LICENSE
+      - LICENSE-TEMPLATE
+      - NOTICE
+      - Dockerfile
+      - pyproject.toml
+      - uv.lock
+      - main.py
+      - the instructions of the coding sessions (held privately)
+      - AGENTS.md
+    state_lines:
+      - "Main at the clean clone's commit failed one test on a clean clone (below); HB-203 fixed that test and reached main with HB-204 (below). HB-209 made a clean copy of its own tree (`git archive`), and from it the server started over stdio and answered, and README's offline commands ran as written (`docs/evidence/hb209/clean_copy.tsv`). Ready to upload by the operator's gate 1, with the notes below."
+      - "The container image builds only with the network: under `--network=none` the build stops at its dependency layer, where `uv` needs PyPI (`docs/evidence/hb203/image.md`). The image held on the build machine (`hazbrief-mcp:hb201`) was not built from the commit named here, so no container result is stated for it. A judge's build needs PyPI."
+    scan_lines:
+      - "HB-196's secret scan (`python -m squiddy.secret_scan` over every tracked file; `docs/evidence/hb196/secret_scan_review.md`) found three hits, each read, none a credential of this project: two are a third party's expired pre-signed download address in `the HB-170 evidence (held privately)` and `the HB-170 evidence (held privately)` (Issue `3b997b40`); one is a chance match inside a stored SCICHEM run's base64 text (`fixtures/evidence/scichem_runs/`)."
+      - "These lines are also in the history, so taking them out of the tree does not take them out of a copy published with its history, and a host's own scanner may flag them on a first public push."
+      - "The gate can be done two ways, and which is the operator's choice: the repository with its history, or one commit of the tree. This manifest makes neither."
+  - name: The deck
+    gsa: "a slide deck: problem, solution, technical approach, demo (DN-001 section 1)"
+    files:
+      - docs/submission/deck.yaml
+      - docs/submission/deck.html
+      - docs/submission/deck.pptx
+    deck_yaml: docs/submission/deck.yaml
+    state_lines:
+      - "Built from `deck.yaml` by `build_deck.py (a build tool held privately)` on GSA's template; every number and quote traced to a committed file (`test_deck.py (a test held privately)`). Ready, by the operator's gate 2."
+  - name: The evaluation document
+    gsa: "an evaluation document: methodology, metrics, security, lessons (DN-001 section 1)"
+    files:
+      - docs/submission/EVALUATION.md
+      - docs/FUTURE_WORK.md
+      - docs/REQUIREMENTS_TRACE.md
+      - docs/VIEW_REQUIREMENTS.md
+    state_lines:
+      - "Ready. Its tables are rendered by `scripts/submission_tables.py` and `seldon docs generate`; `test_evaluation_document.py (a test held privately)` finds every number in a file its row cites."
+  - name: The demo video
+    gsa: "a demonstration (the deck's fourth part, DN-001 section 1)"
+    files:
+      - docs/submission/demo/outline.yaml
+      - docs/submission/demo/OUTLINE.md
+      - docs/submission/demo/LINES.md
+      - docs/submission/demo/PREFLIGHT.md
+      - scripts/check_video.sh
+    state_lines:
+      - "Missing: the video itself. The outline (two doors, live, with the measured waits), the paste-ready lines, the preflight and the size check exist (HB-209)."
+      - "The 50 MB limit is the operator's statement, not a held GSA page: HB-197 searched `corpus/sources.yaml`, DN-001 and DN-009 and found none. `scripts/check_video.sh` reads 50 MB as 50,000,000 bytes (`VIDEO_LIMIT_MB` overrides)."
+
+# The three steps that are the operator's alone. Each shows "not done" until `record` names a committed file that
+# records his statement that it is done; the generator refuses a record git does not track.
+operator_gates:
+  - gate: The repository is uploaded to GSA's location
+    record: null
+  - gate: The deck is accepted to go out under his name
+    record: null
+  - gate: The demo video is recorded and is under 50 MB (`scripts/check_video.sh`)
+    record: null
+
+# How to confirm the package from a clean clone (README's own lines; the gate is the Seldon configuration (held privately) dispatch.gate_command)
+confirm:
+  - git clone https://github.com/brockwebb/hazbrief-mcp.git && cd hazbrief-mcp
+  - uv sync --group dev --locked
+  - uv run pytest tests/ -q -n auto --maxprocesses 6 --dist loadfile -m 'not slow and not load_sensitive'
+  - uv run pytest tests/ -q -n 3 --dist loadgroup -m 'load_sensitive and not slow'
+  - uv run ruff check . && uv run ruff format --check .
+  - uv run python package_manifest.py (a build tool held privately) --check
+  - sh scripts/check_video.sh <the video file>
+  - docker build -t hazbrief-mcp .
+
+# HB-198 item 6: what a reader outside this machine does not need and is still in the tree, and why it stays
+# (the instructions of the coding sessions (held privately), "Governing documents": the server is main.py and src/hazbrief/, reading packs/, docs/stylebook/ and the
+# fixtures/lodes/ and fixtures/cms/ caches; the rest named here is the project's working record or build-time only).
+stays:
+  - path: cc_tasks
+    why: "The task files, their addenda and RESULTs are the work's record (operator rulings of 2026-09-25, 2026-10-12 and 2026-10-14; AD-039); the server never reads them."
+  - path: a session handoff (held privately)
+    why: "Session handoffs are part of the same record and are secret-scanned before they are committed (AD-039); the server never reads them."
+  - path: docs/evidence/
+    why: "Every number the evaluation document and the deck print is found in a file here, which their tests check; the server never reads it."
+  - path: the event log of the graph (held privately)
+    why: "The event store is the record the graph is rebuilt from and that the checkpoints read (merges, gates, stops); the server never reads it."
+  - path: the corpus graph (held privately)
+    why: "The Squiddy corpus graph's tracked configuration, ledgers and exports' tables are build-time only, the source the packs were built from; the server never reads them."
+
+# HB-213 (DN-030 ADDENDUM-01 decision 16): PACKAGE.md as the public tree prints it, rendered by
+# `package_manifest.py (a build tool held privately) --public DEST` for the tree build_public_tree.py (a build tool held privately) builds. Its deliverables' files
+# are the same; their sha256 is the built tree's; there is no history in the tree, so no commit is named per file.
+public:
+  # the one sentence that the working record is held privately (decision 16)
+  held_privately: "The working record (the task files and their results, the session handoffs, the design notes, the decision register, the lab notes, the corpus graph and the event log) is held privately; every number the documents here cite is in a file that ships, and `docs/evidence/INDEX.md` lists them."
+  # the include list and the build record this package's own section reads
+  include: docs/submission/public_include.yaml
+  record: docs/evidence/hb213/public_tree.tsv
+  clean_copy: docs/evidence/hb213/clean_copy.tsv
+  secret_scan: docs/evidence/hb213/secret_scan.tsv
+  # replaces each deliverable's state lines where the private ones cite the working record
+  state_lines:
+    The repository:
+      - "This tree is the public package: built from the include list by `build_public_tree.py (a build tool held privately)` (`git archive` of the source commit, narrowed to the list), checked from a clean copy (below)."
+      - "The container image builds only with the network: its dependency layer needs PyPI, so `docker build` was not run in the offline checks; a judge's build needs PyPI."
+  confirm:
+    - uv sync --group dev --locked
+    - uv run ruff check .
+    - uv run pytest tests/ -q -m 'not slow'
+    - uv run python main.py
+    - uv run hazbrief brief docs/briefs/csx-point-of-rocks-day/scenario.json --out /tmp/brief --replay --now 2026-10-26T12:00:00Z
+    - docker build -t hazbrief-mcp .

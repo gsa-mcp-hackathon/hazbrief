@@ -1,0 +1,1281 @@
+# HB-22 step 1: the inventory, verified (HB-22).
+# One row per inventory line as found. `path` is the planned acquisition path; `outcome` is written from
+# corpus/fetch_log.jsonl and corpus/operator_downloads.jsonl after acquisition. Discovery was by web search and
+# landing-page reads (2026-10-23); `discovery_sha256` is the hash a discovery read measured, a cross-check only.
+inventory:
+- line: 1a
+  tier: 1
+  status: found
+  doc_id: epa-rmp-oca-guidance-2009
+  title: Risk Management Program Guidance for Offsite Consequence Analysis (EPA 550-B-99-009)
+  publisher: US EPA, OSWER / Office of Emergency Management
+  edition: March 2009
+  url: https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf
+  landing_url: https://www.epa.gov/rmp/rmp-guidance-offsite-consequence-analysis
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 5146938
+  pages: 134
+  notes: 'Residential population method: Chapter 11, Estimating Offsite Receptors.'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 258 grounded claims, committed in hb22_bulk_04"
+- line: 1b
+  tier: 1
+  status: found
+  doc_id: epa-rmp-oca-guidance-appendices-1999
+  title: Risk Management Program Guidance for Offsite Consequence Analysis - Appendices
+  publisher: US EPA
+  edition: April 1999
+  url: https://www.epa.gov/sites/default/files/2017-05/documents/oca-apds.pdf
+  landing_url: https://www.epa.gov/rmp/rmp-guidance-offsite-consequence-analysis
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 1187620
+  pages: 122
+  notes: The toxic endpoint tables (Exhibit B-1; 40 CFR 68 Appendix A).
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 428 grounded claims, committed in hb22_bulk_02"
+- line: '2'
+  tier: 1
+  status: found
+  doc_id: erg2020-anl-technical-report
+  title: Development of the Table of Initial Isolation and Protective Action Distances for the 2020 Emergency Response
+    Guidebook (ANL/SSS-22/3)
+  publisher: Argonne National Laboratory, for US DOT PHMSA (Brown, Freeman)
+  edition: April 2022
+  url: https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2022-04/ERG2020-ANL-report-v2.pdf
+  landing_url: null
+  host: www.phmsa.dot.gov
+  host_on_allowlist: true
+  licence: 'No copyright marking; DOE contractor work (UChicago Argonne, DE-AC02-06CH11357): ''This report was prepared
+    as an account of work sponsored by an agency of the United States Government...'''
+  size_bytes: 6211356
+  pages: 176
+  requested_url_alt: http://web.archive.org/web/20260508070040id_/https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2022-04/ERG2020-ANL-report-v2.pdf
+  notes: Not on OSTI (searched by title, report number). PHMSA 403s scripted clients.
+  path: fetcher
+  outcome: "operator browser download, registered by content; extracted, 292 grounded claims, committed in hb22_bulk_05"
+- line: 2b
+  tier: 1
+  status: held
+  doc_id: erg2024-methodology
+  title: Development of the Table of Initial Isolation and Protective Action Distances for the 2024 Emergency Response
+    Guidebook (ANL/SSS-25/11)
+  publisher: null
+  edition: null
+  url: null
+  landing_url: null
+  host: null
+  host_on_allowlist: null
+  licence: null
+  size_bytes: null
+  pages: null
+  notes: 'Verified by content 2026-10-23: the held erg2024-methodology.pdf first page reads ''ANL/SSS-25/11 Development
+    of the Table of Initial Isolation and Protective Action Distances for the 2024 Emergency Response Guidebook''
+    (174 pp). OSTI 2569588 (https://www.osti.gov/servlets/purl/2569588, 175 pp, 8024040 B) is another rendition
+    of the same report; not fetched. OSTI also holds the 2012 (purl/1137185), 2004 (purl/925265) and 2000 (purl/775267)
+    editions.'
+  path: held
+  outcome: "operator browser download, registered by content; held before this run, extracted under CLI 2.1.309 in hb14b_bulk"
+- line: '3'
+  tier: 1
+  status: found
+  doc_id: noaa-aloha-technical-documentation
+  title: ALOHA (Areal Locations of Hazardous Atmospheres) 5.4.4 Technical Documentation (NOAA Technical Memorandum
+    NOS OR&R 43)
+  publisher: NOAA NOS Office of Response and Restoration (Jones, Lehr, Simecek-Beatty, Reynolds)
+  edition: November 2013
+  url: https://response.restoration.noaa.gov/sites/default/files/ALOHA_Tech_Doc.pdf
+  landing_url: https://response.restoration.noaa.gov/oil-and-chemical-spills/chemical-spills/resources/aloha-technical-resources.html
+  host: response.restoration.noaa.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 1344293
+  pages: 96
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 220 grounded claims, committed in hb22_bulk_01"
+- line: 4a
+  tier: 1
+  status: found_under_different_title
+  doc_id: cameo-chemicals-help-locs
+  title: 'Help Topics for CAMEO Chemicals: Levels of Concern guide (overview)'
+  publisher: NOAA OR&R with US EPA
+  edition: RoboHelp build; help home Last-Modified 2024-10-17
+  url: https://cameochemicals.noaa.gov/help/reference/locs_guide/overview.htm
+  landing_url: https://cameochemicals.noaa.gov/help/home.htm
+  host: cameochemicals.noaa.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  notes: No PDF CAMEO Chemicals manual exists; the help is multi-page HTML. The Levels of Concern guide is the page
+    that bears on protective distances; hazard_assessment_guide, reactivity, placards_guide, containers_guide noted,
+    not fetched.
+  path: fetcher
+  outcome: "operator browser download, registered by content; extracted, 11 grounded claims, committed in hb22_bulk_05"
+- line: 4b
+  tier: 1
+  status: found_under_different_title
+  doc_id: epa-marplot-users-manual-2007
+  title: MARPLOT User's Manual (The CAMEO Software System)
+  publisher: US EPA OEM; NOAA OR&R
+  edition: February 2007 (MARPLOT 4.x)
+  url: https://www.epa.gov/sites/default/files/documents/marplotmanual.pdf
+  landing_url: https://19january2021snapshot.epa.gov/cameo/marplot-software_.html
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 2281394
+  pages: 170
+  notes: No MARPLOT 5.x manual PDF exists (help ships in the installer).
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 410 grounded claims, committed in hb22_bulk_02"
+- line: 4c
+  tier: 1
+  status: found
+  doc_id: epa-marplot-4-to-5-update
+  title: Updating to MARPLOT 5.x from MARPLOT 4.x
+  publisher: US EPA
+  edition: 2015-02
+  url: https://www.epa.gov/sites/default/files/2015-02/documents/marplot4to5update.pdf
+  landing_url: https://www.epa.gov/cameo/marplot-software
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 209560
+  pages: null
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 6 grounded claims, committed in hb22_bulk_01"
+- line: '5'
+  tier: 1
+  status: not_found
+  doc_id: null
+  title: 'Understanding and Using ACS Data: What Users of Data for Emergency Management Need to Know'
+  publisher: null
+  edition: null
+  url: null
+  landing_url: null
+  host: null
+  host_on_allowlist: null
+  licence: null
+  size_bytes: null
+  pages: null
+  notes: The ACS handbook index (https://www.census.gov/programs-surveys/acs/library/handbooks.html) lists 14 handbooks;
+    none is for emergency management. The general handbook (2020) is held as census-acs-general-handbook-2020; the
+    state and local handbook is admitted as the nearest substitute (line 5s).
+  searches:
+  - '"What Users of Data for Emergency Management Need to Know" American Community Survey handbook pdf'
+  - Census Bureau "emergency management" American Community Survey data users guide handbook "need to know"
+  - census.gov American Community Survey "emergency management" OR "emergency planners" OR "disaster" handbook "Understanding
+    and Using American Community Survey Data"
+  - the handbooks.html index read directly
+  path: not_found
+  outcome: "none (no document found; see notes)"
+- line: 5s
+  tier: 1
+  status: substitute
+  doc_id: census-acs-state-local-handbook-2020
+  title: 'Understanding and Using American Community Survey Data: What State and Local Government Users Need to
+    Know'
+  publisher: US Census Bureau
+  edition: August 2020
+  url: https://www.census.gov/content/dam/Census/library/publications/2020/acs/acs_state_local_handbook_2020.pdf
+  landing_url: https://www.census.gov/programs-surveys/acs/library/handbooks.html
+  host: www.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 6376663
+  pages: 31
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 66 grounded claims, committed in hb22_bulk_01"
+- line: '6'
+  tier: 1
+  status: found
+  doc_id: census-dhc-2020-techdoc
+  title: 2020 Census Demographic and Housing Characteristics File (DHC) and Demographic Profile Technical Documentation
+    (TD/DHC2020)
+  publisher: US Census Bureau
+  edition: Issued April 2023 (file 2024-06-24)
+  url: https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/complete-tech-docs/demographic-and-housing-characteristics-file-and-demographic-profile/2020census-demographic-and-housing-characteristics-file-and-demographic-profile-techdoc.pdf
+  landing_url: https://www.census.gov/programs-surveys/decennial-census/technical-documentation/complete-technical-documents.2020.html
+  host: www2.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 1806867
+  pages: 175
+  notes: Group quarters definitions with GQ type codes.
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 375 grounded claims, committed in hb22_bulk_02"
+- line: 7a
+  tier: 1
+  status: found_under_different_title
+  doc_id: census-sehsd-wp2022-25-cre-indices
+  title: An Evaluation of Social Vulnerability and Community Resilience Indices and Opportunities for Improvement
+    through Community Resilience Estimates (SEHSD Working Paper 2022-25)
+  publisher: US Census Bureau SEHSD (Willyard, Amaro, Sawyer, DeSalvo, Basel)
+  edition: '2022-12-15'
+  url: https://www.census.gov/content/dam/Census/library/working-papers/2022/demo/sehsd-wp2022-25.pdf
+  landing_url: https://www.census.gov/library/working-papers/2022/demo/SEHSD-wp2022-25.html
+  host: www.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 620195
+  pages: 17
+  notes: No dedicated CRE methodology working paper exists; the method is the cre_techdoc series (2024 held).
+  searches:
+  - Census Bureau Community Resilience Estimates methodology working paper SEHSD pdf
+  - '"Community Resilience Estimates" working paper census.gov library working-papers methodology small area estimation
+    Glassman'
+  - site:census.gov library working-papers "community resilience" estimates SEHSD
+  - '"Community Resilience Estimates" methodology paper small area estimation census "Joint Statistical Meetings"
+    OR "working paper"'
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 30 grounded claims, committed in hb22_bulk_01"
+- line: 7b
+  tier: 1
+  status: not_found
+  doc_id: null
+  title: CRE for Response (Disaster Response Supplement) technical documentation beyond the quick guide
+  publisher: null
+  edition: null
+  url: null
+  landing_url: null
+  host: null
+  host_on_allowlist: null
+  licence: null
+  size_bytes: null
+  pages: null
+  notes: 'The CRE for Response page (revised 2026-04-06) lists only the quick guide and the file layout, both held.
+    Found instead (7c): the CAREs Hurricane Helene quick guide.'
+  searches:
+  - '"CRE for Response" OR "Community Resilience Estimates for Response" census technical documentation'
+  - directory listings of www2.census.gov/programs-surveys/demo/technical-documentation/community-resilience/ and
+    every subdirectory
+  path: not_found
+  outcome: "none (no document found; see notes)"
+- line: 7c
+  tier: 1
+  status: found
+  doc_id: census-cares-helene-quick-guide-2025
+  title: Census Bureau's Assessment, Recovery, and Evaluation datasets (CAREs) for Hurricane Helene - Quick Guide
+  publisher: US Census Bureau
+  edition: September 2025
+  url: https://www2.census.gov/programs-surveys/demo/technical-documentation/community-resilience/care/CAREs_Helene_quick_guide.pdf
+  landing_url: null
+  host: www2.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: 7
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 23 grounded claims, committed in hb22_bulk_01"
+- line: 8a
+  tier: 1
+  status: held
+  doc_id: lodes8-techdoc-8-4
+  title: LODES Dataset Structure, Format Version 8.4
+  publisher: null
+  edition: null
+  url: null
+  landing_url: null
+  host: null
+  host_on_allowlist: null
+  licence: null
+  size_bytes: null
+  pages: null
+  notes: 8.4 is current (LODES8 listing holds 8.0, 8.1, 8.3, 8.4; 8.5, 8.6, 9.0 404). Held.
+  path: held
+  outcome: "fetched (scripts/fetch_allowlisted.py); held before this run, extracted under CLI 2.1.309 in hb14b_bulk"
+- line: 8b
+  tier: 1
+  status: found
+  doc_id: otmem-user-guide
+  title: OnTheMap for Emergency Management User Guide
+  publisher: US Census Bureau LEHD
+  edition: 2026-06 (PDF ModDate 2026-06-15)
+  url: https://lehd.ces.census.gov/doc/help/onthemap_em/OTMEM_UserGuide.pdf
+  landing_url: null
+  host: lehd.ces.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 828906
+  pages: 7
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 17 grounded claims, committed in hb22_bulk_01"
+- line: 8c
+  tier: 1
+  status: found
+  doc_id: otmem-selection-methodology
+  title: OnTheMap for Emergency Management Geographic Selection Methodology
+  publisher: US Census Bureau LEHD
+  edition: 2023-05
+  url: https://lehd.ces.census.gov/doc/help/onthemap_em/OTMEM_SelectionMethodology.pdf
+  landing_url: null
+  host: lehd.ces.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 536270
+  pages: 4
+  notes: How a footprint selects the areas whose population is counted.
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 8 grounded claims, committed in hb22_bulk_01"
+- line: 8d
+  tier: 1
+  status: found
+  doc_id: otmem-faq
+  title: OnTheMap for Emergency Management FAQ
+  publisher: US Census Bureau LEHD
+  edition: 2026-06
+  url: https://lehd.ces.census.gov/doc/help/onthemap_em/OTMEM_FAQ.pdf
+  landing_url: null
+  host: lehd.ces.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 254082
+  pages: 5
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 26 grounded claims, committed in hb22_bulk_01"
+- line: 8e
+  tier: 1
+  status: found
+  doc_id: otmem-glossary
+  title: OnTheMap for Emergency Management Glossary
+  publisher: US Census Bureau LEHD
+  edition: 2026-06
+  url: https://lehd.ces.census.gov/doc/help/onthemap_em/OTMEM_Glossary.pdf
+  landing_url: null
+  host: lehd.ces.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 160092
+  pages: 3
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 24 grounded claims, committed in hb22_bulk_01"
+- line: 8f
+  tier: 1
+  status: found
+  doc_id: otmem-tech-overview
+  title: OnTheMap for Emergency Management Technical Overview
+  publisher: US Census Bureau LEHD
+  edition: 2026-06
+  url: https://lehd.ces.census.gov/doc/help/onthemap_em/OTMEM_TechOverview.pdf
+  landing_url: null
+  host: lehd.ces.census.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 343896
+  pages: 1
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 3 grounded claims, committed in hb22_bulk_01"
+- line: 8g
+  tier: 1
+  status: held
+  doc_id: otmem-data-sources
+  title: OnTheMap for Emergency Management Data Sources
+  publisher: null
+  edition: null
+  url: null
+  landing_url: null
+  host: null
+  host_on_allowlist: null
+  licence: null
+  size_bytes: null
+  pages: null
+  notes: Held copy is 228034 bytes, the size of the June 2026 revision the host serves now; current.
+  path: held
+  outcome: "fetched (scripts/fetch_allowlisted.py); held before this run, extracted under CLI 2.1.309 in hb14b_bulk"
+- line: 9a
+  tier: 2
+  status: found
+  doc_id: atsdr-mmg-ammonia
+  title: Medical Management Guidelines for Ammonia (NH3) CAS 7664-41-7; UN 2672, UN 1005
+  publisher: ATSDR
+  edition: MMG page last reviewed 2017-01-12 (archived)
+  url: https://www.atsdr.cdc.gov/mhmi/mmg126.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=7&toxid=2
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 138637
+  pages: 18
+  requested_url: http://web.archive.org/web/20240929203156id_/https://www.atsdr.cdc.gov/mhmi/mmg126.pdf
+  path: fetcher
+  outcome: "operator browser download, registered by content; extracted, 50 grounded claims, committed in hb22_bulk_05"
+- line: 9b
+  tier: 2
+  status: found
+  doc_id: atsdr-mmg-chlorine
+  title: Medical Management Guidelines for Chlorine
+  publisher: ATSDR
+  edition: MMG page last reviewed 2014-10-21 (archived)
+  url: https://www.atsdr.cdc.gov/MHMI/mmg172.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=198&toxid=36
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 122469
+  pages: 16
+  requested_url: http://web.archive.org/web/20240929113633id_/https://www.atsdr.cdc.gov/MHMI/mmg172.pdf
+  path: fetcher
+  outcome: "operator browser download, registered by content; extracted, 40 grounded claims, committed in hb22_bulk_05"
+- line: 9c
+  tier: 2
+  status: found_under_different_title
+  doc_id: atsdr-mmg-ethylene-oxide
+  title: Medical Management Guidelines for Ethylene Oxide ([CH2]2O) CAS 75-21-8; UN 1040
+  publisher: ATSDR
+  edition: undated; archive-only (Wayback 2024-10-24)
+  url: https://www.atsdr.cdc.gov/mhmi/mmg137.pdf
+  landing_url: http://web.archive.org/web/20201211065430/https://www.atsdr.cdc.gov/MMG/MMG.asp?id=730&tid=133
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 284090
+  pages: 19
+  requested_url: http://web.archive.org/web/20241024111512id_/https://www.atsdr.cdc.gov/mhmi/mmg137.pdf
+  notes: The current Toxic Substance Portal has no ethylene oxide MMG.
+  path: fetcher
+  outcome: "operator browser download, registered by content; extracted, 38 grounded claims, committed in hb22_bulk_05"
+- line: 9d
+  tier: 2
+  status: found
+  doc_id: atsdr-mmg-hydrogen-chloride
+  title: Medical Management Guidelines for Hydrogen Chloride
+  publisher: ATSDR
+  edition: MMG page last reviewed 2014-10-21 (archived)
+  url: https://www.atsdr.cdc.gov/MHMI/mmg173.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=758&toxid=147
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 252683
+  pages: 20
+  requested_url: http://web.archive.org/web/20241005185054id_/https://www.atsdr.cdc.gov/MHMI/mmg173.pdf
+  path: fetcher
+  outcome: "operator browser download, registered by content; extracted, 45 grounded claims, committed in hb22_bulk_05"
+- line: 9e
+  tier: 2
+  status: found
+  doc_id: atsdr-mmg-hydrogen-fluoride
+  title: Medical Management Guidelines for Hydrogen Fluoride (HF)
+  publisher: ATSDR
+  edition: MMG page last reviewed 2014-10-21 (archived)
+  url: https://www.atsdr.cdc.gov/mhmi/mmg11.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=1142&toxid=250
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 163681
+  pages: 24
+  requested_url: http://web.archive.org/web/20241005192243id_/https://www.atsdr.cdc.gov/mhmi/mmg11.pdf
+  path: fetcher
+  outcome: "operator browser download, registered by content; extracted, 65 grounded claims, committed in hb22_bulk_05"
+- line: 9f
+  tier: 2
+  status: found
+  doc_id: atsdr-mmg-sulfur-dioxide
+  title: Medical Management Guidelines for Sulfur Dioxide
+  publisher: ATSDR
+  edition: MMG page last reviewed 2014-10-21 (archived)
+  url: https://www.atsdr.cdc.gov/MHMI/mmg116.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=249&toxid=46
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 132915
+  pages: 18
+  requested_url: http://web.archive.org/web/20241112041729id_/https://www.atsdr.cdc.gov/MHMI/mmg116.pdf
+  path: fetcher
+  outcome: "operator browser download, registered by content; extracted, 30 grounded claims, committed in hb22_bulk_05"
+- line: 10a
+  tier: 2
+  status: found
+  doc_id: atsdr-toxfaqs-ammonia
+  title: 'AMMONIA CAS # 7664-41-7, Division of Toxicology ToxFAQs'
+  publisher: ATSDR
+  edition: September 2004
+  url: https://www.atsdr.cdc.gov/toxfaqs/tfacts126.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=10&toxid=2
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 30053
+  pages: 2
+  profile: https://www.atsdr.cdc.gov/ToxProfiles/tp126.pdf (Sep 2004, 269 pp, 2768294 B)
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 13 grounded claims, committed in hb22_bulk_02"
+- line: 10b
+  tier: 2
+  status: found
+  doc_id: atsdr-toxfaqs-chlorine
+  title: 'Chlorine - ToxFAQs CAS # 7782-50-5'
+  publisher: ATSDR
+  edition: undated (CS265956-A); page reviewed 2015-03-12
+  url: https://www.atsdr.cdc.gov/toxfaqs/tfacts172.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=200&toxid=36
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 73136
+  pages: 2
+  profile: https://www.atsdr.cdc.gov/ToxProfiles/tp172.pdf (Nov 2010, 269 pp, 7655231 B)
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 15 grounded claims, committed in hb22_bulk_03"
+- line: 10c
+  tier: 2
+  status: found
+  doc_id: atsdr-toxfaqs-ethylene-oxide
+  title: Ethylene Oxide ToxFAQs
+  publisher: ATSDR
+  edition: August 2022
+  url: https://www.atsdr.cdc.gov/toxfaqs/tfacts137.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=733&toxid=133
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 153290
+  pages: 2
+  profile: https://www.atsdr.cdc.gov/ToxProfiles/tp137.pdf (Aug 2022, 243 pp, 3878785 B)
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 11 grounded claims, committed in hb22_bulk_02"
+- line: 10d
+  tier: 2
+  status: found
+  doc_id: atsdr-toxfaqs-hydrogen-chloride
+  title: 'HYDROGEN CHLORIDE CAS #7647-01-0, Division of Toxicology ToxFAQs'
+  publisher: ATSDR
+  edition: April 2002
+  url: https://www.atsdr.cdc.gov/toxfaqs/tfacts173.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=759&toxid=147
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 94185
+  pages: 2
+  profile: none (ATSDR has no HCl toxicological profile)
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 10 grounded claims, committed in hb22_bulk_03"
+- line: 10e
+  tier: 2
+  status: found_under_different_title
+  doc_id: atsdr-toxfaqs-fluorides-hf
+  title: 'FLUORIDES, HYDROGEN FLUORIDE, AND FLUORINE CAS # 7681-49-4, 7664-39-3, 7782-41-4, Division of Toxicology
+    ToxFAQs'
+  publisher: ATSDR
+  edition: September 2003
+  url: https://www.atsdr.cdc.gov/toxfaqs/tfacts11.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=211&toxid=38
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 515091
+  pages: 2
+  profile: https://www.atsdr.cdc.gov/ToxProfiles/tp11.pdf (Sep 2003, 404 pp, 4966248 B)
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 14 grounded claims, committed in hb22_bulk_03"
+- line: 10f
+  tier: 2
+  status: found
+  doc_id: atsdr-toxfaqs-sulfur-dioxide
+  title: 'SULFUR DIOXIDE CAS # 7446-09-5, ToxFAQs'
+  publisher: ATSDR
+  edition: June 1999
+  url: https://www.atsdr.cdc.gov/toxfaqs/tfacts116.pdf
+  landing_url: https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=252&toxid=46
+  host: www.atsdr.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 60467
+  pages: 2
+  profile: https://www.atsdr.cdc.gov/ToxProfiles/tp116.pdf (Dec 1998, 223 pp, 3650799 B)
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 12 grounded claims, committed in hb22_bulk_03"
+- line: '11'
+  tier: 2
+  status: found
+  doc_id: niosh-npg-2005-149
+  title: NIOSH Pocket Guide to Chemical Hazards, DHHS (NIOSH) Publication No. 2005-149, Third Printing September
+    2007
+  publisher: NIOSH
+  edition: September 2007
+  url: https://www.cdc.gov/niosh/docs/2005-149/pdfs/2005-149.pdf
+  landing_url: https://www.cdc.gov/niosh/npg/default.html
+  host: www.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 6339883
+  pages: 454
+  notes: www.cdc.gov (Akamai) 403s non-browser clients. Online NPG pages are newer.
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 619 grounded claims, committed in hb22_bulk_03"
+- line: 11a
+  tier: 2
+  status: found
+  doc_id: niosh-npg-ammonia
+  title: NIOSH Pocket Guide to Chemical Hazards - Ammonia
+  publisher: NIOSH
+  edition: page reviewed 2019-10-30
+  url: https://www.cdc.gov/niosh/npg/npgd0028.html
+  landing_url: null
+  host: www.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 1 grounded claims, committed in hb22_bulk_03"
+- line: 11b
+  tier: 2
+  status: found
+  doc_id: niosh-npg-chlorine
+  title: NIOSH Pocket Guide to Chemical Hazards - Chlorine
+  publisher: NIOSH
+  edition: page reviewed 2019-10-30
+  url: https://www.cdc.gov/niosh/npg/npgd0115.html
+  landing_url: null
+  host: www.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 1 grounded claims, committed in hb22_bulk_02"
+- line: 11c
+  tier: 2
+  status: found
+  doc_id: niosh-npg-ethylene-oxide
+  title: NIOSH Pocket Guide to Chemical Hazards - Ethylene oxide
+  publisher: NIOSH
+  edition: page reviewed 2019-10-30
+  url: https://www.cdc.gov/niosh/npg/npgd0275.html
+  landing_url: null
+  host: www.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 1 grounded claims, committed in hb22_bulk_02"
+- line: 11d
+  tier: 2
+  status: found
+  doc_id: niosh-npg-hydrogen-chloride
+  title: NIOSH Pocket Guide to Chemical Hazards - Hydrogen chloride
+  publisher: NIOSH
+  edition: page reviewed 2019-10-30
+  url: https://www.cdc.gov/niosh/npg/npgd0332.html
+  landing_url: null
+  host: www.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  notes: Page shows IDLH 50 ppm; superseded by NIOSH 2025-110 (45 ppm).
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 1 grounded claims, committed in hb22_bulk_02"
+- line: 11e
+  tier: 2
+  status: found
+  doc_id: niosh-npg-hydrogen-fluoride
+  title: NIOSH Pocket Guide to Chemical Hazards - Hydrogen fluoride
+  publisher: NIOSH
+  edition: page reviewed 2019-10-30
+  url: https://www.cdc.gov/niosh/npg/npgd0334.html
+  landing_url: null
+  host: www.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 1 grounded claims, committed in hb22_bulk_02"
+- line: 11f
+  tier: 2
+  status: found
+  doc_id: niosh-npg-sulfur-dioxide
+  title: NIOSH Pocket Guide to Chemical Hazards - Sulfur dioxide
+  publisher: NIOSH
+  edition: page reviewed 2019-10-30
+  url: https://www.cdc.gov/niosh/npg/npgd0575.html
+  landing_url: null
+  host: www.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: null
+  pages: null
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 1 grounded claims, committed in hb22_bulk_02"
+- line: 11g
+  tier: 2
+  status: found
+  doc_id: niosh-idlh-hydrogen-chloride-2025
+  title: 'Immediately Dangerous to Life or Health (IDLH) Value Profile: Hydrogen Chloride, DHHS (NIOSH) Publication
+    No. 2025-110 (Revised 06/2025)'
+  publisher: NIOSH
+  edition: Revised June 2025
+  url: https://www.cdc.gov/niosh/docs/2025-110/pdfs/2025-110revised062025.pdf
+  landing_url: null
+  host: www.cdc.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 717620
+  pages: 36
+  notes: Sets IDLH 45 ppm (67 mg/m3); the NPG page still shows 50 ppm. 1994 IDLH documentation for HCl now 404s.
+    The five other gases' 1994 IDLH documentation pages (www.cdc.gov/niosh/idlh/<CAS>.html) noted, not fetched.
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 94 grounded claims, committed in hb22_bulk_03"
+- line: 12-values
+  tier: 2
+  status: found
+  doc_id: epa-aegl-values
+  title: Access Acute Exposure Guideline Levels (AEGLs) Values
+  publisher: US EPA
+  edition: last updated 2026-06-02
+  url: https://www.epa.gov/aegl/access-acute-exposure-guideline-levels-aegls-values
+  landing_url: null
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 122431
+  pages: null
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 1 grounded claims, committed in hb22_bulk_03"
+- line: 12-compiled
+  tier: 2
+  status: found
+  doc_id: epa-aegl-compiled-2018
+  title: COMPILED AEGL VALUES (July 27, 2018)
+  publisher: US EPA
+  edition: '2018-07-27'
+  url: https://www.epa.gov/sites/default/files/2018-08/documents/compiled_aegls_update_27jul2018.pdf
+  landing_url: https://www.epa.gov/aegl/compiled-acute-exposure-guideline-values-aegls
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 1691085
+  pages: 76
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 254 grounded claims, committed in hb22_bulk_04"
+- line: 12a
+  tier: 2
+  status: found
+  doc_id: aegl-tsd-ammonia
+  title: Ammonia, Acute Exposure Guideline Levels (chapter of AEGLs for Selected Airborne Chemicals, Volume 6)
+  publisher: National Research Council / National Academies Press (hosted by US EPA)
+  edition: Volume 6 (2007/2008)
+  url: https://www.epa.gov/sites/default/files/2014-11/documents/ammonia_final_volume6_2007.pdf
+  landing_url: https://www.epa.gov/aegl/ammonia-results-aegl-program
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: '''Copyright (c) National Academy of Sciences. All rights reserved.'' plus the NAP noncommercial-sharing
+    notice'
+  size_bytes: 675821
+  pages: 81
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); held, text withheld (copyrighted)"
+- line: 12b
+  tier: 2
+  status: found
+  doc_id: aegl-tsd-chlorine
+  title: Chlorine, Acute Exposure Guideline Levels (chapter of AEGLs for Selected Airborne Chemicals, Volume 4)
+  publisher: NRC / NAP (hosted by US EPA)
+  edition: Volume 4 (2004)
+  url: https://www.epa.gov/sites/default/files/2014-11/documents/tsd56.pdf
+  landing_url: https://www.epa.gov/aegl/chlorine-results-aegl-program
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: '''Copyright 2004 by the National Academy of Sciences. All rights reserved.'''
+  size_bytes: 1423517
+  pages: 94
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); held, text withheld (copyrighted)"
+- line: 12c
+  tier: 2
+  status: found
+  doc_id: aegl-tsd-ethylene-oxide
+  title: Ethylene Oxide, Acute Exposure Guideline Levels (chapter of AEGLs for Selected Airborne Chemicals, Volume
+    9)
+  publisher: NRC / NAP (hosted by US EPA)
+  edition: Volume 9 (2010)
+  url: https://www.epa.gov/sites/default/files/2014-09/documents/ethyleneoxide_final_volume9_2010.pdf
+  landing_url: https://www.epa.gov/aegl/ethylene-oxide-results-aegl-program
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: '''Copyright (c) National Academy of Sciences. All rights reserved.'' plus NAP notice'
+  size_bytes: 705046
+  pages: 114
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); held, text withheld (copyrighted)"
+- line: 12d
+  tier: 2
+  status: found
+  doc_id: aegl-tsd-hydrogen-chloride
+  title: Hydrogen Chloride, Acute Exposure Guideline Levels (chapter of AEGLs for Selected Airborne Chemicals, Volume
+    4)
+  publisher: NRC / NAP (hosted by US EPA)
+  edition: Volume 4 (2004)
+  url: https://www.epa.gov/sites/default/files/2014-11/documents/tsd52.pdf
+  landing_url: https://www.epa.gov/aegl/hydrogen-chloride-results-aegl-program
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: '''Copyright 2004 by the National Academy of Sciences. All rights reserved.'''
+  size_bytes: 1147941
+  pages: 76
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); held, text withheld (copyrighted)"
+- line: 12e
+  tier: 2
+  status: found
+  doc_id: aegl-tsd-hydrogen-fluoride
+  title: Hydrogen Fluoride, Acute Exposure Guideline Levels (chapter of AEGLs for Selected Airborne Chemicals, Volume
+    4)
+  publisher: NRC / NAP (hosted by US EPA)
+  edition: Volume 4 (2004)
+  url: https://www.epa.gov/sites/default/files/2014-11/documents/tsd53.pdf
+  landing_url: https://www.epa.gov/aegl/hydrogen-fluoride-results-aegl-program
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: '''Copyright 2004 by the National Academy of Sciences. All rights reserved.'''
+  size_bytes: 1407414
+  pages: 105
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); held, text withheld (copyrighted)"
+- line: 12f
+  tier: 2
+  status: found
+  doc_id: aegl-tsd-sulfur-dioxide
+  title: Sulfur Dioxide, Acute Exposure Guideline Levels (chapter of AEGLs for Selected Airborne Chemicals, Volume
+    8)
+  publisher: NRC / NAP (hosted by US EPA)
+  edition: Volume 8 (2010)
+  url: https://www.epa.gov/sites/default/files/2014-11/documents/sulfurdioxide_final_volume8_2010.pdf
+  landing_url: https://www.epa.gov/aegl/sulfur-dioxide-results-aegl-program
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: '''Copyright (c) National Academy of Sciences. All rights reserved.'' plus NAP notice'
+  size_bytes: 621998
+  pages: 79
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); held, text withheld (copyrighted)"
+- line: '13'
+  tier: 3
+  status: found
+  doc_id: ntsb-rar-05-04-graniteville
+  title: Collision of Norfolk Southern Freight Train 192 With Standing Norfolk Southern Local Train P22 With Subsequent
+    Hazardous Materials Release at Graniteville, South Carolina, January 6, 2005 (NTSB/RAR-05/04, PB2005-916304)
+  publisher: National Transportation Safety Board
+  edition: Adopted 2005-11-29 (Notation 7710A); corrected version 2006-06-15
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/RAR0504.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA05MR008.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 1337655
+  pages: 68
+  discovery_sha256: b5489d13779e911a0f141f6f83e4f5589b150b5f2a3a943b52b91e766af8f94a
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 224 grounded claims, committed in hb22_bulk_06"
+- line: '14'
+  tier: 3
+  status: found
+  doc_id: ntsb-rar-14-01-paulsboro
+  title: Conrail Freight Train Derailment with Vinyl Chloride Release, Paulsboro, New Jersey, November 30, 2012
+    (NTSB/RAR-14/01, PB2014-108820)
+  publisher: National Transportation Safety Board
+  edition: Adopted 2014-07-29 (Notation 8475A)
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/RAR1401.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/DCA13MR002.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 2626264
+  pages: 90
+  discovery_sha256: bcc866a72f40258a579489dc068064bddca52143b1deaa5fba6410bffd1840e8
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 256 grounded claims, committed in hb22_bulk_06"
+- line: '15'
+  tier: 3
+  status: found
+  doc_id: ntsb-rir-24-05-east-palestine
+  title: Norfolk Southern Railway Derailment and Hazardous Materials Release, East Palestine, Ohio, February 3,
+    2023 (NTSB/RIR-24-05)
+  publisher: National Transportation Safety Board
+  edition: Adopted 2024-06-25; reissued 2024-07-23 corrected (pp. 57-58)
+  url: https://www.ntsb.gov/investigations/AccidentReports/Reports/RIR2405%20CORRECTED.pdf
+  landing_url: https://www.ntsb.gov/investigations/Pages/RRD23MR005.aspx
+  host: www.ntsb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 6559547
+  pages: 216
+  discovery_sha256: 8dd310ba15cb5c6a0dede7e7166ea2999ae63a22a8ffca267d40fba92463391f
+  notes: RIR2405.pdf without the suffix is a 200 HTML soft 404.
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 467 grounded claims, committed in hb22_bulk_06"
+- line: 16a
+  tier: 3
+  status: found
+  doc_id: csb-2002-04-i-mo-dpc-festus
+  title: 'Investigation Report: Chlorine Release (66 Sought Medical Evaluation), DPC Enterprises, L.P., Festus,
+    Missouri, August 14, 2002 (Report No. 2002-04-I-MO)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: May 2003
+  url: https://www.csb.gov/assets/1/20/dpc_report.pdf
+  landing_url: https://www.csb.gov/dpc-enterprises-festus-chlorine-release/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 3128548
+  pages: 99
+  discovery_sha256: 99dfbf94e6da036b1b84e2891c857244e36457c4881311aaddc8205303a6925b
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 172 grounded claims, committed in hb22_bulk_06"
+- line: 16b
+  tier: 3
+  status: found
+  doc_id: csb-2004-02-i-az-dpc-glendale
+  title: 'Investigation Report: Chlorine Release (16 Medically Evaluated, Community Evacuated), DPC Enterprises,
+    L.P., Glendale, Arizona, November 17, 2003 (Report No. 2004-02-I-AZ)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: February 2007
+  url: https://www.csb.gov/assets/1/20/dpc2-_final.pdf
+  landing_url: https://www.csb.gov/dpc-enterprises-glendale-chlorine-release/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 1085231
+  pages: 55
+  discovery_sha256: 931a3b3a3cce683bc2761a9da906acad67c1804dd09fa3a3ff2f2379fe346913
+  notes: PDF metadata title says 'DPC Glendale Draft Report'; the cover is the final February 2007 report.
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 92 grounded claims, committed in hb22_bulk_06"
+- line: 16c
+  tier: 3
+  status: found
+  doc_id: csb-2003-13-i-la-honeywell-baton-rouge
+  title: 'Investigation Report: Chlorine Release July 20, 2003 (7 Injured); Contaminated Antimony Pentachloride
+    Exposure July 29, 2003 (1 Killed); Hydrogen Fluoride Release August 13, 2003 (1 Exposed, 1 Injured), Honeywell
+    International, Inc., Baton Rouge, Louisiana (Report No. 2003-13-I-LA)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: August 2005
+  url: https://www.csb.gov/assets/1/20/honeywell_report.pdf
+  landing_url: https://www.csb.gov/honeywell-chemical-incidents/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 3750640
+  pages: 106
+  discovery_sha256: 40ae9d77c79b3cae3052d8fb5e290c6fcd3309e4bb7bcc77f2f7e6230b795825
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 171 grounded claims, committed in hb22_bulk_06"
+- line: 16d
+  tier: 3
+  status: found_under_different_title
+  doc_id: csb-2010-13-a-al-millard-ammonia
+  title: 'Safety Bulletin: Key Lessons for Preventing Hydraulic Shock in Industrial Refrigeration Systems. Anhydrous
+    Ammonia Release at Millard Refrigerated Services, Inc. (No. 2010-13-A-AL)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: January 2015
+  url: https://www.csb.gov/assets/1/20/final_csb_casestudy_millard_0114_0543pm.pdf
+  landing_url: https://csb.gov/millard-refrigerated-services-ammonia-release
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 656148
+  pages: 15
+  discovery_sha256: 5b5643fc7fd94799cc6516e09af933d7fd0fe5b207bbef39adc5ec639b70c8a4
+  notes: CSB's final product is a Safety Bulletin, not an investigation report.
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 38 grounded claims, committed in hb22_bulk_05"
+- line: 16e
+  tier: 3
+  status: found_under_different_title
+  doc_id: csb-2017-01-i-ks-mgpi-atchison
+  title: 'Case Study: Key Lessons for Preventing Inadvertent Mixing During Chemical Unloading Operations. Chemical
+    Reaction and Release in Atchison, Kansas, MGPI Processing, Inc. (No. 2017-01-I-KS)'
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: December 2017
+  url: https://www.csb.gov/assets/1/20/mgpi_case_study.pdf
+  landing_url: https://www.csb.gov/mgpi-processing-inc-toxic-chemical-release-/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 3268926
+  pages: 48
+  discovery_sha256: 2e8f0ef9db7b9c65b790dbb3c1a2f12f90a9a7051e531189b5868ce2c2e6a07e
+  notes: Final product is a Case Study; chlorine gas formed by hypochlorite and sulfuric acid mixing.
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 174 grounded claims, committed in hb22_bulk_06"
+- line: 16f
+  tier: 3
+  status: found
+  doc_id: csb-2024-03-i-va-cuisine-solutions-ammonia
+  title: Hazardous Ammonia Release at Cuisine Solutions, Inc. Facility, Sterling, Virginia, Incident Date July 31,
+    2024 (No. 2024-03-I-VA), Investigation Report
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: September 2025
+  url: https://www.csb.gov/assets/1/20/cuisine_solutions_investigation_report_final_for_pdf1.pdf
+  landing_url: https://www.csb.gov/cuisine-solutions-ammonia-release-/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 11177300
+  pages: 102
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 238 grounded claims, committed in hb22_bulk_06"
+- line: 16g
+  tier: 3
+  status: found
+  doc_id: csb-2024-04-i-ga-biolab-conyers
+  title: Chemical Decomposition, Fires, and Toxic Gas Release at KIK Consumer Products / Bio-Lab Conyers Facility,
+    Conyers, Georgia, Incident Date September 29, 2024 (No. 2024-04-I-GA), Investigation Report
+  publisher: U.S. Chemical Safety and Hazard Investigation Board
+  edition: July 2026
+  url: https://www.csb.gov/assets/1/20/bio-lab_report__public_record_copy_.pdf
+  landing_url: https://www.csb.gov/bio-lab-inc-conyers-fire-and-chemical-release-/
+  host: www.csb.gov
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105) for CSB text; reproduces third-party material (states 'Arch Chemicals,
+    Inc., a Lonza Company, was the copyright owner of the Lonza Pool and Spa Chemicals Storage & Handling...')
+  size_bytes: 5568830
+  pages: 148
+  discovery_sha256: bdc6fec3c673b1ef4cbd925a0c278b28cf0931e01d41653a3c01185ae7a82842
+  notes: A decomposition fire with a chlorine-bearing toxic plume.
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 292 grounded claims, committed in hb22_bulk_06"
+- line: 17a
+  tier: 3
+  status: found
+  doc_id: phmsa-dot-f-5800-1-form
+  title: Hazardous Materials Incident Report, Form DOT F 5800.1 (01-2004), OMB No. 2137-0039
+  publisher: US DOT PHMSA
+  edition: 01-2004; current per FR 2026-19276 (2026-09-21)
+  url: https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/docs/IncidentForm010105.pdf
+  landing_url: https://www.federalregister.gov/documents/2026/09/21/2026-19276/hazardous-materials-information-collection-activities
+  host: www.phmsa.dot.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 227569
+  pages: 4
+  discovery_sha256: 58f1de89705a3ebee3c33fdfbcb75b430a28bfc17acbd5495413c338d21b715f
+  notes: Verified via Wayback id_ snapshot 20260924130032; www.phmsa.dot.gov 403. Revision pending in docket PHMSA-2026-1981.
+  path: fetcher
+  outcome: "operator browser download, registered by content; extracted, 1 grounded claims, committed in hb22_bulk_05"
+- line: 17b
+  tier: 3
+  status: found
+  doc_id: phmsa-dot-f-5800-1-instructions
+  title: Guide for Preparing Hazardous Materials Incidents Reports, Effective January 1, 2005
+  publisher: US DOT PHMSA
+  edition: 'Effective 2005-01-01 (FR 2026-19276 fn 24: Jan. 2004)'
+  url: https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/docs/reporting_instructions_rev.pdf
+  landing_url: https://www.federalregister.gov/documents/2026/09/21/2026-19276/hazardous-materials-information-collection-activities
+  host: www.phmsa.dot.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 4357025
+  pages: 20
+  discovery_sha256: e3d9359fc1aa1b847df5760920aba6f24a4278eb82fec62fdbaa035dafaf38cf
+  notes: Verified via Wayback id_ snapshot 20260922102145.
+  path: fetcher
+  outcome: "operator browser download, registered by content; extracted, 59 grounded claims, committed in hb22_bulk_06"
+- line: 18a
+  tier: 4
+  status: found_under_different_title
+  doc_id: fema-is-200c-course-zip
+  title: IS-200.c complete course (English), ZIP bundle
+  publisher: FEMA Emergency Management Institute
+  edition: IS-200.c; ZIP last-modified 2025-08-08
+  url: https://training.fema.gov/programs/independent-study/_course-files/is-200.c/english/is-200c-complete-course.zip
+  landing_url: https://training.fema.gov/programs/independent-study/courseMaterials.aspx?code=IS-200.c
+  host: training.fema.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 22608631
+  pages: null
+  notes: No standalone student manual PDF is published (old EMIWeb IS0200c SM.pdf is 404). The student manual is
+    a member of this ZIP.
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); held, text withheld (container)"
+- line: 18b
+  tier: 4
+  # not on any authoritative FEMA host (searches below); found on the State of Nevada DEM mirror and fetched there
+  # in the operator's browser (corpus/OPERATOR_DOWNLOADS.md), identified by its own title page
+  status: found_on_mirror
+  doc_id: fema-elg-0300-student-manual
+  title: E/L/G 0300 Intermediate Incident Command System for Expanding Incidents, ICS 300, Student Manual (April
+    2019, Version 1.0)
+  publisher: FEMA EMI
+  edition: null
+  url: null
+  landing_url: null
+  host: null
+  host_on_allowlist: null
+  licence: null
+  size_bytes: null
+  pages: null
+  mirror_url: https://www.oem.nv.gov/uploadedFiles/demnvgov/content/raining/ICS300_Complete_SM.pdf
+  mirror_note: State of Nevada DEM copy (200, 13418496 B); not an authoritative host. ICS 300 is a state-delivered
+    classroom course; its materials are not published on training.fema.gov or firstrespondertraining.gov.
+  searches:
+  - '"E/L/G 0300" Intermediate Incident Command System student manual training.fema.gov'
+  - E/L/G 0300 ICS-300 student manual pdf firstrespondertraining.gov
+  - FEMA ICS 300 course materials download "ICS 300" student manual 2019 fema.gov OR training.fema.gov
+  - '"ELG0300" OR "ELG 0300" OR "E0300" student manual pdf fema'
+  - firstrespondertraining.gov npccatalog "0300" Intermediate Incident Command System for Expanding Incidents
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 212 grounded claims, committed in hb22_bulk_07"
+- line: '19'
+  tier: 4
+  status: held
+  doc_id: ics-forms-booklet
+  title: NATIONAL INCIDENT MANAGEMENT SYSTEM INCIDENT COMMAND SYSTEM ICS FORMS BOOKLET FEMA 502-2 September 2010
+  publisher: null
+  edition: null
+  url: null
+  landing_url: null
+  host: null
+  host_on_allowlist: null
+  licence: null
+  size_bytes: null
+  pages: null
+  notes: 'Verified by content 2026-10-23: the held ics-forms-booklet.pdf cover reads ''ICS FORMS BOOKLET FEMA 502-2
+    September 2010''. FEMA 502-2 is the held v3 booklet; no new fetch.'
+  path: held
+  outcome: "fetched (scripts/fetch_allowlisted.py); held before this run, extracted under CLI 2.1.309 in hb14b_bulk"
+- line: '20'
+  tier: 4
+  status: found
+  doc_id: nrt-1-hazmat-emergency-planning-guide-2001
+  title: NRT-1 Hazardous Materials Emergency Planning Guide, Updated 2001
+  publisher: National Response Team
+  edition: Updated 2001
+  url: https://nrt.org/sites/2/files/NRT-1%202001%20update.pdf
+  landing_url: https://nrt.org/main/resources.aspx?ResourceType=Plans&ResourceSection=2
+  host: nrt.org
+  host_on_allowlist: false
+  licence: US Government work (17 USC 105)
+  size_bytes: 1206073
+  pages: 118
+  path: browser (host off the allowlist)
+  outcome: "operator browser download, registered by content; extracted, 367 grounded claims, committed in hb22_bulk_07"
+- line: '21'
+  tier: 4
+  status: found
+  doc_id: cfr29-1910-120-govinfo-2025
+  title: 29 CFR 1910.120 Hazardous waste operations and emergency response (CFR annual edition 2025, title 29 vol
+    5, revised as of July 1, 2025)
+  publisher: Office of the Federal Register / GPO (OSHA rule)
+  edition: '2025-07-01'
+  url: https://www.govinfo.gov/content/pkg/CFR-2025-title29-vol5/xml/CFR-2025-title29-vol5-sec1910-120.xml
+  landing_url: https://www.govinfo.gov/app/details/CFR-2025-title29-vol5/CFR-2025-title29-vol5-sec1910-120
+  host: www.govinfo.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 233162
+  pages: null
+  url_pdf: https://www.govinfo.gov/content/pkg/CFR-2025-title29-vol5/pdf/CFR-2025-title29-vol5-sec1910-120.pdf
+  notes: 2026 edition not yet published.
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 0 grounded claims, committed in hb22_bulk_04"
+- line: 22a
+  tier: 4
+  status: found
+  doc_id: epa-tier2-instructions-2027
+  title: 'EPCRA Section 312: Hazardous Chemical Inventory Reporting, Regulatory Overview and Instructions for the
+    Tier II Form (for reporting year 2027)'
+  publisher: US EPA
+  edition: May 2026
+  url: https://www.epa.gov/system/files/documents/2026-05/tier-ii-form-instructions_2027_may-2026.pdf
+  landing_url: https://www.epa.gov/epcra/tier-ii-forms-and-instructions
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 374603
+  pages: 19
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 39 grounded claims, committed in hb22_bulk_04"
+- line: 22b
+  tier: 4
+  status: found
+  doc_id: epa-tier2-instructions-2017
+  title: Tier II Emergency and Hazardous Chemical Inventory form instructions (in force through reporting year 2026)
+  publisher: US EPA
+  edition: June 2017
+  url: https://www.epa.gov/sites/default/files/2017-06/documents/tier_ii_inventory_form_instructions_2017.pdf
+  landing_url: https://www.epa.gov/epcra/tier-ii-forms-and-instructions
+  host: www.epa.gov
+  host_on_allowlist: true
+  licence: US Government work (17 USC 105)
+  size_bytes: 205910
+  pages: null
+  path: fetcher
+  outcome: "fetched (scripts/fetch_allowlisted.py); extracted, 55 grounded claims, committed in hb22_bulk_03"
+- line: R1
+  tier: 4
+  status: reference_only
+  doc_id: nfpa-472-2018
+  title: NFPA 472, Standard for Competence of Responders to Hazardous Materials/Weapons of Mass Destruction Incidents
+  publisher: National Fire Protection Association
+  edition: 2018 (last stand-alone edition; consolidated into NFPA 470)
+  url: null
+  landing_url: https://www.nfpa.org/codes-and-standards/nfpa-472-standard-development/472
+  host: null
+  host_on_allowlist: null
+  licence: NFPA copyrighted ('National Fire Protection Association (NFPA)'); read-only Free Access only
+  size_bytes: null
+  pages: null
+  path: reference_only
+  outcome: "not held (not_public)"
+- line: R1b
+  tier: 4
+  status: reference_only
+  doc_id: nfpa-470-2022
+  title: NFPA 470, Hazardous Materials/Weapons of Mass Destruction (WMD) Standard for Responders
+  publisher: National Fire Protection Association
+  edition: '2022'
+  url: null
+  landing_url: https://www.nfpa.org/codes-and-standards/nfpa-470-standard-development/470
+  host: null
+  host_on_allowlist: null
+  licence: NFPA copyrighted; read-only Free Access only
+  size_bytes: null
+  pages: null
+  notes: '''NFPA 470 is a combination of Standards NFPA 1072, NFPA 472, and NFPA 473.'''
+  path: reference_only
+  outcome: "not held (not_public)"
+- line: R2
+  tier: 4
+  status: reference_only
+  doc_id: nfpa-704-2027
+  title: NFPA 704, Standard System for the Identification of the Hazards of Materials for Emergency Response
+  publisher: National Fire Protection Association
+  edition: '2027'
+  url: null
+  landing_url: https://www.nfpa.org/codes-and-standards/nfpa-704-standard-development/704
+  host: null
+  host_on_allowlist: null
+  licence: NFPA copyrighted; read-only Free Access only
+  size_bytes: null
+  pages: null
+  path: reference_only
+  outcome: "not held (not_public)"
+- line: R3
+  tier: 4
+  status: reference_only
+  doc_id: ansi-isa-18-2-2016
+  title: ANSI/ISA-18.2-2016, Management of Alarm Systems for the Process Industries
+  publisher: International Society of Automation
+  edition: '2016'
+  url: null
+  landing_url: https://www.isa.org/products/ansi-isa-18-2-2016-management-of-alarm-systems-for
+  host: null
+  host_on_allowlist: null
+  licence: '''(c) 2026 International Society of Automation, its licensors, and contributors. All rights are reserved,
+    including those for text and data mining, AI training, and similar technologies.'''
+  size_bytes: null
+  pages: null
+  path: reference_only
+  outcome: "not held (not_public)"

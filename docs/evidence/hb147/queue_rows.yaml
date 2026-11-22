@@ -1,0 +1,389 @@
+# HB-147 Part A step 1: every rung-2 item a RESULT, handoff or design note names that the logs do not hold, as a
+# corpus/sources.yaml queue row. the HB-147 evidence (held privately) applies this file to the manifest (line
+# inserts; it moves no existing field, so no released work is revised: the queue fields are not in
+# squiddy_intake.py (a build tool held privately) SOURCE_FIELDS). `came_from` is the text that names the item, verbatim, with its file.
+#
+# The search (2026-11-09): grep -rliE "rung 2|rung-2|desktop inbox|hand fetch|hand-fetch" over cc_tasks, a session handoff (held privately),
+# design and docs/evidence/ (48 files), plus the task's named sources (HB-136R, the HB-83 RESULT, DN-019
+# ADDENDUM-02 section 2, HB-142R item 3, HB-143 ADDENDUM-01). 82 items were named for rung 2; 49 are held (registered
+# in corpus/operator_downloads.jsonl or fetched in corpus/fetch_log.jsonl) or no longer wanted and are not here. The
+# exclusions are listed at the end of this file with the reason.
+
+existing:
+  - doc_id: phmsa-hazmat-biennial-report-2021
+    requested_by: HB-127
+    refused_by: 'refused_by_host: hazmat.dot.gov answers this client HTTP 403 (corpus/fetch_log.jsonl, HB-127); no other copy at rung 1.'
+    identify: 'Hazardous Materials.{0,300}Biennial Report|Biennial Report.{0,300}Hazardous Materials'
+    came_from: 'docs/evidence/hb127/acquisition.md, "The Desktop''s rung-2 list (copy-paste)" item 1: "`https://hazmat.dot.gov/sites/phmsa.dot.gov/files/2021-01/HAZMAT%20Biennial%20Report%20-%20Jan%202021.pdf` (row `phmsa-hazmat-biennial-report-2021`; it needs an `identify.text` from the title page)."'
+  - doc_id: bts-tsar-2024-t5-5-xlsx
+    requested_by: HB-127
+    refused_by: 'refused_by_host: www.bts.gov answers this client HTTP 403 on every path (HB-127). The report itself is held from ROSAP (bts-tsar-2024); the workbook is wanted for the table''s own cells.'
+    identify: 'Hazardous Materials Transportation Incidents'
+    came_from: 'docs/evidence/hb127/acquisition.md, rung-2 list item 2: "`https://www.bts.gov/sites/bts.dot.gov/files/2025-04/T5-5%20Hazmat%20Transport%20Incidents.xlsx` (row `bts-tsar-2024-t5-5-xlsx`), and its page"'
+  - doc_id: bts-tsar-2024-t5-5-page
+    requested_by: HB-127
+    refused_by: 'refused_by_host: www.bts.gov answers this client HTTP 403 on every path (HB-127). The page that links the Table 5-5 workbook; clip it.'
+    save_format: md
+    identify: 'source: https?://www\.bts\.gov/browse-statistical-products-and-data/info-gallery/hazardous-materials-transportation-incidents'
+    came_from: 'docs/evidence/hb127/acquisition.md, rung-2 list item 2: "and its page `https://www.bts.gov/browse-statistical-products-and-data/info-gallery/hazardous-materials-transportation-incidents-1` (row `bts-tsar-2024-t5-5-page`)."'
+  - doc_id: bts-nts-table-2-6
+    requested_by: HB-127
+    refused_by: 'refused_by_host: www.bts.gov answers this client HTTP 403 on every path (HB-127). Clip the page, and save the table''s own XLSX too if the page links one.'
+    save_format: md
+    identify: 'source: https?://www\.bts\.gov/content/hazardous-materials-fatalities-injuries-accidents-and-property'
+    came_from: 'docs/evidence/hb127/acquisition.md, rung-2 list item 3: "`https://www.bts.gov/content/hazardous-materials-fatalities-injuries-accidents-and-property-damage-data` (row `bts-nts-table-2-6`), with the table''s own XLSX if the page links one."'
+  - doc_id: epa-rmp-sccap-ria-2024
+    requested_by: HB-127
+    refused_by: 'refused_by_host: downloads.regulations.gov and www.regulations.gov answer this client HTTP 403 (HB-127); an RIA is only on regulations.gov. Its document page: https://www.regulations.gov/document/EPA-HQ-OLEM-2022-0174-0587'
+    identify: 'Regulatory Impact Analysis.{0,400}(Safer Communities|Risk Management Program)|(Safer Communities|Risk Management Program).{0,400}Regulatory Impact Analysis'
+    came_from: 'docs/evidence/hb127/acquisition.md, rung-2 list item 5: "`https://www.regulations.gov/document/EPA-HQ-OLEM-2022-0174-0587`, its PDF (row `epa-rmp-sccap-ria-2024`)."'
+  - doc_id: atsdr-hsees-cumulative-1993-1997
+    requested_by: HB-127
+    refused_by: 'failed: HTTP 404 at the ATSDR URL (HB-127). The University of North Texas End of Term archive holds a capture of its page: https://webarchive.library.unt.edu/eot2008/20090506144140mp_/http:/www.atsdr.cdc.gov/HS/HSEES/Cum1993-1997.html (rung 1 with that host on a task''s Network line, else the browser).'
+    identify: 'Hazardous Substances Emergency Events Surveillance.{0,600}(1993.{0,20}1997|Cumulative)'
+    came_from: 'docs/evidence/hb127/acquisition.md, table row 6 next rung: "rung 1 again, with webarchive.library.unt.edu on a task''s Network line; else browser"; HB-127 RESULT, For Desktop item 3.'
+  - doc_id: usfs-lavdas-1996-vsmoke-users-manual
+    requested_by: HB-128
+    refused_by: 'robots_disallowed: research.fs.usda.gov''s robots.txt is "User-agent: *" / "Disallow: /" (HB-128).'
+    came_from: 'docs/evidence/hb128/acquisition.md, "The Desktop''s rung-2 list, in order" item 1: "`usfs-lavdas-1996-vsmoke-users-manual`: save `https://research.fs.usda.gov/download/treesearch/1561.pdf` as `corpus/inbox/usfs-lavdas-1996-vsmoke-users-manual.pdf`, then run `uv run python scripts/register_inbox.py`."'
+  - doc_id: usfs-srs-vsmoke-download-page
+    requested_by: HB-128
+    refused_by: 'robots_unreachable: webcam.srs.fs.usda.gov has no DNS A record (HB-128). If it does not resolve in the browser either, look for a Wayback capture; else the source needs a request to the Southern Research Station (rung 3). Save the page and every archive it offers.'
+    save_format: md
+    identify: 'source: \S*webcam\.srs\.fs\.usda\.gov/tools/vsmoke/download'
+    came_from: 'docs/evidence/hb128/acquisition.md, rung-2 list item 2: "`usfs-srs-vsmoke-download-page`: open `https://webcam.srs.fs.usda.gov/tools/vsmoke/download.shtml`. If it resolves, save the page and every archive it offers into `corpus/inbox/`. If the host does not resolve there either, the source needs the operator: a request to the Southern Research Station."'
+  - doc_id: usfs-harms-lavdas-1997-vsmoke-gis
+    requested_by: HB-128
+    refused_by: 'robots_disallowed: research.fs.usda.gov''s robots.txt is "User-agent: *" / "Disallow: /" (HB-128).'
+    came_from: 'docs/evidence/hb128/acquisition.md, rung-2 list item 3: "`usfs-harms-lavdas-1997-vsmoke-gis`: `https://research.fs.usda.gov/download/treesearch/136.pdf`."'
+  - doc_id: usfs-srs-vsmoke-interface-pdf
+    requested_by: HB-128
+    refused_by: 'robots_unreachable: webcam.srs.fs.usda.gov has no DNS A record (HB-128); a Wayback capture if the host does not resolve in the browser.'
+    came_from: 'docs/evidence/hb128/acquisition.md, rung-2 list item 4: "`usfs-srs-vsmoke-interface-pdf`: `https://webcam.srs.fs.usda.gov/tools/vsmoke/VSMOKE_Interface.pdf`."'
+  - doc_id: ecfr-40-cfr-58-appendix-g
+    requested_by: HB-128
+    refused_by: 'blocked_host: eCFR redirects this client to unblock.federalregister.gov, its bot wall (HB-128). Clip the page with its "up to date as of" line (HB-98''s route).'
+    save_format: md
+    identify: 'source: https?://www\.ecfr\.gov/current/title-40/\S*part-58/appendix-Appendix'
+    came_from: 'docs/evidence/hb128/acquisition.md, rung-2 list item 5: "`ecfr-40-cfr-58-appendix-g`: clip the eCFR page, including its \"up to date as of\" line (the HB-98 route)."'
+  - doc_id: sfe-factsheet-2011-6-vsmoke
+    requested_by: HB-128
+    refused_by: 'refused_by_host: southernfireexchange.org answers this client HTTP 403 (HB-128).'
+    came_from: 'docs/evidence/hb128/acquisition.md, rung-2 list item 6: "`sfe-factsheet-2011-6-vsmoke`: `https://southernfireexchange.org/wp-content/uploads/2011-6.pdf`."'
+  - doc_id: phmsa-hazmat-incident-reports
+    requested_by: HB-136R
+    refused_by: 'The data are only in PHMSA''s Oracle BI portal: its search path timed out on connect twice and its root is a script shell (HB-135 probes). In the browser: Incident Report Search, 2016-01-01 to the latest date, all modes, exported to a text file (docs/evidence/hb135/acquisition.md). Its identify rule is written from the first export''s header.'
+    came_from: 'docs/evidence/hb135/acquisition.md, rung-2 list item 1: "set the date range 2016-01-01 to the latest date, all modes, and export the result to a text file. Save it as `phmsa-incident-reports-2016-01-01-<to>-<date saved>.txt` (row `phmsa-hazmat-incident-reports`"; HB-136R RESULT: "The PHMSA 5800.1 export is not in `corpus/inbox/` (four unrelated files)" (Issue 6be87b3b).'
+  - doc_id: okabe-satoh-sugihara-2008-network-kde-csis-dp89
+    requested_by: HB-135
+    refused_by: 'blocked_host: www.csis.u-tokyo.ac.jp is not on corpus/allowlist.txt (HB-135); this is the authors'' free copy, which a task with that host on its Network line can also take at rung 1.'
+    identify: 'Kernel Density Estimation Method for Networks'
+    came_from: 'docs/evidence/hb135/acquisition.md, "rung-2 and rung-3 list" item 4: "Rung 1 again, with a wider Network line: `www.csis.u-tokyo.ac.jp` for `https://www.csis.u-tokyo.ac.jp/wp-content/uploads/2017/06/89.pdf` (row `okabe-satoh-sugihara-2008-network-kde-csis-dp89`)" (Issues 3f4efb5a, 1a8b5576).'
+  - doc_id: getis-ord-1992-distance-statistics
+    requested_by: HB-135
+    refused_by: 'refused_by_host: Wiley answers this client HTTP 403, JSTOR''s robots bar it, and the 2010 Springer reprint redirects to a sign-in host (HB-135). Rung 3: a library copy or a purchase; held, it is cited, not reproduced.'
+    identify: 'Analysis of Spatial Association by Use of Distance Statistics'
+    came_from: 'a session handoff (held privately): "Operator rung-2 inbox: PHMSA 5800.1 export and 10-year tables, VSMOKE manual and source, the seven HB-127 403s, Getis-Ord papers, EPA RMP facility list"; corpus/sources.yaml notes: "Next rung: the operator, through a library or a purchase (rung 3, a payment or credential gate)".'
+  - doc_id: ord-getis-1995-local-spatial-autocorrelation
+    requested_by: HB-135
+    refused_by: 'refused_by_host: Wiley answers this client HTTP 403 and JSTOR''s robots bar it (HB-135). Rung 3: a library copy or a purchase; held, it is cited, not reproduced.'
+    identify: 'Local Spatial Autocorrelation Statistics'
+    came_from: 'a session handoff (held privately): "Getis-Ord papers" in the operator''s rung-2 inbox (as above).'
+  # HB-83's display-science remainder: the six reference-only rows HB-83 could not hold (plan not_public). A hand fetch
+  # is a library copy, a scan of a book the operator owns, or a purchase (rung 3); held, each stays reference-only.
+  - doc_id: endsley-1995-sa-theory
+    requested_by: HB-83
+    refused_by: 'not public: a copyrighted journal article (Human Factors 37(1)) with no copy on a host HB-83 could reach. Rung 3: a library copy or a purchase; held, it stays reference-only.'
+    save_format: pdf
+    identify: 'Toward a Theory of Situation Awareness in Dynamic Systems'
+    came_from: 'HB-83: "**The reference-only rows (six)**, metadata only, not held"; HB-147 task step 1: "the HB-83 display-science remainder".'
+  - doc_id: endsley-jones-2012-designing-for-sa
+    requested_by: HB-83
+    refused_by: 'not public: a copyrighted book (CRC Press, second edition) with no public copy (HB-83). Rung 3: a library copy or a purchase; held, it stays reference-only.'
+    save_format: pdf
+    identify: 'Designing for Situation Awareness'
+    came_from: 'HB-83 RESULT, the six reference-only rows (as above).'
+  - doc_id: sweller-1988-cognitive-load-problem-solving
+    requested_by: HB-83
+    refused_by: 'not public: a copyrighted journal article (Cognitive Science 12(2)) with no copy on an allowlisted host (HB-83 RESULT item 6). Rung 3: a library copy or a purchase; held, it stays reference-only.'
+    save_format: pdf
+    identify: 'Cognitive Load During Problem Solving'
+    came_from: 'HB-83 RESULT item 6: "**Sweller 1988 and 1994 have no public copy on an allowlisted host.** Both are reference-only rows."'
+  - doc_id: sweller-1994-clt-instructional-design
+    requested_by: HB-83
+    refused_by: 'not public: a copyrighted journal article (Learning and Instruction 4(4)) with no copy on an allowlisted host (HB-83 RESULT item 6). Rung 3: a library copy or a purchase; held, it stays reference-only.'
+    save_format: pdf
+    identify: 'Cognitive Load Theory, Learning Difficulty,? and Instructional Design'
+    came_from: 'HB-83 RESULT item 6 (as above).'
+  - doc_id: tufte-2001-visual-display-quantitative-information
+    requested_by: HB-83
+    refused_by: 'not public: a copyrighted print book (Graphics Press) with no public copy (HB-83). Rung 3: the operator''s own copy scanned, a library copy or a purchase; held, it stays reference-only.'
+    save_format: pdf
+    identify: 'Visual Display of Quantitative Information'
+    came_from: 'HB-83 RESULT, the six reference-only rows (as above).'
+  - doc_id: tufte-1990-envisioning-information
+    requested_by: HB-83
+    refused_by: 'not public: a copyrighted print book (Graphics Press) with no public copy (HB-83). Rung 3: the operator''s own copy scanned, a library copy or a purchase; held, it stays reference-only.'
+    save_format: pdf
+    identify: 'Envisioning Information'
+    came_from: 'HB-83 RESULT, the six reference-only rows (as above).'
+
+new:
+  - came_from: 'docs/evidence/hb142/acquisition.md: "| `fgdc-hswg-point-symbology` | ANSI INCITS 415-2006, Homeland Security Mapping Standard: Point Symbology for Emergency Management ... | https://www.fgdc.gov/HSWG/index.html | `blocked_host` (www.fgdc.gov), next rung browser | `corpus/inbox/` |"; drafted in docs/evidence/hb142/deferred_corpus_rows.yaml (Issue 1613ac6c); DN-019 ADDENDUM-02 section 2 "Map symbology".'
+    row:
+      doc_id: fgdc-hswg-point-symbology
+      priority: 6
+      title: 'Homeland Security Mapping Standard: Point Symbology for Emergency Management (ANSI INCITS 415-2006), FGDC Homeland Security Working Group symbology'
+      publisher: FGDC Homeland Security Working Group; INCITS
+      edition: ANSI INCITS 415-2006
+      url: https://www.fgdc.gov/HSWG/index.html
+      format: html
+      structured_alternative: the symbol files the page links (save them beside the clipping)
+      plan: operator_download
+      route: reference
+      notes: 'HB-147: a queue row, drafted by HB-142R (docs/evidence/hb142/deferred_corpus_rows.yaml). A US Government web page (FGDC). The task that lands the symbol sheet checks each symbol name in src/hazbrief/brief/symbols.yaml against it (docs/evidence/hb142/acquisition.md).'
+      role: method
+      kb_reason: The published icon set for incidents, infrastructure and operations; the brief uses it rather than inventing icons (DN-019 ADDENDUM-02 section 2, HB-142R).
+      identify:
+        text: 'source: https?://www\.fgdc\.gov/HSWG'
+      status: awaiting_operator
+      refused_by: 'blocked_host: www.fgdc.gov was not on HB-142R''s Network line, so the fetcher named the browser. The host is on corpus/allowlist.txt, so a task with it on its Network line can take the page at rung 1 instead.'
+      requested_by: HB-142R
+      save_format: md
+  - came_from: 'docs/evidence/hb142/acquisition.md: "| `fhwa-mutcd-2009-chapter-6i` | FHWA, Manual on Uniform Traffic Control Devices, 2009 edition, Part 6, Chapter 6I ... | https://mutcd.fhwa.dot.gov/htm/2009/part6/part6i.htm | `blocked_host` (mutcd.fhwa.dot.gov), next rung browser | `corpus/inbox/` |"; DN-019 ADDENDUM-02 section 2 "Traffic control".'
+    row:
+      doc_id: fhwa-mutcd-2009-chapter-6i
+      priority: 6
+      title: 'Manual on Uniform Traffic Control Devices, 2009 edition, Part 6, Chapter 6I: Control of Traffic Through Traffic Incident Management Areas'
+      publisher: FHWA
+      edition: 2009 (with Revisions 1 and 2, 2012)
+      url: https://mutcd.fhwa.dot.gov/htm/2009/part6/part6i.htm
+      format: html
+      structured_alternative: none
+      plan: operator_download
+      route: reference
+      notes: 'HB-147: a queue row, drafted by HB-142R (docs/evidence/hb142/deferred_corpus_rows.yaml). A US Government web page (FHWA). The roadblock offset cites it (HB-142R).'
+      role: method
+      kb_reason: Control of traffic through traffic incident management areas, which the roadblock offset cites; the ERG names distances, not block placement (DN-019 ADDENDUM-02 section 2).
+      identify:
+        text: 'source: https?://mutcd\.fhwa\.dot\.gov/htm/2009/part6/part6i'
+      status: awaiting_operator
+      refused_by: 'blocked_host: mutcd.fhwa.dot.gov is not on corpus/allowlist.txt (HB-142R); the fetcher named the browser.'
+      requested_by: HB-142R
+      save_format: md
+  - came_from: 'docs/evidence/hb143/deferred_corpus_rows.yaml: "the prior-art works are held as the fetcher''s refusals (docs/evidence/hb143/prior_art_sources.yaml), to be acquired at rung 2 (the browser) before they land"; prior_art_fetch_log.jsonl: blocked_host journals.ametsoc.org, next_rung browser.'
+    row:
+      doc_id: barnes-1964-objective-analysis
+      priority: 6
+      title: A Technique for Maximizing Details in Numerical Weather Map Analysis
+      publisher: American Meteorological Society (Journal of Applied Meteorology 3(4), 396-409)
+      edition: "1964"
+      url: https://journals.ametsoc.org/view/journals/apme/3/4/1520-0450_1964_003_0396_atfmdi_2_0_co_2.xml
+      format: pdf
+      structured_alternative: none
+      plan: operator_download
+      route: reference
+      reuse: copyrighted
+      notes: 'HB-147: a queue row, drafted by HB-143 (docs/evidence/hb143/deferred_corpus_rows.yaml). Copyrighted (AMS); held, it is cited, not reproduced. The URL is the article page; save its PDF.'
+      role: method
+      kb_reason: Prior art for combining stations into a field (successive correction, Gaussian weights); HB-143 chose one representative station instead.
+      identify:
+        text: 'Maximizing Details in Numerical Weather Map Analysis'
+      status: awaiting_operator
+      refused_by: 'blocked_host: journals.ametsoc.org is not on corpus/allowlist.txt (HB-143); the fetcher named the browser.'
+      requested_by: HB-143
+  - came_from: 'docs/evidence/hb143/deferred_corpus_rows.yaml (as above); prior_art_fetch_log.jsonl: blocked_host journals.ametsoc.org, next_rung browser.'
+    row:
+      doc_id: cressman-1959-objective-analysis
+      priority: 6
+      title: An Operational Objective Analysis System
+      publisher: American Meteorological Society (Monthly Weather Review 87(10), 367-374)
+      edition: "1959"
+      url: https://journals.ametsoc.org/view/journals/mwre/87/10/1520-0493_1959_087_0367_aooas_2_0_co_2.xml
+      format: pdf
+      structured_alternative: none
+      plan: operator_download
+      route: reference
+      reuse: copyrighted
+      notes: 'HB-147: a queue row, drafted by HB-143 (docs/evidence/hb143/deferred_corpus_rows.yaml). Copyrighted (AMS); held, it is cited, not reproduced. The URL is the article page; save its PDF.'
+      role: method
+      kb_reason: Prior art for combining stations into a field (successive correction); HB-143 chose one representative station instead.
+      identify:
+        text: 'An Operational Objective Analysis System'
+      status: awaiting_operator
+      refused_by: 'blocked_host: journals.ametsoc.org is not on corpus/allowlist.txt (HB-143); the fetcher named the browser.'
+      requested_by: HB-143
+  - came_from: 'DN-019 ADDENDUM-02 section 2: "Interpolation: Shepard, \"A two-dimensional interpolation function for irregularly-spaced data\", ACM 1968 (inverse distance weighting)."; docs/evidence/hb143/deferred_corpus_rows.yaml; prior_art_fetch_log.jsonl: blocked_host dl.acm.org, next_rung browser.'
+    row:
+      doc_id: shepard-1968-idw
+      priority: 6
+      title: A two-dimensional interpolation function for irregularly-spaced data
+      publisher: ACM (Proceedings of the 1968 23rd ACM National Conference, 517-524)
+      edition: "1968"
+      url: https://dl.acm.org/doi/10.1145/800186.810616
+      format: pdf
+      structured_alternative: none
+      plan: operator_download
+      route: reference
+      reuse: copyrighted
+      notes: 'HB-147: a queue row, drafted by HB-143 (docs/evidence/hb143/deferred_corpus_rows.yaml). Copyrighted (ACM); held, it is cited, not reproduced. The URL is the DOI landing page; save its PDF.'
+      role: method
+      kb_reason: Inverse-distance weighting, the operator's candidate (hazbrief-mcp:HBD-220, superseded by HBD-275); HB-143 chose one representative station instead.
+      identify:
+        text: 'two-dimensional interpolation function for irregularly.spaced data'
+      status: awaiting_operator
+      refused_by: 'blocked_host: dl.acm.org is not on corpus/allowlist.txt (HB-143); the fetcher named the browser.'
+      requested_by: HB-143
+  - came_from: 'docs/evidence/hb143/deferred_corpus_rows.yaml: "Section 8.4, meteorological input data for a regulatory dispersion run (representativeness of the station)"; prior_art_fetch_log.jsonl: blocked_host www.epa.gov (the session''s Network line), next_rung browser.'
+    row:
+      doc_id: epa-appendix-w-2017
+      priority: 6
+      title: Guideline on Air Quality Models (40 CFR Part 51, Appendix W), 2017 revision
+      publisher: U.S. EPA
+      edition: 2017-01-17 (82 FR 5182)
+      url: https://www.epa.gov/sites/default/files/2020-09/documents/appw_17.pdf
+      format: pdf
+      structured_alternative: none
+      plan: operator_download
+      route: reference
+      notes: 'HB-147: a queue row, drafted by HB-143 (docs/evidence/hb143/deferred_corpus_rows.yaml). A US Government work (EPA).'
+      role: method
+      kb_reason: Section 8.4, meteorological input data for a regulatory dispersion run (representativeness of the station).
+      identify:
+        text: 'Guideline on Air Quality Models'
+      status: awaiting_operator
+      refused_by: 'blocked_host: www.epa.gov was not on HB-143''s Network line, so the fetcher named the browser. The host is on corpus/allowlist.txt, so a task with it on its Network line can take it at rung 1 instead.'
+      requested_by: HB-143
+  - came_from: 'DN-019 ADDENDUM-02 section 2: "Checklist design: Degani and Wiener, \"Cockpit checklists: concepts, design, and use\", Human Factors 35(2), 1993 (the challenge-response form, grouping by phase, the completion call)." and "The works named here are acquisitions for the corpus, by DN-002''s ladder, before the tasks that depend on them close". No task tried rung 1 and no file names a URL.'
+    row:
+      doc_id: degani-wiener-1993-cockpit-checklists
+      priority: 6
+      title: 'Cockpit checklists: concepts, design, and use'
+      publisher: Human Factors 35(2), Human Factors and Ergonomics Society (Degani and Wiener)
+      edition: "1993"
+      format: pdf
+      structured_alternative: none
+      plan: not_public
+      route: reference
+      reuse: copyrighted
+      notes: 'HB-147: a queue row from DN-019 ADDENDUM-02 section 2, which names it and no task asked for. No URL is recorded anywhere in this repository (Issue filed by HB-147); the search links find it. Copyrighted; held, it is cited, not reproduced.'
+      role: method
+      kb_reason: The challenge-response form, grouping by phase and the completion call, for the operator checklist (DN-019 ADDENDUM-02 section 3).
+      identify:
+        text: 'Cockpit checklists:? concepts,? design,? and use'
+      status: awaiting_operator
+      refused_by: 'never tried: DN-019 ADDENDUM-02 section 2 names it as an acquisition and no task has looked for it. Human Factors is a subscription journal; a library copy or a purchase is rung 3.'
+      requested_by: HB-147
+  - came_from: 'docs/evidence/hb127/acquisition.md, rung-2 list item 4: "the \"All Modes\" and \"Rail\" summary tables for the latest ten years, as `phmsa-10yr-all-modes-<date>.pdf` and `phmsa-10yr-rail-<date>.pdf` (new rows needed)."'
+    row:
+      doc_id: phmsa-10yr-incident-summary-all-modes
+      priority: 6
+      title: 'PHMSA 10 Year Incident Summary Reports: All Modes, the latest ten years'
+      publisher: US DOT PHMSA
+      edition: the ten years to the date saved
+      url: https://portalpublic.phmsa.dot.gov/analytics/saw.dll?Portal&PortalPath=/shared/Public%20Website%20Pages/_portal/10%20Year%20Incident%20Summary%20Reports
+      format: pdf
+      structured_alternative: the portal's own export
+      plan: operator_download
+      route: reference
+      notes: 'HB-147: a queue row for HB-127''s rung-2 list item 4 ("new rows needed"). A US Government work (PHMSA). Its identify rule is written from the first saved copy''s title text.'
+      role: evidence
+      kb_reason: How often transported-hazmat incidents happen, all modes, for the base rates (HB-127).
+      status: awaiting_operator
+      refused_by: 'portalpublic.phmsa.dot.gov is an Oracle BI application this client cannot drive (HB-127, HB-135: its paths time out or return a script shell). In the browser: the "All Modes" summary table for the latest ten years, saved as PDF.'
+      requested_by: HB-127
+  - came_from: 'docs/evidence/hb127/acquisition.md, rung-2 list item 4 (as above).'
+    row:
+      doc_id: phmsa-10yr-incident-summary-rail
+      priority: 6
+      title: 'PHMSA 10 Year Incident Summary Reports: Rail, the latest ten years'
+      publisher: US DOT PHMSA
+      edition: the ten years to the date saved
+      url: https://portalpublic.phmsa.dot.gov/analytics/saw.dll?Portal&PortalPath=/shared/Public%20Website%20Pages/_portal/10%20Year%20Incident%20Summary%20Reports
+      format: pdf
+      structured_alternative: the portal's own export
+      plan: operator_download
+      route: reference
+      notes: 'HB-147: a queue row for HB-127''s rung-2 list item 4 ("new rows needed"). A US Government work (PHMSA). Its identify rule is written from the first saved copy''s title text.'
+      role: evidence
+      kb_reason: How often transported-hazmat incidents happen by rail, for the base rates (HB-127).
+      status: awaiting_operator
+      refused_by: 'portalpublic.phmsa.dot.gov is an Oracle BI application this client cannot drive (HB-127, HB-135). In the browser: the "Rail" summary table for the latest ten years, saved as PDF.'
+      requested_by: HB-127
+  - came_from: 'docs/evidence/hb127/acquisition.md, rung-2 list item 6: "The 2016 NPRM Technical Background Document in docket EPA-HQ-OEM-2015-0725 on regulations.gov (new row needed)."'
+    row:
+      doc_id: epa-rmp-2016-nprm-technical-background
+      priority: 6
+      title: Technical Background Document for the 2016 proposed amendments to the Risk Management Program rule (docket EPA-HQ-OEM-2015-0725)
+      publisher: US EPA
+      edition: "2016"
+      url: https://www.regulations.gov/docket/EPA-HQ-OEM-2015-0725
+      format: pdf
+      structured_alternative: none
+      plan: operator_download
+      route: reference
+      notes: 'HB-147: a queue row for HB-127''s rung-2 list item 6 ("new row needed"). The URL is the docket, not the document: the document''s own URL is not recorded (Issue filed by HB-147). A US Government work (EPA).'
+      role: evidence
+      kb_reason: The accident history behind the 2016 RMP proposal, for the base rates (HB-127).
+      identify:
+        text: 'Technical Background Document.{0,600}Risk Management Program|Risk Management Program.{0,600}Technical Background Document'
+      status: awaiting_operator
+      refused_by: 'refused_by_host: www.regulations.gov and downloads.regulations.gov answer this client HTTP 403, and epa.gov does not carry it (HB-127). Find the document in the docket and save its PDF.'
+      requested_by: HB-127
+  - came_from: 'docs/evidence/hb127/acquisition.md, rung-2 list item 7: "Norfolk Southern''s latest 10-K on sec.gov, for the East Palestine total cost (new row needed)." The URL is the probe''s EDGAR listing (hb127-probe-sec-nsc-10k).'
+    row:
+      doc_id: norfolk-southern-10k-latest
+      priority: 6
+      title: Norfolk Southern Corporation, Form 10-K (the latest annual report)
+      publisher: Norfolk Southern Corporation (SEC EDGAR)
+      edition: the latest 10-K at the date saved
+      url: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000702165&type=10-K
+      format: pdf
+      structured_alternative: EDGAR's XBRL financial data
+      plan: operator_download
+      route: reference
+      reuse: reference-only
+      notes: 'HB-147: a queue row for HB-127''s rung-2 list item 7 ("new row needed"). The URL is the EDGAR 10-K listing; open the latest filing and print it to PDF. A company filing, reference-only.'
+      role: evidence
+      kb_reason: The East Palestine total cost as the railroad reports it, for the base rates (HB-127).
+      identify:
+        text: 'FORM 10-K.{0,2000}Norfolk Southern|Norfolk Southern.{0,2000}FORM 10-K'
+      status: awaiting_operator
+      refused_by: 'blocked_host: www.sec.gov was not on HB-127''s Network line and is not on corpus/allowlist.txt; the probe named the browser, or rung 1 with www.sec.gov on a task''s Network line.'
+      requested_by: HB-127
+  - came_from: 'Issue 03cb703e (HB-119, docs/evidence/hb119/issues_filed.txt): "Fix: the operator''s browser saves the page into corpus/inbox/, registered by content; or the PUG-REST paper (Kim et al., J Cheminform 2018, on PMC) by the allowlisted fetcher under a task whose Network line names pmc.ncbi.nlm.nih.gov."'
+    row:
+      doc_id: pubchem-pug-rest-docs
+      priority: 5
+      title: PUG-REST (PubChem Power User Gateway REST) documentation
+      publisher: NIH NLM NCBI (PubChem)
+      edition: as saved
+      url: https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest
+      format: html
+      structured_alternative: none
+      plan: bot_challenge
+      route: reference
+      notes: 'HB-147: a queue row for Issue 03cb703e (HB-119). A US Government web page (NLM). HB-98''s Chrome session passed the same challenge for pubchem-programmatic-access.'
+      role: method
+      kb_reason: The REST interface the runtime properties resolver calls (HB-119).
+      identify:
+        text: 'source: https?://pubchem\.ncbi\.nlm\.nih\.gov/docs/pug-rest'
+      status: awaiting_operator
+      refused_by: 'bot_challenge: the host answers this client with a reCAPTCHA page (docs/evidence/hb119/pug_rest_docs/record.json, HB-119). A browser passed the same challenge for the sibling page (HB-98).'
+      requested_by: HB-119
+      save_format: md
+
+# Named for rung 2 and NOT queued, with the reason (HB-147 RESULT lists them too):
+excluded:
+  - item: the 49 HB-62/HB-01e/HB-65/HB-82/HB-84/HB-98/HB-102/HB-23/HB-46 items
+    reason: held (a `registered` row in corpus/operator_downloads.jsonl or a `fetched` unit in corpus/fetch_log.jsonl), checked by doc_id against both logs on 2026-11-09.
+  - item: erg2020-* (six), HB-62 RESULT section 6
+    reason: held; the re-fetch was only to compare bytes, not an acquisition.
+  - item: hb105-ecfr-172-101-xml-2026-11-03; 49 CFR 178 cargo-tank pages (HB-110 ADDENDUM-00)
+    reason: not needed (HB-105 "Part C needs no fetch"; HB-110 ADDENDUM-01 "49 CFR 178 is already held inside cfr49-govinfo-bulk").
+  - item: 40 CFR 68 subpart B, eCFR current text (HB-135)
+    reason: conditional ("browser, if a later amendment matters"); the 2025 annual edition is held (cfr40-part68-govinfo-2025).
+  - item: epa-rmp-facility-list; cre-response-2024-tract; nws-api-observations
+    reason: datasets or live API calls, not documents for the inbox (epa-rmp-facility-list's next rung is rung 1 with ordsext.epa.gov, or FOIA).
+  - item: HB-98's eight purchase-only standards; klein-2008; nfpa-470/472/704/1620; ansi-isa-18-2; nielsen-1993; nygard; weiss-2001; scribd-hpac-101-dtra
+    reason: never named for a hand fetch; reference-only by policy (paid standards, third-party upload host).

@@ -1,0 +1,329 @@
+# The threat timeline (HB-171; DN-029): what the modelled cloud reaches and when, in time order, with what the held
+# sources say to consider and who can confirm each row. Read by hazbrief.brief.threat. Every number and every word
+# here is DN-029's decision, and each carries the decision's number; a quotation is held text, checked against its
+# parsed block by test_hb171_threat_timeline.py (a test held privately) (the doc_id, the parser's page, the block index).
+
+# the page and the download, written beside brief.html and tevv.html (cli.write_outputs; web serves the same bytes)
+file: timeline.html
+csv_file: timeline.csv
+link_text: "Timeline"
+link_title: "The threat timeline: what the modelled cloud reaches and when, in time order"
+title: "Threat timeline: {name}"
+lede: "What the modelled cloud reaches and when, in time order, from the engine's held record. Each row is one place reaching one health-effect level. Times are a model's."
+
+# DN-029 decision 7 (HBD-406): the first view shows this many of the next rows, then one line naming the rest. Ground:
+# NUREG-0700 r4 4.2.9-1 ("if space is limited, only the most important (highest priority) alarms should be presented.
+# An alternative is to provide a high-level indication that a relevant alarm exists") and 4.2.2-2 (never page or
+# scroll to see them); the live shell's left column held 98 px below its last group heading at 1440 x 900 on csx day
+# (docs/evidence/hb171/first_view_room.txt): three 19 px rows and the one line fit, a fourth row would not.
+first_view_rows: 3
+first_view_head: "Next on the timeline"
+first_view_more: "{n} more rows on the Timeline"
+first_view_none: "No row after the brief's time"
+# DN-029 decision 2 (HBD-401): rows group by half hour of clock time on the page
+group_minutes: 30
+group_head: "{start} to {end} ({hstart} to {hend})"
+
+# DN-029 decision 1 (HBD-400): the kinds of place, matched on the point layers a place is drawn in (and, for the
+# services layer, its `service`); first match wins. `rank` is the last tie-break before distance (decision 2):
+# nothing held orders kinds of place, so the rank only keeps the output stable and is not a priority.
+kinds:
+  - {id: school, layers: [schools], name: "school"}
+  - {id: care, layers: [care], name: "care facility"}
+  - {id: hospital, layers: [receiving_hospitals], name: "hospital"}
+  - {id: hospital, layers: [nearby_services], service: hospital, name: "hospital"}
+  - {id: fire_station, layers: [nearby_services], service: fire, name: "fire station"}
+  - {id: ems_station, layers: [nearby_services], service: ems, name: "EMS station"}
+  - {id: police_station, layers: [nearby_services], service: police, name: "police station"}
+  - {id: emergency_services, layers: [emergency_services], name: "fire or EMS station"}
+  - {id: suggested_point, layers: [sited_points], name: "suggested point"}
+  - {id: roadblock, layers: [roadblock_candidates, modelled_cordons], name: "roadblock"}
+  - {id: rail_block, layers: [rail_candidates], name: "rail block"}
+# the row kinds that are not a drawn point
+area_kinds:
+  population: {name: "residents under the level"}
+  group_quarters: {name: "group quarters"}
+  clear: {name: "clear"}
+
+# DN-029 decision 2 (HBD-401): the order. Arrival, then level (the worst first: NUREG-0700 r4 4.2.8-1, FAA HF-STD-001B
+# 5.5.1.2.3), then a place expected to be occupied before one that is not (HB-171 ADDENDUM-01 item 3), then nearest
+# the source first (erg-distances-background p. 2: "Initiate protective actions beginning with those closest to the
+# spill site and working away in a downwind direction."), then kind rank, then the place's id.
+levels_worst_first: [AEGL-3, AEGL-2, AEGL-1]
+
+# DN-029 decision 3 (HBD-402): what "to consider" may say. Only these quotations, each shown as a quotation with its
+# reference; a kind or row type with no entry carries no consideration.
+quotes:
+  institution:
+    doc: ornl-tm-2002-144-sorensen-evacuate-or-shelter
+    page: 12
+    block: 33
+    text: "Each institutional facility (such as hospitals, schools, day care centers, correctional facilities, assisted living facilities or nursing homes) in the community should be considered separately to determine what special protective actions may be necessary."
+    ref: "Sorensen, Shumpert and Vogt (2002), ORNL/TM-2002/144, p. 12"
+  special_populations:
+    doc: erg2024-en-pdf
+    page: 286
+    block: 4295
+    text: "special institutions or populations, e.g., nursing homes, hospitals, prisons"
+    ref: "ERG 2024, protective actions, factors (PDF p. 286)"
+  roadblock:
+    doc: erg2024-en-pdf
+    page: 285
+    block: 4263
+    text: "Isolate hazard area and deny entry means to keep everybody away from the area if they are not directly involved in emergency response operations. Unprotected emergency responders should not be allowed to enter the isolation zone."
+    ref: "ERG 2024, protective actions (PDF p. 285)"
+  residents:
+    doc: erg2024-en-pdf
+    page: 287
+    block: 4302
+    text: "Consider Evacuation: For anyone outdoors.; Consider Sheltering-in-place: For anyone already indoors."
+    ref: "ERG 2024, evacuation or shelter-in-place table (PDF p. 287)"
+  clear:
+    doc: ornl-tm-2002-144-sorensen-evacuate-or-shelter
+    page: 15
+    block: 42
+    text: "For sheltering to be effective, it may be critical to remove people or ventilate a shelter to prevent exposure after the plume has passed."
+    ref: "Sorensen, Shumpert and Vogt (2002), ORNL/TM-2002/144, p. 15"
+  # the first minutes (decision 6): public warning and keeping traffic out, at the top of the page
+  alert_public:
+    doc: nrt-1-hazmat-emergency-planning-guide-2001
+    page: 63
+    block: 874
+    text: "one organization must be assigned the responsibility of alerting the public as soon as word of the accidental release is received. Delay in alerting the public can lead to the loss of life."
+    ref: "NRT-1, Hazardous Materials Emergency Planning Guide (2001), p. 63"
+  warning_means:
+    doc: llnl-mass-casualty-framework-2016
+    page: 25
+    block: 219
+    text: "The SIP warning should be disseminated without delay using a variety of means- reverse 911 on landlines, text messages to cell phones in the area, PA broadcast, police car PA systems, etc."
+    ref: "LLNL mass casualty framework (2016), p. 25"
+  nws_relay:
+    doc: nws-10-518
+    page: 12
+    block: 117
+    text: "A NWEM is a nonscheduled product and will be relayed at the request of alerting authorities over NWS dissemination systems."
+    ref: "NWS Directive 10-518, p. 12"
+  traffic:
+    doc: nrt-1-hazmat-emergency-planning-guide-2001
+    page: 66
+    block: 929
+    text: "Provisions must be made for quickly moving traffic out of the risk zone and also for preventing outside traffic from entering the risk zone."
+    ref: "NRT-1, Hazardous Materials Emergency Planning Guide (2001), p. 66"
+  # decision 5 (HBD-404): the held times for carrying out a protective action, shown at the top; no row is marked
+  time_shelter:
+    doc: ornl-tm-2002-144-sorensen-evacuate-or-shelter
+    page: 22
+    block: 87
+    text: "Several analyses suggest that it will take 5 to 10 minutes on average to implement shelter-in-place, once a sheltering decision is made by a household."
+    ref: "Sorensen, Shumpert and Vogt (2002), ORNL/TM-2002/144, p. 22"
+  time_warning:
+    doc: ornl-tm-2002-144-sorensen-evacuate-or-shelter
+    page: 21
+    block: 81
+    text: "a considerable amount of time (up to one to two hours using conventional warning practices) may elapse before most people in the affected area hear, absorb, and decide to respond to the instructions"
+    ref: "Sorensen, Shumpert and Vogt (2002), ORNL/TM-2002/144, p. 21"
+  plume_duration:
+    doc: ornl-tm-2002-144-sorensen-evacuate-or-shelter
+    page: 25
+    block: 102
+    text: "For example, one might shelter with an expected plume duration of less than 30 minutes and evacuate with an expected plume duration of over 120 minutes. The middle ground of 30 to 120 minutes is a 'gray area' where the decision outcome is unclear."
+    ref: "Sorensen, Shumpert and Vogt (2002), ORNL/TM-2002/144, p. 25"
+
+# which quotations a row of each kind carries (decision 3)
+consider:
+  school: [institution]
+  care: [institution, special_populations]
+  hospital: [institution, special_populations]
+  group_quarters: [institution, special_populations]
+  roadblock: [roadblock]
+  rail_block: [roadblock]
+  population: [residents]
+  clear: [clear]
+# the top of the page, in this order (decisions 5 and 6)
+first_minutes: [alert_public, warning_means, nws_relay, traffic]
+time_to_act: [time_shelter, time_warning, plume_duration]
+
+# DN-029 decision 8 (HBD-407) and HB-171 ADDENDUM-01: expected occupancy by kind of place and hour. Each line:
+# the days (mon..sun), the clock window [from, to) local, the phrase, and either its sources (doc, page, block) or
+# `assumed` with its ground in the operator's words. A row takes the first line its kind, day and arrival clock match;
+# none matching, the row states no expectation. Months listed in `term_not_held` add `term_note` to a school's phrase.
+occupancy:
+  school:
+    - days: [mon, tue, wed, thu, fri]
+      from: "08:13"
+      to: "14:00"
+      phrase: "school hours: students and staff expected"
+      sources:
+        - {doc: nces-ntps-2021-school-start-time-by-characteristics, page: null, block: 10, text: "All schools; 8:13", note: "average K-12 start time, 2020-21"}
+        - {doc: fema-hazus-earthquake-technical-manual-6-1, page: 413, block: 3042, text: "(0.90)0.80(GRADE)", note: "Table 12-2: grade-school students indoors at 2:00 p.m."}
+    - days: [mon, tue, wed, thu, fri]
+      from: "07:30"
+      to: "08:13"
+      phrase: "before the average start: arrivals possible"
+      assumed: "the operator, 2026-11-12 09:55 EST: weekdays in term, from early morning arrival through after-school activities; 07:30 is the first column boundary of the NCES start-time table (\"Before 7:30 a.m.\")"
+    - days: [mon, tue, wed, thu, fri]
+      from: "14:00"
+      to: "17:00"
+      phrase: "after school: students and staff may be present"
+      assumed: "the operator, 2026-11-12 09:55 EST: weekdays in term, from early morning arrival through after-school activities; Hazus Table 12-2 counts no grade-school students at 5:00 p.m."
+    - days: [mon, tue, wed, thu, fri]
+      from: "17:00"
+      to: "07:30"
+      phrase: "outside school hours: not expected to be occupied"
+      sources:
+        - {doc: fema-hazus-earthquake-technical-manual-6-1, page: 413, block: 3042, text: "(0.80)0.50(COLLEGE)", note: "Table 12-2: at 5:00 p.m. the educational population is college students only; its 2:00 a.m. educational cells are blank"}
+    - days: [sat, sun]
+      from: "00:00"
+      to: "24:00"
+      phrase: "weekend: not expected to be occupied"
+      assumed: "the operator, 2026-11-12 09:55 EST: weekdays in term"
+  group_quarters:
+    - days: [mon, tue, wed, thu, fri, sat, sun]
+      from: "00:00"
+      to: "24:00"
+      phrase: "people who live here: expected present, as at home"
+      sources:
+        - {doc: fema-hazus-earthquake-technical-manual-6-1, page: 413, block: 3042, text: "(0.999)0.99(NRES)", note: "Table 12-2: residential population indoors at 2:00 a.m."}
+  population:
+    - days: [mon, tue, wed, thu, fri, sat, sun]
+      from: "22:00"
+      to: "06:00"
+      phrase: "night: residents expected at home"
+      sources:
+        - {doc: fema-hazus-earthquake-technical-manual-6-1, page: 413, block: 3042, text: "(0.999)0.99(NRES)", note: "Table 12-2: residential population indoors at 2:00 a.m."}
+      assumed_bounds: "22:00 to 06:00 is assumed; Hazus defines one night time, 2:00 a.m."
+    - days: [mon, tue, wed, thu, fri]
+      from: "09:00"
+      to: "17:00"
+      phrase: "work hours: many residents may be at work; workers expected at workplaces"
+      sources:
+        - {doc: otmem-user-guide, page: 5, block: 45, text: "if an event occurs during standard work hours it is highly probable that the majority of the resident population affected will not be in the area - they will be at work", note: "OnTheMap for Emergency Management user guide"}
+      assumed_bounds: "09:00 to 17:00 is assumed; the held text does not define standard work hours"
+# kinds no occupancy expectation applies to: a position, not a place people are in by its own hours
+occupancy_not_applicable: [roadblock, rail_block, suggested_point]
+term_not_held: [6, 7, 8]
+term_note: "; the school term is not checked"
+occupancy_note: "Occupancy expectations come from typical hours by kind of place (the table on the TEVV page, each line sourced or marked assumed); who is actually there is the reader's to confirm."
+
+# DN-029 decision 4 (HBD-403): one line per row naming who can confirm it, and the checklist item every modelled
+# time rests on (the standing wind item, `checklist.integrity`'s third line), which points back to this page
+verify:
+  school: "Who can confirm who is there now: the school, or dispatch"
+  care: "Who can confirm who is there now: the facility, or dispatch"
+  hospital: "Who can confirm who is there now: the hospital, or dispatch"
+  group_quarters: "Who can confirm who is there now: dispatch"
+  fire_station: "Who can confirm who is there now: dispatch"
+  ems_station: "Who can confirm who is there now: dispatch"
+  police_station: "Who can confirm who is there now: dispatch"
+  emergency_services: "Who can confirm who is there now: dispatch"
+  suggested_point: "Who can confirm whether anyone is posted here: the incident commander"
+  roadblock: "Who can confirm whether anyone is posted here: dispatch"
+  rail_block: "Who can confirm whether a train or crew is here: the railroad, through dispatch"
+  population: "Who can confirm who is at home or at work: dispatch"
+  clear: "Who can confirm the cloud has passed here: the incident commander"
+checklist_item: "Verify the wind against what you see at the scene."
+checklist_words: "Times rest on the wind: the checklist's wind item"
+checklist_back: "Timeline"
+
+# the row's words
+words:
+  row: "{name} ({kind})"
+  arrival: "arrives {clock} ({hplus})"
+  above: "above {level} for {mins:g} min"
+  clear: "clear of {level} {clock}"
+  clear_never: "not clear of {level} by the run's end"
+  lead: "lead {lead}"
+  past: "already reached at the brief's time"
+  clear_row: "{name} ({kind}): the cloud leaves, all levels"
+  population_row: "First populated block reached at {level}; {residents} residents inside the {level} area reached at any time"
+  # DN-028 ADDENDUM-10 decisions 1 and 3, as ADDENDUM-14 decisions 6 and 10 amend them: under the stable treatment the
+  # level's area is the planning area (the moving cloud's together with SLAB's extent check) and the time the moving
+  # cloud's, from its run at the stated vertical setting; the count is followed by its parts (`parts`), and every
+  # timed row ends with `unresolved_row`
+  population_row_slab: "First populated block of the {level} planning area reached at {level}; {residents} residents inside the {level} planning area"
+  parts: ": {cloud} inside the moving cloud's area and {check} more inside SLAB's extent check only (one wind, no times)"
+  unresolved_row: "; time from SCICHEM's run at a {vres:g} m vertical setting, an approximation"
+  # HB-178 (Issue 78ccbb4b; HBD-419: "A lower bound is always written 'at least' with what cut it"): a figure counted
+  # under an area the engine's grid or SLAB's table cuts; an arrival row at or beyond the grid's edge ends with `cut_row`
+  at_least: "at least {n}"
+  cut_area: "; that area is cut by {by}, so its counts are lower bounds"
+  cut_row: "; at or beyond the cut of the drawn {level} area (cut by {by}); its times are read at the place itself"
+  population_workers: "; {workers} workers (LODES jobs located there)"
+  group_quarters_row: "{type}, 2020 Census group quarters in block {geoid}: count {count}"
+  unnamed: "unnamed"
+  no_expectation: "no occupancy expectation held for this kind of place"
+  source: "Source: {engine} record {record}"
+  consider_head: "From the held sources"
+  verify_head: "Confirmation"
+  step_note: "population rows are read at the engine's 5-minute steps"
+  # HB-173 (DN-028 ADDENDUM-04 decision 5), as DN-028 ADDENDUM-14 decisions 6 and 10 amend it: the rows with no time,
+  # which exist only under the stable treatment, inside SLAB's extent check where the moving cloud does not reach the
+  # place at that level
+  untimed_head: "Inside SLAB's extent check at a level, with no time from the moving cloud there"
+  untimed_note: "Where any hour of the horizon is stable each level's planning area is the moving cloud's area together with SLAB's extent check (section T56); SLAB's area is one wind's, time-averaged, and gives no time, and the moving cloud did not reach these places at that level, so no time is shown and none is invented"
+  planning_row: "{name} ({kind}): inside the {level} planning area ({engine}); no time: the moving cloud does not reach it at that level, and SLAB's check gives no times"
+  planning_population_row: "Residents inside the {level} planning area ({engine}), where the moving cloud reaches no populated block at that level: {residents}"
+  no_time: "no time"
+
+# HB-192 (DN-024 ADDENDUM-01 decision 9; ADDENDUM-01 section 2): the candidate blocks the brief's first map does not
+# draw (not on a primary or secondary road, not at the scene's isolation boundary), listed here so every one stays on
+# the page set.
+blocks_table:
+  head: "Candidate blocks not drawn on the first map ({n})"
+  note: "Each is a candidate for the commander's judgment and may not be possible to staff. The first map draws only
+    the blocks on primary and secondary roads and those at the scene's isolation boundary."
+  columns: [Road, "Class (MTFCC)", Boundary, "Point (lat, lon)"]
+# HB-189 Part C item 10 (Desktop's assumption): under the stable treatment, the major roads where a candidate block
+# crosses the AEGL-2 planning area's boundary, with the moving cloud's AEGL-2 arrival there (`threat.crossings`); the
+# nearest unit's drive time to a crossing is not held, and the note says so
+crossings:
+  level: AEGL-2
+  max_rows: 12
+  head: "Major road crossings of the AEGL-2 boundary"
+  note: "Primary and secondary roads where a candidate block stands, with when the moving cloud reaches AEGL-2 there. The nearest unit's drive time to a crossing is not held by this brief."
+  row: "{road}: {when}"
+  at: "the moving cloud reaches AEGL-2 here at {clock} ({hplus})"
+  no_time: "on SLAB's extent check only: no time"
+
+# the top of the page (decision 9)
+head:
+  engine: "Engine: {engine}, record {record}"
+  wind: "Wind: the forecast, hour by hour, from {first} ({dir:.0f} degrees, {kmh:.1f} km/h at the release)"
+  release: "Release assumed to end at {clock} ({hplus}); who can confirm: the incident commander"
+  scene_clear: "The last level leaves the scene at {clock} ({hplus})"
+  scene_open: "A level still covers the scene at the run's last step, {clock} ({hplus})"
+  brief_time: "The brief's time is the release time, {clock}; lead is the time from it"
+  first_minutes_head: "The first minutes, from the held sources (hazbrief sends nothing and drafts no message)"
+  time_to_act_head: "Time to act, from the held sources (no row is marked against them; the lead time is the signal)"
+  population_none: "Residents under the cloud are not shown: {why}"
+  population_used: "Residents: 2020 Census DHC by block, each block counted by the share of its area inside a level's area reached at any time; workers: LODES jobs by workplace block, shown on work-hours rows"
+  # HB-173 item 12 (DN-028 ADDENDUM-04 decision 7): the two methods' line, from the same agreement record the checklist
+  # item reads (its alert where they disagree, its one line where they agree), with the measure's section
+  engines: "{line} (section {ref})"
+  # HB-173 ADDENDUM-01 section 2: the held evaluations of stable dense releases reach 5 km at most (DN-028 ADDENDUM-02
+  # section 3 items 6 and 7); printed where the methods disagree and a row lies past this distance
+  disagree_far: "The held evaluations of stable dense releases reach 5 km at most, for either engine (DN-028 ADDENDUM-02 section 3 items 6 and 7); this timeline's rows reach {km:.1f} km, where a shape is a model's extrapolation"
+  disagree_far_from_m: 13000
+  # HB-173 (DN-028 ADDENDUM-04 decision 5): under a stable class, places and residents inside the planning shape and
+  # outside the cloud at that level, listed after the timed rows with no time
+  untimed: "Inside SLAB's extent check at a level, with no time from the moving cloud there: {n} rows"
+  not_modelled: "No timeline: the modelled cloud is not drawn ({why})."
+
+# the exercise events list (decision 10; HSEEP doctrine 2020 p. 46, "Each MSEL entry should include the following")
+msel:
+  marking_column: "Marking"
+  marking: "EXERCISE"
+  columns:
+    - {name: "Event number", fill: n}
+    - {name: "Designated scenario time", fill: time}
+    - {name: "Event type (planner)", fill: null}
+    - {name: "Inject mode (planner)", fill: null}
+    - {name: "From (planner)", fill: null}
+    - {name: "To (planner)", fill: null}
+    - {name: "Message", fill: message}
+    - {name: "Expected participant response (planner)", fill: null}
+    - {name: "Exercise objective (planner)", fill: null}
+    - {name: "Notes (planner)", fill: null}
+  time: "{clock} ({hplus})"
+  link: "Exercise events list (CSV, HSEEP MSEL columns)"
+  note: "The columns are the HSEEP doctrine's MSEL entry (2020, p. 46); hazbrief fills the event number, time and message from this timeline and leaves the planner's columns empty."

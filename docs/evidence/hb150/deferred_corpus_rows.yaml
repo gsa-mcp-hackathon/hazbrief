@@ -1,0 +1,107 @@
+# HB-150: corpus/sources.yaml rows held back until a corpus ingest can run (Issue filed by HB-150).
+# The ingest stopped at the kit's disk floor (docs/evidence/hb150/prebuild.log: 19.55 GB free, floor 25 GB). Each
+# row is verbatim as drafted; the ingest task appends them to corpus/sources.yaml and appends
+# fetch_log_deferred.jsonl's lines to corpus/fetch_log.jsonl (pnwairfire-bluesky-c11ae06a's bytes are already held
+# at corpus/raw/pnwairfire-bluesky-c11ae06a.zip, sha256 81b3dfae...). nws-api-observations is HB-143's row (Issue
+# a461e0bb), unchanged.
+sources:
+  - doc_id: nws-api-observations
+    priority: 5
+    title: NWS API station observations (the latest observation of the stations nearest the incident point)
+    publisher: NOAA NWS
+    edition: live
+    url: https://api.weather.gov/stations/{stationId}/observations/latest
+    format: json (GeoJSON)
+    structured_alternative: this is the structured form
+    plan: api_endpoint
+    route: deterministic
+    notes: >-
+      Called at run time, not fetched: weather.source observed reads the nearest NWS stations' latest observations
+      (station list: the observationStations url of /points/{lat},{lon}) and records each with the brief's exchanges
+      (DN-011 D7); the data is live and recorded per brief, never a held document. Licence: a US Government work (17
+      U.S.C. 105), public domain unless noted (nws-disclaimer). Update cadence: each station's schedule, a METAR at
+      fixed intervals (fmh1-2019 section 2.6.4), routinely hourly. robots.txt on api.weather.gov disallows everything;
+      RFC 9309 scopes robots.txt to crawlers, and a per-incident API call is not a crawl (as for nws-api-points).
+    kb_reason: The observed weather source's wind (HB-143; DN-019 ADDENDUM-01), one representative station with the others as a spread.
+
+  - doc_id: dlp-phmsa-hazmat-incident-reports
+    priority: 6
+    title: PHMSA Form 5800.1 incident reports, one CSV per month (Data Liberation Project mirror)
+    publisher: Data Liberation Project, from PHMSA's portal
+    edition: commit 45a8327f3991dc1e32c997cf228cc26c36dad398 (2025-07-26); 1971-01 to 2025-07, 655 files, 914,498,513 bytes
+    url: https://raw.githubusercontent.com/data-liberation-project/phmsa-hazmat-incident-reports/45a8327f3991dc1e32c997cf228cc26c36dad398/data/fetched/{YYYY-MM}.csv
+    format: csv
+    structured_alternative: this is the structured form
+    plan: deferred_bulk_data
+    route: deterministic
+    notes: >-
+      201 columns (Incident County and Postal Code among them; no latitude or longitude). For January 2024 it carries
+      1,747 of the held portal export's 1,750 reports and no report the export lacks (the 3 are filed in 2025;
+      docs/evidence/hb150/incident_month_compare_2024-01.json). Its automated updates stopped on 2025-07-26, so it is
+      reproducible to a pinned commit but 16 months short of the held export (HB-150 Part B). Raw files public domain.
+    kb_reason: The reproducible bulk route to the incident data, with county and ZIP for mapping (HB-136R follow-on).
+
+  - doc_id: fgdc-hswg-ers-fonts-v2-20
+    priority: 6
+    title: Emergency Response Symbology Font Download, Version 2.20 (FGDC Homeland Security Working Group)
+    publisher: FGDC Homeland Security Working Group
+    edition: '2.20 (font files dated 2005-08-18)'
+    source_page: https://www.fgdc.gov/HSWG/index.html
+    format: ttf (22 TrueType fonts, text- and symbol-encoded)
+    structured_alternative: this is the structured form
+    plan: deferred_bulk_data
+    route: deterministic
+    notes: >-
+      Saved by the operator into corpus/inbox/ersSymbolsVersion0202/ (24 files; sha256 per file in
+      docs/evidence/hb150/inbox_inventory.tsv). Every font's name table states the symbols are a Government work not
+      subject to copyright and a draft prototype users must characterize as such. The glyph table is
+      docs/evidence/hb150/hswg_glyphs.tsv; the names come from the reference pages, which are not held.
+    kb_reason: The free map symbols (operator decision 2026-11-09 21:34; HB-150 Part B).
+
+  - doc_id: pnwairfire-bluesky-c11ae06a
+    priority: 5
+    title: BlueSky Framework source archive (USFS AirFire), with its prebuilt VSMOKE binary bin/vsmoke
+    publisher: USDA Forest Service Pacific Northwest Research Station AirFire Team (pnwairfire)
+    edition: commit c11ae06a7aae4fc56fa8436a0a0e17f8088b9041
+    url: https://codeload.github.com/pnwairfire/bluesky/zip/c11ae06a7aae4fc56fa8436a0a0e17f8088b9041
+    format: zip
+    structured_alternative: none
+    text_withheld: container
+    plan: fetch
+    route: reference
+    reuse: reference-only
+    notes: >-
+      The repository is licensed GPL-3.0 (LICENSE.txt). bin/vsmoke is VSMOKE version 19950128 (Lavdas 1996) as a
+      statically linked x86-64 Linux executable; the repository ships no VSMOKE source. HB-150 Part C installs it in
+      the models image from this held archive by sha256 and runs the manual's worked example at build. hazbrief does
+      not redistribute it: the image is built locally and never published.
+    kb_reason: The smoke engine (DN-021; HB-150 Part C).
+
+  - doc_id: dlp-epa-rmp-facilities
+    priority: 6
+    title: EPA Risk Management Program facilities, one row per facility (Data Liberation Project, from EPA's RMP database by FOIA)
+    publisher: Data Liberation Project, from U.S. EPA's RMP database
+    edition: commit 91f274d189d4e601e2f03653f293c289f2a470cd (pushed 2026-01-22)
+    url: https://raw.githubusercontent.com/data-liberation-project/epa-rmp-spreadsheets/91f274d189d4e601e2f03653f293c289f2a470cd/data/output/facilities.csv
+    format: csv
+    structured_alternative: this is the structured form
+    plan: deferred_bulk_data
+    route: deterministic
+    reuse: cc-by-sa
+    notes: >-
+      One row per RMP facility: name, state, city, operator, latest submission and its chemicals (the dictionary is
+      dlp-epa-rmp-facilities-dictionary). Data CC BY-SA 4.0 as the repository README states. The filed offsite
+      consequence analyses are not in it (reading-room only by statute).
+    kb_reason: The RMP facility list Issue d91a7842 asks for, by a bulk route (decision 3).
+  - doc_id: dlp-epa-rmp-facilities-dictionary
+    priority: 6
+    title: Data dictionary for facilities.csv (Data Liberation Project, EPA RMP spreadsheets)
+    publisher: Data Liberation Project
+    edition: commit 91f274d189d4e601e2f03653f293c289f2a470cd
+    url: https://raw.githubusercontent.com/data-liberation-project/epa-rmp-spreadsheets/91f274d189d4e601e2f03653f293c289f2a470cd/data/dictionaries/facilities.csv
+    format: csv
+    structured_alternative: this is the structured form
+    plan: deferred_bulk_data
+    route: deterministic
+    reuse: cc-by-sa
+    kb_reason: The columns of dlp-epa-rmp-facilities.

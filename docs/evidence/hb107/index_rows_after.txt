@@ -1,0 +1,11 @@
+degadisx-license|metadata|1
+degadisx-pyproject|metadata|1
+degadisx-readme|metadata|1
+degadisx-reproduction|metadata|1
+pypi-degadisx|metadata|1
+pypi-pyslab|metadata|1
+pypi-pyslabs|metadata|1
+pypi-slab|metadata|1
+pypi-slabs|metadata|1
+pypi-slabx|metadata|1
+total|rows|164692

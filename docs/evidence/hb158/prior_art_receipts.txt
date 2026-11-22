@@ -1,0 +1,132 @@
+internal search: 'overview first details on demand progressive disclosure'  (0 hit(s), 3.259 s)
+  seldon@417b84ad7f43: 491 file(s)
+  squiddy@cbe87f388c2f: 1210 file(s)
+  ai-readiness-kg@662295e212f7: 159 file(s)
+  arnold@7c8c991da773: 503 file(s)
+  icsp_notebook@97e7fb6d014a: 148 file(s)
+  wintermute@2a78c392f4d9: 228 file(s)
+  workbench-audit@tree:c03bc86: 16 file(s), 16 untracked read from disk
+
+Receipts:
+- internal receipt: query "overview first details on demand progressive disclosure" | repo seldon@417b84ad7f4318720c440b6ff1f03154d0257648 | hits none
+- internal receipt: query "overview first details on demand progressive disclosure" | repo squiddy@cbe87f388c2f72dde3f708f7b4f55738aec94216 | hits none
+- internal receipt: query "overview first details on demand progressive disclosure" | repo ai-readiness-kg@662295e212f7c4bb132cbeb2ade1e75ff2a4f218 | hits none
+- internal receipt: query "overview first details on demand progressive disclosure" | repo arnold@7c8c991da773c9c4fe7d91f1f87d5962e004c793 | hits none
+- internal receipt: query "overview first details on demand progressive disclosure" | repo icsp_notebook@97e7fb6d014acc38757928205984a30be1f131f2 | hits none
+- internal receipt: query "overview first details on demand progressive disclosure" | repo wintermute@2a78c392f4d998227d2433338ea45aee82c67f1e | hits none
+- internal receipt: query "overview first details on demand progressive disclosure" | repo workbench-audit@tree:c03bc86f0e4d7087c6f9cc417ee42ef66f7bc07268d5316448b4344c744b5412 | hits none
+<All keys matched successfully>
+library search: 'overview first details on demand progressive disclosure'  (44 hit(s), 27.923 s)
+  graph library: release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab..., 44 row(s)
+    lesson:2026-05-09_arXiv_2604_08224  '4.3.3 Progressive Disclosure'
+    lesson:2026-03-23_arXiv_2601_18127  'Table 1. Overview of mapping between the objectives of data transparency and the minimum level of data disclosure. Diffe'
+    lesson:2024-11-04_10_6028_nist_ai_600_1  'Partnership on AI (2023) Building a Glossary for Synthetic Media Transparency Methods, Part 1: Indirect   Disclosure. ht'
+    lesson:2026-02-22_arXiv_2505_08728  '+ R6: Retrieval Data Disclosure during prompting x x x x x x x x x x  + R7: Prompt Disclosure x x x x'
+    lesson:2026-03-07_arXiv_2602_07297  'COMPARISON OF TRUNCATED AND PROGRESSIVE RETRIEVAL FOR  GTE-QWEN2-7B-INSTRUCT EMBEDDING'
+    lesson:2026-02-22_arXiv_2507_16853  'progressor  Reflection on demand  visual  enhance  action reflection  𝑠'
+    lesson:2026-02-22_arXiv_2410_10020  'Progressive multifocal'
+    lesson:2026-05-04_arXiv_2510_11595  'Progressive'
+    lesson:2026-02-22_arXiv_2509_09498  '3.3.2 Consolidation and Progressive Evolution'
+    lesson:2026-03-27_arXiv_2511_10524  '3.3 Require Transparent AI Involvement and Disclosure  Standards'
+    lesson:2026-02-22_arXiv_2506_02718  'C.3 Progressive Homogenization of Rollout  Groups'
+    lesson:2026-02-22_arXiv_2508_15144  '6 Details of Self-Evolving Trajectory Data Production  In this section, we present the details of our self-evolving traj'
+    lesson:2026-01-23_arXiv_2601_08815  ') and success probabilities 𝑝(𝑠𝑖  ). Skills encompass tool invocations  (web search, code execution, API calls), knowled'
+    lesson:2026-02-22_arXiv_2411_00816  '7 DISCLOSURE'
+    lesson:2026-02-22_arXiv_2504_15585  '\xa0Privacy Disclosure'
+    lesson:2026-06-14_arXiv_2604_00186  'Disclosure of Interests'
+    lesson:2026-02-22_arXiv_2503_19470  'Figure 2: The training overview of ReSearch. (a) The GRPO pipeline. (b) The details of the rollout  generation process.'
+    lesson:2026-02-22_arXiv_2506_09049  'This section introduces details of VIKI-Bench, including the overview of data statistics, plan feasibility  checking and'
+    lesson:2026-02-22_arXiv_2407_06985  'Conclusion In this work, we introduced the PEER  framework to address the tri-lemma of perfor-mance, cost, and data priv'
+    lesson:2026-03-25_arXiv_1604_06651  'Dreschler, J. and J. P. Reiter (2009). Disclosure risk and data utility for partially synthetic  data: An empirical stud'
+  graph seldon-biblio: unavailable: release_unavailable: library graph seldon-biblio has no served index: FATAL: no served export at /Users/brock/GitHub/seldon/graphs/seldon-biblio/exports/seldon_biblio_graph.json; run an admission first
+
+Receipts:
+- library receipt: query "overview first details on demand progressive disclosure" | graph library | release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab8822258c824656a1b80365d3a4707f0456ddb4f73d508a120cd3 | rows lesson:2026-05-09_arXiv_2604_08224#p19:128:3826-3854, lesson:2026-05-09_arXiv_2604_08224#p19:129:3856-4357, lesson:2026-03-23_arXiv_2601_18127#p7:81:3600-3816, lesson:2026-03-23_arXiv_2601_18127#p7:66:0-212, lesson:2026-03-23_arXiv_2601_18127#p16:150:325-827, lesson:2024-11-04_10_6028_nist_ai_600_1#p61:839:1898-2123, lesson:2024-11-04_10_6028_nist_ai_600_1#p56:792:2159-2185, lesson:2024-11-04_10_6028_nist_ai_600_1#p31:397:1684-1784, lesson:2026-02-22_arXiv_2505_08728#p3:51:758-859, lesson:2026-02-22_arXiv_2505_08728#p3:30:75-85, lesson:2026-02-22_arXiv_2505_08728#p3:59:4080-4443, lesson:2026-03-07_arXiv_2602_07297#p4:81:2258-2344, lesson:2026-03-07_arXiv_2602_07297#p3:62:2353-2509, lesson:2026-03-07_arXiv_2602_07297#p5:113:1862-1949, lesson:2026-02-22_arXiv_2507_16853#p4:39:83-154, lesson:2026-02-22_arXiv_2507_16853#p9:250:425-463, lesson:2026-02-22_arXiv_2507_16853#p4:54:415-1364, lesson:2026-02-22_arXiv_2410_10020#p5:134:294-316, lesson:2026-05-04_arXiv_2510_11595#p10:182:739-750, lesson:2026-05-04_arXiv_2510_11595#p2:28:2806-2817, lesson:2026-05-04_arXiv_2510_11595#p11:197:2414-2887, lesson:2026-02-22_arXiv_2509_09498#p6:162:2132-2177, lesson:2026-02-22_arXiv_2509_09498#p6:163:2179-3527, lesson:2026-02-22_arXiv_2509_09498#p10:225:614-718, lesson:2026-03-27_arXiv_2511_10524#p4:23:42-106, lesson:2026-02-22_arXiv_2506_02718#p14:398:2399-2448, lesson:2026-02-22_arXiv_2506_02718#p3:67:1012-1185, lesson:2026-02-22_arXiv_2508_15144#p17:384:1549-1715, lesson:2026-01-23_arXiv_2601_08815#p7:61:921-1601, lesson:2026-02-22_arXiv_2411_00816#p39:662:3891-3903, lesson:2026-02-22_arXiv_2504_15585#p5:191:474-493, lesson:2026-02-22_arXiv_2504_15585#p18:464:2187-2263, lesson:2026-02-22_arXiv_2504_15585#p53:1226:4713-4954, lesson:2026-06-14_arXiv_2604_00186#p24:223:331-354, lesson:2026-02-22_arXiv_2503_19470#p3:81:2259-2378, lesson:2026-02-22_arXiv_2506_09049#p16:314:2905-3045, lesson:2026-02-22_arXiv_2506_09049#p4:88:1893-1905, lesson:2026-02-22_arXiv_2506_09049#p6:134:1295-1307, lesson:2026-02-22_arXiv_2407_06985#p6:103:2474-3140, lesson:2026-02-22_arXiv_2407_06985#p1:10:1615-3836, lesson:2026-02-22_arXiv_2407_06985#p3:35:0-503, lesson:2026-03-25_arXiv_1604_06651#p38:479:721-934, lesson:2026-03-25_arXiv_1604_06651#p41:498:323-645, lesson:2026-03-25_arXiv_1604_06651#p41:500:784-1501
+internal search: 'data age staleness indicator stale data warning'  (0 hit(s), 2.608 s)
+  seldon@417b84ad7f43: 491 file(s)
+  squiddy@cbe87f388c2f: 1210 file(s)
+  ai-readiness-kg@662295e212f7: 159 file(s)
+  arnold@7c8c991da773: 503 file(s)
+  icsp_notebook@97e7fb6d014a: 148 file(s)
+  wintermute@2a78c392f4d9: 228 file(s)
+  workbench-audit@tree:c03bc86: 16 file(s), 16 untracked read from disk
+
+Receipts:
+- internal receipt: query "data age staleness indicator stale data warning" | repo seldon@417b84ad7f4318720c440b6ff1f03154d0257648 | hits none
+- internal receipt: query "data age staleness indicator stale data warning" | repo squiddy@cbe87f388c2f72dde3f708f7b4f55738aec94216 | hits none
+- internal receipt: query "data age staleness indicator stale data warning" | repo ai-readiness-kg@662295e212f7c4bb132cbeb2ade1e75ff2a4f218 | hits none
+- internal receipt: query "data age staleness indicator stale data warning" | repo arnold@7c8c991da773c9c4fe7d91f1f87d5962e004c793 | hits none
+- internal receipt: query "data age staleness indicator stale data warning" | repo icsp_notebook@97e7fb6d014acc38757928205984a30be1f131f2 | hits none
+- internal receipt: query "data age staleness indicator stale data warning" | repo wintermute@2a78c392f4d998227d2433338ea45aee82c67f1e | hits none
+- internal receipt: query "data age staleness indicator stale data warning" | repo workbench-audit@tree:c03bc86f0e4d7087c6f9cc417ee42ef66f7bc07268d5316448b4344c744b5412 | hits none
+<All keys matched successfully>
+library search: 'data age staleness indicator stale data warning'  (51 hit(s), 27.659 s)
+  graph library: release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab..., 51 row(s)
+    lesson:2026-07-04_arXiv_2606_10209  'Stale-state reference 34 6 4'
+    lesson:2026-02-22_arXiv_2508_02621  '* **Warning (data_quality):** When handling healthcare data, always validate column existence early  and remove records '
+    lesson:2026-02-22_arXiv_2410_02958  'Crab Age You are solving this data science tasks of regression: The dataset presented here (the Crab Age Dataset) compri'
+    lesson:2026-02-08_arXiv_1802_06309  'insurance claims and physician records relating to the health  and hospitalization of over 60,000 patients. We predict t'
+    lesson:2026-02-11_10_17016_feds_2025_044  '−20 −10 0 10 20  Days relative to release date  LLM is correct LLM response is stale  LLM lookahead bias  Fraction of re'
+    lesson:2026-02-22_arXiv_2507_21035  'GSE173263 (Large B-cell Lymphoma):  WARNING: Trait data not available in this cohort.  GSE114022 (Large B-cell Lymphoma)'
+    lesson:2026-05-23_arXiv_2509_04696  'This module is designed to be flexible in its  source selection. In our current setup, we prioritize  Wikipedia pages th'
+    lesson:2026-05-09_10_1145_3805621_3807648  '[1] AmbitiousRealism2025. 2026. Bug: Pre-compaction memory  flush uses stale token counts, can be bypassed. GitHub issue'
+    lesson:2026-07-19_arXiv_2106_14109  '%paramsurv(data=data, t1=time, censor=delta, covars=age sex, '
+    lesson:2026-06-16_arXiv_2606_15474  'Anchor staleness. Identification (Proposition 2) assumes the frozen human labels h remain a valid  reference. If the anc'
+    lesson:2026-02-22_arXiv_2503_10970  'warning'
+    lesson:2026-02-22_arXiv_2506_07398  'Warning!'
+    lesson:2026-03-25_arXiv_1407_3191  'We test the previously mentioned approaches on data from the RecordLink-age R package.8 These simulated datasets contain'
+    lesson:2026-02-01_arXiv_2204_02311  'Is there anything about the com-position of the dataset or the  way it was collected and prepro-cessed/cleaned/labeled t'
+    lesson:2026-02-22_arXiv_2507_22606  '194 #### 2. Data Preprocessing  195 - **Missing Values**: Handled missing values in columns such as ‘Age‘, ‘Cabin‘, and '
+    lesson:2026-03-17_arXiv_2601_10338  'warning labels'
+    lesson:2026-08-25_arXiv_2512_03541  'Stage 6. Metadata consistency and correctness complements pixel validation by ensuring that   unique identifiers (UIDs) '
+    lesson:2026-02-22_arXiv_2407_16252  '风险提示< Risk Warning >：'
+    lesson:2026-02-22_arXiv_2506_04405  'def calculate_gfr(creatinine, age, sex):  # Patient data from the case'
+    lesson:2026-02-22_arXiv_2412_05255  'Age 0-1 Age 2-3 Age 4-6 Age 7  Age 0 Age 1 Age 2 Age 3 Age 4 Age 5  Age 6 Age 7  Age 0 Age 1 Age 2 Age 3  Beetroot  Whea'
+  graph seldon-biblio: unavailable: release_unavailable: library graph seldon-biblio has no served index: FATAL: no served export at /Users/brock/GitHub/seldon/graphs/seldon-biblio/exports/seldon_biblio_graph.json; run an admission first
+
+Receipts:
+- library receipt: query "data age staleness indicator stale data warning" | graph library | release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab8822258c824656a1b80365d3a4707f0456ddb4f73d508a120cd3 | rows lesson:2026-07-04_arXiv_2606_10209#p9:136:2200-2228, lesson:2026-07-04_arXiv_2606_10209#p3:30:2794-2859, lesson:2026-07-04_arXiv_2606_10209#p9:146:3738-4410, lesson:2026-02-22_arXiv_2508_02621#p29:634:2833-3345, lesson:2026-02-22_arXiv_2508_02621#p10:273:3638-3869, lesson:2026-02-22_arXiv_2508_02621#p3:72:1490-1497, lesson:2026-02-22_arXiv_2410_02958#p15:438:2229-2645, lesson:2026-02-22_arXiv_2410_02958#p16:465:3571-4122, lesson:2026-02-22_arXiv_2410_02958#p16:468:4429-5044, lesson:2026-02-08_arXiv_1802_06309#p7:295:2543-3013, lesson:2026-02-08_arXiv_1802_06309#p7:301:3297-3936, lesson:2026-02-08_arXiv_1802_06309#p6:238:4460-5095, lesson:2026-02-11_10_17016_feds_2025_044#p39:383:362-514, lesson:2026-02-11_10_17016_feds_2025_044#p38:352:862-1014, lesson:2026-02-11_10_17016_feds_2025_044#p38:321:22-154, lesson:2026-02-22_arXiv_2507_21035#p50:816:595-794, lesson:2026-02-22_arXiv_2507_21035#p50:815:516-593, lesson:2026-02-22_arXiv_2507_21035#p4:56:1129-1226, lesson:2026-05-23_arXiv_2509_04696#p3:85:2080-2605, lesson:2026-05-23_arXiv_2509_04696#p3:62:273-286, lesson:2026-05-23_arXiv_2509_04696#p3:84:1350-2078, lesson:2026-05-09_10_1145_3805621_3807648#p9:206:144-363, lesson:2026-05-09_10_1145_3805621_3807648#p9:218:4719-5830, lesson:2026-07-19_arXiv_2106_14109#p7:91:2695-2756, lesson:2026-07-19_arXiv_2106_14109#p8:99:2017-2079, lesson:2026-07-19_arXiv_2106_14109#p6:85:3566-3636, lesson:2026-06-16_arXiv_2606_15474#p13:274:2377-2893, lesson:2026-06-16_arXiv_2606_15474#p13:261:0-322, lesson:2026-06-16_arXiv_2606_15474#p1:9:2597-3331, lesson:2026-02-22_arXiv_2503_10970#p33:301:665-672, lesson:2026-02-22_arXiv_2503_10970#p33:351:2203-2223, lesson:2026-02-22_arXiv_2503_10970#p33:294:473-547, lesson:2026-02-22_arXiv_2506_07398#p9:289:1769-1777, lesson:2026-03-25_arXiv_1407_3191#p8:89:1385-1923, lesson:2026-02-01_arXiv_2204_02311#p71:1242:2094-2586, lesson:2026-02-01_arXiv_2204_02311#p82:1412:601-692, lesson:2026-02-22_arXiv_2507_22606#p27:472:1442-1575, lesson:2026-02-22_arXiv_2507_22606#p26:451:1224-1357, lesson:2026-02-22_arXiv_2507_22606#p24:404:1680-1912, lesson:2026-03-17_arXiv_2601_10338#p20:518:1333-1347, lesson:2026-03-17_arXiv_2601_10338#p11:317:5714-6099, lesson:2026-08-25_arXiv_2512_03541#p4:33:744-1437, lesson:2026-08-25_arXiv_2512_03541#p17:199:2260-2822, lesson:2026-08-25_arXiv_2512_03541#p11:112:970-1277, lesson:2026-02-22_arXiv_2407_16252#p12:291:3327-3348, lesson:2026-02-22_arXiv_2506_04405#p30:566:279-349, lesson:2026-02-22_arXiv_2506_04405#p30:568:376-394, lesson:2026-02-22_arXiv_2506_04405#p40:760:1565-2568, lesson:2026-02-22_arXiv_2412_05255#p30:484:47-168, lesson:2026-02-22_arXiv_2412_05255#p30:483:0-45, lesson:2026-02-22_arXiv_2412_05255#p45:614:1575-2015
+internal search: 'three state status indicator retrieving retrieved failed'  (0 hit(s), 3.094 s)
+  seldon@417b84ad7f43: 491 file(s)
+  squiddy@cbe87f388c2f: 1210 file(s)
+  ai-readiness-kg@662295e212f7: 159 file(s)
+  arnold@7c8c991da773: 503 file(s)
+  icsp_notebook@97e7fb6d014a: 148 file(s)
+  wintermute@2a78c392f4d9: 228 file(s)
+  workbench-audit@tree:c03bc86: 16 file(s), 16 untracked read from disk
+
+Receipts:
+- internal receipt: query "three state status indicator retrieving retrieved failed" | repo seldon@417b84ad7f4318720c440b6ff1f03154d0257648 | hits none
+- internal receipt: query "three state status indicator retrieving retrieved failed" | repo squiddy@cbe87f388c2f72dde3f708f7b4f55738aec94216 | hits none
+- internal receipt: query "three state status indicator retrieving retrieved failed" | repo ai-readiness-kg@662295e212f7c4bb132cbeb2ade1e75ff2a4f218 | hits none
+- internal receipt: query "three state status indicator retrieving retrieved failed" | repo arnold@7c8c991da773c9c4fe7d91f1f87d5962e004c793 | hits none
+- internal receipt: query "three state status indicator retrieving retrieved failed" | repo icsp_notebook@97e7fb6d014acc38757928205984a30be1f131f2 | hits none
+- internal receipt: query "three state status indicator retrieving retrieved failed" | repo wintermute@2a78c392f4d998227d2433338ea45aee82c67f1e | hits none
+- internal receipt: query "three state status indicator retrieving retrieved failed" | repo workbench-audit@tree:c03bc86f0e4d7087c6f9cc417ee42ef66f7bc07268d5316448b4344c744b5412 | hits none
+<All keys matched successfully>
+library search: 'three state status indicator retrieving retrieved failed'  (50 hit(s), 26.302 s)
+  graph library: release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab..., 50 row(s)
+    lesson:2026-02-22_arXiv_2506_07398  'status Ψi ∈ {Failed, Resolved}, and its associated interaction graph G  (Qi)'
+    lesson:2026-03-01_arXiv_2602_23258  'Impact of Retrieved Indicator Count. Next,  we explored the impact of the number of retrieved  indicators as shown in Bl'
+    lesson:2026-02-22_arXiv_2410_20285  'STATUS: TESTS FAILED STATUS: TESTS PASSED  "instructions":"Add the   import statement for `Eq`   to resolve the '
+    lesson:2026-02-26_arXiv_2602_14740  '• State B: Failure to assert your emerging status confirms continued subordination.  E.2.5 First Strike Crisis (v8_first'
+    lesson:2026-02-12_arXiv_2602_08234  'where r(τ ) denotes the binary task success indicator. Failed  trajectories reveal failure modes and boundary conditions'
+    lesson:2026-05-09_arXiv_2603_01254  'Figure 2: Single run example (Grok 4, treatment). Each bar shows self-reported aversiveness for one tool call.  Red bars'
+    lesson:2026-02-22_arXiv_2508_15144  'The Reflector analyzes the pre-action state St, the post-action state St+1, and the action tuple At. A judgment  jt = SU'
+    lesson:2026-02-22_arXiv_2310_08740  'Figure 10: Prompt for paraphrasing an executed action. Newlines are filtered.  STATUS.FAILED: "However, your actions did'
+    lesson:2026-02-22_arXiv_2506_01341  "Player's Thinking: Verifier 2 failed. Since I used '3' in the Blue position, and  ,→ it failed, I now know there are zer"
+    lesson:2026-04-13_arXiv_2507_15330  '• Observed Behavior: Agent failed to execute tools but returned a false “All tasks complete” message.  • Risk: Output nu'
+    lesson:2026-02-22_arXiv_2503_02077  'where s[e.status] represents the current status of entity e in  state s.'
+    lesson:2025-06-28_arXiv_2506_05790  "1. You step onto the treasure's cell (**success**), or  2. You exceed the maximum allowed number of steps (**failure**)."
+    lesson:2026-02-22_arXiv_2503_09516  'Table 14: SEARCH-R1 case study 5 (failed): SEARCH-R1 fails to answer the question with  insufficient or misleading retri'
+    lesson:2026-02-22_arXiv_2312_13382  'to false and the current retry count r does not exceed the  maximum retries R, the pipeline attempts to recover or ad-ju'
+    lesson:2026-02-26_arXiv_2409_13731  'Constructing KG index through information-extraction and retrieving based on vector-similarity has  three significant de'
+    lesson:2026-02-22_arXiv_2410_14052  'Error Analysis Insufficient Evidence. The error occurred because the responder agent failed to capture  the key points a'
+    lesson:2026-02-22_arXiv_2506_04625  'Combined Status Rules: Both Pass: Must recognize AND successfully correct error; Both Fail: No error recognition leads t'
+    lesson:2026-02-22_arXiv_2312_03003  'Human-in-the-loop (HITL) task repair. In case self-correction falls short, MobileGPT provides mechanisms for  users to c'
+    lesson:2026-02-03_arXiv_2508_08344  '(1) Example 1: Retrieval Failure. The  question requires reasoning over the relations  contains(New York City, Manhattan'
+    lesson:2026-03-17_arXiv_2602_02474  'This is round 1 of a reflection loop. Produce a strong initial analysis that can be critiqued and improved.  1. For each'
+  graph seldon-biblio: unavailable: release_unavailable: library graph seldon-biblio has no served index: FATAL: no served export at /Users/brock/GitHub/seldon/graphs/seldon-biblio/exports/seldon_biblio_graph.json; run an admission first
+
+Receipts:
+- library receipt: query "three state status indicator retrieving retrieved failed" | graph library | release library_graph_20261106_sq125_c_2026-11-06.json sha256:bbd841d3b5ab8822258c824656a1b80365d3a4707f0456ddb4f73d508a120cd3 | rows lesson:2026-02-22_arXiv_2506_07398#p4:106:2624-2700, lesson:2026-02-22_arXiv_2506_07398#p6:206:1932-2275, lesson:2026-03-01_arXiv_2602_23258#p6:154:2603-3134, lesson:2026-03-01_arXiv_2602_23258#p4:111:1003-1036, lesson:2026-03-01_arXiv_2602_23258#p12:288:4019-4408, lesson:2026-02-22_arXiv_2410_20285#p7:117:761-873, lesson:2026-02-22_arXiv_2410_20285#p7:130:1281-1295, lesson:2026-02-22_arXiv_2410_20285#p21:286:847-1331, lesson:2026-02-26_arXiv_2602_14740#p35:499:93-226, lesson:2026-02-26_arXiv_2602_14740#p34:492:2312-2810, lesson:2026-02-12_arXiv_2602_08234#p3:74:1002-1303, lesson:2026-02-12_arXiv_2602_08234#p12:310:926-946, lesson:2026-02-12_arXiv_2602_08234#p12:316:1857-1877, lesson:2026-05-09_arXiv_2603_01254#p7:90:99-438, lesson:2026-05-09_arXiv_2603_01254#p3:26:1227-2097, lesson:2026-05-09_arXiv_2603_01254#p6:64:718-923, lesson:2026-02-22_arXiv_2508_15144#p22:473:3075-3792, lesson:2026-02-22_arXiv_2508_15144#p20:425:1292-1389, lesson:2026-02-22_arXiv_2508_15144#p23:489:906-963, lesson:2026-02-22_arXiv_2310_08740#p13:208:399-649, lesson:2026-02-22_arXiv_2310_08740#p13:210:1094-1621, lesson:2026-02-22_arXiv_2506_01341#p15:274:1260-1431, lesson:2026-02-22_arXiv_2506_01341#p15:257:0-335, lesson:2026-02-22_arXiv_2506_01341#p5:154:3147-3368, lesson:2026-04-13_arXiv_2507_15330#p8:134:1994-2419, lesson:2026-04-13_arXiv_2507_15330#p7:117:1712-1963, lesson:2026-04-13_arXiv_2507_15330#p7:110:1108-1281, lesson:2026-02-22_arXiv_2503_02077#p16:638:2361-2433, lesson:2025-06-28_arXiv_2506_05790#p24:546:2569-2816, lesson:2025-06-28_arXiv_2506_05790#p26:602:2990-3280, lesson:2026-02-22_arXiv_2503_09516#p25:479:46-183, lesson:2026-02-22_arXiv_2503_09516#p31:554:46-176, lesson:2026-02-22_arXiv_2503_09516#p6:147:705-858, lesson:2026-02-22_arXiv_2312_13382#p5:82:387-691, lesson:2026-02-22_arXiv_2312_13382#p4:69:4546-4902, lesson:2026-02-26_arXiv_2409_13731#p11:148:2102-2251, lesson:2026-02-26_arXiv_2409_13731#p8:88:802-1431, lesson:2026-02-22_arXiv_2410_14052#p34:610:435-750, lesson:2026-02-22_arXiv_2410_14052#p18:313:2197-2448, lesson:2026-02-22_arXiv_2410_14052#p16:275:1569-1588, lesson:2026-02-22_arXiv_2506_04625#p16:400:848-1106, lesson:2026-02-22_arXiv_2506_04625#p16:407:1235-1449, lesson:2026-02-22_arXiv_2506_04625#p20:477:1086-1240, lesson:2026-02-22_arXiv_2312_03003#p5:69:5192-5762, lesson:2026-02-03_arXiv_2508_08344#p8:120:1216-2393, lesson:2026-02-03_arXiv_2508_08344#p16:252:2604-3131, lesson:2026-02-03_arXiv_2508_08344#p17:261:1061-2074, lesson:2026-03-17_arXiv_2602_02474#p29:593:1134-1588, lesson:2026-03-17_arXiv_2602_02474#p4:91:1499-1571, lesson:2026-03-17_arXiv_2602_02474#p4:98:1708-1717

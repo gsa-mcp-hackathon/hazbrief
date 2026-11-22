@@ -1,0 +1,47 @@
+# Declared coverage gaps (HB-04 step 2). AUTHORED: one reason per scenario and tool that does
+# not replay. scenario_manifest.py (a build tool held privately) copies each reason into fixtures/scenarios.yaml;
+# test_scenario_manifest.py (a test held privately) fails a gap with no reason here, and a reason here with no gap
+# behind it (a stale declaration). Close a gap by recording the exchanges and deleting its line.
+#
+# HB-08's three and HB-08b's two footprints (un1075-fire-i81, un1203-i83, un1977-wilson-bridge,
+# un1746-small-i81-land, un1746-small-i81-water) were gaps until HB-15 step 5 promoted HB-05's live
+# recordings of them (2026-10-21/ (held privately)) into fixtures/exchanges/ (P-14); HB-15's
+# two scenarios replay from fixtures/exchanges/ too (docs/evidence/hb213/lifted/HB-15.md, section 6).
+gaps:
+  open-water-day:
+    assess_incident: &nomaterial >-
+      No material: HB-09's open-water case is a footprint with no incident, the case no
+      tabulation block overlaps (scripts/record_population_fixtures.py OPEN_WATER).
+    protective_action_footprint: *nomaterial
+    material_response_guidance: *nomaterial
+    build_ics_201: *nomaterial
+    receiving_hospitals: >-
+      No spill point: the open-water footprint is a bare polygon, and receiving_hospitals
+      measures from the spill (scripts/record_facilities_fixtures.py ran it only where a spill
+      feature exists).
+  # HB-120 Part C step 5: the Class 7 and Class 8 "no dispersion model applies" demonstrations. HB-120 runs with no
+  # network, and their footprints (Guide 163's 100 m downwind evacuation; Guide 154's 25 m isolation for a solid) are
+  # shapes no exchange was recorded for. The footprint, the guidance and the modelled entry replay; the population,
+  # facilities and the form's exchanges do not. Close these by recording them in a networked task
+  # (scripts/record_population_fixtures.py, scripts/record_facilities_fixtures.py, then record_ics201_fixtures.py),
+  # then delete the lines (Issue b01c4a1b).
+  un2915-i81:
+    facilities_in_footprint: &hb120gap >-
+      Not recorded: HB-120 had no network, and this demonstration's footprint is a new shape (see the comment
+      above); recording it closes the gap.
+    population_at_risk: *hb120gap
+    build_ics_201: *hb120gap
+  un1823-solid-i81:
+    facilities_in_footprint: *hb120gap
+    population_at_risk: *hb120gap
+    build_ics_201: *hb120gap
+  # HB-129 Part A step 1 (DN-021 section 7): the burning gasoline tank truck at I-83. HB-129 runs with no network, and
+  # Guide 128's 800 m fire circle at I-83 is a shape no exchange was recorded for (un1203-i83 recorded the 50 m
+  # circle). The footprint, the assessment, the guidance and the receiving hospitals replay; the population, the
+  # facilities and the form's exchanges do not. Close them by recording in a networked task, as for b01c4a1b.
+  un1203-fire-i83:
+    facilities_in_footprint: &hb129gap >-
+      Not recorded: HB-129 had no network, and Guide 128's 800 m fire circle at I-83 is a new shape (see the comment
+      above); recording it closes the gap.
+    population_at_risk: *hb129gap
+    build_ics_201: *hb129gap

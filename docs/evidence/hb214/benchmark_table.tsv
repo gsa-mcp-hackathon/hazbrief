@@ -1,0 +1,23 @@
+Test	Run	Compared with	Arcs (n)	Ratio	95 percent limits	Within a factor of two (k of n)	Statistically different?	Note
+BENCH-8, BENCH-9 Jack Rabbit II Trial 7	SCICHEM	Measurements	5	2.88	1.58 to 5.27	1 of 5	Yes, below	1
+BENCH-8, BENCH-9 Jack Rabbit II Trial 7	SLAB RH 20	Measurements	5	1.43	0.83 to 2.47	4 of 5	No	1
+BENCH-8, BENCH-9 Jack Rabbit II Trial 7	SLAB RH 80	Measurements	5	1.41	0.81 to 2.47	4 of 5	No	1
+BENCH-8 Jack Rabbit II Trial 7, HPAC	HPAC complex	Measurements	5	1.73	0.92 to 3.26	3 of 5	No	1
+BENCH-8 Jack Rabbit II Trial 7, HPAC	HPAC simple	Measurements	5	1.63	0.92 to 2.86	4 of 5	No	1
+BENCH-9 Jack Rabbit II Trial 7, ALOHA	ALOHA	Measurements	5	2.13	0.65 to 6.98	3 of 5	No	1
+BENCH-1 HPAC complex source, three trials		Measurements					Not yet tested	
+BENCH-2 HPAC measured weather, three trials		Measurements					Not yet tested	
+BENCH-3 HPAC forecast weather, three trials		Measurements					Not yet tested	
+BENCH-4 HPAC forecast, re-aligned, three trials		Measurements					Not yet tested	
+BENCH-5 HPAC arrival time, three trials		Measurements					Not yet tested	
+BENCH-6 HPAC cloud width overlap, three trials		Measurements					Not yet tested	
+BENCH-7 ALOHA, three trials		Measurements					Not yet tested	
+BENCH-8 Jack Rabbit II Trial 7, HPAC	SCICHEM	HPAC complex	5	1.66	0.87 to 3.16		No	1, 4
+BENCH-8 Jack Rabbit II Trial 7, HPAC	SCICHEM	HPAC simple	5	1.77	0.91 to 3.47		No	1, 4
+BENCH-9 Jack Rabbit II Trial 7, ALOHA	SCICHEM	ALOHA	5	1.35	0.62 to 2.94		No	1, 4
+BENCH-8 Jack Rabbit II Trial 7, HPAC	SLAB RH 20	HPAC complex	5	0.83	0.44 to 1.56		No	1, 4
+BENCH-8 Jack Rabbit II Trial 7, HPAC	SLAB RH 20	HPAC simple	5	0.88	0.49 to 1.58		No	1, 4
+BENCH-9 Jack Rabbit II Trial 7, ALOHA	SLAB RH 20	ALOHA	5	0.67	0.31 to 1.46		No	1, 4
+BENCH-8 Jack Rabbit II Trial 7, HPAC	SLAB RH 80	HPAC complex	5	0.82	0.42 to 1.57		No	1, 4
+BENCH-8 Jack Rabbit II Trial 7, HPAC	SLAB RH 80	HPAC simple	5	0.87	0.47 to 1.59		No	1, 4
+BENCH-9 Jack Rabbit II Trial 7, ALOHA	SLAB RH 80	ALOHA	5	0.66	0.31 to 1.41		No	1, 4

@@ -1,0 +1,15 @@
+brief	stab_before	stab_after	quantity	before	after	after_over_before
+csx-point-of-rocks-day	2	2.269	centreline ppm at 100 m	6632.87	8195.42	1.23558
+csx-point-of-rocks-day	2	2.269	centreline ppm at 500 m	148.166	189.267	1.2774
+csx-point-of-rocks-day	2	2.269	centreline ppm at 1000 m	40.6501	52.1591	1.28312
+csx-point-of-rocks-day	2	2.269	centreline ppm at 5000 m	2.33455	3.04455	1.30412
+csx-point-of-rocks-day	2	2.269	downwind reach m at AEGL-1 (0.5 ppm, 60 min)	13161.4	15798.9	1.2004
+csx-point-of-rocks-day	2	2.269	downwind reach m at AEGL-2 (2 ppm, 60 min)	5513.25	6470.47	1.17362
+csx-point-of-rocks-day	2	2.269	downwind reach m at AEGL-3 (20 ppm, 60 min)	1479.8	1704	1.15151
+un1005-i81	2	2.269	centreline ppm at 100 m	7267.6	8040.86	1.1064
+un1005-i81	2	2.269	centreline ppm at 500 m	167.506	210.161	1.25465
+un1005-i81	2	2.269	centreline ppm at 1000 m	45.9	57.8	1.25926
+un1005-i81	2	2.269	centreline ppm at 5000 m	2.71577	3.50279	1.2898
+un1005-i81	2	2.269	downwind reach m at AEGL-1 (30 ppm, 60 min)	1268.25	1443.21	1.13795
+un1005-i81	2	2.269	downwind reach m at AEGL-2 (160 ppm, 60 min)	514.68	579.435	1.12582
+un1005-i81	2	2.269	downwind reach m at AEGL-3 (1100 ppm, 60 min)	206.174	230.951	1.12018

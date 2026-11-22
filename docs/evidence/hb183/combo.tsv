@@ -1,0 +1,273 @@
+regime	trial	deck	fields_changed	x_m	scored	over_report_run	within_tol
+daytime	DT1	hazbrief's deck		100	no	0.970215	no
+daytime	DT1	hazbrief's deck		800	yes	0.842245	no
+daytime	DT1	hazbrief's deck, cause fields at the report's values	as xffm stability	100	no	0.998176	yes
+daytime	DT1	hazbrief's deck, cause fields at the report's values	as xffm stability	800	yes	1.0046	yes
+daytime	DT1	the report's deck, wms at hazbrief's value		100	no	1	yes
+daytime	DT1	the report's deck, wms at hazbrief's value		800	yes	1	yes
+daytime	DT1	the report's deck, cps at hazbrief's value		100	no	1	yes
+daytime	DT1	the report's deck, cps at hazbrief's value		800	yes	1.00131	yes
+daytime	DT1	the report's deck, tbp at hazbrief's value		100	no	1	yes
+daytime	DT1	the report's deck, tbp at hazbrief's value		800	yes	1	yes
+daytime	DT1	the report's deck, cmedo at hazbrief's value		100	no	1	yes
+daytime	DT1	the report's deck, cmedo at hazbrief's value		800	yes	1.00287	yes
+daytime	DT1	the report's deck, dhe at hazbrief's value		100	no	1	yes
+daytime	DT1	the report's deck, dhe at hazbrief's value		800	yes	1	yes
+daytime	DT1	the report's deck, cpsl at hazbrief's value		100	no	1	yes
+daytime	DT1	the report's deck, cpsl at hazbrief's value		800	yes	1	yes
+daytime	DT1	the report's deck, rhosl at hazbrief's value		100	no	1	yes
+daytime	DT1	the report's deck, rhosl at hazbrief's value		800	yes	1	yes
+daytime	DT1	the report's deck, spb at hazbrief's value		100	no	0.99522	yes
+daytime	DT1	the report's deck, spb at hazbrief's value		800	yes	0.999793	yes
+daytime	DT1	the report's deck, spc at hazbrief's value		100	no	0.993405	yes
+daytime	DT1	the report's deck, spc at hazbrief's value		800	yes	0.99828	yes
+daytime	DT1	the report's deck, ts at hazbrief's value		100	no	1	yes
+daytime	DT1	the report's deck, ts at hazbrief's value		800	yes	1	yes
+daytime	DT1	the report's deck, as at hazbrief's value		100	no	0.993405	yes
+daytime	DT1	the report's deck, as at hazbrief's value		800	yes	0.996767	yes
+daytime	DT1	the report's deck, hs at hazbrief's value		100	no	1	yes
+daytime	DT1	the report's deck, hs at hazbrief's value		800	yes	1.00151	yes
+daytime	DT1	the report's deck, xffm at hazbrief's value		100	no	1.00256	yes
+daytime	DT1	the report's deck, xffm at hazbrief's value		800	yes	0.992805	yes
+daytime	DT1	the report's deck, stability at hazbrief's value		100	no	0.977232	no
+daytime	DT1	the report's deck, stability at hazbrief's value		800	yes	0.848773	no
+daytime	DT2	hazbrief's deck		100	no	0.985395	no
+daytime	DT2	hazbrief's deck		800	yes	0.863039	no
+daytime	DT2	hazbrief's deck, cause fields at the report's values	as xffm stability	100	no	0.997156	yes
+daytime	DT2	hazbrief's deck, cause fields at the report's values	as xffm stability	800	yes	1	yes
+daytime	DT2	the report's deck, wms at hazbrief's value		100	no	1	yes
+daytime	DT2	the report's deck, wms at hazbrief's value		800	yes	1	yes
+daytime	DT2	the report's deck, cps at hazbrief's value		100	no	1	yes
+daytime	DT2	the report's deck, cps at hazbrief's value		800	yes	1	yes
+daytime	DT2	the report's deck, tbp at hazbrief's value		100	no	1	yes
+daytime	DT2	the report's deck, tbp at hazbrief's value		800	yes	1	yes
+daytime	DT2	the report's deck, cmedo at hazbrief's value		100	no	0.997156	yes
+daytime	DT2	the report's deck, cmedo at hazbrief's value		800	yes	1	yes
+daytime	DT2	the report's deck, dhe at hazbrief's value		100	no	0.99858	yes
+daytime	DT2	the report's deck, dhe at hazbrief's value		800	yes	1	yes
+daytime	DT2	the report's deck, cpsl at hazbrief's value		100	no	1	yes
+daytime	DT2	the report's deck, cpsl at hazbrief's value		800	yes	1	yes
+daytime	DT2	the report's deck, rhosl at hazbrief's value		100	no	1	yes
+daytime	DT2	the report's deck, rhosl at hazbrief's value		800	yes	1	yes
+daytime	DT2	the report's deck, spb at hazbrief's value		100	no	1	yes
+daytime	DT2	the report's deck, spb at hazbrief's value		800	yes	1	yes
+daytime	DT2	the report's deck, spc at hazbrief's value		100	no	0.994976	yes
+daytime	DT2	the report's deck, spc at hazbrief's value		800	yes	0.990464	yes
+daytime	DT2	the report's deck, ts at hazbrief's value		100	no	1	yes
+daytime	DT2	the report's deck, ts at hazbrief's value		800	yes	1	yes
+daytime	DT2	the report's deck, as at hazbrief's value		100	no	0.996391	yes
+daytime	DT2	the report's deck, as at hazbrief's value		800	yes	0.990464	yes
+daytime	DT2	the report's deck, hs at hazbrief's value		100	no	0.99858	yes
+daytime	DT2	the report's deck, hs at hazbrief's value		800	yes	1	yes
+daytime	DT2	the report's deck, xffm at hazbrief's value		100	no	1.00022	yes
+daytime	DT2	the report's deck, xffm at hazbrief's value		800	yes	0.996602	yes
+daytime	DT2	the report's deck, stability at hazbrief's value		100	no	0.991366	yes
+daytime	DT2	the report's deck, stability at hazbrief's value		800	yes	0.862924	no
+daytime	DT3	hazbrief's deck		100	no	0.989983	no
+daytime	DT3	hazbrief's deck		800	yes	0.983325	no
+daytime	DT3	hazbrief's deck, cause fields at the report's values	as xffm stability	100	no	0.998666	yes
+daytime	DT3	hazbrief's deck, cause fields at the report's values	as xffm stability	800	yes	1.00309	yes
+daytime	DT3	the report's deck, wms at hazbrief's value		100	no	1	yes
+daytime	DT3	the report's deck, wms at hazbrief's value		800	yes	1	yes
+daytime	DT3	the report's deck, cps at hazbrief's value		100	no	1.00133	yes
+daytime	DT3	the report's deck, cps at hazbrief's value		800	yes	1.00103	yes
+daytime	DT3	the report's deck, tbp at hazbrief's value		100	no	1	yes
+daytime	DT3	the report's deck, tbp at hazbrief's value		800	yes	1	yes
+daytime	DT3	the report's deck, cmedo at hazbrief's value		100	no	1.00344	yes
+daytime	DT3	the report's deck, cmedo at hazbrief's value		800	yes	1.00103	yes
+daytime	DT3	the report's deck, dhe at hazbrief's value		100	no	1	yes
+daytime	DT3	the report's deck, dhe at hazbrief's value		800	yes	1	yes
+daytime	DT3	the report's deck, cpsl at hazbrief's value		100	no	1	yes
+daytime	DT3	the report's deck, cpsl at hazbrief's value		800	yes	1	yes
+daytime	DT3	the report's deck, rhosl at hazbrief's value		100	no	1	yes
+daytime	DT3	the report's deck, rhosl at hazbrief's value		800	yes	1	yes
+daytime	DT3	the report's deck, spb at hazbrief's value		100	no	1	yes
+daytime	DT3	the report's deck, spb at hazbrief's value		800	yes	1	yes
+daytime	DT3	the report's deck, spc at hazbrief's value		100	no	0.996553	yes
+daytime	DT3	the report's deck, spc at hazbrief's value		800	yes	0.997939	yes
+daytime	DT3	the report's deck, ts at hazbrief's value		100	no	1	yes
+daytime	DT3	the report's deck, ts at hazbrief's value		800	yes	1	yes
+daytime	DT3	the report's deck, as at hazbrief's value		100	no	0.991776	yes
+daytime	DT3	the report's deck, as at hazbrief's value		800	yes	0.995136	yes
+daytime	DT3	the report's deck, hs at hazbrief's value		100	no	1	yes
+daytime	DT3	the report's deck, hs at hazbrief's value		800	yes	1.00103	yes
+daytime	DT3	the report's deck, xffm at hazbrief's value		100	no	1.00429	yes
+daytime	DT3	the report's deck, xffm at hazbrief's value		800	yes	1.00335	yes
+daytime	DT3	the report's deck, stability at hazbrief's value		100	no	1	yes
+daytime	DT3	the report's deck, stability at hazbrief's value		800	yes	0.98203	no
+daytime	GF1	hazbrief's deck		300	yes	0.871681	no
+daytime	GF1	hazbrief's deck		1000	yes	0.863307	no
+daytime	GF1	hazbrief's deck		3000	yes	0.855654	no
+daytime	GF1	hazbrief's deck, cause fields at the report's values	tav xffm stability	300	yes	1.00058	yes
+daytime	GF1	hazbrief's deck, cause fields at the report's values	tav xffm stability	1000	yes	1	yes
+daytime	GF1	hazbrief's deck, cause fields at the report's values	tav xffm stability	3000	yes	1	yes
+daytime	GF1	the report's deck, spb at hazbrief's value		300	yes	1.00058	yes
+daytime	GF1	the report's deck, spb at hazbrief's value		1000	yes	1	yes
+daytime	GF1	the report's deck, spb at hazbrief's value		3000	yes	1	yes
+daytime	GF1	the report's deck, spc at hazbrief's value		300	yes	1	yes
+daytime	GF1	the report's deck, spc at hazbrief's value		1000	yes	1	yes
+daytime	GF1	the report's deck, spc at hazbrief's value		3000	yes	1.00209	yes
+daytime	GF1	the report's deck, tav at hazbrief's value		300	yes	1.00833	yes
+daytime	GF1	the report's deck, tav at hazbrief's value		1000	yes	1.07397	no
+daytime	GF1	the report's deck, tav at hazbrief's value		3000	yes	1.08938	no
+daytime	GF1	the report's deck, xffm at hazbrief's value		300	yes	0.997668	yes
+daytime	GF1	the report's deck, xffm at hazbrief's value		1000	yes	0.9926	yes
+daytime	GF1	the report's deck, xffm at hazbrief's value		3000	yes	0.998209	yes
+daytime	GF1	the report's deck, stability at hazbrief's value		300	yes	0.858134	no
+daytime	GF1	the report's deck, stability at hazbrief's value		1000	yes	0.795262	no
+daytime	GF1	the report's deck, stability at hazbrief's value		3000	yes	0.785766	no
+daytime	GF2	hazbrief's deck		300	yes	0.918854	no
+daytime	GF2	hazbrief's deck		1000	yes	0.893512	no
+daytime	GF2	hazbrief's deck, cause fields at the report's values	tav xffm stability	300	yes	0.996685	yes
+daytime	GF2	hazbrief's deck, cause fields at the report's values	tav xffm stability	1000	yes	0.998731	yes
+daytime	GF2	the report's deck, spb at hazbrief's value		300	yes	0.996685	yes
+daytime	GF2	the report's deck, spb at hazbrief's value		1000	yes	0.998731	yes
+daytime	GF2	the report's deck, spc at hazbrief's value		300	yes	1	yes
+daytime	GF2	the report's deck, spc at hazbrief's value		1000	yes	1	yes
+daytime	GF2	the report's deck, tav at hazbrief's value		300	yes	1.01464	no
+daytime	GF2	the report's deck, tav at hazbrief's value		1000	yes	1.03146	no
+daytime	GF2	the report's deck, xffm at hazbrief's value		300	yes	0.998747	yes
+daytime	GF2	the report's deck, xffm at hazbrief's value		1000	yes	0.997818	yes
+daytime	GF2	the report's deck, stability at hazbrief's value		300	yes	0.908435	no
+daytime	GF2	the report's deck, stability at hazbrief's value		1000	yes	0.867203	no
+daytime	GF3	hazbrief's deck		300	yes	0.688265	no
+daytime	GF3	hazbrief's deck		1000	yes	0.594219	no
+daytime	GF3	hazbrief's deck		3000	yes	0.552532	no
+daytime	GF3	hazbrief's deck, cause fields at the report's values	tav xffm stability	300	yes	0.998518	yes
+daytime	GF3	hazbrief's deck, cause fields at the report's values	tav xffm stability	1000	yes	0.999066	yes
+daytime	GF3	hazbrief's deck, cause fields at the report's values	tav xffm stability	3000	yes	1	yes
+daytime	GF3	the report's deck, spb at hazbrief's value		300	yes	0.998518	yes
+daytime	GF3	the report's deck, spb at hazbrief's value		1000	yes	0.999066	yes
+daytime	GF3	the report's deck, spb at hazbrief's value		3000	yes	1	yes
+daytime	GF3	the report's deck, spc at hazbrief's value		300	yes	1	yes
+daytime	GF3	the report's deck, spc at hazbrief's value		1000	yes	1	yes
+daytime	GF3	the report's deck, spc at hazbrief's value		3000	yes	1	yes
+daytime	GF3	the report's deck, tav at hazbrief's value		300	yes	1.01653	no
+daytime	GF3	the report's deck, tav at hazbrief's value		1000	yes	1.03236	no
+daytime	GF3	the report's deck, tav at hazbrief's value		3000	yes	1.04763	no
+daytime	GF3	the report's deck, xffm at hazbrief's value		300	yes	1.00185	yes
+daytime	GF3	the report's deck, xffm at hazbrief's value		1000	yes	1.00288	yes
+daytime	GF3	the report's deck, xffm at hazbrief's value		3000	yes	1.00485	yes
+daytime	GF3	the report's deck, stability at hazbrief's value		300	yes	0.672635	no
+daytime	GF3	the report's deck, stability at hazbrief's value		1000	yes	0.570445	no
+daytime	GF3	the report's deck, stability at hazbrief's value		3000	yes	0.524656	no
+stable	BU8	hazbrief's deck		57	no	0.952247	no
+stable	BU8	hazbrief's deck		140	no	0.924057	no
+stable	BU8	hazbrief's deck		400	yes	0.994791	yes
+stable	BU8	hazbrief's deck		800	yes	1.05529	no
+stable	BU8	hazbrief's deck, cause fields at the report's values	xffm stability	57	no	1	yes
+stable	BU8	hazbrief's deck, cause fields at the report's values	xffm stability	140	no	1	yes
+stable	BU8	hazbrief's deck, cause fields at the report's values	xffm stability	400	yes	1	yes
+stable	BU8	hazbrief's deck, cause fields at the report's values	xffm stability	800	yes	1	yes
+stable	BU8	the report's deck, cmedo at hazbrief's value		57	no	1	yes
+stable	BU8	the report's deck, cmedo at hazbrief's value		140	no	1	yes
+stable	BU8	the report's deck, cmedo at hazbrief's value		400	yes	1	yes
+stable	BU8	the report's deck, cmedo at hazbrief's value		800	yes	1	yes
+stable	BU8	the report's deck, spb at hazbrief's value		57	no	1	yes
+stable	BU8	the report's deck, spb at hazbrief's value		140	no	1	yes
+stable	BU8	the report's deck, spb at hazbrief's value		400	yes	1	yes
+stable	BU8	the report's deck, spb at hazbrief's value		800	yes	1	yes
+stable	BU8	the report's deck, spc at hazbrief's value		57	no	1	yes
+stable	BU8	the report's deck, spc at hazbrief's value		140	no	1	yes
+stable	BU8	the report's deck, spc at hazbrief's value		400	yes	1	yes
+stable	BU8	the report's deck, spc at hazbrief's value		800	yes	1	yes
+stable	BU8	the report's deck, xffm at hazbrief's value		57	no	1.03714	no
+stable	BU8	the report's deck, xffm at hazbrief's value		140	no	1.00581	yes
+stable	BU8	the report's deck, xffm at hazbrief's value		400	yes	1.00168	yes
+stable	BU8	the report's deck, xffm at hazbrief's value		800	yes	1.00054	yes
+stable	BU8	the report's deck, stability at hazbrief's value		57	no	0.954125	no
+stable	BU8	the report's deck, stability at hazbrief's value		140	no	0.922536	no
+stable	BU8	the report's deck, stability at hazbrief's value		400	yes	0.994151	yes
+stable	BU8	the report's deck, stability at hazbrief's value		800	yes	1.05801	no
+stable	DT4	hazbrief's deck		100	no	0.999529	yes
+stable	DT4	hazbrief's deck		800	yes	1.1733	no
+stable	DT4	hazbrief's deck, cause fields at the report's values	as xffm stability	100	no	0.998511	yes
+stable	DT4	hazbrief's deck, cause fields at the report's values	as xffm stability	800	yes	1.00051	yes
+stable	DT4	the report's deck, wms at hazbrief's value		100	no	1	yes
+stable	DT4	the report's deck, wms at hazbrief's value		800	yes	1	yes
+stable	DT4	the report's deck, cps at hazbrief's value		100	no	1.00148	yes
+stable	DT4	the report's deck, cps at hazbrief's value		800	yes	1.00051	yes
+stable	DT4	the report's deck, tbp at hazbrief's value		100	no	1	yes
+stable	DT4	the report's deck, tbp at hazbrief's value		800	yes	1	yes
+stable	DT4	the report's deck, cmedo at hazbrief's value		100	no	0.994791	yes
+stable	DT4	the report's deck, cmedo at hazbrief's value		800	yes	1.00051	yes
+stable	DT4	the report's deck, dhe at hazbrief's value		100	no	1	yes
+stable	DT4	the report's deck, dhe at hazbrief's value		800	yes	1	yes
+stable	DT4	the report's deck, cpsl at hazbrief's value		100	no	1	yes
+stable	DT4	the report's deck, cpsl at hazbrief's value		800	yes	1	yes
+stable	DT4	the report's deck, rhosl at hazbrief's value		100	no	1	yes
+stable	DT4	the report's deck, rhosl at hazbrief's value		800	yes	1	yes
+stable	DT4	the report's deck, spb at hazbrief's value		100	no	1	yes
+stable	DT4	the report's deck, spb at hazbrief's value		800	yes	1	yes
+stable	DT4	the report's deck, spc at hazbrief's value		100	no	0.996274	yes
+stable	DT4	the report's deck, spc at hazbrief's value		800	yes	1	yes
+stable	DT4	the report's deck, ts at hazbrief's value		100	no	1	yes
+stable	DT4	the report's deck, ts at hazbrief's value		800	yes	1	yes
+stable	DT4	the report's deck, as at hazbrief's value		100	no	0.997753	yes
+stable	DT4	the report's deck, as at hazbrief's value		800	yes	0.992322	yes
+stable	DT4	the report's deck, hs at hazbrief's value		100	no	1.00148	yes
+stable	DT4	the report's deck, hs at hazbrief's value		800	yes	1.00051	yes
+stable	DT4	the report's deck, xffm at hazbrief's value		100	no	0.999771	yes
+stable	DT4	the report's deck, xffm at hazbrief's value		800	yes	0.997464	yes
+stable	DT4	the report's deck, stability at hazbrief's value		100	no	1.00223	yes
+stable	DT4	the report's deck, stability at hazbrief's value		800	yes	1.17408	no
+stable	TC45	hazbrief's deck		40	no	0.973433	no
+stable	TC45	hazbrief's deck		53	no	0.963419	no
+stable	TC45	hazbrief's deck		72	no	0.948061	no
+stable	TC45	hazbrief's deck		90	no	0.935597	no
+stable	TC45	hazbrief's deck		112	no	0.922304	no
+stable	TC45	hazbrief's deck		158	no	0.908553	no
+stable	TC45	hazbrief's deck		250	yes	0.882822	no
+stable	TC45	hazbrief's deck		335	yes	0.863112	no
+stable	TC45	hazbrief's deck		472	yes	0.865872	no
+stable	TC45	hazbrief's deck, cause fields at the report's values	xffm stability	40	no	1	yes
+stable	TC45	hazbrief's deck, cause fields at the report's values	xffm stability	53	no	1	yes
+stable	TC45	hazbrief's deck, cause fields at the report's values	xffm stability	72	no	1	yes
+stable	TC45	hazbrief's deck, cause fields at the report's values	xffm stability	90	no	1	yes
+stable	TC45	hazbrief's deck, cause fields at the report's values	xffm stability	112	no	1	yes
+stable	TC45	hazbrief's deck, cause fields at the report's values	xffm stability	158	no	1	yes
+stable	TC45	hazbrief's deck, cause fields at the report's values	xffm stability	250	yes	1	yes
+stable	TC45	hazbrief's deck, cause fields at the report's values	xffm stability	335	yes	1	yes
+stable	TC45	hazbrief's deck, cause fields at the report's values	xffm stability	472	yes	1	yes
+stable	TC45	the report's deck, xffm at hazbrief's value		40	no	0.998213	yes
+stable	TC45	the report's deck, xffm at hazbrief's value		53	no	0.999449	yes
+stable	TC45	the report's deck, xffm at hazbrief's value		72	no	1.00082	yes
+stable	TC45	the report's deck, xffm at hazbrief's value		90	no	0.999927	yes
+stable	TC45	the report's deck, xffm at hazbrief's value		112	no	0.998898	yes
+stable	TC45	the report's deck, xffm at hazbrief's value		158	no	1.00314	yes
+stable	TC45	the report's deck, xffm at hazbrief's value		250	yes	0.996145	yes
+stable	TC45	the report's deck, xffm at hazbrief's value		335	yes	0.997812	yes
+stable	TC45	the report's deck, xffm at hazbrief's value		472	yes	0.998912	yes
+stable	TC45	the report's deck, stability at hazbrief's value		40	no	0.974127	no
+stable	TC45	the report's deck, stability at hazbrief's value		53	no	0.963224	no
+stable	TC45	the report's deck, stability at hazbrief's value		72	no	0.94911	no
+stable	TC45	the report's deck, stability at hazbrief's value		90	no	0.935769	no
+stable	TC45	the report's deck, stability at hazbrief's value		112	no	0.922367	no
+stable	TC45	the report's deck, stability at hazbrief's value		158	no	0.911283	no
+stable	TC45	the report's deck, stability at hazbrief's value		250	yes	0.883432	no
+stable	TC45	the report's deck, stability at hazbrief's value		335	yes	0.8666	no
+stable	TC45	the report's deck, stability at hazbrief's value		472	yes	0.872174	no
+stable	TC47	hazbrief's deck		50	no	0.991731	yes
+stable	TC47	hazbrief's deck		90	no	0.989931	no
+stable	TC47	hazbrief's deck		212	yes	1.02315	no
+stable	TC47	hazbrief's deck		250	yes	1.02239	no
+stable	TC47	hazbrief's deck		335	yes	1.01734	no
+stable	TC47	hazbrief's deck		472	yes	1.01003	no
+stable	TC47	hazbrief's deck, cause fields at the report's values	xffm stability	50	no	1	yes
+stable	TC47	hazbrief's deck, cause fields at the report's values	xffm stability	90	no	1	yes
+stable	TC47	hazbrief's deck, cause fields at the report's values	xffm stability	212	yes	1	yes
+stable	TC47	hazbrief's deck, cause fields at the report's values	xffm stability	250	yes	1	yes
+stable	TC47	hazbrief's deck, cause fields at the report's values	xffm stability	335	yes	1	yes
+stable	TC47	hazbrief's deck, cause fields at the report's values	xffm stability	472	yes	1	yes
+stable	TC47	the report's deck, xffm at hazbrief's value		50	no	1.00134	yes
+stable	TC47	the report's deck, xffm at hazbrief's value		90	no	1.00131	yes
+stable	TC47	the report's deck, xffm at hazbrief's value		212	yes	1.01563	no
+stable	TC47	the report's deck, xffm at hazbrief's value		250	yes	1.01407	no
+stable	TC47	the report's deck, xffm at hazbrief's value		335	yes	1.01189	no
+stable	TC47	the report's deck, xffm at hazbrief's value		472	yes	1.00665	yes
+stable	TC47	the report's deck, stability at hazbrief's value		50	no	0.989749	no
+stable	TC47	the report's deck, stability at hazbrief's value		90	no	0.988634	no
+stable	TC47	the report's deck, stability at hazbrief's value		212	yes	1.00154	yes
+stable	TC47	the report's deck, stability at hazbrief's value		250	yes	1.00508	yes
+stable	TC47	the report's deck, stability at hazbrief's value		335	yes	1.00708	yes
+stable	TC47	the report's deck, stability at hazbrief's value		472	yes	1.00631	yes

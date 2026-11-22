@@ -1,0 +1,46 @@
+# HB-216 item 1 and item 2: every held sentence docs/evidence/hb216/planning_uses.md cites beyond HB-156's
+# claims_checked.md, with the held file it is read from. Checked against the held bytes by HB-156's own tool:
+#   uv run python the HB-156 evidence (held privately) docs/evidence/hb216/quotes.yaml
+# Output: docs/evidence/hb216/locate_quotes.txt (PDF page and sha256 of each file read).
+# The worst-case requirement itself (40 CFR 68.20, 68.25(a), 68.165(a); 42 U.S.C. 7412(r)(7)(B)) is HB-156's
+# (docs/evidence/hb156/quotes.yaml C1-a to C1-e) and is not repeated here.
+- id: P1-a  # EPCRA section 303(a), 42 U.S.C. 11003(a)
+  file: corpus/raw/usc-42-11003-epcra-303-2024.pdf
+  quote: >-
+    Each local emergency planning committee shall complete preparation of an emergency plan in accordance with this
+    section
+- id: P1-b  # EPCRA section 303(c)(5)
+  file: corpus/raw/usc-42-11003-epcra-303-2024.pdf
+  quote: >-
+    (5) Methods for determining the occurrence of a release, and the area or population likely to be affected by
+    such release.
+- id: P1-c  # EPCRA section 303(c)(1), the transport routes
+  file: corpus/raw/usc-42-11003-epcra-303-2024.pdf
+  quote: >-
+    identification of routes likely to be used for the transportation of substances on the list of extremely
+    hazardous substances
+- id: P1-d  # EPCRA section 303(c)(9)
+  file: corpus/raw/usc-42-11003-epcra-303-2024.pdf
+  quote: (9) Methods and schedules for exercising the emergency plan.
+- id: P2-a  # the 2024 final rule's count, section I.C (Costs and Benefits)
+  file: corpus/raw/epa-rmp-sccap-final-rule-2024-prepub.pdf
+  quote: >-
+    Approximately 11,740 facilities have filed current RMPs with EPA and are potentially affected by the rule.
+- id: P2-b  # the 2026 proposed rule's count for 2023 (91 FR 8976), a later and smaller figure
+  file: corpus/raw/fr-2026-03633-rmp-common-sense-proposed.pdf
+  quote: >-
+    with 147 accidents (within 12,396 registered facilities facilities) in 2014 to 81 accidents (within 11,510
+    registered facilities) in 2023.
+# Item 3: the nearest held text on zoning. Neither is a source for land-use planning near hazardous facilities
+# (planning_uses.md, "Zoning").
+- id: Z-a  # 2024 final rule, comments on the siting requirement
+  file: corpus/raw/epa-rmp-sccap-final-rule-2024-prepub.pdf
+  quote: >-
+    One of the commenters noted that the proposed requirements should be narrowly interpreted to preserve local
+    zoning authority.
+- id: Z-b  # 2024 final rule, the siting requirement
+  file: corpus/raw/epa-rmp-sccap-final-rule-2024-prepub.pdf
+  quote: >-
+    while EPA has in the past discussed the potential for requiring minimal setbacks and other specific location
+    restrictions, notwithstanding local zoning, the siting requirement in this rule does not contain such a
+    restrictions on location.

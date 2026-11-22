@@ -1,0 +1,15 @@
+# The models image's build context (deploy/models/Dockerfile): BuildKit reads this file in place
+# of the root .dockerignore when the build names that Dockerfile. Everything is left out except
+# the files and directories the build copies; the SLAB archive arrives by the `slabzip` named
+# context and SCICHEM's source by the `scichemsrc` one (HB-167).
+*
+!src/hazbrief/brief/slab_driver.py
+!docs/evidence/hb102/compare_outputs.py
+!deploy/models/check_cases.py
+!deploy/models/scichem/patches/
+!deploy/models/scichem/build_engine.sh
+!deploy/models/scichem/NOTICE
+!src/hazbrief/brief/scichem_driver.py
+!deploy/models/scichem/check/check_engine.py
+!deploy/models/scichem/check/intel_reference_csxday_base.smp.gz
+!deploy/models/scichem/check/case/

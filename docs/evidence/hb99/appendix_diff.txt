@@ -1,0 +1,108 @@
+csx-point-of-rocks-crossing: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 39.273881, -77.539906)  2024  current  d1ae69b66ce4
+csx-point-of-rocks-day: brief.html unchanged; 0 appendix line(s) changed
+csx-point-of-rocks-night: brief.html unchanged; 0 appendix line(s) changed
+guide-111-wilson-bridge: brief.html unchanged; 5 appendix line(s) changed
+  [footprint row]
+    - ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (UN1977; 38.7934, -77.037)  10/01/2025  stale  7397979c3016
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (38.7934, -77.037)  2024  current  135d0e96c62b
+  [footprint row, moved by hash order]
+    - 
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (38.7934, -77.037)  2024  current  135d0e96c62b
+  [footprint row, moved by hash order]
+    - ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (UN1977; 38.7934, -77.037)  10/01/2025  stale  7397979c3016
+    + 
+  [footprint row, moved by hash order]
+    - 
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (38.7934, -77.037)  2024  current  135d0e96c62b
+  [footprint row, moved by hash order]
+    - ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (UN1977; 38.7934, -77.037)  10/01/2025  stale  7397979c3016
+    + 
+i495-wilson-bridge-address: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 38.793434, -77.039962)  2024  current  d1ae69b66ce4
+i495-wilson-bridge-cross-streets: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 38.796317, -77.043217)  2024  current  d1ae69b66ce4
+i495-wilson-bridge-day: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 38.7934, -77.037)  2024  current  d1ae69b66ce4
+i495-wilson-bridge-night: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 38.7934, -77.037)  2024  current  d1ae69b66ce4
+i81-md-pa-line-day: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 39.722, -77.724)  2024  current  d1ae69b66ce4
+i81-md-pa-line-milepost: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 39.726378, -77.72688)  2024  current  d1ae69b66ce4
+i81-md-pa-line-night: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 39.722, -77.724)  2024  current  d1ae69b66ce4
+i83-md-pa-line-day: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 39.722, -76.661)  2024  current  d1ae69b66ce4
+i83-md-pa-line-night: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 39.722, -76.661)  2024  current  d1ae69b66ce4
+placard-2-3-i81: brief.html unchanged; 3 appendix line(s) changed
+  [footprint row]
+    - ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (propane; 39.722, -77.724)  10/01/2025  stale  d01ce38b1a8d
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (39.722, -77.724)  2024  current  e2160cc2de15
+  [footprint row]
+    - ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (propane; 39.722, -77.724)  10/01/2025  stale  d01ce38b1a8d
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (39.722, -77.724)  2024  current  e2160cc2de15
+  [footprint row]
+    - ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (UN1075; 39.722, -77.724)  10/01/2025  stale  c1daa5f3360a
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (39.722, -77.724)  2024  current  e2160cc2de15
+propane-unresolved-i81: brief.html unchanged; 1 appendix line(s) changed
+  [footprint row]
+    - ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (UN1075; 39.722, -77.724)  10/01/2025  stale  c1daa5f3360a
+    + ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (propane; 39.722, -77.724)  10/01/2025  stale  d01ce38b1a8d
+scranton-i81-nws-wind: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 41.41004, -75.665885)  2024  current  d1ae69b66ce4
+scranton-i81-stated-wind: brief.html unchanged; 1 appendix line(s) changed
+  [request row]
+    - ERG 2024  material response guidance (UN1017; 39.2756, -77.5394)  2024  current  d1ae69b66ce4
+    + ERG 2024  material response guidance (UN1017; 41.41004, -75.665885)  2024  current  d1ae69b66ce4
+un1057-fire-unresolved-i81: brief.html unchanged; 3 appendix line(s) changed
+  [footprint row]
+    - ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (UN1075; 39.722, -77.724)  10/01/2025  stale  c1daa5f3360a
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (UN1057; 39.722, -77.724)  2024  current  bf8926451bef
+  [footprint row]
+    - ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (UN1075; 39.722, -77.724)  10/01/2025  stale  c1daa5f3360a
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (UN1057; 39.722, -77.724)  2024  current  bf8926451bef
+  [footprint row]
+    - ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request  protective action footprint (UN1075; 39.722, -77.724)  10/01/2025  stale  c1daa5f3360a
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (UN1057; 39.722, -77.724)  2024  current  bf8926451bef
+un1075-fire-i81: brief.html unchanged; 0 appendix line(s) changed
+un1203-i83: brief.html unchanged; 0 appendix line(s) changed
+un1746-small-i81-land: brief.html unchanged; 0 appendix line(s) changed
+un1746-small-i81-water: brief.html unchanged; 4 appendix line(s) changed
+  [footprint row]
+    - ERG 2024; NOAA solar equations (astral); request  protective action footprint (UN1746; 39.722, -77.724)  2024  current  ed8c8535ce74
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (UN1746; 39.722, -77.724)  2024  current  c7123f02e334
+  [footprint row]
+    - ERG 2024; NOAA solar equations (astral); request  protective action footprint (UN1746; 39.722, -77.724)  2024  current  ed8c8535ce74
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (UN1746; 39.722, -77.724)  2024  current  c7123f02e334
+  [footprint row, moved by hash order]
+    - 
+    + ERG 2024; NOAA solar equations (astral); request  protective action footprint (UN1746; 39.722, -77.724)  2024  current  c7123f02e334
+  [footprint row, moved by hash order]
+    - ERG 2024; NOAA solar equations (astral); request  protective action footprint (UN1746; 39.722, -77.724)  2024  current  ed8c8535ce74
+    + 
+un1977-wilson-bridge: brief.html unchanged; 0 appendix line(s) changed
+totals: footprint row 10, footprint row, moved by hash order 6, request row 12

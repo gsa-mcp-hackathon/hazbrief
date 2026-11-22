@@ -1,0 +1,79 @@
+# The fire fixtures (DN-021 sections 3 and 7; HB-129 Part A step 1, as ADDENDUM-01 section 1 amends it). AUTHORED by
+# the scenario author. Read by scenario_manifest.py (a build tool held privately) and scripts/build_scenario_briefs.py, which carry each
+# `fires` block into fixtures/scenarios.yaml and docs/briefs/<id>/scenario.json beside the server's `incident`, as
+# scenario_releases.yaml's blocks are carried. The server never sees a `fire` block.
+#
+# `fires`: the smoke client's inputs the brief's weather does not give (hazbrief.brief.vsmoke_driver.Inputs):
+# the PM2.5 emission rate and the heat release. DN-021 section 10 says the fixture uses "the manual's example until one
+# lands". HB-129 left both NOT SUPPLIED while the manual was not held. HB-150: the operator's download of the manual
+# (usfs-lavdas-1996-vsmoke-users-manual) is held, so each is {value, source: "<doc_id> p. <page>, the manual's
+# example"}, read by eye from the scanned page (no text layer; docs/evidence/hb150/vsmoke_manual_example.json). The
+# smoke layer itself is a future use (HB-150 Part C): no held open engine builds, so no run uses them yet.
+#
+# Wind, stability and mixing height are carried as every other fixture carries weather: the scenario's wind block and
+# the NWS exchanges recorded at the fixture's point and as-given time (fixtures/exchanges/, keyed by URL). Both fires
+# sit at a point and time an existing fixture recorded, so their weather replays.
+#
+# `scenarios`: fixtures the server takes no call for. A brush fire has no load: the ERG tools take exactly one of an ID
+# number, a placard or a guide number (hazbrief.models.IncidentInput), and vegetation has none of them. Its channels
+# that take a load are `not_run` with the reason, and so are the three that read the footprint as their area.
+# scripts/build_scenario_briefs.py builds and checks its brief beside the others. The burning tank truck is an ERG
+# incident and is in the scenario manifest (test_build_ics_201.py (a test held privately) SCENARIOS, un1203-fire-i83).
+
+fires:
+  # A burning gasoline tank truck (UN1203, Guide 128) on I-83 at the Maryland-Pennsylvania line, daytime: the point
+  # and as-given time of un1203-i83, with fire involved.
+  un1203-fire-i83:
+    kind: tank truck fire
+    emission_rate_g_s: &example_pm
+      value: 47.0
+      source: >-
+        usfs-lavdas-1996-vsmoke-users-manual p. 121, the manual's example (Appendix III echo, period 1: EMTQPM 47 g/s,
+        total particulate matter)
+    heat_release_w: &example_heat
+      value: 590000000.0
+      source: >-
+        usfs-lavdas-1996-vsmoke-users-manual p. 121, the manual's example (Appendix III echo, period 1: EMTQH 590 MW)
+    note: &manual_example >-
+      the VSMOKE manual's worked example, as DN-021 section 10 directs until a held fuel-consumption source lands; not
+      this fire's own figures (HB-150, Issue f7196297; the page image is docs/evidence/hb150/vsmoke_manual-121.png)
+  # A brush fire beside the Chesapeake and Ohio Canal at Point of Rocks, MD, daytime: the point and as-given time of
+  # csx-point-of-rocks-day. The canal's name is the USGS 3DHP's own, recorded inside that fixture's footprint
+  # (fixtures/exchanges/usgs_3dhp/6d15fabd1330e5270662365e051feef97a0bd438ed58e4f7cfdb7dbe73ea6b26.json, gnisidlabel
+  # "Chesapeake and Ohio Canal").
+  brush-fire-co-canal-point-of-rocks:
+    kind: brush fire
+    emission_rate_g_s: *example_pm
+    heat_release_w: *example_heat
+    note: *manual_example
+
+scenarios:
+  - id: brush-fire-co-canal-point-of-rocks
+    origin: HB-129
+    place: Chesapeake and Ohio Canal at Point of Rocks, MD
+    incident:
+      container: unknown
+      location:
+        latitude: 39.2756
+        longitude: -77.5394
+      incident_time: '2026-10-21T14:00:00-04:00'
+      fire_involved: true
+    wind:
+      direction_deg_from: 270
+      speed_kmh: 13
+      observed_at: '2026-10-20T13:40:00-04:00'
+      source: worked example wind
+    as_given: '2026-10-21T14:00:00-04:00'
+    not_run:
+      protective_action_footprint: &no_load >-
+        a brush fire carries no ID number, placard or guide number, and the ERG tools take exactly one (DN-021 section 7)
+      assess_incident: *no_load
+      material_response_guidance: *no_load
+      build_ics_201: *no_load
+      # the three tools that take the footprint as their area: declared here rather than skipped, so the reason is
+      # stated and no wall-clock attempt time is printed (orchestrator.yaml degraded_label)
+      population_at_risk: &no_area >-
+        it counts inside the ERG footprint, which a brush fire does not have; the smoke overlay counts by AQI band once
+        the smoke layer is drawn (Issue 69cc2af7)
+      facilities_in_footprint: *no_area
+      receiving_hospitals: *no_area

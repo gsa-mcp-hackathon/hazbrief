@@ -1,0 +1,42 @@
+# HB-209 Part C item 6: the settings of the HB-209 evidence (held privately).
+#
+# The method is Hanna, Strimaitis and Chang (1993), hanna-strimaitis-chang-1993-hazard-response-modeling-uncertainty-vol2,
+# section IV.A, report p. 118, equation 34: "Our software employs bootstrap resampling methods to estimate the standard
+# deviation, σ, of the variable in question. Then the 95 percent confidence intervals are calculated using the
+# student-t procedure: 95% confidence limits = mean ± t95 σ (n/(n-1))^1/2 where n is the number of data pairs."
+# HB-176 implemented it (the HB-176 evidence (held privately) `limits`, `t_quantile`); this tool imports those two
+# functions unchanged. A difference between two models is significant at 95 percent where the limits of the difference
+# in ln MG exclude zero (the same section: "whether the difference in the geometric variance between pairs of models is
+# significantly different from zero, at the 95 percent confidence level"; HB-176 applied it to ln MG).
+
+# Bootstrap resamples, as HB-176's protocol section 2 set them; the seed is this task's number.
+boot_n: 1000
+boot_seed: 209
+# The arcs the 17-model comparison's statistic uses (Table 7 p. 26): 0.2, 0.5, 1, 2 and 5 km. The 11 km arc is printed
+# beside the others in trial7_arcs.tsv and enters no statistic.
+statistic_arcs_km: [0.2, 0.5, 1, 2, 5]
+# The models, in print order. `from` names where each run's arc maxima are read.
+models:
+  - id: HPAC_complex
+    label: "HPAC, complex source (17-model Table 5; Simpson Table 4)"
+    from: docs/evidence/hb209/simpson_hpac_trial7.yaml
+  - id: HPAC_simple
+    label: "HPAC, simple source (Simpson Table 3)"
+    from: docs/evidence/hb209/simpson_hpac_trial7.yaml
+  - id: ALOHA
+    label: "ALOHA (17-model Table 5)"
+    from: docs/evidence/hb199/trial7.yaml
+  - id: P_scichem
+    label: "hazbrief, SCICHEM (the route's run)"
+    from: docs/evidence/hb206/trial7_scores.tsv
+  - id: P_slab_rh20
+    label: "hazbrief, SLAB, RH 20 percent (the route's run)"
+    from: docs/evidence/hb206/trial7_scores.tsv
+  - id: P_slab_rh80
+    label: "hazbrief, SLAB, RH 80 percent (the route's run)"
+    from: docs/evidence/hb206/trial7_scores.tsv
+# the runs trial7_arrival.tsv prints, as HB-206's arrival rows name them (HPAC: Simpson Table 7, MWG StabE)
+arrival_models: [HPAC, P_scichem, P_slab_rh20]
+# hazbrief's runs, each compared with each accepted tool's runs by the difference in ln MG
+hazbrief: [P_scichem, P_slab_rh20, P_slab_rh80]
+tools: [HPAC_complex, HPAC_simple, ALOHA]

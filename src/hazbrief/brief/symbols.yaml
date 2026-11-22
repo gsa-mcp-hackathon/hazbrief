@@ -1,0 +1,105 @@
+# The map's marker symbols (HB-152; HBD-315: the free FGDC HSWG set where its documentation maps a glyph, hazbrief's
+# own labelled symbol where it does not; operator decision of 2026-11-09, no paid standard).
+#
+# The set is the FGDC Homeland Security Working Group's Emergency Response Symbology v2.20, held as its text-encoded
+# TrueType fonts in corpus/inbox/ersSymbolsVersion0202/ersV2txt/ (HB-150; gitignored, held in place). A glyph is
+# named only where an FGDC reference page names it: the five pages were fetched at rung 1 by HB-152
+# (docs/evidence/hb152/fetch_sources.yaml, fetch_log.jsonl; read into ref_glyphs.tsv: page, row, name, key stroke,
+# definition). Every font's name table says the symbols are "a Government work, and therefore not subject to
+# copyright protection" and "a draft prototype" that a product must call so (docs/evidence/hb150/glyph_notes.md):
+# `legend_line` says it in the layer control, and every FGDC symbol's popup row says it.
+#
+# scripts/build_symbols.py reads this file and the fonts and writes one SVG per class into `svg_dir` (committed; the
+# page embeds them and loads no font): the family's background shape (key `!`, "the background fill shape" on every
+# reference page) filled with the layer's colour, and the class's glyph (which carries its own frame) in white or
+# black, whichever contrasts more with that colour (layers.ink_for). An `own: true` class draws the family's
+# background, its frame glyph (key `#`) and `own_path`, a pictogram hazbrief drew itself in SVG coordinates of the
+# font's units (y down; the Operations background's centre is 604,-603), and says so wherever it is shown.
+#
+# Keys: `family` names a font family below (its `page` is the reference page's doc_id); `key` is the key stroke the
+# page gives; `row` is the page's row number (an asterisk marks a changed or new row, verbatim); `name` is the page's
+# symbol name; `row_class` is the page's own marking of the row (verbatim; the pages do not define these classes
+# beyond "Changed or New symbols are marked"). `verified: true` means the name,
+# the key and the page row were read from the held page and the glyph from the held font.
+# tests/test_hb152_symbols.py holds that every class has an SVG and every drawn marker of a class references it.
+standard:
+  title: "FGDC HSWG Emergency Response Symbology v2.20"
+  publisher: "Federal Geographic Data Committee, Homeland Security Working Group"
+  held: true
+  fonts_dir: corpus/inbox/ersSymbolsVersion0202/ersV2txt
+  svg_dir: src/hazbrief/brief/static/symbols
+  # the fonts' four frames, "Stage 01" to "Stage 04" (HB-150 glyph_notes.md): S2 (a double ring) is the default.
+  # What a stage signifies is not held; the Incidents font has one file and no stage.
+  stage: S2
+  # the marker's drawn size on both map branches, readable at the first screen's zoom
+  size_px: 28
+  # the legend's size beside each layer toggle
+  legend_px: 18
+  # padding around the background shape, in font units, so the frame's stroke is not clipped
+  svg_pad_units: 8
+  # the committed SVGs' colours; the page replaces both per layer (layers.symbol_svg)
+  frame_default: "#4b5563"
+  ink_default: "#ffffff"
+  legend_line: "Symbols: FGDC HSWG Emergency Response Symbology v2.20, a draft prototype (Government work)."
+  fgdc_line: "{name}: FGDC HSWG Emergency Response Symbology v2.20, {family} symbol, key stroke {key} (FGDC {family} reference page, row {row}); a draft prototype"
+  own_line: "{name}: hazbrief's own symbol; no FGDC glyph is named for this class"
+  # a layer row's symbol entry in the layer control (an own-symbol class shows `own_line` instead)
+  legend_entry: "{name} (FGDC {family}, key stroke {key})"
+families:
+  Operations:
+    font: "ERS_v2_Operations_{stage}_txt.ttf"
+    page: fgdc-hswg-ref-operations
+    background: "!"
+    frame: "#"
+  Infrastructures:
+    font: "ERS_v2_Infrastructures_{stage}_txt.ttf"
+    page: fgdc-hswg-ref-infrastructures
+    background: "!"
+    frame: "#"
+  Incidents:
+    font: "ERS_v2_Incidents_txt.ttf"
+    page: fgdc-hswg-ref-incidents
+    background: "!"
+    frame: "#"
+# a layer holding more than one kind of facility: each kind's class (layers._facility_points)
+feature_kinds:
+  hospitals: care_hospital
+  nursing_homes: care_nursing_home
+classes:
+  # the incident (the spill point the footprint is drawn from): the Incidents theme symbol
+  spill: {family: Incidents, key: "U", name: "Hazardous Material Incident", row: "23", row_class: symbolKept, verified: true}
+  # facilities in the footprint (facilities_in_footprint)
+  schools: {family: Infrastructures, key: "C", name: "Schools", row: "31", row_class: symbolKept, verified: true}
+  # the care layer holds two kinds; each feature draws its own kind's symbol (a hospital is not a nursing home)
+  care_hospital: {family: Operations, key: "F", name: "Hospital", row: "8", row_class: symbolConsider, verified: true}
+  care_nursing_home: {family: Infrastructures, key: "^", name: "Elder Care", row: "53", row_class: symbolConsider, verified: true}
+  # fire, EMS and police in one layer, with no generic glyph on any page: hazbrief's own (a beacon light)
+  emergency_services:
+    family: Operations
+    own: true
+    name: "Emergency services"
+    verified: true
+    own_path: "M404 -393L804 -393L804 -453L404 -453ZM464 -453A140 140 0 0 1 744 -453ZM584 -643L624 -643L624 -803L584 -803ZM400 -730L428 -758L508 -678L480 -650ZM808 -730L780 -758L700 -678L728 -650ZM344 -573L344 -533L444 -533L444 -573ZM864 -573L864 -533L764 -533L764 -573Z"
+  receiving_hospitals: {family: Operations, key: "F", name: "Hospital", row: "8", row_class: symbolConsider, verified: true}
+  # the services outside the footprint (HB-142R item 1), one class per row of `derive.nearby.classes`
+  nearby_fire: {family: Operations, key: "Y", name: "Fire Station", row: "27", row_class: symbolConsider, verified: true}
+  # the station-level EMS symbol; HB-150 listed A, the Emergency Medical Operation theme symbol
+  nearby_ems: {family: Operations, key: "B", name: "EMT Station Locations", row: "4", row_class: symbolConsider, verified: true}
+  nearby_police: {family: Operations, key: "g", name: "Police", row: "35", row_class: symbolKept, verified: true}
+  nearby_hospital: {family: Operations, key: "F", name: "Hospital", row: "8", row_class: symbolConsider, verified: true}
+  # the roadblock candidates (HB-142R): the page's Traffic Control Point. Its definition is narrower ("absolute
+  # signals controlled by an operator to regulate and maintain transportation flow"); it is the only traffic-control
+  # glyph any page names, so it is drawn and its name is shown as the page gives it.
+  roadblock_candidates: {family: Infrastructures, key: "q", name: "Traffic Control Point", row: "71", row_class: symbolConsider, verified: true}
+  # the siting points (Issue 2924654f item 1): built now, drawn by no layer until the siting task
+  command_post: {family: Operations, key: "N", name: "Emergency Incident Command Center", row: "16", row_class: symbolKept, verified: true}
+  triage: {family: Operations, key: "K", name: "Triage", row: "13", row_class: symbolKept, verified: true}
+  staging: {family: Operations, key: "R", name: "Emergency Staging Areas", row: "20", row_class: symbolConsider, verified: true}
+  evacuation_point: {family: Operations, key: "M", name: "Emergency Collection Evacuation Point", row: "*15", row_class: symbolChanged, verified: true}
+  # no page names a decontamination symbol: hazbrief's own (a shower head over falling water), drawn by no layer yet
+  decontamination:
+    family: Operations
+    own: true
+    name: "Decontamination"
+    verified: true
+    own_path: "M584 -853L624 -853L624 -763L584 -763ZM464 -683L744 -683L674 -763L534 -763ZM482 -593A22 22 0 1 0 526 -593A22 22 0 1 0 482 -593ZM582 -593A22 22 0 1 0 626 -593A22 22 0 1 0 582 -593ZM682 -593A22 22 0 1 0 726 -593A22 22 0 1 0 682 -593ZM532 -503A22 22 0 1 0 576 -503A22 22 0 1 0 532 -503ZM632 -503A22 22 0 1 0 676 -503A22 22 0 1 0 632 -503ZM482 -413A22 22 0 1 0 526 -413A22 22 0 1 0 482 -413ZM582 -413A22 22 0 1 0 626 -413A22 22 0 1 0 582 -413ZM682 -413A22 22 0 1 0 726 -413A22 22 0 1 0 682 -413Z"

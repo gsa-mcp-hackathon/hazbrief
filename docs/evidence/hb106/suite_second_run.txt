@@ -1,0 +1,8 @@
+  /Users/brock/GitHub/hazbrief-mcp/.claude/worktrees/fluffy-inventing-engelbart/scripts/agent_eval.py:172: FastMCPDeprecationWarning: Accessing `Tool.inputSchema` is deprecated; MCP SDK v2 renamed this field to `input_schema`. Update your code to read `.input_schema` instead.
+    {"name": t.name, "description": t.description, "schema": t.inputSchema}
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_evaluation_document.py (a test held privately)::test_the_suite_row_cites_the_latest_completed_gate_and_its_counts
+1 failed, 2032 passed, 9 skipped, 12 deselected, 13 xfailed, 1 warning in 708.48s (0:11:48)
+EXIT 1

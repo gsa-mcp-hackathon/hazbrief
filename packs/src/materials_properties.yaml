@@ -1,0 +1,207 @@
+# HB-109: the thermodynamics a source term needs and the level of concern per DN-001 class, each value read from a held
+# page by `scripts/build_packs.py` (build_materials_properties). DN-020 section 2 item 4 and section 3.1; DN-020
+# ADDENDUM-01 section 2 items 2 and 4; HB-109 ADDENDUM-00.
+#
+# Nothing here is a value. Each entry names where a value is printed (doc, and the pattern or table that finds it); the
+# build reads the number from the held page, verifies the pattern matches exactly once, and refuses otherwise. A field
+# with no held page carries `not_held:` and the reason, which the pack prints; it is never defaulted.
+#
+# Read order (HB-109 step 3): the CAMEO Chemicals datasheet first (NOAA, public domain), the NIST Chemistry WebBook page
+# second (reference-only: the pack carries its numbers with their units and nothing longer; the licence gate below).
+# Where both print a value, the CAMEO value is taken and the NIST rows are its cross-check.
+#
+# Selection rules (code, not per-material choices; build_packs.py `_nist_quantity` and `_nearest_row`):
+# - A NIST quantity printed in several rows (Tc, Pc, Tboil): the first printed row that agrees with at least one other
+#   printed row within the larger of their stated uncertainties (or half a unit in the last printed digit where none is
+#   stated). A single row is taken as printed. Rows of which no two agree are recorded `not_held` and disputed.
+# - A tabulated value at a temperature (enthalpy of vaporisation, gas heat capacity): the printed row nearest the
+#   normal boiling point; a tie goes to the first printed.
+# - A correlation (Antoine, Shomate): every row the page prints, each with its stated range; none is extrapolated.
+#
+# HB-124: the liquid heat capacity and liquid density, and an enthalpy of vaporisation the species page does not print,
+# are read third, from the NIST WebBook's Thermophysical Properties of Fluid Systems saturation table (`nist_fluid`;
+# reference-only), at the row nearest the boiling point (the tabulated-value rule above). Chlorine, which Fluid Systems
+# does not cover, reads them from the SLAB user's guide's chlorine test case (`slab_test_input`), marked
+# `model-test-input`. Every held value names its `source_tier` (below).
+#
+# HB-126: the vapour heat capacity (SLAB's CPS, `vapour_heat_capacity_j_mol_k`) the same way: the species page's
+# tabulated gas heat capacity first (propane prints one), then the `Cp (v, J/mol*K)` cell of the same Fluid Systems row
+# the liquid fields come from, then the SLAB test input's CPS for chlorine (Table 2 its cross-check). A Shomate row is
+# kept as printed but is not evaluated outside its range, so it no longer counts the field held (`required_fields`).
+
+schema: hb126.1
+
+# The licence gate (review L5-10; DN-020 section 2 item 4): a receipt quoted from a `reference-only` source is the number
+# and its unit only. Every whitespace-separated token must be a printed number or one of these; at least one number.
+reference_only_quote:
+  units: ["K", "bar", "kJ/mol", "J/mol*K", "g/mol", "mol/l"]
+  separators: ["|", "to", "±"]
+
+# What kind of page a held value comes from (HB-124 step 5; DN-020 ADDENDUM-02: a value is labelled with where it came
+# from, and a test input is not a benchmark-validated property). The pack's ThermoValue.source_tier takes these keys.
+source_tiers:
+  reference-table: "a compiled property table: the NIST Chemistry WebBook's species and Fluid Systems pages, CAMEO Chemicals"
+  model-test-input: "a value a program's documentation prints as a test-case input (the SLAB user's guide's chlorine case), not a benchmark-validated property"
+
+# Unit definitions, not substance properties: the pack states the values in K and J/mol (HB-109 step 1) and records the
+# printed value beside each converted one (`as_printed`).
+units:
+  fahrenheit:
+    offset_f: 32.0
+    f_per_k: 1.8
+    offset_k: 273.15
+    conversion: "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)"
+  kilojoule:
+    scale: 1000.0
+    conversion: "1 kJ/mol = 1000 J/mol (the SI prefix kilo)"
+
+# The forms each NIST correlation is printed in; the build verifies each form text on the material's page.
+correlations:
+  antoine:
+    form: "log10(P) = A − (B / (T + C)); P = vapor pressure (bar); T = temperature (K)"
+    form_quotes: ["log10(P) = A − (B / (T + C))", "P = vapor pressure (bar)", "T = temperature (K)"]
+    header: "Temperature (K) | A | B | C | Reference | Comment"
+  shomate:
+    form: "Cp° = A + B*t + C*t2 + D*t3 + E/t2; Cp = heat capacity (J/mol*K); t = temperature (K) / 1000."
+    form_quotes: ["Cp° = A + B*t + C*t2 + D*t3 + E/t2", "Cp = heat capacity (J/mol*K)", "t = temperature (K) / 1000."]
+    constants: [A, B, C, D, E]
+
+# HB-124: the NIST Fluid Systems saturation table (tab-delimited, one row per kelvin), read by its column headers.
+saturation_table:
+  columns:
+    temperature: "Temperature (K)"
+    liquid_density: "Density (l, kg/m3)"
+    liquid_heat_capacity: "Cp (l, J/mol*K)"
+    liquid_enthalpy: "Enthalpy (l, kJ/mol)"
+    vapour_enthalpy: "Enthalpy (v, kJ/mol)"
+    vapour_heat_capacity: "Cp (v, J/mol*K)"
+  enthalpy_of_vaporization: "ΔvapH = h(v) − h(l), the saturated vapour and liquid molar enthalpies printed in one row (the definition of the enthalpy of vaporisation); 1 kJ/mol = 1000 J/mol (the SI prefix kilo)"
+
+# HB-124: SLAB's inputs are per kilogram; its WMS is the molar mass in kg/mol (the guide's Table 1, PDF p. 50: "WMS
+# Molecular weight of source material (KG)").
+per_kilogram:
+  conversion: "per mole = per kilogram × WMS (kg/mol), the molecular weight the same SLAB input prints"
+
+tables:
+  heat_of_vaporization: {header: "ΔvapH (kJ/mol) | Temperature (K)", unit: "kJ/mol"}
+  vapour_heat_capacity: {header: "Cp,gas (J/mol*K) | Temperature (K)", unit: "J/mol*K"}
+
+# The source-term fields a release model reads (DN-020 section 3.1; HB-102 source_terms.tsv `pack_missing`), named in
+# each material's `missing` when not held. The critical point is recorded "where the page gives it" (HB-109 step 1) and
+# is not a required field. The vapour heat capacity counts as held when the value SLAB reads as CPS
+# (`vapour_heat_capacity_j_mol_k`) is held (HB-126: a Shomate row whose range starts above the boiling point is not
+# evaluated there, so it cannot stand in for it).
+required_fields:
+  - molecular_weight_g_mol
+  - normal_boiling_point_k
+  - heat_of_vaporization_j_mol
+  - liquid_heat_capacity_j_mol_k
+  - vapour_heat_capacity
+  - liquid_density_kg_m3
+  - saturation_pressure_antoine
+
+# Reasons a field is absent for every material, stated once.
+absent:
+  liquid_heat_capacity: "no held page prints it: the CAMEO datasheet has no heat-capacity field, and the NIST WebBook (species and Fluid Systems pages) lists pure species, not this mixture; a pseudo-component treatment is a design-note question (HB-124)"
+  liquid_density: "CAMEO prints the specific gravity (liquid_specific_gravity); the density of the reference water is printed on no held page (NIOSH's guide defines Sp.Gr. against water at 4 °C and prints no density), so kg/m3 is not computed; the NIST WebBook lists pure species, not this mixture (HB-124)"
+  no_nist: "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)"
+  shomate_not_printed: "the held NIST page prints no Shomate correlation for this species"
+  heat_of_vaporization_not_printed: "the held NIST page prints no enthalpy of vaporisation for this species"
+  vapour_cp_not_tabulated: "the held NIST page prints no tabulated gas heat capacity at a temperature; the Shomate correlation (vapour_heat_capacity_shomate) starts above the normal boiling point, and it is not extrapolated"
+  cameo_unavailable: "the CAMEO datasheet prints \"data unavailable\""
+  critical_not_printed: "the held page prints none"
+
+# The level of concern per DN-001 class (DN-020 ADDENDUM-01 section 2 item 2; HB-109 ADDENDUM-00 step 1a).
+levels_of_concern:
+  aegl2:
+    basis: "toxic inhalation hazard: AEGL-2 at the model's averaging time (DN-020 ADDENDUM-01 section 2 item 2; the ERG's own basis); the pack's AEGL-2 cells and their page"
+  lfl_fraction:
+    basis: "flammable gas or liquid: a fraction of the lower flammability limit, the fraction and its reason as ALOHA's technical documentation states them (concentration averaging), applied to the pack's LFL; a flammable-cloud footprint, not a toxic one"
+    fraction:
+      doc: noaa-aloha-technical-documentation
+      page: 90
+      pattern: 'the choice was made to use ([0-9]+)% of the lower flammability limit as the level of concern in defining this threat zone\. This value reflects the fact that the concentration calculation in ALOHA involves some time averaging\.'
+      unit: "% of LFL"
+  oxygen_deficiency:
+    basis: "cryogenic asphyxiant: the oxygen-deficient atmosphere threshold the pack carries (29 CFR 1910.134(b))"
+
+materials:
+  "1005":
+    boiling_point:
+      cameo: {doc: cameo-chem-4860, pattern: 'Boiling Point: (?P<v>-?[0-9.]+)°F at 760 mmHg \([A-Za-z]+, [0-9]{4}\)'}
+    specific_gravity: {doc: cameo-chem-4860, pattern: 'Specific Gravity: (?P<v>[0-9.]+) at (?P<t>-?[0-9.]+)°F \([A-Za-z]+, [0-9]{4}\)'}
+    vapour_pressure: {doc: cameo-chem-4860, pattern: 'Vapor Pressure: (?P<v>[0-9.]+) mmHg at (?P<t>-?[0-9.]+)°F \([A-Za-z]+, [0-9]{4}\)'}
+    nist: nist-webbook-1005
+    nist_fluid: nist-fluid-saturation-1005
+  "1017":
+    boiling_point:
+      cameo: {doc: cameo-chem-2862, pattern: 'Boiling Point: (?P<v>-?[0-9.]+)°F at 760 mmHg \([A-Za-z]+, [0-9]{4}\)'}
+    specific_gravity: {doc: cameo-chem-2862, pattern: 'Specific Gravity: (?P<v>[0-9.]+) at (?P<t>-?[0-9.]+)°F \(pressurized liquid\) \([A-Za-z]+, [0-9]{4}\)'}
+    vapour_pressure: {doc: cameo-chem-2862, pattern: 'Vapor Pressure: (?P<v>[0-9.]+) mmHg at (?P<t>-?[0-9.]+)°F \([A-Za-z]+, [0-9]{4}\)'}
+    nist: nist-webbook-1017
+    # HB-124 Part A step 2: NIST Fluid Systems does not list chlorine. The SLAB user's guide's PR4 test case is
+    # chlorine (section 4.4, PDF p. 133, printed p. 127: "a hypothetical release of vapor chlorine from a vertical
+    # jet"); its input echo (OUTPR4, PDF p. 136, printed p. 130) has no text layer and is read from the rendered page.
+    # The guide's Table 2 (PDF p. 54, printed p. 48), "recommended values for the properties of a limited number of
+    # materials", prints the same chlorine row and is its cross-check. The guide names no source for either; it says
+    # values "can be found in a number of references including Reid, Prausnitz, and Sherwood (1977) and Braker and
+    # Mossman (1980)" (PDF p. 53, printed p. 47).
+    slab_test_input:
+      doc: epa-slab-users-guide-1990
+      page: 136
+      case: "SLAB user's guide test-case input, 1990: PR4, the vertical jet release of chlorine (section 4.4)"
+      molecular_weight: {rendered: "WMS = 0.070906", unit: "kg/mol"}
+      boiling_point: {rendered: "TBP = 239.10", unit: "K"}
+      heat_of_vaporization: {rendered: "DHE = 287840.", unit: "J/kg"}
+      liquid_heat_capacity: {rendered: "CPSL = 926.30", unit: "J/kg*K"}
+      liquid_density: {rendered: "RHOSL = 1574.00", unit: "kg/m3"}
+      # HB-126: CPS, the source material's vapour heat capacity in J/kg-K (Table 1, PDF p. 50, as HB-124's
+      # slab_inputs.md transcribes its units), from the same input echo; Table 2's CPS column is its cross-check.
+      vapour_heat_capacity: {rendered: "CPS = 498.10", unit: "J/kg*K"}
+      table2:
+        page: 54
+        rendered: "Chlorine Cl2 .070906 498.1 239.10 287840. 926.3 1574. 1978.34 -27.01 1.308"
+        columns: [name, formula, WMS, CPS, TBP, DHE, CPSL, RHOSL, SPB, SPC, gamma]
+  "1978":
+    boiling_point:
+      cameo: {doc: cameo-chem-9018, pattern: 'Boiling Point: (?P<v>-?[0-9.]+)°F at 760 mmHg \([A-Za-z]+, [0-9]{4}\)'}
+    specific_gravity: {doc: cameo-chem-9018, pattern: 'Specific Gravity: (?P<v>[0-9.]+) at (?P<t>-?[0-9.]+)°F \([A-Za-z]+, [0-9]{4}\)'}
+    # CAMEO prints no temperature for propane's vapour pressure; the pack records it as printed, temperature none.
+    vapour_pressure: {doc: cameo-chem-9018, pattern: 'Vapor Pressure: (?P<v>[0-9.]+) mmHg \([A-Za-z]+, [0-9]{4}\)'}
+    nist: nist-webbook-1978
+    nist_fluid: nist-fluid-saturation-1978
+  "1977":
+    boiling_point:
+      cameo: {doc: cameo-chem-4069, pattern: 'Boiling Point: (?P<v>-?[0-9.]+)°F at 760 mmHg \([A-Za-z]+, [0-9]{4}\)'}
+    specific_gravity: {doc: cameo-chem-4069, pattern: 'Specific Gravity: (?P<v>[0-9.]+) at (?P<t>-?[0-9.]+)°F \([A-Za-z]+, [0-9]{4}\)'}
+    vapour_pressure: {not_printed: {doc: cameo-chem-4069, pattern: 'Vapor Pressure: data unavailable'}}
+    nist: nist-webbook-1977
+    nist_fluid: nist-fluid-saturation-1977
+  "1951":
+    # CAMEO's argon datasheet prints "data unavailable" for every physical property; NIST is the only held source.
+    boiling_point:
+      cameo_unavailable: {doc: cameo-chem-2509, pattern: 'Boiling Point: data unavailable'}
+    specific_gravity: {not_printed: {doc: cameo-chem-2509, pattern: 'Specific Gravity: data unavailable'}}
+    vapour_pressure: {not_printed: {doc: cameo-chem-2509, pattern: 'Vapor Pressure: data unavailable'}}
+    nist: nist-webbook-1951
+    nist_fluid: nist-fluid-saturation-1951
+  "1075":
+    # DN-020 ADDENDUM-01 section 2 item 4: LPG is drawn with propane's properties and says so. The quote is the LPG
+    # datasheet's own statement of what LPG is.
+    proxy:
+      properties_of: "1978"
+      label: "propane properties used for LPG"
+      doc: cameo-chem-987
+      pattern: 'A mixture of butane, isobutane, propane, propylene, butylenes and other hydrocarbons of low molecular weight that is refined from petroleum\.'
+  "1203":
+    # A mixture: CAMEO prints a boiling range, a specific gravity and a vapour pressure without its temperature; no NIST
+    # page exists for gasoline.
+    boiling_point:
+      cameo_range: {doc: cameo-chem-11498, pattern: 'Boiling Point: (?P<lo>-?[0-9.]+) to (?P<hi>-?[0-9.]+)°F at 760 mmHg \([A-Za-z]+, [0-9]{4}\)'}
+    specific_gravity: {doc: cameo-chem-11498, pattern: 'Specific Gravity: (?P<v>[0-9.]+) at (?P<t>-?[0-9.]+)°F \([A-Za-z]+, [0-9]{4}\)'}
+    vapour_pressure: {doc: cameo-chem-11498, pattern: 'Vapor Pressure: (?P<v>[0-9.]+) mmHg \([A-Za-z]+, [0-9]{4}\)'}
+  "1202":
+    boiling_point:
+      cameo_range: {doc: cameo-chem-11452, pattern: 'Boiling Point: (?P<lo>-?[0-9.]+) to (?P<hi>-?[0-9.]+)°F at 760 mmHg \([A-Za-z]+, [0-9]{4}\)'}
+    specific_gravity: {doc: cameo-chem-11452, pattern: 'Specific Gravity: (?P<v>[0-9.]+) at (?P<t>-?[0-9.]+)°F \([A-Za-z]+, [0-9]{4}\)'}
+    vapour_pressure: {doc: cameo-chem-11452, pattern: 'Vapor Pressure: (?P<v>[0-9.]+) mmHg at (?P<t>-?[0-9.]+)°F \([A-Za-z]+, [0-9]{4}\)'}

@@ -1,0 +1,236 @@
+# The SCICHEM client's settings (HB-167 Part C; DN-028; hazbrief.brief.scichem and hazbrief.brief.scichem_driver).
+# A file of its own, not a block of orchestrator.yaml, so the dense-release engine can land without touching what the
+# rendered briefs read (HB-167: no brief hash moves). HB-163 draws a dense release's cloud from the held records it
+# describes (hazbrief.brief.cloud; `brief` below).
+#
+# The engine is EPRI's SCICHEM 3.4 (SCIPUFF inside), commit 156625ef, built with gfortran in the models image
+# (deploy/models/Dockerfile, stage `scichem`). Every value below is either a documented choice (its source named) or a
+# stated assumption the record carries by name (`assumptions`), so the TEVV page can state it (DN-028 decision 3).
+
+# The models image the engine runs in (the SLAB client's `dense_gas.image`), and how it is run there.
+image: hazbrief-models
+docker: docker
+# The driver inside the image (deploy/models/Dockerfile copies src/hazbrief/brief/scichem_driver.py here).
+entry: [python, -I, /opt/scichem/scichem_driver.py]
+# One runsci or scipp call; a 2-hour chlorine run took 1.3 to 1.6 s (HB-165), an 8-hour one with 300 sensors about 6 s.
+timeout_s: 600
+# The held records: one JSON per request, named by the sha256 of the canonical request (scichem.request_sha256).
+recordings_dir: fixtures/evidence/scichem_runs
+
+# ── the project ──────────────────────────────────────────────────────────────────────────────────────────────────────
+project:
+  name: hzb
+  # The calculation's time step and the field output interval (the namelist's DELT and DT_SAVE, seconds). Every DT_SAVE
+  # is an output step of the record (Part C item 12: "at every output step").
+  delt_s: 60.0
+  dt_save_s: 300.0
+  # The sensor output interval (DT_SMP, seconds): arrival, minutes above and clear are read at this resolution.
+  dt_smp_s: 120.0
+  # The run covers the release and the transit to the domain's edge at the release hour's wind, rounded up to whole
+  # hours, at least `run_hours_min` and at most `run_hours_max` (the forecast must cover it; the request refuses if not).
+  run_hours_min: 2
+  run_hours_max: 8
+  # Met records written before the release (SCICHEM interpolates hourly records; one before brackets the start).
+  met_hours_before_release: 1
+  # The domain about the release (km east and north, CARTESIAN about the site) and its top (m). The README's best
+  # practice 3 sets the large-scale variance type to none for domains under about 150 km (`met.ensm_type`).
+  half_width_km: 30.0
+  zmax_m: 2500.0
+  # Puff merging and the static-puff option as HB-165 ran them (STATIC = T for the continuous source).
+  static: true
+  # The release height (m): the tank car's breach is at ground, as SLAB's deck states it for a pool; the jet's own
+  # height is SLAB's HS (dense_gas.jet_height_m) and is carried by the source term's sigma (technical documentation
+  # section 13.4's cone method), so the SCICHEM source sits at the ground.
+  release_height_m: 0.0
+  # HB-177 (docs/evidence/hb177/; its design note's draft): where the two-phase source starts. Technical documentation
+  # section 13.4 starts the SCIPUFF source "at this downstream location", the end of the 7 degree cone where the
+  # aerosol has evaporated; the request has always started it at the breach (XREL 0), carrying the cone only in the
+  # source's size. On: the source starts at the cone's end, `JetSource.cone_length_m` along the release hour's wind,
+  # and nothing is computed inside the cone. On HB-176's Desert Tortoise 4 it moved SCICHEM at 800 m from 0.25 to 0.33
+  # of the measured maximum (docs/evidence/hb177/trace.tsv, candidate source_x). Off until a decision turns it on:
+  # turning it on re-records every dense brief's SCICHEM record (HB-169's met.stable_bl_from_class is the precedent).
+  source_at_cone_end: false
+  # HB-189 (DN-028 ADDENDUM-14 decision 3): under the stable treatment (any forecast hour inside the steps' horizon
+  # class E or F, `derive.stability_hours`) the run takes this vertical setting, VRES in the namelist's DOMAIN. The
+  # engine caps the vertical grid at 200 levels (inc/ipgrd_fi.f90; HB-180), so 1.25 m is run with the domain top at
+  # 250 m, as HB-187 ran it ("250x1.25"). Ground: of the settings HB-187 measured on csx night, the finest whose first
+  # hour is on the page in minutes (136 s), not most of an hour (2,580 s at 0.625 m) (docs/evidence/hb187/options.tsv);
+  # it is not converged (q2_convergence.tsv) and the page says so. `fallback` is decision 4's: a brief whose run at
+  # `vres_m` does not reach hour 1 within `hour1_ceiling_s` (HB-187's per-unit ceiling, protocol.md section 4) is built
+  # at the fallback and says so. `timeout_s` bounds one engine call at this setting (the driver's SCICHEM_TIMEOUT_S).
+  stable_vertical:
+    vres_m: 1.25
+    zmax_m: 250.0
+    fallback: {vres_m: 2.5, zmax_m: 250.0}
+    hour1_ceiling_s: 14400
+    timeout_s: 14400
+  # HB-189 (decision 4): each simulated hour is read from the puff file the moment its dump is whole and its levels
+  # extracted then, while the engine carries on (docs/evidence/hb187/staged.tsv: 91 of 91 mid-run copies equal the
+  # final file); the driver polls the puff file this often (s).
+  hourly_poll_s: 0.5
+
+# ── the material ─────────────────────────────────────────────────────────────────────────────────────────────────────
+# One GAS class at the ideal-gas density at the air temperature (HB-165), with no deposition and no decay. Technical
+# documentation section 13.4 runs its two-phase trials (Desert Tortoise, Goldfish) the same way: "Because SCIPUFF does
+# not contain a model for aerosol evaporation ... We use a simplified representation, modeling the source jet as an
+# expanding 7 degree cone until sufficient air has been entrained to evaporate the liquid aerosol. The SCIPUFF source is
+# then initialized at this downstream location at the boiling temperature." DN-028 decision 4.
+material:
+  class: GAS
+  gas_deposition: 0.0
+
+# ── the meteorology ──────────────────────────────────────────────────────────────────────────────────────────────────
+met:
+  # One SURFACE observation station at the release, hourly records from the held NWS gridpoint forecast.
+  met_type: OBS
+  # CALC: the engine's surface energy balance and boundary-layer growth (user's guide B.6, "Boundary Layer Type:
+  # Calculated"). OPER with `use_forecast_mixing_height` writes the forecast's mixingHeight as ZI, which the engine then
+  # uses ("if one of the two required observational boundary layer variables is provided ... SCICHEM will use the one
+  # supplied"). DN-028 decision 3 chooses; HB-167 Part A item 3 measured both (docs/evidence/hb167/input_sensitivity.tsv).
+  bl_type: CALC
+  use_forecast_mixing_height: false
+  # HB-169 (DN-028 ADDENDUM-01): a release whose stability class is stable takes the documented PGT route instead:
+  # BL_TYPE 'OBS' with a PGT column on the surface file (user's guide section 4.5.1, "Both ZI and HFLUX together or PGT
+  # or Monin-Obukhov length (MOL) if observational boundary layer is specified"), the class being the one the SLAB deck
+  # holds (its STAB, the brief's own class). It is a choice between two documented inputs, on three grounds (DN-028
+  # ADDENDUM-03, restating HBD-389 after HB-170): on the published Chicago F case hazbrief's SCICHEM on CALC is 0.20 to
+  # 0.35 of its published curve and on PGT F 0.25 to 0.55 (docs/evidence/hb169/benchmark.tsv), a move toward it; both
+  # engines then read the one class the SLAB deck holds, so a comparison between them is not confounded; and Table 3 is
+  # the documented route a class takes. At csx night CALC gives u* 0.019 m/s, L 0.3 m and zi 3.5 m (the engine's MET
+  # TURB sensor, docs/evidence/hb169/night_trace.tsv): far below the typical stable values of section 10.2.4.2, which
+  # the documentation does not state as a range of validity (HB-170, C41 and C43). Limits: section 13.1.1 leaves stable
+  # conditions out of the engine's own dispersion check, and the benchmark is one case at 3.0 m/s. HB-172 turned it on
+  # and re-recorded every stable-class record (docs/evidence/hb172/records_before_after.tsv).
+  stable_bl_from_class: true
+  # The stable classes, by SLAB's STAB number (SLAB user's guide Table 4: 5 E "Slightly stable", 6 F "Stable"), and
+  # what the engine assumes for each (technical documentation Table 3: E L 25 m, zi 125 m; F L 13 m, zi 65 m). The
+  # PGT index is the same number (user's guide section 4.5.1 footnote 5: "class A = 1, B = 2, ..., G = 7").
+  stable_classes:
+    5: {class: E, l_m: 25, zi_m: 125}
+    6: {class: F, l_m: 13, zi_m: 65}
+  # Large-scale (meandering) variability: NONE, the README's best practice 3 for domains under about 150 km. The
+  # forecast wind's own uncertainty is therefore NOT in the engine's probability (DN-028 decision 4).
+  ensm_type: NONE
+  # Used only with ensm_type INPUT: the user's guide defaults (UU_ENSM 0.25 m2/s2, SL_ENSM 1e5 m).
+  uu_ensm: 0.25
+  sl_ensm: 100000.0
+  # Surface: no canopy (H_CNP negative), no land-use file (LANDUSE not set). Albedo and Bowen ratio are not held for
+  # the site: the user's guide's defaults (B.6, "Default: 0.6" and "Default: 0.16"), which are also its Table 20/21
+  # autumn values for cultivated land within the tables' spread. Roughness is the SLAB deck's Z0.
+  albedo: 0.16
+  bowen: 0.6
+  canopy_height_m: -1.0
+  # Observation time bin (s), as HB-165 ran it.
+  tbin_met_s: 3600.0
+
+# ── the moving cloud's frames (HB-192; DN-024 ADDENDUM-01) ───────────────────────────────────────────────────────────
+# A frame every `every_s` of cloud time over the brief's horizon, from the dumps the engine already writes (DT_SAVE
+# 300 s divides 900 s): a uniform grid of mean concentration over the box the outermost level reaches, out by
+# `margin_cells`, from which the three level outlines are drawn (hazbrief.brief.frames). Held per request A's sha256
+# in `recordings_dir`.
+frames:
+  recordings_dir: fixtures/evidence/scichem_frames
+  every_s: 900
+  # 25 m: about one CSS pixel of a committed dense brief's first view (10.5 to 49.4 m per pixel at the map's size at
+  # 1440 wide, its padding and quarter-step fit; docs/evidence/hb192/first_view_m_per_px.txt); on csx night it draws each level's
+  # area within 0.1 percent of the engine's own contour's at the first hour and 2.3 percent at the sixth, 9.5 to
+  # 22.3 kB a frame stored (docs/evidence/hb192/spacing.tsv).
+  spacing_m: 25.0
+  margin_cells: 2
+  # The spacing is doubled while the box would hold more than this many points: csx night's sixth hour at 25 m is
+  # 396,825 points, written by the post-processor in 3.0 s (spacing.tsv); the cap keeps a domain-wide cloud (60 km
+  # square, 5.8 million points at 25 m) to the same order of time.
+  max_points: 500000
+  # Each level's outline drawn from the mesh is simplified at this parameter (Douglas and Peucker, GEOS's
+  # topology-preserving form). That form can move a point past its parameter: at 25 m it moved points up to 44.5 m
+  # (docs/evidence/hb192/outline_tolerance_topology_preserving.tsv); at 15 m the drawn outline lies within 23.2 m of
+  # the unsimplified one over every frame and level of the 13 briefs (outline_tolerance.tsv). `drawn_within_m` is the
+  # stated tolerance the test holds: 0.5 to 2.4 CSS pixels on the committed first views (10.5 to 49.4 m, above).
+  tolerance_m: 15.0
+  drawn_within_m: 25.0
+  # The stored floor, in decades below the outermost level: a lookup below it reads "below the floor".
+  floor_decades_below: 2
+  # One byte per point: 32 steps per decade is 7.5 percent per step, finer than any level's spacing (a factor of 4
+  # between AEGL-1 and AEGL-2 at csx night).
+  codes_per_decade: 32
+
+# ── what the record reads out ────────────────────────────────────────────────────────────────────────────────────────
+record:
+  # The plane the tier areas are contoured on (m above ground): the brief's dense-gas receptor plane
+  # (orchestrator.yaml dense_gas.receptor_height_m, 0.0), the scipp slice default ("Height : 0.0 (AGL)").
+  plane_height_m: 0.0
+  # The height of every point sensor (m): breathing height (HB-167 ADDENDUM-01 item 1).
+  point_height_m: 1.5
+  # The probability levels of the uncertainty area, in percent (DN-028 decision 4): P(C > tier) >= 5 percent is the
+  # outer area, the complement of the 95 percent containment ALOHA's held manual states for its uncertainty lines
+  # (epa-aloha-users-manual-2007 p. 45); 50 percent is the median, beside the mean.
+  probability_percent: [5.0, 50.0]
+  # The tiers: every AEGL the materials pack holds at the class level's averaging time (dense_gas.bands.tiers), lowest
+  # concern first. The averaging time is the brief's (dense_gas.classes.<class>.averaging_time_s); the tiers and the
+  # averaging time are not changed here (DN-027 ADDENDUM-00 parks that subject).
+  tiers: [AEGL-1, AEGL-2, AEGL-3]
+  # The molar volume the AEGL ppm values use (24.45 L/mol at 25 C and 1 atm), to convert ppm to kg/m3.
+  molar_volume_m3_mol: 0.02445
+  # HB-172: a contour line that leaves the post-processor's grid through two different edges is closed along those
+  # edges, through the corner, on its smaller side; the overlay's lines carry no orientation to say which side is
+  # above the level (every closed ring, holes included, is written counter-clockwise; measured over the 17 held
+  # records). The smaller side is the cloud's while the area above the level is under half the grid (csx night's
+  # largest, its 5 percent area, is about 30 percent of it); a level that needed such a closure and comes out past
+  # this fraction of the grid's area is refused, because which side is the cloud's is then not known.
+  edge_closure_max_box_fraction: 0.5
+  # The walk along the grid's edge that closes such a line carries a vertex every this many km, so that the edge,
+  # mapped to longitude and latitude point by point, follows the grid's edge; one straight segment across a 15 km edge
+  # left a 160 m2 sliver outside the area reached at any time (HB-172, csx night's AEGL-1 at 245 minutes).
+  edge_closure_vertex_spacing_km: 1.0
+  # The point layers of a brief whose features become sensors, by kind (HB-167 ADDENDUM-01 item 1).
+  point_layers:
+    roadblock: [roadblock_candidates, modelled_cordons, rail_candidates]
+    sited: [sited_points]
+    named_place: [schools, care, emergency_services, receiving_hospitals, nearby_services]
+
+# The source term from the held SLAB problem (technical documentation section 13.4; HB-165 scichem_probe.py (a build tool held privately)).
+constants:
+  gas_constant_j_mol_k: 8.314462618
+  ambient_pressure_pa: 101325.0
+  air_molar_mass_kg_mol: 0.0289644
+  # Dry air near 270 K: an assumption, not a held table value (HB-165 probe_config.json).
+  air_cp_j_kg_k: 1006.0
+  # Technical documentation section 13.4: "an expanding 7 degree cone".
+  cone_half_angle_deg: 7.0
+  # Technical documentation section 13.4: "a lateral standard deviation equal to 75% of the specified pool radius".
+  sigma_over_radius: 0.75
+
+# The assumptions every record states by name (Part C item 12, last bullet), each with what it stands in for.
+assumptions:
+  albedo: "albedo 0.16, the user's guide default; not held for the site"
+  bowen: "Bowen ratio 0.6, the user's guide default; not held for the site"
+  land_use: "no land-use or canopy data (LANDUSE not set, no canopy); no held land-cover source is read"
+  terrain: "flat terrain; no terrain file (tersci and an elevation grid are not held)"
+  boundary_layer: "boundary layer calculated by the engine from the surface record and sun angle (BL_TYPE CALC); the forecast's mixingHeight is not used"
+  large_scale: "no large-scale variability (ENSM_TYPE NONE, the README's practice for small domains): the probability covers turbulent fluctuation, not uncertainty in the forecast wind"
+  source: "the two-phase jet as a dense gas from where its aerosol has evaporated (technical documentation section 13.4's cone method); no aerosol or liquid class"
+  material: "an ideal gas at the air temperature, no deposition, no decay"
+  precipitation: "dry: the forecast's quantitative precipitation is zero over the run (a wet forecast is refused)"
+  single_station: "one surface station at the release: the forecast is uniform over the domain at each hour"
+
+# Words of a refusal ("not modelled", Part C item 13). A refusal is a result: the other engine is never run instead.
+refusals:
+  wet: "not modelled: the forecast holds precipitation over the run ({detail}); this engine's record is dry only"
+  forecast_short: "not modelled: the held forecast does not cover the run ({detail})"
+  missing: "not modelled: {detail} is not held"
+  engine: "not modelled: the engine did not finish ({detail})"
+  not_recorded: "not modelled: SCICHEM's run for this request ({sha}) is not recorded in {dir}; the brief never runs the engine itself"
+  no_image: "not modelled: the models image {image} is not available ({detail})"
+  # HB-163: the brief's one wind record (HB-133) is not the forecast the record reads hour by hour
+  one_wind: "not modelled: the brief's wind is {kind}, and this engine's record reads the NWS forecast hour by hour"
+
+# ── what the brief draws from a record (HB-163; hazbrief.brief.cloud) ──────────────────────────────────────────────────
+brief:
+  # the engine's name as the brief prints it (HBD-374: SCICHEM is a tool hazbrief runs, so its section names it)
+  engine: SCICHEM
+  # SCICHEM's material name (MNAME) and the run's title, from the release alone, so two briefs of one release share
+  # a record
+  material_name: "U{un}"
+  label: "UN{un} at {lat:.5f},{lon:.5f}"
+  # the probability level of the uncertainty area, a key of the record's `probability` (DN-028 decision 4; HBD-378)
+  uncertainty_percent: "5"

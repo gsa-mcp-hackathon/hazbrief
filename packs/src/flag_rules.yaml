@@ -1,0 +1,498 @@
+# Flag rules (HB-03; DN-001 section 4 invariant 2: every flag is a rule in a pack with a source).
+# Compiled into packs/flag_rules.json by `scripts/build_packs.py flag_rules`. The build refuses a
+# rule whose class is not a hazard class, whose template names a value that is neither an input
+# nor a param, or whose receipt quote is not on the cited page of the held document.
+#
+# Receipts: `page` is the PDF page for a PDF, and the form-feed block for a converted file
+# (JSON, HTML), numbered as Squiddy numbers them (corpus_text.text_blocks (a build tool held privately)). The quote is
+# verbatim apart from whitespace. Rules were located with `squiddy.index search --graph
+# the corpus graph (held privately)` (read only; logs/hb03_searches/) and read on the held page.
+#
+# Templates follow the stylebook's sentence rules as HB-02 states them (short sentences,
+# present tense for conditions, imperative for actions, the ERG's and the vocabulary's terms).
+# A flag's value, source, as-of date and margin of error travel as structured fields beside the
+# sentence (DN-001 section 3 "Output"); the sentence carries the count.
+#
+# Inputs name the DN-001 section 7 tool whose output holds the value. `gaps` records inputs or
+# sources this repository does not yet hold or catalogue, so the rule's limits are on its face.
+
+rules:
+  - rule_id: FR-GQ-01
+    title: Group quarters inside the protective action footprint
+    classes: [tih_gas, flammable_liquefied_gas, flammable_liquid, cryogenic_asphyxiant]
+    modes: [highway, rail]
+    inputs:
+      - name: gq_population
+        tool: population_at_risk
+        field: B26001_001E
+        dataset: census-acs5-2024-b26001
+        description: Group quarters population of the block groups or tracts inside the footprint.
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: gq_population, op: gt, value: 0}
+    template: >-
+      {gq_population} people live in group quarters inside the protective action footprint.
+      Plan their protective action separately.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 286
+        quote: "special institutions or populations, e.g., nursing homes, hospitals, prisons"
+        supports: The ERG lists special institutions as a protective action decision factor.
+      - doc_id: census-acs5-2024-b26001
+        page: 113
+        quote: '"concept": "Group Quarters Population"'
+        supports: The ACS variable the count is read from.
+    basis: DN-001 section 2 (which group quarters cannot be moved)
+    gaps:
+      - Group quarters type (nursing home, correctional facility) needs the 2020 DHC P18 table by
+        tract; the rule reads the ACS total only.
+    consequence: {doc_id: erg2024-en-pdf, page: 286, quote: "special institutions or populations, e.g., nursing homes, hospitals, prisons"}
+    response: {doc_id: erg2024-en-pdf, page: 286, quote: "Proper evaluation of the factors listed below will determine the effectiveness of evacuation or in-place protection (shelter-in-place)."}
+
+
+  - rule_id: FR-SCH-01
+    title: Schools inside the protective action footprint, with the ERG period
+    classes: [tih_gas, flammable_liquefied_gas, flammable_liquid, cryogenic_asphyxiant]
+    modes: [highway, rail]
+    inputs:
+      - name: schools_in_footprint
+        tool: facilities_in_footprint
+        # HB-10: colleges and technical schools are schools a responder confirms too.
+        field: layers 21 "Colleges/Universities", 22 "Technical/Trade Schools" and 23 "Schools", points inside
+        dataset: usgs-structures-mapserver
+        description: Schools (USGS National Structures Dataset) inside the footprint.
+      - name: period
+        tool: protective_action_footprint
+        field: daytime or nighttime at the incident time and point
+        dataset: erg2024-en-pdf
+        description: The ERG period, "daytime" or "nighttime", from sunrise and sunset.
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: schools_in_footprint, op: gt, value: 0}
+    template: >-
+      {schools_in_footprint} schools are inside the protective action footprint. It is {period}.
+      Confirm whether each school is occupied.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 7
+        quote: "Proximity to schools, hospitals, waterways, etc."
+        supports: The ERG asks the responder to report proximity to schools.
+      - doc_id: erg2024-en-pdf
+        page: 290
+        quote: "DAY is any time after sunrise and before sunset. NIGHT is any time between sunset and sunrise."
+        supports: The ERG period the sentence states.
+      - doc_id: usgs-structures-mapserver
+        page: 31
+        quote: '"name": "Schools"'
+        supports: The layer the count is read from.
+    basis: DN-001 section 2 (which schools are in session)
+    gaps:
+      - School session calendars are not in the corpus. The rule states the ERG period and asks
+        for confirmation; it never asserts that a school is in session.
+    consequence: {doc_id: erg2024-en-pdf, page: 7, quote: "Proximity to schools, hospitals, waterways, etc."}
+    response: {doc_id: erg2024-en-pdf, page: 286, quote: "Proper evaluation of the factors listed below will determine the effectiveness of evacuation or in-place protection (shelter-in-place)."}
+
+
+  - rule_id: FR-HOSP-01
+    title: Hospital inside the footprint is a casualty site
+    classes: [tih_gas, flammable_liquefied_gas, flammable_liquid, cryogenic_asphyxiant]
+    modes: [highway, rail]
+    inputs:
+      - name: hospitals_in_footprint
+        tool: facilities_in_footprint
+        field: layer 14 "Hospitals/Medical Centers" feature count
+        dataset: usgs-structures-mapserver
+        description: Hospitals and medical centers inside the footprint.
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: hospitals_in_footprint, op: gt, value: 0}
+    template: >-
+      {hospitals_in_footprint} hospitals are inside the protective action footprint. Treat each
+      one as a casualty site, not as a receiving hospital.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 286
+        quote: "special institutions or populations, e.g., nursing homes, hospitals, prisons"
+        supports: The ERG names hospitals among the special institutions inside a protective action area.
+      - doc_id: erg2024-en-pdf
+        page: 285
+        quote: "Evacuate means to move all people from a threatened area to a safer place."
+        supports: People are moved out of the area, so a facility inside it does not receive.
+      - doc_id: usgs-structures-mapserver
+        page: 22
+        quote: '"name": "Hospitals/Medical Centers"'
+        supports: The layer the count is read from.
+    basis: DN-001 section 2 (a hospital inside the zone is a casualty site rather than a receiver)
+    gaps: []
+    consequence: {doc_id: erg2024-en-pdf, page: 286, quote: "special institutions or populations, e.g., nursing homes, hospitals, prisons"}
+    response: {doc_id: erg2024-en-pdf, page: 286, quote: "Proper evaluation of the factors listed below will determine the effectiveness of evacuation or in-place protection (shelter-in-place)."}
+
+
+  - rule_id: FR-VEH-01
+    title: Households with no vehicle inside the footprint
+    classes: [tih_gas, flammable_liquefied_gas, flammable_liquid, cryogenic_asphyxiant]
+    modes: [highway, rail]
+    inputs:
+      - name: no_vehicle_households
+        tool: population_at_risk
+        field: B08201_002E
+        dataset: census-acs5-2024-b08201
+        description: Households with no vehicle available inside the footprint.
+      - name: no_vehicle_households_moe
+        tool: population_at_risk
+        field: B08201_002M
+        dataset: census-acs5-2024-b08201
+        description: Its margin of error (90 percent).
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: no_vehicle_households, op: gt, value: 0}
+    template: >-
+      {no_vehicle_households} households inside the protective action footprint have no vehicle
+      (margin of error {no_vehicle_households_moe}). Plan transport for them before you
+      evacuate.
+    receipts:
+      - doc_id: census-acs5-2024-b08201
+        page: 15
+        quote: '"label": "Estimate!!Total:!!No vehicle available"'
+        supports: The ACS variable the count is read from.
+      - doc_id: erg2024-en-pdf
+        page: 285
+        quote: "To perform an evacuation, there must be enough time for people to be warned, get ready, and leave an area."
+        supports: Evacuation needs people able to leave.
+      - doc_id: cre-2024-quick-guide
+        page: 4
+        quote: "SV 9 No vehicle access (Household)."
+        supports: The Census Bureau counts no vehicle access as a component of social vulnerability.
+    basis: DN-001 section 5 (no-vehicle households, B08201)
+    gaps: []
+    consequence: {doc_id: erg2024-en-pdf, page: 285, quote: "To perform an evacuation, there must be enough time for people to be warned, get ready, and leave an area."}
+    response: {doc_id: erg2024-en-pdf, page: 286, quote: "Proper evaluation of the factors listed below will determine the effectiveness of evacuation or in-place protection (shelter-in-place)."}
+
+
+  - rule_id: FR-LEP-01
+    title: Limited English speaking households inside the footprint
+    classes: [tih_gas, flammable_liquefied_gas, flammable_liquid, cryogenic_asphyxiant]
+    modes: [highway, rail]
+    inputs:
+      - name: limited_english_households
+        tool: population_at_risk
+        field: C16002_004E + C16002_007E + C16002_010E + C16002_013E
+        dataset: census-acs5-2024-c16002
+        description: Limited English speaking households (Spanish, other Indo-European, Asian and Pacific Island, other languages).
+      - name: limited_english_households_moe
+        tool: population_at_risk
+        field: the four variables' margins of error, combined
+        dataset: census-acs5-2024-c16002
+        description: Margin of error of the sum (90 percent).
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: limited_english_households, op: gt, value: 0}
+    template: >-
+      {limited_english_households} households inside the protective action footprint are
+      limited English speaking (margin of error {limited_english_households_moe}). Give public
+      instructions in their languages.
+    receipts:
+      - doc_id: census-acs5-2024-c16002
+        page: 158
+        quote: '"label": "Estimate!!Total:!!Other languages:!!Limited English speaking household"'
+        supports: One of the four ACS variables the count is read from.
+      - doc_id: cre-2024-quick-guide
+        page: 3
+        quote: "Limited English-speaking household"
+        supports: The Census Bureau's communication-barrier component of social vulnerability (SV 4).
+      - doc_id: erg2024-en-pdf
+        page: 286
+        quote: "officials need to quickly give the public instructions"
+        supports: Instructions must reach the public.
+    basis: DN-001 section 5 (limited-English households)
+    gaps:
+      - The margin of error of a sum of ACS estimates is an approximation; the ACS handbook that
+        gives the formula is not in the corpus.
+    consequence: {doc_id: erg2024-en-pdf, page: 286, quote: "officials need to quickly give the public instructions"}
+    response: {doc_id: erg2024-en-pdf, page: 286, quote: "The public will need continuing information and instructions while being evacuated or sheltered-in-place."}
+
+
+  - rule_id: FR-CRE-01
+    title: High social vulnerability (Community Resilience Estimates) above the national rate
+    classes: [tih_gas, flammable_liquefied_gas, flammable_liquid, cryogenic_asphyxiant]
+    modes: [highway, rail]
+    inputs:
+      - name: pred3_e
+        tool: population_at_risk
+        field: PRED3_E
+        dataset: cre-2024-file-layout
+        description: Individuals with three or more components of social vulnerability, summed over the tracts inside the footprint.
+      - name: pred3_m
+        tool: population_at_risk
+        field: PRED3_M
+        dataset: cre-2024-file-layout
+        description: Its margin of error (90 percent).
+      - name: pred3_pe
+        tool: population_at_risk
+        field: PRED3_PE
+        dataset: cre-2024-file-layout
+        description: Rate of individuals with three or more components, over the same tracts.
+      - name: national_pred3_pe
+        tool: population_at_risk
+        field: PRED3_PE (CRE_24_National.csv)
+        dataset: cre-2024-file-layout
+        description: The national rate, same vintage.
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: pred3_e, op: gt, value: 0}
+        - {input: pred3_pe, op: gt, ref: national_pred3_pe}
+    template: >-
+      {pred3_e} people inside the protective action footprint have three or more components of
+      social vulnerability (margin of error {pred3_m}). That is {pred3_pe} percent, against
+      {national_pred3_pe} percent nationally.
+    receipts:
+      - doc_id: cre-2024-quick-guide
+        page: 4
+        quote: "High Individuals with three or more components of SV"
+        supports: The CRE High group, the construct the rule reports.
+      - doc_id: cre-2024-file-layout
+        page: 2
+        quote: "PRED3_E Estimated number of individuals with three plus components of social vulnerability"
+        supports: The variable the count is read from.
+      - doc_id: cre-2024-file-layout
+        page: 2
+        quote: "PRED3_PE Rate of individuals with three plus components of social vulnerability"
+        supports: The variable the rate is read from.
+      - doc_id: cre-2024-techdoc
+        page: 5
+        quote: "3 denotes the three or more SV group"
+        supports: The technical documentation's group definition.
+    basis: >-
+      DN-002 section 4 and DN-003 section 4. CRE for Response 2024 is not held (HB-01c section 2);
+      the rule uses the regular CRE 2024 construct.
+    gaps:
+      - CRE for Response 2024 is not held; revisit this rule when it is.
+      - No CRE data endpoint is in corpus/api_catalog.yaml yet; the tool that reads PRED3_* must
+        be catalogued before it calls one (DN-002 section 3b).
+    consequence: {doc_id: cre-2024-quick-guide, page: 4, quote: "High Individuals with three or more components of SV"}
+    # HB-12b (DN-006 3.1): the ERG states no response for this condition, so it is an
+    # indication, never printed.
+    response: null
+
+
+  - rule_id: FR-TIH-01
+    title: TIH protective action zone downwind, shelter-in-place first
+    classes: [tih_gas]
+    modes: [highway, rail]
+    inputs:
+      - name: protective_action_distance
+        tool: protective_action_footprint
+        field: the Table 1 or Table 3 downwind distance used
+        dataset: erg2024-en-pdf
+        description: The downwind distance, with its unit.
+      - name: downwind_direction
+        tool: protective_action_footprint
+        field: the bearing the wind blows toward (NWS)
+        dataset: nws-api-docs
+        description: Where the protective action zone points.
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: protective_action_distance, op: gt, value: 0}
+    template: >-
+      The protective action zone extends {protective_action_distance} downwind, toward
+      {downwind_direction}. Consider shelter-in-place for people already indoors. Consider
+      evacuation for people outdoors.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 287
+        quote: "Vapors are toxic, and people are likely to be exposed by evacuating."
+        supports: The ERG's condition for considering shelter-in-place.
+      - doc_id: erg2024-en-pdf
+        page: 287
+        quote: "For anyone already indoors."
+        supports: Shelter-in-place is considered for people indoors.
+      - doc_id: erg2024-en-pdf
+        page: 287
+        quote: "For anyone outdoors."
+        supports: Evacuation is considered for people outdoors.
+    basis: DN-001 section 3 (TIH class)
+    gaps: []
+    consequence: {doc_id: erg2024-en-pdf, page: 287, quote: "Vapors are toxic, and people are likely to be exposed by evacuating."}
+    response: {doc_id: erg2024-en-pdf, page: 285, quote: "People in this area should be evacuated and/or sheltered-in-place inside buildings."}
+
+
+  - rule_id: FR-BLEVE-01
+    title: Tank in fire, flammable liquefied gas, BLEVE radius and evacuate
+    classes: [flammable_liquefied_gas]
+    modes: [highway, rail]
+    inputs:
+      - name: fire_involved
+        tool: assess_incident
+        field: the incident report's fire flag
+        dataset: incident input
+        description: True when a tank, rail tank car or highway tank is involved in a fire.
+      - name: fire_isolate
+        tool: protective_action_footprint
+        field: erg guides[guide].evacuation.fire_isolate
+        dataset: erg2024-en-pdf
+        description: The orange guide's fire isolation distance.
+      - name: fire_evacuate
+        tool: protective_action_footprint
+        field: erg guides[guide].evacuation.fire_evacuate
+        dataset: erg2024-en-pdf
+        description: The orange guide's initial evacuation distance for a fire.
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: fire_involved, op: is_true}
+    template: >-
+      A tank is involved in a fire. Isolate {fire_isolate} in all directions. Consider initial
+      evacuation for {fire_evacuate} in all directions.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 162
+        quote: "also refer to the \"BLEVE – Safety Precautions\" section."
+        supports: Guide 115 sends LPG and propane tank fires to the BLEVE precautions.
+      - doc_id: erg2024-en-pdf
+        page: 360
+        quote: "it should be understood that the risks increase rapidly the closer you are to a BLEVE."
+        supports: The BLEVE precautions on distance.
+      - doc_id: erg2024-en-pdf
+        page: 287
+        quote: "Vapors are flammable."
+        supports: The ERG's condition for considering evacuation.
+    basis: "DN-001 section 3 (flammable liquefied gases: BLEVE radius, evacuate)"
+    gaps:
+      - The BLEVE table by tank capacity (ERG p. 361) is not packed in HB-03; the rule uses the
+        guide's fire distances.
+    consequence: {doc_id: erg2024-en-pdf, page: 360, quote: "it should be understood that the risks increase rapidly the closer you are to a BLEVE."}
+    # HB-12b (DN-006 3.4): duplicates the response of FR-G115-MAY_EXPLODE_WHEN_HEATED; consolidated into it.
+    merge_into: FR-G115-MAY_EXPLODE_WHEN_HEATED
+    response: null
+
+
+  - rule_id: FR-WATER-01
+    title: Waterways inside the footprint of a flammable liquid spill
+    classes: [flammable_liquid]
+    modes: [highway, rail]
+    inputs:
+      - name: waterways_in_footprint
+        tool: facilities_in_footprint
+        # HB-10: one per named stream or 3DHP mainstem, plus each water body; a river drawn as
+        # both a polygon and a flowline counts once (facilities_sources.yaml).
+        field: distinct flowlines (by name, else mainstem) and waterbodies (layers 50 and 60)
+        dataset: usgs-3dhp-mapserver
+        description: Streams, rivers and water bodies inside the footprint (hydrography choice, HB-03 step 5).
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: waterways_in_footprint, op: gt, value: 0}
+    template: >-
+      {waterways_in_footprint} waterways are inside the protective action footprint. Prevent
+      entry of the spill into waterways and sewers.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 189
+        quote: "Prevent entry into waterways, sewers, basements or confined areas."
+        supports: Guide 128, the flammable-liquid guide.
+    basis: >-
+      DN-001 section 3 (flammable liquids: storm drains and waterways); DN-002 section 4
+      (drinking water intakes are not published; the rule cites waterways and source water
+      protection areas, never intake points).
+    gaps:
+      - Source water protection areas are not an input yet; the EPA DWMAPS page is not held
+        (robots_unreachable, HB-01).
+    consequence: {doc_id: erg2024-en-pdf, page: 188, quote: "Runoff to sewer may create fire or explosion hazard."}
+    response: {doc_id: erg2024-en-pdf, page: 189, quote: "Prevent entry into waterways, sewers, basements or confined areas."}
+
+
+  - rule_id: FR-CRYO-01
+    title: Cryogenic gas collects in low and confined areas
+    classes: [cryogenic_asphyxiant]
+    modes: [highway, rail]
+    inputs:
+      - name: footprint_present
+        tool: protective_action_footprint
+        field: a footprint was drawn for the incident
+        dataset: erg2024-en-pdf
+        description: True when the footprint exists.
+    params: {}
+    predicate:
+      mode: all
+      terms:
+        - {input: footprint_present, op: is_true}
+    template: >-
+      The gas spreads along the ground and collects in low or confined areas. Keep people out of
+      basements, sewers and low areas inside the protective action footprint.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 172
+        quote: "Many gases are heavier than air and will spread along the ground and collect in low or confined areas (sewers, basements, tanks, etc.)."
+        supports: Guide 120, the cryogenic inert gas guide.
+      - doc_id: erg2024-en-pdf
+        page: 172
+        quote: "Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas."
+        supports: The asphyxiation hazard.
+    basis: "DN-001 section 3 (cryogenic asphyxiants: low-lying areas, cold)"
+    gaps:
+      - Terrain (which areas are low-lying) is not an input; no elevation dataset is in DN-001
+        section 5. The rule names the hazard; it does not locate low ground.
+    consequence: {doc_id: erg2024-en-pdf, page: 172, quote: "Many gases are heavier than air and will spread along the ground and collect in low or confined areas (sewers, basements, tanks, etc.)."}
+    # HB-12b (DN-006 3.4): duplicates the response of FR-G120-HEAVIER_THAN_AIR; consolidated into it.
+    merge_into: FR-G120-HEAVIER_THAN_AIR
+    response: null
+
+
+  - rule_id: FR-RAIL-01
+    title: Rail lines, yards and highway-rail grade crossings inside the footprint
+    classes: [tih_gas, flammable_liquefied_gas, flammable_liquid, cryogenic_asphyxiant]
+    modes: [highway, rail]
+    inputs:
+      # HB-10: the BTS NTAD layers (FRA data) replace TIGER and the FRA landing page; step 0
+      # found both queryable by envelope (corpus/api_catalog.yaml bts_ntad).
+      - name: rail_features_in_footprint
+        tool: facilities_in_footprint
+        field: NTAD North American Rail Network Lines segments (FRAARCID) inside
+        dataset: bts-ntad-rail-lines-layer
+        description: Rail lines and yards inside the footprint.
+      - name: grade_crossings
+        tool: facilities_in_footprint
+        field: NTAD Railroad Grade Crossings at grade (CrossingPosition "At Grade") inside
+        dataset: bts-ntad-grade-crossings-layer
+        description: Highway-rail grade crossings inside the footprint.
+    params: {}
+    predicate:
+      mode: any
+      terms:
+        - {input: rail_features_in_footprint, op: gt, value: 0}
+        - {input: grade_crossings, op: gt, value: 0}
+    template: >-
+      {rail_features_in_footprint} rail features and {grade_crossings} highway-rail grade
+      crossings are inside the protective action footprint. If more than one tank car leaks,
+      large spill distances can increase.
+    receipts:
+      - doc_id: erg2024-en-pdf
+        page: 282
+        quote: "If more than one rail tank car, highway tank, tank or large cylinder, containing TIH materials is leaking, large spill distances may need to be increased."
+        supports: A rail yard can hold several tank cars.
+      - doc_id: fra-safety-data
+        page: 8
+        quote: "highway-rail crossing inventory"
+        supports: FRA publishes the crossing inventory the count is read from.
+    basis: "DN-001 section 3 (modes: highway and rail)"
+    gaps: []
+    consequence: {doc_id: erg2024-en-pdf, page: 282, quote: "If more than one rail tank car, highway tank, tank or large cylinder, containing TIH materials is leaking, large spill distances may need to be increased."}
+    # HB-12b (DN-006 3.1): the ERG states no response for this condition, so it is an
+    # indication, never printed.
+    response: null

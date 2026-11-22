@@ -1,0 +1,61 @@
+brief	level	ppm	xffm_m	draw_to_m	last_row_m	reach_m	open_at_end	source
+csx-point-of-rocks-night	AEGL-1	0.5	22200	22200	18400	18400	True	held
+csx-point-of-rocks-night	AEGL-1	0.5	22200		52500	52500	True	held
+csx-point-of-rocks-night	AEGL-1	0.5	20000		45300	45300	True	run
+csx-point-of-rocks-night	AEGL-1	0.5	40000		105000	105000	True	run
+csx-point-of-rocks-night	AEGL-1	0.5	80000		237000	159676	False	run
+csx-point-of-rocks-night	AEGL-2	2	22200	22200	18400	18400	True	held
+csx-point-of-rocks-night	AEGL-2	2	22200		52500	52500	True	held
+csx-point-of-rocks-night	AEGL-2	2	20000		45300	45300	True	run
+csx-point-of-rocks-night	AEGL-2	2	40000		105000	73174	False	run
+csx-point-of-rocks-night	AEGL-2	2	80000		237000	73334	False	run
+csx-point-of-rocks-night	AEGL-3	20	22200	22200	18400	18400	True	held
+csx-point-of-rocks-night	AEGL-3	20	22200		52500	20071	False	held
+csx-point-of-rocks-night	AEGL-3	20	20000		45300	19992	False	run
+csx-point-of-rocks-night	AEGL-3	20	40000		105000	20037	False	run
+csx-point-of-rocks-night	AEGL-3	20	80000		237000	19978	False	run
+i495-wilson-bridge-night	AEGL-1	0.5	44400	44400	38400	38400	True	held
+i495-wilson-bridge-night	AEGL-1	0.5	44400		139000	83763	False	held
+i495-wilson-bridge-night	AEGL-1	0.5	20000		54800	54800	True	run
+i495-wilson-bridge-night	AEGL-1	0.5	40000		124000	84383	False	run
+i495-wilson-bridge-night	AEGL-1	0.5	80000		276000	84474	False	run
+i495-wilson-bridge-night	AEGL-2	2	44400	44400	38400	38400	True	held
+i495-wilson-bridge-night	AEGL-2	2	44400		139000	40213	False	held
+i495-wilson-bridge-night	AEGL-2	2	20000		54800	40192	False	run
+i495-wilson-bridge-night	AEGL-2	2	40000		124000	40256	False	run
+i495-wilson-bridge-night	AEGL-2	2	80000		276000	40337	False	run
+i495-wilson-bridge-night	AEGL-3	20	44400	44400	38400	10373	False	held
+i495-wilson-bridge-night	AEGL-3	20	44400		139000	10373	False	held
+i495-wilson-bridge-night	AEGL-3	20	20000		54800	10421	False	run
+i495-wilson-bridge-night	AEGL-3	20	40000		124000	10432	False	run
+i495-wilson-bridge-night	AEGL-3	20	80000		276000	10405	False	run
+i81-md-pa-line-night	AEGL-1	0.5	44400	44400	38600	38600	True	held
+i81-md-pa-line-night	AEGL-1	0.5	44400		140000	83216	False	held
+i81-md-pa-line-night	AEGL-1	0.5	20000		55400	55400	True	run
+i81-md-pa-line-night	AEGL-1	0.5	40000		126000	83774	False	run
+i81-md-pa-line-night	AEGL-1	0.5	80000		278000	83817	False	run
+i81-md-pa-line-night	AEGL-2	2	44400	44400	38600	38600	True	held
+i81-md-pa-line-night	AEGL-2	2	44400		140000	39771	False	held
+i81-md-pa-line-night	AEGL-2	2	20000		55400	39928	False	run
+i81-md-pa-line-night	AEGL-2	2	40000		126000	40001	False	run
+i81-md-pa-line-night	AEGL-2	2	80000		278000	39976	False	run
+i81-md-pa-line-night	AEGL-3	20	44400	44400	38600	10281	False	held
+i81-md-pa-line-night	AEGL-3	20	44400		140000	10281	False	held
+i81-md-pa-line-night	AEGL-3	20	20000		55400	10345	False	run
+i81-md-pa-line-night	AEGL-3	20	40000		126000	10353	False	run
+i81-md-pa-line-night	AEGL-3	20	80000		278000	10311	False	run
+i83-md-pa-line-night	AEGL-1	0.5	55800	55800	47800	47800	True	held
+i83-md-pa-line-night	AEGL-1	0.5	55800		175000	83416	False	held
+i83-md-pa-line-night	AEGL-1	0.5	20000		52500	52500	True	run
+i83-md-pa-line-night	AEGL-1	0.5	40000		119000	83833	False	run
+i83-md-pa-line-night	AEGL-1	0.5	80000		263000	83888	False	run
+i83-md-pa-line-night	AEGL-2	2	55800	55800	47800	39609	False	held
+i83-md-pa-line-night	AEGL-2	2	55800		175000	39609	False	held
+i83-md-pa-line-night	AEGL-2	2	20000		52500	39613	False	run
+i83-md-pa-line-night	AEGL-2	2	40000		119000	39598	False	run
+i83-md-pa-line-night	AEGL-2	2	80000		263000	39527	False	run
+i83-md-pa-line-night	AEGL-3	20	55800	55800	47800	9629	False	held
+i83-md-pa-line-night	AEGL-3	20	55800		175000	9629	False	held
+i83-md-pa-line-night	AEGL-3	20	20000		52500	9642	False	run
+i83-md-pa-line-night	AEGL-3	20	40000		119000	9626	False	run
+i83-md-pa-line-night	AEGL-3	20	80000		263000	9667	False	run

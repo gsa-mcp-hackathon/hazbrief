@@ -1,0 +1,58 @@
+## session_start at 2026-11-18T15:56:48-05:00
+ref	main
+factor	2	(source: seldon.core.dispatch.DISK_NEED_FACTOR_DEFAULT)
+footprint_bytes	2497688943	(seldon.core.dispatch.tree_bytes)
+need_bytes	4995377886
+free_bytes	56488497152	(probe: statvfs, on /)
+free_at_least_need	True
+
+## after_0a_0e_0f at 2026-11-18T16:00:26-05:00
+ref	main
+factor	2	(source: seldon.core.dispatch.DISK_NEED_FACTOR_DEFAULT)
+footprint_bytes	2497688943	(seldon.core.dispatch.tree_bytes)
+need_bytes	4995377886
+free_bytes	90382917632	(probe: statvfs, on /)
+free_at_least_need	True
+
+## item 4, before the clone at 2026-11-18T16:00:47-05:00
+ref	main
+factor	2	(source: seldon.core.dispatch.DISK_NEED_FACTOR_DEFAULT)
+footprint_bytes	2497688943	(seldon.core.dispatch.tree_bytes)
+need_bytes	4995377886
+free_bytes	90382200832	(probe: statvfs, on /private/tmp)
+free_at_least_need	True
+
+## item 4, after the clone and its install at 2026-11-18T16:01:04-05:00
+ref	main
+factor	2	(source: seldon.core.dispatch.DISK_NEED_FACTOR_DEFAULT)
+footprint_bytes	2497688943	(seldon.core.dispatch.tree_bytes)
+need_bytes	4995377886
+free_bytes	87804203008	(probe: statvfs, on /private/tmp)
+free_at_least_need	True
+size_on_disk_bytes	3404922880	(du -sk /private/tmp/hb203_clone)
+
+## item 4, after the clone's gate, before deleting the clone at 2026-11-18T16:53:16-05:00
+ref	main
+factor	2	(source: seldon.core.dispatch.DISK_NEED_FACTOR_DEFAULT)
+footprint_bytes	2497688943	(seldon.core.dispatch.tree_bytes)
+need_bytes	4995377886
+free_bytes	82200793088	(probe: statvfs, on /private/tmp)
+free_at_least_need	True
+size_on_disk_bytes	3451191296	(du -sk /private/tmp/hb203_clone)
+
+## item 4, after deleting the clone at 2026-11-18T16:53:20-05:00
+ref	main
+factor	2	(source: seldon.core.dispatch.DISK_NEED_FACTOR_DEFAULT)
+footprint_bytes	2497688943	(seldon.core.dispatch.tree_bytes)
+need_bytes	4995377886
+free_bytes	84822089728	(probe: statvfs, on /private/tmp)
+free_at_least_need	True
+
+## before HB-203's own gate at 2026-11-18T16:57:10-05:00
+ref	main
+factor	2	(source: seldon.core.dispatch.DISK_NEED_FACTOR_DEFAULT)
+footprint_bytes	2497688943	(seldon.core.dispatch.tree_bytes)
+need_bytes	4995377886
+free_bytes	85022273536	(probe: statvfs, on .)
+free_at_least_need	True
+

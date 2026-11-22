@@ -1,0 +1,460 @@
+# Workbench API access catalog (HB-49; DN-002 s3b's pattern, HB-06).
+# HAND-AUTHORED, in corpus/api_catalog.yaml's schema, for the APIs the workbench (src/hazbrief/brief) calls and no
+# tool does: the state linear-referencing services its milepost derivation reads (DN-013 section 5.3).
+#
+# Why a file of its own: corpus/api_catalog.yaml is "every live API the server calls" (DN-002 s3b), and it is an
+# admitted corpus document with claims cut from its text, so a change to it is a change to the text those claims are
+# anchored to (HB-49 RESULT: hb01b_17's release stopped on claims-reachable, 12 of its 17 claims unreachable, when
+# these entries were first written there). The workbench's APIs are not the server's, and this file carries none.
+#
+# Probed with `uv run python scripts/probe_apis.py --catalog corpus/workbench_api_catalog.yaml`; the rows go to the
+# same corpus/api_probe_log.jsonl, and `last_verified` is checked against them by tests/test_api_catalog.py.
+
+apis:
+  - id: pasda_penndot
+    name: PennDOT RMS layers on PASDA (ArcGIS MapServer)
+    runtime: false
+    status: active
+    base_url: https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer
+    docs: [pasda-penndot-interstate-mile-markers-layer, pasda-penndot-interstate-mile-markers-metadata, pasda-penndot-state-roads-metadata, penndot-location-referencing-system]
+    documentation_url: https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/0?f=json
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: '"maxRecordCount": 1000 per query (layer description).'
+      observed: none (HB-49 step 2, 6 requests)
+    terms:
+      url: https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/0?f=json
+      doc: pasda-penndot-interstate-mile-markers-layer
+      clauses:
+        - 'copyrightText "Pennsylvania Department of Transportation"; the PASDA metadata records state no use constraint (pasda-penndot-state-roads-metadata).'
+    identification: none required.
+    cadence: Not stated; each layer is named by its extract month ("Pa Interstate Mile Markers 2026_07").
+    as_of: The layer name's extract month and each feature's GIS_UPDATE.
+    formats: [JSON, GeoJSON]
+    errors: ArcGIS JSON error object (HTTP 200).
+    layers:
+      interstate_mile_markers: pasda/PennDOT/MapServer/0
+      state_roads: pasda/PennDOT/MapServer/4
+    probe:
+      url: https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/0?f=json
+      as_of: {json: [name]}
+    last_verified: "2026-10-27"
+
+  - id: mdot_sha_milepoints
+    name: MDOT SHA Milepoints (ArcGIS FeatureServer)
+    runtime: false
+    status: active
+    base_url: https://maps.roads.maryland.gov/arcgis/rest/services/Milepoints/MilepointsVW_Maryland_MDOTSHA/FeatureServer
+    docs: [mdot-sha-milepoints-layer]
+    documentation_url: https://maps.roads.maryland.gov/arcgis/rest/services/Milepoints/MilepointsVW_Maryland_MDOTSHA/FeatureServer/0?f=json
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: '"maxRecordCount": 100000 per query (layer description).'
+      observed: none (HB-49 step 2, 2 requests)
+    terms:
+      url: https://maps.roads.maryland.gov/arcgis/rest/services/Milepoints/MilepointsVW_Maryland_MDOTSHA/FeatureServer/0?f=json
+      doc: mdot-sha-milepoints-layer
+      clauses:
+        - 'copyrightText names MDOT, MDOT SHA and its offices; no licence is stated.'
+    identification: none required.
+    cadence: '"MDOT SHA Milepoints data is updated and published on an annual basis" (layer description).'
+    as_of: '"This data is for the year 2018. Data Last Updated: 11/05/2019" (layer description).'
+    formats: [JSON, GeoJSON]
+    errors: ArcGIS JSON error object (HTTP 200).
+    layers:
+      milepoints_10th: Milepoints/MilepointsVW_Maryland_MDOTSHA/FeatureServer/0
+    probe:
+      url: https://maps.roads.maryland.gov/arcgis/rest/services/Milepoints/MilepointsVW_Maryland_MDOTSHA/FeatureServer/0?f=json
+      as_of: {json: [description]}
+    last_verified: "2026-10-27"
+
+  - id: vdot_lrs
+    name: VDOT Mile Marker Signs (ArcGIS FeatureServer)
+    runtime: false
+    status: active
+    base_url: https://services.arcgis.com/p5v98VHDX9Atv3l7/ArcGIS/rest/services/Mile_Marker_Signs/FeatureServer
+    docs: [vdot-mile-marker-signs-layer, vdot-mile-marker-signs-metadata]
+    documentation_url: https://services.arcgis.com/p5v98VHDX9Atv3l7/ArcGIS/rest/services/Mile_Marker_Signs/FeatureServer/0?f=json
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: None published.
+      observed: none (HB-49 step 2, 2 requests)
+    terms:
+      url: https://services.arcgis.com/p5v98VHDX9Atv3l7/ArcGIS/rest/services/Mile_Marker_Signs/FeatureServer/info/metadata
+      doc: vdot-mile-marker-signs-metadata
+      clauses:
+        - '"This data is provided without any guarantee of accuracy, timeliness or completeness." (vdot-mile-marker-signs-metadata)'
+        - '"Users should treat this dataset as a legacy reference resource, provided as‑is and not actively maintained." (vdot-mile-marker-signs-metadata)'
+    identification: none required.
+    cadence: None; VDOT says the layer is not actively maintained.
+    as_of: Each sign's D_DATE.
+    formats: [JSON, GeoJSON]
+    errors: ArcGIS JSON error object (HTTP 200).
+    probe:
+      url: https://services.arcgis.com/p5v98VHDX9Atv3l7/ArcGIS/rest/services/Mile_Marker_Signs/FeatureServer/0?f=json
+      as_of: {json: [name]}
+    last_verified: "2026-10-27"
+
+  # HB-50: the Census Geocoder's one-line address endpoint, which the workbench's address derivation reads per
+  # incident (DN-013 section 5.4). corpus/api_catalog.yaml `census_geocoder` is the server's own batch use (the
+  # hospital file, geocoded once); this is a separate entry for a separate caller of the same host.
+  - id: census_geocoder_locations
+    name: Census Geocoder one-line address endpoint (locations/onelineaddress)
+    runtime: false
+    status: active
+    base_url: https://geocoding.geo.census.gov/geocoder
+    docs: [census-geocoder-api-docs, census-geocoder-api-pdf, census-geocoder-user-guide, census-geocoder-faq, census-api-terms]
+    documentation_url: https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: a single address per call; batch files up to 10,000 addresses (the service's documentation).
+      observed: none (HB-50; once a 302 to outage.census.gov and once a read timeout, 2026-10-27 04:56, then 200s)
+    terms:
+      url: https://www.census.gov/data/developers/about/terms-of-service.html
+      doc: census-api-terms
+      clauses:
+        - A public federal service; no key (DN-003 section 1).
+    identification: none required.
+    cadence: 'The benchmark named in the request: "Generally, the Public_AR_Current benchmark refers to the most current or last released benchmark" (census-geocoder-user-guide).'
+    as_of: The benchmark and the request date; responses carry "Cache-Control private, no-store" and no release date.
+    formats: [JSON]
+    errors: 'An outage is a 302 to https://outage.census.gov/unavailable.html (HB-48 fetch log); an unmatched address is "addressMatches": [].'
+    probe:
+      url: https://geocoding.geo.census.gov/geocoder/benchmarks
+      as_of: {json: [benchmarks]}
+    last_verified: "2026-10-27"
+
+  # The USGS Hydro Network-Linked Data Index, which the workbench's downstream path navigates (HB-54; DN-015 section
+  # 3). No tool calls it. It navigates NHDPlus V2 comids; it lists no 3DHP feature source (HB-54 probe of
+  # linked-data?f=json: 21 sources, none 3DHP).
+  - id: nldi
+    name: USGS Hydro Network-Linked Data Index (NLDI)
+    runtime: false
+    status: active
+    base_url: https://api.water.usgs.gov/nldi
+    docs: [usgs-nldi-navigation-docs]
+    documentation_url: https://api.water.usgs.gov/docs/nldi/navigation
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: none stated (usgs-nldi-navigation-docs).
+      observed: 'slow and intermittent (HB-54): comid/position answered in 54 s and 116 s, past the client''s 30 s, and
+        once a read timeout; navigation in 43 s; 502 on four calls during one recording run, 200 on the re-run.'
+    terms:
+      url: https://api.water.usgs.gov/docs/nldi/navigation
+      doc: usgs-nldi-navigation-docs
+      clauses:
+        - A US Government work and a public federal service; no key.
+    identification: none required.
+    cadence: Not stated; the index is NHDPlus V2 (a fixed release) with its linked feature sources.
+    as_of: 'None served: the responses carry no Date or Last-Modified, only "Cache-Control: public, max-age=3600" (HB-54 probe). NHDPlus V2 is a fixed release; the retrieval time is the as-of.'
+    formats: [JSON, GeoJSON]
+    errors: HTTP status (502 observed); an unknown comid answers 404.
+    probe:
+      url: https://api.water.usgs.gov/nldi/linked-data?f=json
+      as_of: {header: Date}
+    last_verified: "2026-10-27"
+
+  # County Business Patterns, which the workbench's establishments table reads (HB-55; DN-015 section 4). The server's
+  # census_data entry (corpus/api_catalog.yaml) is the tools' use of the same API; this is a separate caller.
+  - id: census_cbp
+    name: Census Data API, County Business Patterns (data/2023/cbp)
+    runtime: false
+    status: active
+    base_url: https://api.census.gov/data/2023/cbp
+    docs: [census-cbp-api-docs, census-api-terms, census-api-query-limits]
+    documentation_url: https://www.census.gov/data/developers/data-sets/cbp-zbp/cbp-api.html
+    auth: {type: key, key: required, env_var: CENSUS_API_KEY, signup_url: https://api.census.gov/data/key_signup.html, signup_procedure: null, notes: 'DN-003 section 1: the one key; never written to a recorded exchange.'}
+    rate_limits:
+      documented: up to 50 variables per query; no per-key rate published (census-api-query-limits).
+      observed: none (HB-55)
+    terms:
+      url: https://www.census.gov/data/developers/about/terms-of-service.html
+      doc: census-api-terms
+      clauses:
+        - 'Required notice: "This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau".'
+    identification: the key.
+    cadence: Annual; 2023 is the newest vintage served (HB-55 probe, data/2024/cbp answered 404).
+    as_of: The vintage in the path.
+    formats: [JSON]
+    errors: HTTP status (404 for a vintage not served).
+    probe:
+      url: https://api.census.gov/data/2023/cbp.json
+      as_of: {path_vintage: "/data/2023/"}
+    last_verified: "2026-10-27"
+
+  # The USGS Elevation Point Query Service, which the workbench's terrain panel reads (HB-55; DN-015 section 5).
+  - id: epqs
+    name: USGS Elevation Point Query Service (EPQS) v1
+    runtime: false
+    status: active
+    base_url: https://epqs.nationalmap.gov/v1
+    docs: [usgs-epqs-api-docs, usgs-3dep-13-arcsec-dem-metadata]
+    documentation_url: https://epqs.nationalmap.gov/v1/docs
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: none stated.
+      observed: 'about 3 s per point on the HB-55 recording (the probe answered at once); robots.txt answers 403 "Missing
+        Authentication Token" (an API gateway), which RFC 9309 reads as unavailable, so access is allowed.'
+    terms:
+      url: https://epqs.nationalmap.gov/v1/docs
+      doc: usgs-3dep-13-arcsec-dem-metadata
+      clauses:
+        - A US Government work and a public federal service; no key.
+    identification: none required.
+    cadence: 'The best available 3DEP DEM at the point; the answer names its resolution (1 m at the water fixture) and,
+      with includeDate, its acquisition date.'
+    as_of: The DEM's acquisition date when asked (includeDate); the recorder asks without it.
+    formats: [JSON]
+    errors: 'A point with no data answers -1000000 (elevatr documentation; derive.terrain counts it as not answered).'
+    probe:
+      url: https://epqs.nationalmap.gov/v1/json?x=-77.724&y=39.722&wkid=4326&units=Meters&includeDate=true
+      as_of: {json: [attributes]}
+    last_verified: "2026-10-27"
+
+  # The USGS 3DEP elevation ImageServer, whose getSamples reads a sample set in one GET (HB-59; DN-015 section 5). EPQS
+  # (above) stays its fallback.
+  - id: usgs_3dep
+    name: USGS 3DEPElevation ImageServer (getSamples)
+    runtime: false
+    status: active
+    base_url: https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer
+    docs: [usgs-3dep-elevation-imageserver, esri-imageserver-get-samples, usgs-3dep-13-arcsec-dem-metadata]
+    documentation_url: https://developers.arcgis.com/rest/services-reference/enterprise/get-samples/
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: none stated.
+      observed: 'a URL past about 8,200 characters answers 414 URI Too Long (HB-59 probe: 8,201 answered 200, 8,531 did
+        not), so a 260-point multipoint is about the most one GET carries; 150 points answered in 2.6 s. robots.txt
+        answers 403, which RFC 9309 reads as unavailable, so access is allowed.'
+    terms:
+      url: https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer?f=json
+      doc: usgs-3dep-elevation-imageserver
+      clauses:
+        - A US Government work and a public federal service; no key ("USGS National Map 3D Elevation Program (3DEP)").
+    identification: none required.
+    cadence: 'The best available 3DEP DEM at each point (the answer names its resolution: 1 m at the water fixture), the
+      same DEMs EPQS reads; the service''s copyrightText names its refresh ("October 01, 2026" on the HB-59 probe).'
+    as_of: The service's copyrightText date; a sample answer carries none.
+    formats: [JSON]
+    errors: 'An ArcGIS error object with HTTP 200; a sample with no data answers "NoData" (derive.terrain counts it as
+      not answered).'
+    probe:
+      url: https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer?f=json
+      as_of: {json: [copyrightText]}
+    last_verified: "2026-10-28"
+
+  # MRLC's NLCD WMS, which the terrain panel's land-cover class read (HB-55; DN-015 section 5) until HB-59 ADDENDUM-02
+  # found CONUS gone from it. Superseded for CONUS by usgs_annual_nlcd; probe_apis.py never probes a superseded row.
+  - id: mrlc_nlcd
+    name: MRLC GeoServer WMS (NLCD land cover)
+    runtime: false
+    status: superseded
+    superseded:
+      scope: CONUS (the conterminous US). The Alaska, Hawaii and Puerto Rico coverages are still listed here.
+      by: usgs_annual_nlcd
+      date: "2026-10-28"
+      basis: 'mrlc-data-services-page, re-fetched 2026-10-28, lists www.mrlc.gov/geoserver/ only for the legacy Alaska,
+        Hawaii and Puerto Rico coverages and links CONUS Annual NLCD to dmsdata.cr.usgs.gov. NLCD_2021_Land_Cover_L48 is
+        gone, and requests for it hung rather than answering 404: no GeoServer request from 22:49 EDT 2026-10-27
+        returned data; of 90 overnight polls, 88 timed out, one answered 502 and one 500; a 04:03 EDT GetCapabilities
+        timed out (HB-59 RESULT section 2 and RESULT ADDENDUM-01). Do not probe this row for CONUS.'
+      docs: [mrlc-data-services-page, usgs-annual-nlcd-access]
+    base_url: https://www.mrlc.gov/geoserver/mrlc_display/wms
+    docs: [mrlc-data-services-page, mrlc-nlcd-class-legend]
+    documentation_url: https://www.mrlc.gov/data-services-page
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: none stated.
+      observed: none (HB-55)
+    terms:
+      url: https://www.mrlc.gov/data-services-page
+      doc: mrlc-data-services-page
+      clauses:
+        - None stated on the page; MRLC is a consortium of federal agencies led by USGS.
+    identification: none required.
+    cadence: 'One layer per NLCD release; the newest queryable single-year land cover is NLCD_2021_Land_Cover_L48 (HB-55
+      GetCapabilities; Annual NLCD appears only as 1985-2023 change summaries).'
+    as_of: The layer's year.
+    formats: [JSON (GetFeatureInfo application/json), XML (GetCapabilities)]
+    errors: OGC service exception.
+    probe:
+      url: https://www.mrlc.gov/geoserver/mrlc_display/wms?service=WMS&version=1.1.1&request=GetFeatureInfo&layers=NLCD_2021_Land_Cover_L48&query_layers=NLCD_2021_Land_Cover_L48&styles=&srs=EPSG:4326&bbox=-77.7241,39.7219,-77.7239,39.7221&width=3&height=3&x=1&y=1&info_format=application/json&feature_count=1
+      as_of: {json: [timeStamp]}
+    # The date the supersession was verified (superseded.basis); the probe above is HB-55's, kept as history.
+    last_verified: "2026-10-28"
+
+  # USGS's Annual NLCD land-cover WMS on dmsdata, which replaces mrlc_nlcd for CONUS (HB-59 ADDENDUM-02). No OGC
+  # request to it answered on 2026-10-28 from 13:03 to 14:35 UTC (HB-59 RESULT ADDENDUM-02), so it has no probe. It is
+  # not read: the terrain panel's land cover reads nlcd_cog_mirror (HB-59 ADDENDUM-03), and no task waits on this row.
+  - id: usgs_annual_nlcd
+    name: USGS dmsdata GeoServer WMS (Annual NLCD land cover, CONUS)
+    runtime: false
+    status: active
+    base_url: https://dmsdata.cr.usgs.gov/geoserver/mrlc_Land-Cover-Native_conus_year_data/wms
+    docs: [usgs-annual-nlcd-access, mrlc-data-services-page, mrlc-nlcd-class-legend]
+    documentation_url: https://www.usgs.gov/centers/eros/how-can-i-access-and-download-annual-nlcd-data
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: none stated.
+      observed: 'none answered: 4 GetCapabilities, 22 GetFeatureInfo and 1 GetMap from 13:03 to 14:35 UTC 2026-10-28;
+        one GetCapabilities answered 200 in 14.2 s, cut off at 199,702 bytes (HB-59 RESULT ADDENDUM-02).'
+    terms:
+      url: https://www.usgs.gov/centers/eros/how-can-i-access-and-download-annual-nlcd-data
+      doc: usgs-annual-nlcd-access
+      clauses:
+        - 'None stated on the page; a USGS EROS service. mrlc-data-services-page: "No user name or password is needed."'
+    identification: none required.
+    cadence: One image per product year on the layer's time dimension (Annual NLCD Collection 1.2 spans 1985 to 2025,
+      HB-59 ADDENDUM-02); not yet read from the capabilities.
+    as_of: The product year (the time dimension's value the request names).
+    formats: [XML (GetCapabilities), 'GetFeatureInfo: text/plain, text/html, application/json, GML, text/xml (the
+        capabilities, HB-59 RESULT ADDENDUM-02)']
+    errors: OGC service exception; on 2026-10-28, hangs and empty replies.
+    layers:
+      land_cover: Land-Cover-Native_conus_year_data
+    probe: null
+    probe_reason: 'No request answered on 2026-10-28 (HB-59 RESULT ADDENDUM-02). The next execution of HB-59 probes a
+      GetFeatureInfo at the water fixture''s spill and records it here.'
+    last_verified: null
+
+  # The public-domain Annual NLCD COG mirror the terrain panel's land cover reads by HTTP range: the class at the spill,
+  # the class mix over the footprint and the classes along the downstream path, from one windowed read (HB-59
+  # ADDENDUM-03; hazbrief.brief.cog).
+  - id: nlcd_cog_mirror
+    name: Annual NLCD Collection 1.2 Cloud Optimized GeoTIFFs (NRP Nautilus S3 mirror, published on Source Cooperative)
+    runtime: false
+    status: active
+    base_url: https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/
+    docs: [nlcd-cog-mirror-stac, source-coop-cboettig-land-cover, mrlc-nlcd-class-legend]
+    documentation_url: https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/stac-collection.json
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: none stated.
+      observed: none (HB-59 ADDENDUM-03; a 64 KiB range answered 206 in 0.31 s, a 64 KB tile in under 1 s)
+    terms:
+      url: https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/stac-collection.json
+      doc: nlcd-cog-mirror-stac
+      clauses:
+        - '"license": "public-domain"; the collection''s license link is USGS''s copyrights-and-credits policy; MRLC
+          Consortium / USGS EROS is named "producer" and "licensor" (nlcd-cog-mirror-stac).'
+    identification: none required.
+    cadence: 'One file per map year, nlcd-<year>-cog.tif, 1985 to 2025 (20 years; the STAC temporal extent ends
+      2025-12-31). The 2025 file''s Last-Modified is Fri, 31 Jul 2026 02:51:33 GMT.'
+    as_of: The map year in the file name, and the file's Last-Modified.
+    formats: ['GeoTIFF, cloud-optimized: classic TIFF, uint8, 512 x 512 tiles, Deflate with Predictor 2, EPSG:4326,
+        nodata 250, nine overviews (HB-59 RESULT ADDENDUM-03 section 2)', JSON (STAC collection)]
+    errors: S3 XML error document (404 NoSuchKey or NoSuchBucket).
+    reprojection: 'From Albers (EPSG:5070) to WGS84 with nearest-neighbor (class codes preserved) (nlcd-cog-mirror-stac).
+      No checksum is published against USGS; the object store''s x-amz-meta-md5chksum for the 2025 file is
+      puqsSg3T4UFoxPuJ6uFYZw== (base64 MD5, set by the uploader), 1,594,625,912 bytes.'
+    probe:
+      url: https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/stac-collection.json
+      as_of: {header: Last-Modified}
+    last_verified: "2026-10-28"
+
+  # NOAA nowCOAST's radar WMS, whose capabilities the workbench's radar toggle reads (HB-56; DN-016 section 4).
+  - id: nowcoast_radar
+    name: NOAA nowCOAST Weather Radar WMS (MRMS base reflectivity)
+    runtime: false
+    status: active
+    base_url: https://nowcoast.noaa.gov/geoserver/observations/weather_radar/ows
+    docs: [nowcoast-weather-radar-wms]
+    documentation_url: https://nowcoast.noaa.gov/geoserver/observations/weather_radar/ows?service=WMS&version=1.3.0&request=GetCapabilities
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: none stated.
+      observed: none (HB-56)
+    terms:
+      url: https://nowcoast.noaa.gov/geoserver/observations/weather_radar/ows?service=WMS&version=1.3.0&request=GetCapabilities
+      doc: nowcoast-weather-radar-wms
+      clauses:
+        - '"Fees NONE" and "AccessConstraints NONE" (the capabilities'' service block); a NOAA service.'
+    identification: none required.
+    cadence: 'A new scan every few minutes: the time dimension of conus_base_reflectivity_mosaic lists scans about 4 min
+      apart over the last 8 hours, and its default is the newest (HB-56 probe).'
+    as_of: The time dimension's default (the newest scan), printed on the layer list; Cache-Control max-age=240.
+    formats: [XML (GetCapabilities), PNG (GetMap)]
+    errors: OGC service exception.
+    probe:
+      url: https://nowcoast.noaa.gov/geoserver/observations/weather_radar/ows?service=WMS&version=1.3.0&request=GetCapabilities
+      as_of: {header: Expires}
+    last_verified: "2026-10-27"
+
+  # HB-119: the brief's materials resolver (src/hazbrief/brief/materials.py) reads these for a material the properties
+  # pack does not seed (DN-020 ADDENDUM-02 section 2 item 2). No tool calls them. Their recorded exchanges are
+  # cameo/ (held privately) and pubchem/ (held privately); robots.txt for both hosts is the HB-119 evidence (held privately).
+  - id: cameo_chemicals
+    name: CAMEO Chemicals chemical datasheets (NOAA)
+    runtime: false
+    status: active
+    base_url: https://cameochemicals.noaa.gov/chemical/
+    docs: [cameo-chem-2862, noaa-cameo-chemicals-program-page, cameo-chemicals-help-locs]
+    documentation_url: https://cameochemicals.noaa.gov/chemical/2862
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: none stated; robots.txt (2026-11-07) disallows /search for every agent and states no crawl delay.
+      observed: one datasheet per resolution (HB-119).
+    terms:
+      url: https://response.restoration.noaa.gov/cameochemicals
+      doc: noaa-cameo-chemicals-program-page
+      clauses:
+        - '"CAMEO Chemicals is available for free in multiple formats" (the program page); NOAA and EPA, public domain; attribution per docs/stylebook/ATTRIBUTION.md.'
+    identification: none required.
+    cadence: Not stated; the release in use took in the ERG 2024 data (noaa-cameo-chemicals-program-page).
+    as_of: None on the datasheet; each value prints its own source and year ("(EPA, 1998)").
+    formats: [HTML]
+    errors: HTTP status.
+    probe: null
+    probe_reason: 'The resolver reaches a datasheet only by the id PubChem''s record names (CAMEO''s UN-to-datasheet route is its /search, which robots.txt disallows); its recorded exchanges are the probe (cameo/ (held privately), HB-119).'
+    last_verified: null
+
+  - id: pubchem_pug_rest
+    name: PubChem PUG REST (compound identifiers and computed properties)
+    runtime: false
+    status: active
+    base_url: https://pubchem.ncbi.nlm.nih.gov/rest/pug/
+    docs: [pubchem-programmatic-access, pubchem-pug-view-limits]
+    documentation_url: https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: '"No more than 5 requests per second. No more than 400 requests per minute. No longer than 300 s running time per minute." (pubchem-pug-view-limits); "not make more than 5 requests per second" (pubchem-programmatic-access).'
+      observed: robots.txt (version 2026-10-29.1) disallows /rest/pug/ for `*`; DN-002 section 1 holds that robots.txt does not bind a per-request API client, which honours the documented limits instead (hazbrief.brief.materials.RateGate).
+    terms:
+      url: https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access
+      doc: pubchem-programmatic-access
+      clauses:
+        - '"We ask that any user, application, or organization not make more than 5 requests per second, in order to avoid overloading these servers."'
+    identification: none required.
+    cadence: Not stated for a compound record.
+    as_of: None in the body; the response's Date header.
+    formats: [JSON]
+    errors: 'HTTP status with a JSON Fault; an unknown name answers 404 PUGREST.NotFound (HB-119 probe).'
+    probe: null
+    probe_reason: 'Probed by the resolver''s own recorded exchanges (pubchem/ (held privately), HB-119); scripts/probe_apis.py is not run on it.'
+    last_verified: null
+
+  - id: pubchem_pug_view
+    name: PubChem PUG View (compound annotations, the Experimental Properties section)
+    runtime: false
+    status: active
+    base_url: https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/
+    docs: [pubchem-pug-view-limits, pubchem-programmatic-access]
+    documentation_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6688265/
+    auth: {type: none, key: none, env_var: null, signup_url: null, signup_procedure: null, notes: null}
+    rate_limits:
+      documented: '"No more than 5 requests per second. No more than 400 requests per minute. No longer than 300 s running time per minute." (pubchem-pug-view-limits).'
+      observed: robots.txt (version 2026-10-29.1) keeps /rest/pug_view crawlable ("Keep /rest/pug/ scoped so /rest/pug_view remains crawlable"), Crawl-delay 5 for `*`.
+    terms:
+      url: https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access
+      doc: pubchem-programmatic-access
+      clauses:
+        - '"We ask that any user, application, or organization not make more than 5 requests per second, in order to avoid overloading these servers."'
+        - Each annotation names its depositor (Reference SourceName) and that source's licence URL; values are read with their depositor named.
+    identification: none required.
+    cadence: Not stated for a compound record.
+    as_of: None in the body; the response's Date header.
+    formats: [JSON]
+    errors: 'HTTP status; "If the compound does not have any data to present in that section, the requests would return an error message" (pubchem-pug-view-limits).'
+    probe: null
+    probe_reason: 'Probed by the resolver''s own recorded exchanges (pubchem/ (held privately), HB-119); scripts/probe_apis.py is not run on it.'
+    last_verified: null

@@ -1,0 +1,65 @@
+# Findings of the eval harness's part A (eval_harness.py (a build tool held privately) invariants) that are filed and not
+# yet fixed, by part, each as `<check>|<id>`. test_eval_invariants.py (a test held privately) (slow) asserts each
+# part fails exactly these: a new failure fails the test, and so does a finding listed here that no
+# longer occurs (delete its line when it is fixed). Each is filed in
+# HB-05 section 3 with its follow-on.
+#
+# HB-15 fixed the last two: F-3 (guides 111, 112 and 114 are reached through the placard and
+# guide-number entry points) and F-4 (FR-G115-MAY_EXPLODE_WHEN_HEATED's redundant guide_page term,
+# removed by absorption). HB-16 closed P-12, the agent-level evaluation of DN-001 family 4
+# (scripts/agent_eval.py; LN-07). Its own filings, A-1 to A-6,
+# are model-behaviour findings, not part A checks, and are listed in LN-07 and the HB-16 RESULT.
+findings: {}
+
+# Model-behaviour findings recorded here with their mitigation (HB-37 onward). No test reads this
+# key as part A expectations (`eval_harness.known_findings` reads `findings` only); it is the
+# record of what an agent did, what the server now does about it, and what is left undone.
+agent_findings:
+  A-11:
+    filed_in: docs/evidence/hb213/lifted/HB-36.md section 4
+    mitigated_in: HB-37
+    mechanism: >-
+      Sonnet called protective_action_footprint with the whole request inside its `incident`
+      parameter, {"incident": {"incident": {...}, "wind": {...}}}. FastMCP's argument validation
+      refused it with seven Pydantic errors (five fields missing, `incident` and `wind` not
+      permitted) that never said the request was wrapped twice, and the scorer reads that first
+      call's arguments as wrong. Cause not established; a candidate is the parameter naming itself:
+      a parameter named `incident` whose object holds no `incident`, beside build_ics_201's
+      `request`, whose object does.
+    counts:
+      # Read from the traces with the guard's own rule (`hazbrief.request_shape.wrapped_twice`),
+      # HB-37; the traces are gitignored, their manifests are committed (traces_sha256.txt).
+      double_wrapped_episodes:
+        hb16_2026-10-22: {sonnet: 1, opus: 0, haiku: 0}
+        hb16b_2026-10-23: {sonnet: 1, opus: 0, haiku: 0}
+        hb36_2026-10-25: {sonnet: 6, opus: 0, haiku: 0}
+      hb36_sonnet_double_wrapped_by_prompt:
+        s-i495-wilson-bridge-day: 2
+        s-un1746-small-i81-land: 1
+        x-wind-in-knots: 1
+        o-drive-time: 1
+        o-un-not-in-erg: 1
+      # HB-36's Sonnet arguments match fell from 66 of 69 to 58 of 69: 11 episodes, of which 4 are
+      # this double wrap, 4 are A-1's shape again (a JSON string with extra data after the object:
+      # s-guide-111-wilson-bridge 3 of 3, s-i495-wilson-bridge-night 1; 0 in HB-16b), and 3 are
+      # other argument errors. HB-36's "the Wilson Bridge prompts carry most of it" is the two
+      # mechanisms together, not the double wrap alone.
+      hb36_sonnet_arguments_match_failures: {total: 11, double_wrap: 4, malformed_json_string: 4, other: 3}
+      hb36_sonnet_arguments_match: {hb16b: "66 of 69", hb36: "58 of 69"}
+      hb36_sonnet_scenario_pass: {hb16b: "41 of 54", hb36: "32 of 54"}
+      hb36_sonnet_episodes_with_a_tool_error: {hb16b: 11, hb36: 23}
+    mitigation: >-
+      HB-37: the server refuses a request wrapped twice with an error result that carries a hint
+      in one sentence, "pass incident's fields directly; the request is wrapped twice", for every
+      tool's object parameter (`hazbrief.request_shape.WrappedTwiceGuard`, installed by
+      register_tools; test_double_wrap_hint.py (a test held privately)). It never unwraps. The tool surface is
+      unchanged (surface sha256 fded04ec6c0e, the test holds it), so HB-36's numbers stay the
+      numbers for that surface; the hint's effect is unmeasured until the next agent run.
+    post_submission:
+      - >-
+        Rename protective_action_footprint's `incident` parameter (to `request`, as build_ics_201
+        names its own), or accept the double wrap. Either changes the tool surface and so the
+        agent evaluation's surface hash; it is a post-submission change, not made here.
+      - >-
+        A-1's malformed JSON string returned in 4 Sonnet episodes. HB-18's decision stands: it is
+        never repaired, and the rejection says where the text stops being one object.

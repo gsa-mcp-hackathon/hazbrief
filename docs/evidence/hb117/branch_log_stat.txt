@@ -1,0 +1,111 @@
+commit 478ab60c400e65df3c24b1b6042a8a22e27624ef
+Author: Brock Webb <brockwebb45@gmail.com>
+Date:   Wed Nov 4 21:14:37 2026 -0500
+
+    data: the four dense-gas entries go reference-only; release hb106_licences (HB-106)
+    
+    corpus/sources.yaml: reuse: reference-only on epa-slab-code, epa-degadis-source,
+    epa-degadis-testcases and epa-degadis-readme, each note quoting its held basis
+    (HB-105 RESULT Part B). Two tests first, red before. The build opened four R-213
+    content revisions (withheld_reason -> reference-only), zero calls; the readme is
+    metadata_only and its 162 text rows left the index (parity 164682 = hb101_manifest
+    164844 - 162); +0 nodes, +0 edges. Exports published to the primary.
+    
+    Gate repair, outside Touches: EVALUATION.md, ARCHITECTURE.md and SECURITY.md name
+    the gate line HB-105 set (L6-12 was red at HEAD); EVALUATION's gate table cites
+    HB-103. Issue f6a72d1d fixed; 25a80304 filed. Full gate green, EXIT 0.
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+ ...rence_only_through_a_content_revision_RESULT.md |   178 +
+ corpus/ingest_log.jsonl                            |     6 +
+ corpus/sources.yaml                                |    46 +-
+ docs/ARCHITECTURE.md                               |     5 +-
+ docs/SECURITY.md                                   |     3 +-
+ docs/evidence/hb106/after_state.json               |   182 +
+ docs/evidence/hb106/before_after.txt               |    32 +
+ docs/evidence/hb106/before_state.json              |   181 +
+ docs/evidence/hb106/build_hb106_licences.log       |   106 +
+ docs/evidence/hb106/build_plan_dry_run.log         |    64 +
+ docs/evidence/hb106/dry_run_traces_void_rows.diff  |    12 +
+ docs/evidence/hb106/fd33de8a_six_pairs_after.txt   |     6 +
+ docs/evidence/hb106/index_parity.txt               |     1 +
+ docs/evidence/hb106/index_rows_after.txt           |    18 +
+ docs/evidence/hb106/ingest_dry_run.log             |     2 +
+ docs/evidence/hb106/ingest_dry_run_after.log       |     1 +
+ .../hb106/ledger_hb106_licences_events.txt         |    10 +
+ docs/evidence/hb106/packs_unchanged.txt            |     1 +
+ docs/evidence/hb106/publish.log                    |     7 +
+ docs/evidence/hb106/suite_final.txt                |     8 +
+ docs/evidence/hb106/suite_first_run.txt            |    20 +
+ docs/evidence/hb106/suite_second_run.txt           |     8 +
+ docs/evidence/hb106/test_green_after_build.txt     |     3 +
+ docs/evidence/hb106/test_red_part_a.txt            |    15 +
+ .../hb106/tools/append_manual_build_row.py         |    48 +
+ the HB-106 evidence (held privately)               |    22 +
+ the HB-106 evidence (held privately)         |    99 +
+ the HB-106 evidence (held privately)           |    80 +
+ the HB-106 evidence (held privately)                |    21 +
+ the HB-106 evidence (held privately)                  |    30 +
+ the HB-106 evidence (held privately)               |    18 +
+ the HB-106 evidence (held privately)                   |    14 +
+ the HB-106 evidence (held privately)                |    13 +
+ the HB-106 evidence (held privately)          |    38 +
+ docs/evidence/hb106/verify_worktree.txt            |    35 +
+ docs/evidence/hb106/write_intake.log               |     1 +
+ docs/submission/EVALUATION.md                      |    19 +-
+ the corpus graph (held privately)         |     4 +
+ .../corpus/candidates/hazbrief.yaml                |    58 +-
+ docs/sources/manifest.tsv        |    53 +-
+ the corpus graph (held privately)    |    13 -
+ .../anchors_by_id_hb106_licences.json              |    29 +
+ .../hb106_licences/anchors_hb106_licences.json     |    29 +
+ .../evidence/hb106_licences/assess.json            |    10 +
+ .../evidence/hb106_licences/assess.log             |     2 +
+ .../evidence/hb106_licences/build_record.json      |  1943 +
+ .../claims_reachable_hb106_licences.json           |    29 +
+ .../hb106_licences/conformance_hb106_licences.json |   224 +
+ .../dangling_gate_hb106_licences.json              |    28 +
+ .../evidence/hb106_licences/decisions_applied.json |    13 +
+ .../hb106_licences/halts_hb106_licences.json       |    16 +
+ .../index_parity_hb106_licences.json               |    19 +
+ .../hb106_licences/node_field_mentions.json        | 70962 +++++++++++++++++++
+ .../hb106_licences/presence_hb106_licences.json    |    15 +
+ .../evidence/hb106_licences/project.log            |     5 +
+ .../evidence/hb106_licences/project_counts.json    |    21 +
+ .../evidence/hb106_licences/run_summary.md         |  2576 +
+ .../hb106_licences/schema_gate_hb106_licences.json |     6 +
+ .../evidence/hb106_licences/stage_13_export.json   |    34 +
+ .../evidence/hb106_licences/stage_14_conform.json  |    31 +
+ .../hb106_licences/stage_15_anchors-by-id.json     |    37 +
+ .../evidence/hb106_licences/stage_15_anchors.json  |    36 +
+ .../hb106_licences/stage_15_claims-reachable.json  |    35 +
+ .../hb106_licences/stage_15_conformance.json       |    77 +
+ .../evidence/hb106_licences/stage_15_dangling.json |    33 +
+ .../evidence/hb106_licences/stage_15_halts.json    |    29 +
+ .../hb106_licences/stage_15_index-parity.json      |    29 +
+ .../evidence/hb106_licences/stage_15_index.json    |    32 +
+ .../evidence/hb106_licences/stage_15_presence.json |    29 +
+ .../hb106_licences/stage_15_text_held.json         |    35 +
+ .../evidence/hb106_licences/stage_16_diff.json     |    28 +
+ .../hb106_licences/stage_16_host-posture.json      |    27 +
+ .../hb106_licences/stage_17_registers.json         |    32 +
+ .../evidence/hb106_licences/stage_18_seal.json     |    25 +
+ .../hb106_licences/text_held_hb106_licences.json   |  4248 ++
+ .../evidence/hb106_licences/write.json             |    17 +
+ .../evidence/hb106_licences/write.log              |    12 +
+ the corpus graph (held privately)  |     1 +
+ .../exports/diff_hb101_manifest_hb106_licences.md  |    30 +
+ .../exports/host_posture_hb106_licences.md         |    10 +
+ the corpus graph (held privately)          |     2 +-
+ .../hazbrief-corpus/factory/records/acquire.jsonl  |     4 +
+ the corpus graph (held privately) |     5 +
+ .../hazbrief-corpus/factory/records/traces.jsonl   |     9 +
+ the corpus graph (held privately)             |    56 +
+ .../runs/factory_20261105T012452_be1d0caf.json     |  1943 +
+ the corpus graph (held privately)         |   102 +-
+ the corpus graph (held privately) |    10 +
+ the corpus graph (held privately)           |    11 +
+ the event log of the graph (held privately)                                |    11 +
+ test_packs.py (a test held privately)                                |    45 +
+ 91 files changed, 84349 insertions(+), 124 deletions(-)

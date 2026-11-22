@@ -1,0 +1,295 @@
+# Hosts corpus fetches may contact. One exact hostname per line, compared case-insensitively
+# (RFC 4343); no wildcard or subdomain matching. Source: the **Network:** header of
+# HB-01. A later task that declares more hosts adds
+# them here in its own commit; scripts/fetch_allowlisted.py reads nothing else.
+www.phmsa.dot.gov
+cameochemicals.noaa.gov
+www.ecfr.gov
+api.weather.gov
+www.weather.gov
+api.census.gov
+www.census.gov
+www2.census.gov
+lehd.ces.census.gov
+www.atsdr.cdc.gov
+www.usgs.gov
+apps.nationalmap.gov
+carto.nationalmap.gov
+data.cms.gov
+healthdata.gov
+www.fema.gov
+training.fema.gov
+armypubs.army.mil
+www.cdc.gov
+www.epa.gov
+github.com
+# Added by HB-01b, per
+# DN-002 section 2 (HB-01 addendum A).
+pubchem.ncbi.nlm.nih.gov
+www.govinfo.gov
+tigerweb.geo.census.gov
+svi.cdc.gov
+pubs.usgs.gov
+safetydata.fra.dot.gov
+# Added by HB-01d (its **Network:** header, "for this task
+# only"): the hosts of LN-01's sources. They stay listed
+# after the task because squiddy_intake.py (a build tool held privately) records an entry whose host is off this list as
+# `blocked_host`, which would misstate how HB-01d's held documents were acquired; a later fetch
+# from them needs its own task's declaration (SELDON_NETWORK_ALLOWLIST narrows, never widens).
+onthemap.ces.census.gov
+www.osti.gov
+trid.trb.org
+www.anl.gov
+www.dhs.gov
+docs.juvare.com
+veoci.com
+www.vlahi.com
+d4h.com
+www.esri.com
+doc.arcgis.com
+community.esri.com
+raw.githubusercontent.com
+api.github.com
+response.restoration.noaa.gov
+cameo.noaa.gov
+cartowfs.nationalmap.gov
+es.calwater.com
+www.calcupa.org
+wpassets.lakecountyohio.gov
+publicdocuments.fortworthtexas.gov
+# HB-10 (2026-10-21): runtime and build-time API hosts for facilities_in_footprint and
+# receiving_hospitals (corpus/api_catalog.yaml usgs_3dhp, bts_ntad, census_geocoder).
+hydro.nationalmap.gov
+services.arcgis.com
+geocoding.geo.census.gov
+# Added by HB-46 (its **Network:** header): the hosts of the
+# documents DN-012 cites that no earlier task allowlisted. Robots results: HB-46 RESULT section 2.
+knowledge.aidr.org.au
+gwern.net
+www.national.edu
+# Contacted by HB-46 and kept listed for the fetch log's sake (HB-01d's rule above): national.edu redirects to
+# www.national.edu; apps.dtic.mil answered 403 (an operator download); library.alnap.org redirects off-list.
+national.edu
+apps.dtic.mil
+library.alnap.org
+# Added by HB-46b (its **Network:** header): the
+# basemap terms and the CATS paper. Robots results: HB-46b RESULT section 2.
+developers.google.com
+cloud.google.com
+operations.osmfoundation.org
+proceedings.esri.com
+# proceedings.esri.com redirects every path to www.esri.com's index; the CATS paper is fetched as its Wayback capture.
+web.archive.org
+# Added by HB-48 (its **Network:**
+# header): the hosts of the documents DN-013 section 7 cites that no earlier task allowlisted. Robots results: HB-48
+# RESULT section 2.
+www.fgdc.gov
+www.gps.gov
+railroads.dot.gov
+meta.geo.census.gov
+wiki.openstreetmap.org
+www.penndot.gov
+www.iso.org
+# gps.gov's live PDF path answers 404; the site's own archive host keeps it.
+archive.gps.gov
+# Added by HB-49 (its
+# **Network:** header): the state linear-referencing services' terms. Robots results: HB-49 RESULT section 1.
+maps.roads.maryland.gov
+mapservices.pasda.psu.edu
+# Added by HB-52 (its **Network:**
+# header): the two public landing pages of operator downloads, fetched once each for provenance. HB-52 RESULT section 1.
+books.google.com
+www.cia.gov
+# Added by HB-54 (its **Network:** header): the USGS
+# NLDI API and its documentation. Robots result: HB-54 RESULT section 1.
+api.water.usgs.gov
+# Added by HB-55 (its **Network:** header): the
+# USGS elevation service, MRLC (NLCD), and ScienceBase (3DEP metadata). Robots results: HB-55 RESULT section 1.
+epqs.nationalmap.gov
+www.mrlc.gov
+www.sciencebase.gov
+# HB-56: NOAA nowCOAST, the radar WMS (DN-016 section 4). robots.txt disallows /geoserver/ to crawlers and states it
+# "does NOT restrict GIS desktop clients (QGIS, ArcGIS) or web mapping APIs" (HB-56 RESULT section 1).
+nowcoast.noaa.gov
+# HB-57: EPA's FTP host, for the PCRAMMET user's guide (DN-016 section 6 item 3). robots.txt answered 404 (RFC 9309
+# s2.3.1.3: unavailable, so access is allowed). www.epa.gov is allowlisted already (HB-01).
+gaftp.epa.gov
+# Added by HB-59 (its
+# **Network:** header names "the ImageServer getSamples endpoint" on the USGS elevation host, which is
+# elevation.nationalmap.gov, not EPQS's epqs.nationalmap.gov): the 3DEP ImageServer, and the documentation of the two
+# calls (Esri's getSamples reference; GeoServer's WCS reference). Robots results: HB-59 RESULT section 1.
+elevation.nationalmap.gov
+developers.arcgis.com
+docs.geoserver.org
+# Added by HB-60 (its
+# **Network:** header): the Interagency Council for Advancing Meteorological Services, which publishes FMH-1. robots.txt
+# answered 403 (an S3 AccessDenied; RFC 9309 s2.3.1.3: unavailable, so access is allowed). HB-60 RESULT section 1.
+www.icams-portal.gov
+# Added by HB-59:
+# USGS's GeoServer, which serves CONUS Annual NLCD since MRLC's GeoServer stopped (WMS only). robots.txt answered 404
+# at 2026-10-28T13:04:40Z (RFC 9309 s2.3.1.3: unavailable, so access is allowed). HB-59 RESULT ADDENDUM-02 section 1.
+dmsdata.cr.usgs.gov
+# Added by HB-59: the
+# public-domain Annual NLCD COG mirror and its publisher's page. Robots results at 2026-10-28T15:44:38Z:
+# s3-west.nrp-nautilus.io answered 404 (an S3 NoSuchBucket; RFC 9309 s2.3.1.3: unavailable, so access is allowed);
+# source.coop answered 200 ("Allow: /", "Disallow: /api/", "Disallow: /*/*/"). HB-59 RESULT ADDENDUM-03 section 1.
+s3-west.nrp-nautilus.io
+source.coop
+# Added by HB-65 (its
+# **Network:** header: "New hosts are added to the allowlist with their robots.txt outcome recorded"). Robots results
+# read at 2026-10-28T22:05Z (HB-65 RESULT section 1):
+# codeload.github.com answered 404 (RFC 9309 s2.3.1.3: unavailable, so access is allowed); github.com's own robots.txt
+# disallows /*/archive/, which is why the source archives are fetched from codeload, not from github.com.
+codeload.github.com
+# www.nature.com answered 200; its User-agent * group disallows /search, /*/figures, /*/tables and similar, not
+# /articles/<id>.pdf.
+www.nature.com
+# webbook.nist.gov answered 200: "Disallow: /cdn-cgi/", "Crawl-delay: 5".
+webbook.nist.gov
+# narac.llnl.gov answered 200: Drupal defaults (/core/, /profiles/, /admin/ and similar), not /research-and-development/.
+narac.llnl.gov
+# primis-meetings.phmsa.dot.gov answered 200: "Disallow:" (empty: everything allowed).
+primis-meetings.phmsa.dot.gov
+# www.martinfowler.com answered 200: "Allow: /".
+www.martinfowler.com
+# www.nngroup.com answered 200; its User-agent * group sets "Crawl-Delay: 60" (equal to crawl_delay_max_s, so the host
+# is slowed, not set aside) and disallows /cart/, /login/, /search/ and /training/ paths, not /videos/.
+www.nngroup.com
+# HB-65: PubMed Central, for jia2025-fast-gaussian-puff's full text (Nature's PDF sent the fetcher to idp.nature.com).
+# robots.txt answered 200 at 2026-10-28T22:21Z; its User-agent * group sets "Crawl-delay: 1", allows /articles/ and
+# disallows everything not listed.
+pmc.ncbi.nlm.nih.gov
+# HB-65: NASA's Technical Reports Server, for the U.S. Standard Atmosphere, 1976 (normal air's oxygen fraction, which the
+# cryogens' 19.5 % threshold needs and no held text states). robots.txt answered 200 at 2026-10-28T22:40Z: "User-agent: *",
+# "Allow: /".
+ntrs.nasa.gov
+# Added by HB-69 (its
+# **Network:** header, DN-018 ADDENDUM-00 section 4): EPRI's SourceForge project page. robots.txt answered 200 at
+# 2026-10-29T00:54Z; its User-agent * group disallows code, tree, search and commit paths, not /projects/<name>/.
+sourceforge.net
+# Added by HB-82
+# (its **Network:** header; response.restoration.noaa.gov and www.osti.gov were already listed). robots.txt reads at
+# 2026-10-31T03:08Z under the corpus identity:
+# www.dtra.mil answered 403 (Akamai "Access Denied"), which RFC 9309 s2.3.1.3 reads as allow-all; the host refuses this
+# client, so the document is expected to be refused_by_host. Kept listed because it was contacted (HB-01d's rule).
+www.dtra.mil
+# inis.iaea.org answered 200: "User-agent: *", "Disallow: /" (only Googlebot is allowed). The fetcher honours it; listed
+# so the refusal is robots.txt's, recorded, and not the allowlist's.
+inis.iaea.org
+# www.acq.osd.mil: the TLS handshake failed ("unable to get local issuer certificate": the chain ends at a DoD root this
+# client's trust store does not hold). Listed so the failure is recorded; the client never disables verification.
+www.acq.osd.mil
+# Added by HB-83
+# (its **Network:** header; www.fema.gov, ntrs.nasa.gov and apps.dtic.mil were already listed; www.faa.gov was named but
+# held nothing this task needed, so it is not added). robots.txt reads at 2026-10-31T03:40Z under the corpus identity:
+# www.nrc.gov answered 200; its User-agent * group disallows only ads.txt, autodiscover and site search, not /docs/.
+www.nrc.gov
+# quicksearch.dla.mil (ASSIST) answered 404, which RFC 9309 s2.3.1.3 reads as allow-all.
+quicksearch.dla.mil
+# hf.tc.faa.gov answered 404 (allow-all, as above).
+hf.tc.faa.gov
+# HB-95 (task Network header): the MCP registry's published server.json schemas, for validating server.json.
+static.modelcontextprotocol.io
+# HB-100 (task Network header): the MCP registry's publishing guide and server.json reference, in raw form, for the
+# rule SECURITY.md section 10 quotes. The fetcher reads robots.txt before the first request (corpus/fetch_log.jsonl).
+raw.githubusercontent.com
+# HB-119 (task Network header: cameochemicals.noaa.gov and pubchem.ncbi.nlm.nih.gov, both listed already, by HB-01 and
+# HB-01b). robots.txt read again at 2026-11-07T08:08:22Z under the project identity, for the brief's materials resolver
+# (the HB-119 evidence (held privately), with the bodies and sha256s):
+# cameochemicals.noaa.gov answered 200: "User-agent: *" disallows /help, /my, /reactivity, /search and /stats, so the
+# resolver reads /chemical/<id> only, never the /search/chemicals_for_unna/<UN> route (HB-01 RESULT section 8).
+# pubchem.ncbi.nlm.nih.gov answered 200 (version 2026-10-29.1): "User-agent: *" sets "Crawl-delay: 5" and disallows
+# /rest/pug/, keeping /rest/pug_view crawlable. The resolver's PUG REST calls are per-request API calls under DN-002
+# section 1 (robots.txt does not bind a per-request API client, which honours the documented limits instead); the
+# corpus fetcher stays robots-bound.
+# ── HB-127: the base-rate sources (HB-127) ──
+# Its **Network:** line, rung 1: PHMSA's biennial report (hazmat.dot.gov), BTS's tables and workbook, the CDC Stacks
+# and ATSDR copies of the HSEES reports, the MMWR, EPA's RMP rulemaking documents and their regulations.gov copies, and
+# NTSB. www.phmsa.dot.gov, www.cdc.gov and www.epa.gov were already listed.
+hazmat.dot.gov
+phmsa.dot.gov
+bts.gov
+www.bts.gov
+rosap.ntl.bts.gov
+stacks.cdc.gov
+atsdr.cdc.gov
+ntsb.gov
+www.ntsb.gov
+epa.gov
+regulations.gov
+www.regulations.gov
+downloads.regulations.gov
+# ── HB-128: the smoke sources (HB-128) ──
+# Its **Network:** line, rung 1: the Forest Service's VSMOKE manual, user's guide, interface notes and source
+# (research.fs.usda.gov, www.fs.usda.gov, webcam.srs.fs.usda.gov), the Southern Fire Exchange fact sheet, EPA and
+# AirNow's wildfire-smoke guide and AQI pages, CDC PLACES (data.cdc.gov, chronicdata.cdc.gov) and eCFR. epa.gov,
+# www.epa.gov, www.cdc.gov and www.ecfr.gov were already listed (HB-128 ADDENDUM-01 section 3).
+research.fs.usda.gov
+www.fs.usda.gov
+webcam.srs.fs.usda.gov
+southernfireexchange.org
+airnow.gov
+www.airnow.gov
+document.airnow.gov
+cdc.gov
+data.cdc.gov
+chronicdata.cdc.gov
+ecfr.gov
+# HB-135 (HB-135).
+# Its **Network:** line, rung 1: the LII's U.S. Code, PHMSA's incident portal, the DOT open-data portal (FRA Form 54),
+# Envirofacts and EPA's data service, and the publishers of the Getis-Ord papers. www.govinfo.gov, www.ecfr.gov,
+# www.epa.gov, www.phmsa.dot.gov, safetydata.fra.dot.gov, lehd.ces.census.gov and rosap.ntl.bts.gov were already listed.
+www.law.cornell.edu
+portalpublic.phmsa.dot.gov
+data.transportation.gov
+enviro.epa.gov
+data.epa.gov
+onlinelibrary.wiley.com
+link.springer.com
+www.jstor.org
+# HB-160 (HB-160).
+# Its **Network:** line, rung 1: NOAA's institutional repository (ALOHA's technical memorandum), EPA's NEPIS, and the
+# AMS journals (Warner, Platt and Heagy 2004; the 2009 SCIPUFF with NWP ensembles paper). www.epa.gov, gaftp.epa.gov and
+# response.restoration.noaa.gov were already listed.
+repository.library.noaa.gov
+nepis.epa.gov
+journals.ametsoc.org
+# HB-169 (HB-169).
+# Its **Network:** line, rung 1: the published chlorine railcar comparison (Hanna et al. 2008) and its companions: the
+# AMS extended abstracts, Hrcak (Hanna and Chang 2008), the University of Delaware's copy of Hanna et al. 2016, NDIA's
+# 2007 CBIS slides, the DOI resolver and the two publishers. onlinelibrary.wiley.com and link.springer.com were already
+# listed.
+ams.confex.com
+hrcak.srce.hr
+doi.org
+publicutility.ceoe.udel.edu
+ndia.dtic.mil
+aiche.onlinelibrary.wiley.com
+# HB-180 (HB-180).
+# Its **Network:** line, rung 1: the authors' inputs for SCIPUFF's dense trials (ADMLC's SMEDIS page and paper, EPRI's
+# product download). apps.dtic.mil and raw.githubusercontent.com were already listed.
+admlc.com
+restservice.epri.com
+# HB-190 (HB-190).
+# Its **Network:** line, rung 1: the hosts HB-188 fetched its twenty sources from and the ones it could not use for
+# the rest (publishers' open pages, OSTI's redirect target, NCAR OpenSky, Earth-prints, the university repositories),
+# and the metadata APIs an abstract-only source is held from.
+api.openalex.org
+api.crossref.org
+harmo.org
+www.harmo.org
+nhess.copernicus.org
+gmd.copernicus.org
+www.hse.gov.uk
+impacts.ucar.edu
+opensky.ucar.edu
+publications.anl.gov
+www.uvu.edu
+nora.nerc.ac.uk
+eprints.soton.ac.uk
+www.earth-prints.org
+hal.science
+zenodo.org
+datasim.ov.ingv.it
+arxiv.org
+export.arxiv.org

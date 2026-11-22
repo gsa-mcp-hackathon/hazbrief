@@ -1,0 +1,72 @@
+# hazbrief.brief.materials: the runtime materials resolver's rules (HB-119; DN-020 ADDENDUM-02 section 2 items 2
+# and 6; DN-009 E2). Every key is required. The rate limits and the cache path are the server settings' own
+# (src/hazbrief/config.py, `pubchem_max_*`, `hazbrief_materials_cache`); the origins are `cameo_base_url` and
+# `pubchem_base_url` there.
+
+# The label every fetched value carries (DN-020 ADDENDUM-02 section 2 item 2; DN-009 E2's own words, "properties
+# fetched, not benchmark-validated"). {time} is the retrieval instant of the exchange the value was read from.
+label: "properties fetched at {time} from {source}, not benchmark-validated"
+
+# The two sources, as the label and the receipts name them. `doc_id` is the receipt's document id for a fetched value
+# (there is no corpus entry: the bytes are the evidence-store entity the receipt's sha256 names).
+sources:
+  cameo:
+    name: "CAMEO Chemicals"
+    doc_id: cameo-chemicals
+    api: cameo
+  pubchem:
+    name: "PubChem"
+    doc_id: pubchem
+    api: pubchem
+
+# The URL forms (docs/evidence/hb119/sources.md, each from the held pubchem-pug-view-limits page or the held CAMEO
+# pages' own URLs). A name or CAS goes into the path percent-encoded.
+paths:
+  pubchem_cids_by_name: "pug/compound/name/{name}/cids/JSON"
+  pubchem_properties: "pug/compound/cid/{cid}/property/MolecularWeight,MolecularFormula,Title/JSON"
+  pubchem_view: "pug_view/data/compound/{cid}/JSON"
+  pubchem_view_experimental: "Experimental Properties"
+  pubchem_view_cas: "CAS"
+  cameo_datasheet: "chemical/{id}"
+# PubChem's "not found" answer: a status the client records and replays as an answer (hazbrief.utils.fetch_json
+# `answers`), not a failure. PUG REST answers an unknown name with 404 PUGREST.NotFound (probed 2026-11-07,
+# docs/evidence/hb119/sources.md); PUG View answers a record with no such heading the same way ("If the compound
+# does not have any data to present in that section, the requests would return an error message",
+# pubchem-pug-view-limits).
+pubchem_not_found_status: [404]
+# The reference name PUG View gives CAMEO Chemicals' datasheets, whose SourceID is the datasheet id (probed on CID
+# 24526: "CAMEO Chemicals", 2862, https://cameochemicals.noaa.gov/chemical/2862).
+cameo_reference_source_name: "CAMEO Chemicals"
+
+# The names a material is looked up by in PubChem, in order: the name as given; then the name up to its first comma,
+# the ERG's convention for a qualifier ("Acetylene, dissolved", "Ammonia, anhydrous"); then each CAS number the
+# held NIOSH Pocket Guide prints for the material's UN number (its DOT field), or the caller's CAS.
+name_rules: ["as_given", "before_first_comma"]
+
+# The level of concern for a toxic material the properties pack does not seed (HB-119 step 4, ADDENDUM-00): AEGL-2
+# from the EPA's compiled table, then the NIOSH Pocket Guide's IDLH, nothing else. CAMEO's own guide states the order
+# of preference among public exposure guidelines and that an IDLH is a workplace limit with no duration
+# (cameo-chemicals-help-locs): "you may want to select your values based on a hierarchy of available public exposure
+# guidelines (for instance, using AEGLs preferentially over TEELs if both systems define values for a chemical)";
+# "This hierarchy of values (60-minute AEGLs > ERPGs > TEELs) is implemented in the PACs dataset"; "IDLH limits were
+# created mainly to assist in making decisions regarding respirator use"; "the current definition has no exposure
+# duration associated with it". ERPGs and PACs are not held, so the order here is AEGL-2, then IDLH.
+thresholds:
+  aegl_table: packs/src/thresholds_aegl_compiled_2018.json
+  idlh_table: packs/src/thresholds_niosh_npg_idlh.json
+  aegl_minutes: {"10": "10 min", "30": "30 min", "60": "60 min"}
+  aegl_basis: "toxic material not in the seeded pack: the EPA's compiled AEGL-2 cells by averaging minutes (epa-aegl-compiled-2018), found by CAS or name"
+  idlh_basis: "level of concern: IDLH, NIOSH NPG 2005-149 p. {page}; no AEGL published. An IDLH is a workplace limit with no exposure duration (cameo-chemicals-help-locs); it stands for the toxic level only where the compiled AEGL table publishes none"
+  none: "no toxic level of concern: neither the compiled AEGL table nor the NIOSH Pocket Guide publishes a value for {what}"
+
+# The activity name of the evidence records the resolver writes (DN-009 C2).
+activity: "materials resolver"
+
+# The runtime cache (HB-119 step 3): fetched entries only, written at run time, gitignored and left out of the image
+# (.dockerignore), so the committed seed pack (packs/materials_properties.json) stays the held-page seed and a run never
+# rewrites it. Relative to the repository root; `cache_env` in the environment overrides it. It sits one directory
+# down, not at packs/materials_cache.json as HB-119 step 3 names it: test_source_catalog.py (a test held privately) and
+# test_packs.py (a test held privately) read every packs/*.json as a pack, so a cache file there would fail them on any machine that has
+# resolved a material.
+cache_path: packs/cache/materials_cache.json
+cache_env: HAZBRIEF_MATERIALS_CACHE

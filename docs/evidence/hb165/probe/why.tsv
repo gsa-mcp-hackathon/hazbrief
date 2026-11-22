@@ -1,0 +1,11 @@
+01_cmake_openmp_switch.patch	Build system: `$<BOOL:client_use_openmp>` tests the literal string (always true), so -Dclient_use_openmp=OFF could not configure; `${client_use_openmp}` makes EPRI's own switch work (OpenMP off avoids four !$OMP ATOMIC statements gfortran rejects).
+02_cmake_scidospost_links_arap.patch	Build system: sciDosPost links ARAPlib only on Windows and relies on libSCIPtool.so re-exporting addressof_/value_reference_/address_message_, which a gfortran/ld build does not; link arap on every platform.
+03_sag_init_kidint.patch	KIDINT is an Intel-only intrinsic (REAL(8) to INTEGER(8)); INT(x,KIND=8) is the standard spelling of the same truncation.
+04_datums_sign_kind.patch	SIGN(1,izone) mixes default INTEGER with INTEGER(C_LONG) (8 bytes on Linux); the standard requires one kind, so the literal is written 1_C_LONG.
+05_sysfunc_null_arg_kind.patch	A null placeholder declared INTEGER(C_INTPTR_T) is passed to the FINI_mod stubs, which declare it default INTEGER and ignore it; declared to match.
+06_runsci_cmdline.patch	GET_COMMAND_ARGUMENT's LENGTH must be default INTEGER, not INTEGER(2); and an INTEGER (LEN_TRIM) used as a LOGICAL operand is written BTEST(...,0), Intel's own low-bit rule, so the meaning is the Intel build's.
+07_scidospost_cmdline.patch	GET_COMMAND_ARGUMENT's LENGTH must be default INTEGER, not INTEGER(2).
+08_readpuf_stop.patch	Free-form `STOP'text'` needs a blank before the string.
+09_metsci_iserr.patch	`LOGICAL FUNCTION IsErr` without () is an Intel extension; in fixed form gfortran reads it as a declaration.
+10_metsci_use_only.patch	BLOCK2_IRND's DATA implied-DO variable I is a public module variable under gfortran and collides with local I; USE ... ONLY: IRND, the one name the three writers use.
+11_read_scn_backspace_after_eof.patch	ReadNamelistMC and CountNamelistMC read one line past the SCN namelist for #START_MC and return at end of file without BACKSPACE; gfortran then refuses the next READ (IOSTAT 5001, after the EOF marker) where ifort returns end of file again, so every single-material namelist project stops at "Error reading SCN namelist" once the engine has rewritten its .scn; BACKSPACE on end of file leaves the unit before the endfile record.

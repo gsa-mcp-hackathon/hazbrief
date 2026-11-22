@@ -1,0 +1,19 @@
+brief	record_role	tier	record_before	record_after	reach_any_time_m_held	reach_any_time_m_rederived	reach_any_time_m_after	last_step_over_source_min_held	last_step_over_source_min_rederived	last_step_over_source_min_after	area_any_time_km2_held	area_any_time_km2_rederived	area_any_time_km2_after	boundary_layer_before	boundary_layer_after
+csx-point-of-rocks-night	B (drawn)	AEGL-1	b737776435eb	632d99677427	38166	38184	40305	95	95	100	437.989	439.43	480.385	CALC	OBS PGT F
+csx-point-of-rocks-night	B (drawn)	AEGL-2	b737776435eb	632d99677427	28824	28824	39957	80	80	80	184.655	184.655	331.053	CALC	OBS PGT F
+csx-point-of-rocks-night	B (drawn)	AEGL-3	b737776435eb	632d99677427	5372	5372	8848	50	50	55	17.9	17.9	30.25	CALC	OBS PGT F
+csx-point-of-rocks-night	A	AEGL-1	b06017988088	218398287ce2	38166	38184	40305	95	95	100	437.989	439.43	480.385	CALC	OBS PGT F
+csx-point-of-rocks-night	A	AEGL-2	b06017988088	218398287ce2	28824	28824	39957	80	80	80	184.655	184.655	331.053	CALC	OBS PGT F
+csx-point-of-rocks-night	A	AEGL-3	b06017988088	218398287ce2	5372	5372	8848	50	50	55	17.9	17.9	30.25	CALC	OBS PGT F
+i81-md-pa-line-night	A and B (drawn)	AEGL-1	4471c5c2d113	71bddef946dc	31932	31932	32760	30	30	30	227.074	227.11	269.981	CALC	OBS PGT F
+i81-md-pa-line-night	A and B (drawn)	AEGL-2	4471c5c2d113	71bddef946dc	21077	21077	31366	25	25	25	74.924	74.924	176.31	CALC	OBS PGT F
+i81-md-pa-line-night	A and B (drawn)	AEGL-3	4471c5c2d113	71bddef946dc	5062	5062	7932	20	20	15	9.801	9.801	15.581	CALC	OBS PGT F
+i495-wilson-bridge-night	A and B (drawn)	AEGL-1	9f51d3910daf	956874597e6b	34377	34377	35092	30	30	30	240.633	240.671	286.643	CALC	OBS PGT F
+i495-wilson-bridge-night	A and B (drawn)	AEGL-2	9f51d3910daf	956874597e6b	19076	19076	33185	25	25	25	75.53	75.53	182.001	CALC	OBS PGT F
+i495-wilson-bridge-night	A and B (drawn)	AEGL-3	9f51d3910daf	956874597e6b	5132	5132	7724	20	20	15	9.991	9.991	15.149	CALC	OBS PGT F
+i83-md-pa-line-night	A and B (drawn)	AEGL-1	f887b182337f	4c015c0773cf	32198	32198	32348	30	30	20	244.119	244.016	231.703	CALC	OBS PGT F
+i83-md-pa-line-night	A and B (drawn)	AEGL-2	f887b182337f	4c015c0773cf	30926	30926	31357	20	20	15	165.062	165.483	158.541	CALC	OBS PGT F
+i83-md-pa-line-night	A and B (drawn)	AEGL-3	f887b182337f	4c015c0773cf	10461	10461	10490	15	15	10	24.147	24.147	17.677	CALC	OBS PGT F
+HB-167 csx-night base	HB-167's own	AEGL-1	218186148fc1	23b332ef498b	38166	38184	40305	95	95	100	437.989	439.43	480.385	CALC	OBS PGT F
+HB-167 csx-night base	HB-167's own	AEGL-2	218186148fc1	23b332ef498b	28824	28824	39957	80	80	80	184.655	184.655	331.053	CALC	OBS PGT F
+HB-167 csx-night base	HB-167's own	AEGL-3	218186148fc1	23b332ef498b	5372	5372	8848	50	50	55	17.9	17.9	30.25	CALC	OBS PGT F

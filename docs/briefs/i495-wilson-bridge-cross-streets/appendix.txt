@@ -1,0 +1,72 @@
+Source                                                                                                                              What was asked                                                                                                                                                                                                                                                                                                               As of                 Current or old                                                                                      Record
+----------------------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  --------------------  --------------------------------------------------------------------------------------------------  ------------
+USGS National Structures Dataset; CMS Hospital General Information and Provider of Services; Census Geocoder                        receiving hospitals (38.796317, -77.043217; in the footprint)                                                                                                                                                                                                                                                                07/22/2026            96 days old, past its 91-day limit                                                                  4a922c591dfc
+  ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request                                        protective action footprint (UN1017; 38.796317, -77.043217)                                                                                                                                                                                                                                                                  10/15/2026            current, checked against the eCFR text of 49 CFR 172.101 (docs/sources/cfr172_currency_check.json)  8b17a353302c
+ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request                                          protective action footprint (UN1017; 38.796317, -77.043217)                                                                                                                                                                                                                                                                  10/15/2026            current, checked against the eCFR text of 49 CFR 172.101 (docs/sources/cfr172_currency_check.json)  8b17a353302c
+  request (wind)                                                                                                                    wind as given by the requester                                                                                                                                                                                                                                                                                               11/08/2026 17:18 UTC  as given                                                                                            8b17a353302c
+  tigerweb:current (location)                                                                                                       location as given by the requester (intersection): location uncertain within a disc, 7.6 m, the MTAIP source requirement for road centerlines (CE95), not a tested accuracy; TIGER states none, derived by intersection from tigerweb:current: TIGERweb crossing of Jefferson St and S Lee St in Alexandria, VA, 1 point(s)  10/27/2026 05:02 UTC  as given                                                                                            8b17a353302c
+2020 Census DHC; ACS 2020-2024 5-year; Community Resilience Estimates 2024; TIGERweb Census 2020 tabulation geography; LEHD LODES8  population at risk (in the footprint)                                                                                                                                                                                                                                                                                        12/03/2025            current                                                                                             8fa4bbd9ef59
+  ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request                                        protective action footprint (UN1017; 38.796317, -77.043217)                                                                                                                                                                                                                                                                  10/15/2026            current, checked against the eCFR text of 49 CFR 172.101 (docs/sources/cfr172_currency_check.json)  8b17a353302c
+ERG 2024                                                                                                                            material response guidance (UN1017; 38.796317, -77.043217)                                                                                                                                                                                                                                                                   2024                  current                                                                                             d1ae69b66ce4
+ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral)                                                   assess incident (UN1017; 38.796317, -77.043217)                                                                                                                                                                                                                                                                              10/15/2026            current, checked against the eCFR text of 49 CFR 172.101 (docs/sources/cfr172_currency_check.json)  e12ae1792d12
+USGS National Structures Dataset; USGS 3D Hydrography Program (3DHP); BTS NTAD rail layers; CMS Nursing Home Provider Information   facilities in footprint (in the footprint)                                                                                                                                                                                                                                                                                   09/04/2026            current                                                                                             f1ec5e83937b
+  ERG 2024; 49 CFR 172.101 Hazardous Materials Table; NOAA solar equations (astral); request                                        protective action footprint (UN1017; 38.796317, -77.043217)                                                                                                                                                                                                                                                                  10/15/2026            current, checked against the eCFR text of 49 CFR 172.101 (docs/sources/cfr172_currency_check.json)  8b17a353302c
+
+Derived: the first-order puff
+First-order puff run record  8f82d3507f73821c488a37b3f9d70a2292c265819e9dc9354e15f5cfb6fbe866
+  pack release_routing  hb120.1  5533757e59fd0195074d840d05f124d3af2e984c74f74c0eb6a0c5d703ccedc5
+  pack materials_properties  hb126.1  90ab5939e645901e3b96a23041690fadaf271c5b4a7f285ec88a48cbefd32252
+  pack sigma_curves  isc3v2.2  cd0aa9cec7206958eebe88bdbdd43e7f7c4946323a999cdc02fa58d38f82f854
+  pack release_scenarios  rmpoca2009.2  aee4cca6e4050ac4fdee714a3b05231e5c0cac60c30821ab895815cf2f6f4df7
+  material class  pressure_liquefied_toxic  DN-018 section 3
+  stability class  C  Turner's key as EPA states it (EPA-454/R-99-005, Tables 6-4 to 6-6)
+  wind, hour 0  15 km/h from 10 degrees  NWS gridpoint forecast LWX/97,67
+  wind, hour 1  15 km/h from 0 degrees  NWS gridpoint forecast LWX/97,67
+  threshold AEGL-2 (10 min)  2.8 ppm  epa-aegl-compiled-2018#p43
+  threshold AEGL-2 (30 min)  2.8 ppm  epa-aegl-compiled-2018#p43
+  threshold AEGL-2 (60 min)  2 ppm  epa-aegl-compiled-2018#p43
+  threshold AEGL-3 (10 min)  50 ppm  epa-aegl-compiled-2018#p43
+  threshold AEGL-3 (30 min)  28 ppm  epa-aegl-compiled-2018#p43
+  threshold AEGL-3 (60 min)  20 ppm  epa-aegl-compiled-2018#p43
+  ERG downwind distance (sizes the grid)  3.3 km (2.1 mi)  protective action zone
+  release quantity  20,000 kg  scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: MC331 cargo tank, 20,000 kg
+  air temperature (source term)  17.8 C  NWS gridpoint forecast LWX/97,67, hour 0
+  relative humidity (source term)  45 %  NWS gridpoint forecast LWX/97,67, hour 0
+  source term  two-phase flashing release: 60.42 kg/s for 5.5 minutes  Homogeneous Nonequilibrium Model (section 3.4.5, p. 27), tank cooling (3.4.1, p. 22), head-space gas (3.4.6, pp. 28-30), flashed fraction (6.3.2, p. 68) of NOAA Technical Memorandum NOS OR&R 43, implemented by hazbrief
+
+Derived: the dense-gas footprint
+Dense-gas run record  49d0805ba7c4e87568fea4025e712b9271c0f753875952705cfc95883959a91d
+  DN-001 class  tih_gas  UN1017
+  level of concern  toxic, AEGL-2 60 min
+  state  drawn
+  release route  two phase jet, level of concern toxic  Guide 124, pressure liquefied (erg2024-en-pdf#p180)
+  engine  image sha256:272f3dda4d49754d454ffe83c1e77fad4a1d01f86bb1265f62ec782ac6adcd68 (recorded image hazbrief-models)
+  SLAB deck sha256  189529aae7ff3ee11363f9c6368bab2679ea6674fcadbf41fe48edf3f8ce48f6
+  SLAB output sha256  270f1ee547bc6a624f8780982fb980c1cadda0bcc34b1e97074859ced28aa82d
+  ERG protective action distance (m)  3300  protective_action_zone
+  puff extent at the class's threshold (m)
+  puff contour
+  dense-gas downwind extent (m)  4105
+  modelled over ERG  puff none; dense gas 1.24
+  input molecular weight (WMS)  70.906 g/mol  tier not stated; nist-webbook-1017 p. 22
+  input normal boiling point (TBP)  239.5 K  reference-table; nist-webbook-1017 (Thiele and Schulte, 1920, p71)
+  input heat of vaporisation (DHE)  20409.6 J/mol  model-test-input; epa-slab-users-guide-1990 p. 136
+  input liquid heat capacity (CPSL)  65.6802 J/mol/K  model-test-input; epa-slab-users-guide-1990 p. 136
+  input liquid density (RHOSL)  1574 kg/m3  model-test-input; epa-slab-users-guide-1990 p. 136
+  input saturation pressure (Antoine) (SPB, SPC: SLAB's default used)  2 rows  reference-table; nist-webbook-1017 p. 77
+  input vapour heat capacity (CPS)  35.3183 J/mol/K  model-test-input; epa-slab-users-guide-1990 p. 136
+  tier note  DHE, CPSL, RHOSL and CPS are the SLAB user's guide's recommended test inputs (Table 2, 1990); no reference-table value for them is held for chlorine at its boiling point
+  pack release_routing  hb120.1  5533757e59fd0195074d840d05f124d3af2e984c74f74c0eb6a0c5d703ccedc5
+  pack materials_properties  hb126.1  90ab5939e645901e3b96a23041690fadaf271c5b4a7f285ec88a48cbefd32252
+
+Derived: the load read
+Load read rules sha256  5a3de344ae8450d1d2c7e539f715d1dc276222f76eb2d85f58b924b7e1afa766
+  words, map  5580 before, 5580 after
+  words, footprint  184 before, 184 after
+  words, flags  125 before, 125 after
+  words, population  80 before, 80 after
+  words, facilities  679 before, 679 after
+  words, hospitals  94 before, 94 after
+  words, guidance  702 before, 702 after
+  words, ics201  99 before, 99 after
+  cuts  0 applied, 15 proposed

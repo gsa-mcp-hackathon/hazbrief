@@ -1,0 +1,303 @@
+# Flag rule kinds and the inputs rules read (HB-12; HB-12).
+# Read by scripts/mine_flag_rules.py (the vocabulary the mining prompt names, and how an admitted
+# candidate becomes a rule) and scripts/build_packs.py flag_rules (kinds, inputs, dormancy).
+#
+# DN-001 section 4 invariant 2: every flag is a rule in a pack with a source. A mined rule's
+# source is its trigger text, admitted only when it is a verbatim substring of the Key A text of
+# the page it cites. What makes the rule fire is not the text: it is the predicate its kind
+# names, over values the tools return. A model proposes the candidate; this file and the
+# admission test decide.
+
+# ── Kinds ───────────────────────────────────────────────────────────────────────────────────────
+# `origin`: authored (HB-03's hand-written rules; their kind is assigned here, since HB-03 wrote
+# none: the rule id families GQ, SCH, HOSP, VEH, LEP, CRE, TIH, BLEVE, WATER, CRYO and RAIL were the
+# equivalent), guide (the ERG's own guide structure; minable), cross (a property several guides
+# state and the footprint and population tools consume; minable), table (a pack field, written by
+# hand, `source_kind: table`). `predicate` names one of `predicates` below; a guide or cross rule
+# fires for the materials of its guide, under that predicate.
+kinds:
+  potential_hazards.fire: {origin: guide, section: POTENTIAL HAZARDS, predicate: guide,
+    description: "A fire or explosion hazard the guide states (FIRE OR EXPLOSION)."}
+  potential_hazards.health: {origin: guide, section: POTENTIAL HAZARDS, predicate: guide,
+    description: "A health hazard the guide states (HEALTH)."}
+  public_safety.isolate: {origin: guide, section: PUBLIC SAFETY, predicate: guide,
+    description: "An instruction to isolate, keep people away or stay upwind."}
+  public_safety.protective_clothing: {origin: guide, section: PUBLIC SAFETY, predicate: guide,
+    description: "A protective clothing or breathing apparatus instruction (PROTECTIVE CLOTHING)."}
+  public_safety.evacuation: {origin: guide, section: PUBLIC SAFETY, predicate: by_condition,
+    description: "An EVACUATION instruction; `parameters.condition` is immediate, large_spill or fire, as the guide's sub-heading says."}
+  emergency_response.fire: {origin: guide, section: EMERGENCY RESPONSE, predicate: fire,
+    description: "A fire-fighting instruction (FIRE)."}
+  emergency_response.spill: {origin: guide, section: EMERGENCY RESPONSE, predicate: guide,
+    description: "A spill or leak instruction (SPILL OR LEAK)."}
+  emergency_response.first_aid: {origin: guide, section: EMERGENCY RESPONSE, predicate: guide,
+    description: "A first aid instruction (FIRST AID)."}
+  water_reactive: {origin: cross, predicate: water,
+    description: "The material reacts with water, or water must not be used on it."}
+  polymerizes: {origin: cross, predicate: guide,
+    description: "The material may polymerize."}
+  oxidizer: {origin: cross, predicate: guide,
+    description: "The material is an oxidizer or supports combustion."}
+  toxic_by_inhalation: {origin: cross, predicate: tih,
+    description: "The material is toxic by inhalation."}
+  may_explode_when_heated: {origin: cross, predicate: fire,
+    description: "Containers may explode when heated, or the material may explode in a fire."}
+  heavier_than_air: {origin: cross, predicate: low_lying,
+    description: "Vapors or gas are heavier than air and collect in low or confined areas."}
+  population.group_quarters: {origin: authored, description: "Group quarters population inside the footprint."}
+  population.no_vehicle: {origin: authored, description: "Households with no vehicle inside the footprint."}
+  population.limited_english: {origin: authored, description: "Limited English speaking households inside the footprint."}
+  population.social_vulnerability: {origin: authored, description: "People with high social vulnerability inside the footprint (CRE)."}
+  facilities.schools: {origin: authored, description: "Schools inside the footprint."}
+  facilities.hospitals: {origin: authored, description: "Hospitals inside the footprint."}
+  facilities.waterways: {origin: authored, description: "Waterways inside the footprint."}
+  facilities.rail: {origin: authored, description: "Rail features and grade crossings inside the footprint."}
+  table.water_reactive: {origin: table, description: "Table 2 lists the material and it is spilled in water."}
+  table.water_only_on_land: {origin: table, description: "Table 1 lists the material only when spilled in water, and it is spilled on land."}
+  table.table3: {origin: table, description: "Table 3 lists the material: a common TIH gas with container-specific distances."}
+  identification.ambiguous_material: {origin: table, description: "The load as reported matches several yellow-index or placard-table rows (HB-18)."}
+
+# The kind of each HB-03 rule (HB-03 wrote no kind; the rule id families were the equivalent).
+# FR-TIH-01, FR-BLEVE-01 and FR-CRYO-01 state cross-cutting properties and take those kinds.
+authored_kinds:
+  FR-GQ-01: population.group_quarters
+  FR-SCH-01: facilities.schools
+  FR-HOSP-01: facilities.hospitals
+  FR-VEH-01: population.no_vehicle
+  FR-LEP-01: population.limited_english
+  FR-CRE-01: population.social_vulnerability
+  FR-TIH-01: toxic_by_inhalation
+  FR-BLEVE-01: may_explode_when_heated
+  FR-WATER-01: facilities.waterways
+  FR-CRYO-01: heavier_than_air
+  FR-RAIL-01: facilities.rail
+
+# ── Predicates for guide and cross rules ───────────────────────────────────────────────────────
+# Every term reads named inputs (below). `guide_page` is the guide's number without its "P"
+# (guides 116P and 116 share one guide), given as the rule's param.
+predicates:
+  guide:
+    terms: [{input: guide_page, op: eq, param: guide}]
+  fire:
+    terms: [{input: guide_page, op: eq, param: guide}, {input: fire_involved, op: is_true}]
+  large_spill:
+    terms: [{input: guide_page, op: eq, param: guide}, {input: spill_size, op: in, value: [large, unknown]}]
+  water:
+    terms: [{input: guide_page, op: eq, param: guide}, {input: where_spilled, op: eq, value: water}]
+  tih:
+    terms: [{input: guide_page, op: eq, param: guide}, {input: tih, op: is_true}]
+  low_lying:
+    terms: [{input: guide_page, op: eq, param: guide}, {input: low_lying_areas_in_footprint, op: gt, value: 0}]
+# public_safety.evacuation's `by_condition`: the guide's own EVACUATION sub-heading.
+by_condition:
+  immediate: guide
+  large_spill: large_spill
+  spill: guide
+  fire: fire
+
+# ── Inputs ──────────────────────────────────────────────────────────────────────────────────────
+# The tools registered today (src/hazbrief/tools/__init__.py). An input is supplied when its tool
+# is registered, unless `inputs` below says `supplied_by: null`; a rule that reads an input no
+# tool supplies is admitted and marked `dormant` (step 5), and the dormant list is the backlog for
+# later tools. HB-08b added `where_spilled` to protective_action_footprint. HB-10 registered
+# facilities_in_footprint and receiving_hospitals: FR-SCH-01, FR-HOSP-01, FR-WATER-01 and
+# FR-RAIL-01 read its `flag_inputs` and are no longer dormant.
+tools_registered:
+  - assess_incident
+  - protective_action_footprint
+  - population_at_risk
+  - facilities_in_footprint
+  - receiving_hospitals
+inputs:
+  guide_page:
+    tool: assess_incident
+    field: guide.number, without a trailing P
+    dataset: erg2024-en-pdf
+    description: The orange guide the material is assigned to.
+    supplied_by: assess_incident
+  fire_involved:
+    tool: assess_incident
+    field: incident.fire_involved
+    dataset: incident report
+    description: Whether fire is involved.
+    supplied_by: assess_incident
+  spill_size:
+    tool: assess_incident
+    field: incident.spill_size
+    dataset: incident report
+    description: small, large or unknown.
+    supplied_by: assess_incident
+  tih:
+    tool: assess_incident
+    field: tih (ERG Table 1 lists the ID number)
+    dataset: erg2024-en-pdf
+    description: Whether ERG Table 1 lists the material.
+    supplied_by: assess_incident
+  where_spilled:
+    tool: protective_action_footprint
+    field: incident.where_spilled (land or water)
+    dataset: incident report
+    description: The surface the spill is on.
+    # HB-08b: IncidentInput.where_spilled (land or water; land by default, as PHMSA's ERG app)
+    supplied_by: protective_action_footprint
+  where_spilled_matters:
+    tool: assess_incident
+    field: erg materials[un].where_spilled_matters (ERG Table 2 lists it)
+    dataset: erg2024-en-pdf
+    description: Whether a spill in water changes the ERG answer.
+    supplied_by: assess_incident
+  guide_designated_p:
+    tool: assess_incident
+    field: guide.number ends in P (the yellow index's polymerization designation)
+    dataset: erg2024-en-pdf
+    description: Whether the material's guide number carries the P designation.
+    supplied_by: assess_incident
+  table3_listed:
+    tool: assess_incident
+    field: erg materials[un].table3 is present
+    dataset: erg2024-en-pdf
+    description: Whether ERG Table 3 lists the material (six common TIH gases).
+    supplied_by: assess_incident
+  low_lying_areas_in_footprint:
+    tool: facilities_in_footprint
+    field: low-lying or confined areas (basements, sewers, depressions) inside the footprint
+    dataset: none catalogued
+    description: Low or confined areas a heavier-than-air gas collects in.
+    supplied_by: null
+
+# ── Rationalization (HB-12b; DN-006) ────────────────────────────────────────────────────────────
+# DN-006 section 3: a flag is a rationalized alarm (ANSI/ISA-18.2): cause, consequence, response,
+# priority, receipts. The six cross-cutting kinds are classified by these lexical patterns over
+# each sentence of a guide's Key A text; HB-12's model-assigned kinds are the second key that
+# measures them (packs/build/RATIONALIZATION_DISAGREEMENTS.md). Patterns are case-insensitive
+# Python regular expressions, seeded from the ERG's own wording in the admitted HB-12 rules of each
+# kind (HB-12b RESULT section 3 lists the seed sentences).
+#
+# `hazard`: a sentence matching any of these states the hazard (it is a receipt, and the first in
+# guide order is the flag's consequence). `response`: a sentence matching any of these says what to
+# do about it (the first in guide order is the flag's response). A guide whose hazard sentences
+# match and whose text has no response sentence is an indication, not an alarm (DN-006 3.1), unless
+# `response_fallback` names an ERG table page sentence that is the response.
+#
+# Negation guard (`negation`): a hazard match is discarded when a negation word stands before it in
+# the same clause: a clause is the text between sentence punctuation (. ; :), a comma, or the word
+# "but"; the negation words are "not", "no", "never" and the prefix "non-". So "Substance does not
+# burn but will support combustion" is an oxidizer hit (the negation is in the clause before
+# "but"); "non-toxic" is not a toxic hit.
+negation: '\b(?:not|no|never)\b|\bnon-'
+# Revisions after the first measurement (HB-12b step 3), each forced by the sentence named:
+# - every kind: a sub-heading (a heading item with no closing full stop) is not a statement and is
+#   not classified ("FIRE OR EXPLOSION", 62 guides, matched may_explode_when_heated);
+# - may_explode_when_heated: the explosion must be caused by heat or fire ("Runoff may create fire
+#   or explosion hazard" and "When heated, vapors may form explosive mixtures with air" state other
+#   hazards); "MAY EXPLODE AND THROW FRAGMENTS 1600 METERS (1 MILE) OR MORE IF FIRE REACHES CARGO"
+#   needs the wider reach to "fire reaches"; "... may burn vigorously with localized detonations"
+#   (guide 114) adds "detonat";
+# - oxidizer: the material must be said to be an oxidizer ("Contact with nitrates or other oxidizers
+#   may cause an explosion" names an oxidizer it reacts with; "For oxidizing substances, keep
+#   combustibles ... away" is the response);
+# - toxic_by_inhalation: "TOXIC; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or
+#   substance may cause severe injury, burns or death" crosses ";" and runs 100 characters from
+#   "inhalation" to "death";
+# - water_reactive: "Do not get water inside containers: a violent reaction may occur." and "Dousing
+#   metallic fires with water will generate hydrogen gas ..." state the reaction; the first is
+#   matched at "violent reaction may occur", since the instruction's own "not" precedes "water";
+# - second round: "May explode from friction, heat or contamination." (heat not adjacent); the 1.4S
+#   sentence of guide 114 runs 45 characters from "involved in a fire" to "detonations"; guide
+#   158's "Inhalation or contact with substance may cause infection, disease or death." states an
+#   infection hazard, not a toxic one, so a sentence naming infection is not a toxic hit.
+rationalization:
+  water_reactive:
+    hazard:
+      - '\breact\w*\b[^.;]{0,40}\bwater\b'
+      - '\bcontact with (?:[\w ,]{0,20})?(?:water|moist air|moisture)\b'
+      - '\bcontaminated with water\b'
+      - '\bwater[- ]reactive\b'
+      - '\bviolent reaction may occur\b'
+      - '\bwith water will generate\b'
+    response:
+      - '\b(?:do not|don.t) (?:get|use|direct|apply|put) water\b'
+      - '\bdo not use water\b'
+    # For a guide flag made from Table 2 alone (FR-T2-01's cause; guide 171 prints no water
+    # sentence): ERG p. 336 Note 1 says Table 1's distances already account for the TIH gases a
+    # spill in water produces, so Table 1's response applies (p. 290 (4)).
+    response_fallback: {page: 290, sentence: 'Evacuate the general public in a direction perpendicular to wind direction (crosswind) and away from the spill.'}
+  may_explode_when_heated:
+    hazard:
+      - '\bexplo(?!sive mixture)\w*\b[^.;]{0,40}\b(?:when heated|from heat|heat of|if involved in (?:a )?fire|when involved in (?:a )?fire|exposed to heat|flame impingement)'
+      - '\bexplo\w*\b[^.;]{0,80}\bif fire reaches\b'
+      - '\bexplode from [\w ,]{0,30}\bheat\b'
+      - '\b(?:heated|involved in (?:a )?fire)\b[^.;]{0,60}\b(?:explo(?!sive mixture)\w*|detonat\w*)'
+      - '\bcontainer explosion\b'
+      - '\bmay rupture in heat\b'
+    response:
+      - '\bISOLATE for \d+ meters\b'
+      - '\bwithdraw immediately in case of rising sound\b'
+      - '\bDO NOT fight fire when fire reaches cargo\b'
+      # guide 166: "Dry chemical, CO2, or withdraw from area and let fire burn."
+      - '\bwithdraw from (?:the )?area\b'
+  polymerizes:
+    hazard:
+      - '\bpolymeriz\w*'
+    response:
+      - '\bcool containers with flooding quantities of water\b'
+  oxidizer:
+    hazard:
+      - '\b(?:are|is|as|strong)\s+oxidiz\w*'
+      - '^oxidizers may\b'
+      - '\bsupport combustion\b'
+      - '\baccelerate burning\b'
+      - '\bignite (?:other )?combustibles\b'
+    response:
+      # "(wood, paper, oil, etc.)" sits inside the span, full stop included
+      - '\bkeep combustibles\b.{0,60}?\baway from spilled material\b'
+      # guides 144, 154, 157, 162: the spill is covered or absorbed with non-combustible material
+      - '\bnon-combustible (?:material|absorbent)\b'
+  toxic_by_inhalation:
+    hazard:
+      - '\btoxic\b[^.]{0,60}\binhal\w*'
+      - '\binhal\w*\b(?![^.;]{0,120}\binfection)[^.;]{0,120}\b(?:toxic|fatal|death|dangerous)\b'
+      - '\bfatal if inhaled\b'
+    response:
+      - '\bsee table 1\b'
+    # ERG p. 290 (Table 1 how to use, (4)): the response for a material Table 1 lists.
+    response_fallback: {page: 290, sentence: 'Evacuate the general public in a direction perpendicular to wind direction (crosswind) and away from the spill.'}
+  heavier_than_air:
+    hazard:
+      - '\bheavier than air\b'
+      - '\bcollect in low\b'
+      - '\baccumulate in (?:low|confined)\b'
+    response:
+      - '\bprevent entry into\b[^.]{0,60}\b(?:sewers|basements|confined)\b'
+      - '\bventilate closed spaces before entering\b'
+      # guide 115: "Prevent spreading of vapors through sewers, ventilation systems and confined areas."
+      - '\bprevent spreading of vapors through\b'
+
+# The guides' sentence that holds only for "(P)" materials (ERG p. 347: "The letter (P) following
+# the guide number in the yellow and blue sections identifies materials that present a
+# polymerization hazard under certain conditions."). A guide flag whose every receipt is this
+# sentence also requires `guide_designated_p` (HB-12b: guide 128's polymerization flag fired for
+# gasoline, UN1203, whose guide is 128 without the P).
+p_designation_sentence: 'Those substances designated with a (P) may polymerize explosively'
+
+# DN-006 section 3.5's priority rule, encoded once (override here, not per flag). `high`: the
+# consequence changes the protective distance or the footprint; `medium`: it changes who must be
+# moved or how; `low`: the rest. Keyed by kind; a merged authored rule takes its kind's priority.
+priority:
+  toxic_by_inhalation: high
+  water_reactive: high
+  may_explode_when_heated: high
+  table.table3: high
+  table.water_reactive: high
+  identification.ambiguous_material: high
+  heavier_than_air: medium
+  population.group_quarters: medium
+  population.no_vehicle: medium
+  population.limited_english: medium
+  facilities.schools: medium
+  facilities.hospitals: medium
+  polymerizes: low
+  oxidizer: low
+  population.social_vulnerability: low
+  facilities.waterways: low
+  facilities.rail: low

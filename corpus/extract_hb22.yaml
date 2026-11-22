@@ -1,0 +1,102 @@
+# HB-22 step 4: the extraction run over the units HB-22 admits (HB-22).
+# HB-14b's bulk script and its approval procedure, reused as they are; this file differs from corpus/extract_bulk.yaml
+# only in what is HB-22's own: its evidence version, job and release prefixes, progress log, the evidence versions
+# whose units are already extracted, and the tier order. The instrument (prompts, segment rule, roles, transport) is
+# the graph's; the page exclusion, spend node and token cap are the pilot plan's.
+
+plan: corpus/extract_pilot.yaml
+evidence_version: hb22_bulk
+job_prefix: hb22
+release_prefix: hb22_bulk
+release_every: 10
+
+#: Units extracted under the current CLI in HB-14's pilot (units.jsonl) and HB-14b's bulk run (bulk_state.jsonl
+#: `committed` rows; `prior_keys` reads both shapes). A unit whose key is in either is skipped.
+already_extracted: [hb14_pilot_cli309, hb14b_bulk]
+
+control: hb14_pilot_cli309/extract_control.json
+#: The lock's CLI at start is recorded; a move no longer stops the run (HB-31).
+lock_file: ../seldon/models/models.lock.yaml
+
+passes: 3
+systemic_wait_seconds: 600
+progress_seconds: 60
+progress_log: logs/2026-10-23_HB-22_bulk_progress.log
+state_file: bulk_state.jsonl
+
+#: HB-22 **Spend:** "open for extraction (HB-14 ADDENDUM-01 stands; HB-14b's bulk script and its approval procedure
+#: reused as they are)".
+#: HB-22 ADDENDUM-00: every job's approval is written before its first call from this block. `date` is the
+#: ruling's (ADDENDUM-00, 2026-10-23; was 2026-10-22, HB-14b's). Run 2 (started 15:24 UTC) loaded the earlier
+#: block, so its approvals quote the earlier words; their file header cites ADDENDUM-00.
+approval:
+  operator: Brock Webb
+  date: "2026-10-23"
+  words: >-
+    HB-22 ADDENDUM-00 (operator, 2026-10-23 10:08): "Those should never have been fails. Those should have been a
+    hold for authorization and start another document." Under an open budget the authorization is given in
+    advance.
+    HB-14b ADDENDUM-00 (operator, 2026-10-22 22:12): "if it has a problem, just kick it out to the try again and
+    save whatever's saved on the checkpoint, and then just pick up the next one and keep on going." HB-14
+    ADDENDUM-01 (operator, 2026-10-22 18:05): budget open, no limits. HB-22 Spend line (2026-10-23): open for
+    extraction, HB-14 ADDENDUM-01 stands.
+
+#: HB-22 step 4: "smallest first within tier order" (corpus/inventory_hb22.yaml tiers). A unit in no tier (an
+#: operator inbox arrival HB-22 did not list) runs after the four tiers.
+tiers:
+- - epa-rmp-oca-guidance-2009
+  - epa-rmp-oca-guidance-appendices-1999
+  - erg2020-anl-technical-report
+  - noaa-aloha-technical-documentation
+  - cameo-chemicals-help-locs
+  - epa-marplot-users-manual-2007
+  - epa-marplot-4-to-5-update
+  - census-acs-state-local-handbook-2020
+  - census-dhc-2020-techdoc
+  - census-sehsd-wp2022-25-cre-indices
+  - census-cares-helene-quick-guide-2025
+  - otmem-user-guide
+  - otmem-selection-methodology
+  - otmem-faq
+  - otmem-glossary
+  - otmem-tech-overview
+- - atsdr-mmg-ammonia
+  - atsdr-mmg-chlorine
+  - atsdr-mmg-ethylene-oxide
+  - atsdr-mmg-hydrogen-chloride
+  - atsdr-mmg-hydrogen-fluoride
+  - atsdr-mmg-sulfur-dioxide
+  - atsdr-toxfaqs-ammonia
+  - atsdr-toxfaqs-chlorine
+  - atsdr-toxfaqs-ethylene-oxide
+  - atsdr-toxfaqs-hydrogen-chloride
+  - atsdr-toxfaqs-fluorides-hf
+  - atsdr-toxfaqs-sulfur-dioxide
+  - niosh-npg-2005-149
+  - niosh-npg-ammonia
+  - niosh-npg-chlorine
+  - niosh-npg-ethylene-oxide
+  - niosh-npg-hydrogen-chloride
+  - niosh-npg-hydrogen-fluoride
+  - niosh-npg-sulfur-dioxide
+  - niosh-idlh-hydrogen-chloride-2025
+  - epa-aegl-values
+  - epa-aegl-compiled-2018
+- - ntsb-rar-05-04-graniteville
+  - ntsb-rar-14-01-paulsboro
+  - ntsb-rir-24-05-east-palestine
+  - csb-2002-04-i-mo-dpc-festus
+  - csb-2004-02-i-az-dpc-glendale
+  - csb-2003-13-i-la-honeywell-baton-rouge
+  - csb-2010-13-a-al-millard-ammonia
+  - csb-2017-01-i-ks-mgpi-atchison
+  - csb-2024-03-i-va-cuisine-solutions-ammonia
+  - csb-2024-04-i-ga-biolab-conyers
+  - phmsa-dot-f-5800-1-form
+  - phmsa-dot-f-5800-1-instructions
+- - nrt-1-hazmat-emergency-planning-guide-2001
+  - cfr29-1910-120-govinfo-2025
+  - epa-tier2-instructions-2027
+  - epa-tier2-instructions-2017
+  - fema-is-200c-student-manual
+  - fema-is-200c-sample-ics-201

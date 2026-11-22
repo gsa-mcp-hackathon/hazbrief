@@ -1,0 +1,18 @@
+## before the clean clone's gate at 2026-11-18T16:01:18-05:00
+corpus/raw	files=550	placeholders=0
+the corpus graph (held privately)	files=375	placeholders=0
+the corpus graph (held privately)	files=174	placeholders=0
+the corpus graph (held privately)	files=2722	placeholders=0
+the corpus graph (held privately)	files=1	placeholders=0
+placeholders_before=0
+placeholders_after=0 (none to download)
+
+## before HB-203's own gate at 2026-11-18T16:57:09-05:00
+corpus/raw	files=550	placeholders=0
+the corpus graph (held privately)	files=375	placeholders=0
+the corpus graph (held privately)	files=174	placeholders=0
+the corpus graph (held privately)	files=2722	placeholders=0
+the corpus graph (held privately)	files=1	placeholders=0
+placeholders_before=0
+placeholders_after=0 (none to download)
+

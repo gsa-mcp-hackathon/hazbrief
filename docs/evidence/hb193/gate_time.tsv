@@ -1,0 +1,55 @@
+section	rank	item	seconds_after	seconds_before	ratio	class	note
+slowest_test	1	test_brief_dense_gas_layer.py (a test held privately)::test_the_routing_outcome_does_not_depend_on_the_vapour_heat_capacity	682.3	896.7	0.76	existing_not_slower	passed
+slowest_test	2	test_hb163_one_cloud.py (a test held privately)::test_engine_by_brief_lists_every_brief_and_its_class	409.4	383.6	1.07	existing_not_slower	passed
+slowest_test	3	test_evidence_replay.py (a test held privately)::test_the_migration_is_idempotent_and_deterministic	333.6	218.2	1.53	existing_slower	passed
+slowest_test	4	test_hb157_plume_over_time.py (a test held privately)::test_the_modelled_population_has_its_data_sources_row[i81-md-pa-line-day]	235.1	12.7	18.58	existing_slower	passed
+slowest_test	5	test_hb185_daytime_layer.py (a test held privately)::test_every_table_re_derives_byte_for_byte	210.6	164.1	1.28	existing_slower	passed
+slowest_test	6	test_corpus_claims.py (a test held privately)::test_the_top_claim_cites_the_hand_found_receipt[marplot-centroid]	210.0	64.0	3.28	existing_slower	skipped
+slowest_test	7	test_hb115_cue_block.py (a test held privately)::test_the_lower_bound_line_prints_the_legends_own_number	199.0	310.1	0.64	existing_not_slower	passed
+slowest_test	8	test_hb130_event_stream.py (a test held privately)::test_a_degraded_channel_streams_its_state_and_the_d2_label	171.5	8.0	21.44	existing_slower	passed
+slowest_test	9	test_hb131_panels.py (a test held privately)::test_every_call_is_recorded_and_a_replay_answers_with_no_call	161.4	107.8	1.50	existing_slower	passed
+slowest_test	10	test_hb131_panels.py (a test held privately)::test_a_killed_recording_resumes_to_the_uninterrupted_output	149.6	109.2	1.37	existing_slower	passed
+slowest_test	11	test_protective_action_footprint.py (a test held privately)::test_recorded_fixtures_carry_no_key_or_email	144.4	144.2	1.00	existing_not_slower	passed
+slowest_test	12	test_hb155_siting.py (a test held privately)::test_on_the_pair_three_points_outside_every_drawn_hazard_and_the_sweep[csx-point-of-rocks-night]	130.6	163.6	0.80	existing_not_slower	passed
+slowest_test	13	test_hb171_threat_timeline.py (a test held privately)::test_rows_are_in_time_order_then_worst_level_first[csx-point-of-rocks-night]	130.2	245.6	0.53	existing_not_slower	passed
+slowest_test	14	test_hb173_two_engines.py (a test held privately)::test_no_place_outside_scichems_cloud_carries_a_time[i83-md-pa-line-night]	128.9	139.9	0.92	existing_not_slower	passed
+slowest_test	15	test_hb131_panels.py (a test held privately)::test_a_tool_or_a_view_the_brief_does_not_have_is_refused	126.4	110.3	1.15	existing_not_slower	passed
+slowest_test	16	test_hb163_one_cloud.py (a test held privately)::test_the_csx_pair_is_classed_dense[csx-point-of-rocks-night]	122.6	196.9	0.62	existing_not_slower	passed
+slowest_test	17	test_hb155_siting.py (a test held privately)::test_a_moved_point_round_trips_through_the_stream_and_a_replay	122.2	88.1	1.39	existing_slower	passed
+slowest_test	18	tests/test_brief.py::test_each_committed_brief_equals_a_fresh_replay_build[csx-point-of-rocks-night]	115.5	243.8	0.47	existing_not_slower	passed
+slowest_test	19	tests/test_brief_footprint_citation.py::test_every_reader_record_a_brief_cites_used_its_own_footprint[csx-point-of-rocks-night]	111.8	281.1	0.40	existing_not_slower	passed
+slowest_test	20	test_hb154_shell.py (a test held privately)::test_each_collapse_button_toggles_and_the_collapsed_checklist_counts_unticked	111.7	110.9	1.01	existing_not_slower	passed
+slowest_test	21	test_hb131_panels.py (a test held privately)::test_a_view_proposal_is_a_layer_or_an_hour_the_page_has	109.7	67.8	1.62	existing_slower	passed
+slowest_test	22	test_hb173_two_engines.py (a test held privately)::test_no_place_outside_scichems_cloud_carries_a_time[i495-wilson-bridge-night]	108.2	208.7	0.52	existing_not_slower	passed
+slowest_test	23	test_hb132_load_read.py (a test held privately)::test_every_committed_brief_keeps_its_numbers_and_receipts_in_every_section[csx-point-of-rocks-night]	107.0	328.2	0.33	existing_not_slower	passed
+slowest_test	24	test_eval_puff.py (a test held privately)::test_the_puff_failures_family_passes	103.1	87.5	1.18	existing_not_slower	passed
+slowest_test	25	test_hb155_siting.py (a test held privately)::test_a_wind_record_change_marks_the_points_review_and_a_time_step_does_not	98.1	130.1	0.75	existing_not_slower	passed
+slowest_test	26	test_hb177_trace.py (a test held privately)::test_the_trace_re_derives_byte_for_byte_from_the_held_runs	96.9	91.3	1.06	existing_not_slower	passed
+slowest_test	27	tests/test_brief_footprint_citation.py::test_every_record_row_of_the_appendix_is_the_request_this_brief_made[csx-point-of-rocks-night]	95.7	211.4	0.45	existing_not_slower	passed
+slowest_test	28	test_hb133_one_wind.py (a test held privately)::test_the_chlorine_rail_day_brief_reads_one_record_everywhere	92.7	31.8	2.92	existing_slower	passed
+slowest_test	29	test_hb173_two_engines.py (a test held privately)::test_the_population_places_and_cordons_read_the_planning_shape_and_the_siting_does_not[csx-point-of-rocks-night]	91.7	184.2	0.50	existing_not_slower	passed
+slowest_test	30	tests/test_hb152_symbols.py::test_every_drawn_marker_on_the_pair_references_its_class_svg[csx-point-of-rocks-night]	91.6	263.6	0.35	existing_not_slower	passed
+slowest_test	31	test_hb130_event_stream.py (a test held privately)::test_a_replayed_briefs_event_sequence_is_the_same_on_two_runs	91.3	70.1	1.30	existing_slower	passed
+slowest_test	32	test_hb154_shell.py (a test held privately)::test_the_data_sources_rows_are_the_evidence_logs_channels_each_with_one_of_four[csx-point-of-rocks-night]	90.6	185.5	0.49	existing_not_slower	passed
+slowest_test	33	test_hb131_panels.py (a test held privately)::test_the_panel_is_the_alert_events_minus_the_withdrawn_in_kind_order[csx-point-of-rocks-night]	90.1	235.3	0.38	existing_not_slower	passed
+slowest_test	34	test_hb173_two_engines.py (a test held privately)::test_no_place_outside_scichems_cloud_carries_a_time[i81-md-pa-line-night]	89.5	80.2	1.12	existing_not_slower	passed
+slowest_test	35	test_evidence_replay.py (a test held privately)::test_the_seed_holds_one_valid_record_per_exchange	88.4	56.9	1.55	existing_slower	passed
+slowest_test	36	test_hb130_event_stream.py (a test held privately)::test_a_map_degraded_after_the_derivations_settles_again	85.7	73.3	1.17	existing_not_slower	passed
+slowest_test	37	tests/test_hb151_nearby_recorded.py::test_on_the_pair_each_class_lists_per_class_or_the_ceiling[csx-point-of-rocks-night]	85.0	326.1	0.26	existing_not_slower	passed
+slowest_test	38	test_hb141_checklist.py (a test held privately)::test_a_check_round_trips_through_the_stream_and_a_replay	84.6	59.5	1.42	existing_slower	passed
+slowest_test	39	test_hb154_shell.py (a test held privately)::test_at_phone_width_the_regions_stack_and_a_plain_wheel_scrolls_the_page	82.5	52.4	1.57	existing_slower	passed
+slowest_test	40	tests/test_brief_footprint_citation.py::test_every_reader_record_a_brief_cites_used_its_own_footprint[i83-md-pa-line-night]	81.3	84.3	0.96	existing_not_slower	passed
+slowest_file	1	test_hb131_panels.py (a test held privately)	1623.8	1390.9	1.17	existing_not_slower	
+slowest_file	2	tests/test_brief_footprint_citation.py	1279.4	1785.9	0.72	existing_not_slower	
+slowest_file	3	test_hb154_shell.py (a test held privately)	1219.1	1243.2	0.98	existing_not_slower	
+slowest_file	4	test_hb130_event_stream.py (a test held privately)	1156.6	1198.2	0.97	existing_not_slower	
+slowest_file	5	test_hb141_checklist.py (a test held privately)	1009.4	1078.6	0.94	existing_not_slower	
+slowest_file	6	test_hb157_plume_over_time.py (a test held privately)	879.9	840.6	1.05	existing_not_slower	
+slowest_file	7	test_brief_dense_gas_layer.py (a test held privately)	819.3	1098.4	0.75	existing_not_slower	
+slowest_file	8	tests/test_brief.py	764.7	932.8	0.82	existing_not_slower	
+slowest_file	9	test_hb132_load_read.py (a test held privately)	752.2	1017.6	0.74	existing_not_slower	
+slowest_file	10	test_hb155_siting.py (a test held privately)	738.3	791.6	0.93	existing_not_slower	
+total		summed test time, all tests	19755.1	22708.9	0.87		8011 tests after, 7784 before
+total		tests new in HB-189	566.6			new_in_hb189	319 tests
+total		tests in both runs	19188.5	21669.8	0.89	existing	
+total		tests only in BEFORE (retired by HB-189)		1039.2		retired	92 tests

@@ -1,0 +1,47 @@
+kind	name	source	state	outcome	as_of
+MCP server	hazbrief	protective_action_footprint (1 call); assess_incident (1 call); material_response_guidance (1 call); population_at_risk (1 call); facilities_in_footprint (1 call); receiving_hospitals (1 call); build_ics_201 (1 call)	Retrieved 11/09/2026 04:08		
+channel	protective_action_footprint	ERG 2024	Retrieved 11/08/2026 12:14	answered	as of 2024
+channel	protective_action_footprint	49 CFR 172.101 Hazardous Materials Table	Retrieved 11/08/2026 12:14	answered	as of 10/15/2026
+channel	protective_action_footprint	NOAA solar equations (astral)	Retrieved 11/08/2026 12:14	answered	as of 11/08/2026 12:14 EST
+channel	assess_incident	ERG 2024	Retrieved 11/03/2026 23:31	answered	as of 2024
+channel	assess_incident	49 CFR 172.101 Hazardous Materials Table	Retrieved 11/03/2026 23:31	answered	as of 10/15/2026
+channel	assess_incident	NOAA solar equations (astral)	Retrieved 11/03/2026 23:31	answered	as of 11/03/2026 23:31 EST
+channel	material_response_guidance	ERG 2024	Retrieved 11/03/2026 23:31	answered	as of 2024
+channel	population_at_risk	2020 Census DHC	Retrieved 11/09/2026 04:08	answered	as of 04/01/2020
+channel	population_at_risk	ACS 2020-2024 5-year	Retrieved 11/09/2026 04:08	answered	as of 01/29/2026
+channel	population_at_risk	Community Resilience Estimates 2024	Retrieved 11/09/2026 04:08	answered	as of 11/26/2025
+channel	population_at_risk	TIGERweb Census 2020 tabulation geography	Retrieved 11/09/2026 04:08	answered	01/01/2020 as the service stated it when last read on 10/21/2026
+channel	population_at_risk	LEHD LODES8	Retrieved 11/09/2026 04:08	answered	as of 12/03/2025
+channel	facilities_in_footprint	USGS National Structures Dataset	Retrieved 11/09/2026 04:08	answered	10/01/2026 as the service stated it when last read on 10/21/2026
+channel	facilities_in_footprint	USGS 3D Hydrography Program (3DHP)	Retrieved 11/09/2026 04:08	answered	09/04/2026 as the service stated it when last read on 10/21/2026
+channel	facilities_in_footprint	BTS NTAD rail layers	Retrieved 11/09/2026 04:08	answered	10/09/2026 as the service stated it when last read on 10/21/2026
+channel	facilities_in_footprint	CMS Nursing Home Provider Information	Retrieved 11/09/2026 04:08	answered	as of 09/30/2026
+channel	receiving_hospitals	USGS National Structures Dataset	Retrieved 11/08/2026 12:14	answered	as of 10/21/2026
+channel	receiving_hospitals	CMS Hospital General Information and Provider of Services	Retrieved 11/08/2026 12:14	answered	as of 07/22/2026
+channel	receiving_hospitals	Census Geocoder	Retrieved 11/08/2026 12:14	answered	as of 10/21/2026
+channel	build_ics_201	National Weather Service, api.weather.gov points	Retrieved 11/09/2026 04:08	answered	as of 11/09/2026 04:08 EST
+channel	build_ics_201	2020 Census DHC	Retrieved 11/09/2026 04:08	answered	as of 04/01/2020
+channel	build_ics_201	ACS 2020-2024 5-year	Retrieved 11/09/2026 04:08	answered	as of 01/29/2026
+channel	build_ics_201	Community Resilience Estimates 2024	Retrieved 11/09/2026 04:08	answered	as of 11/26/2025
+channel	build_ics_201	TIGERweb Census 2020 tabulation geography	Retrieved 11/09/2026 04:08	answered	01/01/2020 as the service stated it when last read on 10/21/2026
+channel	build_ics_201	TIGERweb Census Current	Retrieved 11/09/2026 04:08	answered	01/01/2026 as the service stated it when last read on 10/20/2026
+channel	build_ics_201	USGS National Structures Dataset	Retrieved 11/09/2026 04:08	answered	10/01/2026 as the service stated it when last read on 10/21/2026
+channel	build_ics_201	USGS 3D Hydrography Program (3DHP)	Retrieved 11/09/2026 04:08	answered	09/04/2026 as the service stated it when last read on 10/21/2026
+channel	build_ics_201	BTS NTAD rail layers	Retrieved 11/09/2026 04:08	answered	10/09/2026 as the service stated it when last read on 10/21/2026
+channel	build_ics_201	CMS Hospital General Information and Provider of Services	Retrieved 11/09/2026 04:08	answered	as of 07/22/2026
+channel	build_ics_201	Census Geocoder	Retrieved 11/09/2026 04:08	answered	as of 10/21/2026
+channel	build_ics_201	CMS Nursing Home Provider Information	Retrieved 11/09/2026 04:08	answered	as of 09/30/2026
+channel	build_ics_201	LEHD LODES8	Retrieved 11/09/2026 04:08	answered	as of 12/03/2025
+channel	build_ics_201	ERG 2024	Retrieved 11/09/2026 04:08	answered	as of 2024
+channel	build_ics_201	49 CFR 172.101 Hazardous Materials Table	Retrieved 11/09/2026 04:08	answered	as of 10/15/2026
+channel	build_ics_201	NOAA solar equations (astral)	Retrieved 11/09/2026 04:08	answered	as of 11/09/2026 04:08 EST
+derivation	modelled_population	TIGERweb 2020 tabulation blocks	Retrieved	answered	11/16/2026 02:30 EST
+derivation	modelled_population	2020 Census DHC (P1, P18)	Retrieved	answered	11/16/2026 02:30 EST
+derivation	modelled_population	LEHD LODES workplace area characteristics	Retrieved	answered	11/16/2026 02:30 EST
+channel	area_stage_1	USGS National Structures Dataset (fire, EMS and police stations)	Retrieved	answered	11/11/2026 06:48 EST
+channel	area_stage_1	TIGERweb primary and secondary roads (travel time)	Retrieved	answered	11/11/2026 06:48 EST
+channel	area_stage_1	USGS National Structures Dataset (schools and public buildings)	Retrieved	answered	11/11/2026 06:48 EST
+channel	area_stage_1	TIGERweb parking lot roads (S1780)	Retrieved	answered	11/11/2026 06:48 EST
+channel	area_stage_1	BTS NTAD Truck Stop Parking	Retrieved	answered	11/11/2026 06:48 EST
+channel	area_stage_2	USGS National Structures Dataset (fire, EMS and police stations)	Retrieved	answered	11/11/2026 06:48 EST
+channel	area_stage_2	TIGERweb primary and secondary roads (travel time)	Retrieved	answered	11/11/2026 06:48 EST

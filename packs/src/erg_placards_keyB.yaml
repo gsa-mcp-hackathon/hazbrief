@@ -1,0 +1,221 @@
+# Key B of the ERG 2024 Table of Markings, Labels and Placards and Initial Response Guide to Use
+# On-scene (HB-15 step 1): a reading of the rendered pages, PDF pp. 10 and 11 (printed pp. 8 and 9)
+# of erg2024-en-pdf, at 4x (pypdfium2), by the Claude Code session that executed HB-15, in session
+# (no API call, no spend). Read before Key A was run.
+#
+# The table is a drawing: placards grouped around a black circle holding a guide number. The placard
+# art is image-only; the text layer holds only the circled numbers and the notes. So the two keys
+# are (scripts/erg_placards.py; packs/SCHEMA.md "Version 7"):
+#   A: the text layer. The circled guide number at each circle below (white Helvetica Bold, 9.7 pt),
+#      and, where the ERG states a placard's guide in prose, that sentence (PDF pp. 3, 9, 30).
+#   B: this file. Every circle with its number and centre, and every placard drawn beside it.
+# The build refuses unless every circle here is one Key A reads, with the same number, within
+# `tolerance_pt`, and Key A reads no circle this file lacks. Which placard is drawn beside which
+# circle is read by B alone, except where the prose states it (`prose`): those rows are keyed by
+# both on the association too.
+doc_id: erg2024-en-pdf
+pages: [10, 11]
+# Centres are PDF points from the page's top left (pdfplumber's frame), read off the 4x render.
+tolerance_pt: 20
+
+circles:
+  - {id: p10-111, page: 10, guide: "111", at: [106, 84]}
+  - {id: p10-112, page: 10, guide: "112", at: [288, 114]}
+  - {id: p10-114, page: 10, guide: "114", at: [106, 213]}
+  - {id: p10-118, page: 10, guide: "118", at: [286, 213]}
+  - {id: p10-120, page: 10, guide: "120", at: [75, 318]}
+  - {id: p10-122, page: 10, guide: "122", at: [289, 321]}
+  - {id: p10-123, page: 10, guide: "123", at: [184, 292]}
+  - {id: p10-125, page: 10, guide: "125", at: [184, 456],
+     note: "A numbered Class 2 placard printing 1005: an ID number, answered through `material`."}
+  - {id: p10-127, page: 10, guide: "127", at: [75, 420]}
+  - {id: p10-128, page: 10, guide: "128", at: [288, 420]}
+  - {id: p11-134, page: 11, guide: "134", at: [105, 83]}
+  - {id: p11-136, page: 11, guide: "136", at: [194, 84]}
+  - {id: p11-139, page: 11, guide: "139", at: [315, 83]}
+  - {id: p11-143, page: 11, guide: "143", at: [106, 183]}
+  - {id: p11-148, page: 11, guide: "148", at: [194, 183]}
+  - {id: p11-153a, page: 11, guide: "153", at: [317, 183]}
+  - {id: p11-158, page: 11, guide: "158", at: [107, 290]}
+  - {id: p11-163, page: 11, guide: "163", at: [192, 292]}
+  - {id: p11-153b, page: 11, guide: "153", at: [317, 323]}
+  - {id: p11-138, page: 11, guide: "138", at: [106, 449]}
+  - {id: p11-147, page: 11, guide: "147", at: [106, 472]}
+  - {id: p11-171, page: 11, guide: "171", at: [305, 446]}
+
+# One row per input the placard entry point accepts. `placard` is the row's key: the hazard class or
+# division (Class 1 placards print it; for Classes 2, 4, 5 and 6 the division is the one ERG p. 8
+# names for the placard's printed word), a placard word where one placard of a class goes to its own
+# guide (OXYGEN, GASOLINE, FUEL OIL, HOT), the lithium battery labels by the words beside them, or
+# `none`. `words`: the other words printed on the placards drawn for the row, each also accepted.
+# `hazard_class`: the class number printed in the placard's lower corner, or null. `prose`: the
+# ERG sentence stating the row's guide, by page, where there is one (Key A checks it on the page).
+placards:
+  - placard: DANGEROUS
+    words: [DANGER]
+    hazard_class: null
+    shows: DANGER and DANGEROUS placards, red and white, no class number.
+    circle: p10-111
+    prose: {page: 9, quote: "Use GUIDE 111 when the DANGER or DANGEROUS placard is displayed"}
+  - placard: none
+    words: []
+    hazard_class: null
+    shows: No placard can be seen or read, and hazardous materials are suspected.
+    circle: p10-111
+    prose: {page: 9, quote: "Use GUIDE 111 when the DANGER or DANGEROUS placard is displayed or the nature of the spilled, leaking or burning material is not known. Also use this GUIDE when the presence of hazardous materials/dangerous goods is suspected but no placards can be seen."}
+  - placard: "1.1"
+    words: [EXPLOSIVES]
+    hazard_class: "1"
+    shows: Class 1 placard, orange, exploding bomb, division 1.1 printed where the table prints **.
+    circle: p10-112
+    prose: {page: 3, quote: "For Divisions 1.1, 1.2, 1.3, or 1.5 Use GUIDE 112"}
+  - placard: "1.2"
+    words: [EXPLOSIVES]
+    hazard_class: "1"
+    shows: Class 1 placard, orange, exploding bomb, division 1.2 printed where the table prints **.
+    circle: p10-112
+    prose: {page: 3, quote: "For Divisions 1.1, 1.2, 1.3, or 1.5 Use GUIDE 112"}
+  - placard: "1.3"
+    words: [EXPLOSIVES]
+    hazard_class: "1"
+    shows: Class 1 placard, orange, exploding bomb, division 1.3 printed where the table prints **.
+    circle: p10-112
+    prose: {page: 3, quote: "For Divisions 1.1, 1.2, 1.3, or 1.5 Use GUIDE 112"}
+  - placard: "1.5"
+    words: [BLASTING AGENTS]
+    hazard_class: "1"
+    shows: Class 1 placards, orange, printing 1.5; 1.5 BLASTING AGENTS.
+    circle: p10-112
+    prose: {page: 3, quote: "For Divisions 1.1, 1.2, 1.3, or 1.5 Use GUIDE 112"}
+  - placard: "1.4"
+    words: [EXPLOSIVES]
+    hazard_class: "1"
+    shows: Class 1 placards, orange, printing 1.4; 1.4 EXPLOSIVES.
+    circle: p10-114
+    prose: {page: 3, quote: "For Divisions 1.4 or 1.6 Use GUIDE 114"}
+  - placard: "1.6"
+    words: [EXPLOSIVES]
+    hazard_class: "1"
+    shows: Class 1 placards, orange, printing 1.6; 1.6 EXPLOSIVES.
+    circle: p10-114
+    prose: {page: 3, quote: "For Divisions 1.4 or 1.6 Use GUIDE 114"}
+  - placard: "2.1"
+    words: [FLAMMABLE GAS]
+    hazard_class: "2"
+    shows: Class 2 placards, red, flame; FLAMMABLE GAS.
+    circle: p10-118
+    prose: null
+  - placard: "2.2"
+    words: [NON-FLAMMABLE GAS]
+    hazard_class: "2"
+    shows: Class 2 placards, green, gas cylinder; NON-FLAMMABLE GAS.
+    circle: p10-120
+    prose: null
+  - placard: "2.3"
+    words: [INHALATION HAZARD]
+    hazard_class: "2"
+    shows: Class 2 placards, white, skull and crossbones; INHALATION HAZARD placard and marking.
+    circle: p10-123
+    prose: null
+  - placard: OXYGEN
+    words: []
+    hazard_class: "2"
+    shows: Class 2 placards, yellow, flame over circle; OXYGEN.
+    circle: p10-122
+    prose: null
+  - placard: "3"
+    words: [FLAMMABLE, COMBUSTIBLE]
+    hazard_class: "3"
+    shows: Class 3 placards, red, flame; FLAMMABLE; COMBUSTIBLE; a Class 3 placard with a blank number panel.
+    circle: p10-127
+    prose: {page: 9, quote: "Use GUIDE 127 for a FLAMMABLE (Class 3) placard"}
+  - placard: GASOLINE
+    words: []
+    hazard_class: "3"
+    shows: Class 3 placard, red, flame; GASOLINE.
+    circle: p10-128
+    prose: null
+  - placard: FUEL OIL
+    words: []
+    hazard_class: "3"
+    shows: Class 3 placard, red, flame; FUEL OIL.
+    circle: p10-128
+    prose: null
+  - placard: HOT
+    words: []
+    hazard_class: null
+    shows: HOT marking with a blank number panel, and the elevated temperature mark (red triangle, thermometer).
+    circle: p10-128
+    prose: null
+  - placard: "4.1"
+    words: [FLAMMABLE SOLID]
+    hazard_class: "4"
+    shows: Class 4 placards, red and white vertical stripes, flame; FLAMMABLE SOLID.
+    circle: p11-134
+    prose: null
+  - placard: "4.2"
+    words: [SPONTANEOUSLY COMBUSTIBLE]
+    hazard_class: "4"
+    shows: Class 4 placards, white over red, flame; SPONTANEOUSLY COMBUSTIBLE.
+    circle: p11-136
+    prose: null
+  - placard: "4.3"
+    words: [DANGEROUS WHEN WET]
+    hazard_class: "4"
+    shows: Class 4 placards, blue, flame; DANGEROUS WHEN WET.
+    circle: p11-139
+    prose: null
+  - placard: "5.1"
+    words: [OXIDIZER]
+    hazard_class: "5.1"
+    shows: Placards printing 5.1, yellow, flame over circle; OXIDIZER.
+    circle: p11-143
+    prose: null
+  - placard: "5.2"
+    words: [ORGANIC PEROXIDE]
+    hazard_class: "5.2"
+    shows: Placards printing 5.2, red over yellow, flame; ORGANIC PEROXIDE.
+    circle: p11-148
+    prose: null
+  - placard: "6.1"
+    words: [TOXIC, POISON, INHALATION HAZARD]
+    hazard_class: "6"
+    shows: Class 6 placards, white, skull and crossbones; TOXIC; POISON; INHALATION HAZARD.
+    circle: p11-153a
+    prose: null
+  - placard: "6.2"
+    words: [INFECTIOUS SUBSTANCE]
+    hazard_class: "6"
+    shows: Class 6 labels, white, biohazard symbol; INFECTIOUS SUBSTANCE; and the UN3373 mark, an ID number answered through `material`.
+    circle: p11-158
+    prose: null
+  - placard: "7"
+    words: [RADIOACTIVE, FISSILE]
+    hazard_class: "7"
+    shows: Class 7 placard and labels, yellow over white, trefoil; RADIOACTIVE, RADIOACTIVE I, II and III; FISSILE.
+    circle: p11-163
+    prose: null
+  - placard: "8"
+    words: [CORROSIVE]
+    hazard_class: "8"
+    shows: Class 8 placards, white over black, liquids on hand and metal; CORROSIVE.
+    circle: p11-153b
+    prose: {page: 9, quote: "Use GUIDE 153 for a CORROSIVE (Class 8) placard"}
+  - placard: LITHIUM METAL BATTERIES
+    words: []
+    hazard_class: "9"
+    shows: Class 9 lithium battery label and the lithium battery mark, beside "Lithium metal batteries (UN3090, UN3091)".
+    circle: p11-138
+    prose: null
+  - placard: LITHIUM ION BATTERIES
+    words: []
+    hazard_class: "9"
+    shows: Class 9 lithium battery label and the lithium battery mark, beside "Lithium ion batteries (UN3480, UN3481)".
+    circle: p11-147
+    prose: null
+  - placard: "9"
+    words: []
+    hazard_class: "9"
+    shows: Class 9 placards, black and white stripes; the environmentally hazardous substance mark.
+    circle: p11-171
+    prose: null

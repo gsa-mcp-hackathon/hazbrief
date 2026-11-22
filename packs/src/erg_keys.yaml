@@ -1,0 +1,92 @@
+# HB-03b: the any-UN ERG pack by triple keying (HB-03b).
+# Read by scripts/erg_keya.py (Key A, the PDF's text layer), scripts/erg_keyc.py (Key C, the
+# PHMSA ERG2020 data files), scripts/erg_keyb.py (Key B, a vision read of the rendered page) and
+# scripts/erg_join.py (join, classification, adjudication). Every key is required; a missing one is
+# fatal at startup (standards s2, s4). Paths are relative to the repository root.
+#
+# Prior art: double data entry as a keying-error control (Day, Fayers and Harvey, "Double data
+# entry: what value, what price?", Controlled Clinical Trials 19(1):15-24, 1998,
+# doi:10.1016/s0197-2456(97)00096-2). Two independent mechanisms key every value, a third
+# adjudicates; their paper's point that range checks catch errors double keying cannot is why Key
+# A also checks every metric value against its printed imperial twin (`range_checks`).
+
+paths:
+  build_dir: packs/build
+  keya_dir: packs/build/keyA
+  keyc_dir: packs/build/keyC
+  keyb_dir: packs/build/keyB
+  join_dir: packs/build/join
+  adjudicated_dir: packs/build/adjudicated
+  unresolved: packs/build/UNRESOLVED.md
+  delta_note: LN-02
+  log_dir: logs
+
+# ── Key A: erg2024-en-pdf through pdfplumber (1-based PDF pages; printed page = PDF page - 2) ─────
+keya:
+  doc_id: erg2024-en-pdf
+  pages:
+    yellow: [31, 88]     # p. 89 prints the column header and no rows (HB-03 RESULT s9 item 3)
+    blue: [91, 149]      # pp. 150-152 are general first aid and notes
+    guides: [154, 281]   # 64 guides, a left page (hazards, public safety) and a right page each
+    table1: [292, 335]
+    table2: [337, 341]
+    table3: [343, 345]
+  # Characters are grouped into words when the gap between them is below this (points).
+  word_gap: 1.5
+  # Words whose tops differ by less than this are one printed line (points). Table 2 prints gas
+  # formulae with subscripts set lower, so its line tolerance is wider.
+  line_tolerance: 2.0
+  subscript_line_tolerance: 3.5
+  # A ruling line counts as a column or record boundary when it spans at least this share of the
+  # table's extent across it.
+  rule_min_span: 0.5
+  # On a guide page the text runs as one block; a vertical gap wider than this (points) starts
+  # the page's trailer (the ERAP note at the foot of the right page), which is not guide content.
+  guide_trailer_gap: 40
+  # Guide items are set with a hanging indent: a line indented more than this (points) past the
+  # first line of the item above continues it. The ERG indents continuations 9 pt (27.2 to 36.2).
+  hanging_indent: 4
+  # Row counts must match the comparator within this share (step 2): the 2020 file is the
+  # comparator, and an edition changes rows, so equality is not expected.
+  count_tolerance: 0.05
+
+# Range checks on every Key A distance (Day et al. 1998): the printed imperial value against the
+# metric value it renders. A failure does not change the value; it sends the page to Key B.
+range_checks:
+  ft_per_m: [3.0, 3.5]          # the ERG's rounded conversions run 100 ft / 30 m to 3000 ft / 1000 m
+  mi_per_km: 0.621371           # statute miles per kilometre
+  mi_tolerance: 0.15            # one printed decimal, rounded on both sides
+
+# ── Key C: the PHMSA ERG2020 data files (HB-01d; corpus/erg2020_datafiles.md) ────────────────────
+keyc:
+  yellow: erg2020-yellow-numerical-xlsx
+  blue: erg2020-blue-alphabetical-xlsx
+  guides: erg2020-orange-guides-xls
+  table1: erg2020-table1-xlsx
+  table2: erg2020-table2-xls
+  table3: erg2020-table3-xls
+
+# ── Key B: a vision read of the rendered page, through Squiddy's model client ───────────────────
+# Run by `squiddy_python` (corpus/ingest_config.yaml), where Squiddy's ClaudeCLIClient and its
+# spend governor live: the lock's CLI on the operator's Max session, a receipt per call, every call
+# reserved on a declared job (squiddy/spend.py). The role is a seldon registry role; the model id
+# comes from the lock, never from here (AD-035).
+keyb:
+  role: document_extractor      # opus, effort high: whole-document extraction
+  dpi: 300
+  timeout_seconds: 900
+  max_turns: 4
+  workers: 4
+  retries: 2                    # a failed or unparseable page is retried this many times, then recorded failed
+  pilot_pages: 10               # step 4a: 5 from the disagreement set, 5 controls from C_agrees
+  pilot_seed: 20261021          # the random draw of the controls is reproducible
+  max_page_reads: 400           # step 4 ceiling: the projection after the pilot must not exceed it
+  # Weighted tokens (squiddy spend.yaml weights), the job's cap on the spend ledger. Set from the
+  # pilot's measured rate (about 16,700 weighted tokens a page, 2026-10-21) times the 400-page
+  # ceiling with 20 % headroom, so the page ceiling, not this cap, is the binding limit.
+  token_cap: 8000000
+  wall_clock_seconds: 14400     # the run stops taking new pages after this
+  progress_seconds: 60
+  lane: hazbrief
+  node: hazbrief.erg_keyb
+  guess_tokens_per_page: 25000  # the pilot's declared estimate; a guess until the pilot measures it

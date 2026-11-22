@@ -1,0 +1,74 @@
+# HB-143: the corpus/sources.yaml rows this task drafted and could not land.
+#
+# A new corpus/sources.yaml row fails test_corpus_intake.py (a test held privately)::test_the_graph_intake_names_every_source_entry
+# until a corpus ingest rewrites the corpus graph (held privately). the corpus graph (held privately) is outside HB-143's
+# Touches (HB-100 and HB-103 are the precedent). Until an ingest lands them:
+# - the observed source's manifest row is the source catalog's `nws:observations` (docs/sources/catalog.yaml, its
+#   `observed_dataset` block: url, licence, update cadence, live and recorded per brief), and weather_source.select
+#   reads that row;
+# - the prior-art works are held as the fetcher's refusals (docs/evidence/hb143/prior_art_sources.yaml), to be acquired
+#   at rung 2 (the browser) before they land.
+# The ingest task that lands these rows is carried by the Issue named in HB-143's RESULT.
+sources:
+  - doc_id: nws-api-observations
+    priority: 5
+    title: NWS API station observations (the latest observation of the stations nearest the incident point)
+    publisher: NOAA NWS
+    edition: live
+    url: https://api.weather.gov/stations/{stationId}/observations/latest
+    format: json (GeoJSON)
+    structured_alternative: this is the structured form
+    plan: api_endpoint
+    route: deterministic
+    notes: >-
+      Called at run time, not fetched: weather.source observed reads the nearest NWS stations' latest observations
+      (station list: the observationStations url of /points/{lat},{lon}) and records each with the brief's exchanges
+      (DN-011 D7); the data is live and recorded per brief, never a held document. Licence: a US Government work (17
+      U.S.C. 105), public domain unless noted (nws-disclaimer). Update cadence: each station's schedule, a METAR at
+      fixed intervals (fmh1-2019 section 2.6.4), routinely hourly. robots.txt on api.weather.gov disallows everything;
+      RFC 9309 scopes robots.txt to crawlers, and a per-incident API call is not a crawl (as for nws-api-points).
+    kb_reason: The observed weather source's wind (HB-143; DN-019 ADDENDUM-01), one representative station with the others as a spread.
+  - doc_id: barnes-1964-objective-analysis
+    priority: 5
+    title: A Technique for Maximizing Details in Numerical Weather Map Analysis
+    publisher: American Meteorological Society (Journal of Applied Meteorology 3(4), 396-409)
+    edition: "1964"
+    url: https://journals.ametsoc.org/view/journals/apme/3/4/1520-0450_1964_003_0396_atfmdi_2_0_co_2.xml
+    format: html
+    plan: fetch
+    route: reference
+    role: method
+    kb_reason: Prior art for combining stations into a field (successive correction, Gaussian weights); HB-143 chose one representative station instead.
+  - doc_id: cressman-1959-objective-analysis
+    priority: 5
+    title: An Operational Objective Analysis System
+    publisher: American Meteorological Society (Monthly Weather Review 87(10), 367-374)
+    edition: "1959"
+    url: https://journals.ametsoc.org/view/journals/mwre/87/10/1520-0493_1959_087_0367_aooas_2_0_co_2.xml
+    format: html
+    plan: fetch
+    route: reference
+    role: method
+    kb_reason: Prior art for combining stations into a field (successive correction); HB-143 chose one representative station instead.
+  - doc_id: shepard-1968-idw
+    priority: 5
+    title: A two-dimensional interpolation function for irregularly-spaced data
+    publisher: ACM (Proceedings of the 1968 23rd ACM National Conference, 517-524)
+    edition: "1968"
+    url: https://dl.acm.org/doi/10.1145/800186.810616
+    format: html
+    plan: fetch
+    route: reference
+    role: method
+    kb_reason: Inverse-distance weighting, the operator's candidate (hazbrief-mcp:HBD-220, superseded by HBD-275); HB-143 chose one representative station instead.
+  - doc_id: epa-appendix-w-2017
+    priority: 5
+    title: Guideline on Air Quality Models (40 CFR Part 51, Appendix W), 2017 revision
+    publisher: U.S. EPA
+    edition: 2017-01-17 (82 FR 5182)
+    url: https://www.epa.gov/sites/default/files/2020-09/documents/appw_17.pdf
+    format: pdf
+    plan: fetch
+    route: reference
+    role: method
+    kb_reason: Section 8.4, meteorological input data for a regulatory dispersion run (representativeness of the station).

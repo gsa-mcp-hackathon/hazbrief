@@ -1,0 +1,29 @@
+brief	changed	layers_gone	layers_new
+anfo-fire-i81			
+brush-fire-co-canal-point-of-rocks			
+csx-point-of-rocks-crossing	population rendered->degraded; facilities rendered->degraded	downstream,emergency_services,grade_crossings,population,rail_candidates,rail_lines,roadblock_candidates,water,workplaces	
+csx-point-of-rocks-day	population rendered->degraded; facilities rendered->degraded	downstream,emergency_services,grade_crossings,population,rail_lines,roadblock_candidates,water,workplaces	
+csx-point-of-rocks-night	population rendered->degraded; facilities rendered->degraded	downstream,emergency_services,grade_crossings,population,rail_lines,roadblock_candidates,schools,water,workplaces	
+guide-111-wilson-bridge			
+i495-wilson-bridge-address	population rendered->degraded; facilities rendered->degraded	downstream,emergency_services,population,roadblock_candidates,schools,water,workplaces	
+i495-wilson-bridge-cross-streets	population rendered->degraded; facilities rendered->degraded	downstream,emergency_services,grade_crossings,population,rail_candidates,rail_lines,roadblock_candidates,schools,water,workplaces	
+i495-wilson-bridge-day	population rendered->degraded; facilities rendered->degraded	downstream,emergency_services,population,roadblock_candidates,water,workplaces	
+i495-wilson-bridge-night	population rendered->degraded; facilities rendered->degraded	downstream,emergency_services,population,roadblock_candidates,schools,water,workplaces	
+i81-md-pa-line-day	population rendered->degraded; facilities rendered->degraded	downstream,population,rail_candidates,rail_lines,roadblock_candidates,water,workplaces	
+i81-md-pa-line-milepost	population rendered->degraded; facilities rendered->degraded	downstream,population,roadblock_candidates,schools,water,workplaces	
+i81-md-pa-line-night	population rendered->degraded; facilities rendered->degraded	downstream,grade_crossings,population,rail_lines,roadblock_candidates,schools,water,workplaces	
+i83-md-pa-line-day	population rendered->degraded; facilities rendered->degraded	downstream,emergency_services,population,roadblock_candidates,water,workplaces	
+i83-md-pa-line-night	population rendered->degraded; facilities rendered->degraded	downstream,emergency_services,population,roadblock_candidates,water,workplaces	
+placard-2-3-i81			
+propane-unresolved-i81			
+scranton-i81-nws-wind		dense_gas,puff_source_term	
+scranton-i81-stated-wind		dense_gas,puff_source_term	
+un1057-fire-unresolved-i81			
+un1075-fire-i81			
+un1203-fire-i83			
+un1203-i83			
+un1746-small-i81-land	population rendered->degraded; facilities rendered->degraded	population,roadblock_candidates,workplaces	
+un1746-small-i81-water	population rendered->degraded; facilities rendered->degraded	population,roadblock_candidates,workplaces	
+un1823-solid-i81			
+un1977-wilson-bridge			
+un2915-i81			

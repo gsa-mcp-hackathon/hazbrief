@@ -1,0 +1,72 @@
+# HB-115: the display review served on this machine (DN-019 section 6; HB-115 Parts A and B and its addenda).
+# Read by serve_review.py (a build tool held privately). Every value a reviewer or a later review might change is here, not in the script.
+
+# The review page and the MCP server both bind loopback only (HB-89: the HTTP route has no authentication).
+host: 127.0.0.1
+# The review page's port. NO MEASURED BASIS: a free high port on this machine; any free port serves. 8765 was the
+# first choice and another tool on this machine holds it (HB-115's first start); `serve` now refuses a taken port.
+port: 8770
+# The MCP server started beside the page, so the reviewer can open /health and run README's `assess_incident`
+# call. Its own default (MCP_PORT) is 8080, which the container's published port also takes; 8081 keeps them apart.
+mcp_port: 8081
+# Seconds to wait for the MCP server's /health to answer after it is started; it loads its packs first.
+# NO MEASURED BASIS beyond this machine's start (a few seconds); generous so a cold start is not refused.
+mcp_start_timeout_s: 60
+
+# The five briefs (HB-115 Part A step 1), each a committed docs/briefs/<id>/ with its brief.html and appendix.html.
+# `role` is the task's own description of the slot; the reasoning for each choice is in the HB-115 RESULT.
+briefs:
+  - id: csx-point-of-rocks-day
+    role: "named by the task"
+  - id: i81-md-pa-line-night
+    role: "an I-81 night brief"
+  - id: propane-unresolved-i81
+    role: "an ambiguous-load brief (propane: two ID numbers, so the identification.ambiguous_material flag)"
+  - id: i495-wilson-bridge-address
+    role: "a location-only brief (a street address, not coordinates)"
+  - id: csx-point-of-rocks-night
+    role: "the chlorine rail brief with the puff and the dense-gas footprint"
+# The files served for each brief; nothing else under docs/briefs/ is reachable.
+files: [brief.html, appendix.html]
+
+# The questions, once, at the top of the page. DN-019 section 6: "Two questions to the operator, recorded verbatim:
+# what did you go to first, where did you hunt"; HB-115 ADDENDUM-01 section 3 adds "is there anything on this screen
+# you did not need". Their words are DN-019's and the addendum's, unedited.
+questions:
+  - "what did you go to first"
+  - "where did you hunt"
+  - "is there anything on this screen you did not need"
+
+# Runtime state (relative to the repository root). HB-137 (Issue 594f0f14): everything a running review writes lives
+# under the session state (held privately), which .gitignore ignores, so `start` and the run change nothing git sees and the standing
+# dispatcher's c7 (a dirty tree refuses every task) is not tripped for the length of a review.
+answers_dir: the session state (held privately)
+served_json: the session state (held privately)
+# The detached run's pid and log (HB-115 Part B step 3).
+pid_file: the session state (held privately)
+log_file: the session state (held privately)
+# The committed record: `stop` copies served.json and the answers here and prints what it copied, for the operator
+# (or the next task) to commit. The log stays under the session state (held privately).
+record_dir: docs/evidence/hb115
+# KLUDGE: (HB-137; Issue 90796187 removes it) where a review started before HB-137 keeps its state. The
+# review started 2026-11-07 22:32 runs old code that writes here, and the Desktop hid it from git with
+# `git update-index --skip-worktree` on served.json and serve.log and a .git/info/exclude line for serve.pid.
+# `stop` finds that run by this pid file, stops it, and undoes the three workarounds (`clear-workaround`). Remove
+# this block and the script's legacy path once no legacy pid file exists anywhere.
+legacy:
+  pid_file: the HB-115 evidence (held privately)
+  served_json: docs/evidence/hb115/served.json
+  answers_dir: the HB-115 evidence (held privately)
+  log_file: docs/evidence/hb115/serve.log
+  skip_worktree: [docs/evidence/hb115/served.json, docs/evidence/hb115/serve.log]
+  exclude_line: the HB-115 evidence (held privately)
+  # The legacy run's lines in the tracked serve.log go here before the file is restored to its committed bytes.
+  log_moved_to: the session state (held privately)
+# `stop` polls the stopped pid this many times, 0.25 s apart (10 s), before it refuses with the pid file kept.
+# NO MEASURED BASIS beyond HB-115's stops (the page and the MCP child exit in well under a second).
+stop_wait_polls: 40
+# Part B: poll the answers once a minute, stop at five answers or at 24 hours (HB-115 Part B step 3).
+poll_interval_s: 60
+max_hours: 24
+# The largest answer accepted, in bytes; a longer post is refused, not truncated.
+max_answer_bytes: 65536

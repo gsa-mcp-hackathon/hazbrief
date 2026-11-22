@@ -1,0 +1,116 @@
+# HB-155 Part B item 4 (DN-023 section 4): the rules that suggest the command post, triage and staging points, each
+# with its held source and the quoted text, as the flag pack's rules are. `scripts/build_packs.py siting_rules`
+# re-reads every quote on its page of the held original (`_receipt`) and refuses a rule with neither a held quote nor
+# an operator record. A rule marked `operator_stated` names its register record and the operator's words (the line of
+# docs/evidence/hb155/operator_statements.md it is registered from). The pages are the held files' pages as the pack
+# builder counts them (docs/evidence/hb155/locate_quotes.txt).
+#
+# `applies`: where the derivation (`hazbrief.brief.siting`) uses the rule: `exclude` drops a candidate, `choose` orders
+# the candidates for a point, `label` is printed with every point, `candidates` names the places offered.
+rules:
+  outside_hazard:
+    applies: exclude
+    words: "a suggested point lies outside every drawn hazard layer: the ERG zones and the modelled outlines"
+    sources:
+      - {doc: erg2024-en-pdf, page: 3, quote: "STAY CLEAR OF ALL SPILLS, VAPORS, FUMES, SMOKE, AND POTENTIAL HAZARDS"}
+      - {doc: erg2024-en-pdf, page: 372, quote: "Area where the command post and support functions that are necessary to control the incident are located."}
+  upwind_uphill_upstream:
+    applies: exclude
+    words: "a suggested point lies outside the protective action zone swept across the wind's spread and outside the downstream path's corridor"
+    sources:
+      - {doc: erg2024-en-pdf, page: 3, quote: "APPROACH INCIDENT FROM UPWIND, AND UPHILL AND/OR UPSTREAM"}
+      - {doc: erg2024-en-pdf, page: 180, quote: "Stay upwind, uphill and/or upstream."}
+  lower_ground:
+    applies: exclude
+    words: "for a dense-gas class, a suggested point does not lie on held ground lower than the spill near it"
+    sources:
+      - {doc: erg2024-en-pdf, page: 180, quote: "Many gases are heavier than air and will spread along the ground and collect in low or confined areas"}
+  road_access:
+    applies: exclude
+    words: "a candidate whose shortest road route from beyond the area crosses the exclusion area is not offered"
+    sources:
+      - {doc: fema-is-200c-student-manual, page: 91, quote: "Entrance and exit routes for responders"}
+  three_points:
+    applies: label
+    words: "three points are suggested, command post, triage and staging, each movable by the operator"
+    operator_stated: {record: "hazbrief-mcp:HBD-359", statement: S1}
+    sources:
+      - {doc: nims-doctrine-2017, page: 32, quote: "Typical facilities include the Incident Command Post (ICP), incident base, staging areas, camps, mass casualty triage areas, points-of"}
+  commander_sets:
+    applies: label
+    words: "a suggested point is a suggestion: the incident commander sets it"
+    sources:
+      - {doc: nims-doctrine-2017, page: 41, quote: "The Incident Commander or Unified Command determines the kinds and locations of facilities based on incident needs."}
+      - {doc: nims-doctrine-2017, page: 32, quote: "direct their identification and location based on the incident"}
+  candidates:
+    applies: candidates
+    words: "candidates are places with space and road access: parking lots, schools and other public buildings, a hospital, a fire, EMS or police station, a rest area"
+    operator_stated: {record: "hazbrief-mcp:HBD-360", statement: S2}
+  initial_solution:
+    applies: label
+    words: "the suggestion is an initial solution so responder drive time can be computed; it is recomputed when a point moves, and the points are the routes' endpoints"
+    operator_stated: {record: "hazbrief-mcp:HBD-361", statement: S3}
+  command_post:
+    applies: choose
+    point: command_post
+    words: "command post: the nearest candidate to the incident upwind of it, crosswind where none is upwind"
+    sources:
+      - {doc: nims-doctrine-2017, page: 41, quote: "Typically, the ICP is located near the incident site"}
+      - {doc: erg2024-en-pdf, page: 372, quote: "Area where the command post and support functions that are necessary to control the incident are located."}
+      - {doc: erg2024-en-pdf, page: 6, quote: "Establish a command post and lines of communication."}
+  triage:
+    applies: choose
+    point: triage
+    words: "triage: the candidate nearest the exclusion area's edge upwind of the incident, crosswind where none is upwind, other than the command post where another survives"
+    sources:
+      - {doc: cfr29-1910-120-govinfo-2025, page: 663, quote: "medical assistance and triage area"}
+    # HB-178 (Issue 1f99f2f8): the medical guidance is the brief's own material's, keyed by the UN numbers its ATSDR
+    # Medical Management Guideline prints on its first page (`key`, a receipt like the quotes); a material with no
+    # held guideline prints `material_none` and only the general source above. The criterion is not the guidelines':
+    # it names no number, so none was taken from the chlorine document. Pages: docs/evidence/hb178/locate_mmg_*.py.
+    material_sources:
+      - doc: atsdr-mmg-ammonia
+        key: {page: 1, numbers: ["1005", "2073", "2672"]}
+        quotes:
+          - {page: 8, quote: "They may be transferred immediately to the Support Zone."}
+          - {page: 10, quote: "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility."}
+      - doc: atsdr-mmg-chlorine
+        key: {page: 1, numbers: ["1017"]}
+        quotes:
+          - {page: 8, quote: "They may be transferred immediately to the Support Zone."}
+          - {page: 10, quote: "Only decontaminated patients or those not requiring decontamination should be transported to a medical facility."}
+      - doc: atsdr-mmg-ethylene-oxide
+        key: {page: 1, numbers: ["1040"]}
+        quotes:
+          - {page: 11, quote: "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility."}
+      - doc: atsdr-mmg-hydrogen-chloride
+        key: {page: 1, numbers: ["1050", "1789", "2186"]}
+        quotes:
+          - {page: 12, quote: "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility."}
+      - doc: atsdr-mmg-hydrogen-fluoride
+        key: {page: 1, numbers: ["1052", "1790"]}
+        quotes:
+          - {page: 10, quote: "They may be transferred immediately to the Support Zone."}
+          - {page: 12, quote: "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility."}
+      - doc: atsdr-mmg-sulfur-dioxide
+        key: {page: 1, numbers: ["1079"]}
+        quotes:
+          - {page: 10, quote: "They may be transferred immediately to the Support Zone."}
+          - {page: 12, quote: "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility."}
+    material_none: "no material-specific source is held"
+  staging:
+    applies: choose
+    point: staging
+    words: "staging: of the candidates upwind or crosswind and farther from the incident than the command post and triage, the nearest to the incident with direct access to a primary or secondary road; with none, the one nearest such a road"
+    sources:
+      - {doc: nims-doctrine-2017, page: 41, quote: "A staging area can be any location in which personnel, supplies, and equipment await assignment."}
+      - {doc: fema-is-200c-student-manual, page: 91, quote: "Location of Incident Command Post and Staging Area"}
+      - {doc: ntsb-rar-05-04-graniteville, page: 47, quote: "at a staging area upwind of the toxic gas release site"}
+    # HB-178 (Issue 1f99f2f8): the NTSB source is general guidance drawn from one chlorine incident; named as such
+    # wherever it is printed, with the held words that say what the incident released
+    source_notes:
+      ntsb-rar-05-04-graniteville: {page: 4, quote: "breached, releasing chlorine gas", note: "a general source drawn from a chlorine incident"}
+  route_endpoints:
+    applies: label
+    words: "the suggested points are the endpoints of the responder routes: each nearest fire, EMS and police station to staging, triage to each receiving hospital"
+    operator_stated: {record: "hazbrief-mcp:HBD-362", statement: S4}
