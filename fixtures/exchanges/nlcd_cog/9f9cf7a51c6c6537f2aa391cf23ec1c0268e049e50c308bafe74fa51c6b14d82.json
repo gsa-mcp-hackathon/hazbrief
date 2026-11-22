@@ -1,0 +1,19 @@
+{
+ "api": "nlcd_cog",
+ "body": "2vwAAA==",
+ "body_encoding": "base64",
+ "content_type": "image/tiff",
+ "method": "GET",
+ "recorded_at": "2026-10-28T15:56:07Z",
+ "request_headers": {
+  "Range": "bytes=425104-425107",
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Date": "Wed, 28 Oct 2026 15:56:07 GMT",
+  "ETag": "\"318a2cbeddfca301f66e99d6849e9891-24\"",
+  "Last-Modified": "Fri, 31 Jul 2026 02:51:33 GMT"
+ },
+ "status": 206,
+ "url": "https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/nlcd-2025-cog.tif"
+}

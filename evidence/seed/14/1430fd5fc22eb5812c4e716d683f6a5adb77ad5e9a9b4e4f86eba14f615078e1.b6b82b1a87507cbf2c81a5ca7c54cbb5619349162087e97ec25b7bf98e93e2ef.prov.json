@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-11T02:46:02Z",
+  "http_mode": "record",
+  "id": "b6b82b1a87507cbf2c81a5ca7c54cbb5619349162087e97ec25b7bf98e93e2ef",
+  "name": "GET tigerweb",
+  "params": {
+   "method": "GET",
+   "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/10/query?geometry=-77.555685%2C38.026325%2C-76.630154%2C39.279121&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=GEOID%2CSTATE%2CCOUNTY%2CTRACT%2CBLKGRP%2CBLOCK&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=GEOID&resultOffset=46000&resultRecordCount=1000&f=geojson"
+  },
+  "startedAtTime": "2026-11-11T02:46:02Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/10/query?geometry=-77.555685%2C38.026325%2C-76.630154%2C39.279121&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=GEOID%2CSTATE%2CCOUNTY%2CTRACT%2CBLKGRP%2CBLOCK&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=GEOID&resultOffset=46000&resultRecordCount=1000&f=geojson",
+    "id": "tigerweb:census2020"
+   }
+  ]
+ },
+ "as_of": "2026-11-11T02:46:02Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 1563742,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "1430fd5fc22eb5812c4e716d683f6a5adb77ad5e9a9b4e4f86eba14f615078e1"
+ },
+ "horizon_s": 315576000,
+ "horizon_source": "tigerweb:census2020",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

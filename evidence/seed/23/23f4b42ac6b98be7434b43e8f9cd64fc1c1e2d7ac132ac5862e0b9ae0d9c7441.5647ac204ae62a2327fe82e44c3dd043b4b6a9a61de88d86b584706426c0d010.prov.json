@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-16T09:10:04Z",
+  "http_mode": "record",
+  "id": "5647ac204ae62a2327fe82e44c3dd043b4b6a9a61de88d86b584706426c0d010",
+  "name": "GET tigerweb",
+  "params": {
+   "method": "GET",
+   "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/6/query?where=MTFCC+IN+%28%27S1100%27%2C%27S1200%27%2C%27S1400%27%2C%27S1630%27%2C%27S1640%27%29&outFields=OID%2CNAME%2CBASENAME%2CMTFCC&returnGeometry=true&outSR=4326&f=json&geometry=-77.080133%2C38.755398%2C-77.012888%2C38.810784&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects"
+  },
+  "startedAtTime": "2026-11-16T09:10:04Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/6/query?where=MTFCC+IN+%28%27S1100%27%2C%27S1200%27%2C%27S1400%27%2C%27S1630%27%2C%27S1640%27%29&outFields=OID%2CNAME%2CBASENAME%2CMTFCC&returnGeometry=true&outSR=4326&f=json&geometry=-77.080133%2C38.755398%2C-77.012888%2C38.810784&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects",
+    "id": "tigerweb:current"
+   }
+  ]
+ },
+ "as_of": "2026-11-16T09:10:04Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 109014,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "23f4b42ac6b98be7434b43e8f9cd64fc1c1e2d7ac132ac5862e0b9ae0d9c7441"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "tigerweb:current",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

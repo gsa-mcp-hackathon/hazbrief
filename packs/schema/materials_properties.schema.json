@@ -1,0 +1,953 @@
+{
+ "$defs": {
+  "AirBasis": {
+   "additionalProperties": false,
+   "description": "What turns a mass concentration into a volume fraction: the basis ppm and mg/m3\nare converted at (NIOSH: 25 C and 1 atm; EPA's RMP guidance: 25 C is 298 K) and the\nconstants of the U.S. Standard Atmosphere, 1976 (1 atm is its sea-level P0; R* is\nits k times its N_A).",
+   "properties": {
+    "asphyxiant_vol_pct_at_threshold": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "avogadro_constant_per_kmol": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "boltzmann_constant_n_m_k": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "conversion_pressure_atm": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "conversion_temperature_c": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "conversion_temperature_k": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "gas_constant_j_kmol_k": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "molar_volume_m3_kmol": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "oxygen_volume_fraction": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "standard_pressure_pa": {
+     "$ref": "#/$defs/HeldValue"
+    }
+   },
+   "required": [
+    "conversion_temperature_c",
+    "conversion_pressure_atm",
+    "conversion_temperature_k",
+    "boltzmann_constant_n_m_k",
+    "avogadro_constant_per_kmol",
+    "gas_constant_j_kmol_k",
+    "standard_pressure_pa",
+    "molar_volume_m3_kmol",
+    "oxygen_volume_fraction",
+    "asphyxiant_vol_pct_at_threshold"
+   ],
+   "title": "AirBasis",
+   "type": "object"
+  },
+  "AttributionCredit": {
+   "additionalProperties": false,
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "edition": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Edition"
+    },
+    "publisher": {
+     "title": "Publisher",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "url": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Url"
+    }
+   },
+   "required": [
+    "doc_id",
+    "title",
+    "publisher",
+    "edition",
+    "url"
+   ],
+   "title": "AttributionCredit",
+   "type": "object"
+  },
+  "AttributionNotice": {
+   "additionalProperties": false,
+   "description": "A reuse or credit notice, verbatim from the held document at `locator`.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "locator",
+    "text"
+   ],
+   "title": "AttributionNotice",
+   "type": "object"
+  },
+  "Correlation": {
+   "additionalProperties": false,
+   "description": "A temperature correlation as the held page prints it: `form` states the equation\nand its units in the page's terms; `rows` are every printed row (Antoine) or the\nlowest-temperature column (Shomate), each with its range. A source term picks the\nrow whose range covers its temperature; none is extrapolated here.",
+   "properties": {
+    "form": {
+     "title": "Form",
+     "type": "string"
+    },
+    "reason": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Reason"
+    },
+    "rows": {
+     "default": [],
+     "items": {
+      "$ref": "#/$defs/CorrelationRow"
+     },
+     "title": "Rows",
+     "type": "array"
+    },
+    "status": {
+     "enum": [
+      "held",
+      "not_applicable",
+      "not_held"
+     ],
+     "title": "Status",
+     "type": "string"
+    }
+   },
+   "required": [
+    "form",
+    "status"
+   ],
+   "title": "Correlation",
+   "type": "object"
+  },
+  "CorrelationRow": {
+   "additionalProperties": false,
+   "description": "One printed row of a correlation's constants and the temperature range the page\nstates it for; each constant carries the row's receipt.",
+   "properties": {
+    "constants": {
+     "additionalProperties": {
+      "$ref": "#/$defs/HeldValue"
+     },
+     "title": "Constants",
+     "type": "object"
+    },
+    "receipt": {
+     "$ref": "#/$defs/ValueReceipt"
+    },
+    "t_max_k": {
+     "title": "T Max K",
+     "type": "number"
+    },
+    "t_min_k": {
+     "title": "T Min K",
+     "type": "number"
+    }
+   },
+   "required": [
+    "t_min_k",
+    "t_max_k",
+    "constants",
+    "receipt"
+   ],
+   "title": "CorrelationRow",
+   "type": "object"
+  },
+  "CrossCheck": {
+   "additionalProperties": false,
+   "description": "One field compared across sources (DN-003 section 5). `values` maps each source\nrole to its value as that source prints it, or None where the source does not carry\nthe field. `agree`: every carrying source agrees and at least two carry it;\n`disputed`: two carrying sources differ; `single_source`: only one source carries\nit.",
+   "properties": {
+    "field": {
+     "title": "Field",
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "agree",
+      "disputed",
+      "single_source"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "values": {
+     "additionalProperties": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "title": "Values",
+     "type": "object"
+    }
+   },
+   "required": [
+    "field",
+    "values",
+    "status"
+   ],
+   "title": "CrossCheck",
+   "type": "object"
+  },
+  "DispersionClassRule": {
+   "additionalProperties": false,
+   "description": "A DN-018 section 3 row: the threshold the puff draws to and its caveat.",
+   "properties": {
+    "basis": {
+     "title": "Basis",
+     "type": "string"
+    },
+    "dense_gas_caveat": {
+     "title": "Dense Gas Caveat",
+     "type": "boolean"
+    },
+    "thresholds": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Thresholds",
+     "type": "array"
+    }
+   },
+   "required": [
+    "thresholds",
+    "dense_gas_caveat",
+    "basis"
+   ],
+   "title": "DispersionClassRule",
+   "type": "object"
+  },
+  "HeldValue": {
+   "additionalProperties": false,
+   "description": "One number with its unit and receipt, or none with the reason. `derived_from`\nnames the values a computed one is made from (each held, with its own receipt).",
+   "properties": {
+    "derived_from": {
+     "default": [],
+     "items": {
+      "type": "string"
+     },
+     "title": "Derived From",
+     "type": "array"
+    },
+    "reason": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Reason"
+    },
+    "receipt": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/ValueReceipt"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "status": {
+     "enum": [
+      "held",
+      "not_applicable",
+      "not_held"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "unit": {
+     "title": "Unit",
+     "type": "string"
+    },
+    "value": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Value"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "status"
+   ],
+   "title": "HeldValue",
+   "type": "object"
+  },
+  "LevelOfConcern": {
+   "additionalProperties": false,
+   "description": "A DN-001 class's level of concern (DN-020 ADDENDUM-01 section 2 item 2).\n`values` is keyed by averaging minutes for an AEGL (\"10\", \"30\", \"60\") and \"any\"\notherwise; `components` are the held values a derived level is made from (the LFL\nand the fraction applied to it).",
+   "properties": {
+    "basis": {
+     "title": "Basis",
+     "type": "string"
+    },
+    "components": {
+     "additionalProperties": {
+      "$ref": "#/$defs/HeldValue"
+     },
+     "default": {},
+     "title": "Components",
+     "type": "object"
+    },
+    "kind": {
+     "enum": [
+      "aegl2",
+      "lfl_fraction",
+      "oxygen_deficiency"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "proxy_for": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Proxy For"
+    },
+    "unit": {
+     "title": "Unit",
+     "type": "string"
+    },
+    "values": {
+     "additionalProperties": {
+      "$ref": "#/$defs/HeldValue"
+     },
+     "title": "Values",
+     "type": "object"
+    }
+   },
+   "required": [
+    "kind",
+    "unit",
+    "basis",
+    "values"
+   ],
+   "title": "LevelOfConcern",
+   "type": "object"
+  },
+  "MaterialProperties": {
+   "additionalProperties": false,
+   "properties": {
+    "aegl_ppm": {
+     "anyOf": [
+      {
+       "additionalProperties": {
+        "additionalProperties": {
+         "$ref": "#/$defs/HeldValue"
+        },
+        "type": "object"
+       },
+       "type": "object"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Aegl Ppm"
+    },
+    "aegl_reason": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Aegl Reason"
+    },
+    "aegl_status": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Aegl Status"
+    },
+    "cross_checks": {
+     "items": {
+      "$ref": "#/$defs/CrossCheck"
+     },
+     "title": "Cross Checks",
+     "type": "array"
+    },
+    "dense_gas_caveat": {
+     "title": "Dense Gas Caveat",
+     "type": "boolean"
+    },
+    "dispersion_class": {
+     "enum": [
+      "pressure_liquefied_toxic",
+      "cryogenic_asphyxiant",
+      "flammable"
+     ],
+     "title": "Dispersion Class",
+     "type": "string"
+    },
+    "guide": {
+     "title": "Guide",
+     "type": "string"
+    },
+    "levels_of_concern": {
+     "items": {
+      "$ref": "#/$defs/LevelOfConcern"
+     },
+     "title": "Levels Of Concern",
+     "type": "array"
+    },
+    "lfl_vol_pct": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "molecular_weight_g_mol": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "oxygen_deficiency_threshold_vol_pct": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "thermodynamics": {
+     "$ref": "#/$defs/Thermodynamics"
+    },
+    "un": {
+     "title": "Un",
+     "type": "string"
+    }
+   },
+   "required": [
+    "un",
+    "name",
+    "guide",
+    "dispersion_class",
+    "dense_gas_caveat",
+    "molecular_weight_g_mol",
+    "lfl_vol_pct",
+    "aegl_status",
+    "aegl_ppm",
+    "aegl_reason",
+    "oxygen_deficiency_threshold_vol_pct",
+    "cross_checks",
+    "thermodynamics",
+    "levels_of_concern"
+   ],
+   "title": "MaterialProperties",
+   "type": "object"
+  },
+  "MaterialsPropertiesData": {
+   "additionalProperties": false,
+   "properties": {
+    "air": {
+     "$ref": "#/$defs/AirBasis"
+    },
+    "classes": {
+     "additionalProperties": {
+      "$ref": "#/$defs/DispersionClassRule"
+     },
+     "propertyNames": {
+      "enum": [
+       "pressure_liquefied_toxic",
+       "cryogenic_asphyxiant",
+       "flammable"
+      ]
+     },
+     "title": "Classes",
+     "type": "object"
+    },
+    "materials": {
+     "additionalProperties": {
+      "$ref": "#/$defs/MaterialProperties"
+     },
+     "title": "Materials",
+     "type": "object"
+    }
+   },
+   "required": [
+    "classes",
+    "air",
+    "materials"
+   ],
+   "title": "MaterialsPropertiesData",
+   "type": "object"
+  },
+  "PackAttribution": {
+   "additionalProperties": false,
+   "properties": {
+    "credits": {
+     "items": {
+      "$ref": "#/$defs/AttributionCredit"
+     },
+     "title": "Credits",
+     "type": "array"
+    },
+    "notices": {
+     "items": {
+      "$ref": "#/$defs/AttributionNotice"
+     },
+     "title": "Notices",
+     "type": "array"
+    }
+   },
+   "required": [
+    "credits",
+    "notices"
+   ],
+   "title": "PackAttribution",
+   "type": "object"
+  },
+  "PackSource": {
+   "additionalProperties": false,
+   "description": "One held document a pack was parsed from: its corpus doc_id, the sha256 of the\nheld bytes, where in it the pack reads, and its licence as `corpus/sources.yaml`\nrecords it.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "licence": {
+     "title": "Licence",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "raw_sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Raw Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "raw_sha256",
+    "locator",
+    "licence"
+   ],
+   "title": "PackSource",
+   "type": "object"
+  },
+  "ThermoProxy": {
+   "additionalProperties": false,
+   "description": "DN-020 ADDENDUM-01 section 2 item 4: a mixture drawn with a pure substance's\nproperties, so the label can say so. `receipt` is the mixture's own page stating\nits composition.",
+   "properties": {
+    "label": {
+     "title": "Label",
+     "type": "string"
+    },
+    "properties_of": {
+     "title": "Properties Of",
+     "type": "string"
+    },
+    "proxy_for": {
+     "title": "Proxy For",
+     "type": "string"
+    },
+    "receipt": {
+     "$ref": "#/$defs/ValueReceipt"
+    }
+   },
+   "required": [
+    "proxy_for",
+    "properties_of",
+    "label",
+    "receipt"
+   ],
+   "title": "ThermoProxy",
+   "type": "object"
+  },
+  "ThermoValue": {
+   "additionalProperties": false,
+   "description": "A substance property with the temperature it is stated at (HB-109). `as_printed`\nis the value and unit as the page prints them where the pack converts the unit\n(`conversion` names the definition used); `value_range` is a range a mixture's page\nprints in place of one value (gasoline's boiling range), held with `value` None.\n`source_tier` says what kind of page a held value comes from (HB-124); a value not\nheld has none.",
+   "properties": {
+    "as_printed": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "As Printed"
+    },
+    "conversion": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Conversion"
+    },
+    "derived_from": {
+     "default": [],
+     "items": {
+      "type": "string"
+     },
+     "title": "Derived From",
+     "type": "array"
+    },
+    "reason": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Reason"
+    },
+    "receipt": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/ValueReceipt"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "source_tier": {
+     "anyOf": [
+      {
+       "enum": [
+        "reference-table",
+        "model-test-input"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Source Tier"
+    },
+    "status": {
+     "enum": [
+      "held",
+      "not_applicable",
+      "not_held"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "temperature_k": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Temperature K"
+    },
+    "unit": {
+     "title": "Unit",
+     "type": "string"
+    },
+    "value": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Value"
+    },
+    "value_range": {
+     "anyOf": [
+      {
+       "items": {
+        "type": "number"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Value Range"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "status"
+   ],
+   "title": "ThermoValue",
+   "type": "object"
+  },
+  "Thermodynamics": {
+   "additionalProperties": false,
+   "description": "What a source term needs (DN-020 sections 2 item 4 and 3.1), each from a held\npage or absent with the reason; nothing is defaulted. CAMEO Chemicals is read first\nand the NIST WebBook second; `cross_checks` compare them where both print a value.\n`missing` names the source-term fields not held, for the label and the source-term\ntable (`docs/evidence/hb109/source_terms.tsv`).",
+   "properties": {
+    "critical_pressure_bar": {
+     "$ref": "#/$defs/ThermoValue"
+    },
+    "critical_temperature_k": {
+     "$ref": "#/$defs/ThermoValue"
+    },
+    "cross_checks": {
+     "items": {
+      "$ref": "#/$defs/CrossCheck"
+     },
+     "title": "Cross Checks",
+     "type": "array"
+    },
+    "heat_of_vaporization_j_mol": {
+     "$ref": "#/$defs/ThermoValue"
+    },
+    "liquid_density_kg_m3": {
+     "$ref": "#/$defs/ThermoValue"
+    },
+    "liquid_heat_capacity_j_mol_k": {
+     "$ref": "#/$defs/ThermoValue"
+    },
+    "liquid_specific_gravity": {
+     "$ref": "#/$defs/ThermoValue"
+    },
+    "missing": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Missing",
+     "type": "array"
+    },
+    "molecular_weight_g_mol": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "normal_boiling_point_k": {
+     "$ref": "#/$defs/ThermoValue"
+    },
+    "proxy": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/ThermoProxy"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "saturation_pressure_antoine": {
+     "$ref": "#/$defs/Correlation"
+    },
+    "vapour_heat_capacity_j_mol_k": {
+     "$ref": "#/$defs/ThermoValue"
+    },
+    "vapour_heat_capacity_shomate": {
+     "$ref": "#/$defs/Correlation"
+    },
+    "vapour_pressure_as_printed": {
+     "$ref": "#/$defs/ThermoValue"
+    }
+   },
+   "required": [
+    "proxy",
+    "molecular_weight_g_mol",
+    "normal_boiling_point_k",
+    "heat_of_vaporization_j_mol",
+    "liquid_heat_capacity_j_mol_k",
+    "vapour_heat_capacity_j_mol_k",
+    "vapour_heat_capacity_shomate",
+    "liquid_specific_gravity",
+    "liquid_density_kg_m3",
+    "vapour_pressure_as_printed",
+    "saturation_pressure_antoine",
+    "critical_temperature_k",
+    "critical_pressure_bar",
+    "cross_checks",
+    "missing"
+   ],
+   "title": "Thermodynamics",
+   "type": "object"
+  },
+  "ValueReceipt": {
+   "additionalProperties": false,
+   "description": "Where a value is printed. `page` is the PDF page, or the form-feed block of a\nconverted file (packs/SCHEMA.md, Locators); `quote` is the text as printed there.\n`read_by`: `text_layer` (verified on the page's text at build) or `rendered_page`\n(a page with no usable text layer, read from its image; the quote is the\nreading). `sha256` is the held file's raw sha256, so a receipt names the exact\nbytes it was read from (HB-109; DN-020 section 2 item 4). From a `reference-only`\nsource the quote is the number and its unit only (the licence gate,\npacks/SCHEMA.md).",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "page": {
+     "title": "Page",
+     "type": "integer"
+    },
+    "quote": {
+     "title": "Quote",
+     "type": "string"
+    },
+    "read_by": {
+     "default": "text_layer",
+     "enum": [
+      "text_layer",
+      "rendered_page"
+     ],
+     "title": "Read By",
+     "type": "string"
+    },
+    "sha256": {
+     "title": "Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "page",
+    "locator",
+    "quote",
+    "sha256"
+   ],
+   "title": "ValueReceipt",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "properties": {
+  "attribution": {
+   "$ref": "#/$defs/PackAttribution"
+  },
+  "built_at": {
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+   "title": "Built At",
+   "type": "string"
+  },
+  "data": {
+   "$ref": "#/$defs/MaterialsPropertiesData"
+  },
+  "kind": {
+   "const": "materials_properties",
+   "title": "Kind",
+   "type": "string"
+  },
+  "pack_id": {
+   "title": "Pack Id",
+   "type": "string"
+  },
+  "schema_version": {
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Sha256",
+   "type": "string"
+  },
+  "sources": {
+   "items": {
+    "$ref": "#/$defs/PackSource"
+   },
+   "title": "Sources",
+   "type": "array"
+  },
+  "version": {
+   "title": "Version",
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema_version",
+  "pack_id",
+  "version",
+  "built_at",
+  "sha256",
+  "sources",
+  "attribution",
+  "kind",
+  "data"
+ ],
+ "title": "MaterialsPropertiesPack",
+ "type": "object"
+}

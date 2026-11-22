@@ -1,0 +1,72 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-25T21:35:33.739151Z",
+  "http_mode": "replay",
+  "id": "b47856560493d2b5e7ed54234cb0e5c8a7b0628051dd9d378147dd3e32afd59d",
+  "is_error": false,
+  "name": "assess_incident",
+  "params": {
+   "incident": {
+    "container": "unknown",
+    "fire_involved": true,
+    "incident_time": "2026-10-21T14:00:00-04:00",
+    "location": {
+     "latitude": 39.722,
+     "longitude": -77.724
+    },
+    "material": "UN1057",
+    "spill_size": "large",
+    "where_spilled": "land"
+   }
+  },
+  "startedAtTime": "2026-10-25T21:35:33.736791Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "packs/erg.json",
+    "id": "pack:erg"
+   },
+   {
+    "endpoint": "packs/cfr172.json",
+    "id": "pack:cfr172"
+   },
+   {
+    "endpoint": "packs/cameo.json",
+    "id": "pack:cameo"
+   },
+   {
+    "endpoint": "packs/hazard_classes.json",
+    "id": "pack:hazard_classes"
+   },
+   {
+    "endpoint": null,
+    "id": "code:astral"
+   }
+  ]
+ },
+ "as_of": "2026-10-25T21:35:33.739151Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 432,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "59d92f4b056c8ed6cad18890925541acc2af9b732bfa4fac7fe15c6b5dbce946"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "pack:cameo",
+ "provenance_class": "recorded_pack",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

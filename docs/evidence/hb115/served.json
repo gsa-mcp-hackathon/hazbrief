@@ -1,0 +1,76 @@
+{
+ "task": "HB-115",
+ "served_at": "2026-11-07T09:31:21-05:00",
+ "url": "http://127.0.0.1:8770/",
+ "mcp_health": "http://127.0.0.1:8081/health",
+ "commit": "d7296a52258d0828ef4c09798a643bacf2ccb2be",
+ "questions": [
+  "what did you go to first",
+  "where did you hunt",
+  "is there anything on this screen you did not need"
+ ],
+ "radar": "absent",
+ "map_engine": "leaflet",
+ "briefs": [
+  {
+   "brief": "csx-point-of-rocks-day",
+   "role": "named by the task",
+   "sha256": {
+    "brief.html": "f09877b7a898ae80b4337fa29fb742e838b97578e0fc749ef47d0eaa40c46bdb",
+    "appendix.html": "6f873e3870f4cb96c9d0b20e5b7732fafd80aa223fa457e6da2c277c92523d82"
+   },
+   "radar": "absent",
+   "radar_reason": "the page's map configuration holds no radar layer: a committed brief is replayed and no radar snapshot was recorded for its time, so it asks nowCOAST for nothing (first_screen.tsv: not held)",
+   "map_engine": "leaflet"
+  },
+  {
+   "brief": "i81-md-pa-line-night",
+   "role": "an I-81 night brief",
+   "sha256": {
+    "brief.html": "1daf50c2981fd16d3d897aa537a14de474c8ccc2c3c28870f26d693c16f8207e",
+    "appendix.html": "6caf9ef7febc7cb9538b65fe5e40bc3dfabd3fd753d2b7273ea7cc9f285a855c"
+   },
+   "radar": "absent",
+   "radar_reason": "the page's map configuration holds no radar layer: a committed brief is replayed and no radar snapshot was recorded for its time, so it asks nowCOAST for nothing (first_screen.tsv: not held)",
+   "map_engine": "leaflet"
+  },
+  {
+   "brief": "propane-unresolved-i81",
+   "role": "an ambiguous-load brief (propane: two ID numbers, so the identification.ambiguous_material flag)",
+   "sha256": {
+    "brief.html": "a1233b915233a45dc1e350161b8f78000f21ecd4def90d9d756655458a742035",
+    "appendix.html": "a1b94cb7a78dd7045dd958dbf9e7659bcf350858f968a01a82a2d59160703672"
+   },
+   "radar": "absent",
+   "radar_reason": "the page's map configuration holds no radar layer: a committed brief is replayed and no radar snapshot was recorded for its time, so it asks nowCOAST for nothing (first_screen.tsv: not held)",
+   "map_engine": "leaflet"
+  },
+  {
+   "brief": "i495-wilson-bridge-address",
+   "role": "a location-only brief (a street address, not coordinates)",
+   "sha256": {
+    "brief.html": "c1f6172194c4ef942396867ff0d8fba59e6e7aeaf9abc4cbb2c1dc12ba7d762e",
+    "appendix.html": "c9923ef9f0aa98d8630ace2ce38afc66ef2fe6364d7442d66bb51eb9965c8e0d"
+   },
+   "radar": "absent",
+   "radar_reason": "the page's map configuration holds no radar layer: a committed brief is replayed and no radar snapshot was recorded for its time, so it asks nowCOAST for nothing (first_screen.tsv: not held)",
+   "map_engine": "leaflet"
+  },
+  {
+   "brief": "csx-point-of-rocks-night",
+   "role": "the chlorine rail brief with the puff and the dense-gas footprint",
+   "sha256": {
+    "brief.html": "1aff3b02e19c21260ac1300212054413c5c7e5548cc84618e15c15939b92c18c",
+    "appendix.html": "7f216fe0a1cc7bb762e4ae1e69719c7cd05eb3b36302ae80ba01a5b77a6bc6f7"
+   },
+   "radar": "absent",
+   "radar_reason": "the page's map configuration holds no radar layer: a committed brief is replayed and no radar snapshot was recorded for its time, so it asks nowCOAST for nothing (first_screen.tsv: not held)",
+   "map_engine": "leaflet"
+  }
+ ],
+ "pid": 3066,
+ "mcp_pid": 3067,
+ "stopped_at": "2026-11-07T16:56:20-05:00",
+ "stopped_because": "andon halt: dispatcher spend_ceiling (942,515 tokens against 720,000 from the base Spend line) at 7.4 h of 24; no answer had arrived",
+ "answered": []
+}

@@ -1,0 +1,657 @@
+{
+ "built_by": "the HB-128 evidence (held privately) from docs/evidence/hb128/aqi_rows.yaml (HB-128)",
+ "categories": [
+  {
+   "aqi_hi": 50,
+   "aqi_lo": 0,
+   "aqi_range_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p8",
+    "pdf_page": 8,
+    "printed_page": 3,
+    "quote": "0 to 50",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "breakpoint_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p19",
+    "pdf_page": 19,
+    "printed_page": 14,
+    "quote": "0.0 – 9.0 0 - 54 0.0 - 4.4 0 - 35 0 - 53 0 - 50 Good",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "category": "Good",
+   "colour": "Green",
+   "guide_cautionary": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p56",
+     "pdf_page": 56,
+     "printed_page": 44,
+     "quote": "None",
+     "read_by": "pdftotext contiguous",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "None"
+   },
+   "guide_health_effects": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p56",
+     "pdf_page": 56,
+     "printed_page": 44,
+     "quote": "None expected",
+     "read_by": "pdftotext contiguous",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "None expected"
+   },
+   "guide_printed_pm25": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p58",
+     "pdf_page": 58,
+     "printed_page": 46,
+     "quote": "0–12",
+     "read_by": "pdftotext contiguous",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "0–12"
+   },
+   "pm25_hi_ug_m3": 9.0,
+   "pm25_lo_ug_m3": 0.0,
+   "rgb": [
+    0,
+    228,
+    0
+   ],
+   "rgb_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p9",
+    "pdf_page": 9,
+    "printed_page": 4,
+    "quote": "Green 0 228 0",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "tad_statement": {
+    "receipt": {
+     "doc_id": "epa-aqi-technical-assistance-2026",
+     "locator": "epa-aqi-technical-assistance-2026#p13",
+     "pdf_page": 13,
+     "printed_page": 8,
+     "quote": "It’s a great day to be active outside.",
+     "read_by": "pdftotext contiguous",
+     "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+    },
+    "text": "It’s a great day to be active outside."
+   }
+  },
+  {
+   "aqi_hi": 100,
+   "aqi_lo": 51,
+   "aqi_range_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p8",
+    "pdf_page": 8,
+    "printed_page": 3,
+    "quote": "51 to 100",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "breakpoint_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p19",
+    "pdf_page": 19,
+    "printed_page": 14,
+    "quote": "9.1 – 35.4 55 - 154 4.5 - 9.4 36 - 75 54 - 100 51 - 100 Moderate",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "category": "Moderate",
+   "colour": "Yellow",
+   "guide_cautionary": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p56",
+     "pdf_page": 56,
+     "printed_page": 44,
+     "quote": "Unusually sensitive individuals should consider limiting prolonged or heavy exertion. People with heart or lung disease should pay attention to symptoms. Individuals with symptoms of lung or heart disease, including repeated coughing, shortness of breath or difficulty breathing, wheezing, chest tightness or pain, palpitations, nausea, unusual fatigue or lightheadedness, should contact a health care provider.",
+     "read_by": "pdftotext ordered",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "Unusually sensitive individuals should consider limiting prolonged or heavy exertion. People with heart or lung disease should pay attention to symptoms. Individuals with symptoms of lung or heart disease, including repeated coughing, shortness of breath or difficulty breathing, wheezing, chest tightness or pain, palpitations, nausea, unusual fatigue or lightheadedness, should contact a health care provider."
+   },
+   "guide_health_effects": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p56",
+     "pdf_page": 56,
+     "printed_page": 44,
+     "quote": "Possible aggravation of heart or lung disease",
+     "read_by": "pdftotext contiguous",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "Possible aggravation of heart or lung disease"
+   },
+   "guide_printed_pm25": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p58",
+     "pdf_page": 58,
+     "printed_page": 46,
+     "quote": "12.1–35.4",
+     "read_by": "pdftotext contiguous",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "12.1–35.4"
+   },
+   "pm25_hi_ug_m3": 35.4,
+   "pm25_lo_ug_m3": 9.1,
+   "rgb": [
+    255,
+    255,
+    0
+   ],
+   "rgb_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p9",
+    "pdf_page": 9,
+    "printed_page": 4,
+    "quote": "Yellow 255 255 0",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "tad_statement": {
+    "receipt": {
+     "doc_id": "epa-aqi-technical-assistance-2026",
+     "locator": "epa-aqi-technical-assistance-2026#p13",
+     "pdf_page": 13,
+     "printed_page": 8,
+     "quote": "Unusually sensitive people: Consider making outdoor activities shorter and less intense. Go inside if you have symptoms such as coughing or shortness of breath.",
+     "read_by": "pdftotext contiguous",
+     "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+    },
+    "text": "Unusually sensitive people: Consider making outdoor activities shorter and less intense. Go inside if you have symptoms such as coughing or shortness of breath."
+   }
+  },
+  {
+   "aqi_hi": 150,
+   "aqi_lo": 101,
+   "aqi_range_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p8",
+    "pdf_page": 8,
+    "printed_page": 3,
+    "quote": "101 to 150",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "breakpoint_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p19",
+    "pdf_page": 19,
+    "printed_page": 14,
+    "quote": "35.5 – 55.4 155 - 254",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "category": "Unhealthy for Sensitive Groups",
+   "colour": "Orange",
+   "guide_cautionary": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p56",
+     "pdf_page": 56,
+     "printed_page": 44,
+     "quote": "Sensitive Groups: People with heart or lung disease, the elderly, children, and pregnant women should limit prolonged or heavy exertion. Limit time spent outdoors. Avoid physical exertion. People with asthma should follow their asthma management plan. Individuals with symptoms of lung or heart disease that may be related to excess smoke exposure, including repeated coughing, shortness of breath or difficulty breathing, wheezing, chest tightness or pain, heart palpitations, nausea, unusual fatigue or lightheadedness, should contact a health care provider.",
+     "read_by": "pdftotext ordered",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "Sensitive Groups: People with heart or lung disease, the elderly, children, and pregnant women should limit prolonged or heavy exertion. Limit time spent outdoors. Avoid physical exertion. People with asthma should follow their asthma management plan. Individuals with symptoms of lung or heart disease that may be related to excess smoke exposure, including repeated coughing, shortness of breath or difficulty breathing, wheezing, chest tightness or pain, heart palpitations, nausea, unusual fatigue or lightheadedness, should contact a health care provider."
+   },
+   "guide_health_effects": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p56",
+     "pdf_page": 56,
+     "printed_page": 44,
+     "quote": "Increasing likelihood of respiratory or cardiac symptoms in sensitive individuals, aggravation of heart or lung disease, and premature mortality in people with heart or lung disease and older adults",
+     "read_by": "pdftotext ordered",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "Increasing likelihood of respiratory or cardiac symptoms in sensitive individuals, aggravation of heart or lung disease, and premature mortality in people with heart or lung disease and older adults"
+   },
+   "guide_printed_pm25": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p58",
+     "pdf_page": 58,
+     "printed_page": 46,
+     "quote": "35.5–55.4",
+     "read_by": "pdftotext contiguous",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "35.5–55.4"
+   },
+   "pm25_hi_ug_m3": 55.4,
+   "pm25_lo_ug_m3": 35.5,
+   "rgb": [
+    255,
+    126,
+    0
+   ],
+   "rgb_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p9",
+    "pdf_page": 9,
+    "printed_page": 4,
+    "quote": "Orange 255 126 0",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "tad_statement": {
+    "receipt": {
+     "doc_id": "epa-aqi-technical-assistance-2026",
+     "locator": "epa-aqi-technical-assistance-2026#p14",
+     "pdf_page": 14,
+     "printed_page": 9,
+     "quote": "Sensitive groups: Make outdoor activities shorter and less intense. It’s OK to be active outdoors but take more breaks. Watch for symptoms such as coughing or shortness of breath. People with asthma: Follow your asthma action plan and keep quick relief medicine handy. People with heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious problem. If you have any of these, contact your health care provider.",
+     "read_by": "pdftotext contiguous",
+     "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+    },
+    "text": "Sensitive groups: Make outdoor activities shorter and less intense. It’s OK to be active outdoors but take more breaks. Watch for symptoms such as coughing or shortness of breath. People with asthma: Follow your asthma action plan and keep quick relief medicine handy. People with heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious problem. If you have any of these, contact your health care provider."
+   }
+  },
+  {
+   "aqi_hi": 200,
+   "aqi_lo": 151,
+   "aqi_range_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p8",
+    "pdf_page": 8,
+    "printed_page": 3,
+    "quote": "151 to 200",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "breakpoint_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p19",
+    "pdf_page": 19,
+    "printed_page": 14,
+    "quote": "(55.5 125.4)3 255 - 354",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "category": "Unhealthy",
+   "colour": "Red",
+   "guide_cautionary": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p57",
+     "pdf_page": 57,
+     "printed_page": 45,
+     "quote": "Sensitive Groups: Should avoid prolonged or heavy exertion Everyone: Should limit prolonged or heavy exertion Limit time spent outdoors. Individuals with symptoms of lung or heart disease that may be related to excess smoke exposure, including repeated coughing, shortness of breath or difficulty breathing, wheezing, chest tightness or pain, palpitations, nausea or unusual fatigue or lightheadedness, should contact your health care provider.",
+     "read_by": "pdftotext ordered",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "Sensitive Groups: Should avoid prolonged or heavy exertion. Everyone: Should limit prolonged or heavy exertion. Limit time spent outdoors. Individuals with symptoms of lung or heart disease that may be related to excess smoke exposure, including repeated coughing, shortness of breath or difficulty breathing, wheezing, chest tightness or pain, palpitations, nausea or unusual fatigue or lightheadedness, should contact your health care provider."
+   },
+   "guide_health_effects": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p57",
+     "pdf_page": 57,
+     "printed_page": 45,
+     "quote": "Increased aggravation of heart or lung disease and premature mortality in persons with heart or lung disease and older adults; increased respiratory effects in general population.",
+     "read_by": "pdftotext contiguous",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "Increased aggravation of heart or lung disease and premature mortality in persons with heart or lung disease and older adults; increased respiratory effects in general population."
+   },
+   "guide_printed_pm25": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p58",
+     "pdf_page": 58,
+     "printed_page": 46,
+     "quote": "55.5–150.4",
+     "read_by": "pdftotext contiguous",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "55.5–150.4"
+   },
+   "pm25_hi_ug_m3": 125.4,
+   "pm25_lo_ug_m3": 55.5,
+   "rgb": [
+    255,
+    0,
+    0
+   ],
+   "rgb_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p9",
+    "pdf_page": 9,
+    "printed_page": 4,
+    "quote": "Red 255 0 0",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "tad_statement": {
+    "receipt": {
+     "doc_id": "epa-aqi-technical-assistance-2026",
+     "locator": "epa-aqi-technical-assistance-2026#p15",
+     "pdf_page": 15,
+     "printed_page": 10,
+     "quote": "Sensitive groups: Consider rescheduling or moving all activities inside. Go inside if you have symptoms. People with asthma: Follow your asthma action plan and keep quick-relief medicine handy. People with heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious problem. If you have any of these, contact your health care provider. Everyone else: Keep outdoor activities shorter and less intense. Go inside if you have symptoms.",
+     "read_by": "pdftotext contiguous",
+     "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+    },
+    "text": "Sensitive groups: Consider rescheduling or moving all activities inside. Go inside if you have symptoms. People with asthma: Follow your asthma action plan and keep quick-relief medicine handy. People with heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious problem. If you have any of these, contact your health care provider. Everyone else: Keep outdoor activities shorter and less intense. Go inside if you have symptoms."
+   }
+  },
+  {
+   "aqi_hi": 300,
+   "aqi_lo": 201,
+   "aqi_range_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p8",
+    "pdf_page": 8,
+    "printed_page": 3,
+    "quote": "201 to 300",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "breakpoint_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p19",
+    "pdf_page": 19,
+    "printed_page": 14,
+    "quote": "(125.5 (225.4)3 355 - 424",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "category": "Very Unhealthy",
+   "colour": "Purple",
+   "guide_cautionary": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p57",
+     "pdf_page": 57,
+     "printed_page": 45,
+     "quote": "Everyone: Should avoid prolonged or heavy exertion and stay indoors, preferably in a space with filtered air.",
+     "read_by": "pdftotext ordered",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "Everyone: Should avoid prolonged or heavy exertion and stay indoors, preferably in a space with filtered air."
+   },
+   "guide_health_effects": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p57",
+     "pdf_page": 57,
+     "printed_page": 45,
+     "quote": "Significant aggravation of heart or lung disease, premature mortality in persons with heart or l u n g disease and older adults; significant increase in respiratory effects in general population.",
+     "read_by": "pdftotext ordered",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "Significant aggravation of heart or lung disease, premature mortality in persons with heart or lung disease and older adults; significant increase in respiratory effects in general population."
+   },
+   "guide_printed_pm25": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p58",
+     "pdf_page": 58,
+     "printed_page": 46,
+     "quote": "150.5–250.4",
+     "read_by": "pdftotext contiguous",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "150.5–250.4"
+   },
+   "pm25_hi_ug_m3": 225.4,
+   "pm25_lo_ug_m3": 125.5,
+   "rgb": [
+    143,
+    63,
+    151
+   ],
+   "rgb_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p9",
+    "pdf_page": 9,
+    "printed_page": 4,
+    "quote": "Purple 143 63 151",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "tad_statement": {
+    "receipt": {
+     "doc_id": "epa-aqi-technical-assistance-2026",
+     "locator": "epa-aqi-technical-assistance-2026#p16",
+     "pdf_page": 16,
+     "printed_page": 11,
+     "quote": "Sensitive groups: Avoid all physical activity outdoors. Reschedule to a time when air quality is better or move activities indoors.* People with asthma: Follow your asthma action plan and keep quick-relief medicine handy. People with heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious problem. If you have any of these, contact your health care provider. Everyone else: Limit outdoor physical activity. Go indoors* if you have symptoms.",
+     "read_by": "pdftotext contiguous",
+     "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+    },
+    "text": "Sensitive groups: Avoid all physical activity outdoors. Reschedule to a time when air quality is better or move activities indoors.* People with asthma: Follow your asthma action plan and keep quick-relief medicine handy. People with heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious problem. If you have any of these, contact your health care provider. Everyone else: Limit outdoor physical activity. Go indoors* if you have symptoms."
+   }
+  },
+  {
+   "aqi_hi": 500,
+   "aqi_lo": 301,
+   "aqi_range_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p8",
+    "pdf_page": 8,
+    "printed_page": 3,
+    "quote": "301+",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "breakpoint_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p19",
+    "pdf_page": 19,
+    "printed_page": 14,
+    "quote": "225.5+ 425+",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "category": "Hazardous",
+   "colour": "Maroon",
+   "guide_cautionary": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p57",
+     "pdf_page": 57,
+     "printed_page": 45,
+     "quote": "Everyone: Should avoid any outdoor activity, and stay indoors, preferably in a space with filtered air.",
+     "read_by": "pdftotext ordered",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "Everyone: Should avoid any outdoor activity, and stay indoors, preferably in a space with filtered air."
+   },
+   "guide_health_effects": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p57",
+     "pdf_page": 57,
+     "printed_page": 45,
+     "quote": "Serious aggravation of heart or lung disease, premature mortality in persons with heart or lung disease and older adults; serious risk of respiratory effects in general population.",
+     "read_by": "pdftotext ordered",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "Serious aggravation of heart or lung disease, premature mortality in persons with heart or lung disease and older adults; serious risk of respiratory effects in general population."
+   },
+   "guide_printed_pm25": {
+    "receipt": {
+     "doc_id": "epa-wildfire-smoke-guide-2019",
+     "locator": "epa-wildfire-smoke-guide-2019#p58",
+     "pdf_page": 58,
+     "printed_page": 46,
+     "quote": "250.5>500",
+     "read_by": "pdftotext contiguous",
+     "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+    },
+    "text": "250.5>500"
+   },
+   "pm25_hi_ug_m3": 325.4,
+   "pm25_lo_ug_m3": 225.5,
+   "rgb": [
+    126,
+    0,
+    35
+   ],
+   "rgb_receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p9",
+    "pdf_page": 9,
+    "printed_page": 4,
+    "quote": "Maroon 126 0 35",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "tad_statement": {
+    "receipt": {
+     "doc_id": "epa-aqi-technical-assistance-2026",
+     "locator": "epa-aqi-technical-assistance-2026#p17",
+     "pdf_page": 17,
+     "printed_page": 12,
+     "quote": "Sensitive groups: Stay indoors and keep activity levels light. Follow tips for keeping particle levels low indoors.* People with asthma: Follow your asthma action plan and keep quick-relief medicine handy. People with heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious problem. If you have any of these, contact your health care provider. Everyone: Avoid all physical activity outdoors.*",
+     "read_by": "pdftotext ordered",
+     "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+    },
+    "text": "Sensitive groups: Stay indoors and keep activity levels light. Follow tips for keeping particle levels low indoors.* People with asthma: Follow your asthma action plan and keep quick-relief medicine handy. People with heart disease: Symptoms such as palpitations, shortness of breath, or unusual fatigue may indicate a serious problem. If you have any of these, contact your health care provider. Everyone: Avoid all physical activity outdoors.*"
+   }
+  }
+ ],
+ "method": {
+  "aqi_500": {
+   "receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p19",
+    "pdf_page": 19,
+    "printed_page": 14,
+    "quote": "PM2.5 24-hour—325.4 μg/m3",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "value_ug_m3": 325.4
+  },
+  "averaging": {
+   "receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p19",
+    "pdf_page": 19,
+    "printed_page": 14,
+    "quote": "PM2.5 (μg/m3) 24-hour",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "text": "PM2.5 (μg/m3), 24-hour"
+  },
+  "equation": {
+   "receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p18",
+    "pdf_page": 18,
+    "printed_page": 13,
+    "quote": "BPHi = the concentration breakpoint that is greater than or equal to Cp",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "text": "Ip = (IHi - ILo) / (BPHi - BPLo) * (Cp - BPLo) + ILo"
+  },
+  "higher_levels_include_lower": {
+   "receipt": {
+    "doc_id": "epa-wildfire-smoke-guide-2019",
+    "locator": "epa-wildfire-smoke-guide-2019#p57",
+    "pdf_page": 57,
+    "printed_page": 45,
+    "quote": "Higher advisory levels automatically incorporate all of the guidance offered at lower levels.",
+    "read_by": "pdftotext contiguous",
+    "sha256": "539420b7c1a45d86dfbdbfee268873beb297aff5e7e4b4ea244868f8c89659fc"
+   },
+   "text": "Higher advisory levels automatically incorporate all of the guidance offered at lower levels."
+  },
+  "implements": {
+   "receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p6",
+    "pdf_page": 6,
+    "printed_page": 1,
+    "quote": "as required in 40 CFR Part 58.50 and according to 40 CFR Appendix G to Part 58.",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   }
+  },
+  "indoors_note": {
+   "receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p17",
+    "pdf_page": 17,
+    "printed_page": 12,
+    "quote": "staying indoors with the windows closed may be dangerous in extremely hot weather",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "text": "If you don't have an air conditioner, staying indoors with the windows closed may be dangerous in extremely hot weather. If you are hot, go someplace with air conditioning or check with your local government to find out if cooling centers are available in your community."
+  },
+  "rounding": {
+   "receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p18",
+    "pdf_page": 18,
+    "printed_page": 13,
+    "quote": "Round the index to the nearest integer.",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   }
+  },
+  "sensitive_groups": {
+   "receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p12",
+    "pdf_page": 12,
+    "printed_page": 7,
+    "quote": "People with heart or lung disease; older adults; and children, including teenagers. In addition, some minority groups, people with lower incomes, and outdoor workers may experience higher exposure that can worsen underlying health conditions.",
+    "read_by": "pdftotext ordered",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "text": "People with heart or lung disease; older adults; and children, including teenagers. In addition, some minority groups, people with lower incomes, and outdoor workers may experience higher exposure that can worsen underlying health conditions."
+  },
+  "smoke_at_risk_addition": {
+   "receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p12",
+    "pdf_page": 12,
+    "printed_page": 7,
+    "quote": "During a smoke event, EPA recommends including pregnant people as an at-risk group",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   },
+   "text": "During a smoke event, EPA recommends including pregnant people as an at-risk group"
+  },
+  "truncation": {
+   "receipt": {
+    "doc_id": "epa-aqi-technical-assistance-2026",
+    "locator": "epa-aqi-technical-assistance-2026#p18",
+    "pdf_page": 18,
+    "printed_page": 13,
+    "quote": "PM2.5 (µg/m3) – truncate to 1 decimal place",
+    "read_by": "pdftotext contiguous",
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c"
+   }
+  }
+ },
+ "not_held": {
+  "doc_id": "ecfr-40-cfr-58-appendix-g",
+  "why": "eCFR redirects this client to unblock.federalregister.gov (its bot wall); next rung: browser"
+ },
+ "what": "PM2.5 24-hour AQI categories: breakpoints in force (EPA AQI technical assistance document, May 2026, Table 6, implementing 40 CFR part 58 Appendix G as revised in 2024), the EPA cautionary statement for particulate matter in each category (Table 5), and the wildfire-smoke guide's health effects and cautionary statements for each category (Table 4). guide_printed_pm25 is the guide's own Table 5 range, from before the 2024 revision, kept to show the drift; it is not a breakpoint."
+}

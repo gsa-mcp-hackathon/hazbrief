@@ -1,0 +1,84 @@
+{
+ "as_given": "2026-11-19T16:56:36.200279+00:00",
+ "entry": {
+  "fields": {
+   "container": {
+    "span": "tank truck",
+    "value": "Highway tank truck or trailer"
+   },
+   "material": {
+    "erg": {
+     "coverage": "full",
+     "guide": "125",
+     "id_number": "UN1005",
+     "name": null,
+     "resolved": true,
+     "un": "1005"
+    },
+    "span": "UN1005",
+    "value": "UN1005"
+   },
+   "state": {
+    "span": "leaking",
+    "value": "leaking"
+   }
+  },
+  "parse": {
+   "call": {
+    "calls_made": 1,
+    "model": "claude-opus-5-5",
+    "request_sha256": "6f2103e0ab920d7044587043273f73f36a8a9254b6012c2e8f6eb185d751fa5c",
+    "response_sha256": "b51769f47256175a7ac5f790b8d9d45655ee972f7d96b195736b10c6cf6dc343",
+    "transcript": "b72f93939639fd9fd4551e15aa927939f9e6aa81014013b65afe21dcca5a8821"
+   },
+   "fields": {
+    "container": {
+     "span": "tank truck",
+     "value": "Highway tank truck or trailer"
+    },
+    "material": {
+     "erg": {
+      "coverage": "full",
+      "guide": "125",
+      "id_number": "UN1005",
+      "name": null,
+      "resolved": true,
+      "un": "1005"
+     },
+     "span": "UN1005",
+     "value": "UN1005"
+    },
+    "state": {
+     "span": "leaking",
+     "value": "leaking"
+    }
+   },
+   "line": "UN1005 tank truck leaking",
+   "route": {
+    "guide": "125",
+    "kind": "guide",
+    "release": {
+     "reason": "the storage state is not held: nothing states it, and Guide 125 routes pressure liquefied to two phase jet; refrigerated liquid to evaporating pool",
+     "route": null,
+     "status": "not_available"
+    },
+    "why": "a known material takes its ERG guide and HB-120's release routing"
+   },
+   "via": "model"
+  }
+ },
+ "id": "entry-76c25a2979a0",
+ "incident": {
+  "container": "Highway tank truck or trailer",
+  "fire_involved": false,
+  "incident_time": "2026-11-19T16:56:36.200279+00:00",
+  "location": {
+   "latitude": 39.3845,
+   "longitude": -76.5238
+  },
+  "material": "UN1005",
+  "spill_size": "unknown",
+  "where_spilled": "land"
+ },
+ "situation": "UN1005 tank truck leaking"
+}

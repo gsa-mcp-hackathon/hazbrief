@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-07T08:30:26Z",
+  "http_mode": "record",
+  "id": "01da3a6c508b189c168baf451d9d6e3f4c5513bcb1f3be8afedc10dea7ab5245",
+  "name": "GET pubchem",
+  "params": {
+   "method": "GET",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Chlorine/cids/JSON"
+  },
+  "startedAtTime": "2026-11-07T08:30:26Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Chlorine/cids/JSON",
+    "id": "pubchem:pug_rest"
+   }
+  ]
+ },
+ "as_of": "2026-11-07T08:30:26Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 34,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "9c4fb4ad22e069228f5348b1d6c49503bf2dfa8af69f256713a5debf436d8ed5"
+ },
+ "horizon_s": 126230400,
+ "horizon_source": "pubchem:pug_rest",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

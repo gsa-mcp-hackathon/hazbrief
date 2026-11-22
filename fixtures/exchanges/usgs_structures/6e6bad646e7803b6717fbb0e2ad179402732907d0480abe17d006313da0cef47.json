@@ -1,0 +1,350 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.357351,
+      39.327984
+     ],
+     "type": "Point"
+    },
+    "id": 6478569,
+    "properties": {
+     "address": "3602 Urbana Pike",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1660953600000,
+     "name": "Urbana Volunteer Fire and Rescue Company Station 23",
+     "objectid": 6478569,
+     "permanent_identifier": "528fe07c-f31a-4cd3-bf6e-aa34f12a1121",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.474078,
+      39.309073
+     ],
+     "type": "Point"
+    },
+    "id": 6500273,
+    "properties": {
+     "address": "2795 Adams Street",
+     "city": "Adamstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Carroll Manor Fire Company Station 14",
+     "objectid": 6500273,
+     "permanent_identifier": "6c20ef9e-8933-47e8-a13c-70470eebdaa0",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.533272,
+      39.215734
+     ],
+     "type": "Point"
+    },
+    "id": 6539131,
+    "properties": {
+     "address": "42367 Lucketts Road",
+     "city": "Leesburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Lucketts Fire and Rescue Company 10",
+     "objectid": 6539131,
+     "permanent_identifier": "9abe7210-61c4-480b-875b-ca982cd95cee",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.411604,
+      39.180183
+     ],
+     "type": "Point"
+    },
+    "id": 6600039,
+    "properties": {
+     "address": "19801 Beallsville Road",
+     "city": "Beallsville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1542326400000,
+     "name": "Upper Montgomery County Volunteer Fire Department - Station 14",
+     "objectid": 6600039,
+     "permanent_identifier": "e3ab391d-9474-49fa-96cf-1878a70eff72",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.650982,
+      39.134411
+     ],
+     "type": "Point"
+    },
+    "id": 6606515,
+    "properties": {
+     "address": "39071 East Colonial Highway",
+     "city": "Hamilton",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630540800000,
+     "name": "Hamilton Volunteer Fire Department Station 5",
+     "objectid": 6606515,
+     "permanent_identifier": "ebca9ac9-ea97-474d-816e-9f1a43dd85ea",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.633433,
+      39.331648
+     ],
+     "type": "Point"
+    },
+    "id": 6638224,
+    "properties": {
+     "address": "1500 Volunteer Drive",
+     "city": "Brunswick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Brunswick Fire Company Station 5",
+     "objectid": 6638224,
+     "permanent_identifier": "0f8dd232-52f4-4f97-9e9f-a90a08d75fd2",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.411395,
+      39.412198
+     ],
+     "type": "Point"
+    },
+    "id": 6682639,
+    "properties": {
+     "address": "79 South Market Street",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "United Steam Fire Company Station 3",
+     "objectid": 6682639,
+     "permanent_identifier": "3c644031-5d6c-41d7-9460-5076b1129fa4",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.659849,
+      39.40827
+     ],
+     "type": "Point"
+    },
+    "id": 6701451,
+    "properties": {
+     "address": "3417 Rohrersville Road",
+     "city": "Rohrersville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Boonsboro Volunteer Fire Company 8 Substation",
+     "objectid": 6701451,
+     "permanent_identifier": "4f6dc26b-f6ca-4efe-894a-f5b9ac1187a1",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.53086,
+      39.361203
+     ],
+     "type": "Point"
+    },
+    "id": 6708856,
+    "properties": {
+     "address": "4603 Lander Road",
+     "city": "Jefferson",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Jefferson Volunteer Fire and Rescue Station 20",
+     "objectid": 6708856,
+     "permanent_identifier": "57338ec0-0925-4da0-8d23-853607353f90",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.412699,
+      39.413225
+     ],
+     "type": "Point"
+    },
+    "id": 6721360,
+    "properties": {
+     "address": "15 South Court Street",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Citizen Truck Company Station 4",
+     "objectid": 6721360,
+     "permanent_identifier": "63c71c75-acc1-4843-a992-a968b0065d98",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.505015,
+      39.418053
+     ],
+     "type": "Point"
+    },
+    "id": 6722015,
+    "properties": {
+     "address": "6715 Jefferson Boulevard",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Braddock Heights Volunteer Fire Company Station 12",
+     "objectid": 6722015,
+     "permanent_identifier": "6451aa42-3c5e-4a1b-bde9-ad60cd3e181f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.697073,
+      39.143829
+     ],
+     "type": "Point"
+    },
+    "id": 6779912,
+    "properties": {
+     "address": "500 North Maple Avenue",
+     "city": "Purcellville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Purcellville Fire Company Station 2",
+     "objectid": 6779912,
+     "permanent_identifier": "9e4ecf7c-d6db-4039-bc93-19d5a0aa91ff",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.420863,
+      39.382933
+     ],
+     "type": "Point"
+    },
+    "id": 6799838,
+    "properties": {
+     "address": "5525 New Design Road",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "United - Westview Fire Station 23",
+     "objectid": 6799838,
+     "permanent_identifier": "b254df6a-e65f-4533-9dba-59b23bef3c4f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.529412,
+      39.284568
+     ],
+     "type": "Point"
+    },
+    "id": 6812693,
+    "properties": {
+     "address": "1809 Ballenger Creek Pike",
+     "city": "Point Of Rocks",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1724869705000,
+     "name": "Carroll Manor Fire Company Station 28",
+     "objectid": 6812693,
+     "permanent_identifier": "bf122d20-1d7f-4bcd-9e9e-f254ed7a2a52",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.644477,
+      39.260919
+     ],
+     "type": "Point"
+    },
+    "id": 6836830,
+    "properties": {
+     "address": "12837 Berlin Turnpike",
+     "city": "Lovettsville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Lovettsville Fire and Rescue Company 12",
+     "objectid": 6836830,
+     "permanent_identifier": "d7f33772-a9df-4f8a-a09e-4786b4ee8204",
+     "state": "VA"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-11T11:48:53Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 11 Nov 2026 11:48:53 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/16/query?where=1%3D1&geometry=-77.726361%2C39.130872%2C-77.352439%2C39.420328&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

@@ -1,0 +1,966 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.365266,
+      39.327343
+     ],
+     "type": "Point"
+    },
+    "id": 6443922,
+    "properties": {
+     "address": "3400 Stone Barn Drive",
+     "city": "Frederick",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1660694400000,
+     "name": "Sugarloaf Elementary School",
+     "objectid": 6443922,
+     "permanent_identifier": "2829526f-da72-4cf5-93ed-afa57f3a8185",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.35807,
+      39.215258
+     ],
+     "type": "Point"
+    },
+    "id": 6522246,
+    "properties": {
+     "address": "21830 Peach Tree Road",
+     "city": "Barnesville",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1543190400000,
+     "name": "Barnesville School of Arts and Sciences",
+     "objectid": 6522246,
+     "permanent_identifier": "872170b2-a4f6-4f33-95c1-065f46335731",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.479287,
+      39.414831
+     ],
+     "type": "Point"
+    },
+    "id": 6628814,
+    "properties": {
+     "address": "6642 Carpenter Road",
+     "city": "Frederick",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Frederick Christian Academy",
+     "objectid": 6628814,
+     "permanent_identifier": "05983527-610f-45c6-941b-06550471387f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.414013,
+      39.419585
+     ],
+     "type": "Point"
+    },
+    "id": 6629157,
+    "properties": {
+     "address": "217 Dill Avenue",
+     "city": "Frederick",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Monocacy Valley Montessori Public Charter School",
+     "objectid": 6629157,
+     "permanent_identifier": "05bd152f-4839-470c-b981-62f2eda11b28",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.534275,
+      39.213475
+     ],
+     "type": "Point"
+    },
+    "id": 6643360,
+    "properties": {
+     "address": "14550 James Monroe Highway",
+     "city": "Leesburg",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1630281600000,
+     "name": "Lucketts Elementary School",
+     "objectid": 6643360,
+     "permanent_identifier": "141db8f9-4eb6-4862-8beb-ce6766c3f699",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.422732,
+      39.393722
+     ],
+     "type": "Point"
+    },
+    "id": 6643450,
+    "properties": {
+     "address": "7100 Foxcroft Drive",
+     "city": "Frederick",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Crestwood Middle School",
+     "objectid": 6643450,
+     "permanent_identifier": "14551cbf-435e-45be-a54b-5395e3e009b0",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.469132,
+      39.313399
+     ],
+     "type": "Point"
+    },
+    "id": 6649684,
+    "properties": {
+     "address": "5624 Adamstown Road",
+     "city": "Adamstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1660694400000,
+     "name": "Carroll Manor Elementary School",
+     "objectid": 6649684,
+     "permanent_identifier": "1adfe4d2-87c3-409a-bb37-788d7416cc2c",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.681837,
+      39.14073
+     ],
+     "type": "Point"
+    },
+    "id": 6650126,
+    "properties": {
+     "address": "38180 West Colonial Highway",
+     "city": "Hamilton",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1694563200000,
+     "name": "Kenneth W Culbert Elementary School",
+     "objectid": 6650126,
+     "permanent_identifier": "1b28709a-6bcf-412d-b2f7-2861f305dac8",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.441044,
+      39.385794
+     ],
+     "type": "Point"
+    },
+    "id": 6652933,
+    "properties": {
+     "address": "5525 Ballenger Creek Pike",
+     "city": "Frederick",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Ballenger Creek Middle School",
+     "objectid": 6652933,
+     "permanent_identifier": "1e1525cf-9292-4dd7-a671-9690ab40f48d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.558745,
+      39.133046
+     ],
+     "type": "Point"
+    },
+    "id": 6664358,
+    "properties": {
+     "address": "801 North King Street",
+     "city": "Leesburg",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1695772800000,
+     "name": "Tuscarora High School",
+     "objectid": 6664358,
+     "permanent_identifier": "29b6a68a-0024-41e8-9cd4-96e0e4038ee1",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.445899,
+      39.377991
+     ],
+     "type": "Point"
+    },
+    "id": 6668570,
+    "properties": {
+     "address": "5312 Ballenger Creek Pike",
+     "city": "Frederick",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Tuscarora High School",
+     "objectid": 6668570,
+     "permanent_identifier": "2e16e12a-3e2a-4407-bdaf-141d7c789cbb",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.606103,
+      39.187625
+     ],
+     "type": "Point"
+    },
+    "id": 6677361,
+    "properties": {
+     "address": "15513 Loyalty Road",
+     "city": "Waterford",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1630281600000,
+     "name": "Waterford Elementary School",
+     "objectid": 6677361,
+     "permanent_identifier": "36cd9042-a189-43d0-bc81-358780312a37",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.561529,
+      39.335109
+     ],
+     "type": "Point"
+    },
+    "id": 6684251,
+    "properties": {
+     "address": "2940 Point of Rocks Road",
+     "city": "Jefferson",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1471005108000,
+     "name": "The Jefferson School",
+     "objectid": 6684251,
+     "permanent_identifier": "3e0aeeb6-ef54-4ffc-acfd-958f1f4042af",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.719796,
+      39.198971
+     ],
+     "type": "Point"
+    },
+    "id": 6685110,
+    "properties": {
+     "address": "37110 Charles Town Pike",
+     "city": "Purcellville",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1630281600000,
+     "name": "Hillsboro Charter Academy",
+     "objectid": 6685110,
+     "permanent_identifier": "3e6cb289-1bb3-439e-a5fb-0025b7e5383d",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.427397,
+      39.341242
+     ],
+     "type": "Point"
+    },
+    "id": 6698693,
+    "properties": {
+     "address": "3989 Buckeystown Pike",
+     "city": "Buckeystown",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1660694400000,
+     "name": "Saint John's Catholic Preparatory School",
+     "objectid": 6698693,
+     "permanent_identifier": "4c4d6bb7-00c8-4d8f-b59e-5c23a0cacec9",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.407441,
+      39.144032
+     ],
+     "type": "Point"
+    },
+    "id": 6706682,
+    "properties": {
+     "address": "19565 Fisher Avenue",
+     "city": "Poolesville",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1540857600000,
+     "name": "Poolesville Elementary School",
+     "objectid": 6706682,
+     "permanent_identifier": "546d440e-68c6-4606-a178-1b8d4283d5ef",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.675171,
+      39.3593
+     ],
+     "type": "Point"
+    },
+    "id": 6714554,
+    "properties": {
+     "address": "1707 Rohrersville Road",
+     "city": "Knoxville",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1444400074000,
+     "name": "Pleasant Valley Elementary School",
+     "objectid": 6714554,
+     "permanent_identifier": "5d314dd0-5456-4ceb-a6a8-95a21131b390",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.640282,
+      39.265592
+     ],
+     "type": "Point"
+    },
+    "id": 6718544,
+    "properties": {
+     "address": "49 South Loudoun Street",
+     "city": "Lovettsville",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1630281600000,
+     "name": "Lovettsville Elementary School",
+     "objectid": 6718544,
+     "permanent_identifier": "613eefdd-fd79-41a5-8c35-09e64ed1fc33",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.683964,
+      39.137263
+     ],
+     "type": "Point"
+    },
+    "id": 6718919,
+    "properties": {
+     "address": "38174 West Colonial Highway",
+     "city": "Hamilton",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1694563200000,
+     "name": "Harmony Middle School",
+     "objectid": 6718919,
+     "permanent_identifier": "6142fd0f-7fe8-470e-bc6e-d2fdbc03d056",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.443748,
+      39.402103
+     ],
+     "type": "Point"
+    },
+    "id": 6723122,
+    "properties": {
+     "address": "6437 Jefferson Pike",
+     "city": "Frederick",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Frederick Adventist Academy",
+     "objectid": 6723122,
+     "permanent_identifier": "6599c414-3347-4402-a8cd-5f60643158b2",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.418465,
+      39.143333
+     ],
+     "type": "Point"
+    },
+    "id": 6729533,
+    "properties": {
+     "address": "17501 West Willard Road",
+     "city": "Poolesville",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1541030400000,
+     "name": "Poolesville High School",
+     "objectid": 6729533,
+     "permanent_identifier": "6c0ffcab-88e7-4e1d-8b81-f75194b4dc27",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.427558,
+      39.416659
+     ],
+     "type": "Point"
+    },
+    "id": 6737453,
+    "properties": {
+     "address": "650 Carroll Parkway",
+     "city": "Frederick",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Frederick High School",
+     "objectid": 6737453,
+     "permanent_identifier": "74063bb7-10b1-4c20-88fb-e35fca2f269b",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.450628,
+      39.410872
+     ],
+     "type": "Point"
+    },
+    "id": 6753087,
+    "properties": {
+     "address": "1285 Hillcrest Drive",
+     "city": "Frederick",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Hillcrest Elementary School",
+     "objectid": 6753087,
+     "permanent_identifier": "839be16a-cc06-4ca8-b895-b0765269b18e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.604039,
+      39.314934
+     ],
+     "type": "Point"
+    },
+    "id": 6761792,
+    "properties": {
+     "address": "301 Cummings Drive",
+     "city": "Brunswick",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1659830400000,
+     "name": "Brunswick Middle School",
+     "objectid": 6761792,
+     "permanent_identifier": "8ce7da5e-27bb-4b9a-8371-a58c44e0d0bc",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.549564,
+      39.131082
+     ],
+     "type": "Point"
+    },
+    "id": 6764564,
+    "properties": {
+     "address": "800 North King Street",
+     "city": "Leesburg",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1783436515000,
+     "name": "Richard and Mildred Loving Elementary School",
+     "objectid": 6764564,
+     "permanent_identifier": "8f6883cd-80e8-4b05-bb09-b5737bf074d0",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.415104,
+      39.407681
+     ],
+     "type": "Point"
+    },
+    "id": 6776613,
+    "properties": {
+     "address": "200 Madison Street",
+     "city": "Frederick",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Lincoln Elementary School",
+     "objectid": 6776613,
+     "permanent_identifier": "9af3a8f3-1f83-4ecf-a90c-b11cb5c80a97",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.410544,
+      39.408701
+     ],
+     "type": "Point"
+    },
+    "id": 6789003,
+    "properties": {
+     "address": "101 Clarke Place",
+     "city": "Frederick",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Maryland School for the Deaf - Frederick Campus",
+     "objectid": 6789003,
+     "permanent_identifier": "a7b5bd59-f40a-4c8d-ad90-93e6e59b9668",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.419806,
+      39.414455
+     ],
+     "type": "Point"
+    },
+    "id": 6795463,
+    "properties": {
+     "address": "300 Carroll Parkway",
+     "city": "Frederick",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Parkway Elementary School",
+     "objectid": 6795463,
+     "permanent_identifier": "adae2995-06c9-492f-8633-59b12d15526d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.39285,
+      39.224282
+     ],
+     "type": "Point"
+    },
+    "id": 6807314,
+    "properties": {
+     "address": "18801 Barnesville Road",
+     "city": "Dickerson",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1540857600000,
+     "name": "Monocacy Elementary School",
+     "objectid": 6807314,
+     "permanent_identifier": "b9d728eb-9978-401f-8198-0b2aedf1dfde",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.356453,
+      39.32682
+     ],
+     "type": "Point"
+    },
+    "id": 6809788,
+    "properties": {
+     "address": "3554 Urbana Pike",
+     "city": "Frederick",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1660953600000,
+     "name": "Urbana Elementary School",
+     "objectid": 6809788,
+     "permanent_identifier": "bc6e7926-8638-4f57-a038-0bb179fac154",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.548185,
+      39.133302
+     ],
+     "type": "Point"
+    },
+    "id": 6812984,
+    "properties": {
+     "address": "850 North King Street",
+     "city": "Leesburg",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1695772800000,
+     "name": "Smart's Mill Middle School",
+     "objectid": 6812984,
+     "permanent_identifier": "bfa4224e-1364-4fbe-8edb-7b159fadc690",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.440673,
+      39.394965
+     ],
+     "type": "Point"
+    },
+    "id": 6818892,
+    "properties": {
+     "address": "5898 Hannover Drive",
+     "city": "Frederick",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Orchard Grove Elementary School",
+     "objectid": 6818892,
+     "permanent_identifier": "c563e28a-d8ef-4ecd-bea5-07e211804663",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.547656,
+      39.359138
+     ],
+     "type": "Point"
+    },
+    "id": 6828030,
+    "properties": {
+     "address": "3519 Jefferson Pike",
+     "city": "Jefferson",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1660694400000,
+     "name": "Valley Elementary School",
+     "objectid": 6828030,
+     "permanent_identifier": "cef18af1-157c-4e72-b3d9-8650672832a5",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.429543,
+      39.358549
+     ],
+     "type": "Point"
+    },
+    "id": 6829875,
+    "properties": {
+     "address": "4540 Mack Avenue",
+     "city": "Frederick",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1602115200000,
+     "name": "Laurel Hall School - Frederick",
+     "objectid": 6829875,
+     "permanent_identifier": "d0711879-1c05-40f6-b1ec-145a3466a3b4",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.460533,
+      39.391976
+     ],
+     "type": "Point"
+    },
+    "id": 6831951,
+    "properties": {
+     "address": "5909 Jefferson Pike",
+     "city": "Frederick",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1471005108000,
+     "name": "New Life Christian School",
+     "objectid": 6831951,
+     "permanent_identifier": "d2eee381-f5b4-4959-9c60-f8ce2d4a860e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.430878,
+      39.378179
+     ],
+     "type": "Point"
+    },
+    "id": 6843510,
+    "properties": {
+     "address": "5250 Kingsbrook Drive",
+     "city": "Frederick",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Ballenger Creek Elementary School",
+     "objectid": 6843510,
+     "permanent_identifier": "de7b2adb-28d2-4078-bf6d-f54ecfaea288",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.443823,
+      39.37017
+     ],
+     "type": "Point"
+    },
+    "id": 6848869,
+    "properties": {
+     "address": "6321 Lambert Drive",
+     "city": "Frederick",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Tuscarora Elementary School",
+     "objectid": 6848869,
+     "permanent_identifier": "e447c079-63ff-443e-b414-a6e73d6458cc",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.662583,
+      39.132221
+     ],
+     "type": "Point"
+    },
+    "id": 6854592,
+    "properties": {
+     "address": "54 South Kerr Street",
+     "city": "Hamilton",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1698105600000,
+     "name": "Hamilton Elementary School",
+     "objectid": 6854592,
+     "permanent_identifier": "ea39c7ff-47ed-42d0-84e0-c921b9327a7a",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.702364,
+      39.140261
+     ],
+     "type": "Point"
+    },
+    "id": 6856733,
+    "properties": {
+     "address": "340 North Maple Avenue",
+     "city": "Purcellville",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1694563200000,
+     "name": "Loudoun Valley High School",
+     "objectid": 6856733,
+     "permanent_identifier": "ec25fb1c-a6c5-45cc-abaf-540d7cfa3c8a",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.633147,
+      39.318463
+     ],
+     "type": "Point"
+    },
+    "id": 6862979,
+    "properties": {
+     "address": "400 Central Avenue",
+     "city": "Brunswick",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1444400074000,
+     "name": "Brunswick Elementary School",
+     "objectid": 6862979,
+     "permanent_identifier": "f24d3268-55cf-498c-9a5e-8eaede7580d2",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.414763,
+      39.378222
+     ],
+     "type": "Point"
+    },
+    "id": 6864882,
+    "properties": {
+     "address": "7215 Corporate Court",
+     "city": "Frederick",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "Carroll Creek Montessori Public Charter School",
+     "objectid": 6864882,
+     "permanent_identifier": "f485b8e6-e532-49a3-a60c-e17e20fc9c40",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.608344,
+      39.316569
+     ],
+     "type": "Point"
+    },
+    "id": 6866890,
+    "properties": {
+     "address": "101 Cummings Drive",
+     "city": "Brunswick",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1659830400000,
+     "name": "Brunswick High School",
+     "objectid": 6866890,
+     "permanent_identifier": "f6232b77-4cb1-428c-b47e-5fea59b3facd",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.427429,
+      39.415043
+     ],
+     "type": "Point"
+    },
+    "id": 6876052,
+    "properties": {
+     "address": "515 West Patrick Street",
+     "city": "Frederick",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1658707200000,
+     "name": "West Frederick Middle School",
+     "objectid": 6876052,
+     "permanent_identifier": "ffc6b37b-e933-458c-8ec0-a3f83ea5e214",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-11T11:49:09Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 11 Nov 2026 11:49:09 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/23/query?where=1%3D1&geometry=-77.726361%2C39.130872%2C-77.352439%2C39.420328&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

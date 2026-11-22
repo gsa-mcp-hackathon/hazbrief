@@ -1,0 +1,56 @@
+{
+ "api": "census_geocoder",
+ "body": {
+  "result": {
+   "addressMatches": [
+    {
+     "addressComponents": {
+      "city": "ALEXANDRIA",
+      "fromAddress": "100",
+      "preDirection": "",
+      "preQualifier": "",
+      "preType": "",
+      "state": "VA",
+      "streetName": "JONES POINT",
+      "suffixDirection": "",
+      "suffixQualifier": "",
+      "suffixType": "DR",
+      "toAddress": "198",
+      "zip": "22314"
+     },
+     "coordinates": {
+      "x": -77.045733582186,
+      "y": 38.79437690929
+     },
+     "matchedAddress": "198 JONES POINT DR, ALEXANDRIA, VA, 22314",
+     "tigerLine": {
+      "side": "R",
+      "tigerLineId": "657432002"
+     }
+    }
+   ],
+   "input": {
+    "address": {
+     "address": "198 JONES POINT DR, ALEXANDRIA, VA, 22314"
+    },
+    "benchmark": {
+     "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+     "benchmarkName": "Public_AR_Current",
+     "id": "4",
+     "isDefault": true
+    }
+   }
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-27T05:02:12Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "private, no-store",
+  "Date": "Tue, 27 Oct 2026 05:02:12 GMT"
+ },
+ "status": 200,
+ "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=198+JONES+POINT+DR%2C+ALEXANDRIA%2C+VA%2C+22314&benchmark=Public_AR_Current&format=json"
+}

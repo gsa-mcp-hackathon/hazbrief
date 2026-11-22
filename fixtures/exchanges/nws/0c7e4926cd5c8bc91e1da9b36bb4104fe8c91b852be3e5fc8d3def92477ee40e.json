@@ -1,0 +1,165 @@
+{
+ "api": "nws",
+ "body": {
+  "@context": [
+   "https://geojson.org/geojson-ld/geojson-context.jsonld",
+   {
+    "@version": "1.1",
+    "@vocab": "https://api.weather.gov/ontology#",
+    "bearing": {
+     "@type": "s:QuantitativeValue"
+    },
+    "city": "s:addressLocality",
+    "county": {
+     "@type": "@id"
+    },
+    "distance": {
+     "@id": "s:Distance",
+     "@type": "s:QuantitativeValue"
+    },
+    "forecastGridData": {
+     "@type": "@id"
+    },
+    "forecastOffice": {
+     "@type": "@id"
+    },
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "geometry": {
+     "@id": "s:GeoCoordinates",
+     "@type": "geo:wktLiteral"
+    },
+    "publicZone": {
+     "@type": "@id"
+    },
+    "s": "https://schema.org/",
+    "state": "s:addressRegion",
+    "unit": "http://codes.wmo.int/common/unit/",
+    "unitCode": {
+     "@id": "s:unitCode",
+     "@type": "@id"
+    },
+    "value": {
+     "@id": "s:value"
+    },
+    "wx": "https://api.weather.gov/ontology#"
+   }
+  ],
+  "geometry": {
+   "coordinates": [
+    -77.73,
+    39.7
+   ],
+   "type": "Point"
+  },
+  "id": "https://api.weather.gov/stations/KHGR/observations/2026-10-28T03:55:00+00:00",
+  "properties": {
+   "@id": "https://api.weather.gov/stations/KHGR/observations/2026-10-28T03:55:00+00:00",
+   "@type": "wx:ObservationStation",
+   "barometricPressure": {
+    "qualityControl": "V",
+    "unitCode": "wmoUnit:Pa",
+    "value": 102844.62
+   },
+   "cloudLayers": [
+    {
+     "amount": "CLR",
+     "base": {
+      "unitCode": "wmoUnit:m",
+      "value": 3810
+     }
+    }
+   ],
+   "dewpoint": {
+    "qualityControl": "V",
+    "unitCode": "wmoUnit:degC",
+    "value": 8
+   },
+   "elevation": {
+    "unitCode": "wmoUnit:m",
+    "value": 215
+   },
+   "heatIndex": {
+    "qualityControl": "V",
+    "unitCode": "wmoUnit:degC",
+    "value": null
+   },
+   "icon": "https://api.weather.gov/icons/land/night/skc?size=medium",
+   "maxTemperatureLast24Hours": {
+    "unitCode": "wmoUnit:degC",
+    "value": null
+   },
+   "minTemperatureLast24Hours": {
+    "unitCode": "wmoUnit:degC",
+    "value": null
+   },
+   "precipitationLast3Hours": {
+    "qualityControl": "Z",
+    "unitCode": "wmoUnit:mm",
+    "value": null
+   },
+   "presentWeather": [],
+   "rawMessage": "",
+   "relativeHumidity": {
+    "qualityControl": "V",
+    "unitCode": "wmoUnit:percent",
+    "value": 81.750052187031
+   },
+   "seaLevelPressure": {
+    "qualityControl": "Z",
+    "unitCode": "wmoUnit:Pa",
+    "value": null
+   },
+   "station": "https://api.weather.gov/stations/KHGR",
+   "stationId": "KHGR",
+   "stationName": "Hagerstown, Washington County Regional Airport",
+   "temperature": {
+    "qualityControl": "V",
+    "unitCode": "wmoUnit:degC",
+    "value": 11
+   },
+   "textDescription": "Clear",
+   "timestamp": "2026-10-28T03:55:00+00:00",
+   "visibility": {
+    "qualityControl": "C",
+    "unitCode": "wmoUnit:m",
+    "value": 12874.75
+   },
+   "windChill": {
+    "qualityControl": "V",
+    "unitCode": "wmoUnit:degC",
+    "value": null
+   },
+   "windDirection": {
+    "qualityControl": "V",
+    "unitCode": "wmoUnit:degree_(angle)",
+    "value": 320
+   },
+   "windGust": {
+    "qualityControl": "Z",
+    "unitCode": "wmoUnit:km_h-1",
+    "value": null
+   },
+   "windSpeed": {
+    "qualityControl": "V",
+    "unitCode": "wmoUnit:km_h-1",
+    "value": 5.544
+   }
+  },
+  "type": "Feature"
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-28T04:15:00Z",
+ "request_headers": {
+  "Accept": "application/geo+json",
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "public, max-age=300, s-maxage=300",
+  "Date": "Wed, 28 Oct 2026 04:15:00 GMT",
+  "ETag": "W/\"1793159700:dtagent10337260504112723F6xZ:dtagent10337260504112723F6xZ\"",
+  "Expires": "Wed, 28 Oct 2026 04:20:00 GMT",
+  "Last-Modified": "Wed, 28 Oct 2026 03:54:58 GMT"
+ },
+ "status": 200,
+ "url": "https://api.weather.gov/stations/KHGR/observations/latest"
+}

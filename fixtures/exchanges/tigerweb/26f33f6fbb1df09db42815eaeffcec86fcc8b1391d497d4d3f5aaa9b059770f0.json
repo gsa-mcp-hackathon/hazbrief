@@ -1,0 +1,56 @@
+{
+ "api": "tigerweb",
+ "body": {
+  "displayFieldName": "BASENAME",
+  "features": [],
+  "fieldAliases": {
+   "BASENAME": "BASENAME",
+   "MTFCC": "MTFCC",
+   "NAME": "NAME",
+   "OID": "OID"
+  },
+  "fields": [
+   {
+    "alias": "OID",
+    "length": 22,
+    "name": "OID",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "NAME",
+    "length": 100,
+    "name": "NAME",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "BASENAME",
+    "length": 100,
+    "name": "BASENAME",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "MTFCC",
+    "length": 5,
+    "name": "MTFCC",
+    "type": "esriFieldTypeString"
+   }
+  ],
+  "geometryType": "esriGeometryPolyline",
+  "spatialReference": {
+   "latestWkid": 4326,
+   "wkid": 4326
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-27T05:02:13Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Tue, 27 Oct 2026 05:02:13 GMT",
+  "ETag": "\"1784752031\""
+ },
+ "status": 200,
+ "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/2/query?where=UPPER%28NAME%29+IN+%28%27JEFFERSON+ST%27%2C%27S+LEE+ST%27%29&outFields=OID%2CNAME%2CBASENAME%2CMTFCC&returnGeometry=true&outSR=4326&f=json&geometry=-77.1443590004178%2C38.785215999746356%2C-77.03728800040635%2C38.84492299988886&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects"
+}

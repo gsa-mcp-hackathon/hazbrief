@@ -1,0 +1,56 @@
+{
+ "api": "census_geocoder",
+ "body": {
+  "result": {
+   "addressMatches": [
+    {
+     "addressComponents": {
+      "city": "SCRANTON",
+      "fromAddress": "201",
+      "preDirection": "",
+      "preQualifier": "",
+      "preType": "",
+      "state": "PA",
+      "streetName": "PENN",
+      "suffixDirection": "",
+      "suffixQualifier": "",
+      "suffixType": "AVE",
+      "toAddress": "299",
+      "zip": "18503"
+     },
+     "coordinates": {
+      "x": -75.666311322274,
+      "y": 41.409665768607
+     },
+     "matchedAddress": "201 PENN AVE, SCRANTON, PA, 18503",
+     "tigerLine": {
+      "side": "L",
+      "tigerLineId": "139326992"
+     }
+    }
+   ],
+   "input": {
+    "address": {
+     "address": "201 PENN AVE, SCRANTON, PA, 18503"
+    },
+    "benchmark": {
+     "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+     "benchmarkName": "Public_AR_Current",
+     "id": "4",
+     "isDefault": true
+    }
+   }
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-28T04:32:21Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "private, no-store",
+  "Date": "Wed, 28 Oct 2026 04:32:21 GMT"
+ },
+ "status": 200,
+ "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=201+PENN+AVE%2C+SCRANTON%2C+PA%2C+18503&benchmark=Public_AR_Current&format=json"
+}

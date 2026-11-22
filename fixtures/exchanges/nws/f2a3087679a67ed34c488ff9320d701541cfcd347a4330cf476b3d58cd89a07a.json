@@ -1,0 +1,24 @@
+{
+ "api": "nws",
+ "body": {
+  "correlationId": "33e92c1",
+  "detail": "Requested gridpoint CTP:118,12 does not exist",
+  "instance": "https://api.weather.gov/requests/33e92c1",
+  "status": 404,
+  "title": "Gridpoint Does Not Exist",
+  "type": "https://api.weather.gov/problems/InvalidGridpoint"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-07T12:52:16Z",
+ "request_headers": {
+  "Accept": "application/geo+json",
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "private, no-cache",
+  "Date": "Sat, 07 Nov 2026 12:52:16 GMT",
+  "Expires": "Sat, 07 Nov 2026 12:52:16 GMT"
+ },
+ "status": 404,
+ "url": "https://api.weather.gov/gridpoints/CTP/118,12"
+}

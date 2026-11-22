@@ -1,0 +1,19 @@
+{
+ "commit": "cb445172bf63fa29527ee7cc6b528f0e4abd30eb",
+ "counts": {
+  "cells compared": 121,
+  "differences": 0,
+  "expected.json entries compared": 26,
+  "frozen files compared": 12,
+  "scenarios": 18,
+  "tools": 7
+ },
+ "failures": [],
+ "failures_by_check": {},
+ "generated_at": "2026-10-25T05:26:37Z",
+ "info": [],
+ "info_by_check": {},
+ "line": "18 scenarios, 7 tools: 121 scenario-tool outputs, 26 expected.json entries and 12 frozen files compared; 0 differences",
+ "part": "regression",
+ "surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350"
+}

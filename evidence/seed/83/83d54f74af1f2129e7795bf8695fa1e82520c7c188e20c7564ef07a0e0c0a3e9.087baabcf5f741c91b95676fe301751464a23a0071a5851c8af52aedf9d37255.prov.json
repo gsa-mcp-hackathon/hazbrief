@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T04:15:00Z",
+  "http_mode": "record",
+  "id": "087baabcf5f741c91b95676fe301751464a23a0071a5851c8af52aedf9d37255",
+  "name": "GET nws",
+  "params": {
+   "method": "GET",
+   "url": "https://api.weather.gov/stations/KHGR/observations/latest"
+  },
+  "startedAtTime": "2026-10-28T04:15:00Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/stations/KHGR/observations/latest",
+    "id": "nws:observations"
+   }
+  ]
+ },
+ "as_of": "2026-10-28T03:54:58Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 2511,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "83d54f74af1f2129e7795bf8695fa1e82520c7c188e20c7564ef07a0e0c0a3e9"
+ },
+ "horizon_s": 3600,
+ "horizon_source": "nws:observations",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

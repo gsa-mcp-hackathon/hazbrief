@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-21T03:27:51Z",
+  "http_mode": "record",
+  "id": "2218f2defb9b7d8f82eed4bbb4a0cb9c0e816c3c8fe9acc679259b2ee7f816de",
+  "name": "GET nws",
+  "params": {
+   "method": "GET",
+   "url": "https://api.weather.gov/points/38.7934,-77.037"
+  },
+  "startedAtTime": "2026-10-21T03:27:51Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/points/38.7934,-77.037",
+    "id": "nws:points"
+   }
+  ]
+ },
+ "as_of": "2026-10-21T03:27:51Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 2285,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "06b2b79bc34ebba384789a21e7fbbc0bb6045598b4c654a4469dabf764bd9824"
+ },
+ "horizon_s": 86400,
+ "horizon_source": "nws:points",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

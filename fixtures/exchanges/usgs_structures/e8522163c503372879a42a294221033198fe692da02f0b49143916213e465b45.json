@@ -1,0 +1,548 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.659481,
+      39.93521
+     ],
+     "type": "Point"
+    },
+    "id": 6417997,
+    "properties": {
+     "address": "116 South 2nd Street",
+     "city": "Chambersburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1578096000000,
+     "name": "Chambersburg Police Department",
+     "objectid": 6417997,
+     "permanent_identifier": "098fd871-9778-4c0f-acfe-94d52b4ca526",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.998241,
+      39.934293
+     ],
+     "type": "Point"
+    },
+    "id": 6459430,
+    "properties": {
+     "address": "207 North 2nd Street",
+     "city": "Mcconnellsburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1460713756000,
+     "name": "Fulton County Sheriff's Office",
+     "objectid": 6459430,
+     "permanent_identifier": "3b74cd64-7033-4ef0-a284-eda1c1f2a7df",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.573276,
+      39.652773
+     ],
+     "type": "Point"
+    },
+    "id": 6464698,
+    "properties": {
+     "address": "63 Railroad Lane",
+     "city": "Smithsburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1629417600000,
+     "name": "Smithsburg Police Department",
+     "objectid": 6464698,
+     "permanent_identifier": "41ae0d30-2d4b-496b-850c-b570dcf59f11",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.726226,
+      39.645754
+     ],
+     "type": "Point"
+    },
+    "id": 6474467,
+    "properties": {
+     "address": "50 North Burhans Boulevard",
+     "city": "Hagerstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1465210783000,
+     "name": "Hagerstown Police Department",
+     "objectid": 6474467,
+     "permanent_identifier": "4d24fafe-a590-47a9-adc8-044158846158",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.556666,
+      39.743338
+     ],
+     "type": "Point"
+    },
+    "id": 6495612,
+    "properties": {
+     "address": "13013 Welty Road",
+     "city": "Waynesboro",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1463570413000,
+     "name": "Washington Township Police Department",
+     "objectid": 6495612,
+     "permanent_identifier": "66be127a-ed01-4e23-92a4-d3764f8f1b71",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.660472,
+      39.937561
+     ],
+     "type": "Point"
+    },
+    "id": 6501341,
+    "properties": {
+     "address": "157 Lincoln Way East",
+     "city": "Chambersburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1516320000000,
+     "name": "Franklin County Sheriff's Office",
+     "objectid": 6501341,
+     "permanent_identifier": "6ddf974b-584a-435f-aa78-47a521aeda19",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.725578,
+      39.791098
+     ],
+     "type": "Point"
+    },
+    "id": 6517034,
+    "properties": {
+     "address": "60 North Washington Street",
+     "city": "Greencastle",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1578096000000,
+     "name": "Greencastle Police Department",
+     "objectid": 6517034,
+     "permanent_identifier": "80c03c51-55a6-481f-9bf3-9f6bc3fee2e4",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.761825,
+      39.639512
+     ],
+     "type": "Point"
+    },
+    "id": 6519219,
+    "properties": {
+     "address": "500 Western Maryland Parkway",
+     "city": "Hagerstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1465210783000,
+     "name": "Washington County Sheriff's Office",
+     "objectid": 6519219,
+     "permanent_identifier": "830f28bd-89cb-4612-8335-b2eb49951037",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.903529,
+      39.826408
+     ],
+     "type": "Point"
+    },
+    "id": 6520767,
+    "properties": {
+     "address": "113 South Main Street",
+     "city": "Mercersburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1578096000000,
+     "name": "Mercersburg Police Department",
+     "objectid": 6520767,
+     "permanent_identifier": "84dea247-06d3-4ef3-97ab-139fcb6fa111",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.821646,
+      39.599351
+     ],
+     "type": "Point"
+    },
+    "id": 6526304,
+    "properties": {
+     "address": "2 North Conococheague Street",
+     "city": "Williamsport",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1555977600000,
+     "name": "Washington County Sheriff's Office",
+     "objectid": 6526304,
+     "permanent_identifier": "8b52cfa1-d9ba-4700-a867-b8ca4fdeff2f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.398641,
+      39.617478
+     ],
+     "type": "Point"
+    },
+    "id": 6593873,
+    "properties": {
+     "address": "800 East Main Street",
+     "city": "Thurmont",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1554940800000,
+     "name": "Thurmont Police Department",
+     "objectid": 6593873,
+     "permanent_identifier": "dc2cfc73-725d-4dac-ae47-8422c499e142",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.576002,
+      39.755044
+     ],
+     "type": "Point"
+    },
+    "id": 6613243,
+    "properties": {
+     "address": "57 East Main Street",
+     "city": "Waynesboro",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1578096000000,
+     "name": "Waynesboro Police Department",
+     "objectid": 6613243,
+     "permanent_identifier": "f35c2079-d92f-4dd1-829a-e8d4b267d928",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.601514,
+      39.516899
+     ],
+     "type": "Point"
+    },
+    "id": 6637205,
+    "properties": {
+     "address": "2011 Monument Road",
+     "city": "Myersville",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1769291263000,
+     "name": "Maryland Natural Resource Police Department Western Region Echo Lake Office Area 7",
+     "objectid": 6637205,
+     "permanent_identifier": "0e411191-acc4-483b-89fa-d0315155e9f8",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.968782,
+      39.452847
+     ],
+     "type": "Point"
+    },
+    "id": 6646774,
+    "properties": {
+     "address": "510 South Raleigh Street",
+     "city": "Martinsburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1459168747000,
+     "name": "Berkeley County Sheriff's Office",
+     "objectid": 6646774,
+     "permanent_identifier": "178683e6-1850-4b2c-860c-c5e263f51dab",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.624956,
+      39.93542
+     ],
+     "type": "Point"
+    },
+    "id": 6662362,
+    "properties": {
+     "address": "3800 Black Gap Road",
+     "city": "Chambersburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1751085210000,
+     "name": "Pennsylvania State Police Troop H Chambersburg Station",
+     "objectid": 6662362,
+     "permanent_identifier": "277095d2-04f0-4035-b41b-b8e2b06b51fc",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.996056,
+      39.922071
+     ],
+     "type": "Point"
+    },
+    "id": 6679136,
+    "properties": {
+     "address": "500 Fulton Drive",
+     "city": "Mcconnellsburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1727999870000,
+     "name": "Pennsylvania State Police Troop G McConnellsburg Station",
+     "objectid": 6679136,
+     "permanent_identifier": "387b543a-bb2f-4365-a34f-86dc61aea519",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.381593,
+      39.760927
+     ],
+     "type": "Point"
+    },
+    "id": 6701950,
+    "properties": {
+     "address": "5685 Fairfield Road",
+     "city": "Carroll Valley",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1568160000000,
+     "name": "Carroll Valley Police Department",
+     "objectid": 6701950,
+     "permanent_identifier": "4f9f967b-e789-4fb8-8e42-c86a3320208f",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.659326,
+      39.504435
+     ],
+     "type": "Point"
+    },
+    "id": 6743617,
+    "properties": {
+     "address": "241 Potomac Street",
+     "city": "Boonsboro",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1465210783000,
+     "name": "Boonsboro Police Department",
+     "objectid": 6743617,
+     "permanent_identifier": "7a40e932-89dc-4d59-9c95-6e72e453264f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.721346,
+      39.642674
+     ],
+     "type": "Point"
+    },
+    "id": 6745807,
+    "properties": {
+     "address": "32 W Washington Street",
+     "city": "Hagerstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1570752000000,
+     "name": "Hagerstown City Police - University Systems of Maryland Substation",
+     "objectid": 6745807,
+     "permanent_identifier": "7ce38a07-0fd4-4429-b391-268814eef66a",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.733099,
+      39.604566
+     ],
+     "type": "Point"
+    },
+    "id": 6748537,
+    "properties": {
+     "address": "18345 Colonel Henry K Douglas Drive",
+     "city": "Hagerstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1582675200000,
+     "name": "Maryland State Police Department Barracks Hagerstown",
+     "objectid": 6748537,
+     "permanent_identifier": "7f4300ea-0385-4a6e-8bff-bf5e5cca08f7",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.667448,
+      39.630203
+     ],
+     "type": "Point"
+    },
+    "id": 6778165,
+    "properties": {
+     "address": "11400 Robinwood Drive",
+     "city": "Hagerstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1580083200000,
+     "name": "Hagerstown Community College Campus Police Department",
+     "objectid": 6778165,
+     "permanent_identifier": "9c6a3422-f8ca-45d7-ae79-2f3ab66f0463",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.963218,
+      39.459567
+     ],
+     "type": "Point"
+    },
+    "id": 6782288,
+    "properties": {
+     "address": "232 North Queen Street",
+     "city": "Martinsburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1459168747000,
+     "name": "Martinsburg Police Department",
+     "objectid": 6782288,
+     "permanent_identifier": "a09f4771-1a34-47c6-b2b5-c3a7df18e051",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.359626,
+      39.733647
+     ],
+     "type": "Point"
+    },
+    "id": 6817990,
+    "properties": {
+     "address": "39 Topper Road",
+     "city": "Fairfield",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1568246400000,
+     "name": "Liberty Township Police Department",
+     "objectid": 6817990,
+     "permanent_identifier": "c46186b6-7615-45d1-b943-49c535cb84c7",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.958884,
+      39.489627
+     ],
+     "type": "Point"
+    },
+    "id": 6848297,
+    "properties": {
+     "address": "14 Trooper Drive",
+     "city": "Martinsburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1459168747000,
+     "name": "West Virginia State Police Troop 2 - Martinsburg Detachment",
+     "objectid": 6848297,
+     "permanent_identifier": "e3519452-f860-4dac-affa-27632ce9fe59",
+     "state": "WV"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-13T08:17:14Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Fri, 13 Nov 2026 08:17:14 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/18/query?where=1%3D1&geometry=-78.100340%2C39.432536%2C-77.347660%2C40.011464&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

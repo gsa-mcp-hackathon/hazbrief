@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-21T23:28:56Z",
+  "http_mode": "record",
+  "id": "b387c2e39f7e17a262fbf76bf8123a9a2c86d1c337452b76123ce011cb326b6a",
+  "name": "GET tigerweb",
+  "params": {
+   "method": "GET",
+   "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/82/query?geometry=-77.5394%2C39.2756&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=GEOID%2CSTATE%2CCOUNTY%2CNAME%2CBASENAME&returnGeometry=true&outSR=4326&maxAllowableOffset=0.0005&geometryPrecision=6&f=geojson"
+  },
+  "startedAtTime": "2026-10-21T23:28:56Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/82/query?geometry=-77.5394%2C39.2756&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=GEOID%2CSTATE%2CCOUNTY%2CNAME%2CBASENAME&returnGeometry=true&outSR=4326&maxAllowableOffset=0.0005&geometryPrecision=6&f=geojson",
+    "id": "tigerweb:current"
+   }
+  ]
+ },
+ "as_of": "2026-10-21T23:28:56Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 7544,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "bc7a972539c125acc9d572f22defc343652f93f4a64b8a45acee7b7c1f131465"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "tigerweb:current",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

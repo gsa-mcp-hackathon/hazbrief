@@ -54,10 +54,6 @@ htmlcov/
 # ─── hazbrief-mcp ─────────────────────────────────────────────────────────────
 # cc_tasks and a session handoff (held privately) are TRACKED (~/GitHub/CLAUDE.md section 6.1, which withdrew the
 # BOOTSTRAP-era rule that ignored a session handoff (held privately)). Only data blobs in them are ignored, by size.
-*.json
-*.jsonl
-a session handoff (held privately)
-a session handoff (held privately)
 # Run logs are local.
 logs/
 # HB-137 (Issue 594f0f14): an operator tool's runtime state (the display review's pid, log, served record and

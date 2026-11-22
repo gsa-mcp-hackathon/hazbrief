@@ -1,0 +1,184 @@
+{
+ "api": "census",
+ "body": [
+  [
+   "NAICS2017",
+   "NAICS2017_LABEL",
+   "ESTAB",
+   "INDLEVEL",
+   "state",
+   "county"
+  ],
+  [
+   "00",
+   "Total for all sectors",
+   "3417",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "11",
+   "Agriculture, forestry, fishing and hunting",
+   "4",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "22",
+   "Utilities",
+   "5",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "23",
+   "Construction",
+   "332",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "31-33",
+   "Manufacturing",
+   "136",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "42",
+   "Wholesale trade",
+   "152",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "44-45",
+   "Retail trade",
+   "548",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "48-49",
+   "Transportation and warehousing",
+   "171",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "51",
+   "Information",
+   "49",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "52",
+   "Finance and insurance",
+   "165",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "53",
+   "Real estate and rental and leasing",
+   "145",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "54",
+   "Professional, scientific, and technical services",
+   "232",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "55",
+   "Management of companies and enterprises",
+   "15",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "56",
+   "Administrative and support and waste management and remediation services",
+   "175",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "61",
+   "Educational services",
+   "31",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "62",
+   "Health care and social assistance",
+   "439",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "71",
+   "Arts, entertainment, and recreation",
+   "55",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "72",
+   "Accommodation and food services",
+   "336",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "81",
+   "Other services (except public administration)",
+   "420",
+   "2",
+   "24",
+   "043"
+  ],
+  [
+   "99",
+   "Industries not classified",
+   "5",
+   "2",
+   "24",
+   "043"
+  ]
+ ],
+ "method": "GET",
+ "recorded_at": "2026-10-27T16:32:05Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=60, must-revalidate",
+  "Date": "Tue, 27 Oct 2026 16:32:04 GMT"
+ },
+ "status": 200,
+ "url": "https://api.census.gov/data/2023/cbp?get=NAICS2017%2CNAICS2017_LABEL%2CESTAB&for=county%3A043&in=state%3A24&INDLEVEL=2"
+}

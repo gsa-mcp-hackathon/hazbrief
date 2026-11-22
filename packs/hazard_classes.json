@@ -1,0 +1,109 @@
+{
+ "attribution": {
+  "credits": [
+   {
+    "doc_id": "cfr49-govinfo-bulk",
+    "edition": "CFR 2025 annual edition, title 49 volume 2 (parts 100 to 177); AMDDATE June 23, 2025",
+    "publisher": "US GPO GovInfo",
+    "title": "Code of Federal Regulations, Title 49, annual edition (GovInfo bulk XML)",
+    "url": "https://www.govinfo.gov/bulkdata/CFR/2025/title-49/CFR-2025-title49-vol2.xml"
+   },
+   {
+    "doc_id": "erg2024-en-pdf",
+    "edition": "2024",
+    "publisher": "US DOT PHMSA",
+    "title": "Emergency Response Guidebook 2024 (English, web PDF)",
+    "url": "https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2024-04/ERG2024-Eng-Web-a.pdf"
+   }
+  ],
+  "notices": [
+   {
+    "doc_id": "cfr49-govinfo-bulk",
+    "locator": "cfr49-govinfo-bulk#OENOTICE",
+    "text": "It is prohibited to use NARA's official seal and the stylized Code of Federal Regulations logo on any republication of this material without the express, written permission of the Archivist of the United States or the Archivist's designee. Any person using NARA's official seals and logos in a manner inconsistent with the provisions of 36 CFR part 1200 is subject to the penalties specified in 18 U.S.C. 506, 701, and 1017."
+   },
+   {
+    "doc_id": "erg2024-en-pdf",
+    "locator": "erg2024-en-pdf#p382",
+    "text": "REPRODUCTION AND RESALE Copies of this document which are provided free-of-charge to fire, police and other emergency services may not be resold. ERG2024 may be reproduced without further permission subject to the following: The names and the seals of the participating governments may not be reproduced on a copy of this document unless that copy accurately reproduces the entire content (text, format, and coloration) of this document without modification. In addition, the publisher's full name and address must be displayed on the outside back cover of each copy, replacing the wording placed on the center of the back cover."
+   }
+  ]
+ },
+ "built_at": "2026-10-20T14:16:26Z",
+ "data": {
+  "classes": [
+   {
+    "basis": "DN-001 section 3",
+    "class_id": "tih_gas",
+    "criteria": {
+     "erg_tih": true
+    },
+    "members": [
+     "1005",
+     "1017"
+    ],
+    "rule_set_id": "rules.tih_gas",
+    "title": "toxic inhalation hazard gases"
+   },
+   {
+    "basis": "DN-001 section 3",
+    "class_id": "flammable_liquefied_gas",
+    "criteria": {
+     "cfr_hazard_class": "2.1"
+    },
+    "members": [
+     "1075",
+     "1978"
+    ],
+    "rule_set_id": "rules.flammable_liquefied_gas",
+    "title": "flammable liquefied gases"
+   },
+   {
+    "basis": "DN-001 section 3",
+    "class_id": "flammable_liquid",
+    "criteria": {
+     "cfr_hazard_class": "3"
+    },
+    "members": [
+     "1202",
+     "1203"
+    ],
+    "rule_set_id": "rules.flammable_liquid",
+    "title": "flammable liquids"
+   },
+   {
+    "basis": "DN-001 section 3",
+    "class_id": "cryogenic_asphyxiant",
+    "criteria": {
+     "cfr_hazard_class": "2.2",
+     "erg_name_contains": "cryogenic liquid"
+    },
+    "members": [
+     "1951",
+     "1977"
+    ],
+    "rule_set_id": "rules.cryogenic_asphyxiant",
+    "title": "cryogenic asphyxiants"
+   }
+  ]
+ },
+ "kind": "hazard_classes",
+ "pack_id": "hazard_classes",
+ "schema_version": 8,
+ "sha256": "0d9bd115c32e6448db6a03e1e72c9e032231112a165910278a85858f6bbe40d5",
+ "sources": [
+  {
+   "doc_id": "cfr49-govinfo-bulk",
+   "licence": "public-domain",
+   "locator": "via the cfr172 pack: hazard class",
+   "raw_sha256": "82d0fea4df4b1d91dfd704b663524aec4daf9c6e69640157e292ce2914204462"
+  },
+  {
+   "doc_id": "erg2024-en-pdf",
+   "licence": "reproduction-permitted",
+   "locator": "via the erg pack: Table 1 membership, names",
+   "raw_sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+  }
+ ],
+ "version": "dn001.1"
+}

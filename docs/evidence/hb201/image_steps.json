@@ -1,0 +1,293 @@
+{
+  "build": {
+    "cached_steps": 12,
+    "clean_copy": "/var/folders/s1/yqb3d76d7053f7dyy9fwtkzw0000gp/T/hb201_clean_3g9monqj/clone",
+    "command": "docker build -t hazbrief-mcp .",
+    "created": "2026-11-18T11:57:47.928976929Z",
+    "exit": 0,
+    "head": "79d46c1e3d2576cc8bb5e9269d618b4e66e29733",
+    "id": "sha256:24d378b4ca2cbfd3682e94b1d67933c7f349af5fd24cbd9f74641f027f16bcef",
+    "seconds": 3.1,
+    "size_bytes": 512153342,
+    "tail": "\n#19 [stage-1  4/12] COPY pyproject.toml uv.lock README.md LICENSE LICENSE-TEMPLATE ./\n#19 CACHED\n\n#20 [stage-1 12/12] RUN useradd --uid 10001 --no-create-home --shell /usr/sbin/nologin hazbrief\n#20 CACHED\n\n#21 exporting to image\n#21 exporting layers done\n#21 writing image sha256:24d378b4ca2cbfd3682e94b1d67933c7f349af5fd24cbd9f74641f027f16bcef done\n#21 naming to docker.io/library/hazbrief-mcp done\n#21 DONE 0.0s\n\nView build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/umick6ztyw1us3kscu1x0wovh",
+    "uv_lines": []
+  },
+  "build_no_cache": {
+    "cached_steps": 3,
+    "command": "docker build --no-cache -t hazbrief-mcp .",
+    "created": "2026-11-18T11:59:40.324664342Z",
+    "exit": 0,
+    "id": "sha256:d3ea63c83cfdc6955861e0317c8e2e1e552648561c786e9a3f10360aaeefdda8",
+    "seconds": 13.8,
+    "size_bytes": 512153341,
+    "tail": "#19 2.284  + hazbrief==0.1.0 (from file:///app)\n#19 DONE 2.4s\n\n#20 [stage-1 12/12] RUN useradd --uid 10001 --no-create-home --shell /usr/sbin/nologin hazbrief\n#20 DONE 0.2s\n\n#21 exporting to image\n#21 exporting layers\n#21 exporting layers 1.8s done\n#21 writing image sha256:d3ea63c83cfdc6955861e0317c8e2e1e552648561c786e9a3f10360aaeefdda8 done\n#21 naming to docker.io/library/hazbrief-mcp done\n#21 DONE 1.8s\n\nView build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/41qax42mflmrg1ra2kx97uswo",
+    "uv_lines": [
+      "#13 0.689 Resolved 102 packages in 4ms",
+      "#13 1.005 Downloading numpy (15.2MiB)",
+      "#13 1.006 Downloading shapely (2.1MiB)",
+      "#13 1.011 Downloading pygments (1.2MiB)",
+      "#13 1.016 Downloading beartype (1.5MiB)",
+      "#13 1.016 Downloading cryptography (4.5MiB)",
+      "#13 1.016 Downloading pydantic-core (2.0MiB)",
+      "#13 3.186  Downloaded pygments",
+      "#13 3.331  Downloaded beartype",
+      "#13 3.488  Downloaded pydantic-core",
+      "#13 3.502  Downloaded shapely",
+      "#13 3.932  Downloaded cryptography",
+      "#13 4.837  Downloaded numpy",
+      "#13 4.838 Prepared 79 packages in 4.14s",
+      "#13 5.475 Installed 79 packages in 635ms",
+      "#19 0.335 Resolved 102 packages in 2ms",
+      "#19 1.590       Built hazbrief @ file:///app",
+      "#19 1.595 Prepared 1 package in 1.25s",
+      "#19 1.597 Installed 1 package in 2ms"
+    ]
+  },
+  "inside": {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--rm",
+      "--network=none",
+      "--env-file",
+      ".env",
+      "--name",
+      "hb201-inside",
+      "hazbrief-mcp"
+    ],
+    "calls": [
+      {
+        "detail": "fields: basis, cameo_datasheets, cfr172, coverage, day_night, erg_table, guide, hazard_class",
+        "outcome": "answered in full",
+        "seconds": 0.0,
+        "tool": "assess_incident"
+      },
+      {
+        "detail": "fields: basis, day_night, erg_table, flag_inputs, flags, footprint, guide, hazard_class",
+        "outcome": "answered in full",
+        "seconds": 0.0,
+        "tool": "protective_action_footprint"
+      },
+      {
+        "detail": "fields: basis, emergency_response, general_first_aid, guide, identified_by, limits, material, order",
+        "outcome": "answered in full",
+        "seconds": 0.0,
+        "tool": "material_response_guidance"
+      },
+      {
+        "answered_fields": [],
+        "detail": "1 error(s), 1 distinct: {\"error\": \"CENSUS_API_KEY is not set. The Census Data API requires a key on every data query; request one at https://api.census.gov/data/key_signup.html.\", \"hint\": \"Set CENSUS_API_KEY in the project .env or the master secrets file (DN-004); signup: https://ap\u2026",
+        "errors": [
+          {
+            "error": "CENSUS_API_KEY is not set. The Census Data API requires a key on every data query; request one at https://api.census.gov/data/key_signup.html.",
+            "hint": "Set CENSUS_API_KEY in the project .env or the master secrets file (DN-004); signup: https://api.census.gov/data/key_signup.html"
+          }
+        ],
+        "outcome": "structured error",
+        "seconds": 0.0,
+        "tool": "population_at_risk"
+      },
+      {
+        "answered_fields": [
+          "basis",
+          "buffer_m",
+          "counts",
+          "flag_inputs",
+          "group_quarters",
+          "limits",
+          "nursing_homes",
+          "zones"
+        ],
+        "detail": "5 error(s), 3 distinct: {\"source\": \"USGS National Structures Dataset\", \"error\": \"Upstream service request failed.\", \"hint\": \"Retry; the other sources answered.\"}; {\"source\": \"USGS 3D Hydrography Program (3DHP)\", \"error\": \"Upstream service request failed.\", \"hint\": \"Retry; the other sources answered.\"}; {\"source\": \"NTAD rail\", \"error\": \"Upstream service request failed.\", \"hint\": \"Retry; the other sources answered.\"}",
+        "errors": [
+          {
+            "error": "Upstream service request failed.",
+            "hint": "Retry; the other sources answered.",
+            "source": "USGS National Structures Dataset"
+          },
+          {
+            "error": "Upstream service request failed.",
+            "hint": "Retry; the other sources answered.",
+            "source": "USGS National Structures Dataset"
+          },
+          {
+            "error": "Upstream service request failed.",
+            "hint": "Retry; the other sources answered.",
+            "source": "USGS National Structures Dataset"
+          },
+          {
+            "error": "Upstream service request failed.",
+            "hint": "Retry; the other sources answered.",
+            "source": "USGS 3D Hydrography Program (3DHP)"
+          },
+          {
+            "error": "Upstream service request failed.",
+            "hint": "Retry; the other sources answered.",
+            "source": "NTAD rail"
+          }
+        ],
+        "outcome": "structured error",
+        "seconds": 0.1,
+        "tool": "facilities_in_footprint"
+      },
+      {
+        "detail": "fields: basis, hospitals, inside_footprint, limits, max_km, measured_from, more, unplaced_in_states",
+        "outcome": "answered in full",
+        "seconds": 0.2,
+        "tool": "receiving_hospitals"
+      },
+      {
+        "answered_fields": [
+          "form",
+          "geojson",
+          "markdown",
+          "pack_versions",
+          "receipt_counts",
+          "response_format"
+        ],
+        "detail": "10 error(s), 8 distinct: {\"tool\": \"nws_time_zone\", \"error\": \"Upstream service request failed.\"}; {\"tool\": \"population_at_risk\", \"error\": \"CENSUS_API_KEY is not set. The Census Data API requires a key on every data query; request one at https://api.census.gov/data/key_signup.html.\", \"hint\": \"Set CENSUS_API_KEY in the project .env or the master secrets fil\u2026; {\"tool\": \"facilities_in_footprint\", \"source\": \"USGS National Structures Dataset\", \"error\": \"Upstream service request failed.\", \"hint\": \"Retry; the other sources answered.\"}; {\"tool\": \"facilities_in_footprint\", \"source\": \"USGS 3D Hydrography Program (3DHP)\", \"error\": \"Upstream service request failed.\", \"hint\": \"Retry; the other sources answered.\"}; {\"tool\": \"facilities_in_footprint\", \"source\": \"NTAD rail\", \"error\": \"Upstream service request failed.\", \"hint\": \"Retry; the other sources answered.\"}; {\"tool\": \"tigerweb_place\", \"error\": \"pl\u2026",
+        "errors": [
+          {
+            "error": "Upstream service request failed.",
+            "tool": "nws_time_zone"
+          },
+          {
+            "error": "CENSUS_API_KEY is not set. The Census Data API requires a key on every data query; request one at https://api.census.gov/data/key_signup.html.",
+            "hint": "Set CENSUS_API_KEY in the project .env or the master secrets file (DN-004); signup: https://api.census.gov/data/key_signup.html",
+            "tool": "population_at_risk"
+          },
+          {
+            "error": "Upstream service request failed.",
+            "hint": "Retry; the other sources answered.",
+            "source": "USGS National Structures Dataset",
+            "tool": "facilities_in_footprint"
+          },
+          {
+            "error": "Upstream service request failed.",
+            "hint": "Retry; the other sources answered.",
+            "source": "USGS National Structures Dataset",
+            "tool": "facilities_in_footprint"
+          },
+          {
+            "error": "Upstream service request failed.",
+            "hint": "Retry; the other sources answered.",
+            "source": "USGS National Structures Dataset",
+            "tool": "facilities_in_footprint"
+          },
+          {
+            "error": "Upstream service request failed.",
+            "hint": "Retry; the other sources answered.",
+            "source": "USGS 3D Hydrography Program (3DHP)",
+            "tool": "facilities_in_footprint"
+          },
+          {
+            "error": "Upstream service request failed.",
+            "hint": "Retry; the other sources answered.",
+            "source": "NTAD rail",
+            "tool": "facilities_in_footprint"
+          },
+          {
+            "error": "place: Upstream service request failed.",
+            "tool": "tigerweb_place"
+          },
+          {
+            "error": "county: Upstream service request failed.",
+            "tool": "tigerweb_place"
+          },
+          {
+            "error": "Upstream service request failed.",
+            "tool": "tigerweb_basemap"
+          }
+        ],
+        "outcome": "structured error",
+        "seconds": 0.3,
+        "tool": "build_ics_201"
+      }
+    ],
+    "container_log_tail": "\u2502                  \ud83d\ude80 Deploy free: https://horizon.prefect.io                  \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\n[11/18/26 12:04:10] INFO     Starting MCP server 'HazBrief MCP  transport.py:358\n                             Server' with transport 'http' on                   \n                             http://127.0.0.1:8080/mcp                          \nINFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)",
+    "exec_exit": 0,
+    "seconds": 2.9
+  },
+  "serve": {
+    "argv": [
+      "docker",
+      "run",
+      "--name",
+      "hb201-serve",
+      "--rm",
+      "-p",
+      "127.0.0.1:18080:8080",
+      "--env-file",
+      ".env",
+      "hazbrief-mcp"
+    ],
+    "container_exit": 137,
+    "container_log_tail": "\u2502                          \ud83c\udf89 Update available: 4.2.1                          \u2502\n\u2502                      Run: pip install --upgrade fastmcp                      \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\n[11/18/26 12:00:42] INFO     Starting MCP server 'HazBrief MCP  transport.py:358\n                             Server' with transport 'http' on                   \n                             http://127.0.0.1:8080/mcp                          \nINFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)",
+    "health": {
+      "body": "Remote end closed connection without response",
+      "seconds": 60.1,
+      "status": "RemoteDisconnected"
+    },
+    "host_port_substituted": {
+      "host_port": 18080,
+      "lsof": "COMMAND  PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nPython  1732 brock    4u  IPv4 0x5161dd818764a0d3      0t0  TCP 127.0.0.1:8080 (LISTEN)"
+    },
+    "readme_line": "docker run --rm -p 127.0.0.1:8080:8080 --env-file .env hazbrief-mcp   # http://localhost:8080/mcp",
+    "version": {
+      "body": "Remote end closed connection without response",
+      "status": "RemoteDisconnected"
+    }
+  },
+  "serve_diagnostic": {
+    "argv": [
+      "docker",
+      "run",
+      "--name",
+      "hb201-serve",
+      "--rm",
+      "-p",
+      "127.0.0.1:18080:8080",
+      "--env-file",
+      ".env",
+      "-e",
+      "MCP_HOST=0.0.0.0",
+      "hazbrief-mcp"
+    ],
+    "container_exit": 137,
+    "container_log_tail": "[11/18/26 12:03:03] INFO     Starting MCP server 'HazBrief MCP  transport.py:358\n                             Server' with transport 'http' on                   \n                             http://0.0.0.0:8080/mcp                            \nINFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)\nINFO:     172.17.0.1:65362 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     172.17.0.1:65366 - \"GET /version HTTP/1.1\" 200 OK\nINFO:     172.17.0.1:65372 - \"POST /mcp HTTP/1.1\" 200 OK\nINFO:     172.17.0.1:65372 - \"POST /mcp HTTP/1.1\" 200 OK\nINFO:     172.17.0.1:65372 - \"POST /mcp HTTP/1.1\" 200 OK",
+    "diagnostic_env": [
+      "MCP_HOST=0.0.0.0"
+    ],
+    "health": {
+      "body": "{\"status\":\"healthy\",\"service\":\"hazbrief-mcp\"}",
+      "seconds": 3.3,
+      "status": 200
+    },
+    "host_port_substituted": {
+      "host_port": 18080,
+      "lsof": "COMMAND  PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nPython  1732 brock    4u  IPv4 0x5161dd818764a0d3      0t0  TCP 127.0.0.1:8080 (LISTEN)"
+    },
+    "mcp": {
+      "differences": [],
+      "fields_compared": 20,
+      "protocol_version": "2026-07-28",
+      "server_name": "HazBrief MCP Server",
+      "server_version": "4.1.1",
+      "tools": [
+        "assess_incident",
+        "build_ics_201",
+        "facilities_in_footprint",
+        "material_response_guidance",
+        "population_at_risk",
+        "protective_action_footprint",
+        "receiving_hospitals"
+      ]
+    },
+    "readme_line": "docker run --rm -p 127.0.0.1:8080:8080 --env-file .env hazbrief-mcp   # http://localhost:8080/mcp",
+    "version": {
+      "body": "{\"version\":\"0.1.0\"}",
+      "status": 200
+    }
+  }
+}

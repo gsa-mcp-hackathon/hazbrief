@@ -1,0 +1,901 @@
+{
+ "calls": {
+  "by_api": {
+   "bts_ntad": 10,
+   "census": 32,
+   "nws": 3,
+   "tigerweb": 29,
+   "usgs_3dhp": 11,
+   "usgs_structures": 35
+  },
+  "failed": 0,
+  "made": 120,
+  "ok": 120
+ },
+ "commit": "cb445172bf63fa29527ee7cc6b528f0e4abd30eb",
+ "exit": 3,
+ "generated_at": "2026-10-25T05:30:20Z",
+ "live_dir": "2026-10-25/ (held privately)",
+ "outputs": {
+  "csx-point-of-rocks-day": {
+   "complete": false,
+   "unrecorded": 10
+  },
+  "csx-point-of-rocks-night": {
+   "complete": false,
+   "unrecorded": 10
+  },
+  "guide-111-wilson-bridge": {
+   "baseline_unrecorded": 0,
+   "complete": true,
+   "tools": {
+    "assess_incident": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "build_ics_201": {
+     "changed_paths": 6,
+     "first": [
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[27].receipts[0].value",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[27].tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"266f4a4e0e3ff02c720e4f8be4a70af3af5d9026d3c07e4868481f8b90456101\"",
+       "path": "map_svg.sha256",
+       "was": "\"ec5c1533e0811df999c4480718afb5c3f8a68f9b0ac1bc04dcf33e3a833bc1a8\""
+      },
+      {
+       "now": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it...",
+       "path": "markdown",
+       "was": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it..."
+      },
+      {
+       "now": "\"2026-10-25\"",
+       "path": "tool_outputs.tigerweb_basemap.retrieved",
+       "was": "\"2026-10-21\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "tool_outputs.tigerweb_basemap.tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      }
+     ],
+     "status": "changed",
+     "volatile_paths": 0
+    },
+    "facilities_in_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "material_response_guidance": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "population_at_risk": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "protective_action_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "receiving_hospitals": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    }
+   }
+  },
+  "i495-wilson-bridge-day": {
+   "complete": false,
+   "unrecorded": 7
+  },
+  "i495-wilson-bridge-night": {
+   "complete": false,
+   "unrecorded": 7
+  },
+  "i81-md-pa-line-day": {
+   "baseline_unrecorded": 0,
+   "complete": true,
+   "tools": {
+    "assess_incident": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "build_ics_201": {
+     "changed_paths": 6,
+     "first": [
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[31].receipts[0].value",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[31].tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"d014949601ac98b780640615bddaa3296a3f77315ccdb86198059cf2556ba389\"",
+       "path": "map_svg.sha256",
+       "was": "\"31c3ee6627097c879328d98eacaae7e678eeabab0a1418ea4f65ca2cf5f762e9\""
+      },
+      {
+       "now": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it...",
+       "path": "markdown",
+       "was": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it..."
+      },
+      {
+       "now": "\"2026-10-25\"",
+       "path": "tool_outputs.tigerweb_basemap.retrieved",
+       "was": "\"2026-10-21\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "tool_outputs.tigerweb_basemap.tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      }
+     ],
+     "status": "changed",
+     "volatile_paths": 0
+    },
+    "facilities_in_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "material_response_guidance": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "population_at_risk": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "protective_action_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "receiving_hospitals": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    }
+   }
+  },
+  "i81-md-pa-line-night": {
+   "complete": false,
+   "unrecorded": 7
+  },
+  "i83-md-pa-line-day": {
+   "complete": false,
+   "unrecorded": 7
+  },
+  "i83-md-pa-line-night": {
+   "complete": false,
+   "unrecorded": 7
+  },
+  "placard-2-3-i81": {
+   "complete": false,
+   "unrecorded": 7
+  },
+  "propane-unresolved-i81": {
+   "complete": false,
+   "unrecorded": 7
+  },
+  "un1057-fire-unresolved-i81": {
+   "baseline_unrecorded": 0,
+   "complete": true,
+   "tools": {
+    "assess_incident": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "new",
+     "volatile_paths": 0
+    },
+    "build_ics_201": {
+     "changed_paths": 6,
+     "first": [
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[30].receipts[0].value",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[30].tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"d1a590b1e881aa50b2155558fecc5bdecaade7950bb5981816266c883d3bea54\"",
+       "path": "map_svg.sha256",
+       "was": "\"a804ff636d2ac24cfb3bed7d6a1f54efd74d3597a36adcc5a43f91a6bc4b3a4e\""
+      },
+      {
+       "now": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it...",
+       "path": "markdown",
+       "was": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it..."
+      },
+      {
+       "now": "\"2026-10-25\"",
+       "path": "tool_outputs.tigerweb_basemap.retrieved",
+       "was": "\"2026-10-21\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "tool_outputs.tigerweb_basemap.tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      }
+     ],
+     "status": "new",
+     "volatile_paths": 0
+    },
+    "facilities_in_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "material_response_guidance": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "new",
+     "volatile_paths": 0
+    },
+    "population_at_risk": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "protective_action_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "receiving_hospitals": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    }
+   }
+  },
+  "un1075-fire-i81": {
+   "baseline_unrecorded": 0,
+   "complete": true,
+   "tools": {
+    "assess_incident": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "build_ics_201": {
+     "changed_paths": 6,
+     "first": [
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[29].receipts[0].value",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[29].tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"0bd7be1a49044043af695cf764e388398e051c4d0280420fb00bbfe3ae8bd374\"",
+       "path": "map_svg.sha256",
+       "was": "\"ecdc8e703b1d3f4bbd315b7777a219b7142801be48b103ae305b49374ebd817d\""
+      },
+      {
+       "now": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it...",
+       "path": "markdown",
+       "was": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it..."
+      },
+      {
+       "now": "\"2026-10-25\"",
+       "path": "tool_outputs.tigerweb_basemap.retrieved",
+       "was": "\"2026-10-21\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "tool_outputs.tigerweb_basemap.tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      }
+     ],
+     "status": "changed",
+     "volatile_paths": 0
+    },
+    "facilities_in_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "material_response_guidance": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "population_at_risk": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "protective_action_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "receiving_hospitals": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    }
+   }
+  },
+  "un1203-i83": {
+   "baseline_unrecorded": 0,
+   "complete": true,
+   "tools": {
+    "assess_incident": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "build_ics_201": {
+     "changed_paths": 6,
+     "first": [
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[29].receipts[0].value",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[29].tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"0495316c8a12f819cd56ca5bcc20a6011a9741bd3b814bece2c63e115a6ac89b\"",
+       "path": "map_svg.sha256",
+       "was": "\"ded2d6ec9aa664db4ebf7e53162962eb0ba041b4cf3402092bed1ff8069370b7\""
+      },
+      {
+       "now": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it...",
+       "path": "markdown",
+       "was": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it..."
+      },
+      {
+       "now": "\"2026-10-25\"",
+       "path": "tool_outputs.tigerweb_basemap.retrieved",
+       "was": "\"2026-10-21\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "tool_outputs.tigerweb_basemap.tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      }
+     ],
+     "status": "changed",
+     "volatile_paths": 0
+    },
+    "facilities_in_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "material_response_guidance": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "population_at_risk": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "protective_action_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "receiving_hospitals": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    }
+   }
+  },
+  "un1746-small-i81-land": {
+   "baseline_unrecorded": 0,
+   "complete": true,
+   "tools": {
+    "assess_incident": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "build_ics_201": {
+     "changed_paths": 6,
+     "first": [
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[31].receipts[0].value",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[31].tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"d8ecd79cc7f86e42efebb86e034aa249c6a15299c5d7ce9a6ede8b7fb40e8397\"",
+       "path": "map_svg.sha256",
+       "was": "\"720476cb96f593d3c80f40e74e00a67976b969e8b2ccb55c2dcc50325b9579d7\""
+      },
+      {
+       "now": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it...",
+       "path": "markdown",
+       "was": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it..."
+      },
+      {
+       "now": "\"2026-10-25\"",
+       "path": "tool_outputs.tigerweb_basemap.retrieved",
+       "was": "\"2026-10-21\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "tool_outputs.tigerweb_basemap.tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      }
+     ],
+     "status": "changed",
+     "volatile_paths": 0
+    },
+    "facilities_in_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "material_response_guidance": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "population_at_risk": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "protective_action_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "receiving_hospitals": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    }
+   }
+  },
+  "un1746-small-i81-water": {
+   "baseline_unrecorded": 0,
+   "complete": true,
+   "tools": {
+    "assess_incident": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "build_ics_201": {
+     "changed_paths": 6,
+     "first": [
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[31].receipts[0].value",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[31].tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"d8ecd79cc7f86e42efebb86e034aa249c6a15299c5d7ce9a6ede8b7fb40e8397\"",
+       "path": "map_svg.sha256",
+       "was": "\"720476cb96f593d3c80f40e74e00a67976b969e8b2ccb55c2dcc50325b9579d7\""
+      },
+      {
+       "now": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it...",
+       "path": "markdown",
+       "was": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it..."
+      },
+      {
+       "now": "\"2026-10-25\"",
+       "path": "tool_outputs.tigerweb_basemap.retrieved",
+       "was": "\"2026-10-21\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "tool_outputs.tigerweb_basemap.tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      }
+     ],
+     "status": "changed",
+     "volatile_paths": 0
+    },
+    "facilities_in_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "material_response_guidance": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "population_at_risk": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "protective_action_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "receiving_hospitals": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    }
+   }
+  },
+  "un1977-wilson-bridge": {
+   "baseline_unrecorded": 0,
+   "complete": true,
+   "tools": {
+    "assess_incident": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "build_ics_201": {
+     "changed_paths": 6,
+     "first": [
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[29].receipts[0].value",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "annex.sources[29].tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      },
+      {
+       "now": "\"a126fca7f5f03a2c1b7d4987dd00c0b9a4f85d3c3f8855453fc436d502f52a26\"",
+       "path": "map_svg.sha256",
+       "was": "\"b24df38bdffff2972a55af135ee47ed759048bc9ccdab9701ee8b6ee919ffa00\""
+      },
+      {
+       "now": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it...",
+       "path": "markdown",
+       "was": "\"# Incident Briefing (ICS 201)\\n\\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it..."
+      },
+      {
+       "now": "\"2026-10-25\"",
+       "path": "tool_outputs.tigerweb_basemap.retrieved",
+       "was": "\"2026-10-21\""
+      },
+      {
+       "now": "\"[TIGERweb Transportation, as of 10/25/2026]\"",
+       "path": "tool_outputs.tigerweb_basemap.tag",
+       "was": "\"[TIGERweb Transportation, as of 10/21/2026]\""
+      }
+     ],
+     "status": "changed",
+     "volatile_paths": 0
+    },
+    "facilities_in_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "material_response_guidance": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "population_at_risk": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "protective_action_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "receiving_hospitals": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    }
+   }
+  }
+ },
+ "part": "live",
+ "sources": {
+  "bts_ntad": {
+   "as_of_changed": [],
+   "changed": [],
+   "errored": 0,
+   "exchanges": 10,
+   "no_baseline": 0,
+   "reordered": 0,
+   "unchanged": 10
+  },
+  "census": {
+   "as_of_changed": [],
+   "changed": [],
+   "errored": 0,
+   "exchanges": 32,
+   "no_baseline": 0,
+   "reordered": 3,
+   "unchanged": 29
+  },
+  "nws": {
+   "as_of_changed": [],
+   "changed": [
+    {
+     "first": [
+      {
+       "now": "\"2026-10-25T05:57:24-04:00\"",
+       "path": "body.properties.astronomicalData.astronomicalTwilightBegin",
+       "was": "\"2026-10-21T05:53:26-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T19:43:58-04:00\"",
+       "path": "body.properties.astronomicalData.astronomicalTwilightEnd",
+       "was": "\"2026-10-21T19:49:00-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T07:00:14-04:00\"",
+       "path": "body.properties.astronomicalData.civilTwilightBegin",
+       "was": "\"2026-10-21T06:56:06-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T18:41:08-04:00\"",
+       "path": "body.properties.astronomicalData.civilTwilightEnd",
+       "was": "\"2026-10-21T18:46:21-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T06:28:40-04:00\"",
+       "path": "body.properties.astronomicalData.nauticalTwilightBegin",
+       "was": "\"2026-10-21T06:24:40-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T19:12:42-04:00\"",
+       "path": "body.properties.astronomicalData.nauticalTwilightEnd",
+       "was": "\"2026-10-21T19:17:47-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T07:27:44-04:00\"",
+       "path": "body.properties.astronomicalData.sunrise",
+       "was": "\"2026-10-21T07:23:24-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T18:13:38-04:00\"",
+       "path": "body.properties.astronomicalData.sunset",
+       "was": "\"2026-10-21T18:19:02-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T12:50:41-04:00\"",
+       "path": "body.properties.astronomicalData.transit",
+       "was": "\"2026-10-21T12:51:13-04:00\""
+      }
+     ],
+     "paths": 9,
+     "url": "https://api.weather.gov/points/39.722,-76.661"
+    },
+    {
+     "first": [
+      {
+       "now": "\"2026-10-25T06:01:39-04:00\"",
+       "path": "body.properties.astronomicalData.astronomicalTwilightBegin",
+       "was": "\"2026-10-21T05:57:41-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T19:48:13-04:00\"",
+       "path": "body.properties.astronomicalData.astronomicalTwilightEnd",
+       "was": "\"2026-10-21T19:53:15-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T07:04:29-04:00\"",
+       "path": "body.properties.astronomicalData.civilTwilightBegin",
+       "was": "\"2026-10-21T07:00:21-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T18:45:23-04:00\"",
+       "path": "body.properties.astronomicalData.civilTwilightEnd",
+       "was": "\"2026-10-21T18:50:36-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T06:32:55-04:00\"",
+       "path": "body.properties.astronomicalData.nauticalTwilightBegin",
+       "was": "\"2026-10-21T06:28:55-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T19:16:57-04:00\"",
+       "path": "body.properties.astronomicalData.nauticalTwilightEnd",
+       "was": "\"2026-10-21T19:22:02-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T07:31:59-04:00\"",
+       "path": "body.properties.astronomicalData.sunrise",
+       "was": "\"2026-10-21T07:27:40-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T18:17:53-04:00\"",
+       "path": "body.properties.astronomicalData.sunset",
+       "was": "\"2026-10-21T18:23:17-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T12:54:56-04:00\"",
+       "path": "body.properties.astronomicalData.transit",
+       "was": "\"2026-10-21T12:55:28-04:00\""
+      }
+     ],
+     "paths": 9,
+     "url": "https://api.weather.gov/points/39.722,-77.724"
+    },
+    {
+     "first": [
+      {
+       "now": "\"2026-10-25T05:58:47-04:00\"",
+       "path": "body.properties.astronomicalData.astronomicalTwilightBegin",
+       "was": "\"2026-10-21T05:54:59-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T19:45:35-04:00\"",
+       "path": "body.properties.astronomicalData.astronomicalTwilightEnd",
+       "was": "\"2026-10-21T19:50:28-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T07:00:48-04:00\"",
+       "path": "body.properties.astronomicalData.civilTwilightBegin",
+       "was": "\"2026-10-21T06:56:49-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T18:43:34-04:00\"",
+       "path": "body.properties.astronomicalData.civilTwilightEnd",
+       "was": "\"2026-10-21T18:48:38-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T06:29:39-04:00\"",
+       "path": "body.properties.astronomicalData.nauticalTwilightBegin",
+       "was": "\"2026-10-21T06:25:48-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T19:14:43-04:00\"",
+       "path": "body.properties.astronomicalData.nauticalTwilightEnd",
+       "was": "\"2026-10-21T19:19:39-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T07:27:56-04:00\"",
+       "path": "body.properties.astronomicalData.sunrise",
+       "was": "\"2026-10-21T07:23:46-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T18:16:26-04:00\"",
+       "path": "body.properties.astronomicalData.sunset",
+       "was": "\"2026-10-21T18:21:41-04:00\""
+      },
+      {
+       "now": "\"2026-10-25T12:52:11-04:00\"",
+       "path": "body.properties.astronomicalData.transit",
+       "was": "\"2026-10-21T12:52:44-04:00\""
+      }
+     ],
+     "paths": 9,
+     "url": "https://api.weather.gov/points/38.7934,-77.037"
+    }
+   ],
+   "errored": 0,
+   "exchanges": 3,
+   "no_baseline": 0,
+   "reordered": 0,
+   "unchanged": 0
+  },
+  "tigerweb": {
+   "as_of_changed": [],
+   "changed": [],
+   "errored": 0,
+   "exchanges": 29,
+   "no_baseline": 0,
+   "reordered": 0,
+   "unchanged": 29
+  },
+  "usgs_3dhp": {
+   "as_of_changed": [],
+   "changed": [],
+   "errored": 0,
+   "exchanges": 11,
+   "no_baseline": 0,
+   "reordered": 0,
+   "unchanged": 11
+  },
+  "usgs_structures": {
+   "as_of_changed": [],
+   "changed": [],
+   "errored": 0,
+   "exchanges": 35,
+   "no_baseline": 0,
+   "reordered": 0,
+   "unchanged": 35
+  }
+ },
+ "surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350"
+}

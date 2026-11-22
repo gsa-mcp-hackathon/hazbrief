@@ -1,0 +1,86 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-08T17:15:02.485643Z",
+  "http_mode": "replay",
+  "id": "112a205e79e780e4ffc8399a145cbf656250178107103f05ebda39cfb340ca5a",
+  "is_error": false,
+  "name": "protective_action_footprint",
+  "params": {
+   "incident": {
+    "container": "unknown",
+    "fire_involved": false,
+    "guide_number": "111",
+    "incident_time": "2026-10-21T14:00:00-04:00",
+    "location": {
+     "latitude": 38.7934,
+     "longitude": -77.037
+    },
+    "spill_size": "unknown",
+    "where_spilled": "land"
+   },
+   "wind": {
+    "direction_deg_from": 10.0,
+    "observed_at": "2026-10-21T02:52:44+00:00",
+    "source": "NWS gridpoint forecast LWX/97,67, the cell for 2026-10-21T14:00:00-04:00",
+    "speed_kmh": 14.8
+   }
+  },
+  "startedAtTime": "2026-11-08T17:15:02.478923Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/points/",
+    "id": "nws:points"
+   },
+   {
+    "endpoint": "https://api.weather.gov/gridpoints/",
+    "id": "nws:gridpoints"
+   },
+   {
+    "endpoint": "packs/erg.json",
+    "id": "pack:erg"
+   },
+   {
+    "endpoint": "packs/cfr172.json",
+    "id": "pack:cfr172"
+   },
+   {
+    "endpoint": "packs/hazard_classes.json",
+    "id": "pack:hazard_classes"
+   },
+   {
+    "endpoint": "packs/flag_rules.json",
+    "id": "pack:flag_rules"
+   },
+   {
+    "endpoint": null,
+    "id": "code:astral"
+   }
+  ]
+ },
+ "as_of": "2026-11-08T17:15:02.485643Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 4535,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "ea13971fd4efa99478f719edad28da19e0503d9c2114f958a002d558accbb402"
+ },
+ "horizon_s": 3600,
+ "horizon_source": "nws:gridpoints",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

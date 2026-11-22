@@ -1,0 +1,171 @@
+{
+ "api": "tigerweb",
+ "body": {
+  "displayFieldName": "BASENAME",
+  "features": [
+   {
+    "attributes": {
+     "BASENAME": "Penn",
+     "MTFCC": "S1400",
+     "NAME": "Penn Ave",
+     "OID": "110782886157"
+    },
+    "geometry": {
+     "paths": [
+      [
+       [
+        -75.66790400023079,
+        41.408085000058165
+       ],
+       [
+        -75.6678489999792,
+        41.40814300000788
+       ],
+       [
+        -75.66768699959749,
+        41.4083180000652
+       ],
+       [
+        -75.66763300006913,
+        41.408377000324776
+       ],
+       [
+        -75.66753000013698,
+        41.40846699970399
+       ],
+       [
+        -75.66737399960304,
+        41.408605999922614
+       ],
+       [
+        -75.66722499964014,
+        41.40874099981631
+       ],
+       [
+        -75.66712500008101,
+        41.408834000223735
+       ],
+       [
+        -75.66696000022459,
+        41.408983999861356
+       ],
+       [
+        -75.66646700030509,
+        41.40943400006501
+       ],
+       [
+        -75.66630300027356,
+        41.40958500016405
+       ],
+       [
+        -75.66555199971287,
+        41.410242999903176
+       ],
+       [
+        -75.66535199969633,
+        41.410430000139534
+       ],
+       [
+        -75.66500000024215,
+        41.410766000267394
+       ],
+       [
+        -75.66412999985579,
+        41.41154300018116
+       ],
+       [
+        -75.66376199960975,
+        41.41187100027289
+       ],
+       [
+        -75.6636670000735,
+        41.41195599990939
+       ],
+       [
+        -75.66353099963106,
+        41.412061999688625
+       ],
+       [
+        -75.6634760002778,
+        41.412111999816815
+       ],
+       [
+        -75.66285799978651,
+        41.41267700007316
+       ],
+       [
+        -75.66264199987644,
+        41.412863000265226
+       ],
+       [
+        -75.66235999984413,
+        41.41310899970129
+       ],
+       [
+        -75.66147799976221,
+        41.413899000124104
+       ],
+       [
+        -75.6611249995848,
+        41.41422600001863
+       ],
+       [
+        -75.66109000032301,
+        41.41425699979757
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "fieldAliases": {
+   "BASENAME": "BASENAME",
+   "MTFCC": "MTFCC",
+   "NAME": "NAME",
+   "OID": "OID"
+  },
+  "fields": [
+   {
+    "alias": "OID",
+    "length": 22,
+    "name": "OID",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "NAME",
+    "length": 100,
+    "name": "NAME",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "BASENAME",
+    "length": 100,
+    "name": "BASENAME",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "MTFCC",
+    "length": 5,
+    "name": "MTFCC",
+    "type": "esriFieldTypeString"
+   }
+  ],
+  "geometryType": "esriGeometryPolyline",
+  "spatialReference": {
+   "latestWkid": 4326,
+   "wkid": 4326
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-28T04:32:21Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 28 Oct 2026 04:32:21 GMT",
+  "ETag": "\"1784752640\""
+ },
+ "status": 200,
+ "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/8/query?where=UPPER%28BASENAME%29%3D%27PENN%27&outFields=OID%2CNAME%2CBASENAME%2CMTFCC&returnGeometry=true&outSR=4326&f=json&geometry=-75.666911%2C41.409216%2C-75.664508%2C41.411206&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects"
+}

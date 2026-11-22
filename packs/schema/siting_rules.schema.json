@@ -1,0 +1,402 @@
+{
+ "$defs": {
+  "AttributionCredit": {
+   "additionalProperties": false,
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "edition": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Edition"
+    },
+    "publisher": {
+     "title": "Publisher",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "url": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Url"
+    }
+   },
+   "required": [
+    "doc_id",
+    "title",
+    "publisher",
+    "edition",
+    "url"
+   ],
+   "title": "AttributionCredit",
+   "type": "object"
+  },
+  "AttributionNotice": {
+   "additionalProperties": false,
+   "description": "A reuse or credit notice, verbatim from the held document at `locator`.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "locator",
+    "text"
+   ],
+   "title": "AttributionNotice",
+   "type": "object"
+  },
+  "MaterialSources": {
+   "additionalProperties": false,
+   "description": "HB-178: a rule's sources for one material: the receipt that keys the document to\nthe material (its UN number on its page) and the quotes that support the rule.",
+   "properties": {
+    "key": {
+     "$ref": "#/$defs/ValueReceipt"
+    },
+    "sources": {
+     "items": {
+      "$ref": "#/$defs/ValueReceipt"
+     },
+     "minItems": 1,
+     "title": "Sources",
+     "type": "array"
+    }
+   },
+   "required": [
+    "key",
+    "sources"
+   ],
+   "title": "MaterialSources",
+   "type": "object"
+  },
+  "OperatorStatement": {
+   "additionalProperties": false,
+   "description": "A rule the operator stated (HB-155): its register record and the line of\ndocs/evidence/hb155/operator_statements.md it was registered from.",
+   "properties": {
+    "record": {
+     "pattern": "^hazbrief-mcp:HBD-\\d{3}$",
+     "title": "Record",
+     "type": "string"
+    },
+    "statement": {
+     "pattern": "^S\\d+$",
+     "title": "Statement",
+     "type": "string"
+    }
+   },
+   "required": [
+    "record",
+    "statement"
+   ],
+   "title": "OperatorStatement",
+   "type": "object"
+  },
+  "PackAttribution": {
+   "additionalProperties": false,
+   "properties": {
+    "credits": {
+     "items": {
+      "$ref": "#/$defs/AttributionCredit"
+     },
+     "title": "Credits",
+     "type": "array"
+    },
+    "notices": {
+     "items": {
+      "$ref": "#/$defs/AttributionNotice"
+     },
+     "title": "Notices",
+     "type": "array"
+    }
+   },
+   "required": [
+    "credits",
+    "notices"
+   ],
+   "title": "PackAttribution",
+   "type": "object"
+  },
+  "PackSource": {
+   "additionalProperties": false,
+   "description": "One held document a pack was parsed from: its corpus doc_id, the sha256 of the\nheld bytes, where in it the pack reads, and its licence as `corpus/sources.yaml`\nrecords it.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "licence": {
+     "title": "Licence",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "raw_sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Raw Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "raw_sha256",
+    "locator",
+    "licence"
+   ],
+   "title": "PackSource",
+   "type": "object"
+  },
+  "SitingRule": {
+   "additionalProperties": false,
+   "description": "One rule of the siting layer (HB-155; DN-023 section 4): where it applies, its\nwords, and its held quotes (each verified on its page at build) or the operator's\nrecord, never neither. HB-178: a source about one material is keyed by the material\n(`material_sources`, by UN number), with the words printed where the brief's\nmaterial has none (`material_none`); a general source drawn from one material's\nincident says so (`source_notes`, by doc_id).",
+   "properties": {
+    "applies": {
+     "enum": [
+      "exclude",
+      "choose",
+      "label",
+      "candidates"
+     ],
+     "title": "Applies",
+     "type": "string"
+    },
+    "material_none": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Material None"
+    },
+    "material_sources": {
+     "additionalProperties": {
+      "$ref": "#/$defs/MaterialSources"
+     },
+     "title": "Material Sources",
+     "type": "object"
+    },
+    "operator_stated": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/OperatorStatement"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "point": {
+     "anyOf": [
+      {
+       "enum": [
+        "command_post",
+        "triage",
+        "staging"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Point"
+    },
+    "source_notes": {
+     "additionalProperties": {
+      "$ref": "#/$defs/SourceNote"
+     },
+     "title": "Source Notes",
+     "type": "object"
+    },
+    "sources": {
+     "items": {
+      "$ref": "#/$defs/ValueReceipt"
+     },
+     "title": "Sources",
+     "type": "array"
+    },
+    "words": {
+     "title": "Words",
+     "type": "string"
+    }
+   },
+   "required": [
+    "applies",
+    "words"
+   ],
+   "title": "SitingRule",
+   "type": "object"
+  },
+  "SitingRulesData": {
+   "additionalProperties": false,
+   "properties": {
+    "rules": {
+     "additionalProperties": {
+      "$ref": "#/$defs/SitingRule"
+     },
+     "title": "Rules",
+     "type": "object"
+    }
+   },
+   "required": [
+    "rules"
+   ],
+   "title": "SitingRulesData",
+   "type": "object"
+  },
+  "SourceNote": {
+   "additionalProperties": false,
+   "description": "HB-178: what a general source was drawn from (one incident, one material), with\nthe held words that say so, printed beside the source wherever it is cited.",
+   "properties": {
+    "note": {
+     "title": "Note",
+     "type": "string"
+    },
+    "receipt": {
+     "$ref": "#/$defs/ValueReceipt"
+    }
+   },
+   "required": [
+    "note",
+    "receipt"
+   ],
+   "title": "SourceNote",
+   "type": "object"
+  },
+  "ValueReceipt": {
+   "additionalProperties": false,
+   "description": "Where a value is printed. `page` is the PDF page, or the form-feed block of a\nconverted file (packs/SCHEMA.md, Locators); `quote` is the text as printed there.\n`read_by`: `text_layer` (verified on the page's text at build) or `rendered_page`\n(a page with no usable text layer, read from its image; the quote is the\nreading). `sha256` is the held file's raw sha256, so a receipt names the exact\nbytes it was read from (HB-109; DN-020 section 2 item 4). From a `reference-only`\nsource the quote is the number and its unit only (the licence gate,\npacks/SCHEMA.md).",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "page": {
+     "title": "Page",
+     "type": "integer"
+    },
+    "quote": {
+     "title": "Quote",
+     "type": "string"
+    },
+    "read_by": {
+     "default": "text_layer",
+     "enum": [
+      "text_layer",
+      "rendered_page"
+     ],
+     "title": "Read By",
+     "type": "string"
+    },
+    "sha256": {
+     "title": "Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "page",
+    "locator",
+    "quote",
+    "sha256"
+   ],
+   "title": "ValueReceipt",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "properties": {
+  "attribution": {
+   "$ref": "#/$defs/PackAttribution"
+  },
+  "built_at": {
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+   "title": "Built At",
+   "type": "string"
+  },
+  "data": {
+   "$ref": "#/$defs/SitingRulesData"
+  },
+  "kind": {
+   "const": "siting_rules",
+   "title": "Kind",
+   "type": "string"
+  },
+  "pack_id": {
+   "title": "Pack Id",
+   "type": "string"
+  },
+  "schema_version": {
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Sha256",
+   "type": "string"
+  },
+  "sources": {
+   "items": {
+    "$ref": "#/$defs/PackSource"
+   },
+   "title": "Sources",
+   "type": "array"
+  },
+  "version": {
+   "title": "Version",
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema_version",
+  "pack_id",
+  "version",
+  "built_at",
+  "sha256",
+  "sources",
+  "attribution",
+  "kind",
+  "data"
+ ],
+ "title": "SitingRulesPack",
+ "type": "object"
+}

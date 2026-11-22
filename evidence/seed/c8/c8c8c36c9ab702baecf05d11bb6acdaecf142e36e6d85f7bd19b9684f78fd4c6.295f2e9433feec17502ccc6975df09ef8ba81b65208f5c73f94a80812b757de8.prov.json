@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-07T08:31:38Z",
+  "http_mode": "record",
+  "id": "295f2e9433feec17502ccc6975df09ef8ba81b65208f5c73f94a80812b757de8",
+  "name": "GET pubchem",
+  "params": {
+   "method": "GET",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/3672/JSON?heading=CAS"
+  },
+  "startedAtTime": "2026-11-07T08:31:38Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/3672/JSON?heading=CAS",
+    "id": "pubchem:pug_view"
+   }
+  ]
+ },
+ "as_of": "2026-11-07T08:31:38Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 12988,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "c8c8c36c9ab702baecf05d11bb6acdaecf142e36e6d85f7bd19b9684f78fd4c6"
+ },
+ "horizon_s": 126230400,
+ "horizon_source": "pubchem:pug_view",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

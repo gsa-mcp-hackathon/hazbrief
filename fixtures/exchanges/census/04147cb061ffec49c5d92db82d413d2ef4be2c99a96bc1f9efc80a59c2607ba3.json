@@ -1,0 +1,184 @@
+{
+ "api": "census",
+ "body": [
+  [
+   "NAICS2017",
+   "NAICS2017_LABEL",
+   "ESTAB",
+   "INDLEVEL",
+   "state",
+   "county"
+  ],
+  [
+   "00",
+   "Total for all sectors",
+   "5198",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "11",
+   "Agriculture, forestry, fishing and hunting",
+   "6",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "21",
+   "Mining, quarrying, and oil and gas extraction",
+   "5",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "22",
+   "Utilities",
+   "14",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "23",
+   "Construction",
+   "457",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "31-33",
+   "Manufacturing",
+   "218",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "42",
+   "Wholesale trade",
+   "218",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "44-45",
+   "Retail trade",
+   "809",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "48-49",
+   "Transportation and warehousing",
+   "170",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "51",
+   "Information",
+   "83",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "52",
+   "Finance and insurance",
+   "279",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "53",
+   "Real estate and rental and leasing",
+   "162",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "54",
+   "Professional, scientific, and technical services",
+   "453",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "55",
+   "Management of companies and enterprises",
+   "26",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "56",
+   "Administrative and support and waste management and remediation services",
+   "225",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "61",
+   "Educational services",
+   "63",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "62",
+   "Health care and social assistance",
+   "810",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "71",
+   "Arts, entertainment, and recreation",
+   "73",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "72",
+   "Accommodation and food services",
+   "567",
+   "2",
+   "42",
+   "069"
+  ],
+  [
+   "81",
+   "Other services (except public administration)",
+   "559",
+   "2",
+   "42",
+   "069"
+  ]
+ ],
+ "method": "GET",
+ "recorded_at": "2026-10-28T04:43:23Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=60, must-revalidate",
+  "Date": "Wed, 28 Oct 2026 04:43:22 GMT"
+ },
+ "status": 200,
+ "url": "https://api.census.gov/data/2023/cbp?get=NAICS2017%2CNAICS2017_LABEL%2CESTAB&for=county%3A069&in=state%3A42&INDLEVEL=2"
+}

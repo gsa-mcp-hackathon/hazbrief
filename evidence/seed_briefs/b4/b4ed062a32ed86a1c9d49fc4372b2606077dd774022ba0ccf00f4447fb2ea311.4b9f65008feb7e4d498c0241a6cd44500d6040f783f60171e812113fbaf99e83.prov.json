@@ -1,0 +1,145 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-08T17:15:46.740276Z",
+  "http_mode": "replay",
+  "id": "4b9f65008feb7e4d498c0241a6cd44500d6040f783f60171e812113fbaf99e83",
+  "is_error": false,
+  "name": "build_ics_201",
+  "params": {
+   "request": {
+    "incident": {
+     "container": "Highway tank truck or trailer",
+     "fire_involved": true,
+     "incident_time": "2026-10-21T14:00:00-04:00",
+     "location": {
+      "latitude": 39.722,
+      "longitude": -76.661
+     },
+     "material": "UN1203",
+     "spill_size": "large",
+     "where_spilled": "land"
+    },
+    "wind": {
+     "direction_deg_from": 10.0,
+     "observed_at": "2026-10-21T00:06:12+00:00",
+     "source": "NWS gridpoint forecast CTP/117,14, the cell for 2026-10-21T14:00:00-04:00",
+     "speed_kmh": 14.8
+    }
+   },
+   "response_format": "detailed"
+  },
+  "startedAtTime": "2026-11-08T17:15:46.258014Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/points/",
+    "id": "nws:points"
+   },
+   {
+    "endpoint": "https://api.weather.gov/gridpoints/",
+    "id": "nws:gridpoints"
+   },
+   {
+    "endpoint": "https://api.census.gov/data/2020/dec/dhc",
+    "id": "census:dhc2020"
+   },
+   {
+    "endpoint": "https://api.census.gov/data/2024/acs/acs5",
+    "id": "census:acs5"
+   },
+   {
+    "endpoint": "https://api.census.gov/data/2024/cre",
+    "id": "census:cre"
+   },
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/",
+    "id": "tigerweb:census2020"
+   },
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/",
+    "id": "tigerweb:current"
+   },
+   {
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/structures/",
+    "id": "usgs_structures"
+   },
+   {
+    "endpoint": "https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/",
+    "id": "usgs_3dhp"
+   },
+   {
+    "endpoint": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_North_American_Rail_Network_Lines/",
+    "id": "bts_ntad"
+   },
+   {
+    "endpoint": "fixtures/cms/hospitals.json",
+    "id": "cms:hospitals"
+   },
+   {
+    "endpoint": "fixtures/cms/hospitals.json",
+    "id": "census_geocoder"
+   },
+   {
+    "endpoint": "fixtures/cms/nursing_homes.json",
+    "id": "cms:nursing_homes"
+   },
+   {
+    "endpoint": "fixtures/lodes/",
+    "id": "lodes"
+   },
+   {
+    "endpoint": "packs/erg.json",
+    "id": "pack:erg"
+   },
+   {
+    "endpoint": "packs/cfr172.json",
+    "id": "pack:cfr172"
+   },
+   {
+    "endpoint": "packs/cameo.json",
+    "id": "pack:cameo"
+   },
+   {
+    "endpoint": "packs/hazard_classes.json",
+    "id": "pack:hazard_classes"
+   },
+   {
+    "endpoint": "packs/flag_rules.json",
+    "id": "pack:flag_rules"
+   },
+   {
+    "endpoint": null,
+    "id": "code:astral"
+   }
+  ]
+ },
+ "as_of": "2026-11-08T17:15:46.740276Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 67762,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "b4ed062a32ed86a1c9d49fc4372b2606077dd774022ba0ccf00f4447fb2ea311"
+ },
+ "horizon_s": 3600,
+ "horizon_source": "nws:gridpoints",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [
+  "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+  "51dcf29a52eb037f7a1d761fc5491f0a3113ae22abac23e1f898846eff045685",
+  "7f1664bc838659f62214b4cae7697a04d9fd9721fcab0c400937a97c4369abc7"
+ ],
+ "wasRevisionOf": null
+}

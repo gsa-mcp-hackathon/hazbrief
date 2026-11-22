@@ -1,0 +1,1296 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.705378,
+      39.862248
+     ],
+     "type": "Point"
+    },
+    "id": 6411050,
+    "properties": {
+     "address": "5465 Molly Pitcher Highway",
+     "city": "Chambersburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Marion Volunteer Fire Department - Company 8",
+     "objectid": 6411050,
+     "permanent_identifier": "011a59eb-e319-4527-b13b-bf89cfe2c3b3",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.411421,
+      39.624962
+     ],
+     "type": "Point"
+    },
+    "id": 6434610,
+    "properties": {
+     "address": "21 North Church Street",
+     "city": "Thurmont",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1554940800000,
+     "name": "Guardian Hose Company",
+     "objectid": 6434610,
+     "permanent_identifier": "1d9b69ef-5445-4edb-b6f1-21aab9947764",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.697664,
+      39.634049
+     ],
+     "type": "Point"
+    },
+    "id": 6437085,
+    "properties": {
+     "address": "100 Eastern Boulevard North",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1672790400000,
+     "name": "Pioneer Hook and Ladder Company 1",
+     "objectid": 6437085,
+     "permanent_identifier": "1fdd8271-a593-4bec-bfa2-a050354d60a6",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.635455,
+      39.880135
+     ],
+     "type": "Point"
+    },
+    "id": 6440928,
+    "properties": {
+     "address": "3444 Wayne Road",
+     "city": "Chambersburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "New Franklin Volunteer Fire Department - Company 17",
+     "objectid": 6440928,
+     "permanent_identifier": "24ef7731-ee02-477a-a556-2644a916c96d",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.664645,
+      39.939289
+     ],
+     "type": "Point"
+    },
+    "id": 6446511,
+    "properties": {
+     "address": "158 West King Street",
+     "city": "Chambersburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Franklin Fire Company Station 4",
+     "objectid": 6446511,
+     "permanent_identifier": "2be80162-80f9-47ac-a65d-329a859cabf6",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.471158,
+      39.728997
+     ],
+     "type": "Point"
+    },
+    "id": 6467709,
+    "properties": {
+     "address": "13063 Monterey Lane",
+     "city": "Blue Ridge Summit",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1661126400000,
+     "name": "Blue Ridge Fire and Rescue",
+     "objectid": 6467709,
+     "permanent_identifier": "452b5f35-4c26-4187-97d7-596f6861fcd1",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.565693,
+      39.83994
+     ],
+     "type": "Point"
+    },
+    "id": 6478041,
+    "properties": {
+     "address": "517 South Main Street",
+     "city": "Mont Alto",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Mont Alto Volunteer Fire Department - Company 5",
+     "objectid": 6478041,
+     "permanent_identifier": "5168f2b0-2c86-4929-bbd9-797003acaea3",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.710338,
+      39.651243
+     ],
+     "type": "Point"
+    },
+    "id": 6488383,
+    "properties": {
+     "address": "790 Potomac Avenue",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "Antietam Volunteer Fire Company",
+     "objectid": 6488383,
+     "permanent_identifier": "5df35963-49eb-4e18-8835-2a9c2f2ef1f0",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.600073,
+      39.597182
+     ],
+     "type": "Point"
+    },
+    "id": 6493181,
+    "properties": {
+     "address": "10305 Crystal Falls Drive",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1660694400000,
+     "name": "Mount Aetna Volunteer Fire Department Company 16",
+     "objectid": 6493181,
+     "permanent_identifier": "63a51de1-046d-4aa7-8cec-51c850ecfd46",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.929203,
+      39.655586
+     ],
+     "type": "Point"
+    },
+    "id": 6502085,
+    "properties": {
+     "address": "30 Mulberry Street",
+     "city": "Clear Spring",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Clear Spring Volunteer Fire Company 4",
+     "objectid": 6502085,
+     "permanent_identifier": "6e84b4e9-58ff-4b51-931a-cf3d7596fa37",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.651072,
+      39.507002
+     ],
+     "type": "Point"
+    },
+    "id": 6503027,
+    "properties": {
+     "address": "5 Saint Paul Street",
+     "city": "Boonsboro",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1660694400000,
+     "name": "First Hose Company of Boonsboro Company 6",
+     "objectid": 6503027,
+     "permanent_identifier": "6fe8bd04-cd61-4956-888d-8020668cfd8f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.719409,
+      39.64494
+     ],
+     "type": "Point"
+    },
+    "id": 6504467,
+    "properties": {
+     "address": "25 West Church Street",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1672790400000,
+     "name": "Hagerstown Fire Department",
+     "objectid": 6504467,
+     "permanent_identifier": "716acbd4-aa7c-4166-805d-bf8b68228fe0",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.904256,
+      39.831288
+     ],
+     "type": "Point"
+    },
+    "id": 6506074,
+    "properties": {
+     "address": "132 North Main Street",
+     "city": "Mercersburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Mercersburg - Montgomery - Peters - Warren Volunteer Fire Department - Company 9",
+     "objectid": 6506074,
+     "permanent_identifier": "73499472-7d88-4a03-a621-0a51ad00b515",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.732563,
+      39.628046
+     ],
+     "type": "Point"
+    },
+    "id": 6508713,
+    "properties": {
+     "address": "409 West First Street",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "South Hagerstown Fire Company Engine 5",
+     "objectid": 6508713,
+     "permanent_identifier": "7631259d-4010-4a43-b5c2-7baa540307ee",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.402133,
+      39.923235
+     ],
+     "type": "Point"
+    },
+    "id": 6520508,
+    "properties": {
+     "address": "1180 Buchanan Valley Road",
+     "city": "Orrtanna",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1471005108000,
+     "name": "Buchanan Valley Volunteer Fire Department Station 27",
+     "objectid": 6520508,
+     "permanent_identifier": "84a687cc-6ac5-4e9c-b342-7717e9b093bc",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.998513,
+      39.931116
+     ],
+     "type": "Point"
+    },
+    "id": 6526587,
+    "properties": {
+     "address": "112 East Maple Street",
+     "city": "Mcconnellsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1437398442000,
+     "name": "McConnellsburg Volunteer Fire Company - Station 56",
+     "objectid": 6526587,
+     "permanent_identifier": "8be2e30c-31fb-4bb1-99e9-e39582a1ac9e",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.580633,
+      39.756005
+     ],
+     "type": "Point"
+    },
+    "id": 6533731,
+    "properties": {
+     "address": "29 South Potomac Street",
+     "city": "Waynesboro",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Waynesboro Fire Department Company 2 - Station 1 Headquarters",
+     "objectid": 6533731,
+     "permanent_identifier": "943bd6ac-e91e-4acf-bddb-2bf70b5a36ae",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.728422,
+      39.775196
+     ],
+     "type": "Point"
+    },
+    "id": 6545754,
+    "properties": {
+     "address": "842 South Washington Street",
+     "city": "Greencastle",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Rescue Hose Fire Department - Company 3",
+     "objectid": 6545754,
+     "permanent_identifier": "a292e20e-a015-4e59-86dc-a1edc67687d1",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.957921,
+      39.465728
+     ],
+     "type": "Point"
+    },
+    "id": 6560468,
+    "properties": {
+     "address": "715 North Queen Street",
+     "city": "Martinsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1462373059000,
+     "name": "Westphal Host Company Station 5 Martinsburg Fire Department",
+     "objectid": 6560468,
+     "permanent_identifier": "b45e6f63-a24d-497c-92d1-00165696e82e",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.481898,
+      39.852845
+     ],
+     "type": "Point"
+    },
+    "id": 6563007,
+    "properties": {
+     "address": "11207 Loop Road",
+     "city": "Fayetteville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "South Mountain Volunteer Fire Department - Company 16",
+     "objectid": 6563007,
+     "permanent_identifier": "b79688fb-aeb4-4155-88bc-dc5e276197a5",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.658312,
+      39.939389
+     ],
+     "type": "Point"
+    },
+    "id": 6568597,
+    "properties": {
+     "address": "130 North 2nd Street",
+     "city": "Chambersburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1524614400000,
+     "name": "Chambersburg Fire Department Company 1 - Headquarters Station",
+     "objectid": 6568597,
+     "permanent_identifier": "bdd29aee-e451-497d-a32b-4696ce1726da",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.370716,
+      39.784784
+     ],
+     "type": "Point"
+    },
+    "id": 6572814,
+    "properties": {
+     "address": "106 Steelman Street",
+     "city": "Fairfield",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1727276451000,
+     "name": "Fairfield Community Fire and Emergency Medical Services Station 2",
+     "objectid": 6572814,
+     "permanent_identifier": "c2e498a7-f2dc-4eb8-bdab-669e8b8a4b61",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.699694,
+      39.683855
+     ],
+     "type": "Point"
+    },
+    "id": 6574665,
+    "properties": {
+     "address": "19307 Longmeadow Road",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Longmeadow Volunteer Fire Department Company 27",
+     "objectid": 6574665,
+     "permanent_identifier": "c50aaa45-4c51-4a36-86f9-f0e52d612ad0",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.797717,
+      39.918213
+     ],
+     "type": "Point"
+    },
+    "id": 6587277,
+    "properties": {
+     "address": "34 School House Road",
+     "city": "Saint Thomas",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Saint Thomas Township Volunteer Fire and Rescue Department - Company 18",
+     "objectid": 6587277,
+     "permanent_identifier": "d402483f-5806-42b5-9a5d-7922b9c3ae9b",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.659671,
+      39.92836
+     ],
+     "type": "Point"
+    },
+    "id": 6597546,
+    "properties": {
+     "address": "261 East McKinley Street",
+     "city": "Chambersburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Chambersburg Fire Department Company 1 - McKinley Street Station",
+     "objectid": 6597546,
+     "permanent_identifier": "e0d0793a-1f30-46ed-b179-22c82e38ada1",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.729249,
+      39.646562
+     ],
+     "type": "Point"
+    },
+    "id": 6597619,
+    "properties": {
+     "address": "526 Washington Avenue",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1756081280000,
+     "name": "Western Enterprise Fire Company 4",
+     "objectid": 6597619,
+     "permanent_identifier": "e10484f6-de4b-4a06-8efb-4c2eaf1e8f60",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.721164,
+      39.641272
+     ],
+     "type": "Point"
+    },
+    "id": 6599631,
+    "properties": {
+     "address": "33 South Potomac Street",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "First Hagerstown Hose Company",
+     "objectid": 6599631,
+     "permanent_identifier": "e3765e1c-df99-4fe5-9f6d-ce74f715e72c",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.430307,
+      39.733073
+     ],
+     "type": "Point"
+    },
+    "id": 6602445,
+    "properties": {
+     "address": "Gladhill Road",
+     "city": "Fairfield",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1575504000000,
+     "name": "Raven Rock Fire Station",
+     "objectid": 6602445,
+     "permanent_identifier": "e6a88311-4f71-4b4e-8763-46d9a61f4d4a",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.573195,
+      39.656087
+     ],
+     "type": "Point"
+    },
+    "id": 6609007,
+    "properties": {
+     "address": "22 North Main Street",
+     "city": "Smithsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "Smithsburg Community Volunteer Fire Company",
+     "objectid": 6609007,
+     "permanent_identifier": "ef18640f-1eba-4055-8edd-3e6a15aa1d85",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.571493,
+      39.751435
+     ],
+     "type": "Point"
+    },
+    "id": 6616294,
+    "properties": {
+     "address": "10 Virginia Avenue",
+     "city": "Waynesboro",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Waynesboro Fire Department Company 2 - Station 2",
+     "objectid": 6616294,
+     "permanent_identifier": "f77bb01b-07a0-46a3-bd5c-f2b4b610e540",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.75032,
+      39.459001
+     ],
+     "type": "Point"
+    },
+    "id": 6619792,
+    "properties": {
+     "address": "110 West Chapline Street",
+     "city": "Sharpsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Sharpsburg Volunteer Fire Company Station 1",
+     "objectid": 6619792,
+     "permanent_identifier": "fc0a3621-d938-436b-aee8-3a8e43fc245e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.69759,
+      39.634206
+     ],
+     "type": "Point"
+    },
+    "id": 6622089,
+    "properties": {
+     "address": "100 Eastern Boulevard North",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1672790400000,
+     "name": "Independent Junior Fire Engine Company 3",
+     "objectid": 6622089,
+     "permanent_identifier": "fe74a7c5-95d3-4cea-9792-ff7e93707ccf",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.565044,
+      39.506094
+     ],
+     "type": "Point"
+    },
+    "id": 6647699,
+    "properties": {
+     "address": "301 Main Street",
+     "city": "Myersville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Myersville Fire Company Station 8",
+     "objectid": 6647699,
+     "permanent_identifier": "18952b53-3ce2-4364-a18f-15eb825b0565",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.413332,
+      39.538152
+     ],
+     "type": "Point"
+    },
+    "id": 6665856,
+    "properties": {
+     "address": "11101 Hessong Bridge Road",
+     "city": "Thurmont",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Lewistown Volunteer Fire Company 22",
+     "objectid": 6665856,
+     "permanent_identifier": "2afe9c4b-fa76-4556-a375-81eefed76770",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.973051,
+      39.455539
+     ],
+     "type": "Point"
+    },
+    "id": 6668007,
+    "properties": {
+     "address": "311 Cumberland Valley Place",
+     "city": "Martinsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Ryneal Fire Company 1",
+     "objectid": 6668007,
+     "permanent_identifier": "2d66db4f-394f-4564-a7d9-024e759bf6fe",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.710956,
+      39.610043
+     ],
+     "type": "Point"
+    },
+    "id": 6680158,
+    "properties": {
+     "address": "2 South Westside Avenue",
+     "city": "Funkstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Funkstown Volunteer Fire Company Station 10",
+     "objectid": 6680158,
+     "permanent_identifier": "39ca5248-9252-4ef5-b0c7-c3f81af8e139",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.73197,
+      39.705616
+     ],
+     "type": "Point"
+    },
+    "id": 6713951,
+    "properties": {
+     "address": "18434 Showalter Road",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Hagerstown Regional Airport Fire Department",
+     "objectid": 6713951,
+     "permanent_identifier": "5bfeca49-1a4e-4482-b844-be5909a6bada",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.550082,
+      39.572815
+     ],
+     "type": "Point"
+    },
+    "id": 6716496,
+    "properties": {
+     "address": "12464 Wolfsville Road",
+     "city": "Myersville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Wolfsville Volunteer Fire Company Station 21",
+     "objectid": 6716496,
+     "permanent_identifier": "5ec69bf8-ce8f-44fe-aadb-cd954985364e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.745306,
+      39.691984
+     ],
+     "type": "Point"
+    },
+    "id": 6729019,
+    "properties": {
+     "address": "13730 Maugansville Road",
+     "city": "Maugansville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Maugansville Goodwill Volunteer Fire Department Company 13",
+     "objectid": 6729019,
+     "permanent_identifier": "6bcd51a9-7e7b-4bc6-8893-8bf8f1ed15df",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.819864,
+      39.594126
+     ],
+     "type": "Point"
+    },
+    "id": 6734625,
+    "properties": {
+     "address": "2 Brandy Drive",
+     "city": "Williamsport",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "Williamsport Volunteer Fire Department and Emergency Medical Services",
+     "objectid": 6734625,
+     "permanent_identifier": "71802d84-3632-42e8-9c49-e598dc6d5a68",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.744212,
+      39.534981
+     ],
+     "type": "Point"
+    },
+    "id": 6743932,
+    "properties": {
+     "address": "18002 Tilghmanton Road",
+     "city": "Fairplay",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Fairplay Volunteer Fire Company 12",
+     "objectid": 6743932,
+     "permanent_identifier": "7abc7b53-3447-4051-96da-ac30f187f871",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.545696,
+      39.443134
+     ],
+     "type": "Point"
+    },
+    "id": 6744306,
+    "properties": {
+     "address": "13 South Church Street",
+     "city": "Middletown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Middletown Volunteer Fire Company Station 7",
+     "objectid": 6744306,
+     "permanent_identifier": "7ad794d6-f43e-47f3-959a-702182f03bc1",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.968437,
+      39.460035
+     ],
+     "type": "Point"
+    },
+    "id": 6753484,
+    "properties": {
+     "address": "200 North Raleigh Street",
+     "city": "Martinsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Martinsburg Fire Department",
+     "objectid": 6753484,
+     "permanent_identifier": "8438ce6f-b41b-4046-810d-f0d92d0af21e",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.62033,
+      39.69352
+     ],
+     "type": "Point"
+    },
+    "id": 6758183,
+    "properties": {
+     "address": "21431 Leiter Street",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Leitersburg Volunteer Fire Company 9",
+     "objectid": 6758183,
+     "permanent_identifier": "88f29fa1-ff6a-4556-b101-c46a8cbbfff8",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.555123,
+      39.912596
+     ],
+     "type": "Point"
+    },
+    "id": 6765666,
+    "properties": {
+     "address": "101 West Main Street",
+     "city": "Fayetteville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1400674966000,
+     "name": "Fayetteville Volunteer Fire Department and Emergency Medical Service Company 7",
+     "objectid": 6765666,
+     "permanent_identifier": "90aa5b11-0e21-4af3-995b-5f5dbd85abb4",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.818743,
+      39.43357
+     ],
+     "type": "Point"
+    },
+    "id": 6779737,
+    "properties": {
+     "address": "8052 Martinsburg Pike",
+     "city": "Shepherdstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Shepherdstown Volunteer Fire Department Company 3",
+     "objectid": 6779737,
+     "permanent_identifier": "9df745d6-dcd1-47a0-8322-6465beb758d6",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.424236,
+      39.4356
+     ],
+     "type": "Point"
+    },
+    "id": 6806447,
+    "properties": {
+     "address": "1504 Porter Street",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Fort Detrick Fire and Emergency Services",
+     "objectid": 6806447,
+     "permanent_identifier": "b8e4540f-1f33-422e-a159-953e652b09f0",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.453544,
+      39.74502
+     ],
+     "type": "Point"
+    },
+    "id": 6813429,
+    "properties": {
+     "address": "1340 Old Waynesboro Road",
+     "city": "Fairfield",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1674864000000,
+     "name": "Fountaindale Volunteer Fire Company - Station 3",
+     "objectid": 6813429,
+     "permanent_identifier": "bfec787b-9ad3-4574-9f39-47069f130a67",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -78.077852,
+      39.592198
+     ],
+     "type": "Point"
+    },
+    "id": 6822012,
+    "properties": {
+     "address": "3676 Mountain Lake Road",
+     "city": "Hedgesville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Hedgesville Fire Department Substation",
+     "objectid": 6822012,
+     "permanent_identifier": "c873c867-fcde-43b8-ade6-c0e858c4b22b",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.358872,
+      39.476005
+     ],
+     "type": "Point"
+    },
+    "id": 6834941,
+    "properties": {
+     "address": "79 West Frederick Street",
+     "city": "Walkersville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Walkersville Volunteer Fire Company Station 11",
+     "objectid": 6834941,
+     "permanent_identifier": "d5f219a3-cf0d-4a01-be7e-4f326ffa18bf",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.355417,
+      39.8828
+     ],
+     "type": "Point"
+    },
+    "id": 6838090,
+    "properties": {
+     "address": "1069 Old Route 30",
+     "city": "Cashtown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1471005108000,
+     "name": "Cashtown Community Fire Department Station 4",
+     "objectid": 6838090,
+     "permanent_identifier": "d90695a4-0da3-4baf-bd0d-9621f393d4fd",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.905729,
+      39.522933
+     ],
+     "type": "Point"
+    },
+    "id": 6844320,
+    "properties": {
+     "address": "775 Bedington Road",
+     "city": "Martinsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1462373059000,
+     "name": "Bedington Volunteer Fire Department",
+     "objectid": 6844320,
+     "permanent_identifier": "df42a9ed-c2c2-4520-b865-6fdb598789d3",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.9449,
+      39.495194
+     ],
+     "type": "Point"
+    },
+    "id": 6850147,
+    "properties": {
+     "address": "1036 Mid Atlantic Parkway",
+     "city": "Martinsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Bedington Volunteer Fire Department Substation",
+     "objectid": 6850147,
+     "permanent_identifier": "e56fd7b7-4ed9-4643-ab32-f0ef6d220a26",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.99061,
+      39.544786
+     ],
+     "type": "Point"
+    },
+    "id": 6853421,
+    "properties": {
+     "address": "4217 Hedgesville Road",
+     "city": "Hedgesville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Hedgesville Volunteer Fire Department",
+     "objectid": 6853421,
+     "permanent_identifier": "e8c84851-0878-4d35-a947-5c18bc44cff2",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.764281,
+      39.61968
+     ],
+     "type": "Point"
+    },
+    "id": 6859116,
+    "properties": {
+     "address": "11114 Lincoln Avenue",
+     "city": "Hagerstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "Volunteer Fire Company of Halfway Company 26",
+     "objectid": 6859116,
+     "permanent_identifier": "ee83222f-71dc-4163-9b7d-8d59113cbdeb",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.646838,
+      39.992264
+     ],
+     "type": "Point"
+    },
+    "id": 6864331,
+    "properties": {
+     "address": "5136 Coffey Avenue",
+     "city": "Chambersburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Letterkenny Fire and Emergency Services",
+     "objectid": 6864331,
+     "permanent_identifier": "f375d977-da07-43d8-ad16-3768361a0df5",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.383328,
+      39.618821
+     ],
+     "type": "Point"
+    },
+    "id": 6869357,
+    "properties": {
+     "address": "14026 Graceham Road",
+     "city": "Thurmont",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1660694400000,
+     "name": "Graceham Volunteer Fire Company",
+     "objectid": 6869357,
+     "permanent_identifier": "f8c2923d-d984-42f0-8fd9-a90f48e1e163",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.403836,
+      39.45693
+     ],
+     "type": "Point"
+    },
+    "id": 6880029,
+    "properties": {
+     "address": "37 Thomas Johnson Drive",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1732802991000,
+     "name": "Frederick County Division of Fire and Rescue Services Northgate Fire station 29",
+     "objectid": 6880029,
+     "permanent_identifier": "e35e9302-363f-48bc-886f-0094f2f7ea46",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-13T08:17:13Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Fri, 13 Nov 2026 08:17:13 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/16/query?where=1%3D1&geometry=-78.100340%2C39.432536%2C-77.347660%2C40.011464&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

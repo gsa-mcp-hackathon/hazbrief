@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T16:27:38Z",
+  "http_mode": "record",
+  "id": "1b691b02e1eff85b8983b09d9427ee41bdb0b388608478c5dd39ee23a105b3c8",
+  "name": "GET epqs",
+  "params": {
+   "method": "GET",
+   "url": "https://epqs.nationalmap.gov/v1/json?x=-77.539400&y=39.271074&wkid=4326&units=Meters&includeDate=false"
+  },
+  "startedAtTime": "2026-10-27T16:27:38Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://epqs.nationalmap.gov/v1/json?x=-77.539400&y=39.271074&wkid=4326&units=Meters&includeDate=false",
+    "id": "epqs"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T16:27:38Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 162,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "b6b986b03b54bceebd857fff3fec5fc4779f27cbcf6b0561d12de55d81860417"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "epqs",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

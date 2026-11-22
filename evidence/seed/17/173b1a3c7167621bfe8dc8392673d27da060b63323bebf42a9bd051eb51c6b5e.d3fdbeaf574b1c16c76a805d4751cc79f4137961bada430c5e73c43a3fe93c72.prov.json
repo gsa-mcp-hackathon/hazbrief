@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T04:32:21Z",
+  "http_mode": "record",
+  "id": "d3fdbeaf574b1c16c76a805d4751cc79f4137961bada430c5e73c43a3fe93c72",
+  "name": "GET census_geocoder",
+  "params": {
+   "method": "GET",
+   "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=299+PENN+AVE%2C+SCRANTON%2C+PA%2C+18503&benchmark=Public_AR_Current&format=json"
+  },
+  "startedAtTime": "2026-10-28T04:32:21Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=299+PENN+AVE%2C+SCRANTON%2C+PA%2C+18503&benchmark=Public_AR_Current&format=json",
+    "id": "census:geocoder"
+   }
+  ]
+ },
+ "as_of": "2026-10-28T04:32:21Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 640,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "173b1a3c7167621bfe8dc8392673d27da060b63323bebf42a9bd051eb51c6b5e"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "census:geocoder",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

@@ -1,0 +1,42 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T15:55:36Z",
+  "http_mode": "record",
+  "id": "97715f183aece46a7dbbc457a16e12863a9eb889661ca3bbd8b1561080470f35",
+  "name": "GET nlcd_cog",
+  "params": {
+   "method": "GET",
+   "range": "bytes=148052-148059",
+   "url": "https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/nlcd-2025-cog.tif"
+  },
+  "startedAtTime": "2026-10-28T15:55:36Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/nlcd-2025-cog.tif",
+    "id": "nlcd:cog-mirror"
+   }
+  ]
+ },
+ "as_of": "2026-07-31T02:51:33Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 8,
+  "encoding": "bytes",
+  "media_type": "image/tiff",
+  "sha256": "78934d1691e9abac23181ffd99684daaeb5d924e8d253819a4938d1ffa97cc86"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "nlcd:cog-mirror",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

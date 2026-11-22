@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T04:43:16Z",
+  "http_mode": "record",
+  "id": "73f151688d1f80c6369f24fd0edfe1e2115b702513a63286636b48931852f99c",
+  "name": "GET census",
+  "params": {
+   "method": "GET",
+   "url": "https://api.census.gov/data/2024/cre?get=PRED3_E%2CPOPUNI%2CPRED3_PE&for=tract%3A%2A&in=state%3A42+county%3A069"
+  },
+  "startedAtTime": "2026-10-28T04:43:16Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.census.gov/data/2024/cre?get=PRED3_E%2CPOPUNI%2CPRED3_PE&for=tract%3A%2A&in=state%3A42+county%3A069",
+    "id": "census:cre"
+   }
+  ]
+ },
+ "as_of": "2026-10-28T04:43:16Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 2651,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "0510b84030e1fc0fb9b55c5cad0cfbc46a7c0ad010b0cc36b428d3e46cc69fbe"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "census:cre",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

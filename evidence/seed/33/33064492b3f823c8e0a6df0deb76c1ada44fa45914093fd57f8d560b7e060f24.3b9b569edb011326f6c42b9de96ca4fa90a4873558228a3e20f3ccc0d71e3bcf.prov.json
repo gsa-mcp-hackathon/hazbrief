@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:26:28Z",
+  "http_mode": "record",
+  "id": "3b9b569edb011326f6c42b9de96ca4fa90a4873558228a3e20f3ccc0d71e3bcf",
+  "name": "GET pasda_penndot",
+  "params": {
+   "method": "GET",
+   "url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/4/query?where=1%3D1&geometry=-77.7345%2C39.7205%2C-77.7255%2C39.7345&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=CTY_CODE%2CT_RT_NO%2CTRAF_RT_NO%2CSEG_NO%2CSEG_LNGTH_%2CCUM_OFFSET%2CCUM_OFFS_1%2CMILE_POINT%2CDIR_IND%2CSIDE_IND%2CFAC_TYPE%2CBGN_DESC%2CEND_DESC%2CGIS_UPDATE&returnGeometry=true&outSR=4326&f=json"
+  },
+  "startedAtTime": "2026-10-27T03:26:28Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/4/query?where=1%3D1&geometry=-77.7345%2C39.7205%2C-77.7255%2C39.7345&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=CTY_CODE%2CT_RT_NO%2CTRAF_RT_NO%2CSEG_NO%2CSEG_LNGTH_%2CCUM_OFFSET%2CCUM_OFFS_1%2CMILE_POINT%2CDIR_IND%2CSIDE_IND%2CFAC_TYPE%2CBGN_DESC%2CEND_DESC%2CGIS_UPDATE&returnGeometry=true&outSR=4326&f=json",
+    "id": "lrs:penndot"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T03:26:28Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 11824,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "33064492b3f823c8e0a6df0deb76c1ada44fa45914093fd57f8d560b7e060f24"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "lrs:penndot",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

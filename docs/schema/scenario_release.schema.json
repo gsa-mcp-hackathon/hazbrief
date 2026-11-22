@@ -1,0 +1,70 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "dependentRequired": {
+  "hole_diameter_m": [
+   "hole_source",
+   "quantity_kg"
+  ],
+  "quantity_kg": [
+   "quantity_source"
+  ]
+ },
+ "description": "What was released, as the scenario states it.",
+ "properties": {
+  "hole_diameter_m": {
+   "anyOf": [
+    {
+     "exclusiveMinimum": 0,
+     "type": "number"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Hole Diameter M"
+  },
+  "hole_source": {
+   "anyOf": [
+    {
+     "minLength": 1,
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Hole Source"
+  },
+  "quantity_kg": {
+   "anyOf": [
+    {
+     "exclusiveMinimum": 0,
+     "type": "number"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Quantity Kg"
+  },
+  "quantity_source": {
+   "anyOf": [
+    {
+     "minLength": 1,
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Quantity Source"
+  }
+ },
+ "title": "Release",
+ "type": "object"
+}

@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-07T08:30:27Z",
+  "http_mode": "record",
+  "id": "fdd85d449fe7191c0bf8a2adb874f131d27cb729270417d1d38942bc5681c2fc",
+  "name": "GET pubchem",
+  "params": {
+   "method": "GET",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/24526/JSON?heading=Experimental+Properties"
+  },
+  "startedAtTime": "2026-11-07T08:30:27Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/24526/JSON?heading=Experimental+Properties",
+    "id": "pubchem:pug_view"
+   }
+  ]
+ },
+ "as_of": "2026-11-07T08:30:27Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 55809,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "22d616b294f1f6f15c975a0466fe232c885d26816e2fd2d11659079116e4b467"
+ },
+ "horizon_s": 126230400,
+ "horizon_source": "pubchem:pug_view",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

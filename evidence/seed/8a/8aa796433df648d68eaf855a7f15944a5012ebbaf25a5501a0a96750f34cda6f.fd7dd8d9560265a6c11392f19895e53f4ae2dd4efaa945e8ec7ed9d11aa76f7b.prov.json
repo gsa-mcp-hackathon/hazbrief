@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T05:06:43Z",
+  "http_mode": "record",
+  "id": "fd7dd8d9560265a6c11392f19895e53f4ae2dd4efaa945e8ec7ed9d11aa76f7b",
+  "name": "GET census",
+  "params": {
+   "method": "GET",
+   "url": "https://api.census.gov/data/2020/dec/dhc?get=P1_001N%2CP18_001N%2CP18_005N%2CP18_015N%2CP18_025N%2CP18_036N%2CP18_046N%2CP18_056N%2CP18_006N%2CP18_016N%2CP18_026N%2CP18_037N%2CP18_047N%2CP18_057N%2CP18_007N%2CP18_017N%2CP18_027N%2CP18_038N%2CP18_048N%2CP18_058N%2CP18_008N%2CP18_018N%2CP18_028N%2CP18_039N%2CP18_049N%2CP18_059N%2CP18_010N%2CP18_020N%2CP18_030N%2CP18_041N%2CP18_051N%2CP18_061N%2CP18_011N%2CP18_021N%2CP18_031N%2CP18_042N%2CP18_052N%2CP18_062N%2CP18_012N%2CP18_022N%2CP18_032N%2CP18_043N%2CP18_053N%2CP18_063N&for=block%3A%2A&in=state%3A51+county%3A510+tract%3A200703"
+  },
+  "startedAtTime": "2026-10-27T05:06:43Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.census.gov/data/2020/dec/dhc?get=P1_001N%2CP18_001N%2CP18_005N%2CP18_015N%2CP18_025N%2CP18_036N%2CP18_046N%2CP18_056N%2CP18_006N%2CP18_016N%2CP18_026N%2CP18_037N%2CP18_047N%2CP18_057N%2CP18_007N%2CP18_017N%2CP18_027N%2CP18_038N%2CP18_048N%2CP18_058N%2CP18_008N%2CP18_018N%2CP18_028N%2CP18_039N%2CP18_049N%2CP18_059N%2CP18_010N%2CP18_020N%2CP18_030N%2CP18_041N%2CP18_051N%2CP18_061N%2CP18_011N%2CP18_021N%2CP18_031N%2CP18_042N%2CP18_052N%2CP18_062N%2CP18_012N%2CP18_022N%2CP18_032N%2CP18_043N%2CP18_053N%2CP18_063N&for=block%3A%2A&in=state%3A51+county%3A510+tract%3A200703",
+    "id": "census:dhc2020"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T05:06:43Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 10807,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "8aa796433df648d68eaf855a7f15944a5012ebbaf25a5501a0a96750f34cda6f"
+ },
+ "horizon_s": 315576000,
+ "horizon_source": "census:dhc2020",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

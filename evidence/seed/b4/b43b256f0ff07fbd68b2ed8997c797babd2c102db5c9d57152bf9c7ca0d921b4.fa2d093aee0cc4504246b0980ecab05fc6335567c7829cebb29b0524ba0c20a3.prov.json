@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-09T09:04:59Z",
+  "http_mode": "record",
+  "id": "fa2d093aee0cc4504246b0980ecab05fc6335567c7829cebb29b0524ba0c20a3",
+  "name": "GET bts_ntad",
+  "params": {
+   "method": "GET",
+   "url": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_North_American_Rail_Network_Lines/FeatureServer/0/query?where=1%3D1&geometry=-77.587993%2C39.214786%2C-77.503452%2C39.284607&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CFRAARCID%2CRROWNER1%2CSUBDIV%2CYARDNAME%2CNET%2CTRACKS%2CSTATEAB&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+  },
+  "startedAtTime": "2026-11-09T09:04:59Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_North_American_Rail_Network_Lines/FeatureServer/0/query?where=1%3D1&geometry=-77.587993%2C39.214786%2C-77.503452%2C39.284607&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CFRAARCID%2CRROWNER1%2CSUBDIV%2CYARDNAME%2CNET%2CTRACKS%2CSTATEAB&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson",
+    "id": "bts_ntad"
+   }
+  ]
+ },
+ "as_of": "2026-10-20T23:47:59Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 6454,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "b43b256f0ff07fbd68b2ed8997c797babd2c102db5c9d57152bf9c7ca0d921b4"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "bts_ntad",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

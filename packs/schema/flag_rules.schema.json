@@ -1,0 +1,681 @@
+{
+ "$defs": {
+  "AttributionCredit": {
+   "additionalProperties": false,
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "edition": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Edition"
+    },
+    "publisher": {
+     "title": "Publisher",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "url": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Url"
+    }
+   },
+   "required": [
+    "doc_id",
+    "title",
+    "publisher",
+    "edition",
+    "url"
+   ],
+   "title": "AttributionCredit",
+   "type": "object"
+  },
+  "AttributionNotice": {
+   "additionalProperties": false,
+   "description": "A reuse or credit notice, verbatim from the held document at `locator`.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "locator",
+    "text"
+   ],
+   "title": "AttributionNotice",
+   "type": "object"
+  },
+  "FlagCause": {
+   "additionalProperties": false,
+   "description": "The cause of a rule consolidated into this flag (DN-006 section 3.4; ISA-18.2\nuniqueness): the flag fires when its own predicate holds or any merged cause does.",
+   "properties": {
+    "predicate": {
+     "$ref": "#/$defs/FlagPredicate"
+    },
+    "rule_id": {
+     "title": "Rule Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "rule_id",
+    "predicate"
+   ],
+   "title": "FlagCause",
+   "type": "object"
+  },
+  "FlagComparison": {
+   "additionalProperties": false,
+   "description": "`input` compared by `op` with a literal `value`, a rule param (`param`), or\nanother input (`ref`). Exactly one of the three is set, except for the unary\nis_true/is_false.",
+   "properties": {
+    "input": {
+     "title": "Input",
+     "type": "string"
+    },
+    "op": {
+     "enum": [
+      "gt",
+      "ge",
+      "lt",
+      "le",
+      "eq",
+      "ne",
+      "in",
+      "is_true",
+      "is_false"
+     ],
+     "title": "Op",
+     "type": "string"
+    },
+    "param": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Param"
+    },
+    "ref": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Ref"
+    },
+    "value": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "integer"
+      },
+      {
+       "type": "number"
+      },
+      {
+       "type": "boolean"
+      },
+      {
+       "items": {
+        "type": "string"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Value"
+    }
+   },
+   "required": [
+    "input",
+    "op"
+   ],
+   "title": "FlagComparison",
+   "type": "object"
+  },
+  "FlagInput": {
+   "additionalProperties": false,
+   "description": "A value a rule reads: `name` (its name in the predicate and template), the DN-001\nsection 7 tool that produces it, the source dataset field, and the dataset.",
+   "properties": {
+    "dataset": {
+     "title": "Dataset",
+     "type": "string"
+    },
+    "description": {
+     "title": "Description",
+     "type": "string"
+    },
+    "field": {
+     "title": "Field",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "tool": {
+     "title": "Tool",
+     "type": "string"
+    }
+   },
+   "required": [
+    "name",
+    "tool",
+    "field",
+    "dataset",
+    "description"
+   ],
+   "title": "FlagInput",
+   "type": "object"
+  },
+  "FlagKind": {
+   "additionalProperties": false,
+   "description": "A rule kind (HB-12, `packs/src/flag_kinds.yaml`): `origin` authored (HB-03's\nhand-written rules), guide (an orange guide section), cross (a property several\nguides state) or table (a pack field).",
+   "properties": {
+    "description": {
+     "title": "Description",
+     "type": "string"
+    },
+    "kind": {
+     "title": "Kind",
+     "type": "string"
+    },
+    "origin": {
+     "enum": [
+      "authored",
+      "guide",
+      "cross",
+      "table"
+     ],
+     "title": "Origin",
+     "type": "string"
+    }
+   },
+   "required": [
+    "kind",
+    "origin",
+    "description"
+   ],
+   "title": "FlagKind",
+   "type": "object"
+  },
+  "FlagPredicate": {
+   "additionalProperties": false,
+   "properties": {
+    "mode": {
+     "enum": [
+      "all",
+      "any"
+     ],
+     "title": "Mode",
+     "type": "string"
+    },
+    "terms": {
+     "items": {
+      "$ref": "#/$defs/FlagComparison"
+     },
+     "title": "Terms",
+     "type": "array"
+    }
+   },
+   "required": [
+    "mode",
+    "terms"
+   ],
+   "title": "FlagPredicate",
+   "type": "object"
+  },
+  "FlagReceipt": {
+   "additionalProperties": false,
+   "description": "A held document, the page (PDF page, or form-feed block for a converted file, as\nSquiddy numbers them) and a verbatim quote the build verified there. `text_layer`\n(schema version 4) names the text the quote was verified against: `pdf_text` (the\npage text the corpus reader gives, HB-03's rule) or `keyA` (HB-03b's Key A text of\nan orange guide page, HB-12's admission test).",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "page": {
+     "title": "Page",
+     "type": "integer"
+    },
+    "quote": {
+     "title": "Quote",
+     "type": "string"
+    },
+    "supports": {
+     "title": "Supports",
+     "type": "string"
+    },
+    "text_layer": {
+     "enum": [
+      "pdf_text",
+      "keyA"
+     ],
+     "title": "Text Layer",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "page",
+    "quote",
+    "supports",
+    "text_layer"
+   ],
+   "title": "FlagReceipt",
+   "type": "object"
+  },
+  "FlagRule": {
+   "additionalProperties": false,
+   "description": "A flag rule. Schema version 4 (HB-12): `kind`; `source_kind` (authored: HB-03's\nhand-written rules; guide: mined from an orange guide and admitted by the substring\ntest; table: binds a pack field, written by hand); `guides`, the orange guides whose\nmaterials the rule applies to (guide rules; empty otherwise); `dormant` and\n`dormant_inputs`, the inputs no registered tool supplies yet (the rule cannot fire\nuntil one does).",
+   "properties": {
+    "basis": {
+     "title": "Basis",
+     "type": "string"
+    },
+    "classes": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Classes",
+     "type": "array"
+    },
+    "consequence": {
+     "$ref": "#/$defs/FlagStatement"
+    },
+    "dormant": {
+     "title": "Dormant",
+     "type": "boolean"
+    },
+    "dormant_inputs": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Dormant Inputs",
+     "type": "array"
+    },
+    "gaps": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Gaps",
+     "type": "array"
+    },
+    "guides": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Guides",
+     "type": "array"
+    },
+    "indication": {
+     "title": "Indication",
+     "type": "boolean"
+    },
+    "inputs": {
+     "items": {
+      "$ref": "#/$defs/FlagInput"
+     },
+     "title": "Inputs",
+     "type": "array"
+    },
+    "kind": {
+     "title": "Kind",
+     "type": "string"
+    },
+    "merged": {
+     "items": {
+      "$ref": "#/$defs/FlagCause"
+     },
+     "title": "Merged",
+     "type": "array"
+    },
+    "modes": {
+     "items": {
+      "enum": [
+       "highway",
+       "rail"
+      ],
+      "type": "string"
+     },
+     "title": "Modes",
+     "type": "array"
+    },
+    "params": {
+     "additionalProperties": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "number"
+       },
+       {
+        "type": "string"
+       }
+      ]
+     },
+     "title": "Params",
+     "type": "object"
+    },
+    "predicate": {
+     "$ref": "#/$defs/FlagPredicate"
+    },
+    "priority": {
+     "enum": [
+      "high",
+      "medium",
+      "low"
+     ],
+     "title": "Priority",
+     "type": "string"
+    },
+    "receipts": {
+     "items": {
+      "$ref": "#/$defs/FlagReceipt"
+     },
+     "title": "Receipts",
+     "type": "array"
+    },
+    "response": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/FlagStatement"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "rule_id": {
+     "title": "Rule Id",
+     "type": "string"
+    },
+    "source_kind": {
+     "enum": [
+      "authored",
+      "guide",
+      "table"
+     ],
+     "title": "Source Kind",
+     "type": "string"
+    },
+    "template": {
+     "title": "Template",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    }
+   },
+   "required": [
+    "rule_id",
+    "title",
+    "kind",
+    "source_kind",
+    "classes",
+    "guides",
+    "modes",
+    "inputs",
+    "params",
+    "predicate",
+    "template",
+    "receipts",
+    "basis",
+    "gaps",
+    "dormant",
+    "dormant_inputs",
+    "consequence",
+    "response",
+    "priority",
+    "indication",
+    "merged"
+   ],
+   "title": "FlagRule",
+   "type": "object"
+  },
+  "FlagRulesData": {
+   "additionalProperties": false,
+   "properties": {
+    "guide_rule_sets": {
+     "additionalProperties": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "title": "Guide Rule Sets",
+     "type": "object"
+    },
+    "kinds": {
+     "items": {
+      "$ref": "#/$defs/FlagKind"
+     },
+     "title": "Kinds",
+     "type": "array"
+    },
+    "rule_sets": {
+     "additionalProperties": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "title": "Rule Sets",
+     "type": "object"
+    },
+    "rules": {
+     "items": {
+      "$ref": "#/$defs/FlagRule"
+     },
+     "title": "Rules",
+     "type": "array"
+    },
+    "table_rule_set": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Table Rule Set",
+     "type": "array"
+    }
+   },
+   "required": [
+    "rules",
+    "rule_sets",
+    "guide_rule_sets",
+    "table_rule_set",
+    "kinds"
+   ],
+   "title": "FlagRulesData",
+   "type": "object"
+  },
+  "FlagStatement": {
+   "additionalProperties": false,
+   "description": "One ERG sentence by locator: a flag's consequence or its response (DN-006 section\n3.1). `text_layer` as `FlagReceipt`'s.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "page": {
+     "title": "Page",
+     "type": "integer"
+    },
+    "quote": {
+     "title": "Quote",
+     "type": "string"
+    },
+    "text_layer": {
+     "enum": [
+      "pdf_text",
+      "keyA"
+     ],
+     "title": "Text Layer",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "page",
+    "quote",
+    "text_layer"
+   ],
+   "title": "FlagStatement",
+   "type": "object"
+  },
+  "PackAttribution": {
+   "additionalProperties": false,
+   "properties": {
+    "credits": {
+     "items": {
+      "$ref": "#/$defs/AttributionCredit"
+     },
+     "title": "Credits",
+     "type": "array"
+    },
+    "notices": {
+     "items": {
+      "$ref": "#/$defs/AttributionNotice"
+     },
+     "title": "Notices",
+     "type": "array"
+    }
+   },
+   "required": [
+    "credits",
+    "notices"
+   ],
+   "title": "PackAttribution",
+   "type": "object"
+  },
+  "PackSource": {
+   "additionalProperties": false,
+   "description": "One held document a pack was parsed from: its corpus doc_id, the sha256 of the\nheld bytes, where in it the pack reads, and its licence as `corpus/sources.yaml`\nrecords it.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "licence": {
+     "title": "Licence",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "raw_sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Raw Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "raw_sha256",
+    "locator",
+    "licence"
+   ],
+   "title": "PackSource",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "properties": {
+  "attribution": {
+   "$ref": "#/$defs/PackAttribution"
+  },
+  "built_at": {
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+   "title": "Built At",
+   "type": "string"
+  },
+  "data": {
+   "$ref": "#/$defs/FlagRulesData"
+  },
+  "kind": {
+   "const": "flag_rules",
+   "title": "Kind",
+   "type": "string"
+  },
+  "pack_id": {
+   "title": "Pack Id",
+   "type": "string"
+  },
+  "schema_version": {
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Sha256",
+   "type": "string"
+  },
+  "sources": {
+   "items": {
+    "$ref": "#/$defs/PackSource"
+   },
+   "title": "Sources",
+   "type": "array"
+  },
+  "version": {
+   "title": "Version",
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema_version",
+  "pack_id",
+  "version",
+  "built_at",
+  "sha256",
+  "sources",
+  "attribution",
+  "kind",
+  "data"
+ ],
+ "title": "FlagRulesPack",
+ "type": "object"
+}

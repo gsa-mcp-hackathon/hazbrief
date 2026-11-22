@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T15:10:18Z",
+  "http_mode": "record",
+  "id": "7ce7003e95946f3fecc1fd937b880cdd19cdc55f23bf1ba36e1ed9b5e3c2dd7b",
+  "name": "GET usgs_3dhp",
+  "params": {
+   "method": "GET",
+   "url": "https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer/50/query?maxAllowableOffset=1e-05&where=1%3D1&geometry=-77.048539%2C38.772218%2C-76.982885%2C38.814569&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=id3dhp%2Cgnisidlabel%2Cfeaturetypelabel%2Cmainstemid%2Chydrosequence%2Cdnhydrosequence&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=1000&f=geojson"
+  },
+  "startedAtTime": "2026-10-27T15:10:18Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer/50/query?maxAllowableOffset=1e-05&where=1%3D1&geometry=-77.048539%2C38.772218%2C-76.982885%2C38.814569&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=id3dhp%2Cgnisidlabel%2Cfeaturetypelabel%2Cmainstemid%2Chydrosequence%2Cdnhydrosequence&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=1000&f=geojson",
+    "id": "usgs_3dhp"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T15:10:18Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 68540,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "8e20ebb81986d33d404900a0c6318030259d276a8e132ba945422152819b5505"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "usgs_3dhp",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

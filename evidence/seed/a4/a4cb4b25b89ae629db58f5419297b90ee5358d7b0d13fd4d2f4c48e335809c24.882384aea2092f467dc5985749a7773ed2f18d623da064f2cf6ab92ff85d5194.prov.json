@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:27:00Z",
+  "http_mode": "record",
+  "id": "882384aea2092f467dc5985749a7773ed2f18d623da064f2cf6ab92ff85d5194",
+  "name": "GET bts_ntad",
+  "params": {
+   "method": "GET",
+   "url": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0/query?where=CrossingID%3D%27915128A%27&outFields=CrossingID%2CReasonCode%2CCITYNAME%2CCOUNTYNAME%2CStateAbbreviation%2CRailroadCode%2CHighwayName%2CSTREET%2CCrossingType%2CCrossingPosition%2CLATITUDE%2CLongitude%2CLatLongSource%2CRailroadMilepostNumber&returnGeometry=true&outSR=4326&f=json"
+  },
+  "startedAtTime": "2026-10-27T03:27:00Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0/query?where=CrossingID%3D%27915128A%27&outFields=CrossingID%2CReasonCode%2CCITYNAME%2CCOUNTYNAME%2CStateAbbreviation%2CRailroadCode%2CHighwayName%2CSTREET%2CCrossingType%2CCrossingPosition%2CLATITUDE%2CLongitude%2CLatLongSource%2CRailroadMilepostNumber&returnGeometry=true&outSR=4326&f=json",
+    "id": "bts_ntad"
+   }
+  ]
+ },
+ "as_of": "2026-10-20T23:34:00Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 2659,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "a4cb4b25b89ae629db58f5419297b90ee5358d7b0d13fd4d2f4c48e335809c24"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "bts_ntad",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

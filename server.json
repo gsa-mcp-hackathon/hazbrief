@@ -1,0 +1,10 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.brockwebb/hazbrief-mcp",
+  "description": "Hazmat incident: ERG protective action footprint, sourced flags, draft ICS 201. No dispersion model.",
+  "repository": {
+    "url": "https://github.com/brockwebb/hazbrief-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0"
+}

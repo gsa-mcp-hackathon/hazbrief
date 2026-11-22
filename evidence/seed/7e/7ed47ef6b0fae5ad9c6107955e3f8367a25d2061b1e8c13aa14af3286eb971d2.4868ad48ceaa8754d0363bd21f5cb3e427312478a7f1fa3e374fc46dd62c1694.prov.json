@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T04:43:11Z",
+  "http_mode": "record",
+  "id": "4868ad48ceaa8754d0363bd21f5cb3e427312478a7f1fa3e374fc46dd62c1694",
+  "name": "GET census",
+  "params": {
+   "method": "GET",
+   "url": "https://api.census.gov/data/2024/acs/acs5?get=B01001_020E%2CB01001_020M%2CB01001_021E%2CB01001_021M%2CB01001_022E%2CB01001_022M%2CB01001_023E%2CB01001_023M%2CB01001_024E%2CB01001_024M%2CB01001_025E%2CB01001_025M%2CB01001_044E%2CB01001_044M%2CB01001_045E%2CB01001_045M%2CB01001_046E%2CB01001_046M%2CB01001_047E%2CB01001_047M%2CB01001_048E%2CB01001_048M%2CB01001_049E%2CB01001_049M%2CC16002_004E%2CC16002_004M%2CC16002_007E%2CC16002_007M%2CC16002_010E%2CC16002_010M%2CC16002_013E%2CC16002_013M&for=block+group%3A%2A&in=state%3A42+county%3A069+tract%3A103100"
+  },
+  "startedAtTime": "2026-10-28T04:43:11Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.census.gov/data/2024/acs/acs5?get=B01001_020E%2CB01001_020M%2CB01001_021E%2CB01001_021M%2CB01001_022E%2CB01001_022M%2CB01001_023E%2CB01001_023M%2CB01001_024E%2CB01001_024M%2CB01001_025E%2CB01001_025M%2CB01001_044E%2CB01001_044M%2CB01001_045E%2CB01001_045M%2CB01001_046E%2CB01001_046M%2CB01001_047E%2CB01001_047M%2CB01001_048E%2CB01001_048M%2CB01001_049E%2CB01001_049M%2CC16002_004E%2CC16002_004M%2CC16002_007E%2CC16002_007M%2CC16002_010E%2CC16002_010M%2CC16002_013E%2CC16002_013M&for=block+group%3A%2A&in=state%3A42+county%3A069+tract%3A103100",
+    "id": "census:acs5"
+   }
+  ]
+ },
+ "as_of": "2026-10-28T04:43:11Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 843,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "7ed47ef6b0fae5ad9c6107955e3f8367a25d2061b1e8c13aa14af3286eb971d2"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "census:acs5",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:26:00Z",
+  "http_mode": "record",
+  "id": "56053022a310560e9a18fe4fab6e0e58fb3dbb74b382c166c26532c40567fe3e",
+  "name": "GET pasda_penndot",
+  "params": {
+   "method": "GET",
+   "url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/0?f=json"
+  },
+  "startedAtTime": "2026-10-27T03:26:00Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/0?f=json",
+    "id": "lrs:penndot"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T03:26:00Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 4237,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "405f718e522c4ea5e299f2ee8b304d58a5d0b83256df25ba28ae1047e422594f"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "lrs:penndot",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

@@ -1,0 +1,105 @@
+{
+ "commit": "cb445172bf63fa29527ee7cc6b528f0e4abd30eb",
+ "generated_at": "2026-10-25T05:28:12Z",
+ "known_findings_not_found": {
+  "1_assess": [],
+  "2_footprint": [],
+  "3_guidance": [],
+  "4_flags": [],
+  "5_provenance": []
+ },
+ "new_findings": {
+  "1_assess": [],
+  "2_footprint": [],
+  "3_guidance": [],
+  "4_flags": [],
+  "5_provenance": []
+ },
+ "part": "invariants",
+ "parts": {
+  "1_assess": {
+   "counts": {
+    "answered": 4728,
+    "answered: ID under several guides, name asked": 4,
+    "answered: name under several IDs, ID asked": 18,
+    "answered: placard on several rows, candidates given": 7,
+    "coverage erg": 4707,
+    "coverage full": 21,
+    "id_inputs": 1983,
+    "ids": 1983,
+    "n.o.s. names read without the suffix": 392,
+    "names": 2767,
+    "stylecheck_limits_sentences": 5,
+    "unidentified-load inputs": 112
+   },
+   "failures": 0,
+   "failures_by_check": {},
+   "info": 0,
+   "line": "1_assess: answered 4728, answered: ID under several guides, name asked 4, answered: name under several IDs, ID asked 18, answered: placard on several rows, candidates given 7, coverage erg 4707, coverage full 21, id_inputs 1983, ids 1983, n.o.s. names read without the suffix 392, names 2767, stylecheck_limits_sentences 5, unidentified-load inputs 112; failures: none"
+  },
+  "2_footprint": {
+   "counts": {
+    "answered by Table 1": 8979,
+    "answered by Table 3": 1937,
+    "answered by guide": 13930,
+    "guide-branch materials": 1711,
+    "outputs": 24846,
+    "pack cells": 3374,
+    "pack cells reached": 3374,
+    "seconds": 76,
+    "stylecheck_limits_sentences": 63,
+    "stylecheck_reason_not_printed_sentences": 2956,
+    "stylecheck_zone_notes_sentences": 35,
+    "table 1 materials": 272,
+    "unidentified-load inputs": 112,
+    "unit-note limits printed": 72
+   },
+   "failures": 0,
+   "failures_by_check": {},
+   "info": 0,
+   "line": "2_footprint: answered by Table 1 8979, answered by Table 3 1937, answered by guide 13930, guide-branch materials 1711, outputs 24846, pack cells 3374, pack cells reached 3374, seconds 76, stylecheck_limits_sentences 63, stylecheck_reason_not_printed_sentences 2956, stylecheck_zone_notes_sentences 35, table 1 materials 272, unidentified-load inputs 112, unit-note limits printed 72; failures: none"
+  },
+  "3_guidance": {
+   "counts": {
+    "(P) guide outputs": 1044,
+    "Table 2 notes": 534,
+    "guides_reached": 62,
+    "outputs": 23952,
+    "stylecheck_limits_sentences": 7,
+    "stylecheck_table2_note_not_printed_sentences": 89,
+    "unidentified-load outputs": 1344
+   },
+   "failures": 0,
+   "failures_by_check": {},
+   "info": 0,
+   "line": "3_guidance: (P) guide outputs 1044, Table 2 notes 534, guides_reached 62, outputs 23952, stylecheck_limits_sentences 7, stylecheck_table2_note_not_printed_sentences 89, unidentified-load outputs 1344; failures: none"
+  },
+  "4_flags": {
+   "counts": {
+    "causes": 188,
+    "for_briefing sets": 275,
+    "held PDFs available": 1,
+    "key A available": 1,
+    "rules": 173,
+    "statements keyA": 564,
+    "statements pdf_text": 88
+   },
+   "failures": 0,
+   "failures_by_check": {},
+   "info": 0,
+   "line": "4_flags: causes 188, for_briefing sets 275, held PDFs available 1, key A available 1, rules 173, statements keyA 564, statements pdf_text 88; failures: none"
+  },
+  "5_provenance": {
+   "counts": {
+    "assess and guidance outputs walked": 30136,
+    "distances": 106174,
+    "footprint outputs walked": 24846
+   },
+   "failures": 0,
+   "failures_by_check": {},
+   "info": 0,
+   "line": "5_provenance: assess and guidance outputs walked 30136, distances 106174, footprint outputs walked 24846; failures: none"
+  }
+ },
+ "surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350"
+}

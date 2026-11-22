@@ -1,0 +1,16 @@
+{
+ "month": "2024-01",
+ "held_rows": 1781,
+ "held_reports": 1750,
+ "dlp_rows": 1823,
+ "dlp_reports": 1747,
+ "in_both": 1747,
+ "held_only": 3,
+ "dlp_only": 0,
+ "held_only_sample": [
+  "E-2025010242",
+  "E-2025010308",
+  "E-2025010319"
+ ],
+ "dlp_only_sample": []
+}

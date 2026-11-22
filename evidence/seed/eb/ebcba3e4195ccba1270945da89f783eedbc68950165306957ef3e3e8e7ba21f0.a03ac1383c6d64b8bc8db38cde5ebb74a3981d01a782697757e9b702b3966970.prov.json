@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T16:51:33Z",
+  "http_mode": "record",
+  "id": "a03ac1383c6d64b8bc8db38cde5ebb74a3981d01a782697757e9b702b3966970",
+  "name": "GET mrlc",
+  "params": {
+   "method": "GET",
+   "url": "https://www.mrlc.gov/geoserver/mrlc_display/wms?service=WMS&version=1.1.1&request=GetFeatureInfo&layers=NLCD_2021_Land_Cover_L48&query_layers=NLCD_2021_Land_Cover_L48&styles=&srs=EPSG%3A4326&bbox=-77.043317%2C38.796217%2C-77.043117%2C38.796417&width=3&height=3&x=1&y=1&info_format=application%2Fjson&feature_count=1"
+  },
+  "startedAtTime": "2026-10-27T16:51:33Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://www.mrlc.gov/geoserver/mrlc_display/wms?service=WMS&version=1.1.1&request=GetFeatureInfo&layers=NLCD_2021_Land_Cover_L48&query_layers=NLCD_2021_Land_Cover_L48&styles=&srs=EPSG%3A4326&bbox=-77.043317%2C38.796217%2C-77.043117%2C38.796417&width=3&height=3&x=1&y=1&info_format=application%2Fjson&feature_count=1",
+    "id": "mrlc:nlcd"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T16:51:33Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 213,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "ebcba3e4195ccba1270945da89f783eedbc68950165306957ef3e3e8e7ba21f0"
+ },
+ "horizon_s": 315576000,
+ "horizon_source": "mrlc:nlcd",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

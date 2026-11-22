@@ -1,0 +1,108 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.721126,
+      39.642646
+     ],
+     "type": "Point"
+    },
+    "id": 6648530,
+    "properties": {
+     "address": "32 West Washington Street",
+     "city": "Hagerstown",
+     "fcode": 73006,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "University System of Maryland At Hagerstown",
+     "objectid": 6648530,
+     "permanent_identifier": "197b0e7d-c800-4a7a-96e2-973c4b597af8",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.667387,
+      39.631025
+     ],
+     "type": "Point"
+    },
+    "id": 6824328,
+    "properties": {
+     "address": "11400 Robinwood Drive",
+     "city": "Hagerstown",
+     "fcode": 73006,
+     "ftype": 730,
+     "loaddate": 1592006400000,
+     "name": "Hagerstown Community College",
+     "objectid": 6824328,
+     "permanent_identifier": "cad4d800-6a30-4a22-9baf-aed46d3fde99",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.541714,
+      39.842156
+     ],
+     "type": "Point"
+    },
+    "id": 6863352,
+    "properties": {
+     "address": "One Campus Drive",
+     "city": "Mont Alto",
+     "fcode": 73006,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Pennsylvania State University - Penn State Mont Alto",
+     "objectid": 6863352,
+     "permanent_identifier": "f30ba9ba-52b9-4d35-ad52-eeb8fb7332b4",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.683902,
+      39.620077
+     ],
+     "type": "Point"
+    },
+    "id": 7002988,
+    "properties": {
+     "address": "11120 Medical Campus Road",
+     "city": "Hagerstown",
+     "fcode": 73006,
+     "ftype": 730,
+     "loaddate": 1780023933000,
+     "name": "Meritus School of Osteopathic Medicine",
+     "objectid": 7002988,
+     "permanent_identifier": "bde03e6e-e5fa-467b-93cb-58bf97e9c57e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-13T08:17:05Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Fri, 13 Nov 2026 08:17:05 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/21/query?where=1%3D1&geometry=-77.912165%2C39.577272%2C-77.535835%2C39.866728&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

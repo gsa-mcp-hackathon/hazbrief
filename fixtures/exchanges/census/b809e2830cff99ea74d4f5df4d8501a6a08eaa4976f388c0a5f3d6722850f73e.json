@@ -1,0 +1,192 @@
+{
+ "api": "census",
+ "body": [
+  [
+   "NAICS2017",
+   "NAICS2017_LABEL",
+   "ESTAB",
+   "INDLEVEL",
+   "state",
+   "county"
+  ],
+  [
+   "00",
+   "Total for all sectors",
+   "8840",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "11",
+   "Agriculture, forestry, fishing and hunting",
+   "11",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "21",
+   "Mining, quarrying, and oil and gas extraction",
+   "8",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "22",
+   "Utilities",
+   "34",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "23",
+   "Construction",
+   "917",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "31-33",
+   "Manufacturing",
+   "511",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "42",
+   "Wholesale trade",
+   "372",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "44-45",
+   "Retail trade",
+   "1183",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "48-49",
+   "Transportation and warehousing",
+   "317",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "51",
+   "Information",
+   "156",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "52",
+   "Finance and insurance",
+   "455",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "53",
+   "Real estate and rental and leasing",
+   "339",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "54",
+   "Professional, scientific, and technical services",
+   "703",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "55",
+   "Management of companies and enterprises",
+   "53",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "56",
+   "Administrative and support and waste management and remediation services",
+   "513",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "61",
+   "Educational services",
+   "92",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "62",
+   "Health care and social assistance",
+   "989",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "71",
+   "Arts, entertainment, and recreation",
+   "155",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "72",
+   "Accommodation and food services",
+   "782",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "81",
+   "Other services (except public administration)",
+   "1246",
+   "2",
+   "42",
+   "133"
+  ],
+  [
+   "99",
+   "Industries not classified",
+   "4",
+   "2",
+   "42",
+   "133"
+  ]
+ ],
+ "method": "GET",
+ "recorded_at": "2026-10-27T16:36:51Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=60, must-revalidate",
+  "Date": "Tue, 27 Oct 2026 16:36:50 GMT"
+ },
+ "status": 200,
+ "url": "https://api.census.gov/data/2023/cbp?get=NAICS2017%2CNAICS2017_LABEL%2CESTAB&for=county%3A133&in=state%3A42&INDLEVEL=2"
+}

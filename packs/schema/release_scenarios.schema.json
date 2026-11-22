@@ -1,0 +1,443 @@
+{
+ "$defs": {
+  "AlternativeRule": {
+   "additionalProperties": false,
+   "properties": {
+    "duration_min": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "hole_size_cm": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "method": {
+     "$ref": "#/$defs/ReleaseDefinition"
+    }
+   },
+   "required": [
+    "method",
+    "hole_size_cm",
+    "duration_min"
+   ],
+   "title": "AlternativeRule",
+   "type": "object"
+  },
+  "AttributionCredit": {
+   "additionalProperties": false,
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "edition": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Edition"
+    },
+    "publisher": {
+     "title": "Publisher",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "url": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Url"
+    }
+   },
+   "required": [
+    "doc_id",
+    "title",
+    "publisher",
+    "edition",
+    "url"
+   ],
+   "title": "AttributionCredit",
+   "type": "object"
+  },
+  "AttributionNotice": {
+   "additionalProperties": false,
+   "description": "A reuse or credit notice, verbatim from the held document at `locator`.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "locator",
+    "text"
+   ],
+   "title": "AttributionNotice",
+   "type": "object"
+  },
+  "ContainerScenarios": {
+   "additionalProperties": false,
+   "description": "A container string the fixtures use. `covered`: the guidance states the inputs\nboth envelopes need for it; when false, `reason` names the first one missing.",
+   "properties": {
+    "alternative_duration_min": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "alternative_hole_size_cm": {
+     "$ref": "#/$defs/HeldValue"
+    },
+    "container": {
+     "title": "Container",
+     "type": "string"
+    },
+    "covered": {
+     "title": "Covered",
+     "type": "boolean"
+    },
+    "reason": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Reason"
+    },
+    "worst_case_quantity_kg": {
+     "$ref": "#/$defs/HeldValue"
+    }
+   },
+   "required": [
+    "container",
+    "covered",
+    "reason",
+    "worst_case_quantity_kg",
+    "alternative_hole_size_cm",
+    "alternative_duration_min"
+   ],
+   "title": "ContainerScenarios",
+   "type": "object"
+  },
+  "HeldValue": {
+   "additionalProperties": false,
+   "description": "One number with its unit and receipt, or none with the reason. `derived_from`\nnames the values a computed one is made from (each held, with its own receipt).",
+   "properties": {
+    "derived_from": {
+     "default": [],
+     "items": {
+      "type": "string"
+     },
+     "title": "Derived From",
+     "type": "array"
+    },
+    "reason": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Reason"
+    },
+    "receipt": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/ValueReceipt"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "status": {
+     "enum": [
+      "held",
+      "not_applicable",
+      "not_held"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "unit": {
+     "title": "Unit",
+     "type": "string"
+    },
+    "value": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Value"
+    }
+   },
+   "required": [
+    "value",
+    "unit",
+    "status"
+   ],
+   "title": "HeldValue",
+   "type": "object"
+  },
+  "PackAttribution": {
+   "additionalProperties": false,
+   "properties": {
+    "credits": {
+     "items": {
+      "$ref": "#/$defs/AttributionCredit"
+     },
+     "title": "Credits",
+     "type": "array"
+    },
+    "notices": {
+     "items": {
+      "$ref": "#/$defs/AttributionNotice"
+     },
+     "title": "Notices",
+     "type": "array"
+    }
+   },
+   "required": [
+    "credits",
+    "notices"
+   ],
+   "title": "PackAttribution",
+   "type": "object"
+  },
+  "PackSource": {
+   "additionalProperties": false,
+   "description": "One held document a pack was parsed from: its corpus doc_id, the sha256 of the\nheld bytes, where in it the pack reads, and its licence as `corpus/sources.yaml`\nrecords it.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "licence": {
+     "title": "Licence",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "raw_sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Raw Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "raw_sha256",
+    "locator",
+    "licence"
+   ],
+   "title": "PackSource",
+   "type": "object"
+  },
+  "ReleaseDefinition": {
+   "additionalProperties": false,
+   "properties": {
+    "receipt": {
+     "$ref": "#/$defs/ValueReceipt"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "text",
+    "receipt"
+   ],
+   "title": "ReleaseDefinition",
+   "type": "object"
+  },
+  "ReleaseScenariosData": {
+   "additionalProperties": false,
+   "properties": {
+    "alternative": {
+     "$ref": "#/$defs/AlternativeRule"
+    },
+    "authority": {
+     "title": "Authority",
+     "type": "string"
+    },
+    "containers": {
+     "additionalProperties": {
+      "$ref": "#/$defs/ContainerScenarios"
+     },
+     "title": "Containers",
+     "type": "object"
+    },
+    "not_adopted": {
+     "items": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "type": "object"
+     },
+     "title": "Not Adopted",
+     "type": "array"
+    },
+    "worst_case": {
+     "$ref": "#/$defs/WorstCaseRule"
+    }
+   },
+   "required": [
+    "authority",
+    "worst_case",
+    "alternative",
+    "containers",
+    "not_adopted"
+   ],
+   "title": "ReleaseScenariosData",
+   "type": "object"
+  },
+  "ValueReceipt": {
+   "additionalProperties": false,
+   "description": "Where a value is printed. `page` is the PDF page, or the form-feed block of a\nconverted file (packs/SCHEMA.md, Locators); `quote` is the text as printed there.\n`read_by`: `text_layer` (verified on the page's text at build) or `rendered_page`\n(a page with no usable text layer, read from its image; the quote is the\nreading). `sha256` is the held file's raw sha256, so a receipt names the exact\nbytes it was read from (HB-109; DN-020 section 2 item 4). From a `reference-only`\nsource the quote is the number and its unit only (the licence gate,\npacks/SCHEMA.md).",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "page": {
+     "title": "Page",
+     "type": "integer"
+    },
+    "quote": {
+     "title": "Quote",
+     "type": "string"
+    },
+    "read_by": {
+     "default": "text_layer",
+     "enum": [
+      "text_layer",
+      "rendered_page"
+     ],
+     "title": "Read By",
+     "type": "string"
+    },
+    "sha256": {
+     "title": "Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "page",
+    "locator",
+    "quote",
+    "sha256"
+   ],
+   "title": "ValueReceipt",
+   "type": "object"
+  },
+  "WorstCaseRule": {
+   "additionalProperties": false,
+   "properties": {
+    "definition": {
+     "$ref": "#/$defs/ReleaseDefinition"
+    },
+    "duration_min": {
+     "$ref": "#/$defs/HeldValue"
+    }
+   },
+   "required": [
+    "definition",
+    "duration_min"
+   ],
+   "title": "WorstCaseRule",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "properties": {
+  "attribution": {
+   "$ref": "#/$defs/PackAttribution"
+  },
+  "built_at": {
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+   "title": "Built At",
+   "type": "string"
+  },
+  "data": {
+   "$ref": "#/$defs/ReleaseScenariosData"
+  },
+  "kind": {
+   "const": "release_scenarios",
+   "title": "Kind",
+   "type": "string"
+  },
+  "pack_id": {
+   "title": "Pack Id",
+   "type": "string"
+  },
+  "schema_version": {
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Sha256",
+   "type": "string"
+  },
+  "sources": {
+   "items": {
+    "$ref": "#/$defs/PackSource"
+   },
+   "title": "Sources",
+   "type": "array"
+  },
+  "version": {
+   "title": "Version",
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema_version",
+  "pack_id",
+  "version",
+  "built_at",
+  "sha256",
+  "sources",
+  "attribution",
+  "kind",
+  "data"
+ ],
+ "title": "ReleaseScenariosPack",
+ "type": "object"
+}

@@ -1,0 +1,89 @@
+{
+ "api": "pasda_penndot",
+ "body": {
+  "displayFieldName": "TY_CODE",
+  "features": [
+   {
+    "attributes": {
+     "GIS_UPDATE": 1782691200000,
+     "MILE_MARKE": 0,
+     "SEG_NO": "0002",
+     "ST_RT_NO": "0081",
+     "TY_CODE": "28"
+    },
+    "geometry": {
+     "x": -77.73242727878936,
+     "y": 39.72110193419727
+    }
+   },
+   {
+    "attributes": {
+     "GIS_UPDATE": 1782691200000,
+     "MILE_MARKE": 1,
+     "SEG_NO": "0010",
+     "ST_RT_NO": "0081",
+     "TY_CODE": "28"
+    },
+    "geometry": {
+     "x": -77.72674605625147,
+     "y": 39.73395754760115
+    }
+   }
+  ],
+  "fieldAliases": {
+   "GIS_UPDATE": "GIS_UPDATE",
+   "MILE_MARKE": "MILE_MARKE",
+   "SEG_NO": "SEG_NO",
+   "ST_RT_NO": "ST_RT_NO",
+   "TY_CODE": "TY_CODE"
+  },
+  "fields": [
+   {
+    "alias": "ST_RT_NO",
+    "length": 4,
+    "name": "ST_RT_NO",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "SEG_NO",
+    "length": 4,
+    "name": "SEG_NO",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "MILE_MARKE",
+    "name": "MILE_MARKE",
+    "type": "esriFieldTypeDouble"
+   },
+   {
+    "alias": "TY_CODE",
+    "length": 2,
+    "name": "TY_CODE",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "GIS_UPDATE",
+    "length": 8,
+    "name": "GIS_UPDATE",
+    "type": "esriFieldTypeDate"
+   }
+  ],
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+   "latestWkid": 4326,
+   "wkid": 4326
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-27T03:33:56Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "public, must-revalidate, max-age=0",
+  "Date": "Tue, 27 Oct 2026 03:33:55 GMT",
+  "ETag": "\"1783684770\""
+ },
+ "status": 200,
+ "url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/0/query?where=ST_RT_NO%3D%270081%27+AND+MILE_MARKE+IN+%280%2C1%29&outFields=ST_RT_NO%2CSEG_NO%2CMILE_MARKE%2CTY_CODE%2CGIS_UPDATE&returnGeometry=true&outSR=4326&f=json&orderByFields=MILE_MARKE"
+}

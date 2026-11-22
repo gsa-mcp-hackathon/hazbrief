@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-07T08:30:12Z",
+  "http_mode": "record",
+  "id": "02fbba471cd87c178e5f738be7f65f987509752c62dcb1ec6dcccbd20c6367b5",
+  "name": "GET pubchem",
+  "params": {
+   "method": "GET",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Chlorophenyltrichlorosilane/cids/JSON"
+  },
+  "startedAtTime": "2026-11-07T08:30:12Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Chlorophenyltrichlorosilane/cids/JSON",
+    "id": "pubchem:pug_rest"
+   }
+  ]
+ },
+ "as_of": "2026-11-07T08:30:12Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 34,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "4c867fd1aac5e609044179f46742640d8f4c239af45c4ab7b27c1149767bb986"
+ },
+ "horizon_s": 126230400,
+ "horizon_source": "pubchem:pug_rest",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

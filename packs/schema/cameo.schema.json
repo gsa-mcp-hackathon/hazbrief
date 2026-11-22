@@ -1,0 +1,334 @@
+{
+ "$defs": {
+  "AttributionCredit": {
+   "additionalProperties": false,
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "edition": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Edition"
+    },
+    "publisher": {
+     "title": "Publisher",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "url": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Url"
+    }
+   },
+   "required": [
+    "doc_id",
+    "title",
+    "publisher",
+    "edition",
+    "url"
+   ],
+   "title": "AttributionCredit",
+   "type": "object"
+  },
+  "AttributionNotice": {
+   "additionalProperties": false,
+   "description": "A reuse or credit notice, verbatim from the held document at `locator`.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "locator",
+    "text"
+   ],
+   "title": "AttributionNotice",
+   "type": "object"
+  },
+  "CameoData": {
+   "additionalProperties": false,
+   "properties": {
+    "materials": {
+     "additionalProperties": {
+      "$ref": "#/$defs/CameoMaterial"
+     },
+     "title": "Materials",
+     "type": "object"
+    },
+    "response_sections": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Response Sections",
+     "type": "array"
+    }
+   },
+   "required": [
+    "response_sections",
+    "materials"
+   ],
+   "title": "CameoData",
+   "type": "object"
+  },
+  "CameoDatasheet": {
+   "additionalProperties": false,
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "raw_sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Raw Sha256",
+     "type": "string"
+    },
+    "sections": {
+     "items": {
+      "$ref": "#/$defs/CameoSection"
+     },
+     "title": "Sections",
+     "type": "array"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "un_numbers": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Un Numbers",
+     "type": "array"
+    }
+   },
+   "required": [
+    "doc_id",
+    "raw_sha256",
+    "title",
+    "un_numbers",
+    "locator",
+    "sections"
+   ],
+   "title": "CameoDatasheet",
+   "type": "object"
+  },
+  "CameoMaterial": {
+   "additionalProperties": false,
+   "properties": {
+    "datasheets": {
+     "items": {
+      "$ref": "#/$defs/CameoDatasheet"
+     },
+     "title": "Datasheets",
+     "type": "array"
+    },
+    "un": {
+     "title": "Un",
+     "type": "string"
+    },
+    "unna_page": {
+     "$ref": "#/$defs/CameoPageRef"
+    }
+   },
+   "required": [
+    "un",
+    "unna_page",
+    "datasheets"
+   ],
+   "title": "CameoMaterial",
+   "type": "object"
+  },
+  "CameoPageRef": {
+   "additionalProperties": false,
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "raw_sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Raw Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "raw_sha256",
+    "locator"
+   ],
+   "title": "CameoPageRef",
+   "type": "object"
+  },
+  "CameoSection": {
+   "additionalProperties": false,
+   "properties": {
+    "heading": {
+     "title": "Heading",
+     "type": "string"
+    },
+    "paragraphs": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Paragraphs",
+     "type": "array"
+    }
+   },
+   "required": [
+    "heading",
+    "paragraphs"
+   ],
+   "title": "CameoSection",
+   "type": "object"
+  },
+  "PackAttribution": {
+   "additionalProperties": false,
+   "properties": {
+    "credits": {
+     "items": {
+      "$ref": "#/$defs/AttributionCredit"
+     },
+     "title": "Credits",
+     "type": "array"
+    },
+    "notices": {
+     "items": {
+      "$ref": "#/$defs/AttributionNotice"
+     },
+     "title": "Notices",
+     "type": "array"
+    }
+   },
+   "required": [
+    "credits",
+    "notices"
+   ],
+   "title": "PackAttribution",
+   "type": "object"
+  },
+  "PackSource": {
+   "additionalProperties": false,
+   "description": "One held document a pack was parsed from: its corpus doc_id, the sha256 of the\nheld bytes, where in it the pack reads, and its licence as `corpus/sources.yaml`\nrecords it.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "licence": {
+     "title": "Licence",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "raw_sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Raw Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "raw_sha256",
+    "locator",
+    "licence"
+   ],
+   "title": "PackSource",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "properties": {
+  "attribution": {
+   "$ref": "#/$defs/PackAttribution"
+  },
+  "built_at": {
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+   "title": "Built At",
+   "type": "string"
+  },
+  "data": {
+   "$ref": "#/$defs/CameoData"
+  },
+  "kind": {
+   "const": "cameo",
+   "title": "Kind",
+   "type": "string"
+  },
+  "pack_id": {
+   "title": "Pack Id",
+   "type": "string"
+  },
+  "schema_version": {
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Sha256",
+   "type": "string"
+  },
+  "sources": {
+   "items": {
+    "$ref": "#/$defs/PackSource"
+   },
+   "title": "Sources",
+   "type": "array"
+  },
+  "version": {
+   "title": "Version",
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema_version",
+  "pack_id",
+  "version",
+  "built_at",
+  "sha256",
+  "sources",
+  "attribution",
+  "kind",
+  "data"
+ ],
+ "title": "CameoPack",
+ "type": "object"
+}

@@ -1,0 +1,40 @@
+{
+ "as_given": "2026-10-21T14:00:00-04:00",
+ "fire": {
+  "emission_rate_g_s": {
+   "source": "usfs-lavdas-1996-vsmoke-users-manual p. 121, the manual's example (Appendix III echo, period 1: EMTQPM 47 g/s, total particulate matter)",
+   "value": 47.0
+  },
+  "heat_release_w": {
+   "source": "usfs-lavdas-1996-vsmoke-users-manual p. 121, the manual's example (Appendix III echo, period 1: EMTQH 590 MW)",
+   "value": 590000000.0
+  },
+  "kind": "brush fire",
+  "note": "the VSMOKE manual's worked example, as DN-021 section 10 directs until a held fuel-consumption source lands; not this fire's own figures (HB-150, Issue f7196297; the page image is docs/evidence/hb150/vsmoke_manual-121.png)"
+ },
+ "id": "brush-fire-co-canal-point-of-rocks",
+ "incident": {
+  "container": "unknown",
+  "fire_involved": true,
+  "incident_time": "2026-10-21T14:00:00-04:00",
+  "location": {
+   "latitude": 39.2756,
+   "longitude": -77.5394
+  }
+ },
+ "not_run": {
+  "assess_incident": "a brush fire carries no ID number, placard or guide number, and the ERG tools take exactly one (DN-021 section 7)",
+  "build_ics_201": "a brush fire carries no ID number, placard or guide number, and the ERG tools take exactly one (DN-021 section 7)",
+  "facilities_in_footprint": "it counts inside the ERG footprint, which a brush fire does not have; the smoke overlay counts by AQI band once the smoke layer is drawn (Issue 69cc2af7)",
+  "material_response_guidance": "a brush fire carries no ID number, placard or guide number, and the ERG tools take exactly one (DN-021 section 7)",
+  "population_at_risk": "it counts inside the ERG footprint, which a brush fire does not have; the smoke overlay counts by AQI band once the smoke layer is drawn (Issue 69cc2af7)",
+  "protective_action_footprint": "a brush fire carries no ID number, placard or guide number, and the ERG tools take exactly one (DN-021 section 7)",
+  "receiving_hospitals": "it counts inside the ERG footprint, which a brush fire does not have; the smoke overlay counts by AQI band once the smoke layer is drawn (Issue 69cc2af7)"
+ },
+ "wind": {
+  "direction_deg_from": 270,
+  "observed_at": "2026-10-20T13:40:00-04:00",
+  "source": "worked example wind",
+  "speed_kmh": 13
+ }
+}

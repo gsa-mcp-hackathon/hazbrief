@@ -1,0 +1,235 @@
+{
+ "files": {
+  "RATIONALIZATION_DISAGREEMENTS.md": {
+   "bytes": 25025,
+   "rows": null,
+   "sha256": "899f9ab1627a0944418236ec5a251c4d1a9c7219fbfe3da1b7d1e04a0cfff6f0"
+  },
+  "REJECTED_RULES.md": {
+   "bytes": 528,
+   "rows": null,
+   "sha256": "b3e8593d4abb18dc27b75270f4466e5676da26291714cdf7a7fbca317e62b9e9"
+  },
+  "UNRESOLVED.md": {
+   "bytes": 390,
+   "rows": null,
+   "sha256": "2371135619f1d710d1a9e1c17daacc271c7f91bbe0172fd1ac92f3c19f8fe754"
+  },
+  "adjudicated/blue.jsonl": {
+   "bytes": 878094,
+   "rows": 2771,
+   "sha256": "fe5238386a0c3367c20bbdf0be2d070f621371577e2e81ad69c01c9c239f35cd"
+  },
+  "adjudicated/guides.jsonl": {
+   "bytes": 1501496,
+   "rows": 3558,
+   "sha256": "fa71984f55862941c915ff558baf465eeab63ef5fa4430dd2bff8b0b9f5fdc89"
+  },
+  "adjudicated/meta.json": {
+   "bytes": 17417,
+   "rows": null,
+   "sha256": "9f5bfa74deffeb37f856fc15df95b501d262ffc4983644d16719f6a7b5b2eceb"
+  },
+  "adjudicated/table1.jsonl": {
+   "bytes": 577424,
+   "rows": 537,
+   "sha256": "d092bd819d2695024c95605586c5517514ed74716638f15ac78f565c2e1c0909"
+  },
+  "adjudicated/table2.jsonl": {
+   "bytes": 32727,
+   "rows": 108,
+   "sha256": "1e8710eda6cfba12c8a81995f5c81c1d68773dda5920ca0d72c8cb5f42120eb7"
+  },
+  "adjudicated/table3.jsonl": {
+   "bytes": 21531,
+   "rows": 22,
+   "sha256": "5f2b3ec60c5c4f9280e2a2471326578262c5d253c584fa8c8a314365af8c6395"
+  },
+  "adjudicated/yellow.jsonl": {
+   "bytes": 882360,
+   "rows": 2771,
+   "sha256": "cd254e2a3a8574a51f3416127c97f7d2f49ed8d4c764242ff6956ba6972ee29d"
+  },
+  "flag_mining/calls.jsonl": {
+   "bytes": 623984,
+   "rows": 62,
+   "sha256": "cab8f2f257e536c910aab930957528b9b0146d65da22a1b4e7936da043cf97f4"
+  },
+  "flag_mining/summary.json": {
+   "bytes": 5767,
+   "rows": null,
+   "sha256": "08fbd299d4ca6aa6dcdcf2a52fa853238b3125e0239ea6432e839d9cf14cba8a"
+  },
+  "join/blue.jsonl": {
+   "bytes": 1607411,
+   "rows": 2948,
+   "sha256": "2c70917ba211288efe835bbf5132223a09bc6c5fcc79ffccc11852194055ee9b"
+  },
+  "join/guides.jsonl": {
+   "bytes": 2883964,
+   "rows": 4029,
+   "sha256": "ffbe3db4a97755f8f69aa76ed3759f31f59fe5f65c017e8e4053d82f54abd482"
+  },
+  "join/pilot_pages.json": {
+   "bytes": 609,
+   "rows": null,
+   "sha256": "825d3f16cb9b27b95371b8919a8a863fea8e6a1841488bfb3a5317a0d21cb0cb"
+  },
+  "join/summary.json": {
+   "bytes": 3724,
+   "rows": null,
+   "sha256": "2bbad25b17827bb78b990dd01898699fb7c90f57fe8c451f3c7f0a90c62cbfa7"
+  },
+  "join/table1.jsonl": {
+   "bytes": 935544,
+   "rows": 594,
+   "sha256": "936aca915295c18daffd583646bc5f3a36eeb00f47795a849c2088954a8f6e3e"
+  },
+  "join/table2.jsonl": {
+   "bytes": 52877,
+   "rows": 109,
+   "sha256": "8c95494f6dba017f3a1e07f5015e9d795976aa4bcb13e748cb933a5eca15db43"
+  },
+  "join/table3.jsonl": {
+   "bytes": 33701,
+   "rows": 22,
+   "sha256": "846e654205800e758860eaa3222ed5b254e4f1b938d139fa20981e37588bc808"
+  },
+  "join/yellow.jsonl": {
+   "bytes": 1613987,
+   "rows": 2949,
+   "sha256": "b6f21a8dde068fbdedeec7842b5e5901697f7ce7ddd5b420c6c24ca938d90b1d"
+  },
+  "keyA/blue.jsonl": {
+   "bytes": 586265,
+   "rows": 2771,
+   "sha256": "f49462cddb1c1fe40b63d31a890b8af9cd33e3fbcd899569470361dd264a4403"
+  },
+  "keyA/blue.meta.json": {
+   "bytes": 31,
+   "rows": null,
+   "sha256": "b1a6f16d741103093b4656555119d21d6ffa8f23a2d370db0e0d40a9953b2e37"
+  },
+  "keyA/guides.jsonl": {
+   "bytes": 1150349,
+   "rows": 3553,
+   "sha256": "4db2696185ddb9006bcedc50b16e3964a5794c585c44b6563cd275dacde8ed11"
+  },
+  "keyA/guides.meta.json": {
+   "bytes": 16655,
+   "rows": null,
+   "sha256": "bc5a7da7b6ea941e2daaa9a9cd5ddfa4240031e41ee4b7a1206494119eef4c78"
+  },
+  "keyA/table1.jsonl": {
+   "bytes": 404158,
+   "rows": 537,
+   "sha256": "0638ad4fc60f197d211324cf6a40c1403dad847cbc70a6f82c5221d69cf0c668"
+  },
+  "keyA/table1.meta.json": {
+   "bytes": 32,
+   "rows": null,
+   "sha256": "b1105ce3a154533387aea8e6940a8fbf0d4e7b35fe7f92b841b739720e40d19a"
+  },
+  "keyA/table2.jsonl": {
+   "bytes": 20040,
+   "rows": 108,
+   "sha256": "28633a4807e7eb57a1ed1e72f30a52d9fc669cb9f2b4ad1c6443d759da843cca"
+  },
+  "keyA/table2.meta.json": {
+   "bytes": 586,
+   "rows": null,
+   "sha256": "5b656f1b8010fc7e006007ef23d72026f36cad00949f35e03b1f3976f3252115"
+  },
+  "keyA/table3.jsonl": {
+   "bytes": 15945,
+   "rows": 22,
+   "sha256": "c221857e6b24e533eccb2f56def2731120b1fcb060aa1b48c81f8a6e0409516b"
+  },
+  "keyA/table3.meta.json": {
+   "bytes": 32,
+   "rows": null,
+   "sha256": "223938ba01c7d456d42b654c9ca4582ab49df8f203a98727f43c1b6e5c257ffb"
+  },
+  "keyA/yellow.jsonl": {
+   "bytes": 589463,
+   "rows": 2771,
+   "sha256": "8d978a6e3e3a517168cd576af5a5dd8303b9138987011224385305916549d1d1"
+  },
+  "keyA/yellow.meta.json": {
+   "bytes": 30,
+   "rows": null,
+   "sha256": "6e0780fd2bbe549ea82d0639a4983ebe98fbc453c9df3bdabc8be5ae0920aa23"
+  },
+  "keyB/pages.jsonl": {
+   "bytes": 1327605,
+   "rows": 288,
+   "sha256": "efc75b338eb5d98706a97c3ace6d8983ce4bd76f9d5b2e1695a082a3a0558a20"
+  },
+  "keyB/projection.json": {
+   "bytes": 499,
+   "rows": null,
+   "sha256": "b720633b5759e5a7a2f4d9e1a7ff977ea1fdb2d1db4eb7c1b56e5a3f63f03baf"
+  },
+  "keyC/blue.jsonl": {
+   "bytes": 685959,
+   "rows": 2906,
+   "sha256": "348883ad3a33c16fdc7f71fb5a216c026a4d7ac9c651312e32d0afb5c8e8bdcc"
+  },
+  "keyC/blue.meta.json": {
+   "bytes": 131,
+   "rows": null,
+   "sha256": "c491794e817088a3d816ab1c6961450ec97f0245c0881981c7a55ab67c05ae66"
+  },
+  "keyC/guides.jsonl": {
+   "bytes": 1316386,
+   "rows": 4002,
+   "sha256": "9281d529ec760f04276df155db71e16b798ee6fcf435d524cab96f15cc136afa"
+  },
+  "keyC/guides.meta.json": {
+   "bytes": 5722,
+   "rows": null,
+   "sha256": "62b6a1ce84d3979b69d3f27fd2b2c96d26e7d8c61604633531e076d658388982"
+  },
+  "keyC/table1.jsonl": {
+   "bytes": 450073,
+   "rows": 593,
+   "sha256": "666b28eaecfde51524e3276f9e75a575931d4ef4aa0a93d9b2ab6b3c5858f972"
+  },
+  "keyC/table1.meta.json": {
+   "bytes": 120,
+   "rows": null,
+   "sha256": "9c664c996406fee128f6387d08b4d8be6ce1df77c5ff052c9bb62768a219e085"
+  },
+  "keyC/table2.jsonl": {
+   "bytes": 21007,
+   "rows": 109,
+   "sha256": "30b40ee9448be84319769a90ec5412d103cbc126b890fdbf51e5eca1af57fc81"
+  },
+  "keyC/table2.meta.json": {
+   "bytes": 673,
+   "rows": null,
+   "sha256": "eb0b54354ce02f5f7131941b0102a91fa66a43ce0f0a3ba6126d88d7da768aa7"
+  },
+  "keyC/table3.jsonl": {
+   "bytes": 15147,
+   "rows": 22,
+   "sha256": "41cd18b15f49d103ed418c4bee5987692cb4875c24c1f8ea1ff27ace399bdc42"
+  },
+  "keyC/table3.meta.json": {
+   "bytes": 119,
+   "rows": null,
+   "sha256": "e1a275834b7e6fbd028279f06acb605468c2b9a039b93a36cf409d37a083577e"
+  },
+  "keyC/yellow.jsonl": {
+   "bytes": 691771,
+   "rows": 2906,
+   "sha256": "87bbbdf7648f2b0fd56fd99dff26708d4a2efa1dcb64870cff2562780e3a8d66"
+  },
+  "keyC/yellow.meta.json": {
+   "bytes": 130,
+   "rows": null,
+   "sha256": "7a4b8f570fd4255d7da7ef8b053d63240163c0b825b54840a4617693b05c32fb"
+  }
+ },
+ "note": "HB-03b/HB-12 build artifacts; regenerate with scripts/erg_keya.py, erg_keyc.py, erg_join.py join, erg_keyb.py (model), erg_join.py adjudicate, mine_flag_rules.py (model)."
+}

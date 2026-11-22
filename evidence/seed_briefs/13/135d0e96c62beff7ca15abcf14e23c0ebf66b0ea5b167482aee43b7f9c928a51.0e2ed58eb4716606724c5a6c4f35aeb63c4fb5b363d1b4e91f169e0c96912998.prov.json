@@ -1,0 +1,86 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-04T04:36:15.209283Z",
+  "http_mode": "replay",
+  "id": "0e2ed58eb4716606724c5a6c4f35aeb63c4fb5b363d1b4e91f169e0c96912998",
+  "is_error": false,
+  "name": "protective_action_footprint",
+  "params": {
+   "incident": {
+    "container": "unknown",
+    "fire_involved": false,
+    "guide_number": "111",
+    "incident_time": "2026-10-21T14:00:00-04:00",
+    "location": {
+     "latitude": 38.7934,
+     "longitude": -77.037
+    },
+    "spill_size": "unknown",
+    "where_spilled": "land"
+   },
+   "wind": {
+    "direction_deg_from": 270,
+    "observed_at": "2026-10-20T13:40:00-04:00",
+    "source": "worked example wind",
+    "speed_kmh": 13
+   }
+  },
+  "startedAtTime": "2026-11-04T04:36:15.204041Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/points/",
+    "id": "nws:points"
+   },
+   {
+    "endpoint": "https://api.weather.gov/gridpoints/",
+    "id": "nws:gridpoints"
+   },
+   {
+    "endpoint": "packs/erg.json",
+    "id": "pack:erg"
+   },
+   {
+    "endpoint": "packs/cfr172.json",
+    "id": "pack:cfr172"
+   },
+   {
+    "endpoint": "packs/hazard_classes.json",
+    "id": "pack:hazard_classes"
+   },
+   {
+    "endpoint": "packs/flag_rules.json",
+    "id": "pack:flag_rules"
+   },
+   {
+    "endpoint": null,
+    "id": "code:astral"
+   }
+  ]
+ },
+ "as_of": "2026-11-04T04:36:15.209283Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 4375,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "135d0e96c62beff7ca15abcf14e23c0ebf66b0ea5b167482aee43b7f9c928a51"
+ },
+ "horizon_s": 3600,
+ "horizon_source": "nws:gridpoints",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

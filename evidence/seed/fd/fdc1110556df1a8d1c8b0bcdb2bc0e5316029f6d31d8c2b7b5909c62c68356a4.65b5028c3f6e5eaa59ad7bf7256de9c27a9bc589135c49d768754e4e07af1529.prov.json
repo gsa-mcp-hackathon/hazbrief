@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-21T23:30:47Z",
+  "http_mode": "record",
+  "id": "65b5028c3f6e5eaa59ad7bf7256de9c27a9bc589135c49d768754e4e07af1529",
+  "name": "GET tigerweb",
+  "params": {
+   "method": "GET",
+   "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/export?bbox=-8584170.86%2C4689057.58%2C-8570551.07%2C4697442.27&bboxSR=3857&imageSR=3857&size=960%2C591&dpi=96&format=png8&transparent=false&layers=show%3A2%2C4%2C5%2C6%2C7%2C8%2C9&f=image"
+  },
+  "startedAtTime": "2026-10-21T23:30:47Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/export?bbox=-8584170.86%2C4689057.58%2C-8570551.07%2C4697442.27&bboxSR=3857&imageSR=3857&size=960%2C591&dpi=96&format=png8&transparent=false&layers=show%3A2%2C4%2C5%2C6%2C7%2C8%2C9&f=image",
+    "id": "tigerweb:current"
+   }
+  ]
+ },
+ "as_of": "2026-10-21T23:30:47Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 87386,
+  "encoding": "bytes",
+  "media_type": "image/png",
+  "sha256": "fdc1110556df1a8d1c8b0bcdb2bc0e5316029f6d31d8c2b7b5909c62c68356a4"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "tigerweb:current",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

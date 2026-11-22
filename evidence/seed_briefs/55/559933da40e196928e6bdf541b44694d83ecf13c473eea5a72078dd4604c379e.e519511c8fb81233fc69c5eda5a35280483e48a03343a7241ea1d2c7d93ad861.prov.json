@@ -1,0 +1,164 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-08T17:15:20.477006Z",
+  "http_mode": "replay",
+  "id": "e519511c8fb81233fc69c5eda5a35280483e48a03343a7241ea1d2c7d93ad861",
+  "is_error": false,
+  "name": "build_ics_201",
+  "params": {
+   "request": {
+    "incident": {
+     "container": "Highway tank truck or trailer",
+     "fire_involved": false,
+     "incident_time": "2026-10-21T14:00:00-04:00",
+     "location": {
+      "latitude": 39.722,
+      "longitude": -76.661
+     },
+     "material": "UN1017",
+     "spill_size": "large"
+    },
+    "wind": {
+     "direction_deg_from": 10.0,
+     "observed_at": "2026-10-21T00:06:12+00:00",
+     "source": "NWS gridpoint forecast CTP/117,14, the cell for 2026-10-21T14:00:00-04:00",
+     "speed_kmh": 14.8
+    }
+   },
+   "response_format": "detailed"
+  },
+  "startedAtTime": "2026-11-08T17:15:20.186487Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/points/",
+    "id": "nws:points"
+   },
+   {
+    "endpoint": "https://api.weather.gov/gridpoints/",
+    "id": "nws:gridpoints"
+   },
+   {
+    "endpoint": "https://api.census.gov/data/2020/dec/dhc",
+    "id": "census:dhc2020"
+   },
+   {
+    "endpoint": "https://api.census.gov/data/2024/acs/acs5",
+    "id": "census:acs5"
+   },
+   {
+    "endpoint": "https://api.census.gov/data/2024/cre",
+    "id": "census:cre"
+   },
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/",
+    "id": "tigerweb:census2020"
+   },
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/",
+    "id": "tigerweb:current"
+   },
+   {
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/structures/",
+    "id": "usgs_structures"
+   },
+   {
+    "endpoint": "https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/",
+    "id": "usgs_3dhp"
+   },
+   {
+    "endpoint": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_North_American_Rail_Network_Lines/",
+    "id": "bts_ntad"
+   },
+   {
+    "endpoint": "fixtures/cms/hospitals.json",
+    "id": "cms:hospitals"
+   },
+   {
+    "endpoint": "fixtures/cms/hospitals.json",
+    "id": "census_geocoder"
+   },
+   {
+    "endpoint": "fixtures/cms/nursing_homes.json",
+    "id": "cms:nursing_homes"
+   },
+   {
+    "endpoint": "fixtures/lodes/",
+    "id": "lodes"
+   },
+   {
+    "endpoint": "packs/erg.json",
+    "id": "pack:erg"
+   },
+   {
+    "endpoint": "packs/cfr172.json",
+    "id": "pack:cfr172"
+   },
+   {
+    "endpoint": "packs/cameo.json",
+    "id": "pack:cameo"
+   },
+   {
+    "endpoint": "packs/hazard_classes.json",
+    "id": "pack:hazard_classes"
+   },
+   {
+    "endpoint": "packs/flag_rules.json",
+    "id": "pack:flag_rules"
+   },
+   {
+    "endpoint": null,
+    "id": "code:astral"
+   }
+  ]
+ },
+ "as_of": "2026-11-08T17:15:20.477006Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 70476,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "559933da40e196928e6bdf541b44694d83ecf13c473eea5a72078dd4604c379e"
+ },
+ "horizon_s": 3600,
+ "horizon_source": "nws:gridpoints",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [
+  "06fdfbeb944179491519c8c75055d088fbda1a7714ed2078413a048aa4948314",
+  "3b846fc7e26703a6226c6944a023632b5351c32ba18ebfdd7ccfa8789cf52c32",
+  "43a3b97fb57a4726ed8fcfd4ab34db5b612a9e24f88faf8d5d8d0b7ef1b55cd3",
+  "45a8944d37710f0c1a61456be9abab6e1e76b18848d285d65dd01ec97f73407b",
+  "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+  "51dcf29a52eb037f7a1d761fc5491f0a3113ae22abac23e1f898846eff045685",
+  "5274435faf8c82ba07b8d02ecacd1ad2d9aa18be47ce214bf1e7c3d88ff27997",
+  "57e0ecd4c5b596828a826115c8bfe62d3267f7b0e7f61f87157f2fb4bd884363",
+  "6352fd52bfa8a1976d78d0df6fbf4ca134808e95bdbc5f464e1a9175d9925a54",
+  "66bd7dfebc016dcd3cd2d6f43310971c6788be0c0825830abcb3bb160014dcf4",
+  "6a747d3ca1581494d64b96d10979f84033567b52148ad6b4df2c9d464025eaee",
+  "7f1664bc838659f62214b4cae7697a04d9fd9721fcab0c400937a97c4369abc7",
+  "945320d02738c32633c0eda19403c1b18b2cea6eb175e22d8a9ed01877ee984f",
+  "9454f287a0eb9a63ce0cd8350ae125619f78f1959aa1df8dd56c250b7e961578",
+  "a58065ba19a972e6be8c82cfd3a39bcdad4c4e9d03e52ea2f382e4322a9c2ef3",
+  "a832ce1a1ba864452f15ee0761534bbf287cc7d053c3febe1f5bfa3887493e82",
+  "ad37fe6278e0c7caf3b77c1c5068a56e18a6c87b78ed5a840ee22a0f961ea7a8",
+  "bb3b6079f1bfdb5518b34ff08f8784a80992d27ec1e67608dbce94398be8a7e5",
+  "bbc399707c3afcee59d64e8aa5b98b6890fdaef509c62e25b1ebc285f488f71c",
+  "c1179744cd1f4537998d6afba6beb586e483d33b79adac0fa54e1a26e77f8992",
+  "cc6e43136cd379a74d9e02efa13d64252ce6c92e26759aa80ccda24944a52d01",
+  "f85fa0d19970f2a1fd1ef5570d9de2261b5be2a34949a3831c953107ae71ac3f",
+  "f95ca732ad9678e33cef25d8e4e71fea11d825147de8086045ceae4cf8da29f7"
+ ],
+ "wasRevisionOf": null
+}

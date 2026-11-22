@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T05:02:12Z",
+  "http_mode": "record",
+  "id": "40fa03e3597934ede6362d5e6cf52a48ec8272f9365ec11b58e75972a5ad64bd",
+  "name": "GET census_geocoder",
+  "params": {
+   "method": "GET",
+   "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=100+JONES+POINT+DR%2C+ALEXANDRIA%2C+VA%2C+22314&benchmark=Public_AR_Current&format=json"
+  },
+  "startedAtTime": "2026-10-27T05:02:12Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=100+JONES+POINT+DR%2C+ALEXANDRIA%2C+VA%2C+22314&benchmark=Public_AR_Current&format=json",
+    "id": "census:geocoder"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T05:02:12Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 664,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "345aa3a79bd63c71b85df24cb576e109499ba225406b808d6cb953e95a8bb94f"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "census:geocoder",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

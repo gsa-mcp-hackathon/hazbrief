@@ -1,0 +1,33 @@
+{
+ "api": "usgs_3dep",
+ "body": {
+  "samples": [
+   {
+    "location": {
+     "spatialReference": {
+      "latestWkid": 4326,
+      "wkid": 4326
+     },
+     "x": -77.037,
+     "y": 38.7934
+    },
+    "locationId": 0,
+    "rasterId": 105844,
+    "resolution": 1,
+    "value": "-0.396260113"
+   }
+  ]
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-28T03:21:08Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 28 Oct 2026 03:21:08 GMT",
+  "ETag": "W/\"6fe26b32\""
+ },
+ "status": 200,
+ "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples?geometry=%7B%22points%22%3A%5B%5B-77.037%2C38.7934%5D%5D%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryMultipoint&returnFirstValueOnly=true&f=json"
+}

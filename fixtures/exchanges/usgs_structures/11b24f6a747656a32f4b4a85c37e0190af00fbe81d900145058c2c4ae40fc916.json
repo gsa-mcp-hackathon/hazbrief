@@ -1,0 +1,152 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.566548,
+      39.838936
+     ],
+     "type": "Point"
+    },
+    "id": 6623326,
+    "properties": {
+     "address": "603 South Main Street",
+     "city": "Mont Alto",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Mont Alto Ambulance Squad",
+     "objectid": 6623326,
+     "permanent_identifier": "000e9c8e-197b-464f-a07d-5a8cc72f0874",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.574173,
+      39.652657
+     ],
+     "type": "Point"
+    },
+    "id": 6653672,
+    "properties": {
+     "address": "8 Maple Avenue",
+     "city": "Smithsburg",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "Smithsburg Emergency Medical Services Company 79",
+     "objectid": 6653672,
+     "permanent_identifier": "1eb626b9-15d5-4094-80cb-7845df998449",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.589788,
+      39.761448
+     ],
+     "type": "Point"
+    },
+    "id": 6730792,
+    "properties": {
+     "address": "603 West Main Street",
+     "city": "Waynesboro",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Waynesboro Ambulance Squad",
+     "objectid": 6730792,
+     "permanent_identifier": "6d2b42bb-a676-4fe3-b1aa-de25e186db23",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.758916,
+      39.625182
+     ],
+     "type": "Point"
+    },
+    "id": 6775249,
+    "properties": {
+     "address": "17556 York Road",
+     "city": "Hagerstown",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "Washington County Emergency Services Company 25",
+     "objectid": 6775249,
+     "permanent_identifier": "99cc5204-d924-4590-906c-2528c98e72ac",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.570646,
+      39.751351
+     ],
+     "type": "Point"
+    },
+    "id": 6842148,
+    "properties": {
+     "address": "East Main Street",
+     "city": "Waynesboro",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Waynesboro Area Advanced Life Support Unit Medic 2",
+     "objectid": 6842148,
+     "permanent_identifier": "dd530d24-b660-4b06-8700-f0036d5c7a68",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.697175,
+      39.634665
+     ],
+     "type": "Point"
+    },
+    "id": 6871986,
+    "properties": {
+     "address": "110 Eastern Boulevard North",
+     "city": "Hagerstown",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1771974889000,
+     "name": "Community Rescue Service Main Station Headquarters",
+     "objectid": 6871986,
+     "permanent_identifier": "fb968996-4e9f-43e3-8d59-977f90838720",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-13T08:16:51Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Fri, 13 Nov 2026 08:16:51 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/15/query?where=1%3D1&geometry=-77.912165%2C39.577272%2C-77.535835%2C39.866728&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

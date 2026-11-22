@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T05:08:56Z",
+  "http_mode": "record",
+  "id": "9606e9a3a031e7b1503e7d79b638db1abf28b0b6516fa42cc4fdda0943c94fa7",
+  "name": "GET census",
+  "params": {
+   "method": "GET",
+   "url": "https://api.census.gov/data/2024/acs/acs5?get=B01001_020E%2CB01001_020M%2CB01001_021E%2CB01001_021M%2CB01001_022E%2CB01001_022M%2CB01001_023E%2CB01001_023M%2CB01001_024E%2CB01001_024M%2CB01001_025E%2CB01001_025M%2CB01001_044E%2CB01001_044M%2CB01001_045E%2CB01001_045M%2CB01001_046E%2CB01001_046M%2CB01001_047E%2CB01001_047M%2CB01001_048E%2CB01001_048M%2CB01001_049E%2CB01001_049M%2CC16002_004E%2CC16002_004M%2CC16002_007E%2CC16002_007M%2CC16002_010E%2CC16002_010M%2CC16002_013E%2CC16002_013M&for=block+group%3A%2A&in=state%3A51+county%3A510+tract%3A201805"
+  },
+  "startedAtTime": "2026-10-27T05:08:56Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.census.gov/data/2024/acs/acs5?get=B01001_020E%2CB01001_020M%2CB01001_021E%2CB01001_021M%2CB01001_022E%2CB01001_022M%2CB01001_023E%2CB01001_023M%2CB01001_024E%2CB01001_024M%2CB01001_025E%2CB01001_025M%2CB01001_044E%2CB01001_044M%2CB01001_045E%2CB01001_045M%2CB01001_046E%2CB01001_046M%2CB01001_047E%2CB01001_047M%2CB01001_048E%2CB01001_048M%2CB01001_049E%2CB01001_049M%2CC16002_004E%2CC16002_004M%2CC16002_007E%2CC16002_007M%2CC16002_010E%2CC16002_010M%2CC16002_013E%2CC16002_013M&for=block+group%3A%2A&in=state%3A51+county%3A510+tract%3A201805",
+    "id": "census:acs5"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T05:08:56Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 1203,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "077cacc83a6cf4720b6a9c24c18558fef3f070b36b74a9c93c7a398bb63ee8d4"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "census:acs5",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

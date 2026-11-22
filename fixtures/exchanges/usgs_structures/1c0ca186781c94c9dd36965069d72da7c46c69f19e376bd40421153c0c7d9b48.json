@@ -1,0 +1,284 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.859107,
+      39.357582
+     ],
+     "type": "Point"
+    },
+    "id": 6646310,
+    "properties": {
+     "address": "255 Edmond Road",
+     "city": "Kearneysville",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Valley Medical Transport",
+     "objectid": 6646310,
+     "permanent_identifier": "17565fca-22b1-42e5-8a11-7f5ad6dd9338",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.558466,
+      39.107172
+     ],
+     "type": "Point"
+    },
+    "id": 6662610,
+    "properties": {
+     "address": "143 Catoctin Circle Southeast",
+     "city": "Leesburg",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1731705562000,
+     "name": "Loudoun County Volunteer Rescue Squad Company 13",
+     "objectid": 6662610,
+     "permanent_identifier": "2806b530-3efd-458e-a30f-ccb650afaa96",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.856778,
+      39.309362
+     ],
+     "type": "Point"
+    },
+    "id": 6668615,
+    "properties": {
+     "address": "419 16th Avenue",
+     "city": "Ranson",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Jefferson County Ambulance Authority",
+     "objectid": 6668615,
+     "permanent_identifier": "2e2ea00e-634f-4638-acf5-945f43e10d89",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.697698,
+      39.14343
+     ],
+     "type": "Point"
+    },
+    "id": 6671845,
+    "properties": {
+     "address": "500 North Maple Street",
+     "city": "Purcellville",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1631059200000,
+     "name": "Purcellville Volunteer Rescue Squad Company 14",
+     "objectid": 6671845,
+     "permanent_identifier": "31726c0c-bfa2-4f44-a066-b7f3778f68b6",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.62975,
+      39.313233
+     ],
+     "type": "Point"
+    },
+    "id": 6681579,
+    "properties": {
+     "address": "200 West Potomac Street",
+     "city": "Brunswick",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Brunswick Volunteer Ambulance and Rescue Company Station 19",
+     "objectid": 6681579,
+     "permanent_identifier": "3b0b8e83-82c9-4d93-94e7-67bb03c76f70",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.75028,
+      39.458803
+     ],
+     "type": "Point"
+    },
+    "id": 6717956,
+    "properties": {
+     "address": "110 1/2 West Chapline Street",
+     "city": "Sharpsburg",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Sharpsburg Area Emergency Medical Services Station 19",
+     "objectid": 6717956,
+     "permanent_identifier": "601417f9-8a63-40d6-9f5d-b7b1f4746a61",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.6618,
+      39.524175
+     ],
+     "type": "Point"
+    },
+    "id": 6741473,
+    "properties": {
+     "address": "7619 Old National Pike",
+     "city": "Boonsboro",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Boonsboro Ambulance and Rescue Services Company 69",
+     "objectid": 6741473,
+     "permanent_identifier": "7823a6a8-810c-4f6c-910f-5d6887b1411d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.357434,
+      39.477007
+     ],
+     "type": "Point"
+    },
+    "id": 6769099,
+    "properties": {
+     "address": "73 West Frederick Street",
+     "city": "Walkersville",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1672790400000,
+     "name": "Walkersville Volunteer Rescue Company Station 24",
+     "objectid": 6769099,
+     "permanent_identifier": "931ec675-da71-4f94-a10f-2fd8f0bf91aa",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.555058,
+      39.077628
+     ],
+     "type": "Point"
+    },
+    "id": 6783680,
+    "properties": {
+     "address": "1001 Sycolin Road",
+     "city": "Leesburg",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1723244138000,
+     "name": "PHI / AirCare 3",
+     "objectid": 6783680,
+     "permanent_identifier": "a1cbd424-f640-43a9-8140-2cf312720ba7",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.849815,
+      39.297542
+     ],
+     "type": "Point"
+    },
+    "id": 6793364,
+    "properties": {
+     "address": "750 Hollywood Drive",
+     "city": "Charles Town",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Charles Town Races and Slots Ambulance",
+     "objectid": 6793364,
+     "permanent_identifier": "abd90e0b-0959-4a6e-810b-bbe44d896818",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.401968,
+      38.999731
+     ],
+     "type": "Point"
+    },
+    "id": 6813881,
+    "properties": {
+     "address": "104 Commerce Street",
+     "city": "Sterling",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Sterling Rescue Squad Company 15",
+     "objectid": 6813881,
+     "permanent_identifier": "c00c0e8f-3057-497d-8a55-c190524c9b42",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.65142,
+      39.134341
+     ],
+     "type": "Point"
+    },
+    "id": 6830832,
+    "properties": {
+     "address": "39071 East Colonial Highway",
+     "city": "Hamilton",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1630540800000,
+     "name": "Hamilton Volunteer Rescue Squad Station 17",
+     "objectid": 6830832,
+     "permanent_identifier": "d18eff01-2fb9-4bbd-a902-3c479deb2885",
+     "state": "VA"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-11T11:49:36Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 11 Nov 2026 11:49:36 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/15/query?where=1%3D1&geometry=-77.913331%2C38.986136%2C-77.165469%2C39.565064&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

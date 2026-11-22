@@ -1,0 +1,176 @@
+{
+ "api": "census",
+ "body": [
+  [
+   "NAICS2017",
+   "NAICS2017_LABEL",
+   "ESTAB",
+   "INDLEVEL",
+   "state",
+   "county"
+  ],
+  [
+   "00",
+   "Total for all sectors",
+   "23801",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "22",
+   "Utilities",
+   "81",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "23",
+   "Construction",
+   "506",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "31-33",
+   "Manufacturing",
+   "104",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "42",
+   "Wholesale trade",
+   "370",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "44-45",
+   "Retail trade",
+   "1653",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "48-49",
+   "Transportation and warehousing",
+   "167",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "51",
+   "Information",
+   "851",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "52",
+   "Finance and insurance",
+   "1079",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "53",
+   "Real estate and rental and leasing",
+   "1502",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "54",
+   "Professional, scientific, and technical services",
+   "5738",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "55",
+   "Management of companies and enterprises",
+   "189",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "56",
+   "Administrative and support and waste management and remediation services",
+   "970",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "61",
+   "Educational services",
+   "661",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "62",
+   "Health care and social assistance",
+   "2358",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "71",
+   "Arts, entertainment, and recreation",
+   "444",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "72",
+   "Accommodation and food services",
+   "2817",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "81",
+   "Other services (except public administration)",
+   "4286",
+   "2",
+   "11",
+   "001"
+  ],
+  [
+   "99",
+   "Industries not classified",
+   "21",
+   "2",
+   "11",
+   "001"
+  ]
+ ],
+ "method": "GET",
+ "recorded_at": "2026-10-27T16:27:47Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=60, must-revalidate",
+  "Date": "Tue, 27 Oct 2026 16:27:47 GMT"
+ },
+ "status": 200,
+ "url": "https://api.census.gov/data/2023/cbp?get=NAICS2017%2CNAICS2017_LABEL%2CESTAB&for=county%3A001&in=state%3A11&INDLEVEL=2"
+}

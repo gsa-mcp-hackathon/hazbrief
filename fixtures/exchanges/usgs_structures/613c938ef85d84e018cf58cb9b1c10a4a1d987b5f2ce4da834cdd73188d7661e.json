@@ -1,0 +1,306 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.706639,
+      39.609583
+     ],
+     "type": "Point"
+    },
+    "id": 6410303,
+    "properties": {
+     "address": "30 East Baltimore Street",
+     "city": "Funkstown",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1617148800000,
+     "name": "Funkstown Town Hall",
+     "objectid": 6410303,
+     "permanent_identifier": "001f8501-ebcf-44bc-9b31-3d59edc881aa",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.575101,
+      39.653503
+     ],
+     "type": "Point"
+    },
+    "id": 6413773,
+    "properties": {
+     "address": "21 West Water Street",
+     "city": "Smithsburg",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1645747200000,
+     "name": "Smithsburg Town Hall",
+     "objectid": 6413773,
+     "permanent_identifier": "048640ec-fbe1-4bac-a0ce-b509edf6ee92",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.858852,
+      39.855996
+     ],
+     "type": "Point"
+    },
+    "id": 6416107,
+    "properties": {
+     "address": "5000 Steele Avenue",
+     "city": "Lemasters",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1578096000000,
+     "name": "Peters Township Municipal Building",
+     "objectid": 6416107,
+     "permanent_identifier": "072b7408-8ca2-4cfb-87d8-ecd7ce8942b8",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.895194,
+      39.770033
+     ],
+     "type": "Point"
+    },
+    "id": 6525666,
+    "properties": {
+     "address": "11364 Fort Loudon Road",
+     "city": "Mercersburg",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1645056000000,
+     "name": "Montgomery Township Office",
+     "objectid": 6525666,
+     "permanent_identifier": "8ad7e40f-ff65-4457-bcf5-3b418e054383",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.576125,
+      39.755179
+     ],
+     "type": "Point"
+    },
+    "id": 6540375,
+    "properties": {
+     "address": "55 East Main Street",
+     "city": "Waynesboro",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1563667200000,
+     "name": "Waynesboro Borough Municipal Building",
+     "objectid": 6540375,
+     "permanent_identifier": "9c395c83-acad-4b98-846e-b8d04daf99ea",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.903531,
+      39.826469
+     ],
+     "type": "Point"
+    },
+    "id": 6554475,
+    "properties": {
+     "address": "113 South Main Street",
+     "city": "Mercersburg",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1578096000000,
+     "name": "Mercersburg Borough Hall",
+     "objectid": 6554475,
+     "permanent_identifier": "ad656adb-bff8-4525-abab-fa7dde9fb885",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.72539,
+      39.791145
+     ],
+     "type": "Point"
+    },
+    "id": 6566409,
+    "properties": {
+     "address": "60 North Washington Street",
+     "city": "Greencastle",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1556409600000,
+     "name": "Greencastle Borough Hall",
+     "objectid": 6566409,
+     "permanent_identifier": "bbc0877e-2741-4013-93b9-0f53ef94d3da",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.565236,
+      39.795871
+     ],
+     "type": "Point"
+    },
+    "id": 6566700,
+    "properties": {
+     "address": "7575 Mentzer Gap Road",
+     "city": "Waynesboro",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1568678400000,
+     "name": "Quincy Township Municipal Building",
+     "objectid": 6566700,
+     "permanent_identifier": "bb54141d-e126-4bd9-8011-b56c14f3cfe6",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.719007,
+      39.642991
+     ],
+     "type": "Point"
+    },
+    "id": 6576737,
+    "properties": {
+     "address": "1 East Franklin Street",
+     "city": "Hagerstown",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1580083200000,
+     "name": "Hagerstown City Hall",
+     "objectid": 6576737,
+     "permanent_identifier": "c7b73ae2-d6ca-4ddd-8bc6-57e10cb2b83e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.821493,
+      39.599359
+     ],
+     "type": "Point"
+    },
+    "id": 6585018,
+    "properties": {
+     "address": "2 North Conococheague Street",
+     "city": "Williamsport",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1617148800000,
+     "name": "Williamsport Town Hall",
+     "objectid": 6585018,
+     "permanent_identifier": "d18f27ff-ae1e-47e6-9b21-b84b79b58ca4",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.557053,
+      39.743427
+     ],
+     "type": "Point"
+    },
+    "id": 6595860,
+    "properties": {
+     "address": "13013 Welty Road",
+     "city": "Waynesboro",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1560211200000,
+     "name": "Washington Township Municipal Building",
+     "objectid": 6595860,
+     "permanent_identifier": "de78ee6d-55c9-46b9-8064-3039aefd7e94",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.558572,
+      39.844516
+     ],
+     "type": "Point"
+    },
+    "id": 6601335,
+    "properties": {
+     "address": "3 North Main Street",
+     "city": "Mont Alto",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1724159680000,
+     "name": "Mont Alto Borough Office",
+     "objectid": 6601335,
+     "permanent_identifier": "e542d0db-955a-473e-9ede-f5100ca2996e",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.711384,
+      39.79015
+     ],
+     "type": "Point"
+    },
+    "id": 6609137,
+    "properties": {
+     "address": "10655 Antrim Church Road",
+     "city": "Greencastle",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1560124800000,
+     "name": "Antrim Township Municipal Building",
+     "objectid": 6609137,
+     "permanent_identifier": "ee621357-630e-4dc4-b379-705341cac1d3",
+     "state": "PA"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-13T08:17:05Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Fri, 13 Nov 2026 08:17:05 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/4/query?where=1%3D1&geometry=-77.912165%2C39.577272%2C-77.535835%2C39.866728&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

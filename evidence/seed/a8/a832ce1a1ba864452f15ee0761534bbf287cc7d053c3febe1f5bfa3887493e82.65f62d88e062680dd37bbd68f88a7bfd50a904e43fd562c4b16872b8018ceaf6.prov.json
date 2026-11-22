@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-21T13:16:05Z",
+  "http_mode": "record",
+  "id": "65f62d88e062680dd37bbd68f88a7bfd50a904e43fd562c4b16872b8018ceaf6",
+  "name": "GET census",
+  "params": {
+   "method": "GET",
+   "url": "https://api.census.gov/data/2024/cre?get=PRED3_E%2CPOPUNI%2CPRED3_PE&for=us%3A1"
+  },
+  "startedAtTime": "2026-10-21T13:16:05Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.census.gov/data/2024/cre?get=PRED3_E%2CPOPUNI%2CPRED3_PE&for=us%3A1",
+    "id": "census:cre"
+   }
+  ]
+ },
+ "as_of": "2026-10-21T13:16:05Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 75,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "a832ce1a1ba864452f15ee0761534bbf287cc7d053c3febe1f5bfa3887493e82"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "census:cre",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

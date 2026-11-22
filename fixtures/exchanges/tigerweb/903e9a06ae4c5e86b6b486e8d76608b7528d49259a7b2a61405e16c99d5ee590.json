@@ -1,0 +1,27 @@
+{
+ "api": "tigerweb",
+ "body": {
+  "extent": {
+   "spatialReference": {
+    "latestWkid": 4326,
+    "wkid": 4326
+   },
+   "xmax": -77.03728800040635,
+   "xmin": -77.1443590004178,
+   "ymax": 38.84492299988886,
+   "ymin": 38.785215999746356
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-27T05:02:12Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Tue, 27 Oct 2026 05:02:12 GMT",
+  "ETag": "\"1784720262\""
+ },
+ "status": 200,
+ "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/28/query?where=BASENAME%3D%27Alexandria%27+AND+STATE%3D%2751%27&outFields=NAME%2CBASENAME%2CSTATE&returnGeometry=false&outSR=4326&f=json&returnExtentOnly=true"
+}

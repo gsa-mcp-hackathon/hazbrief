@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-04T15:39:09Z",
+  "http_mode": "record",
+  "id": "1b1d0bb8efddb2f3155ba61975ed98d6e8a7378de558052b03b61bc924c64fb9",
+  "name": "GET nws",
+  "params": {
+   "method": "GET",
+   "url": "https://api.weather.gov/gridpoints/BGM/78,29"
+  },
+  "startedAtTime": "2026-11-04T15:39:09Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/gridpoints/BGM/78,29",
+    "id": "nws:gridpoints"
+   }
+  ]
+ },
+ "as_of": "2026-11-04T13:41:35Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 115528,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "4ede1df0419791dcae941c78ccd0c324d0e1d6b7a9ec87021fb0ed589bbe2f13"
+ },
+ "horizon_s": 3600,
+ "horizon_source": "nws:gridpoints",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

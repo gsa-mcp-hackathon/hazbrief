@@ -1,0 +1,1538 @@
+{
+ "$defs": {
+  "AttributionCredit": {
+   "additionalProperties": false,
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "edition": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Edition"
+    },
+    "publisher": {
+     "title": "Publisher",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "url": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Url"
+    }
+   },
+   "required": [
+    "doc_id",
+    "title",
+    "publisher",
+    "edition",
+    "url"
+   ],
+   "title": "AttributionCredit",
+   "type": "object"
+  },
+  "AttributionNotice": {
+   "additionalProperties": false,
+   "description": "A reuse or credit notice, verbatim from the held document at `locator`.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "locator",
+    "text"
+   ],
+   "title": "AttributionNotice",
+   "type": "object"
+  },
+  "CrossCheck": {
+   "additionalProperties": false,
+   "description": "One field compared across sources (DN-003 section 5). `values` maps each source\nrole to its value as that source prints it, or None where the source does not carry\nthe field. `agree`: every carrying source agrees and at least two carry it;\n`disputed`: two carrying sources differ; `single_source`: only one source carries\nit.",
+   "properties": {
+    "field": {
+     "title": "Field",
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "agree",
+      "disputed",
+      "single_source"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "values": {
+     "additionalProperties": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "title": "Values",
+     "type": "object"
+    }
+   },
+   "required": [
+    "field",
+    "values",
+    "status"
+   ],
+   "title": "CrossCheck",
+   "type": "object"
+  },
+  "ErgData": {
+   "additionalProperties": false,
+   "properties": {
+    "guides": {
+     "additionalProperties": {
+      "$ref": "#/$defs/ErgGuide"
+     },
+     "title": "Guides",
+     "type": "object"
+    },
+    "index": {
+     "additionalProperties": {
+      "$ref": "#/$defs/ErgIndexEntry"
+     },
+     "title": "Index",
+     "type": "object"
+    },
+    "materials": {
+     "additionalProperties": {
+      "$ref": "#/$defs/ErgMaterial"
+     },
+     "title": "Materials",
+     "type": "object"
+    },
+    "name_index": {
+     "additionalProperties": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "title": "Name Index",
+     "type": "object"
+    },
+    "placards": {
+     "items": {
+      "$ref": "#/$defs/ErgPlacard"
+     },
+     "title": "Placards",
+     "type": "array"
+    },
+    "seed_un_numbers": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Seed Un Numbers",
+     "type": "array"
+    },
+    "table2_legend": {
+     "items": {
+      "$ref": "#/$defs/Table2Gas"
+     },
+     "title": "Table2 Legend",
+     "type": "array"
+    },
+    "table3_cross_checks": {
+     "items": {
+      "$ref": "#/$defs/CrossCheck"
+     },
+     "title": "Table3 Cross Checks",
+     "type": "array"
+    },
+    "table3_wind_bands": {
+     "items": {
+      "$ref": "#/$defs/WindBand"
+     },
+     "title": "Table3 Wind Bands",
+     "type": "array"
+    },
+    "unnumbered": {
+     "items": {
+      "$ref": "#/$defs/ErgUnnumbered"
+     },
+     "title": "Unnumbered",
+     "type": "array"
+    }
+   },
+   "required": [
+    "seed_un_numbers",
+    "materials",
+    "guides",
+    "index",
+    "name_index",
+    "table3_wind_bands",
+    "table3_cross_checks",
+    "table2_legend",
+    "placards",
+    "unnumbered"
+   ],
+   "title": "ErgData",
+   "type": "object"
+  },
+  "ErgGuide": {
+   "additionalProperties": false,
+   "properties": {
+    "cross_checks": {
+     "items": {
+      "$ref": "#/$defs/CrossCheck"
+     },
+     "title": "Cross Checks",
+     "type": "array"
+    },
+    "disputed": {
+     "title": "Disputed",
+     "type": "boolean"
+    },
+    "evacuation": {
+     "$ref": "#/$defs/GuideEvacuation"
+    },
+    "guide": {
+     "title": "Guide",
+     "type": "string"
+    },
+    "sections": {
+     "additionalProperties": {
+      "$ref": "#/$defs/GuideSection"
+     },
+     "title": "Sections",
+     "type": "object"
+    },
+    "title": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Title"
+    },
+    "title_keyed_by": {
+     "items": {
+      "enum": [
+       "A",
+       "B",
+       "C"
+      ],
+      "type": "string"
+     },
+     "title": "Title Keyed By",
+     "type": "array"
+    }
+   },
+   "required": [
+    "guide",
+    "title",
+    "title_keyed_by",
+    "sections",
+    "evacuation",
+    "cross_checks",
+    "disputed"
+   ],
+   "title": "ErgGuide",
+   "type": "object"
+  },
+  "ErgIndexEntry": {
+   "additionalProperties": false,
+   "description": "Every ID number in the yellow index, seed or not (schema version 2). `in_table1`:\nTable 1 lists the ID number, which covers both TIH materials and water-reactive\nmaterials listed \"(when spilled in water)\" (ERG 2024 PDF p. 30, printed p. 28, Note\n1); which names under the ID it lists is read only for the seeds\n(`ErgMaterial.table1`).",
+   "properties": {
+    "in_table1": {
+     "title": "In Table1",
+     "type": "boolean"
+    },
+    "names": {
+     "items": {
+      "$ref": "#/$defs/ErgIndexName"
+     },
+     "title": "Names",
+     "type": "array"
+    },
+    "table1_locator": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Table1 Locator"
+    },
+    "un": {
+     "title": "Un",
+     "type": "string"
+    }
+   },
+   "required": [
+    "un",
+    "names",
+    "in_table1",
+    "table1_locator"
+   ],
+   "title": "ErgIndexEntry",
+   "type": "object"
+  },
+  "ErgIndexName": {
+   "additionalProperties": false,
+   "description": "One yellow-index row: a name and the guide printed beside it.",
+   "properties": {
+    "adjudicated": {
+     "title": "Adjudicated",
+     "type": "boolean"
+    },
+    "guide": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Guide"
+    },
+    "keyed_by": {
+     "items": {
+      "enum": [
+       "A",
+       "B",
+       "C"
+      ],
+      "type": "string"
+     },
+     "title": "Keyed By",
+     "type": "array"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "unresolved": {
+     "title": "Unresolved",
+     "type": "boolean"
+    },
+    "unresolved_fields": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Unresolved Fields",
+     "type": "array"
+    }
+   },
+   "required": [
+    "keyed_by",
+    "adjudicated",
+    "unresolved",
+    "unresolved_fields",
+    "name",
+    "guide",
+    "locator"
+   ],
+   "title": "ErgIndexName",
+   "type": "object"
+  },
+  "ErgMaterial": {
+   "additionalProperties": false,
+   "description": "Every ID number in the yellow index (schema version 3). `guide` is None when the\nindex prints different guides under different names of the ID (the names carry\ntheirs). `tih`: Table 1 lists the ID. `table2`: its Table 2 rows, or None.\n`where_spilled_matters`: Table 2 lists it, so a spill in water changes the answer\n(ERG pp. 30, 336). `cross_checks` are DN-003 section 5's, for the seed materials.",
+   "properties": {
+    "cross_checks": {
+     "items": {
+      "$ref": "#/$defs/CrossCheck"
+     },
+     "title": "Cross Checks",
+     "type": "array"
+    },
+    "disputed": {
+     "title": "Disputed",
+     "type": "boolean"
+    },
+    "guide": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Guide"
+    },
+    "names": {
+     "items": {
+      "$ref": "#/$defs/ErgName"
+     },
+     "title": "Names",
+     "type": "array"
+    },
+    "table1": {
+     "items": {
+      "$ref": "#/$defs/Table1Entry"
+     },
+     "title": "Table1",
+     "type": "array"
+    },
+    "table2": {
+     "anyOf": [
+      {
+       "items": {
+        "$ref": "#/$defs/Table2Entry"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Table2"
+    },
+    "table3": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Table3"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "tih": {
+     "title": "Tih",
+     "type": "boolean"
+    },
+    "un": {
+     "title": "Un",
+     "type": "string"
+    },
+    "where_spilled_matters": {
+     "title": "Where Spilled Matters",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "un",
+    "names",
+    "guide",
+    "tih",
+    "table1",
+    "table2",
+    "where_spilled_matters",
+    "table3",
+    "cross_checks",
+    "disputed"
+   ],
+   "title": "ErgMaterial",
+   "type": "object"
+  },
+  "ErgName": {
+   "additionalProperties": false,
+   "properties": {
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    }
+   },
+   "required": [
+    "name",
+    "locator"
+   ],
+   "title": "ErgName",
+   "type": "object"
+  },
+  "ErgNameAlias": {
+   "additionalProperties": false,
+   "description": "Another name for a yellow-index row, printed by a source the pack cites (schema\nversion 8, HB-17): the sentence that pairs the two, verbatim, by locator.",
+   "properties": {
+    "alias": {
+     "title": "Alias",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "quote": {
+     "title": "Quote",
+     "type": "string"
+    }
+   },
+   "required": [
+    "alias",
+    "quote",
+    "locator"
+   ],
+   "title": "ErgNameAlias",
+   "type": "object"
+  },
+  "ErgPlacard": {
+   "additionalProperties": false,
+   "description": "One input of the placard entry point (schema version 7, HB-15): a placard the\nERG's Table of Markings, Labels and Placards and Initial Response Guide draws (PDF\npp. 10-11, printed pp. 8-9), with the guide circled beside it. \"USE THIS TABLE ONLY\nIF MATERIALS CANNOT BE SPECIFICALLY IDENTIFIED\" (p. 10).\n\n`placard` is the row's key: the hazard class or division (for Classes 2, 4, 5 and\n6, the division ERG p. 8 names for the placard's printed word), a placard word\nwhere one placard of a class has its own guide (OXYGEN, GASOLINE, FUEL OIL, HOT),\nthe lithium battery labels, DANGEROUS, or `none` (no placard can be seen). `words`\nare the other words printed on the row's placards, each also accepted;\n`hazard_class` the class number printed in the placard's lower corner, or None.\n`association`: `prose` when an ERG sentence (`prose`) states the guide as well as\nthe drawing, `drawing` when only the drawing's grouping does. Keyed by A (the PDF\ntext layer: the circled number, and the prose) and B (a reading of the rendered\npage); see packs/SCHEMA.md.",
+   "properties": {
+    "adjudicated": {
+     "title": "Adjudicated",
+     "type": "boolean"
+    },
+    "association": {
+     "enum": [
+      "prose",
+      "drawing"
+     ],
+     "title": "Association",
+     "type": "string"
+    },
+    "guide": {
+     "title": "Guide",
+     "type": "string"
+    },
+    "hazard_class": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Hazard Class"
+    },
+    "keyed_by": {
+     "items": {
+      "enum": [
+       "A",
+       "B",
+       "C"
+      ],
+      "type": "string"
+     },
+     "title": "Keyed By",
+     "type": "array"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "placard": {
+     "title": "Placard",
+     "type": "string"
+    },
+    "prose": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/PlacardProse"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "shows": {
+     "title": "Shows",
+     "type": "string"
+    },
+    "unresolved": {
+     "title": "Unresolved",
+     "type": "boolean"
+    },
+    "unresolved_fields": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Unresolved Fields",
+     "type": "array"
+    },
+    "words": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Words",
+     "type": "array"
+    }
+   },
+   "required": [
+    "keyed_by",
+    "adjudicated",
+    "unresolved",
+    "unresolved_fields",
+    "placard",
+    "words",
+    "hazard_class",
+    "shows",
+    "guide",
+    "locator",
+    "association",
+    "prose"
+   ],
+   "title": "ErgPlacard",
+   "type": "object"
+  },
+  "ErgUnnumbered": {
+   "additionalProperties": false,
+   "description": "A yellow-index row with no ID number (schema version 8, HB-17): ERG 2024 PDF\np. 31 prints four, the explosives, which the index lists by name and division\nbecause \"Explosives are not individually listed by their ID number\" (`note`,\np. 30). A\n`material` matching `name` or an alias resolves to `guide`. Keyed as every index\nrow is (A, B, C).",
+   "properties": {
+    "adjudicated": {
+     "title": "Adjudicated",
+     "type": "boolean"
+    },
+    "aliases": {
+     "items": {
+      "$ref": "#/$defs/ErgNameAlias"
+     },
+     "title": "Aliases",
+     "type": "array"
+    },
+    "guide": {
+     "title": "Guide",
+     "type": "string"
+    },
+    "keyed_by": {
+     "items": {
+      "enum": [
+       "A",
+       "B",
+       "C"
+      ],
+      "type": "string"
+     },
+     "title": "Keyed By",
+     "type": "array"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "note": {
+     "$ref": "#/$defs/PlacardProse"
+    },
+    "unresolved": {
+     "title": "Unresolved",
+     "type": "boolean"
+    },
+    "unresolved_fields": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Unresolved Fields",
+     "type": "array"
+    }
+   },
+   "required": [
+    "keyed_by",
+    "adjudicated",
+    "unresolved",
+    "unresolved_fields",
+    "name",
+    "guide",
+    "locator",
+    "note",
+    "aliases"
+   ],
+   "title": "ErgUnnumbered",
+   "type": "object"
+  },
+  "GuideDistance": {
+   "additionalProperties": false,
+   "description": "An orange-guide distance: metres, and the imperial phrase as printed (\"1/2\nmile\").",
+   "properties": {
+    "imperial": {
+     "title": "Imperial",
+     "type": "string"
+    },
+    "m": {
+     "title": "M",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "m",
+    "imperial"
+   ],
+   "title": "GuideDistance",
+   "type": "object"
+  },
+  "GuideEvacuation": {
+   "additionalProperties": false,
+   "description": "The EVACUATION distances of an orange guide, parsed from its text. `None` where\nthe guide states no such distance (a TIH guide refers its spill distance to Table\n1).",
+   "properties": {
+    "fire_evacuate": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/GuideDistance"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "fire_isolate": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/GuideDistance"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "immediate_precautionary": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/GuideDistance"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "immediate_precautionary_solids": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/GuideDistance"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "large_spill_all_directions": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/GuideDistance"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "large_spill_downwind": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/GuideDistance"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "spill_refers_to_table1": {
+     "title": "Spill Refers To Table1",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "immediate_precautionary",
+    "immediate_precautionary_solids",
+    "large_spill_downwind",
+    "large_spill_all_directions",
+    "fire_isolate",
+    "fire_evacuate",
+    "spill_refers_to_table1"
+   ],
+   "title": "GuideEvacuation",
+   "type": "object"
+  },
+  "GuideItem": {
+   "additionalProperties": false,
+   "properties": {
+    "adjudicated": {
+     "title": "Adjudicated",
+     "type": "boolean"
+    },
+    "keyed_by": {
+     "items": {
+      "enum": [
+       "A",
+       "B",
+       "C"
+      ],
+      "type": "string"
+     },
+     "title": "Keyed By",
+     "type": "array"
+    },
+    "kind": {
+     "enum": [
+      "heading",
+      "bullet",
+      "text"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "text": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Text"
+    },
+    "unresolved": {
+     "title": "Unresolved",
+     "type": "boolean"
+    },
+    "unresolved_fields": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Unresolved Fields",
+     "type": "array"
+    }
+   },
+   "required": [
+    "keyed_by",
+    "adjudicated",
+    "unresolved",
+    "unresolved_fields",
+    "kind",
+    "text"
+   ],
+   "title": "GuideItem",
+   "type": "object"
+  },
+  "GuideSection": {
+   "additionalProperties": false,
+   "properties": {
+    "heading": {
+     "title": "Heading",
+     "type": "string"
+    },
+    "items": {
+     "items": {
+      "$ref": "#/$defs/GuideItem"
+     },
+     "title": "Items",
+     "type": "array"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    }
+   },
+   "required": [
+    "heading",
+    "locator",
+    "items"
+   ],
+   "title": "GuideSection",
+   "type": "object"
+  },
+  "KmDistance": {
+   "additionalProperties": false,
+   "description": "A downwind distance as ERG Table 1 or 3 prints it; `plus` is the table's \"+\"\n(\"distance can be larger in certain atmospheric conditions\").",
+   "properties": {
+    "km": {
+     "title": "Km",
+     "type": "number"
+    },
+    "mi": {
+     "title": "Mi",
+     "type": "number"
+    },
+    "plus": {
+     "title": "Plus",
+     "type": "boolean"
+    },
+    "unit_note": {
+     "anyOf": [
+      {
+       "enum": [
+        "stale_secondary",
+        "inconsistent_other"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Unit Note"
+    }
+   },
+   "required": [
+    "km",
+    "mi",
+    "plus"
+   ],
+   "title": "KmDistance",
+   "type": "object"
+  },
+  "MetricDistance": {
+   "additionalProperties": false,
+   "properties": {
+    "ft": {
+     "title": "Ft",
+     "type": "integer"
+    },
+    "m": {
+     "title": "M",
+     "type": "integer"
+    },
+    "unit_note": {
+     "anyOf": [
+      {
+       "enum": [
+        "stale_secondary",
+        "inconsistent_other"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Unit Note"
+    }
+   },
+   "required": [
+    "m",
+    "ft"
+   ],
+   "title": "MetricDistance",
+   "type": "object"
+  },
+  "PackAttribution": {
+   "additionalProperties": false,
+   "properties": {
+    "credits": {
+     "items": {
+      "$ref": "#/$defs/AttributionCredit"
+     },
+     "title": "Credits",
+     "type": "array"
+    },
+    "notices": {
+     "items": {
+      "$ref": "#/$defs/AttributionNotice"
+     },
+     "title": "Notices",
+     "type": "array"
+    }
+   },
+   "required": [
+    "credits",
+    "notices"
+   ],
+   "title": "PackAttribution",
+   "type": "object"
+  },
+  "PackSource": {
+   "additionalProperties": false,
+   "description": "One held document a pack was parsed from: its corpus doc_id, the sha256 of the\nheld bytes, where in it the pack reads, and its licence as `corpus/sources.yaml`\nrecords it.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "licence": {
+     "title": "Licence",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "raw_sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Raw Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "raw_sha256",
+    "locator",
+    "licence"
+   ],
+   "title": "PackSource",
+   "type": "object"
+  },
+  "PlacardProse": {
+   "additionalProperties": false,
+   "description": "An ERG sentence, verbatim, by locator: the one that states a placard's guide, or\n(HB-17) the note that says why a row has no ID number.",
+   "properties": {
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "quote": {
+     "title": "Quote",
+     "type": "string"
+    }
+   },
+   "required": [
+    "quote",
+    "locator"
+   ],
+   "title": "PlacardProse",
+   "type": "object"
+  },
+  "Table1Entry": {
+   "additionalProperties": false,
+   "description": "One Table 1 name with its distances. `name` is the material name without the\nprinted qualifier; `printed_name` is the cell as printed. ERG p. 30 Note 1: a\nwater-reactive material that is also TIH has two entries, one \"(when spilled on\nland)\" and one \"(when spilled in water)\"; one that is only water-reactive has one\nentry \"(when spilled in water)\", and on land Tables 1 and 2 do not apply.\n`spilled_in` is that qualifier's surface (None: the entry has none), and\n`water_reactive_note` the qualifier as printed.",
+   "properties": {
+    "adjudicated": {
+     "title": "Adjudicated",
+     "type": "boolean"
+    },
+    "guide": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Guide"
+    },
+    "keyed_by": {
+     "items": {
+      "enum": [
+       "A",
+       "B",
+       "C"
+      ],
+      "type": "string"
+     },
+     "title": "Keyed By",
+     "type": "array"
+    },
+    "large": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Table1Spill"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "large_refer_to_table3": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Large Refer To Table3"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "printed_name": {
+     "title": "Printed Name",
+     "type": "string"
+    },
+    "small": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/Table1Spill"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "spilled_in": {
+     "anyOf": [
+      {
+       "enum": [
+        "land",
+        "water"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Spilled In"
+    },
+    "unresolved": {
+     "title": "Unresolved",
+     "type": "boolean"
+    },
+    "unresolved_fields": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Unresolved Fields",
+     "type": "array"
+    },
+    "water_reactive_note": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Water Reactive Note"
+    }
+   },
+   "required": [
+    "keyed_by",
+    "adjudicated",
+    "unresolved",
+    "unresolved_fields",
+    "name",
+    "printed_name",
+    "guide",
+    "spilled_in",
+    "water_reactive_note",
+    "small",
+    "large",
+    "large_refer_to_table3",
+    "locator"
+   ],
+   "title": "Table1Entry",
+   "type": "object"
+  },
+  "Table1Spill": {
+   "additionalProperties": false,
+   "properties": {
+    "isolate": {
+     "$ref": "#/$defs/MetricDistance"
+    },
+    "protect_day": {
+     "$ref": "#/$defs/KmDistance"
+    },
+    "protect_night": {
+     "$ref": "#/$defs/KmDistance"
+    }
+   },
+   "required": [
+    "isolate",
+    "protect_day",
+    "protect_night"
+   ],
+   "title": "Table1Spill",
+   "type": "object"
+  },
+  "Table2Entry": {
+   "additionalProperties": false,
+   "description": "One Table 2 row (ERG pp. 337-341): a water-reactive material and the TIH gases it\nproduces when spilled in water. The guide is the material's, as Table 2 prints it;\nthe gases are symbols of `ErgData.table2_legend`. \"The TIH gases indicated in Table\n2 are for information purposes only\" (p. 336 Note 1).",
+   "properties": {
+    "adjudicated": {
+     "title": "Adjudicated",
+     "type": "boolean"
+    },
+    "gases": {
+     "anyOf": [
+      {
+       "items": {
+        "type": "string"
+       },
+       "type": "array"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Gases"
+    },
+    "guide": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Guide"
+    },
+    "keyed_by": {
+     "items": {
+      "enum": [
+       "A",
+       "B",
+       "C"
+      ],
+      "type": "string"
+     },
+     "title": "Keyed By",
+     "type": "array"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "unresolved": {
+     "title": "Unresolved",
+     "type": "boolean"
+    },
+    "unresolved_fields": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Unresolved Fields",
+     "type": "array"
+    }
+   },
+   "required": [
+    "keyed_by",
+    "adjudicated",
+    "unresolved",
+    "unresolved_fields",
+    "name",
+    "guide",
+    "gases",
+    "locator"
+   ],
+   "title": "Table2Entry",
+   "type": "object"
+  },
+  "Table2Gas": {
+   "additionalProperties": false,
+   "description": "A gas symbol in Table 2's legend and its name, as printed.",
+   "properties": {
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "symbol": {
+     "title": "Symbol",
+     "type": "string"
+    }
+   },
+   "required": [
+    "symbol",
+    "name",
+    "locator"
+   ],
+   "title": "Table2Gas",
+   "type": "object"
+  },
+  "Table3": {
+   "additionalProperties": false,
+   "properties": {
+    "heading": {
+     "title": "Heading",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "rows": {
+     "items": {
+      "$ref": "#/$defs/Table3Row"
+     },
+     "title": "Rows",
+     "type": "array"
+    }
+   },
+   "required": [
+    "heading",
+    "locator",
+    "rows"
+   ],
+   "title": "Table3",
+   "type": "object"
+  },
+  "Table3Row": {
+   "additionalProperties": false,
+   "properties": {
+    "adjudicated": {
+     "title": "Adjudicated",
+     "type": "boolean"
+    },
+    "container": {
+     "title": "Container",
+     "type": "string"
+    },
+    "day": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/WindBandDistances"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "isolate": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/MetricDistance"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "keyed_by": {
+     "items": {
+      "enum": [
+       "A",
+       "B",
+       "C"
+      ],
+      "type": "string"
+     },
+     "title": "Keyed By",
+     "type": "array"
+    },
+    "night": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/WindBandDistances"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "unresolved": {
+     "title": "Unresolved",
+     "type": "boolean"
+    },
+    "unresolved_fields": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Unresolved Fields",
+     "type": "array"
+    }
+   },
+   "required": [
+    "keyed_by",
+    "adjudicated",
+    "unresolved",
+    "unresolved_fields",
+    "container",
+    "isolate",
+    "day",
+    "night"
+   ],
+   "title": "Table3Row",
+   "type": "object"
+  },
+  "WindBand": {
+   "additionalProperties": false,
+   "description": "An ERG Table 3 wind category; an open end is None.",
+   "properties": {
+    "band": {
+     "enum": [
+      "low",
+      "moderate",
+      "high"
+     ],
+     "title": "Band",
+     "type": "string"
+    },
+    "kmh_max": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Kmh Max"
+    },
+    "kmh_min": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Kmh Min"
+    },
+    "label": {
+     "title": "Label",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "mph_max": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Mph Max"
+    },
+    "mph_min": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Mph Min"
+    }
+   },
+   "required": [
+    "band",
+    "label",
+    "mph_min",
+    "mph_max",
+    "kmh_min",
+    "kmh_max",
+    "locator"
+   ],
+   "title": "WindBand",
+   "type": "object"
+  },
+  "WindBandDistances": {
+   "additionalProperties": false,
+   "properties": {
+    "high": {
+     "$ref": "#/$defs/KmDistance"
+    },
+    "low": {
+     "$ref": "#/$defs/KmDistance"
+    },
+    "moderate": {
+     "$ref": "#/$defs/KmDistance"
+    }
+   },
+   "required": [
+    "low",
+    "moderate",
+    "high"
+   ],
+   "title": "WindBandDistances",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "properties": {
+  "attribution": {
+   "$ref": "#/$defs/PackAttribution"
+  },
+  "built_at": {
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+   "title": "Built At",
+   "type": "string"
+  },
+  "data": {
+   "$ref": "#/$defs/ErgData"
+  },
+  "kind": {
+   "const": "erg",
+   "title": "Kind",
+   "type": "string"
+  },
+  "pack_id": {
+   "title": "Pack Id",
+   "type": "string"
+  },
+  "schema_version": {
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Sha256",
+   "type": "string"
+  },
+  "sources": {
+   "items": {
+    "$ref": "#/$defs/PackSource"
+   },
+   "title": "Sources",
+   "type": "array"
+  },
+  "version": {
+   "title": "Version",
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema_version",
+  "pack_id",
+  "version",
+  "built_at",
+  "sha256",
+  "sources",
+  "attribution",
+  "kind",
+  "data"
+ ],
+ "title": "ErgPack",
+ "type": "object"
+}

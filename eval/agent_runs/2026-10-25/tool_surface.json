@@ -1,0 +1,856 @@
+{
+ "sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+ "tools": [
+  {
+   "description": "Resolve a transported-hazmat incident against the ERG 2024.\n\nReturns the ID number, names, ERG guide number and title, whether ERG Table 1\nlists the material (TIH), its hazard class rule set, its 49 CFR 172.101 hazard\nclass and label codes, its CAMEO datasheets, which ERG table gives its distances\n(Table 1, Table 3, or the guide's EVACUATION distances), and whether the\nincident time is day or night at the point, with the sunrise and sunset. Each\nvalue has a `basis` entry: a source tag and the page it reads.\n\nData source: ERG 2024, 49 CFR 172.101 and CAMEO, from the server's packs.\nUpdate cadence: changes only with a server release. As-of: `pack_versions`.\nEvery ERG ID number resolves; full rows (distances, CFR, CAMEO, hazard class)\nexist for the seed materials, and any other ID returns `coverage: erg`.\n\nA load with no ID number or name (`placard` or `guide_number` instead of\n`material`) returns `coverage: unidentified`: the guide the ERG's Table of\nMarkings, Labels and Placards circles beside the placard (or the guide given),\n`identified_by` saying how, no material, and `tih` null. An explosive the\nyellow index names with no ID number (\"Blasting agent\", \"ANFO\") returns\n`coverage: unnumbered` the same way, with the index page. An input the ERG\ncannot answer returns `error` and a `hint`, never a guess.",
+   "name": "assess_incident",
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "incident": {
+      "additionalProperties": false,
+      "description": "A transported-hazmat incident as reported. The load is given by exactly one of\n`material`, `placard` and `guide_number`: the ERG's Table of Markings, Labels and\nPlacards is for \"when the ID number or proper shipping name is not available\" (ERG\n2024 PDF p. 9).",
+      "properties": {
+       "container": {
+        "description": "An ERG Table 3 container kind (Rail tank car; Highway tank truck or trailer; Agricultural nurse tank; Multiple ton cylinders; Multiple small cylinders; Multiple small cylinders or single ton cylinder), a unique start of one (highway tank truck), or unknown.",
+        "maxLength": 100,
+        "minLength": 1,
+        "type": "string"
+       },
+       "fire_involved": {
+        "description": "Whether fire is involved.",
+        "type": "boolean"
+       },
+       "guide_number": {
+        "anyOf": [
+         {
+          "maxLength": 10,
+          "minLength": 3,
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "For a load with no ID number or name: an ERG orange guide number, such as 111 (Mixed Load/Unidentified Cargo), 112 (explosives, Divisions 1.1, 1.2, 1.3, 1.5) or 114 (Divisions 1.4, 1.6)."
+       },
+       "incident_time": {
+        "description": "When, ISO 8601 with a UTC offset (2026-10-21T14:05:00-04:00). Decides day or night for the ERG tables.",
+        "format": "date-time",
+        "type": "string"
+       },
+       "location": {
+        "additionalProperties": false,
+        "description": "A point, WGS84 decimal degrees.",
+        "properties": {
+         "latitude": {
+          "description": "Latitude, WGS84 degrees.",
+          "maximum": 90,
+          "minimum": -90,
+          "type": "number"
+         },
+         "longitude": {
+          "description": "Longitude, WGS84 degrees.",
+          "maximum": 180,
+          "minimum": -180,
+          "type": "number"
+         }
+        },
+        "required": [
+         "latitude",
+         "longitude"
+        ],
+        "type": "object"
+       },
+       "material": {
+        "anyOf": [
+         {
+          "maxLength": 200,
+          "minLength": 1,
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "The ID number from the placard or shipping paper (UN1017, NA1993 or 1017), or the material name as the ERG yellow index prints it (Chlorine; a generic name may drop its ', n.o.s.'; an explosive the index lists by name, such as 'Blasting agent' or ANFO, resolves to its guide). Omit it when the material is not identified, and give `placard` or `guide_number`."
+       },
+       "placard": {
+        "anyOf": [
+         {
+          "maxLength": 60,
+          "minLength": 1,
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "For a load with no ID number or name: the placard as read, which the ERG's Table of Markings, Labels and Placards sends to a guide. The class or division printed on it (2.3, 1.4, 8), a word printed on it (FLAMMABLE GAS, OXYGEN, GASOLINE), DANGEROUS, or none when hazardous materials are suspected and no placard can be seen. A class whose divisions have their own guides (2, 4, 5, 6) returns the candidates."
+       },
+       "spill_size": {
+        "description": "small: 208 liters (55 US gallons) or less; large: more than 208 liters (55 US gallons); unknown: the large spill distances apply.",
+        "enum": [
+         "small",
+         "large",
+         "unknown"
+        ],
+        "type": "string"
+       },
+       "where_spilled": {
+        "default": "land",
+        "description": "The surface the spill is on. It changes the answer only for a material ERG Table 2 lists (water-reactive): in water its Table 1 entry printed \"(when spilled in water)\" applies; on land a material Table 1 lists only for water is answered by its guide. land is the default, as in PHMSA's ERG app (whereSpilled).",
+        "enum": [
+         "land",
+         "water"
+        ],
+        "type": "string"
+       }
+      },
+      "required": [
+       "container",
+       "location",
+       "incident_time",
+       "fire_involved",
+       "spill_size"
+      ],
+      "type": "object"
+     }
+    },
+    "required": [
+     "incident"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "description": "The ERG zones for an incident, as GeoJSON with their distances and sources.\n\nFor a material ERG Table 1 lists: the initial isolation zone (a circle) and the\nprotective action zone, the ERG's own square (its side is the protective action\ndistance, downwind, the spill at the midpoint of its upwind side), from the\nTable 1 or Table 3 row for the spill size, day or night and wind band. That\nsquare is the only downwind shape the ERG gives. For any other material: the\nguide's immediate precautionary distance as a circle. A guide's downwind\nevacuation distance for a large spill (`zones.large_spill_downwind`) has no\nshape in the ERG, so none is drawn; do not draw one. With fire, the guide's\nisolation distance for a tank in fire, as a circle. Returns the distances in\nmetres and as the ERG prints them, the table row used, the wind used (value,\nband, as-of, source), day or night, and `basis` source tags.\n`incident.where_spilled` (land, the default, or water) selects a water-reactive\nmaterial's Table 1 entry for a spill in water (ERG Table 2). `flags` are the\nfired flag rules, each with its sentence and receipts. A load known only by its\nplacard or a guide number (`placard` or `guide_number` instead of `material`)\ngets that guide's circles and no Table 1 zone, which `limits` says.\n\nA load the ERG answers with several candidates (a name under several ID\nnumbers, an ID number whose names carry different guides, a placard that\nmatches several rows) is drawn once per candidate: `ambiguity.candidates` holds\neach candidate's zones, guide and locators, and the one with the largest\ndistances is `governing` (the ERG's rule: the most conservative guide). The top\nlevel is the governing candidate's answer, except that `footprint` holds every\ncandidate's polygons (each with its `candidate` and `governing`), `flags` adds\n`ambiguous_material`, and `limits` holds every candidate's. Nothing is\naveraged. Name every candidate, and identify the material to settle it.\n\n`verify_in_erg_app` is PHMSA's ERG app link for the same scenario; `limits` says\nwhat it and the inputs cannot do (the app may draw ERG 2020 distances).\n\nData source: ERG 2024 (the server's packs); wind from `wind` if given, else the\nNational Weather Service forecast grid for the point (api.weather.gov), the\nperiod holding the incident time. Update cadence: NWS revises the grid through\nthe day. As-of: `wind.as_of` and the NWS response headers. No dispersion model;\nnothing is interpolated. An input the ERG cannot answer returns `error` and a\n`hint`.",
+   "name": "protective_action_footprint",
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "incident": {
+      "additionalProperties": false,
+      "description": "A transported-hazmat incident as reported. The load is given by exactly one of\n`material`, `placard` and `guide_number`: the ERG's Table of Markings, Labels and\nPlacards is for \"when the ID number or proper shipping name is not available\" (ERG\n2024 PDF p. 9).",
+      "properties": {
+       "container": {
+        "description": "An ERG Table 3 container kind (Rail tank car; Highway tank truck or trailer; Agricultural nurse tank; Multiple ton cylinders; Multiple small cylinders; Multiple small cylinders or single ton cylinder), a unique start of one (highway tank truck), or unknown.",
+        "maxLength": 100,
+        "minLength": 1,
+        "type": "string"
+       },
+       "fire_involved": {
+        "description": "Whether fire is involved.",
+        "type": "boolean"
+       },
+       "guide_number": {
+        "anyOf": [
+         {
+          "maxLength": 10,
+          "minLength": 3,
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "For a load with no ID number or name: an ERG orange guide number, such as 111 (Mixed Load/Unidentified Cargo), 112 (explosives, Divisions 1.1, 1.2, 1.3, 1.5) or 114 (Divisions 1.4, 1.6)."
+       },
+       "incident_time": {
+        "description": "When, ISO 8601 with a UTC offset (2026-10-21T14:05:00-04:00). Decides day or night for the ERG tables.",
+        "format": "date-time",
+        "type": "string"
+       },
+       "location": {
+        "additionalProperties": false,
+        "description": "A point, WGS84 decimal degrees.",
+        "properties": {
+         "latitude": {
+          "description": "Latitude, WGS84 degrees.",
+          "maximum": 90,
+          "minimum": -90,
+          "type": "number"
+         },
+         "longitude": {
+          "description": "Longitude, WGS84 degrees.",
+          "maximum": 180,
+          "minimum": -180,
+          "type": "number"
+         }
+        },
+        "required": [
+         "latitude",
+         "longitude"
+        ],
+        "type": "object"
+       },
+       "material": {
+        "anyOf": [
+         {
+          "maxLength": 200,
+          "minLength": 1,
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "The ID number from the placard or shipping paper (UN1017, NA1993 or 1017), or the material name as the ERG yellow index prints it (Chlorine; a generic name may drop its ', n.o.s.'; an explosive the index lists by name, such as 'Blasting agent' or ANFO, resolves to its guide). Omit it when the material is not identified, and give `placard` or `guide_number`."
+       },
+       "placard": {
+        "anyOf": [
+         {
+          "maxLength": 60,
+          "minLength": 1,
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "For a load with no ID number or name: the placard as read, which the ERG's Table of Markings, Labels and Placards sends to a guide. The class or division printed on it (2.3, 1.4, 8), a word printed on it (FLAMMABLE GAS, OXYGEN, GASOLINE), DANGEROUS, or none when hazardous materials are suspected and no placard can be seen. A class whose divisions have their own guides (2, 4, 5, 6) returns the candidates."
+       },
+       "spill_size": {
+        "description": "small: 208 liters (55 US gallons) or less; large: more than 208 liters (55 US gallons); unknown: the large spill distances apply.",
+        "enum": [
+         "small",
+         "large",
+         "unknown"
+        ],
+        "type": "string"
+       },
+       "where_spilled": {
+        "default": "land",
+        "description": "The surface the spill is on. It changes the answer only for a material ERG Table 2 lists (water-reactive): in water its Table 1 entry printed \"(when spilled in water)\" applies; on land a material Table 1 lists only for water is answered by its guide. land is the default, as in PHMSA's ERG app (whereSpilled).",
+        "enum": [
+         "land",
+         "water"
+        ],
+        "type": "string"
+       }
+      },
+      "required": [
+       "container",
+       "location",
+       "incident_time",
+       "fire_involved",
+       "spill_size"
+      ],
+      "type": "object"
+     },
+     "wind": {
+      "anyOf": [
+       {
+        "additionalProperties": false,
+        "description": "A wind reading supplied by the caller instead of the NWS forecast.",
+        "properties": {
+         "direction_deg_from": {
+          "description": "Direction the wind blows FROM, degrees clockwise from true north.",
+          "maximum": 360,
+          "minimum": 0,
+          "type": "number"
+         },
+         "observed_at": {
+          "description": "When the reading was taken, ISO 8601 with a UTC offset.",
+          "format": "date-time",
+          "type": "string"
+         },
+         "source": {
+          "description": "Who or what measured it (on-scene anemometer, ASOS station KHGR).",
+          "maxLength": 200,
+          "minLength": 1,
+          "type": "string"
+         },
+         "speed_kmh": {
+          "description": "Wind speed, km/h.",
+          "maximum": 400,
+          "minimum": 0,
+          "type": "number"
+         }
+        },
+        "required": [
+         "speed_kmh",
+         "direction_deg_from",
+         "observed_at",
+         "source"
+        ],
+        "type": "object"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null
+     }
+    },
+    "required": [
+     "incident"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "description": "Who is inside a footprint: residents (night), jobs (day), group quarters by\ntype, people 65 and over, people with a disability, households with no\nvehicle, limited English speaking households, and the Community Resilience\nEstimates count, each with its margin of error where the source has one.\n\nPass `area.footprint`, the GeoJSON protective_action_footprint returns (or any\npolygon), the incident time, and optionally its `day_night.period`. Blocks\npartly inside count by the share of their area inside. Both day and night\ncounts are always returned; `primary` says which the period makes first.\n\nData sources: TIGERweb 2020 tabulation blocks, block groups and tracts; the\n2020 Census DHC (P1, P18) by block; the ACS 2020-2024 5-year by block group\nor tract; LEHD LODES8 workplace area characteristics 2023 (cached state\nfiles); Community Resilience Estimates 2024 by tract (api.census.gov).\nUpdate cadence: ACS and CRE annual, LODES annual, the 2020 counts fixed.\nAs-of: each count's `as_of` and the `basis` source tags. Requires\nCENSUS_API_KEY; without it, returns `error` with the signup URL.",
+   "name": "population_at_risk",
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "area": {
+      "additionalProperties": false,
+      "description": "The area to count people in, and when.",
+      "properties": {
+       "footprint": {
+        "additionalProperties": true,
+        "description": "GeoJSON: the `footprint` FeatureCollection protective_action_footprint returns, a Feature, or a Polygon or MultiPolygon in WGS84 longitude and latitude. Points and lines are ignored; the polygons are counted as one area.",
+        "type": "object"
+       },
+       "incident_time": {
+        "description": "When, ISO 8601 with a UTC offset. Decides day or night when `period` is not given.",
+        "format": "date-time",
+        "type": "string"
+       },
+       "period": {
+        "anyOf": [
+         {
+          "enum": [
+           "day",
+           "night"
+          ],
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "The ERG period, as protective_action_footprint's `day_night.period` gives it. Omitted: computed from `incident_time` at the footprint."
+       },
+       "zones": {
+        "anyOf": [
+         {
+          "items": {
+           "type": "string"
+          },
+          "type": "array"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "Count only these footprint zones (`properties.zone`, such as protective_action_zone). Omitted: every polygon in the footprint."
+       }
+      },
+      "required": [
+       "footprint",
+       "incident_time"
+      ],
+      "type": "object"
+     }
+    },
+    "required": [
+     "area"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "description": "The schools, hospitals, nursing homes, emergency services (fire, EMS,\nambulance, police), waterways and rail lines and grade crossings inside a\nfootprint, each with its zone (isolation or protective_action; else the guide\ncircle it is in: large_spill_evacuation, fire_isolation or fire_evacuation),\nsource id and as-of.\n\nPass `area.footprint`, the GeoJSON protective_action_footprint returns (or any\npolygon), and optionally `buffer_m`. Group quarters residents are counted by\npopulation_at_risk, not here. `flag_inputs` carries the counts the facility\nflag rules read; this tool fires no flag.\n\nData sources: USGS National Structures Dataset (carto.nationalmap.gov; schools,\ncolleges, hospitals, fire and EMS stations, ambulance services, police\nstations); CMS Nursing Home Provider Information (cached file); USGS 3D\nHydrography Program flowlines and waterbodies (hydro.nationalmap.gov); BTS NTAD\nNorth American Rail Network Lines and FRA Railroad Grade Crossings\n(services.arcgis.com). Update cadence: Structures and 3DHP refreshed by USGS\n(3DHP quarterly), NTAD as FRA updates, CMS quarterly. As-of: each facility's\n`as_of` (its load date) and the `basis` source tags. A source that fails is\nlisted in `errors` and the others still answer.",
+   "name": "facilities_in_footprint",
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "area": {
+      "additionalProperties": false,
+      "description": "The area to list facilities, waterways and rail in.",
+      "properties": {
+       "buffer_m": {
+        "default": 0,
+        "description": "Grow the footprint by this many metres before listing. 0 by default: the ERG zones are the zones.",
+        "maximum": 10000,
+        "minimum": 0,
+        "type": "number"
+       },
+       "footprint": {
+        "additionalProperties": true,
+        "description": "GeoJSON: the `footprint` FeatureCollection protective_action_footprint returns (its zones are read from `properties.zone`), a Feature, or a Polygon or MultiPolygon in WGS84 longitude and latitude.",
+        "type": "object"
+       }
+      },
+      "required": [
+       "footprint"
+      ],
+      "type": "object"
+     }
+    },
+    "required": [
+     "area"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "description": "Hospitals with emergency services outside the footprint, nearest first by\nstraight-line distance from the footprint's upwind edge, with beds, type,\ndistance, bearing, and `crosses_footprint` when the straight line from that\nedge runs through the footprint (a hospital reached only through the zone).\nHospitals inside the footprint are listed apart, as casualty sites.\n\nPass `incident.location` (the spill point), `incident.footprint` (the GeoJSON\nprotective_action_footprint returns) and optionally `max_km` (50 km by\ndefault). Distances are straight-line, not drive time; trauma level and burn\nor toxicology capability are not in these datasets.\n\nData sources: CMS Hospital General Information (emergency services, type)\njoined to CMS Provider of Services (beds) on the CCN, placed by the Census\nGeocoder and, where it fails, by the USGS National Structures Dataset hospital\nat the same address (a file cached by scripts/fetch_cms.py; no call per\nincident). Update cadence: CMS quarterly. As-of: the `basis` source tags.",
+   "name": "receiving_hospitals",
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "incident": {
+      "additionalProperties": false,
+      "description": "The spill and its footprint, to find hospitals outside it.",
+      "properties": {
+       "footprint": {
+        "additionalProperties": true,
+        "description": "GeoJSON: the `footprint` FeatureCollection protective_action_footprint returns (its zones are read from `properties.zone`), a Feature, or a Polygon or MultiPolygon in WGS84 longitude and latitude.",
+        "type": "object"
+       },
+       "location": {
+        "additionalProperties": false,
+        "description": "The spill point.",
+        "properties": {
+         "latitude": {
+          "description": "Latitude, WGS84 degrees.",
+          "maximum": 90,
+          "minimum": -90,
+          "type": "number"
+         },
+         "longitude": {
+          "description": "Longitude, WGS84 degrees.",
+          "maximum": 180,
+          "minimum": -180,
+          "type": "number"
+         }
+        },
+        "required": [
+         "latitude",
+         "longitude"
+        ],
+        "type": "object"
+       },
+       "max_km": {
+        "anyOf": [
+         {
+          "exclusiveMinimum": 0,
+          "maximum": 200,
+          "type": "number"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "Search radius in kilometres from the footprint's upwind edge. Omitted: 50 km."
+       }
+      },
+      "required": [
+       "location",
+       "footprint"
+      ],
+      "type": "object"
+     }
+    },
+    "required": [
+     "incident"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "description": "What to do about this material: its ERG orange guide by section (potential\nhazards; public safety; emergency response), each a list of lines `{text, page,\nkind, locator, quotation}` as the ERG prints them, in printed order,\nsub-headings kept.\n\nThe incident selects the lines: with `fire_involved` the fire subsection comes\nfirst and the guide's fire evacuation is printed; `spill_size` keeps the Small\nSpill or the Large Spill lines (unknown keeps both); `where_spilled` water adds\nthe Table 2 note for a water-reactive material; the sentence on materials\n\"designated with a (P)\" only when the guide number carries the P.\n`selection.omitted` names every line left out and why. `general_first_aid` names\nthe ERG section the guide refers to, with its page.\n\nFor a load known only by its placard or a guide number (`placard` or\n`guide_number` instead of `material`), the guide the ERG's Table of Markings,\nLabels and Placards gives, with `identified_by` saying how and `material` null.\n\nData source: ERG 2024 orange guides (the server's packs). Update cadence: with a\nserver release. As-of: `pack_versions`. No network call, no model. An unknown\nmaterial returns `error` with a `hint` and the nearest index names.",
+   "name": "material_response_guidance",
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "incident": {
+      "additionalProperties": false,
+      "description": "A transported-hazmat incident as reported. The load is given by exactly one of\n`material`, `placard` and `guide_number`: the ERG's Table of Markings, Labels and\nPlacards is for \"when the ID number or proper shipping name is not available\" (ERG\n2024 PDF p. 9).",
+      "properties": {
+       "container": {
+        "description": "An ERG Table 3 container kind (Rail tank car; Highway tank truck or trailer; Agricultural nurse tank; Multiple ton cylinders; Multiple small cylinders; Multiple small cylinders or single ton cylinder), a unique start of one (highway tank truck), or unknown.",
+        "maxLength": 100,
+        "minLength": 1,
+        "type": "string"
+       },
+       "fire_involved": {
+        "description": "Whether fire is involved.",
+        "type": "boolean"
+       },
+       "guide_number": {
+        "anyOf": [
+         {
+          "maxLength": 10,
+          "minLength": 3,
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "For a load with no ID number or name: an ERG orange guide number, such as 111 (Mixed Load/Unidentified Cargo), 112 (explosives, Divisions 1.1, 1.2, 1.3, 1.5) or 114 (Divisions 1.4, 1.6)."
+       },
+       "incident_time": {
+        "description": "When, ISO 8601 with a UTC offset (2026-10-21T14:05:00-04:00). Decides day or night for the ERG tables.",
+        "format": "date-time",
+        "type": "string"
+       },
+       "location": {
+        "additionalProperties": false,
+        "description": "A point, WGS84 decimal degrees.",
+        "properties": {
+         "latitude": {
+          "description": "Latitude, WGS84 degrees.",
+          "maximum": 90,
+          "minimum": -90,
+          "type": "number"
+         },
+         "longitude": {
+          "description": "Longitude, WGS84 degrees.",
+          "maximum": 180,
+          "minimum": -180,
+          "type": "number"
+         }
+        },
+        "required": [
+         "latitude",
+         "longitude"
+        ],
+        "type": "object"
+       },
+       "material": {
+        "anyOf": [
+         {
+          "maxLength": 200,
+          "minLength": 1,
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "The ID number from the placard or shipping paper (UN1017, NA1993 or 1017), or the material name as the ERG yellow index prints it (Chlorine; a generic name may drop its ', n.o.s.'; an explosive the index lists by name, such as 'Blasting agent' or ANFO, resolves to its guide). Omit it when the material is not identified, and give `placard` or `guide_number`."
+       },
+       "placard": {
+        "anyOf": [
+         {
+          "maxLength": 60,
+          "minLength": 1,
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "For a load with no ID number or name: the placard as read, which the ERG's Table of Markings, Labels and Placards sends to a guide. The class or division printed on it (2.3, 1.4, 8), a word printed on it (FLAMMABLE GAS, OXYGEN, GASOLINE), DANGEROUS, or none when hazardous materials are suspected and no placard can be seen. A class whose divisions have their own guides (2, 4, 5, 6) returns the candidates."
+       },
+       "spill_size": {
+        "description": "small: 208 liters (55 US gallons) or less; large: more than 208 liters (55 US gallons); unknown: the large spill distances apply.",
+        "enum": [
+         "small",
+         "large",
+         "unknown"
+        ],
+        "type": "string"
+       },
+       "where_spilled": {
+        "default": "land",
+        "description": "The surface the spill is on. It changes the answer only for a material ERG Table 2 lists (water-reactive): in water its Table 1 entry printed \"(when spilled in water)\" applies; on land a material Table 1 lists only for water is answered by its guide. land is the default, as in PHMSA's ERG app (whereSpilled).",
+        "enum": [
+         "land",
+         "water"
+        ],
+        "type": "string"
+       }
+      },
+      "required": [
+       "container",
+       "location",
+       "incident_time",
+       "fire_involved",
+       "spill_size"
+      ],
+      "type": "object"
+     }
+    },
+    "required": [
+     "incident"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "description": "A draft ICS 201 Incident Briefing (FEMA ICS Form 201) for the incident: the\nblocks public data can fill, block by block, every sentence with its receipts,\nplus a Markdown rendering and a GeoJSON map for Block 4. The blocks that are the\nIncident Commander's (2 Incident Number, 8 Current and Planned Actions,\nStrategies, and Tactics, 9 Current Organization, and the names and signature of\nBlock 6) are blank and labelled.\n\nPass `request.incident` (as for protective_action_footprint), optionally `wind`\nand `incident_name`. The server runs assess_incident,\nprotective_action_footprint, population_at_risk, facilities_in_footprint,\nreceiving_hospitals and material_response_guidance on it and fires the flag\nrules over their outputs; Block 5 prints at most ten fired flags, high priority\nfirst, each as the value it fired on, then its ERG consequence and its ERG\nresponse. A load the ERG answers with several candidates is briefed as\nprotective_action_footprint draws it: Block 1 and Block 5 name every candidate,\nthe distances are the governing (largest) candidate's, and the sketch dashes\nthe others. Block 10 tables the nearest five receiving hospitals. Annex A,\nafter the form, lists every limit and every source with its as-of. A tool that\nfails is listed in `errors`, its lines say so, and the other blocks still fill.\n`response_format` concise (the default) returns the Markdown form, every\nsentence with its source tag, the GeoJSON, `errors` and `pack_versions`;\ndetailed adds `blocks` (each sentence with its receipts), `annex` and `flags`,\n60,000 to 100,000 characters in all, above Claude Code's default cap on a tool\nresult. With detailed, `request.block` returns one part (a block by number,\nannex or flags), at most about 28,000 characters; ask for each part in turn.\n`include_tool_outputs` returns the outputs the receipts point into.\n\nBlock 4's sketch, with `include_map_svg`, is `map_svg`, an SVG the Markdown\nembeds as `ics201_block4.svg`: save it beside the Markdown under that name to\nview the two together. With it the result is over 100,000 characters, above\nClaude Code's default cap on a tool result. `geojson` carries the same\nfeatures for a client that draws.\n\nData sources: those tools' (ERG 2024 packs; NWS wind; Census DHC, ACS, LODES,\nCRE; USGS Structures and 3DHP; CMS; NTAD rail), and TIGERweb (the place and\ncounty at the spill, January 1, 2026 vintage; the roads image, as of the day it\nis retrieved). Update cadence and as-of: each sentence's source tag and Annex\nA. No model writes any sentence; nothing is interpolated.",
+   "name": "build_ics_201",
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "include_map_svg": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "As `request.include_map_svg`, given beside the request."
+     },
+     "request": {
+      "additionalProperties": false,
+      "description": "The incident to draft an ICS 201 for.",
+      "properties": {
+       "block": {
+        "anyOf": [
+         {
+          "enum": [
+           1,
+           2,
+           3,
+           4,
+           5,
+           6,
+           7,
+           8,
+           9,
+           10,
+           "annex",
+           "flags"
+          ]
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "With response_format detailed, return only this part with its receipts: a block by its number (1 to 10), annex (Annex A) or flags (every fired flag). A part is at most about 28,000 characters. Omitted: the whole detailed form, 60,000 to 100,000 characters, above Claude Code's default cap on a tool result (25,000 tokens)."
+       },
+       "incident": {
+        "additionalProperties": false,
+        "description": "A transported-hazmat incident as reported. The load is given by exactly one of\n`material`, `placard` and `guide_number`: the ERG's Table of Markings, Labels and\nPlacards is for \"when the ID number or proper shipping name is not available\" (ERG\n2024 PDF p. 9).",
+        "properties": {
+         "container": {
+          "description": "An ERG Table 3 container kind (Rail tank car; Highway tank truck or trailer; Agricultural nurse tank; Multiple ton cylinders; Multiple small cylinders; Multiple small cylinders or single ton cylinder), a unique start of one (highway tank truck), or unknown.",
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+         },
+         "fire_involved": {
+          "description": "Whether fire is involved.",
+          "type": "boolean"
+         },
+         "guide_number": {
+          "anyOf": [
+           {
+            "maxLength": 10,
+            "minLength": 3,
+            "type": "string"
+           },
+           {
+            "type": "null"
+           }
+          ],
+          "default": null,
+          "description": "For a load with no ID number or name: an ERG orange guide number, such as 111 (Mixed Load/Unidentified Cargo), 112 (explosives, Divisions 1.1, 1.2, 1.3, 1.5) or 114 (Divisions 1.4, 1.6)."
+         },
+         "incident_time": {
+          "description": "When, ISO 8601 with a UTC offset (2026-10-21T14:05:00-04:00). Decides day or night for the ERG tables.",
+          "format": "date-time",
+          "type": "string"
+         },
+         "location": {
+          "additionalProperties": false,
+          "description": "A point, WGS84 decimal degrees.",
+          "properties": {
+           "latitude": {
+            "description": "Latitude, WGS84 degrees.",
+            "maximum": 90,
+            "minimum": -90,
+            "type": "number"
+           },
+           "longitude": {
+            "description": "Longitude, WGS84 degrees.",
+            "maximum": 180,
+            "minimum": -180,
+            "type": "number"
+           }
+          },
+          "required": [
+           "latitude",
+           "longitude"
+          ],
+          "type": "object"
+         },
+         "material": {
+          "anyOf": [
+           {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+           },
+           {
+            "type": "null"
+           }
+          ],
+          "default": null,
+          "description": "The ID number from the placard or shipping paper (UN1017, NA1993 or 1017), or the material name as the ERG yellow index prints it (Chlorine; a generic name may drop its ', n.o.s.'; an explosive the index lists by name, such as 'Blasting agent' or ANFO, resolves to its guide). Omit it when the material is not identified, and give `placard` or `guide_number`."
+         },
+         "placard": {
+          "anyOf": [
+           {
+            "maxLength": 60,
+            "minLength": 1,
+            "type": "string"
+           },
+           {
+            "type": "null"
+           }
+          ],
+          "default": null,
+          "description": "For a load with no ID number or name: the placard as read, which the ERG's Table of Markings, Labels and Placards sends to a guide. The class or division printed on it (2.3, 1.4, 8), a word printed on it (FLAMMABLE GAS, OXYGEN, GASOLINE), DANGEROUS, or none when hazardous materials are suspected and no placard can be seen. A class whose divisions have their own guides (2, 4, 5, 6) returns the candidates."
+         },
+         "spill_size": {
+          "description": "small: 208 liters (55 US gallons) or less; large: more than 208 liters (55 US gallons); unknown: the large spill distances apply.",
+          "enum": [
+           "small",
+           "large",
+           "unknown"
+          ],
+          "type": "string"
+         },
+         "where_spilled": {
+          "default": "land",
+          "description": "The surface the spill is on. It changes the answer only for a material ERG Table 2 lists (water-reactive): in water its Table 1 entry printed \"(when spilled in water)\" applies; on land a material Table 1 lists only for water is answered by its guide. land is the default, as in PHMSA's ERG app (whereSpilled).",
+          "enum": [
+           "land",
+           "water"
+          ],
+          "type": "string"
+         }
+        },
+        "required": [
+         "container",
+         "location",
+         "incident_time",
+         "fire_involved",
+         "spill_size"
+        ],
+        "type": "object"
+       },
+       "incident_name": {
+        "anyOf": [
+         {
+          "maxLength": 200,
+          "minLength": 1,
+          "type": "string"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "Block 1, the name assigned to the incident. Omitted: '<material> release, <latitude>, <longitude>, <date>'."
+       },
+       "include_map_svg": {
+        "default": false,
+        "description": "Also return `map_svg`, Block 4's sketch as SVG (large: 75,000 to 175,000 characters, above Claude Code's default cap on a tool result). `geojson` carries the same features for a client that draws.",
+        "type": "boolean"
+       },
+       "include_tool_outputs": {
+        "default": false,
+        "description": "Also return `tool_outputs`, every tool output the receipts point into (large: it carries the footprint, population and facility lists).",
+        "type": "boolean"
+       },
+       "response_format": {
+        "default": "concise",
+        "description": "concise (default): the Markdown form, every sentence with its source tag, the GeoJSON, errors and pack versions. detailed: also the blocks with each sentence's receipts, Annex A as structure, and the fired flags; with `block`, one of them at a time.",
+        "enum": [
+         "concise",
+         "detailed"
+        ],
+        "type": "string"
+       },
+       "wind": {
+        "anyOf": [
+         {
+          "additionalProperties": false,
+          "description": "A wind reading supplied by the caller instead of the NWS forecast.",
+          "properties": {
+           "direction_deg_from": {
+            "description": "Direction the wind blows FROM, degrees clockwise from true north.",
+            "maximum": 360,
+            "minimum": 0,
+            "type": "number"
+           },
+           "observed_at": {
+            "description": "When the reading was taken, ISO 8601 with a UTC offset.",
+            "format": "date-time",
+            "type": "string"
+           },
+           "source": {
+            "description": "Who or what measured it (on-scene anemometer, ASOS station KHGR).",
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+           },
+           "speed_kmh": {
+            "description": "Wind speed, km/h.",
+            "maximum": 400,
+            "minimum": 0,
+            "type": "number"
+           }
+          },
+          "required": [
+           "speed_kmh",
+           "direction_deg_from",
+           "observed_at",
+           "source"
+          ],
+          "type": "object"
+         },
+         {
+          "type": "null"
+         }
+        ],
+        "default": null,
+        "description": "A wind reading to use instead of the NWS forecast grid, as for protective_action_footprint."
+       }
+      },
+      "required": [
+       "incident"
+      ],
+      "type": "object"
+     },
+     "response_format": {
+      "anyOf": [
+       {
+        "enum": [
+         "concise",
+         "detailed"
+        ],
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "As `request.response_format`, given beside the request; it wins when both are given. The whole detailed form is larger than Claude Code's default cap on a tool result (25,000 tokens); `request.block` returns it a part at a time."
+     }
+    },
+    "required": [
+     "request"
+    ],
+    "type": "object"
+   }
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:33:57Z",
+  "http_mode": "record",
+  "id": "8b5d9fd788d7d3f7a1769441c902f84fa2a30fd3d6d4bc7502504962db6f52cc",
+  "name": "GET mdot_sha_milepoints",
+  "params": {
+   "method": "GET",
+   "url": "https://maps.roads.maryland.gov/arcgis/rest/services/Milepoints/MilepointsVW_Maryland_MDOTSHA/FeatureServer/0/query?where=ID_PREFIX%3D%27IS%27+AND+ID_RTE_NO%3D81+AND+MAIN_LINE%3D1+AND+ID_MP%3E%3D11+AND+ID_MP%3C%3D12&outFields=ROUTEID%2CID_MP%2CMP_DIRECTION&returnGeometry=true&outSR=4326&f=json&orderByFields=ID_MP"
+  },
+  "startedAtTime": "2026-10-27T03:33:57Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://maps.roads.maryland.gov/arcgis/rest/services/Milepoints/MilepointsVW_Maryland_MDOTSHA/FeatureServer/0/query?where=ID_PREFIX%3D%27IS%27+AND+ID_RTE_NO%3D81+AND+MAIN_LINE%3D1+AND+ID_MP%3E%3D11+AND+ID_MP%3C%3D12&outFields=ROUTEID%2CID_MP%2CMP_DIRECTION&returnGeometry=true&outSR=4326&f=json&orderByFields=ID_MP",
+    "id": "lrs:mdot_sha"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T03:33:57Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 2080,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "8670f1016e2c837db4895db76df5c76d5582037b13a4f71e585aa1c774c62365"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "lrs:mdot_sha",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

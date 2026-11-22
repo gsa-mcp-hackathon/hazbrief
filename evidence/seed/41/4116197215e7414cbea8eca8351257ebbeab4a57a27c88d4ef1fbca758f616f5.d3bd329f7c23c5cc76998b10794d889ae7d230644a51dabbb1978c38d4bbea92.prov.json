@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-11T11:49:06Z",
+  "http_mode": "record",
+  "id": "d3bd329f7c23c5cc76998b10794d889ae7d230644a51dabbb1978c38d4bbea92",
+  "name": "GET usgs_structures",
+  "params": {
+   "method": "GET",
+   "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/21/query?where=1%3D1&geometry=-77.726361%2C39.130872%2C-77.352439%2C39.420328&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+  },
+  "startedAtTime": "2026-11-11T11:49:06Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/21/query?where=1%3D1&geometry=-77.726361%2C39.130872%2C-77.352439%2C39.420328&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson",
+    "id": "usgs_structures"
+   }
+  ]
+ },
+ "as_of": "2026-11-11T11:49:06Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 753,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "4116197215e7414cbea8eca8351257ebbeab4a57a27c88d4ef1fbca758f616f5"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "usgs_structures",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

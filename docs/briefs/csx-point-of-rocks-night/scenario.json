@@ -1,0 +1,25 @@
+{
+ "as_given": "2026-10-22T02:00:00-04:00",
+ "id": "csx-point-of-rocks-night",
+ "incident": {
+  "container": "Rail tank car",
+  "fire_involved": false,
+  "incident_time": "2026-10-22T02:00:00-04:00",
+  "location": {
+   "latitude": 39.2756,
+   "longitude": -77.5394
+  },
+  "material": "UN1017",
+  "spill_size": "large"
+ },
+ "release": {
+  "quantity_kg": 80000,
+  "quantity_source": "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg"
+ },
+ "wind": {
+  "direction_deg_from": 270,
+  "observed_at": "2026-10-20T13:40:00-04:00",
+  "source": "worked example wind",
+  "speed_kmh": 13
+ }
+}

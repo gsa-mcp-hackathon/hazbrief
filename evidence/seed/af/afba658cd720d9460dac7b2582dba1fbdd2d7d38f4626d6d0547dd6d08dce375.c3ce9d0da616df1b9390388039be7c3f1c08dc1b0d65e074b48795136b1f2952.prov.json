@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T03:22:06Z",
+  "http_mode": "record",
+  "id": "c3ce9d0da616df1b9390388039be7c3f1c08dc1b0d65e074b48795136b1f2952",
+  "name": "GET usgs_3dep",
+  "params": {
+   "method": "GET",
+   "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples?geometry=%7B%22points%22%3A%5B%5B-76.662807%2C39.720905%5D%2C%5B-76.662899%2C39.720767%5D%2C%5B-76.663055%2C39.720597%5D%2C%5B-76.66312%2C39.720487%5D%2C%5B-76.663184%2C39.720306%5D%2C%5B-76.663262%2C39.720191%5D%2C%5B-76.663568%2C39.719839%5D%2C%5B-76.663667%2C39.719653%5D%2C%5B-76.663838%2C39.719224%5D%2C%5B-76.663938%2C39.719115%5D%2C%5B-76.664144%2C39.718939%5D%2C%5B-76.664393%2C39.718774%5D%2C%5B-76.664692%2C39.718626%5D%2C%5B-76.665026%2C39.718434%5D%2C%5B-76.665268%2C39.718247%5D%2C%5B-76.665545%2C39.717995%5D%2C%5B-76.66563%2C39.717954%5D%5D%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryMultipoint&returnFirstValueOnly=true&f=json"
+  },
+  "startedAtTime": "2026-10-28T03:22:06Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples?geometry=%7B%22points%22%3A%5B%5B-76.662807%2C39.720905%5D%2C%5B-76.662899%2C39.720767%5D%2C%5B-76.663055%2C39.720597%5D%2C%5B-76.66312%2C39.720487%5D%2C%5B-76.663184%2C39.720306%5D%2C%5B-76.663262%2C39.720191%5D%2C%5B-76.663568%2C39.719839%5D%2C%5B-76.663667%2C39.719653%5D%2C%5B-76.663838%2C39.719224%5D%2C%5B-76.663938%2C39.719115%5D%2C%5B-76.664144%2C39.718939%5D%2C%5B-76.664393%2C39.718774%5D%2C%5B-76.664692%2C39.718626%5D%2C%5B-76.665026%2C39.718434%5D%2C%5B-76.665268%2C39.718247%5D%2C%5B-76.665545%2C39.717995%5D%2C%5B-76.66563%2C39.717954%5D%5D%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryMultipoint&returnFirstValueOnly=true&f=json",
+    "id": "usgs:3dep"
+   }
+  ]
+ },
+ "as_of": "2026-10-28T03:22:06Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 2857,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "afba658cd720d9460dac7b2582dba1fbdd2d7d38f4626d6d0547dd6d08dce375"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "usgs:3dep",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

@@ -1,0 +1,389 @@
+{
+ "$defs": {
+  "AttributionCredit": {
+   "additionalProperties": false,
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "edition": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Edition"
+    },
+    "publisher": {
+     "title": "Publisher",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "url": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Url"
+    }
+   },
+   "required": [
+    "doc_id",
+    "title",
+    "publisher",
+    "edition",
+    "url"
+   ],
+   "title": "AttributionCredit",
+   "type": "object"
+  },
+  "AttributionNotice": {
+   "additionalProperties": false,
+   "description": "A reuse or credit notice, verbatim from the held document at `locator`.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "locator",
+    "text"
+   ],
+   "title": "AttributionNotice",
+   "type": "object"
+  },
+  "GuideRouting": {
+   "additionalProperties": false,
+   "description": "One ERG orange guide: its title, the 49 CFR 172.101 hazard classes and divisions\nof the index entries it serves (and, for a guide with no numbered entry, the ERG\nplacard table's) and its rows. It holds no number without a receipt.",
+   "properties": {
+    "guide": {
+     "pattern": "^\\d{3}$",
+     "title": "Guide",
+     "type": "string"
+    },
+    "hazard_classes": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Hazard Classes",
+     "type": "array"
+    },
+    "placard_classes": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Placard Classes",
+     "type": "array"
+    },
+    "rows": {
+     "items": {
+      "$ref": "#/$defs/RoutingRow"
+     },
+     "minItems": 1,
+     "title": "Rows",
+     "type": "array"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    }
+   },
+   "required": [
+    "guide",
+    "title",
+    "hazard_classes",
+    "placard_classes",
+    "rows"
+   ],
+   "title": "GuideRouting",
+   "type": "object"
+  },
+  "PackAttribution": {
+   "additionalProperties": false,
+   "properties": {
+    "credits": {
+     "items": {
+      "$ref": "#/$defs/AttributionCredit"
+     },
+     "title": "Credits",
+     "type": "array"
+    },
+    "notices": {
+     "items": {
+      "$ref": "#/$defs/AttributionNotice"
+     },
+     "title": "Notices",
+     "type": "array"
+    }
+   },
+   "required": [
+    "credits",
+    "notices"
+   ],
+   "title": "PackAttribution",
+   "type": "object"
+  },
+  "PackSource": {
+   "additionalProperties": false,
+   "description": "One held document a pack was parsed from: its corpus doc_id, the sha256 of the\nheld bytes, where in it the pack reads, and its licence as `corpus/sources.yaml`\nrecords it.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "licence": {
+     "title": "Licence",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "raw_sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Raw Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "raw_sha256",
+    "locator",
+    "licence"
+   ],
+   "title": "PackSource",
+   "type": "object"
+  },
+  "ReleaseRoutingData": {
+   "additionalProperties": false,
+   "properties": {
+    "guides": {
+     "additionalProperties": {
+      "$ref": "#/$defs/GuideRouting"
+     },
+     "title": "Guides",
+     "type": "object"
+    },
+    "rules": {
+     "additionalProperties": {
+      "$ref": "#/$defs/RoutingRule"
+     },
+     "title": "Rules",
+     "type": "object"
+    }
+   },
+   "required": [
+    "rules",
+    "guides"
+   ],
+   "title": "ReleaseRoutingData",
+   "type": "object"
+  },
+  "RoutingRow": {
+   "additionalProperties": false,
+   "description": "One guide's route for one storage state. A routed row names its level-of-concern\nclass and no reason; a `not_applicable` row names its reason, in a responder's\nwords, and no class. Every row's `basis` is the guide's own POTENTIAL HAZARDS text\non its page, verified at build.",
+   "properties": {
+    "basis": {
+     "$ref": "#/$defs/ValueReceipt"
+    },
+    "loc_class": {
+     "anyOf": [
+      {
+       "enum": [
+        "toxic",
+        "flammable_lfl",
+        "oxygen_deficiency"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Loc Class"
+    },
+    "reason": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Reason"
+    },
+    "route": {
+     "enum": [
+      "two_phase_jet",
+      "evaporating_pool",
+      "instantaneous",
+      "not_applicable"
+     ],
+     "title": "Route",
+     "type": "string"
+    },
+    "state": {
+     "enum": [
+      "pressure_liquefied",
+      "refrigerated_liquid",
+      "ambient_liquid",
+      "solid",
+      "any"
+     ],
+     "title": "State",
+     "type": "string"
+    }
+   },
+   "required": [
+    "state",
+    "route",
+    "basis"
+   ],
+   "title": "RoutingRow",
+   "type": "object"
+  },
+  "RoutingRule": {
+   "additionalProperties": false,
+   "properties": {
+    "receipt": {
+     "$ref": "#/$defs/ValueReceipt"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "text",
+    "receipt"
+   ],
+   "title": "RoutingRule",
+   "type": "object"
+  },
+  "ValueReceipt": {
+   "additionalProperties": false,
+   "description": "Where a value is printed. `page` is the PDF page, or the form-feed block of a\nconverted file (packs/SCHEMA.md, Locators); `quote` is the text as printed there.\n`read_by`: `text_layer` (verified on the page's text at build) or `rendered_page`\n(a page with no usable text layer, read from its image; the quote is the\nreading). `sha256` is the held file's raw sha256, so a receipt names the exact\nbytes it was read from (HB-109; DN-020 section 2 item 4). From a `reference-only`\nsource the quote is the number and its unit only (the licence gate,\npacks/SCHEMA.md).",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "page": {
+     "title": "Page",
+     "type": "integer"
+    },
+    "quote": {
+     "title": "Quote",
+     "type": "string"
+    },
+    "read_by": {
+     "default": "text_layer",
+     "enum": [
+      "text_layer",
+      "rendered_page"
+     ],
+     "title": "Read By",
+     "type": "string"
+    },
+    "sha256": {
+     "title": "Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "page",
+    "locator",
+    "quote",
+    "sha256"
+   ],
+   "title": "ValueReceipt",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "properties": {
+  "attribution": {
+   "$ref": "#/$defs/PackAttribution"
+  },
+  "built_at": {
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+   "title": "Built At",
+   "type": "string"
+  },
+  "data": {
+   "$ref": "#/$defs/ReleaseRoutingData"
+  },
+  "kind": {
+   "const": "release_routing",
+   "title": "Kind",
+   "type": "string"
+  },
+  "pack_id": {
+   "title": "Pack Id",
+   "type": "string"
+  },
+  "schema_version": {
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Sha256",
+   "type": "string"
+  },
+  "sources": {
+   "items": {
+    "$ref": "#/$defs/PackSource"
+   },
+   "title": "Sources",
+   "type": "array"
+  },
+  "version": {
+   "title": "Version",
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema_version",
+  "pack_id",
+  "version",
+  "built_at",
+  "sha256",
+  "sources",
+  "attribution",
+  "kind",
+  "data"
+ ],
+ "title": "ReleaseRoutingPack",
+ "type": "object"
+}

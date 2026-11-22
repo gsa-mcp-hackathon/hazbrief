@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:26:41Z",
+  "http_mode": "record",
+  "id": "15eb1d276cde278ca9f1fe802c3f9dbacb1ba677cdc5cc48eade260e9f05310d",
+  "name": "GET vdot_lrs",
+  "params": {
+   "method": "GET",
+   "url": "https://services.arcgis.com/p5v98VHDX9Atv3l7/ArcGIS/rest/services/Mile_Marker_Signs/FeatureServer/0/query?where=HTRIS_DEF+LIKE+%27%25IS00081%25%27+AND+NUM_SG_VAL%3E%3D323&outFields=HTRIS_DEF%2CDIR%2CNUM_SG_VAL%2CSG_TEXT%2CCNTY_MP%2CLATITUDE%2CLONGITUDE%2CD_DATE&orderByFields=NUM_SG_VAL&returnGeometry=true&outSR=4326&f=json"
+  },
+  "startedAtTime": "2026-10-27T03:26:41Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://services.arcgis.com/p5v98VHDX9Atv3l7/ArcGIS/rest/services/Mile_Marker_Signs/FeatureServer/0/query?where=HTRIS_DEF+LIKE+%27%25IS00081%25%27+AND+NUM_SG_VAL%3E%3D323&outFields=HTRIS_DEF%2CDIR%2CNUM_SG_VAL%2CSG_TEXT%2CCNTY_MP%2CLATITUDE%2CLONGITUDE%2CD_DATE&orderByFields=NUM_SG_VAL&returnGeometry=true&outSR=4326&f=json",
+    "id": "lrs:vdot"
+   }
+  ]
+ },
+ "as_of": "2026-07-23T19:28:37Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 2461,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "d67775c8910b9b0b2ee4c64bef43ccb67e88c56467c9d016bd140b78f240f935"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "lrs:vdot",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

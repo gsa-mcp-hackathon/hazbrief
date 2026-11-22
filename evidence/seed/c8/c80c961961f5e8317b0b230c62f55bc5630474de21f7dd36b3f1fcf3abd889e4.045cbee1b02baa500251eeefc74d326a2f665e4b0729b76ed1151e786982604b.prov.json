@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T14:48:56Z",
+  "http_mode": "record",
+  "id": "045cbee1b02baa500251eeefc74d326a2f665e4b0729b76ed1151e786982604b",
+  "name": "GET nldi",
+  "params": {
+   "method": "GET",
+   "url": "https://api.water.usgs.gov/nldi/linked-data?f=json"
+  },
+  "startedAtTime": "2026-10-27T14:48:56Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.water.usgs.gov/nldi/linked-data?f=json",
+    "id": "nldi"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T14:48:56Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 2842,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "c80c961961f5e8317b0b230c62f55bc5630474de21f7dd36b3f1fcf3abd889e4"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "nldi",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

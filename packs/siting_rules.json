@@ -1,0 +1,726 @@
+{
+ "attribution": {
+  "credits": [
+   {
+    "doc_id": "atsdr-mmg-ammonia",
+    "edition": "MMG page last reviewed 2017-01-12 (archived)",
+    "publisher": "ATSDR",
+    "title": "Medical Management Guidelines for Ammonia (NH3) CAS 7664-41-7; UN 2672, UN 1005",
+    "url": "https://web.archive.org/web/20240929203156id_/https://www.atsdr.cdc.gov/mhmi/mmg126.pdf"
+   },
+   {
+    "doc_id": "atsdr-mmg-chlorine",
+    "edition": "MMG page last reviewed 2014-10-21 (archived)",
+    "publisher": "ATSDR",
+    "title": "Medical Management Guidelines for Chlorine",
+    "url": "https://web.archive.org/web/20240929113633id_/https://www.atsdr.cdc.gov/MHMI/mmg172.pdf"
+   },
+   {
+    "doc_id": "atsdr-mmg-ethylene-oxide",
+    "edition": "undated; archive-only (Wayback 2024-10-24)",
+    "publisher": "ATSDR",
+    "title": "Medical Management Guidelines for Ethylene Oxide ([CH2]2O) CAS 75-21-8; UN 1040",
+    "url": "https://web.archive.org/web/20241024111512id_/https://www.atsdr.cdc.gov/mhmi/mmg137.pdf"
+   },
+   {
+    "doc_id": "atsdr-mmg-hydrogen-chloride",
+    "edition": "MMG page last reviewed 2014-10-21 (archived)",
+    "publisher": "ATSDR",
+    "title": "Medical Management Guidelines for Hydrogen Chloride",
+    "url": "https://web.archive.org/web/20241005185054id_/https://www.atsdr.cdc.gov/MHMI/mmg173.pdf"
+   },
+   {
+    "doc_id": "atsdr-mmg-hydrogen-fluoride",
+    "edition": "MMG page last reviewed 2014-10-21 (archived)",
+    "publisher": "ATSDR",
+    "title": "Medical Management Guidelines for Hydrogen Fluoride (HF)",
+    "url": "https://web.archive.org/web/20241005192243id_/https://www.atsdr.cdc.gov/mhmi/mmg11.pdf"
+   },
+   {
+    "doc_id": "atsdr-mmg-sulfur-dioxide",
+    "edition": "MMG page last reviewed 2014-10-21 (archived)",
+    "publisher": "ATSDR",
+    "title": "Medical Management Guidelines for Sulfur Dioxide",
+    "url": "https://web.archive.org/web/20241112041729id_/https://www.atsdr.cdc.gov/MHMI/mmg116.pdf"
+   },
+   {
+    "doc_id": "cfr29-1910-120-govinfo-2025",
+    "edition": "2025-07-01",
+    "publisher": "Office of the Federal Register / GPO (OSHA rule)",
+    "title": "29 CFR 1910.120 Hazardous waste operations and emergency response (CFR annual edition 2025, title 29 vol 5, revised as of July 1, 2025)",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title29-vol5/xml/CFR-2025-title29-vol5-sec1910-120.xml"
+   },
+   {
+    "doc_id": "erg2024-en-pdf",
+    "edition": "2024",
+    "publisher": "US DOT PHMSA",
+    "title": "Emergency Response Guidebook 2024 (English, web PDF)",
+    "url": "https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2024-04/ERG2024-Eng-Web-a.pdf"
+   },
+   {
+    "doc_id": "fema-is-200c-student-manual",
+    "edition": "Date Released 09/2020",
+    "publisher": "FEMA Emergency Management Institute",
+    "title": "IS-0200.c Basic Incident Command System for Initial Response, ICS 200, Student Manual",
+    "url": "https://training.fema.gov/programs/independent-study/_course-files/is-200.c/english/is-200c-complete-course.zip"
+   },
+   {
+    "doc_id": "nims-doctrine-2017",
+    "edition": "October 2017",
+    "publisher": "FEMA",
+    "title": "National Incident Management System, Third Edition",
+    "url": "https://www.fema.gov/sites/default/files/2020-07/fema_nims_doctrine-2017.pdf"
+   },
+   {
+    "doc_id": "ntsb-rar-05-04-graniteville",
+    "edition": "Adopted 2005-11-29 (Notation 7710A); corrected version 2006-06-15",
+    "publisher": "National Transportation Safety Board",
+    "title": "Collision of Norfolk Southern Freight Train 192 With Standing Norfolk Southern Local Train P22 With Subsequent Hazardous Materials Release at Graniteville, South Carolina, January 6, 2005 (NTSB/RAR-05/04, PB2005-916304)",
+    "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/RAR0504.pdf"
+   }
+  ],
+  "notices": [
+   {
+    "doc_id": "erg2024-en-pdf",
+    "locator": "erg2024-en-pdf#p382",
+    "text": "REPRODUCTION AND RESALE Copies of this document which are provided free-of-charge to fire, police and other emergency services may not be resold. ERG2024 may be reproduced without further permission subject to the following: The names and the seals of the participating governments may not be reproduced on a copy of this document unless that copy accurately reproduces the entire content (text, format, and coloration) of this document without modification. In addition, the publisher's full name and address must be displayed on the outside back cover of each copy, replacing the wording placed on the center of the back cover."
+   }
+  ]
+ },
+ "built_at": "2026-10-23T11:05:03Z",
+ "data": {
+  "rules": {
+   "candidates": {
+    "applies": "candidates",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": {
+     "record": "hazbrief-mcp:HBD-360",
+     "statement": "S2"
+    },
+    "point": null,
+    "source_notes": {},
+    "sources": [],
+    "words": "candidates are places with space and road access: parking lots, schools and other public buildings, a hospital, a fire, EMS or police station, a rest area"
+   },
+   "command_post": {
+    "applies": "choose",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": null,
+    "point": "command_post",
+    "source_notes": {},
+    "sources": [
+     {
+      "doc_id": "nims-doctrine-2017",
+      "locator": "nims-doctrine-2017#p41",
+      "page": 41,
+      "quote": "Typically, the ICP is located near the incident site",
+      "read_by": "text_layer",
+      "sha256": "5496c912f312ffac5547ede249e9aec590ec2d176c260d243cdb6391ed702930"
+     },
+     {
+      "doc_id": "erg2024-en-pdf",
+      "locator": "erg2024-en-pdf#p372",
+      "page": 372,
+      "quote": "Area where the command post and support functions that are necessary to control the incident are located.",
+      "read_by": "text_layer",
+      "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+     },
+     {
+      "doc_id": "erg2024-en-pdf",
+      "locator": "erg2024-en-pdf#p6",
+      "page": 6,
+      "quote": "Establish a command post and lines of communication.",
+      "read_by": "text_layer",
+      "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+     }
+    ],
+    "words": "command post: the nearest candidate to the incident upwind of it, crosswind where none is upwind"
+   },
+   "commander_sets": {
+    "applies": "label",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": null,
+    "point": null,
+    "source_notes": {},
+    "sources": [
+     {
+      "doc_id": "nims-doctrine-2017",
+      "locator": "nims-doctrine-2017#p41",
+      "page": 41,
+      "quote": "The Incident Commander or Unified Command determines the kinds and locations of facilities based on incident needs.",
+      "read_by": "text_layer",
+      "sha256": "5496c912f312ffac5547ede249e9aec590ec2d176c260d243cdb6391ed702930"
+     },
+     {
+      "doc_id": "nims-doctrine-2017",
+      "locator": "nims-doctrine-2017#p32",
+      "page": 32,
+      "quote": "direct their identification and location based on the incident",
+      "read_by": "text_layer",
+      "sha256": "5496c912f312ffac5547ede249e9aec590ec2d176c260d243cdb6391ed702930"
+     }
+    ],
+    "words": "a suggested point is a suggestion: the incident commander sets it"
+   },
+   "initial_solution": {
+    "applies": "label",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": {
+     "record": "hazbrief-mcp:HBD-361",
+     "statement": "S3"
+    },
+    "point": null,
+    "source_notes": {},
+    "sources": [],
+    "words": "the suggestion is an initial solution so responder drive time can be computed; it is recomputed when a point moves, and the points are the routes' endpoints"
+   },
+   "lower_ground": {
+    "applies": "exclude",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": null,
+    "point": null,
+    "source_notes": {},
+    "sources": [
+     {
+      "doc_id": "erg2024-en-pdf",
+      "locator": "erg2024-en-pdf#p180",
+      "page": 180,
+      "quote": "Many gases are heavier than air and will spread along the ground and collect in low or confined areas",
+      "read_by": "text_layer",
+      "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+     }
+    ],
+    "words": "for a dense-gas class, a suggested point does not lie on held ground lower than the spill near it"
+   },
+   "outside_hazard": {
+    "applies": "exclude",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": null,
+    "point": null,
+    "source_notes": {},
+    "sources": [
+     {
+      "doc_id": "erg2024-en-pdf",
+      "locator": "erg2024-en-pdf#p3",
+      "page": 3,
+      "quote": "STAY CLEAR OF ALL SPILLS, VAPORS, FUMES, SMOKE, AND POTENTIAL HAZARDS",
+      "read_by": "text_layer",
+      "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+     },
+     {
+      "doc_id": "erg2024-en-pdf",
+      "locator": "erg2024-en-pdf#p372",
+      "page": 372,
+      "quote": "Area where the command post and support functions that are necessary to control the incident are located.",
+      "read_by": "text_layer",
+      "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+     }
+    ],
+    "words": "a suggested point lies outside every drawn hazard layer: the ERG zones and the modelled outlines"
+   },
+   "road_access": {
+    "applies": "exclude",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": null,
+    "point": null,
+    "source_notes": {},
+    "sources": [
+     {
+      "doc_id": "fema-is-200c-student-manual",
+      "locator": "fema-is-200c-student-manual#p91",
+      "page": 91,
+      "quote": "Entrance and exit routes for responders",
+      "read_by": "text_layer",
+      "sha256": "e7c6d9c41d2b2d8b106bc8e35055dfb1495d77732215234ff5bd76b706590f0c"
+     }
+    ],
+    "words": "a candidate whose shortest road route from beyond the area crosses the exclusion area is not offered"
+   },
+   "route_endpoints": {
+    "applies": "label",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": {
+     "record": "hazbrief-mcp:HBD-362",
+     "statement": "S4"
+    },
+    "point": null,
+    "source_notes": {},
+    "sources": [],
+    "words": "the suggested points are the endpoints of the responder routes: each nearest fire, EMS and police station to staging, triage to each receiving hospital"
+   },
+   "staging": {
+    "applies": "choose",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": null,
+    "point": "staging",
+    "source_notes": {
+     "ntsb-rar-05-04-graniteville": {
+      "note": "a general source drawn from a chlorine incident",
+      "receipt": {
+       "doc_id": "ntsb-rar-05-04-graniteville",
+       "locator": "ntsb-rar-05-04-graniteville#p4",
+       "page": 4,
+       "quote": "breached, releasing chlorine gas",
+       "read_by": "text_layer",
+       "sha256": "b5489d13779e911a0f141f6f83e4f5589b150b5f2a3a943b52b91e766af8f94a"
+      }
+     }
+    },
+    "sources": [
+     {
+      "doc_id": "nims-doctrine-2017",
+      "locator": "nims-doctrine-2017#p41",
+      "page": 41,
+      "quote": "A staging area can be any location in which personnel, supplies, and equipment await assignment.",
+      "read_by": "text_layer",
+      "sha256": "5496c912f312ffac5547ede249e9aec590ec2d176c260d243cdb6391ed702930"
+     },
+     {
+      "doc_id": "fema-is-200c-student-manual",
+      "locator": "fema-is-200c-student-manual#p91",
+      "page": 91,
+      "quote": "Location of Incident Command Post and Staging Area",
+      "read_by": "text_layer",
+      "sha256": "e7c6d9c41d2b2d8b106bc8e35055dfb1495d77732215234ff5bd76b706590f0c"
+     },
+     {
+      "doc_id": "ntsb-rar-05-04-graniteville",
+      "locator": "ntsb-rar-05-04-graniteville#p47",
+      "page": 47,
+      "quote": "at a staging area upwind of the toxic gas release site",
+      "read_by": "text_layer",
+      "sha256": "b5489d13779e911a0f141f6f83e4f5589b150b5f2a3a943b52b91e766af8f94a"
+     }
+    ],
+    "words": "staging: of the candidates upwind or crosswind and farther from the incident than the command post and triage, the nearest to the incident with direct access to a primary or secondary road; with none, the one nearest such a road"
+   },
+   "three_points": {
+    "applies": "label",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": {
+     "record": "hazbrief-mcp:HBD-359",
+     "statement": "S1"
+    },
+    "point": null,
+    "source_notes": {},
+    "sources": [
+     {
+      "doc_id": "nims-doctrine-2017",
+      "locator": "nims-doctrine-2017#p32",
+      "page": 32,
+      "quote": "Typical facilities include the Incident Command Post (ICP), incident base, staging areas, camps, mass casualty triage areas, points-of",
+      "read_by": "text_layer",
+      "sha256": "5496c912f312ffac5547ede249e9aec590ec2d176c260d243cdb6391ed702930"
+     }
+    ],
+    "words": "three points are suggested, command post, triage and staging, each movable by the operator"
+   },
+   "triage": {
+    "applies": "choose",
+    "material_none": "no material-specific source is held",
+    "material_sources": {
+     "1005": {
+      "key": {
+       "doc_id": "atsdr-mmg-ammonia",
+       "locator": "atsdr-mmg-ammonia#p1",
+       "page": 1,
+       "quote": "UN 1005",
+       "read_by": "text_layer",
+       "sha256": "0bff49eb5570929092ad90d02e994f8af4acaca65d390d7e3f01524cb45b94c6"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-ammonia",
+        "locator": "atsdr-mmg-ammonia#p8",
+        "page": 8,
+        "quote": "They may be transferred immediately to the Support Zone.",
+        "read_by": "text_layer",
+        "sha256": "0bff49eb5570929092ad90d02e994f8af4acaca65d390d7e3f01524cb45b94c6"
+       },
+       {
+        "doc_id": "atsdr-mmg-ammonia",
+        "locator": "atsdr-mmg-ammonia#p10",
+        "page": 10,
+        "quote": "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "0bff49eb5570929092ad90d02e994f8af4acaca65d390d7e3f01524cb45b94c6"
+       }
+      ]
+     },
+     "1017": {
+      "key": {
+       "doc_id": "atsdr-mmg-chlorine",
+       "locator": "atsdr-mmg-chlorine#p1",
+       "page": 1,
+       "quote": "UN 1017",
+       "read_by": "text_layer",
+       "sha256": "4a609843b3e36e2b3836df9152cd449bef4d08912d715d299e45b009590ca5f6"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-chlorine",
+        "locator": "atsdr-mmg-chlorine#p8",
+        "page": 8,
+        "quote": "They may be transferred immediately to the Support Zone.",
+        "read_by": "text_layer",
+        "sha256": "4a609843b3e36e2b3836df9152cd449bef4d08912d715d299e45b009590ca5f6"
+       },
+       {
+        "doc_id": "atsdr-mmg-chlorine",
+        "locator": "atsdr-mmg-chlorine#p10",
+        "page": 10,
+        "quote": "Only decontaminated patients or those not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "4a609843b3e36e2b3836df9152cd449bef4d08912d715d299e45b009590ca5f6"
+       }
+      ]
+     },
+     "1040": {
+      "key": {
+       "doc_id": "atsdr-mmg-ethylene-oxide",
+       "locator": "atsdr-mmg-ethylene-oxide#p1",
+       "page": 1,
+       "quote": "UN 1040",
+       "read_by": "text_layer",
+       "sha256": "068be03dbc671b31f40700b057376b6e5596763533cb703c2ae1f89e47c0154c"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-ethylene-oxide",
+        "locator": "atsdr-mmg-ethylene-oxide#p11",
+        "page": 11,
+        "quote": "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "068be03dbc671b31f40700b057376b6e5596763533cb703c2ae1f89e47c0154c"
+       }
+      ]
+     },
+     "1050": {
+      "key": {
+       "doc_id": "atsdr-mmg-hydrogen-chloride",
+       "locator": "atsdr-mmg-hydrogen-chloride#p1",
+       "page": 1,
+       "quote": "UN 1050",
+       "read_by": "text_layer",
+       "sha256": "fe2d63ac979580fb9353e8cbe555c5bd3faa5d321dd9895f8229d51e3eb2b4af"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-hydrogen-chloride",
+        "locator": "atsdr-mmg-hydrogen-chloride#p12",
+        "page": 12,
+        "quote": "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "fe2d63ac979580fb9353e8cbe555c5bd3faa5d321dd9895f8229d51e3eb2b4af"
+       }
+      ]
+     },
+     "1052": {
+      "key": {
+       "doc_id": "atsdr-mmg-hydrogen-fluoride",
+       "locator": "atsdr-mmg-hydrogen-fluoride#p1",
+       "page": 1,
+       "quote": "UN 1052",
+       "read_by": "text_layer",
+       "sha256": "5b273747ff9c27271c51ab4ecc11b789a46140d8dd05592ea34dbd94906ba984"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-hydrogen-fluoride",
+        "locator": "atsdr-mmg-hydrogen-fluoride#p10",
+        "page": 10,
+        "quote": "They may be transferred immediately to the Support Zone.",
+        "read_by": "text_layer",
+        "sha256": "5b273747ff9c27271c51ab4ecc11b789a46140d8dd05592ea34dbd94906ba984"
+       },
+       {
+        "doc_id": "atsdr-mmg-hydrogen-fluoride",
+        "locator": "atsdr-mmg-hydrogen-fluoride#p12",
+        "page": 12,
+        "quote": "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "5b273747ff9c27271c51ab4ecc11b789a46140d8dd05592ea34dbd94906ba984"
+       }
+      ]
+     },
+     "1079": {
+      "key": {
+       "doc_id": "atsdr-mmg-sulfur-dioxide",
+       "locator": "atsdr-mmg-sulfur-dioxide#p1",
+       "page": 1,
+       "quote": "UN 1079",
+       "read_by": "text_layer",
+       "sha256": "e42fe2f1e28adc427209083f2630d2f8e0381558b39e6bf5bd8dad82eeae8737"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-sulfur-dioxide",
+        "locator": "atsdr-mmg-sulfur-dioxide#p10",
+        "page": 10,
+        "quote": "They may be transferred immediately to the Support Zone.",
+        "read_by": "text_layer",
+        "sha256": "e42fe2f1e28adc427209083f2630d2f8e0381558b39e6bf5bd8dad82eeae8737"
+       },
+       {
+        "doc_id": "atsdr-mmg-sulfur-dioxide",
+        "locator": "atsdr-mmg-sulfur-dioxide#p12",
+        "page": 12,
+        "quote": "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "e42fe2f1e28adc427209083f2630d2f8e0381558b39e6bf5bd8dad82eeae8737"
+       }
+      ]
+     },
+     "1789": {
+      "key": {
+       "doc_id": "atsdr-mmg-hydrogen-chloride",
+       "locator": "atsdr-mmg-hydrogen-chloride#p1",
+       "page": 1,
+       "quote": "UN 1789",
+       "read_by": "text_layer",
+       "sha256": "fe2d63ac979580fb9353e8cbe555c5bd3faa5d321dd9895f8229d51e3eb2b4af"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-hydrogen-chloride",
+        "locator": "atsdr-mmg-hydrogen-chloride#p12",
+        "page": 12,
+        "quote": "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "fe2d63ac979580fb9353e8cbe555c5bd3faa5d321dd9895f8229d51e3eb2b4af"
+       }
+      ]
+     },
+     "1790": {
+      "key": {
+       "doc_id": "atsdr-mmg-hydrogen-fluoride",
+       "locator": "atsdr-mmg-hydrogen-fluoride#p1",
+       "page": 1,
+       "quote": "UN 1790",
+       "read_by": "text_layer",
+       "sha256": "5b273747ff9c27271c51ab4ecc11b789a46140d8dd05592ea34dbd94906ba984"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-hydrogen-fluoride",
+        "locator": "atsdr-mmg-hydrogen-fluoride#p10",
+        "page": 10,
+        "quote": "They may be transferred immediately to the Support Zone.",
+        "read_by": "text_layer",
+        "sha256": "5b273747ff9c27271c51ab4ecc11b789a46140d8dd05592ea34dbd94906ba984"
+       },
+       {
+        "doc_id": "atsdr-mmg-hydrogen-fluoride",
+        "locator": "atsdr-mmg-hydrogen-fluoride#p12",
+        "page": 12,
+        "quote": "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "5b273747ff9c27271c51ab4ecc11b789a46140d8dd05592ea34dbd94906ba984"
+       }
+      ]
+     },
+     "2073": {
+      "key": {
+       "doc_id": "atsdr-mmg-ammonia",
+       "locator": "atsdr-mmg-ammonia#p1",
+       "page": 1,
+       "quote": "UN 2073",
+       "read_by": "text_layer",
+       "sha256": "0bff49eb5570929092ad90d02e994f8af4acaca65d390d7e3f01524cb45b94c6"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-ammonia",
+        "locator": "atsdr-mmg-ammonia#p8",
+        "page": 8,
+        "quote": "They may be transferred immediately to the Support Zone.",
+        "read_by": "text_layer",
+        "sha256": "0bff49eb5570929092ad90d02e994f8af4acaca65d390d7e3f01524cb45b94c6"
+       },
+       {
+        "doc_id": "atsdr-mmg-ammonia",
+        "locator": "atsdr-mmg-ammonia#p10",
+        "page": 10,
+        "quote": "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "0bff49eb5570929092ad90d02e994f8af4acaca65d390d7e3f01524cb45b94c6"
+       }
+      ]
+     },
+     "2186": {
+      "key": {
+       "doc_id": "atsdr-mmg-hydrogen-chloride",
+       "locator": "atsdr-mmg-hydrogen-chloride#p1",
+       "page": 1,
+       "quote": "UN 2186",
+       "read_by": "text_layer",
+       "sha256": "fe2d63ac979580fb9353e8cbe555c5bd3faa5d321dd9895f8229d51e3eb2b4af"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-hydrogen-chloride",
+        "locator": "atsdr-mmg-hydrogen-chloride#p12",
+        "page": 12,
+        "quote": "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "fe2d63ac979580fb9353e8cbe555c5bd3faa5d321dd9895f8229d51e3eb2b4af"
+       }
+      ]
+     },
+     "2672": {
+      "key": {
+       "doc_id": "atsdr-mmg-ammonia",
+       "locator": "atsdr-mmg-ammonia#p1",
+       "page": 1,
+       "quote": "UN 2672",
+       "read_by": "text_layer",
+       "sha256": "0bff49eb5570929092ad90d02e994f8af4acaca65d390d7e3f01524cb45b94c6"
+      },
+      "sources": [
+       {
+        "doc_id": "atsdr-mmg-ammonia",
+        "locator": "atsdr-mmg-ammonia#p8",
+        "page": 8,
+        "quote": "They may be transferred immediately to the Support Zone.",
+        "read_by": "text_layer",
+        "sha256": "0bff49eb5570929092ad90d02e994f8af4acaca65d390d7e3f01524cb45b94c6"
+       },
+       {
+        "doc_id": "atsdr-mmg-ammonia",
+        "locator": "atsdr-mmg-ammonia#p10",
+        "page": 10,
+        "quote": "Only decontaminated patients or patients not requiring decontamination should be transported to a medical facility.",
+        "read_by": "text_layer",
+        "sha256": "0bff49eb5570929092ad90d02e994f8af4acaca65d390d7e3f01524cb45b94c6"
+       }
+      ]
+     }
+    },
+    "operator_stated": null,
+    "point": "triage",
+    "source_notes": {},
+    "sources": [
+     {
+      "doc_id": "cfr29-1910-120-govinfo-2025",
+      "locator": "cfr29-1910-120-govinfo-2025#p663",
+      "page": 663,
+      "quote": "medical assistance and triage area",
+      "read_by": "text_layer",
+      "sha256": "c5b2a6778add41fcc02b353b47e814879a2958c1996ac1d2e5419d4c8b499f72"
+     }
+    ],
+    "words": "triage: the candidate nearest the exclusion area's edge upwind of the incident, crosswind where none is upwind, other than the command post where another survives"
+   },
+   "upwind_uphill_upstream": {
+    "applies": "exclude",
+    "material_none": null,
+    "material_sources": {},
+    "operator_stated": null,
+    "point": null,
+    "source_notes": {},
+    "sources": [
+     {
+      "doc_id": "erg2024-en-pdf",
+      "locator": "erg2024-en-pdf#p3",
+      "page": 3,
+      "quote": "APPROACH INCIDENT FROM UPWIND, AND UPHILL AND/OR UPSTREAM",
+      "read_by": "text_layer",
+      "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+     },
+     {
+      "doc_id": "erg2024-en-pdf",
+      "locator": "erg2024-en-pdf#p180",
+      "page": 180,
+      "quote": "Stay upwind, uphill and/or upstream.",
+      "read_by": "text_layer",
+      "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+     }
+    ],
+    "words": "a suggested point lies outside the protective action zone swept across the wind's spread and outside the downstream path's corridor"
+   }
+  }
+ },
+ "kind": "siting_rules",
+ "pack_id": "siting_rules",
+ "schema_version": 8,
+ "sha256": "14887cd012e775d9b3668903b1f9045fc1faa99abf5512277cf73601c4390933",
+ "sources": [
+  {
+   "doc_id": "atsdr-mmg-ammonia",
+   "licence": "public-domain",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "0bff49eb5570929092ad90d02e994f8af4acaca65d390d7e3f01524cb45b94c6"
+  },
+  {
+   "doc_id": "atsdr-mmg-chlorine",
+   "licence": "public-domain",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "4a609843b3e36e2b3836df9152cd449bef4d08912d715d299e45b009590ca5f6"
+  },
+  {
+   "doc_id": "atsdr-mmg-ethylene-oxide",
+   "licence": "public-domain",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "068be03dbc671b31f40700b057376b6e5596763533cb703c2ae1f89e47c0154c"
+  },
+  {
+   "doc_id": "atsdr-mmg-hydrogen-chloride",
+   "licence": "public-domain",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "fe2d63ac979580fb9353e8cbe555c5bd3faa5d321dd9895f8229d51e3eb2b4af"
+  },
+  {
+   "doc_id": "atsdr-mmg-hydrogen-fluoride",
+   "licence": "public-domain",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "5b273747ff9c27271c51ab4ecc11b789a46140d8dd05592ea34dbd94906ba984"
+  },
+  {
+   "doc_id": "atsdr-mmg-sulfur-dioxide",
+   "licence": "public-domain",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "e42fe2f1e28adc427209083f2630d2f8e0381558b39e6bf5bd8dad82eeae8737"
+  },
+  {
+   "doc_id": "cfr29-1910-120-govinfo-2025",
+   "licence": "public-domain",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "c5b2a6778add41fcc02b353b47e814879a2958c1996ac1d2e5419d4c8b499f72"
+  },
+  {
+   "doc_id": "erg2024-en-pdf",
+   "licence": "reproduction-permitted",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+  },
+  {
+   "doc_id": "fema-is-200c-student-manual",
+   "licence": "public-domain",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "e7c6d9c41d2b2d8b106bc8e35055dfb1495d77732215234ff5bd76b706590f0c"
+  },
+  {
+   "doc_id": "nims-doctrine-2017",
+   "licence": "public-domain",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "5496c912f312ffac5547ede249e9aec590ec2d176c260d243cdb6391ed702930"
+  },
+  {
+   "doc_id": "ntsb-rar-05-04-graniteville",
+   "licence": "public-domain",
+   "locator": "the siting rules' quotes (HB-155)",
+   "raw_sha256": "b5489d13779e911a0f141f6f83e4f5589b150b5f2a3a943b52b91e766af8f94a"
+  }
+ ],
+ "version": "hb178.1"
+}

@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T04:32:09Z",
+  "http_mode": "record",
+  "id": "88eef37e371c4396d68fd8ec517e93b4b166337e1d133795dda010696902c394",
+  "name": "GET nws",
+  "params": {
+   "method": "GET",
+   "url": "https://api.weather.gov/stations/KAVP/observations/latest"
+  },
+  "startedAtTime": "2026-10-28T04:32:09Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/stations/KAVP/observations/latest",
+    "id": "nws:observations"
+   }
+  ]
+ },
+ "as_of": "2026-10-28T03:59:58Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 2549,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "e1f73d5b94a1ee933dffe427052bb62bb096875b96e3974602c067a559068365"
+ },
+ "horizon_s": 3600,
+ "horizon_source": "nws:observations",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

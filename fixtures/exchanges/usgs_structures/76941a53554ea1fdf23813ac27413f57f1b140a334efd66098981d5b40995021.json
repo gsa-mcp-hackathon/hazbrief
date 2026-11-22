@@ -1,0 +1,1582 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.432911,
+      39.030153
+     ],
+     "type": "Point"
+    },
+    "id": 6439851,
+    "properties": {
+     "address": "45900 Russell Branch Parkway",
+     "city": "Sterling",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1691107200000,
+     "name": "Kincora Fire and Rescue Station - Companies 24 and 35",
+     "objectid": 6439851,
+     "permanent_identifier": "2440174c-8322-4447-a6cc-e3809fb210e4",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.250612,
+      39.116181
+     ],
+     "type": "Point"
+    },
+    "id": 6462278,
+    "properties": {
+     "address": "12100 Darnestown Road",
+     "city": "North Potomac",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1697500800000,
+     "name": "Rockville Volunteer Fire Department - Station 31",
+     "objectid": 6462278,
+     "permanent_identifier": "3e7a8395-79ec-4988-b0da-cec8f35a147d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.205087,
+      39.289196
+     ],
+     "type": "Point"
+    },
+    "id": 6471277,
+    "properties": {
+     "address": "26334 Ridge Road",
+     "city": "Damascus",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1541548800000,
+     "name": "Damascus Volunteer Fire Department - Station 13",
+     "objectid": 6471277,
+     "permanent_identifier": "49400997-0f27-4d8b-8d01-4824b25a3943",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.357351,
+      39.327984
+     ],
+     "type": "Point"
+    },
+    "id": 6478569,
+    "properties": {
+     "address": "3602 Urbana Pike",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1660953600000,
+     "name": "Urbana Volunteer Fire and Rescue Company Station 23",
+     "objectid": 6478569,
+     "permanent_identifier": "528fe07c-f31a-4cd3-bf6e-aa34f12a1121",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.739916,
+      39.056783
+     ],
+     "type": "Point"
+    },
+    "id": 6478714,
+    "properties": {
+     "address": "36560 Jeb Stuart Road",
+     "city": "Purcellville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Philomont Fire and Rescue Company 8",
+     "objectid": 6478714,
+     "permanent_identifier": "52202444-6eea-4351-8179-51000e915cf8",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.244809,
+      39.483371
+     ],
+     "type": "Point"
+    },
+    "id": 6480063,
+    "properties": {
+     "address": "12027 South Street",
+     "city": "Libertytown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Libertytown Volunteer Fire Department Station 17",
+     "objectid": 6480063,
+     "permanent_identifier": "53eacc7b-e27e-487c-9132-7b0f54987373",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.193737,
+      39.043802
+     ],
+     "type": "Point"
+    },
+    "id": 6484703,
+    "properties": {
+     "address": "11430 Falls Road",
+     "city": "Potomac",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1692662400000,
+     "name": "Rockville Volunteer Fire Department - Station 33",
+     "objectid": 6484703,
+     "permanent_identifier": "59695f13-2559-435a-ac5d-a1908b501252",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.474078,
+      39.309073
+     ],
+     "type": "Point"
+    },
+    "id": 6500273,
+    "properties": {
+     "address": "2795 Adams Street",
+     "city": "Adamstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Carroll Manor Fire Company Station 14",
+     "objectid": 6500273,
+     "permanent_identifier": "6c20ef9e-8933-47e8-a13c-70470eebdaa0",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.651072,
+      39.507002
+     ],
+     "type": "Point"
+    },
+    "id": 6503027,
+    "properties": {
+     "address": "5 Saint Paul Street",
+     "city": "Boonsboro",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1660694400000,
+     "name": "First Hose Company of Boonsboro Company 6",
+     "objectid": 6503027,
+     "permanent_identifier": "6fe8bd04-cd61-4956-888d-8020668cfd8f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.382905,
+      39.048339
+     ],
+     "type": "Point"
+    },
+    "id": 6503097,
+    "properties": {
+     "address": "46700 Middlefield Drive",
+     "city": "Sterling",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Sterling - Cascades Fire Company 18",
+     "objectid": 6503097,
+     "permanent_identifier": "6f2ce885-0f42-45fb-a243-739f678de679",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.433695,
+      39.426992
+     ],
+     "type": "Point"
+    },
+    "id": 6509016,
+    "properties": {
+     "address": "310 Baughmans Lane",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Independent Hose Company Station 1",
+     "objectid": 6509016,
+     "permanent_identifier": "77505dfe-41ce-4aaf-be04-97cb4015f596",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.209524,
+      39.155112
+     ],
+     "type": "Point"
+    },
+    "id": 6519081,
+    "properties": {
+     "address": "801 Russell Avenue",
+     "city": "Gaithersburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1541548800000,
+     "name": "Gaithersburg - Washington Grove Volunteer Fire Department - Station 8",
+     "objectid": 6519081,
+     "permanent_identifier": "82bc553c-211b-4a0b-99f1-a9bbf8f49175",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.273999,
+      39.382313
+     ],
+     "type": "Point"
+    },
+    "id": 6529072,
+    "properties": {
+     "address": "76 West Main Street",
+     "city": "New Market",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1756569305000,
+     "name": "New Market District Volunteer Fire Company Station 15",
+     "objectid": 6529072,
+     "permanent_identifier": "8ec7edaa-bcc7-47d6-aee3-66fdda415177",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.768955,
+      39.133299
+     ],
+     "type": "Point"
+    },
+    "id": 6531862,
+    "properties": {
+     "address": "4 Main Street",
+     "city": "Round Hill",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Round Hill Fire and Rescue Company 4",
+     "objectid": 6531862,
+     "permanent_identifier": "91a2f78a-6a56-4d5a-aa65-469189b4f622",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.533272,
+      39.215734
+     ],
+     "type": "Point"
+    },
+    "id": 6539131,
+    "properties": {
+     "address": "42367 Lucketts Road",
+     "city": "Leesburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Lucketts Fire and Rescue Company 10",
+     "objectid": 6539131,
+     "permanent_identifier": "9abe7210-61c4-480b-875b-ca982cd95cee",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.549258,
+      39.110293
+     ],
+     "type": "Point"
+    },
+    "id": 6543081,
+    "properties": {
+     "address": "61 Plaza Street Northeast",
+     "city": "Leesburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Leesburg Volunteer Fire Company Station 20",
+     "objectid": 6543081,
+     "permanent_identifier": "9f730496-b227-48e0-a58f-64d8d0af7506",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.569203,
+      39.115016
+     ],
+     "type": "Point"
+    },
+    "id": 6544488,
+    "properties": {
+     "address": "215 Loudoun Street Southwest",
+     "city": "Leesburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Leesburg Volunteer Fire Company Station 1",
+     "objectid": 6544488,
+     "permanent_identifier": "a16fce89-3b65-4b55-a504-74e71d23055d",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.263287,
+      39.185159
+     ],
+     "type": "Point"
+    },
+    "id": 6567540,
+    "properties": {
+     "address": "20001 Crystal Rock Drive",
+     "city": "Germantown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1541548800000,
+     "name": "Germantown Volunteer Fire Department - Station 29",
+     "objectid": 6567540,
+     "permanent_identifier": "bc6163b5-2a19-4f35-a53e-0c4f03b989ff",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.22018,
+      39.010228
+     ],
+     "type": "Point"
+    },
+    "id": 6572208,
+    "properties": {
+     "address": "9404 Falls Road",
+     "city": "Potomac",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1541548800000,
+     "name": "Cabin John Park Volunteer Fire Department - Station 30",
+     "objectid": 6572208,
+     "permanent_identifier": "c26dc1e8-7b01-4dbc-80e6-78398ee1a851",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.726798,
+      39.248455
+     ],
+     "type": "Point"
+    },
+    "id": 6576234,
+    "properties": {
+     "address": "13345 Harpers Ferry Road",
+     "city": "Purcellville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1772141733000,
+     "name": "Loudoun County Fire and Rescue Station 26",
+     "objectid": 6576234,
+     "permanent_identifier": "c77d6915-39eb-40f4-baf4-9a66c369b0f7",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.284026,
+      39.161704
+     ],
+     "type": "Point"
+    },
+    "id": 6586936,
+    "properties": {
+     "address": "18910 Germantown Road",
+     "city": "Germantown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1541462400000,
+     "name": "Montgomery County Fire and Rescue Station 22 - Kingsview",
+     "objectid": 6586936,
+     "permanent_identifier": "d43caedb-c445-49dd-9a89-31b5c73f3d7c",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.486537,
+      39.044935
+     ],
+     "type": "Point"
+    },
+    "id": 6593591,
+    "properties": {
+     "address": "20688 Ashburn Road",
+     "city": "Ashburn",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1770765473000,
+     "name": "Ashburn Volunteer Fire and Rescue Station 6 Ashburn",
+     "objectid": 6593591,
+     "permanent_identifier": "dbd2492f-c0f0-4792-a33a-fa4a19046f36",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.411604,
+      39.180183
+     ],
+     "type": "Point"
+    },
+    "id": 6600039,
+    "properties": {
+     "address": "19801 Beallsville Road",
+     "city": "Beallsville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1542326400000,
+     "name": "Upper Montgomery County Volunteer Fire Department - Station 14",
+     "objectid": 6600039,
+     "permanent_identifier": "e3ab391d-9474-49fa-96cf-1878a70eff72",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.244647,
+      39.194796
+     ],
+     "type": "Point"
+    },
+    "id": 6602503,
+    "properties": {
+     "address": "20633 Boland Farm Road",
+     "city": "Germantown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1541462400000,
+     "name": "Montgomery County Fire and Rescue Station 34 - Milestone",
+     "objectid": 6602503,
+     "permanent_identifier": "e6ce903a-20ae-432f-90a9-22a21095ffe1",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.650982,
+      39.134411
+     ],
+     "type": "Point"
+    },
+    "id": 6606515,
+    "properties": {
+     "address": "39071 East Colonial Highway",
+     "city": "Hamilton",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630540800000,
+     "name": "Hamilton Volunteer Fire Department Station 5",
+     "objectid": 6606515,
+     "permanent_identifier": "ebca9ac9-ea97-474d-816e-9f1a43dd85ea",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.314699,
+      39.280267
+     ],
+     "type": "Point"
+    },
+    "id": 6619154,
+    "properties": {
+     "address": "25801 Frederick Road",
+     "city": "Clarksburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1541548800000,
+     "name": "Hyattstown Volunteer Fire Department - Station 9",
+     "objectid": 6619154,
+     "permanent_identifier": "fa93d50c-77cb-411d-a6ac-200b406374e4",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.75032,
+      39.459001
+     ],
+     "type": "Point"
+    },
+    "id": 6619792,
+    "properties": {
+     "address": "110 West Chapline Street",
+     "city": "Sharpsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Sharpsburg Volunteer Fire Company Station 1",
+     "objectid": 6619792,
+     "permanent_identifier": "fc0a3621-d938-436b-aee8-3a8e43fc245e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.633433,
+      39.331648
+     ],
+     "type": "Point"
+    },
+    "id": 6638224,
+    "properties": {
+     "address": "1500 Volunteer Drive",
+     "city": "Brunswick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Brunswick Fire Company Station 5",
+     "objectid": 6638224,
+     "permanent_identifier": "0f8dd232-52f4-4f97-9e9f-a90a08d75fd2",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.845786,
+      39.276132
+     ],
+     "type": "Point"
+    },
+    "id": 6639474,
+    "properties": {
+     "address": "245 Citizens Way",
+     "city": "Charles Town",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Citizens Fire Company",
+     "objectid": 6639474,
+     "permanent_identifier": "106c8b90-3e79-47a2-a74d-5b2c5c69fbd5",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.875712,
+      39.12342
+     ],
+     "type": "Point"
+    },
+    "id": 6642393,
+    "properties": {
+     "address": "131 Retreat Road",
+     "city": "Bluemont",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630713600000,
+     "name": "Blue Ridge Volunteer Fire and Rescue Company 8",
+     "objectid": 6642393,
+     "permanent_identifier": "1312a7f9-15a2-424b-8e8e-3148bcf9c9e7",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.267107,
+      39.344714
+     ],
+     "type": "Point"
+    },
+    "id": 6646513,
+    "properties": {
+     "address": "3939 Green Valley Road",
+     "city": "Monrovia",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Green Valley Fire Station 25",
+     "objectid": 6646513,
+     "permanent_identifier": "17c8019e-1778-4fdb-8b6d-1430df9c7eee",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.565044,
+      39.506094
+     ],
+     "type": "Point"
+    },
+    "id": 6647699,
+    "properties": {
+     "address": "301 Main Street",
+     "city": "Myersville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Myersville Fire Company Station 8",
+     "objectid": 6647699,
+     "permanent_identifier": "18952b53-3ce2-4364-a18f-15eb825b0565",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.413332,
+      39.538152
+     ],
+     "type": "Point"
+    },
+    "id": 6665856,
+    "properties": {
+     "address": "11101 Hessong Bridge Road",
+     "city": "Thurmont",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Lewistown Volunteer Fire Company 22",
+     "objectid": 6665856,
+     "permanent_identifier": "2afe9c4b-fa76-4556-a375-81eefed76770",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.291031,
+      38.998774
+     ],
+     "type": "Point"
+    },
+    "id": 6670273,
+    "properties": {
+     "address": "9916 Georgetown Pike",
+     "city": "Great Falls",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1754093648000,
+     "name": "Fairfax County Fire and Rescue Department Station 12 Great Falls",
+     "objectid": 6670273,
+     "permanent_identifier": "2f7c51e9-515a-41c9-b826-9c4ff09c0125",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.197004,
+      39.094036
+     ],
+     "type": "Point"
+    },
+    "id": 6672585,
+    "properties": {
+     "address": "9615 Darnestown Road",
+     "city": "Rockville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1660953600000,
+     "name": "Montgomery County Fire and Rescue Station 32 - Travilah",
+     "objectid": 6672585,
+     "permanent_identifier": "3219fb65-92e5-4063-bca7-708e8d4b8d77",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.295496,
+      39.563783
+     ],
+     "type": "Point"
+    },
+    "id": 6678440,
+    "properties": {
+     "address": "12019 Woodsboro Pike",
+     "city": "New Midway",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1660694400000,
+     "name": "New Midway Volunteer Fire Company",
+     "objectid": 6678440,
+     "permanent_identifier": "37da34bc-8504-454a-aeab-c4975c3a51dc",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.411395,
+      39.412198
+     ],
+     "type": "Point"
+    },
+    "id": 6682639,
+    "properties": {
+     "address": "79 South Market Street",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "United Steam Fire Company Station 3",
+     "objectid": 6682639,
+     "permanent_identifier": "3c644031-5d6c-41d7-9460-5076b1129fa4",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.28127,
+      39.232426
+     ],
+     "type": "Point"
+    },
+    "id": 6687583,
+    "properties": {
+     "address": "22610 Gateway Center Drive",
+     "city": "Clarksburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1541462400000,
+     "name": "Montgomery County Fire Rescue Station 35 - Clarksburg",
+     "objectid": 6687583,
+     "permanent_identifier": "412b328e-0eaf-4097-b57e-376569e662cf",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.659849,
+      39.40827
+     ],
+     "type": "Point"
+    },
+    "id": 6701451,
+    "properties": {
+     "address": "3417 Rohrersville Road",
+     "city": "Rohrersville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Boonsboro Volunteer Fire Company 8 Substation",
+     "objectid": 6701451,
+     "permanent_identifier": "4f6dc26b-f6ca-4efe-894a-f5b9ac1187a1",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.861957,
+      39.293221
+     ],
+     "type": "Point"
+    },
+    "id": 6705706,
+    "properties": {
+     "address": "200 West 2nd Avenue",
+     "city": "Ranson",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Independent Fire Company",
+     "objectid": 6705706,
+     "permanent_identifier": "540b534b-0dfd-47ba-9b38-a4cd6676d4c2",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.733427,
+      39.374732
+     ],
+     "type": "Point"
+    },
+    "id": 6708235,
+    "properties": {
+     "address": "2202 Dargan School Road",
+     "city": "Sharpsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Potomac Valley Fire Department Company 11",
+     "objectid": 6708235,
+     "permanent_identifier": "56bc6904-9052-4c33-9ed6-39bdf7b1ee72",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.53086,
+      39.361203
+     ],
+     "type": "Point"
+    },
+    "id": 6708856,
+    "properties": {
+     "address": "4603 Lander Road",
+     "city": "Jefferson",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Jefferson Volunteer Fire and Rescue Station 20",
+     "objectid": 6708856,
+     "permanent_identifier": "57338ec0-0925-4da0-8d23-853607353f90",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.908743,
+      39.418686
+     ],
+     "type": "Point"
+    },
+    "id": 6712876,
+    "properties": {
+     "address": "510 Butler Avenue",
+     "city": "Martinsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1462373059000,
+     "name": "Veterans Affairs Fire Department Company 80",
+     "objectid": 6712876,
+     "permanent_identifier": "5b6afd8f-2f11-4730-9599-695360090929",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.410266,
+      39.421326
+     ],
+     "type": "Point"
+    },
+    "id": 6718495,
+    "properties": {
+     "address": "535 North Market Street",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Junior Fire Company Station 2",
+     "objectid": 6718495,
+     "permanent_identifier": "61268af5-fa40-4e14-88ed-d975b62c2212",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.412699,
+      39.413225
+     ],
+     "type": "Point"
+    },
+    "id": 6721360,
+    "properties": {
+     "address": "15 South Court Street",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Citizen Truck Company Station 4",
+     "objectid": 6721360,
+     "permanent_identifier": "63c71c75-acc1-4843-a992-a968b0065d98",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.505015,
+      39.418053
+     ],
+     "type": "Point"
+    },
+    "id": 6722015,
+    "properties": {
+     "address": "6715 Jefferson Boulevard",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Braddock Heights Volunteer Fire Company Station 12",
+     "objectid": 6722015,
+     "permanent_identifier": "6451aa42-3c5e-4a1b-bde9-ad60cd3e181f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.347702,
+      39.397922
+     ],
+     "type": "Point"
+    },
+    "id": 6728849,
+    "properties": {
+     "address": "6061 Spring Ridge Parkway",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Spring Ridge Fire Station 33",
+     "objectid": 6728849,
+     "permanent_identifier": "6b777d82-b260-41a7-ad19-4322c7c86f3d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.221853,
+      39.135651
+     ],
+     "type": "Point"
+    },
+    "id": 6731951,
+    "properties": {
+     "address": "100 Bureau Drive MS 1912",
+     "city": "Gaithersburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1499126400000,
+     "name": "National Institute of Standards and Technology Fire Department",
+     "objectid": 6731951,
+     "permanent_identifier": "6e7cff09-5d19-4903-8d85-477de994b583",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.3428,
+      38.998111
+     ],
+     "type": "Point"
+    },
+    "id": 6735388,
+    "properties": {
+     "address": "1117 Reston Avenue",
+     "city": "Herndon",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1754093227000,
+     "name": "Fairfax County Fire and Rescue Department Station 39 North Point",
+     "objectid": 6735388,
+     "permanent_identifier": "723ef275-979d-4dbf-b33c-131172afba51",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.744212,
+      39.534981
+     ],
+     "type": "Point"
+    },
+    "id": 6743932,
+    "properties": {
+     "address": "18002 Tilghmanton Road",
+     "city": "Fairplay",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Fairplay Volunteer Fire Company 12",
+     "objectid": 6743932,
+     "permanent_identifier": "7abc7b53-3447-4051-96da-ac30f187f871",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.545696,
+      39.443134
+     ],
+     "type": "Point"
+    },
+    "id": 6744306,
+    "properties": {
+     "address": "13 South Church Street",
+     "city": "Middletown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Middletown Volunteer Fire Company Station 7",
+     "objectid": 6744306,
+     "permanent_identifier": "7ad794d6-f43e-47f3-959a-702182f03bc1",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.312405,
+      39.534816
+     ],
+     "type": "Point"
+    },
+    "id": 6745252,
+    "properties": {
+     "address": "2 South Third Street",
+     "city": "Woodsboro",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1660694400000,
+     "name": "Woodsboro Volunteer Fire Company",
+     "objectid": 6745252,
+     "permanent_identifier": "7be92525-52b2-4b05-b269-a0b3d401990c",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.79829,
+      39.245842
+     ],
+     "type": "Point"
+    },
+    "id": 6745650,
+    "properties": {
+     "address": "100 Mission Road",
+     "city": "Harpers Ferry",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1462373059000,
+     "name": "Blue Ridge Mountain Volunteer Fire Company 5 - 1",
+     "objectid": 6745650,
+     "permanent_identifier": "7c91dd90-5a26-4a2a-add4-3d59f9d3db04",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.438492,
+      39.431998
+     ],
+     "type": "Point"
+    },
+    "id": 6778047,
+    "properties": {
+     "address": "340 Montevue Lane",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Frederick County Volunteer Fire and Rescue Department - Headquarters",
+     "objectid": 6778047,
+     "permanent_identifier": "9c2c96f6-2d1f-44de-9c56-5a7b1d2d45fe",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.818743,
+      39.43357
+     ],
+     "type": "Point"
+    },
+    "id": 6779737,
+    "properties": {
+     "address": "8052 Martinsburg Pike",
+     "city": "Shepherdstown",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Shepherdstown Volunteer Fire Department Company 3",
+     "objectid": 6779737,
+     "permanent_identifier": "9df745d6-dcd1-47a0-8322-6465beb758d6",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.697073,
+      39.143829
+     ],
+     "type": "Point"
+    },
+    "id": 6779912,
+    "properties": {
+     "address": "500 North Maple Avenue",
+     "city": "Purcellville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Purcellville Fire Company Station 2",
+     "objectid": 6779912,
+     "permanent_identifier": "9e4ecf7c-d6db-4039-bc93-19d5a0aa91ff",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.76155,
+      39.362863
+     ],
+     "type": "Point"
+    },
+    "id": 6784761,
+    "properties": {
+     "address": "891 Carter Avenue",
+     "city": "Harpers Ferry",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Bakerton Fire Department",
+     "objectid": 6784761,
+     "permanent_identifier": "a32d135d-4492-436a-af8f-68cd8b568b98",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.420863,
+      39.382933
+     ],
+     "type": "Point"
+    },
+    "id": 6799838,
+    "properties": {
+     "address": "5525 New Design Road",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "United - Westview Fire Station 23",
+     "objectid": 6799838,
+     "permanent_identifier": "b254df6a-e65f-4533-9dba-59b23bef3c4f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.424236,
+      39.4356
+     ],
+     "type": "Point"
+    },
+    "id": 6806447,
+    "properties": {
+     "address": "1504 Porter Street",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Fort Detrick Fire and Emergency Services",
+     "objectid": 6806447,
+     "permanent_identifier": "b8e4540f-1f33-422e-a159-953e652b09f0",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.529412,
+      39.284568
+     ],
+     "type": "Point"
+    },
+    "id": 6812693,
+    "properties": {
+     "address": "1809 Ballenger Creek Pike",
+     "city": "Point Of Rocks",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1724869705000,
+     "name": "Carroll Manor Fire Company Station 28",
+     "objectid": 6812693,
+     "permanent_identifier": "bf122d20-1d7f-4bcd-9e9e-f254ed7a2a52",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.496381,
+      39.008591
+     ],
+     "type": "Point"
+    },
+    "id": 6819250,
+    "properties": {
+     "address": "43496 Moorefield Boulevard",
+     "city": "Ashburn",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Moorefield Fire and Rescue Company 23",
+     "objectid": 6819250,
+     "permanent_identifier": "c5ec1077-f151-4b16-80c9-5957693214d7",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.889366,
+      39.062064
+     ],
+     "type": "Point"
+    },
+    "id": 6827247,
+    "properties": {
+     "address": "19844 Blueridge Mountain Road",
+     "city": "Bluemont",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630713600000,
+     "name": "FEMA Special Facility Fire Department - Mount Weather Fire Department",
+     "objectid": 6827247,
+     "permanent_identifier": "ce3a7988-3819-482b-9184-b149979204a2",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.358872,
+      39.476005
+     ],
+     "type": "Point"
+    },
+    "id": 6834941,
+    "properties": {
+     "address": "79 West Frederick Street",
+     "city": "Walkersville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1658707200000,
+     "name": "Walkersville Volunteer Fire Company Station 11",
+     "objectid": 6834941,
+     "permanent_identifier": "d5f219a3-cf0d-4a01-be7e-4f326ffa18bf",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.644477,
+      39.260919
+     ],
+     "type": "Point"
+    },
+    "id": 6836830,
+    "properties": {
+     "address": "12837 Berlin Turnpike",
+     "city": "Lovettsville",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Lovettsville Fire and Rescue Company 12",
+     "objectid": 6836830,
+     "permanent_identifier": "d7f33772-a9df-4f8a-a09e-4786b4ee8204",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.402094,
+      38.999674
+     ],
+     "type": "Point"
+    },
+    "id": 6837232,
+    "properties": {
+     "address": "104 Commerce Street",
+     "city": "Sterling",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630627200000,
+     "name": "Sterling Fire Company 11",
+     "objectid": 6837232,
+     "permanent_identifier": "d81cdce9-694d-42fd-bfc0-0ddbdd1bd915",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.382865,
+      39.048415
+     ],
+     "type": "Point"
+    },
+    "id": 6842086,
+    "properties": {
+     "address": "46700 Middlefield Drive",
+     "city": "Sterling",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1732410500000,
+     "name": "Sterling Cascades Rescue Company 25",
+     "objectid": 6842086,
+     "permanent_identifier": "dd321ccb-8c2d-477e-9019-469e69623671",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.905729,
+      39.522933
+     ],
+     "type": "Point"
+    },
+    "id": 6844320,
+    "properties": {
+     "address": "775 Bedington Road",
+     "city": "Martinsburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1462373059000,
+     "name": "Bedington Volunteer Fire Department",
+     "objectid": 6844320,
+     "permanent_identifier": "df42a9ed-c2c2-4520-b865-6fdb598789d3",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.483483,
+      39.076857
+     ],
+     "type": "Point"
+    },
+    "id": 6846325,
+    "properties": {
+     "address": "19485 Sandridge Way",
+     "city": "Leesburg",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1630540800000,
+     "name": "Lansdowne Public Safety Center Company 22",
+     "objectid": 6846325,
+     "permanent_identifier": "e18fb39d-7755-48cd-a235-3874a8e604c0",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.77096,
+      39.27808
+     ],
+     "type": "Point"
+    },
+    "id": 6864328,
+    "properties": {
+     "address": "181 Keyes Gap Road",
+     "city": "Harpers Ferry",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Blue Ridge Mountain Volunteer Fire Company 5",
+     "objectid": 6864328,
+     "permanent_identifier": "f374f7db-0a3c-4d13-96ba-1512dcb76f04",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.745369,
+      39.326642
+     ],
+     "type": "Point"
+    },
+    "id": 6874057,
+    "properties": {
+     "address": "1050 Washington Street",
+     "city": "Harpers Ferry",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1458128787000,
+     "name": "Friendship Fire Company",
+     "objectid": 6874057,
+     "permanent_identifier": "fd698ec0-d1f6-40c9-97b1-ba157fb75aea",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.403836,
+      39.45693
+     ],
+     "type": "Point"
+    },
+    "id": 6880029,
+    "properties": {
+     "address": "37 Thomas Johnson Drive",
+     "city": "Frederick",
+     "fcode": 74026,
+     "ftype": 740,
+     "loaddate": 1732802991000,
+     "name": "Frederick County Division of Fire and Rescue Services Northgate Fire station 29",
+     "objectid": 6880029,
+     "permanent_identifier": "e35e9302-363f-48bc-886f-0094f2f7ea46",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-11T11:49:35Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 11 Nov 2026 11:49:35 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/16/query?where=1%3D1&geometry=-77.913331%2C38.986136%2C-77.165469%2C39.565064&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

@@ -1,0 +1,56 @@
+{
+ "api": "tigerweb",
+ "body": {
+  "displayFieldName": "BASENAME",
+  "features": [],
+  "fieldAliases": {
+   "BASENAME": "BASENAME",
+   "MTFCC": "MTFCC",
+   "NAME": "NAME",
+   "OID": "OID"
+  },
+  "fields": [
+   {
+    "alias": "OID",
+    "length": 22,
+    "name": "OID",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "NAME",
+    "length": 100,
+    "name": "NAME",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "BASENAME",
+    "length": 100,
+    "name": "BASENAME",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "MTFCC",
+    "length": 5,
+    "name": "MTFCC",
+    "type": "esriFieldTypeString"
+   }
+  ],
+  "geometryType": "esriGeometryPolyline",
+  "spatialReference": {
+   "latestWkid": 4326,
+   "wkid": 4326
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-09T09:07:04Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Mon, 09 Nov 2026 09:07:04 GMT",
+  "ETag": "\"1784752031\""
+ },
+ "status": 200,
+ "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/2/query?where=MTFCC+IN+%28%27S1100%27%2C%27S1200%27%29&outFields=OID%2CNAME%2CBASENAME%2CMTFCC&returnGeometry=true&outSR=4326&f=json&geometry=-77.594580%2C39.165022%2C-77.420564%2C39.300357&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects"
+}

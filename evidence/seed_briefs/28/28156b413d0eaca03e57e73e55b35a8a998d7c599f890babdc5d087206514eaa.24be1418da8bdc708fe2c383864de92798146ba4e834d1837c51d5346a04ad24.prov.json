@@ -1,0 +1,85 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-08T17:18:15.709784Z",
+  "http_mode": "replay",
+  "id": "24be1418da8bdc708fe2c383864de92798146ba4e834d1837c51d5346a04ad24",
+  "is_error": false,
+  "name": "protective_action_footprint",
+  "params": {
+   "incident": {
+    "container": "Highway tank truck or trailer",
+    "fire_involved": false,
+    "incident_time": "2026-10-21T14:00:00-04:00",
+    "location": {
+     "latitude": 38.794113,
+     "longitude": -77.044562
+    },
+    "material": "UN1017",
+    "spill_size": "large"
+   },
+   "wind": {
+    "direction_deg_from": 10.0,
+    "observed_at": "2026-10-21T02:52:44+00:00",
+    "source": "NWS gridpoint forecast LWX/97,67, the cell for 2026-10-21T14:00:00-04:00",
+    "speed_kmh": 14.8
+   }
+  },
+  "startedAtTime": "2026-11-08T17:18:15.702784Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/points/",
+    "id": "nws:points"
+   },
+   {
+    "endpoint": "https://api.weather.gov/gridpoints/",
+    "id": "nws:gridpoints"
+   },
+   {
+    "endpoint": "packs/erg.json",
+    "id": "pack:erg"
+   },
+   {
+    "endpoint": "packs/cfr172.json",
+    "id": "pack:cfr172"
+   },
+   {
+    "endpoint": "packs/hazard_classes.json",
+    "id": "pack:hazard_classes"
+   },
+   {
+    "endpoint": "packs/flag_rules.json",
+    "id": "pack:flag_rules"
+   },
+   {
+    "endpoint": null,
+    "id": "code:astral"
+   }
+  ]
+ },
+ "as_of": "2026-11-08T17:18:15.709784Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 10366,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "28156b413d0eaca03e57e73e55b35a8a998d7c599f890babdc5d087206514eaa"
+ },
+ "horizon_s": 3600,
+ "horizon_source": "nws:gridpoints",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

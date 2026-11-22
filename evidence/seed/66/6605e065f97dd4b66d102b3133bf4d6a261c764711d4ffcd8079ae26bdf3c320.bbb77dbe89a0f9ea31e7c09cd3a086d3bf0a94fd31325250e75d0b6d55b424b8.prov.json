@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T03:22:35Z",
+  "http_mode": "record",
+  "id": "bbb77dbe89a0f9ea31e7c09cd3a086d3bf0a94fd31325250e75d0b6d55b424b8",
+  "name": "GET usgs_3dep",
+  "params": {
+   "method": "GET",
+   "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples?geometry=%7B%22points%22%3A%5B%5B-77.73763%2C39.723006%5D%2C%5B-77.738887%2C39.723165%5D%5D%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryMultipoint&returnFirstValueOnly=true&f=json"
+  },
+  "startedAtTime": "2026-10-28T03:22:35Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples?geometry=%7B%22points%22%3A%5B%5B-77.73763%2C39.723006%5D%2C%5B-77.738887%2C39.723165%5D%5D%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryMultipoint&returnFirstValueOnly=true&f=json",
+    "id": "usgs:3dep"
+   }
+  ]
+ },
+ "as_of": "2026-10-28T03:22:35Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 346,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "6605e065f97dd4b66d102b3133bf4d6a261c764711d4ffcd8079ae26bdf3c320"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "usgs:3dep",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

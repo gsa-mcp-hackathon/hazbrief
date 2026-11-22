@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:26:35Z",
+  "http_mode": "record",
+  "id": "18db5ccd570a14438952631003111faa63ab424cd06968ba706388dc4ad70ef0",
+  "name": "GET vdot_lrs",
+  "params": {
+   "method": "GET",
+   "url": "https://services.arcgis.com/p5v98VHDX9Atv3l7/ArcGIS/rest/services/Mile_Marker_Signs/FeatureServer/0?f=json"
+  },
+  "startedAtTime": "2026-10-27T03:26:35Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://services.arcgis.com/p5v98VHDX9Atv3l7/ArcGIS/rest/services/Mile_Marker_Signs/FeatureServer/0?f=json",
+    "id": "lrs:vdot"
+   }
+  ]
+ },
+ "as_of": "2026-07-23T19:28:37Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 9926,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "3b01a40beaf6184972aa85ec23d85729ed94880ac732a6b67abc20f67d109266"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "lrs:vdot",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

@@ -1,0 +1,82 @@
+{
+ "url": "http://127.0.0.1:8770/briefs/csx-point-of-rocks-night/brief.html",
+ "chrome": "Chrome/131.0.6778.204",
+ "executable": "/Users/brock/.cache/puppeteer/chrome/mac_arm-131.0.6778.204/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+ "viewport": {
+  "width": 1440,
+  "height": 900,
+  "deviceScaleFactor": 2
+ },
+ "drawn": {
+  "engine": "leaflet",
+  "layers": {
+   "population": 174,
+   "workplaces": 174,
+   "puff_source_term": 6,
+   "dense_gas": 1,
+   "protective_action_zone": 1,
+   "initial_isolation_zone": 1,
+   "water": 350,
+   "downstream": 1,
+   "rail_lines": 13,
+   "wind": 2,
+   "grade_crossings": 14,
+   "schools": 1,
+   "emergency_services": 2,
+   "receiving_hospitals": 5,
+   "roadblock_candidates": 19,
+   "rail_candidates": 6,
+   "spill": 1
+  },
+  "bounds": {
+   "puff_source_term": [
+    [
+     39.242789,
+     -77.538116
+    ],
+    [
+     39.272617,
+     -77.512427
+    ]
+   ],
+   "dense_gas": [
+    [
+     39.1285,
+     -77.550339
+    ],
+    [
+     39.277696,
+     -77.413519
+    ]
+   ],
+   "protective_action_zone": [
+    [
+     39.23547,
+     -77.5394
+    ],
+    [
+     39.31568,
+     -77.4362
+    ]
+   ],
+   "initial_isolation_zone": [
+    [
+     39.26659,
+     -77.55099
+    ],
+    [
+     39.28461,
+     -77.52781
+    ]
+   ]
+  }
+ },
+ "blocked_requests": 20,
+ "blocked_hosts": [
+  "basemap.nationalmap.gov"
+ ],
+ "files": [
+  "docs/submission/demo/csx-point-of-rocks-night_first_screen_no_basemap.png",
+  "docs/submission/demo/csx-point-of-rocks-night_layer_list_no_basemap.png"
+ ]
+}

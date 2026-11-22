@@ -1,0 +1,43 @@
+{
+ "api": "nldi",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.543732502,
+       39.272210695
+      ],
+      [
+       -77.5378896,
+       39.2650958
+      ]
+     ],
+     "type": "LineString"
+    },
+    "id": 4507352,
+    "properties": {
+     "comid": 4507352,
+     "identifier": "4507352",
+     "navigation": "https://api.water.usgs.gov/nldi/linked-data/comid/4507352/navigation",
+     "source": "comid",
+     "sourceName": "NHDPlus comid"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-28T02:40:43Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "public, max-age=3600",
+  "Date": "Wed, 28 Oct 2026 02:40:43 GMT"
+ },
+ "status": 200,
+ "url": "https://api.water.usgs.gov/nldi/linked-data/comid/position?coords=POINT%28-77.539763+39.273451%29"
+}

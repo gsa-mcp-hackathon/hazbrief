@@ -1,0 +1,56 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-07T09:49:57.362951Z",
+  "http_mode": "replay",
+  "id": "08103d8efd95518f114f66240bea665c06ddac60461437ed25b86945cd95408e",
+  "is_error": false,
+  "name": "material_response_guidance",
+  "params": {
+   "incident": {
+    "container": "unknown",
+    "fire_involved": false,
+    "incident_time": "2026-10-21T14:00:00-04:00",
+    "location": {
+     "latitude": 39.722,
+     "longitude": -77.724
+    },
+    "material": "UN2915",
+    "spill_size": "large",
+    "where_spilled": "land"
+   }
+  },
+  "startedAtTime": "2026-11-07T09:49:57.359305Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "packs/erg.json",
+    "id": "pack:erg"
+   }
+  ]
+ },
+ "as_of": "2026-11-07T09:49:57.362951Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 10275,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "8e3dc4a7e65f45db33ab80fe86122f3e3e345f5c8540e9deabe968dbd3d3dba0"
+ },
+ "horizon_s": 126230400,
+ "horizon_source": "pack:erg",
+ "provenance_class": "recorded_pack",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

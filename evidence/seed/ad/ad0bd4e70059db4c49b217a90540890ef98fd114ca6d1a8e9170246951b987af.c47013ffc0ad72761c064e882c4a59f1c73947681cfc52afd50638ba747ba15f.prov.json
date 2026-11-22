@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-21T13:18:33Z",
+  "http_mode": "record",
+  "id": "c47013ffc0ad72761c064e882c4a59f1c73947681cfc52afd50638ba747ba15f",
+  "name": "GET census",
+  "params": {
+   "method": "GET",
+   "url": "https://api.census.gov/data/2024/acs/acs5?get=B18101_004E%2CB18101_004M%2CB18101_007E%2CB18101_007M%2CB18101_010E%2CB18101_010M%2CB18101_013E%2CB18101_013M%2CB18101_016E%2CB18101_016M%2CB18101_019E%2CB18101_019M%2CB18101_023E%2CB18101_023M%2CB18101_026E%2CB18101_026M%2CB18101_029E%2CB18101_029M%2CB18101_032E%2CB18101_032M%2CB18101_035E%2CB18101_035M%2CB18101_038E%2CB18101_038M%2CB08201_002E%2CB08201_002M%2CB26001_001E%2CB26001_001M&for=tract%3A%2A&in=state%3A11+county%3A001"
+  },
+  "startedAtTime": "2026-10-21T13:18:33Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.census.gov/data/2024/acs/acs5?get=B18101_004E%2CB18101_004M%2CB18101_007E%2CB18101_007M%2CB18101_010E%2CB18101_010M%2CB18101_013E%2CB18101_013M%2CB18101_016E%2CB18101_016M%2CB18101_019E%2CB18101_019M%2CB18101_023E%2CB18101_023M%2CB18101_026E%2CB18101_026M%2CB18101_029E%2CB18101_029M%2CB18101_032E%2CB18101_032M%2CB18101_035E%2CB18101_035M%2CB18101_038E%2CB18101_038M%2CB08201_002E%2CB08201_002M%2CB26001_001E%2CB26001_001M&for=tract%3A%2A&in=state%3A11+county%3A001",
+    "id": "census:acs5"
+   }
+  ]
+ },
+ "as_of": "2026-10-21T13:18:33Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 33147,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "ad0bd4e70059db4c49b217a90540890ef98fd114ca6d1a8e9170246951b987af"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "census:acs5",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

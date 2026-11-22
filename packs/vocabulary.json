@@ -1,0 +1,489 @@
+{
+ "attribution": {
+  "credits": [
+   {
+    "doc_id": "cre-2024-file-layout",
+    "edition": "CRE 2024",
+    "publisher": "US Census Bureau",
+    "title": "CRE 2024 file layout",
+    "url": "https://www2.census.gov/programs-surveys/demo/technical-documentation/community-resilience/2024/cre_file_layout_2024.pdf"
+   },
+   {
+    "doc_id": "cre-2024-quick-guide",
+    "edition": "CRE 2024 (updated 2026-01-29)",
+    "publisher": "US Census Bureau",
+    "title": "2024 Community Resilience Estimates Quick Guide",
+    "url": "https://www2.census.gov/programs-surveys/demo/technical-documentation/community-resilience/2024/cre_quick_guide_2024.pdf"
+   },
+   {
+    "doc_id": "erg2024-en-pdf",
+    "edition": "2024",
+    "publisher": "US DOT PHMSA",
+    "title": "Emergency Response Guidebook 2024 (English, web PDF)",
+    "url": "https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2024-04/ERG2024-Eng-Web-a.pdf"
+   }
+  ],
+  "notices": [
+   {
+    "doc_id": "erg2024-en-pdf",
+    "locator": "erg2024-en-pdf#p382",
+    "text": "REPRODUCTION AND RESALE Copies of this document which are provided free-of-charge to fire, police and other emergency services may not be resold. ERG2024 may be reproduced without further permission subject to the following: The names and the seals of the participating governments may not be reproduced on a copy of this document unless that copy accurately reproduces the entire content (text, format, and coloration) of this document without modification. In addition, the publisher's full name and address must be displayed on the outside back cover of each copy, replacing the wording placed on the center of the back cover."
+   }
+  ]
+ },
+ "built_at": "2026-10-20T00:00:00Z",
+ "data": {
+  "terms": [
+   {
+    "authority": "project",
+    "definition": "For practical purposes, the protective action zone (i.e., the area in which people are at risk of harmful exposure) is a square. Its length and width are the same as the downwind distance shown in Table 1.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p290",
+     "page": 290
+    },
+    "term": "protective action footprint",
+    "used_by": [
+     "FR-CRE-01",
+     "FR-GQ-01",
+     "FR-HOSP-01",
+     "FR-LEP-01",
+     "FR-RAIL-01",
+     "FR-SCH-01",
+     "FR-VEH-01",
+     "FR-WATER-01",
+     "erg.materials.table1",
+     "erg.materials.table3"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "The Initial Isolation Zone defines an area surrounding the incident in which people may be exposed to dangerous (upwind) and life-threatening (downwind) concentrations of material.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p282",
+     "page": 282
+    },
+    "term": "initial isolation zone",
+    "used_by": [
+     "erg.materials.table1",
+     "erg.materials.table3"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "The Protective Action Zone defines an area downwind from the incident in which people may become incapacitated and unable to take protective action and/or incur serious or irreversible health effects.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p282",
+     "page": 282
+    },
+    "term": "protective action zone",
+    "used_by": [
+     "FR-TIH-01",
+     "erg.materials.table1",
+     "erg.materials.table3"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "This distance defines the radius of a zone (initial isolation zone) surrounding the spill in ALL DIRECTIONS. In this zone, protective clothing and respiratory protection is required. Evacuate the general public in a direction perpendicular to wind direction (crosswind) and away from the spill.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p290",
+     "page": 290
+    },
+    "term": "initial isolation distance",
+    "used_by": [
+     "erg.materials.table1.small.isolate",
+     "erg.materials.table3.rows.isolate"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "For a given material, spill size, and whether day or night, Table 1 gives the downwind distance—in kilometers and miles—from the spill or leak source, for which you should consider protective actions.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p290",
+     "page": 290
+    },
+    "term": "protective action distance",
+    "used_by": [
+     "erg.materials.table1.small.protect_day",
+     "erg.materials.table3.rows.day"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Isolate indicates a zone of no entry that applies to the public and first responders who are not equipped, trained, and prepared to mitigate the incident.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p376",
+     "page": 376
+    },
+    "term": "isolate",
+    "used_by": [
+     "FR-G111-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G112-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G113-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G114-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G115-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G116-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G117-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G118-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G119-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G120-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G122-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G123-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G124-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G125-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G126-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G127-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G128-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G129-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G130-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G131-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G132-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G134-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G135-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G136-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G137-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G139-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G140-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G141-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G142-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G143-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G144-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G145-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G146-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G148-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G149-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G150-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G151-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G152-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G153-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G154-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G155-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G156-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G157-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G159-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G160-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G168-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G170-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G171-MAY_EXPLODE_WHEN_HEATED",
+     "FR-G174-MAY_EXPLODE_WHEN_HEATED",
+     "erg.guides.evacuation.fire_isolate"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Evacuate means to move all people from a threatened area to a safer place. To perform an evacuation, there must be enough time for people to be warned, get ready, and leave an area.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p285",
+     "page": 285
+    },
+    "term": "evacuate",
+    "used_by": [
+     "FR-G113-TOXIC_BY_INHALATION",
+     "FR-G116-TOXIC_BY_INHALATION",
+     "FR-G129-TOXIC_BY_INHALATION",
+     "FR-G130-TOXIC_BY_INHALATION",
+     "FR-G134-TOXIC_BY_INHALATION",
+     "FR-G138-TOXIC_BY_INHALATION",
+     "FR-G140-TOXIC_BY_INHALATION",
+     "FR-G141-TOXIC_BY_INHALATION",
+     "FR-G149-TOXIC_BY_INHALATION",
+     "FR-G150-TOXIC_BY_INHALATION",
+     "FR-G170-TOXIC_BY_INHALATION",
+     "FR-G171-WATER_REACTIVE",
+     "FR-VEH-01",
+     "erg.guides.evacuation.fire_evacuate"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Shelter-in-place means people should seek shelter inside a building and remain inside until the danger passes.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p285",
+     "page": 285
+    },
+    "term": "shelter-in-place",
+    "used_by": [
+     "FR-TIH-01"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Lists suggested EVACUATION distances for immediate precautionary measures, spills, and for fires (fragmentation hazard).",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p348",
+     "page": 348
+    },
+    "term": "immediate precautionary measure",
+    "used_by": [
+     "erg.guides.evacuation.immediate_precautionary"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "A spill that involves quantities that are 208 liters (55 US gallons) or less. This generally corresponds to a spill from a single small package (for example, a drum), a small cylinder, or a small leak from a large package.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p379",
+     "page": 379
+    },
+    "term": "small spill",
+    "used_by": [
+     "erg.materials.table1.small"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "A spill that involves quantities that are greater than 208 liters (55 US gallons). This usually involves a spill from a large package, or multiple spills from many small packages.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p376",
+     "page": 376
+    },
+    "term": "large spill",
+    "used_by": [
+     "FR-RAIL-01",
+     "erg.materials.table1.large",
+     "erg.materials.table3"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Daytime is after sunrise and before sunset.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p349",
+     "page": 349
+    },
+    "term": "daytime",
+    "used_by": [
+     "erg.materials.table1.small.protect_day",
+     "erg.materials.table3.rows.day"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Nighttime is between sunset and sunrise.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p349",
+     "page": 349
+    },
+    "term": "nighttime",
+    "used_by": [
+     "erg.materials.table1.small.protect_night",
+     "erg.materials.table3.rows.night"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "< 6 < 10 Low wind Wind felt on face; leaves rustle; ordinary vane moved by wind",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p342",
+     "page": 342
+    },
+    "term": "low wind",
+    "used_by": [
+     "erg.table3_wind_bands"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "6 - 12 10 - 20 Moderate wind Raises dust, loose paper; small branches are moved",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p342",
+     "page": 342
+    },
+    "term": "moderate wind",
+    "used_by": [
+     "erg.table3_wind_bands"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "> 12 > 20 High wind Large branches in motion; whistling heard in telephone wires; umbrellas used with difficulty",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p342",
+     "page": 342
+    },
+    "term": "high wind",
+    "used_by": [
+     "erg.table3_wind_bands"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Toxic Inhalation Hazard. Term used to describe gases and volatile liquids that are toxic when inhaled (same as PIH). These materials pose a known hazard to human health during transport or is presumed to be toxic to humans because of animal-based studies.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p380",
+     "page": 380
+    },
+    "term": "TIH",
+    "used_by": [
+     "FR-G171-WATER_REACTIVE",
+     "erg.materials.tih",
+     "hazard_classes.tih_gas"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Boiling Liquid Expanding Vapor Explosion",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p371",
+     "page": 371
+    },
+    "term": "BLEVE",
+    "used_by": [
+     "flag_rules.FR-BLEVE-01"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "A refrigerated, liquefied gas that has a boiling point colder than -90°C (-130°F) at atmospheric pressure or is handled or transported at a temperature equal to or less than -100°C (-148°F).",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p374",
+     "page": 374
+    },
+    "term": "cryogenic liquid",
+    "used_by": [
+     "hazard_classes.cryogenic_asphyxiant"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "A liquid that has a flash point of 60°C (140°F) or lower.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p375",
+     "page": 375
+    },
+    "term": "flammable liquid",
+    "used_by": [
+     "hazard_classes.flammable_liquid"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Displays the hazards in terms of FIRE OR EXPLOSION and HEALTH effects upon exposure. • Primary potential hazard is listed first. • Consult this section first to help you make decisions about how to protect the emergency response team and surrounding population.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p348",
+     "page": 348
+    },
+    "term": "potential hazards",
+    "used_by": [
+     "erg.guides.sections.potential_hazards"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Provides general information on initial precautionary measures to be taken by those first on scene. • Provides general guidance on PROTECTIVE CLOTHING requirements and respiratory protection. • Lists suggested EVACUATION distances for immediate precautionary measures, spills, and for fires (fragmentation hazard). • When the material is highlighted in green in the yellow and blue sections, it directs the reader to consult Table 1, which lists Toxic Inhalation Hazard (TIH) (PIH in the U.S.) materials and water-reactive materials (green section).",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p348",
+     "page": 348
+    },
+    "term": "public safety",
+    "used_by": [
+     "erg.guides.sections.public_safety"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "Outlines special precautions for incidents that involve FIRE, SPILL OR LEAK or chemical exposure. • Lists several recommendations under each part to further assist your decision-making process.",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p348",
+     "page": 348
+    },
+    "term": "emergency response",
+    "used_by": [
+     "erg.guides.sections.emergency_response"
+    ]
+   },
+   {
+    "authority": "ERG",
+    "definition": "The Packing Group (PG) is assigned based on the degree of danger presented by the hazardous material/dangerous good: PG I : Great danger PG II : Medium danger PG III : Minor danger",
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p377",
+     "page": 377
+    },
+    "term": "Packing Group",
+    "used_by": [
+     "cfr172.materials.rows.packing_group"
+    ]
+   },
+   {
+    "authority": "Census",
+    "definition": "Margins of error are calculated at the 90 percent confidence level.",
+    "receipt": {
+     "doc_id": "cre-2024-file-layout",
+     "locator": "cre-2024-file-layout#p3",
+     "page": 3
+    },
+    "term": "margin of error",
+    "used_by": [
+     "FR-CRE-01",
+     "FR-LEP-01",
+     "FR-VEH-01",
+     "flag_rules.FR-CRE-01",
+     "flag_rules.FR-LEP-01",
+     "flag_rules.FR-VEH-01"
+    ]
+   },
+   {
+    "authority": "Census",
+    "definition": "Individuals with three or more components of SV",
+    "receipt": {
+     "doc_id": "cre-2024-quick-guide",
+     "locator": "cre-2024-quick-guide#p4",
+     "page": 4
+    },
+    "term": "high social vulnerability",
+    "used_by": [
+     "flag_rules.FR-CRE-01"
+    ]
+   }
+  ]
+ },
+ "kind": "vocabulary",
+ "pack_id": "vocabulary",
+ "schema_version": 8,
+ "sha256": "fab758f5050ae6af05e520fc5bf372d93f368543d2039c107ab7e3beea54ccd7",
+ "sources": [
+  {
+   "doc_id": "cre-2024-file-layout",
+   "licence": "public-domain",
+   "locator": "definition pages p3",
+   "raw_sha256": "e6baaed1caf9f7ffb0d9205f0b0778e345ca630461dd7b95cc2616f520c2a5d2"
+  },
+  {
+   "doc_id": "cre-2024-quick-guide",
+   "licence": "public-domain",
+   "locator": "definition pages p4",
+   "raw_sha256": "6b3aff114c4e94ef010705e332485ffa8e08e51ad204ed6615f8953fbda42426"
+  },
+  {
+   "doc_id": "erg2024-en-pdf",
+   "licence": "reproduction-permitted",
+   "locator": "definition pages p282, p285, p290, p342, p348, p349, p371, p374, p375, p376, p377, p379, p380",
+   "raw_sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+  }
+ ],
+ "version": "hb03.1"
+}

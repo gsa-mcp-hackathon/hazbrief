@@ -1,0 +1,266 @@
+{
+ "calls": {
+  "by_api": {
+   "bts_ntad": 2,
+   "census": 7,
+   "tigerweb": 6,
+   "usgs_3dhp": 2,
+   "usgs_structures": 7
+  },
+  "failed": 0,
+  "made": 24,
+  "ok": 24
+ },
+ "generated_at": "2026-10-22T12:52:49Z",
+ "live_dir": "fixtures/exchanges_live/2026-10-22",
+ "outputs": {
+  "placard-2-3-i81": {
+   "baseline_unrecorded": 7,
+   "complete": true,
+   "tools": {
+    "assess_incident": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "build_ics_201": {
+     "changed_paths": 248,
+     "first": [
+      {
+       "now": "\"population_at_risk\"",
+       "path": "annex.limits[5].receipts[0].tool",
+       "was": "\"facilities_in_footprint\""
+      },
+      {
+       "now": "\"Blocks partly inside the footprint count by the share of their area inside it.\"",
+       "path": "annex.limits[5].receipts[0].value",
+       "was": "\"The structures dataset holds selected facilities, so a school, hospital, fire station or police station it omits is ..."
+      },
+      {
+       "now": "\"Blocks partly inside the footprint count by the share of their area inside it.\"",
+       "path": "annex.limits[5].text",
+       "was": "\"The structures dataset holds selected facilities, so a school, hospital, fire station or police station it omits is ..."
+      },
+      {
+       "now": "\"population_at_risk\"",
+       "path": "annex.limits[6].receipts[0].tool",
+       "was": "\"facilities_in_footprint\""
+      },
+      {
+       "now": "\"Area weighting assumes people are spread evenly across each block, block group and tract.\"",
+       "path": "annex.limits[6].receipts[0].value",
+       "was": "\"Nursing homes are those certified by Medicare or Medicaid; assisted living facilities are not listed [CMS Nursing Ho..."
+      },
+      {
+       "now": "\"Area weighting assumes people are spread evenly across each block, block group and tract.\"",
+       "path": "annex.limits[6].text",
+       "was": "\"Nursing homes are those certified by Medicare or Medicaid; assisted living facilities are not listed [CMS Nursing Ho..."
+      },
+      {
+       "now": "\"population_at_risk\"",
+       "path": "annex.limits[7].receipts[0].tool",
+       "was": "\"facilities_in_footprint\""
+      },
+      {
+       "now": "\"Derived margins of error assume no covariance between cells, so they are approximate.\"",
+       "path": "annex.limits[7].receipts[0].value",
+       "was": "\"People in nursing facilities, correctional facilities, college housing and other group quarters are counted by popul..."
+      },
+      {
+       "now": "\"Derived margins of error assume no covariance between cells, so they are approximate.\"",
+       "path": "annex.limits[7].text",
+       "was": "\"People in nursing facilities, correctional facilities, college housing and other group quarters are counted by popul..."
+      },
+      {
+       "now": "\"population_at_risk\"",
+       "path": "annex.limits[8].receipts[0].tool",
+       "was": "\"facilities_in_footprint\""
+      }
+     ],
+     "status": "new",
+     "volatile_paths": 0
+    },
+    "facilities_in_footprint": {
+     "changed_paths": 23,
+     "first": [
+      {
+       "now": "0",
+       "path": "counts.emergency_services",
+       "was": "null"
+      },
+      {
+       "now": "0",
+       "path": "counts.grade_crossings",
+       "was": "null"
+      },
+      {
+       "now": "0",
+       "path": "counts.hospitals",
+       "was": "null"
+      },
+      {
+       "now": "0",
+       "path": "counts.rail_segments",
+       "was": "null"
+      },
+      {
+       "now": "0",
+       "path": "counts.schools",
+       "was": "null"
+      },
+      {
+       "now": "0",
+       "path": "counts.waterways",
+       "was": "null"
+      },
+      {
+       "now": "[]",
+       "path": "emergency_services",
+       "was": "null"
+      },
+      {
+       "now": "null",
+       "path": "errors",
+       "was": "[{\"error\": \"No recorded exchange for GET https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/21/q..."
+      },
+      {
+       "now": "0",
+       "path": "flag_inputs.grade_crossings",
+       "was": "null"
+      },
+      {
+       "now": "0",
+       "path": "flag_inputs.hospitals_in_footprint",
+       "was": "null"
+      }
+     ],
+     "status": "new",
+     "volatile_paths": 0
+    },
+    "material_response_guidance": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "population_at_risk": {
+     "changed_paths": 14,
+     "first": [
+      {
+       "now": "[{\"locator\": null, \"supports\": \"geography and area shares\", \"tag\": \"[TIGERweb Census 2020 tabulation geography, Janua...",
+       "path": "basis",
+       "was": "null"
+      },
+      {
+       "now": "{\"age_65_and_over\": {\"as_of\": \"2026-01-29\", \"cells\": [\"B01001_020E\", \"B01001_021E\", \"B01001_022E\", \"B01001_023E\", \"B0...",
+       "path": "characteristics",
+       "was": "null"
+      },
+      {
+       "now": "{\"given\": true, \"period\": \"day\"}",
+       "path": "day_night",
+       "was": "null"
+      },
+      {
+       "now": "{\"as_of\": \"2025-12-03\", \"counts\": \"jobs located in the footprint (LODES C000, total number of jobs)\", \"files\": [\"pa_w...",
+       "path": "daytime",
+       "was": "null"
+      },
+      {
+       "now": "null",
+       "path": "error",
+       "was": "\"No recorded exchange for GET https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapSe..."
+      },
+      {
+       "now": "{\"gq_population\": 0, \"limited_english_households\": 0, \"limited_english_households_moe\": 0, \"national_pred3_pe\": 20.28...",
+       "path": "flag_inputs",
+       "was": "null"
+      },
+      {
+       "now": "{\"block_groups\": {\"partial\": 2, \"total\": 2, \"whole\": 0}, \"blocks\": {\"partial\": 7, \"total\": 8, \"whole\": 1}, \"footprint...",
+       "path": "geography",
+       "was": "null"
+      },
+      {
+       "now": "null",
+       "path": "hint",
+       "was": "\"Retry; the Census services may be slow.\""
+      },
+      {
+       "now": "[\"Blocks partly inside the footprint count by the share of their area inside it.\", \"Area weighting assumes people are...",
+       "path": "limits",
+       "was": "null"
+      },
+      {
+       "now": "{\"as_of\": \"2020-04-01\", \"from_partial_blocks\": 23, \"group_quarters\": {\"by_type\": {\"college_university_student_housing...",
+       "path": "nighttime",
+       "was": "null"
+      }
+     ],
+     "status": "new",
+     "volatile_paths": 0
+    },
+    "protective_action_footprint": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    },
+    "receiving_hospitals": {
+     "changed_paths": 0,
+     "first": [],
+     "status": "unchanged",
+     "volatile_paths": 0
+    }
+   }
+  }
+ },
+ "sources": {
+  "bts_ntad": {
+   "as_of_changed": [],
+   "changed": [],
+   "errored": 0,
+   "exchanges": 2,
+   "no_baseline": 2,
+   "reordered": 0,
+   "unchanged": 0
+  },
+  "census": {
+   "as_of_changed": [],
+   "changed": [],
+   "errored": 0,
+   "exchanges": 7,
+   "no_baseline": 0,
+   "reordered": 0,
+   "unchanged": 7
+  },
+  "tigerweb": {
+   "as_of_changed": [],
+   "changed": [],
+   "errored": 0,
+   "exchanges": 6,
+   "no_baseline": 4,
+   "reordered": 0,
+   "unchanged": 2
+  },
+  "usgs_3dhp": {
+   "as_of_changed": [],
+   "changed": [],
+   "errored": 0,
+   "exchanges": 2,
+   "no_baseline": 2,
+   "reordered": 0,
+   "unchanged": 0
+  },
+  "usgs_structures": {
+   "as_of_changed": [],
+   "changed": [],
+   "errored": 0,
+   "exchanges": 7,
+   "no_baseline": 7,
+   "reordered": 0,
+   "unchanged": 0
+  }
+ }
+}

@@ -1,0 +1,502 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-04T04:34:14.865209Z",
+  "http_mode": "replay",
+  "id": "20611facb37a27e0a51a8f50dce73603c90060d697b786f26b02e3c8b9f6dc32",
+  "is_error": false,
+  "name": "population_at_risk",
+  "params": {
+   "area": {
+    "footprint": {
+     "features": [
+      {
+       "geometry": {
+        "coordinates": [
+         -75.665885,
+         41.41004
+        ],
+        "type": "Point"
+       },
+       "properties": {
+        "zone": "spill"
+       },
+       "type": "Feature"
+      },
+      {
+       "geometry": {
+        "coordinates": [
+         [
+          [
+           -75.666893,
+           41.404234
+          ],
+          [
+           -75.667514,
+           41.404296
+          ],
+          [
+           -75.668125,
+           41.404398
+          ],
+          [
+           -75.668722,
+           41.404539
+          ],
+          [
+           -75.6693,
+           41.40472
+          ],
+          [
+           -75.669856,
+           41.404937
+          ],
+          [
+           -75.670384,
+           41.405191
+          ],
+          [
+           -75.67088,
+           41.405477
+          ],
+          [
+           -75.671342,
+           41.405796
+          ],
+          [
+           -75.671765,
+           41.406143
+          ],
+          [
+           -75.672146,
+           41.406517
+          ],
+          [
+           -75.672482,
+           41.406915
+          ],
+          [
+           -75.672771,
+           41.407333
+          ],
+          [
+           -75.673011,
+           41.407768
+          ],
+          [
+           -75.673199,
+           41.408218
+          ],
+          [
+           -75.673335,
+           41.408678
+          ],
+          [
+           -75.673417,
+           41.409145
+          ],
+          [
+           -75.673444,
+           41.409616
+          ],
+          [
+           -75.673417,
+           41.410087
+          ],
+          [
+           -75.673335,
+           41.410554
+          ],
+          [
+           -75.6732,
+           41.411014
+          ],
+          [
+           -75.673011,
+           41.411464
+          ],
+          [
+           -75.672772,
+           41.411899
+          ],
+          [
+           -75.672483,
+           41.412317
+          ],
+          [
+           -75.672147,
+           41.412715
+          ],
+          [
+           -75.671765,
+           41.413088
+          ],
+          [
+           -75.670559,
+           41.41418
+          ],
+          [
+           -75.670136,
+           41.414528
+          ],
+          [
+           -75.669674,
+           41.414846
+          ],
+          [
+           -75.669177,
+           41.415133
+          ],
+          [
+           -75.668649,
+           41.415387
+          ],
+          [
+           -75.668094,
+           41.415604
+          ],
+          [
+           -75.667516,
+           41.415785
+          ],
+          [
+           -75.666918,
+           41.415926
+          ],
+          [
+           -75.666307,
+           41.416028
+          ],
+          [
+           -75.665686,
+           41.41609
+          ],
+          [
+           -75.665061,
+           41.41611
+          ],
+          [
+           -75.664436,
+           41.41609
+          ],
+          [
+           -75.663815,
+           41.416028
+          ],
+          [
+           -75.663204,
+           41.415926
+          ],
+          [
+           -75.662606,
+           41.415785
+          ],
+          [
+           -75.662028,
+           41.415604
+          ],
+          [
+           -75.661473,
+           41.415387
+          ],
+          [
+           -75.660945,
+           41.415133
+          ],
+          [
+           -75.660448,
+           41.414846
+          ],
+          [
+           -75.659986,
+           41.414528
+          ],
+          [
+           -75.659563,
+           41.41418
+          ],
+          [
+           -75.659182,
+           41.413807
+          ],
+          [
+           -75.658846,
+           41.413409
+          ],
+          [
+           -75.658557,
+           41.412991
+          ],
+          [
+           -75.658317,
+           41.412556
+          ],
+          [
+           -75.658129,
+           41.412106
+          ],
+          [
+           -75.657994,
+           41.411646
+          ],
+          [
+           -75.657912,
+           41.411179
+          ],
+          [
+           -75.657885,
+           41.410708
+          ],
+          [
+           -75.657912,
+           41.410237
+          ],
+          [
+           -75.657994,
+           41.40977
+          ],
+          [
+           -75.65813,
+           41.40931
+          ],
+          [
+           -75.658318,
+           41.40886
+          ],
+          [
+           -75.658557,
+           41.408425
+          ],
+          [
+           -75.658847,
+           41.408007
+          ],
+          [
+           -75.659183,
+           41.407609
+          ],
+          [
+           -75.659564,
+           41.407235
+          ],
+          [
+           -75.660771,
+           41.406143
+          ],
+          [
+           -75.661194,
+           41.405796
+          ],
+          [
+           -75.661656,
+           41.405477
+          ],
+          [
+           -75.662152,
+           41.405191
+          ],
+          [
+           -75.66268,
+           41.404937
+          ],
+          [
+           -75.663236,
+           41.40472
+          ],
+          [
+           -75.663814,
+           41.404539
+          ],
+          [
+           -75.664411,
+           41.404398
+          ],
+          [
+           -75.665022,
+           41.404296
+          ],
+          [
+           -75.665643,
+           41.404234
+          ],
+          [
+           -75.666268,
+           41.404214
+          ],
+          [
+           -75.666893,
+           41.404234
+          ]
+         ]
+        ],
+        "type": "Polygon"
+       },
+       "properties": {
+        "radius_m": 600,
+        "tag": "[ERG 2024 Table 3, UN1017, highway tank truck or trailer, nighttime, low wind]",
+        "text": "600 m (2,000 ft)",
+        "zone": "initial_isolation_zone"
+       },
+       "type": "Feature"
+      },
+      {
+       "geometry": {
+        "coordinates": [
+         [
+          [
+           -75.751688,
+           41.405724
+          ],
+          [
+           -75.750482,
+           41.406816
+          ],
+          [
+           -75.684205,
+           41.435659
+          ],
+          [
+           -75.645932,
+           41.385754
+          ],
+          [
+           -75.647139,
+           41.384662
+          ],
+          [
+           -75.713382,
+           41.355841
+          ],
+          [
+           -75.751688,
+           41.405724
+          ]
+         ]
+        ],
+        "type": "Polygon"
+       },
+       "properties": {
+        "downwind_bearing_deg": 240.0,
+        "side_m": 6400,
+        "tag": "[ERG 2024 Table 3, UN1017, highway tank truck or trailer, nighttime, low wind]",
+        "text": "6.4 km (4.0 mi)",
+        "zone": "protective_action_zone"
+       },
+       "type": "Feature"
+      }
+     ],
+     "type": "FeatureCollection"
+    },
+    "incident_time": "2026-10-28T00:45:00-04:00",
+    "period": "night"
+   }
+  },
+  "startedAtTime": "2026-11-04T04:34:07.424255Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.census.gov/data/2020/dec/dhc",
+    "id": "census:dhc2020"
+   },
+   {
+    "endpoint": "https://api.census.gov/data/2024/acs/acs5",
+    "id": "census:acs5"
+   },
+   {
+    "endpoint": "https://api.census.gov/data/2024/cre",
+    "id": "census:cre"
+   },
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/",
+    "id": "tigerweb:census2020"
+   },
+   {
+    "endpoint": "fixtures/lodes/",
+    "id": "lodes"
+   }
+  ]
+ },
+ "as_of": "2026-11-04T04:34:14.865209Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 18232,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "b680f362e6a41641dad9d7f4e7a911db3cf58a6c451976acff84278d285df62c"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "census:acs5",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [
+  "0151788d796ec45e9d1952179f01c7c3c3e5022e72b97d256f7a29b2ff580eba",
+  "0510b84030e1fc0fb9b55c5cad0cfbc46a7c0ad010b0cc36b428d3e46cc69fbe",
+  "070db9d07665d51ba3d1b826adc77e28f5cd1d8c629eb874e47866a61267ee84",
+  "092373db679be9c86dd6f60f2cee11cee87d5c5f940d9755c57ec324247f066e",
+  "0d95fca2265ad3cfbc757062ce900c2ccaa04cfcd7a247091882a6b2c08243da",
+  "10a4954b62f1c71adf691eb62b8ed954fbdce588409409ed23053d3f94ce6791",
+  "1cde6e5a83c1e19f20721080bb57c1b3678ab55e1c5890a17a6ae34f5a2a28a7",
+  "1e4c9850d06bc3717a18733629270d7c9e49241d83aa5e095b905336d1cd25e9",
+  "1ec9f393a85d4d9c06706c1b78e9f82a4599ef88d99e4dc1a1b745a1b33cf3fc",
+  "1f89500850e6aad7e521372ea3dbf38a88628570e4136d2cf8ead8cdf4cfc621",
+  "30cc44a0ba8fdfb5219a18759929f0dbd2aad6a16da6e64cc8830995c6f6a94e",
+  "31ea8094cd8d64b276821fe1e9fc3a254f8071e2a0727f072495f9c6917a1e67",
+  "3a2c164bdfbc245ae40b11e964c9c6127d47a3e789aab6c649e8a68aedf0673f",
+  "3bf09d8681a3db121d5862bfbdcc3d742ccad4d5acd45402f2abf342146fd7ae",
+  "48a5f219ccf2113417aa69fb5bbba458528adcd21d07f584b7fd2752ad6f0e0f",
+  "546515655c5c38e197c43b09a07dc8a2fc9dba5d73a1d9741b127966efe8d1c9",
+  "551334ec2aff06231d511e4826948fedbc5e83ab26a0e77aba92bf63c6813af6",
+  "55bf6082e2b9351d466ddbd22075773abaf93152355212e25f85e84b27f9cb6b",
+  "5f6ed60b0593fbaf5e2bfd9c93a561f526b32f86f9dc79b1b2040bd80d5c7691",
+  "62bd3ab9a9d17891a9cb50d17955139eb4d341ef67a915bd440952f8ec584d12",
+  "68547d35fd8e42b2d21f6758dee312c6d9e1fff1cc85de21952170cfba91c555",
+  "6d78673de590a91b3d0c29e49022ac73fa47da9085b26e79412c15be94314f1f",
+  "6f2ced7045055bf570560ff3399389617a9a02e2451f5de7a11ce1e6a2fb1fcd",
+  "74b3c76286793c322e68bb0f5265a74192b5145bfdcd9d657339063eaa8293c3",
+  "75568f64b0f68242e12602a9a5cfa6de2b3f000f458d6f287b211ccbaf4a0039",
+  "79e45fd2b841b20d6b7b4f14ad8a70699e1db1774062a75dc54d01fef51159f4",
+  "7ed47ef6b0fae5ad9c6107955e3f8367a25d2061b1e8c13aa14af3286eb971d2",
+  "842334ef3257deda693284adc9fe18de94690329a1f922f75a28652a13134f45",
+  "85691355ee28471f8aa39a1013272c8e71375edbd89192de24d3b8aceeb4b60c",
+  "85a705f20c6a74f6721d520355d9ef607577d8628cda9598856409c74c0e76df",
+  "8d49cbcae5ee44cad9cbf2704b567e06ebbca5deb7101c14ca93fef9a425dd1d",
+  "90c824289b02419899a9517522aac2424c15d9c4b5fc3fca2aed7dfc33dc3b28",
+  "95353cb3262e9c2310091aa20459beec322c36aabd3a922c0c53d59e3a1d2783",
+  "95842a217678978d63c2ae255314122f416df922f437680b1289e9c74def3756",
+  "96b41c90a8aa15f6e8d5b88679d2d291fdcd20f5ad6f47a215530e5519587f90",
+  "9a2f8a26e2bd94548425146a483a4c4e85569cb46d66774911035daf7142657a",
+  "9d5eb16930c2d50116a68b0487affe03424514aa233d2e12eee5588349c4a84d",
+  "9f4867f31212bba2bb36b13a3d7e0cc7615bd4b1cfa76e04986c4985eb852136",
+  "a0088ab22623a44a0c244ce714394108ea56f36282983784ca5f4620ec111b17",
+  "a832ce1a1ba864452f15ee0761534bbf287cc7d053c3febe1f5bfa3887493e82",
+  "a9982708744724df41e22ca3a7127eed3249e66c1f1985a8f32028de1ebbbe80",
+  "b356b931ffeee8a4b5f2e010a86f3de8ff027ed1985af236fb9388d7bbbbeb93",
+  "ba6017b108950b1310b0b05458deee8ad952caff9eb5d4956f834a2a38534588",
+  "d0ac5b500c10d942e6d0917369ea15f8461ade5b0c067ed6d54c0b754d093c05",
+  "d91db7e94d13bebbd393f6bdf89f93d9e0a8acf89410965c22a735f22d660a12",
+  "dbd7d431cd400785c3238023c7d51fb2d466d7d2d09d9b79e468cd60b3b84814",
+  "dc942a6b7867454ce4b344d993c5bf75ce14483ac80a8a84f7f24bfda757dd5f",
+  "e03c3c2f542213c6916896cb7770226b778e07aa6da9a3987d7178b24b77415a",
+  "e177ecdcdbb65045169f9b758cddb0da3fa5da6924d221f904895f1c55825d80",
+  "e5cfc2ad72ebc2a4941ed0b5416551aab8127fcbf80f22fbce5ae886d83e56ae",
+  "e7a8f28220e4dcb8bf3b695c8370d263edb030795177971971b379dc350b885a",
+  "e88e52222c0330b4a7e307f99c105ee5a1452afb1afa21073bc47dd63a5edf6a",
+  "ef5ac4bc7024d6fbae3d480a198f83b6c0efed24ea349602eb43aa79f4e4c90e",
+  "f51255938a3888cd8d519b581be23768aaa91adbf9cea00616a345c607252c61",
+  "f7ee6702cf858ba0584675a0d2779f7fc3ac722acfe11cd8504715b3d011e397",
+  "fb6b96729fcd26949b6f3c609fc38fcb34e92f02986b381fc6069dbce3d44ce4",
+  "fe3f9a1f88341a5593c2f7cb01ea904d22aae01614b953f782a6b511ee14029b",
+  "fe9a4b4964dc193381e677596dc6bd9159b2ecc28daf959304c9242397fb7b6b"
+ ],
+ "wasRevisionOf": null
+}

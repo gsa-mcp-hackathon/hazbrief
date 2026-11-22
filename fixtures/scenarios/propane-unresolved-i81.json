@@ -1,0 +1,6291 @@
+{
+ "scenario": "propane-unresolved-i81",
+ "tools": {
+  "assess_incident": {
+   "candidates": [
+    "UN1075",
+    "UN1978"
+   ],
+   "error": "'propane' is listed under 2 ID numbers in the ERG 2024 yellow index.",
+   "hint": "Give the ID number from the placard or shipping paper. Meanwhile protective_action_footprint and build_ics_201 draw every candidate and print the largest distances."
+  },
+  "build_ics_201": {
+   "annex": {
+    "limits": [
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.0",
+        "tool": "protective_action_footprint",
+        "value": "The load as reported matches 2 candidates [ERG 2024 yellow index]. The distances shown are the largest among them, those of Propane (UN1075), Guide 115 [ERG 2024 Table of Markings, Labels and Placards introduction]."
+       }
+      ],
+      "text": "The load as reported matches 2 candidates [ERG 2024 yellow index]. The distances shown are the largest among them, those of Propane (UN1075), Guide 115 [ERG 2024 Table of Markings, Labels and Placards introduction]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.1",
+        "tool": "protective_action_footprint",
+        "value": "Guide 115 gives 800 m (1/2 mile) downwind for a large spill, and no zone shape [ERG 2024 Guide 115]. The footprint draws none; a shape drawn for it is not the ERG's."
+       }
+      ],
+      "text": "Guide 115 gives 800 m (1/2 mile) downwind for a large spill, and no zone shape [ERG 2024 Guide 115]. The footprint draws none; a shape drawn for it is not the ERG's."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.2",
+        "tool": "protective_action_footprint",
+        "value": "verify_in_erg_app opens PHMSA's ERG app at this material, spill size, period, surface, wind and point. Compare its drawing with this footprint. Its link specification is the ERG 2020 app's. The app may draw ERG 2020 distances; this footprint uses ERG 2024."
+       }
+      ],
+      "text": "verify_in_erg_app opens PHMSA's ERG app at this material, spill size, period, surface, wind and point. Compare its drawing with this footprint. Its link specification is the ERG 2020 app's. The app may draw ERG 2020 distances; this footprint uses ERG 2024."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.3",
+        "tool": "protective_action_footprint",
+        "value": "The container is unknown, so the link names no container. The ERG app then takes the first container it lists. This footprint takes the container with the largest distances."
+       }
+      ],
+      "text": "The container is unknown, so the link names no container. The ERG app then takes the first container it lists. This footprint takes the container with the largest distances."
+     },
+     {
+      "limit": "briefing",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.0",
+        "tool": "population_at_risk",
+        "value": "Blocks partly inside the footprint count by the share of their area inside it."
+       }
+      ],
+      "text": "Blocks partly inside the footprint count by the share of their area inside it."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.1",
+        "tool": "population_at_risk",
+        "value": "Area weighting assumes people are spread evenly across each block, block group and tract."
+       }
+      ],
+      "text": "Area weighting assumes people are spread evenly across each block, block group and tract."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.2",
+        "tool": "population_at_risk",
+        "value": "Derived margins of error assume no covariance between cells, so they are approximate."
+       }
+      ],
+      "text": "Derived margins of error assume no covariance between cells, so they are approximate."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.3",
+        "tool": "population_at_risk",
+        "value": "A partial area's margin of error is scaled by the same area share as its estimate."
+       }
+      ],
+      "text": "A partial area's margin of error is scaled by the same area share as its estimate."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.4",
+        "tool": "population_at_risk",
+        "value": "Census block counts carry disclosure avoidance noise, so a small block's count can be off."
+       }
+      ],
+      "text": "Census block counts carry disclosure avoidance noise, so a small block's count can be off."
+     },
+     {
+      "limit": "briefing",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.5",
+        "tool": "population_at_risk",
+        "value": "Daytime counts jobs located in the footprint; a worker with two jobs counts twice."
+       }
+      ],
+      "text": "Daytime counts jobs located in the footprint; a worker with two jobs counts twice."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.6",
+        "tool": "population_at_risk",
+        "value": "Daytime does not add residents who stay home during the day."
+       }
+      ],
+      "text": "Daytime does not add residents who stay home during the day."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.7",
+        "tool": "population_at_risk",
+        "value": "Disability, vehicle and group quarters estimates are tract estimates, the finest the survey publishes."
+       }
+      ],
+      "text": "Disability, vehicle and group quarters estimates are tract estimates, the finest the survey publishes."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.8",
+        "tool": "population_at_risk",
+        "value": "The resilience count has no margin of error; the Census Data API publishes none."
+       }
+      ],
+      "text": "The resilience count has no margin of error; the Census Data API publishes none."
+     },
+     {
+      "limit": "briefing",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.0",
+        "tool": "facilities_in_footprint",
+        "value": "The structures dataset holds selected facilities, so a school, hospital, fire station or police station it omits is not listed [USGS National Structures Dataset service description]."
+       }
+      ],
+      "text": "The structures dataset holds selected facilities, so a school, hospital, fire station or police station it omits is not listed [USGS National Structures Dataset service description]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.1",
+        "tool": "facilities_in_footprint",
+        "value": "Nursing homes are those certified by Medicare or Medicaid; assisted living facilities are not listed [CMS Nursing Home Provider Information]."
+       }
+      ],
+      "text": "Nursing homes are those certified by Medicare or Medicaid; assisted living facilities are not listed [CMS Nursing Home Provider Information]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.2",
+        "tool": "facilities_in_footprint",
+        "value": "People in nursing facilities, correctional facilities, college housing and other group quarters are counted by population_at_risk, not here."
+       }
+      ],
+      "text": "People in nursing facilities, correctional facilities, college housing and other group quarters are counted by population_at_risk, not here."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.3",
+        "tool": "facilities_in_footprint",
+        "value": "A waterway counts once per named stream or 3DHP mainstem, and its reaches inside are summed [USGS 3D Hydrography Program]."
+       }
+      ],
+      "text": "A waterway counts once per named stream or 3DHP mainstem, and its reaches inside are summed [USGS 3D Hydrography Program]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.4",
+        "tool": "facilities_in_footprint",
+        "value": "Drinking water intakes are not published, so waterways are listed, not intakes [Safe Drinking Water Act section 1433]."
+       }
+      ],
+      "text": "Drinking water intakes are not published, so waterways are listed, not intakes [Safe Drinking Water Act section 1433]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.5",
+        "tool": "facilities_in_footprint",
+        "value": "Rail lines count by segment between network nodes, so one line can count more than once [NTAD North American Rail Network Lines]."
+       }
+      ],
+      "text": "Rail lines count by segment between network nodes, so one line can count more than once [NTAD North American Rail Network Lines]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.6",
+        "tool": "facilities_in_footprint",
+        "value": "Grade crossings are the at-grade crossings of the FRA inventory, public and private; bridges and underpasses are not counted [NTAD Railroad Grade Crossings]."
+       }
+      ],
+      "text": "Grade crossings are the at-grade crossings of the FRA inventory, public and private; bridges and underpasses are not counted [NTAD Railroad Grade Crossings]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.7",
+        "tool": "facilities_in_footprint",
+        "value": "A facility just outside the footprint is not listed unless buffer_m is set."
+       }
+      ],
+      "text": "A facility just outside the footprint is not listed unless buffer_m is set."
+     },
+     {
+      "limit": "briefing",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.0",
+        "tool": "receiving_hospitals",
+        "value": "Distances are straight lines from the spill, not drive times."
+       }
+      ],
+      "text": "Distances are straight lines from the spill, not drive times."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.1",
+        "tool": "receiving_hospitals",
+        "value": "Trauma level, burn care and toxicology capability are not in these datasets; confirm capability with each hospital."
+       }
+      ],
+      "text": "Trauma level, burn care and toxicology capability are not in these datasets; confirm capability with each hospital."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.2",
+        "tool": "receiving_hospitals",
+        "value": "Hospitals listed are those registered with Medicare that report emergency services [CMS Hospital General Information]."
+       }
+      ],
+      "text": "Hospitals listed are those registered with Medicare that report emergency services [CMS Hospital General Information]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.3",
+        "tool": "receiving_hospitals",
+        "value": "Emergency services means the hospital reports providing them, not that it has capacity now [CMS Hospital General Information]."
+       }
+      ],
+      "text": "Emergency services means the hospital reports providing them, not that it has capacity now [CMS Hospital General Information]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.4",
+        "tool": "receiving_hospitals",
+        "value": "Bed counts are the Provider of Services bed counts, not beds available now [CMS Provider of Services]."
+       }
+      ],
+      "text": "Bed counts are the Provider of Services bed counts, not beds available now [CMS Provider of Services]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.5",
+        "tool": "receiving_hospitals",
+        "value": "A hospital is flagged when the straight line to it from the upwind edge crosses the protective action zone."
+       }
+      ],
+      "text": "A hospital is flagged when the straight line to it from the upwind edge crosses the protective action zone."
+     },
+     {
+      "limit": "briefing",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.6",
+        "tool": "receiving_hospitals",
+        "value": "Roads are not read, so a flagged hospital may have a route around the zone."
+       }
+      ],
+      "text": "Roads are not read, so a flagged hospital may have a route around the zone."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.7",
+        "tool": "receiving_hospitals",
+        "value": "The footprint has no protective action zone, so distances are measured from the spill, with no crossing test."
+       }
+      ],
+      "text": "The footprint has no protective action zone, so distances are measured from the spill, with no crossing test."
+     },
+     {
+      "limit": "briefing",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.8",
+        "tool": "receiving_hospitals",
+        "value": "252 hospitals could not be placed by address and are not ranked, of 4,495 hospitals with emergency services [CMS Hospital General Information, as of 2026-07-22]."
+       }
+      ],
+      "text": "252 hospitals could not be placed by address and are not ranked, of 4,495 hospitals with emergency services [CMS Hospital General Information, as of 07/22/2026]."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.9",
+        "tool": "receiving_hospitals",
+        "value": "unplaced_in_states names the unplaced hospitals in each state listed."
+       }
+      ],
+      "text": "unplaced_in_states names the unplaced hospitals in each state listed."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.0",
+        "tool": "material_response_guidance",
+        "value": "Each line is printed as the ERG prints it, with its PDF page, as a quotation."
+       }
+      ],
+      "text": "Each line is printed as the ERG prints it, with its PDF page, as a quotation."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.1",
+        "tool": "material_response_guidance",
+        "value": "The incident selects the lines; `selection.omitted` names every line left out and why."
+       }
+      ],
+      "text": "The incident selects the lines; `selection.omitted` names every line left out and why."
+     },
+     {
+      "limit": "annex",
+      "quotation": false,
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "limits.2",
+        "tool": "material_response_guidance",
+        "value": "The guide refers to the General First Aid section, which is not reprinted here."
+       }
+      ],
+      "text": "The guide refers to the General First Aid section, which is not reprinted here."
+     }
+    ],
+    "notes": [],
+    "sources": [
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.0.tag",
+        "tool": "assess_incident",
+        "value": "[ERG 2024 yellow index, UN1075]"
+       }
+      ],
+      "supports": "ID number, names and guide",
+      "tag": "[ERG 2024 yellow index, UN1075]",
+      "tool": "assess_incident"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.1.tag",
+        "tool": "assess_incident",
+        "value": "[ERG 2024 Table 1 how to use]"
+       }
+      ],
+      "supports": "spill size",
+      "tag": "[ERG 2024 Table 1 how to use]",
+      "tool": "assess_incident"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.2.tag",
+        "tool": "assess_incident",
+        "value": "[ERG 2024 Table 1 how to use, sunrise and sunset by the NOAA solar equations]"
+       }
+      ],
+      "supports": "day or night",
+      "tag": "[ERG 2024 Table 1 how to use, sunrise and sunset by the NOAA solar equations]",
+      "tool": "assess_incident"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.3.tag",
+        "tool": "assess_incident",
+        "value": "[49 CFR 172.101 Hazardous Materials Table, UN1075]"
+       }
+      ],
+      "supports": "hazard class and label codes",
+      "tag": "[49 CFR 172.101 Hazardous Materials Table, UN1075]",
+      "tool": "assess_incident"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.4.tag",
+        "tool": "assess_incident",
+        "value": "[ERG 2024 Guide 115]"
+       }
+      ],
+      "supports": "guide title",
+      "tag": "[ERG 2024 Guide 115]",
+      "tool": "assess_incident"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.5.tag",
+        "tool": "protective_action_footprint",
+        "value": "[worked example wind, as of 10/20/2026 17:40 UTC]"
+       }
+      ],
+      "supports": "wind speed and direction",
+      "tag": "[worked example wind, as of 10/20/2026 17:40 UTC]",
+      "tool": "protective_action_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.6.tag",
+        "tool": "protective_action_footprint",
+        "value": "[ERG 2024 Table 3 wind categories]"
+       }
+      ],
+      "supports": "wind band",
+      "tag": "[ERG 2024 Table 3 wind categories]",
+      "tool": "protective_action_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.9.tag",
+        "tool": "protective_action_footprint",
+        "value": "[ERG 2024 yellow index]"
+       }
+      ],
+      "supports": "candidates",
+      "tag": "[ERG 2024 yellow index]",
+      "tool": "protective_action_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.10.tag",
+        "tool": "protective_action_footprint",
+        "value": "[ERG 2024 Table of Markings, Labels and Placards introduction]"
+       }
+      ],
+      "supports": "governing candidate",
+      "tag": "[ERG 2024 Table of Markings, Labels and Placards introduction]",
+      "tool": "protective_action_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.0.tag",
+        "tool": "population_at_risk",
+        "value": "[TIGERweb Census 2020 tabulation geography, January 1, 2020 vintage]"
+       }
+      ],
+      "supports": "geography and area shares",
+      "tag": "[TIGERweb Census 2020 tabulation geography, January 1, 2020 vintage]",
+      "tool": "population_at_risk"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.1.tag",
+        "tool": "population_at_risk",
+        "value": "[2020 Census DHC, table P1, as of 04/01/2020]"
+       }
+      ],
+      "supports": "nighttime residents",
+      "tag": "[2020 Census DHC, table P1, as of 04/01/2020]",
+      "tool": "population_at_risk"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.2.tag",
+        "tool": "population_at_risk",
+        "value": "[2020 Census DHC, table P18, as of 04/01/2020]"
+       }
+      ],
+      "supports": "group quarters by type",
+      "tag": "[2020 Census DHC, table P18, as of 04/01/2020]",
+      "tool": "population_at_risk"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.3.tag",
+        "tool": "population_at_risk",
+        "value": "[LEHD LODES8 workplace area characteristics 2023, as of 12/03/2025]"
+       }
+      ],
+      "supports": "daytime workforce",
+      "tag": "[LEHD LODES8 workplace area characteristics 2023, as of 12/03/2025]",
+      "tool": "population_at_risk"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.4.tag",
+        "tool": "population_at_risk",
+        "value": "[ACS 2020-2024 5-year, table B01001, as of 01/29/2026]"
+       }
+      ],
+      "supports": "age_65_and_over",
+      "tag": "[ACS 2020-2024 5-year, table B01001, as of 01/29/2026]",
+      "tool": "population_at_risk"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.5.tag",
+        "tool": "population_at_risk",
+        "value": "[ACS 2020-2024 5-year, table B18101, as of 01/29/2026]"
+       }
+      ],
+      "supports": "disability",
+      "tag": "[ACS 2020-2024 5-year, table B18101, as of 01/29/2026]",
+      "tool": "population_at_risk"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.6.tag",
+        "tool": "population_at_risk",
+        "value": "[ACS 2020-2024 5-year, table B08201, as of 01/29/2026]"
+       }
+      ],
+      "supports": "no_vehicle_households",
+      "tag": "[ACS 2020-2024 5-year, table B08201, as of 01/29/2026]",
+      "tool": "population_at_risk"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.7.tag",
+        "tool": "population_at_risk",
+        "value": "[ACS 2020-2024 5-year, table C16002, as of 01/29/2026]"
+       }
+      ],
+      "supports": "limited_english_households",
+      "tag": "[ACS 2020-2024 5-year, table C16002, as of 01/29/2026]",
+      "tool": "population_at_risk"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.8.tag",
+        "tool": "population_at_risk",
+        "value": "[ACS 2020-2024 5-year, table B26001, as of 01/29/2026]"
+       }
+      ],
+      "supports": "group_quarters_population",
+      "tag": "[ACS 2020-2024 5-year, table B26001, as of 01/29/2026]",
+      "tool": "population_at_risk"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.9.tag",
+        "tool": "population_at_risk",
+        "value": "[Community Resilience Estimates 2024, as of 11/26/2025]"
+       }
+      ],
+      "supports": "resilience",
+      "tag": "[Community Resilience Estimates 2024, as of 11/26/2025]",
+      "tool": "population_at_risk"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.0.tag",
+        "tool": "facilities_in_footprint",
+        "value": "[USGS National Structures Dataset, College / University and Technical / Trade School and School, Data Refreshed October, 2026]"
+       }
+      ],
+      "supports": "schools",
+      "tag": "[USGS National Structures Dataset, College / University and Technical / Trade School and School, Data Refreshed October, 2026]",
+      "tool": "facilities_in_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.1.tag",
+        "tool": "facilities_in_footprint",
+        "value": "[USGS National Structures Dataset, Hospital / Medical Center, Data Refreshed October, 2026]"
+       }
+      ],
+      "supports": "hospitals",
+      "tag": "[USGS National Structures Dataset, Hospital / Medical Center, Data Refreshed October, 2026]",
+      "tool": "facilities_in_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.2.tag",
+        "tool": "facilities_in_footprint",
+        "value": "[USGS National Structures Dataset, Ambulance Service and Fire Station / EMS Station and Police Station, Data Refreshed October, 2026]"
+       }
+      ],
+      "supports": "emergency_services",
+      "tag": "[USGS National Structures Dataset, Ambulance Service and Fire Station / EMS Station and Police Station, Data Refreshed October, 2026]",
+      "tool": "facilities_in_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.3.tag",
+        "tool": "facilities_in_footprint",
+        "value": "[CMS Nursing Home Provider Information, as of 2026-09-30]"
+       }
+      ],
+      "supports": "nursing_homes",
+      "tag": "[CMS Nursing Home Provider Information, as of 09/30/2026]",
+      "tool": "facilities_in_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.4.tag",
+        "tool": "facilities_in_footprint",
+        "value": "[USGS 3D Hydrography Program (3DHP), Data refreshed September 4, 2026]"
+       }
+      ],
+      "supports": "waterways",
+      "tag": "[USGS 3D Hydrography Program (3DHP), Data refreshed September 4, 2026]",
+      "tool": "facilities_in_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.5.tag",
+        "tool": "facilities_in_footprint",
+        "value": "[NTAD North American Rail Network Lines, updated 2026-10-19]"
+       }
+      ],
+      "supports": "rail lines",
+      "tag": "[NTAD North American Rail Network Lines, updated 10/19/2026]",
+      "tool": "facilities_in_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.6.tag",
+        "tool": "facilities_in_footprint",
+        "value": "[NTAD Railroad Grade Crossings (FRA National Highway-Rail Crossing Inventory), updated 2026-10-09]"
+       }
+      ],
+      "supports": "grade crossings",
+      "tag": "[NTAD Railroad Grade Crossings (FRA National Highway-Rail Crossing Inventory), updated 10/09/2026]",
+      "tool": "facilities_in_footprint"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.0.tag",
+        "tool": "receiving_hospitals",
+        "value": "[CMS Hospital General Information, as of 2026-07-22]"
+       }
+      ],
+      "supports": "hospitals and emergency services",
+      "tag": "[CMS Hospital General Information, as of 07/22/2026]",
+      "tool": "receiving_hospitals"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.1.tag",
+        "tool": "receiving_hospitals",
+        "value": "[CMS Provider of Services, hospital and non-hospital, as of 2026-10-16]"
+       }
+      ],
+      "supports": "beds",
+      "tag": "[CMS Provider of Services, hospital and non-hospital, as of 10/16/2026]",
+      "tool": "receiving_hospitals"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.2.tag",
+        "tool": "receiving_hospitals",
+        "value": "[Census Geocoder, benchmark Public_AR_Current; USGS National Structures Dataset by address, as of 2026-10-21]"
+       }
+      ],
+      "supports": "hospital locations",
+      "tag": "[Census Geocoder, benchmark Public_AR_Current; USGS National Structures Dataset by address, as of 10/21/2026]",
+      "tool": "receiving_hospitals"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "basis.4.tag",
+        "tool": "material_response_guidance",
+        "value": "[ERG 2024 General First Aid]"
+       }
+      ],
+      "supports": "General First Aid",
+      "tag": "[ERG 2024 General First Aid]",
+      "tool": "material_response_guidance"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "tag",
+        "tool": "tigerweb_place",
+        "value": "[TIGERweb Census Current (2026), January 1, 2026 vintage]"
+       }
+      ],
+      "supports": "place and county at the spill",
+      "tag": "[TIGERweb Census Current (2026), January 1, 2026 vintage]",
+      "tool": "tigerweb_place"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "tag",
+        "tool": "tigerweb_basemap",
+        "value": "[TIGERweb Transportation, as of 10/22/2026]"
+       }
+      ],
+      "supports": "Block 4 sketch roads and railroads",
+      "tag": "[TIGERweb Transportation, as of 10/22/2026]",
+      "tool": "tigerweb_basemap"
+     },
+     {
+      "receipts": [
+       {
+        "kind": "tool",
+        "path": "tag",
+        "tool": "nws_time_zone",
+        "value": "[NWS api.weather.gov points]"
+       }
+      ],
+      "supports": "the spill point's time zone",
+      "tag": "[NWS api.weather.gov points]",
+      "tool": "nws_time_zone"
+     }
+    ],
+    "title": "Annex A: Data limits and sources"
+   },
+   "blocks": [
+    {
+     "blank": [],
+     "fields": {},
+     "filled_by": "hazbrief",
+     "number": 1,
+     "receipt": "ics-201#b1:29-43",
+     "sections": [
+      {
+       "heading": null,
+       "sentences": [
+        {
+         "field": "Incident Name",
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "place.basename",
+           "tool": "tigerweb_place",
+           "value": "State Line"
+          },
+          {
+           "kind": "tool",
+           "path": "county.state",
+           "tool": "tigerweb_place",
+           "value": "PA"
+          },
+          {
+           "kind": "tool",
+           "path": "ambiguity.candidates",
+           "tool": "protective_action_footprint",
+           "value": [
+            {
+             "basis": [
+              {
+               "locator": "erg2024-en-pdf#p32",
+               "supports": "ID number, names and guide",
+               "tag": "[ERG 2024 yellow index, UN1075]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p290",
+               "supports": "spill size",
+               "tag": "[ERG 2024 Table 1 how to use]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p290",
+               "supports": "day or night",
+               "tag": "[ERG 2024 Table 1 how to use, sunrise and sunset by the NOAA solar equations]"
+              },
+              {
+               "locator": "cfr49-govinfo-bulk#172.101:table2:row2672",
+               "supports": "hazard class and label codes",
+               "tag": "[49 CFR 172.101 Hazardous Materials Table, UN1075]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p162",
+               "supports": "guide title",
+               "tag": "[ERG 2024 Guide 115]"
+              },
+              {
+               "locator": null,
+               "supports": "wind speed and direction",
+               "tag": "[worked example wind, as of 10/20/2026 17:40 UTC]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p343",
+               "supports": "wind band",
+               "tag": "[ERG 2024 Table 3 wind categories]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p162",
+               "supports": "immediate precautionary measure",
+               "tag": "[ERG 2024 Guide 115]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p162",
+               "supports": "large spill downwind distance",
+               "tag": "[ERG 2024 Guide 115]"
+              }
+             ],
+             "entry_point": "material",
+             "erg_table": {
+              "also_guide_fire_distances": false,
+              "container": null,
+              "reason": "Guide 115 EVACUATION distances: ERG 2024 Table 1 does not list UN1075.",
+              "spill_size_used": "large",
+              "table": "guide"
+             },
+             "flag_inputs": {
+              "fire_involved": false,
+              "footprint_present": true,
+              "guide_designated_p": false,
+              "guide_page": "115",
+              "period": "daytime",
+              "spill_size": "large",
+              "table3_listed": false,
+              "tih": false,
+              "where_spilled": "land",
+              "where_spilled_matters": false
+             },
+             "flags": [],
+             "governing": true,
+             "guide": "115",
+             "guide_title": "Gases - Flammable (Including Refrigerated Liquids)",
+             "hazard_class": {
+              "class_id": "flammable_liquefied_gas",
+              "rule_set_id": "rules.flammable_liquefied_gas",
+              "title": "flammable liquefied gases"
+             },
+             "id_number": "UN1075",
+             "identified_by": null,
+             "label": "Propane (UN1075), Guide 115",
+             "limits": [
+              "Guide 115 gives 800 m (1/2 mile) downwind for a large spill, and no zone shape [ERG 2024 Guide 115]. The footprint draws none; a shape drawn for it is not the ERG's.",
+              "verify_in_erg_app opens PHMSA's ERG app at this material, spill size, period, surface, wind and point. Compare its drawing with this footprint. Its link specification is the ERG 2020 app's. The app may draw ERG 2020 distances; this footprint uses ERG 2024.",
+              "The container is unknown, so the link names no container. The ERG app then takes the first container it lists. This footprint takes the container with the largest distances."
+             ],
+             "locator": "erg2024-en-pdf#p32",
+             "material": {
+              "id_number": "UN1075",
+              "matched_name": "Propane",
+              "names": [
+               "Butane",
+               "Butylene",
+               "Isobutane",
+               "Isobutylene",
+               "Liquefied petroleum gas",
+               "LPG",
+               "Petroleum gases, liquefied",
+               "Propane",
+               "Propylene"
+              ],
+              "un_number": "1075"
+             },
+             "names": [
+              "Propane"
+             ],
+             "placard": null,
+             "reach": {
+              "tag": "[ERG 2024 Guide 115]",
+              "text": "800 m (1/2 mile)",
+              "zone": "large_spill_downwind"
+             },
+             "reach_m": 800,
+             "table_row": null,
+             "tih": false,
+             "verify_in_erg_app": "https://www.phmsa.dot.gov/erg/material?materialName=Propane&materialUn=1075&lat=39.722&lon=-77.724&windDir=270&spillSize=large&timeOfDay=day&whereSpilled=land&windSpeed=moderate&showMap=true",
+             "zones": {
+              "initial_isolation_zone": {
+               "distance": {
+                "erg_units": {
+                 "imperial": "330 feet",
+                 "m": 100
+                },
+                "metres": 100,
+                "text": "100 m (330 feet)"
+               },
+               "note": "The guide's immediate precautionary measure: isolate in all directions.",
+               "tag": "[ERG 2024 Guide 115]"
+              },
+              "large_spill_downwind": {
+               "distance": {
+                "erg_units": {
+                 "imperial": "1/2 mile",
+                 "m": 800
+                },
+                "metres": 800,
+                "text": "800 m (1/2 mile)"
+               },
+               "note": "The guide gives this downwind distance for initial evacuation but no zone shape, so none is drawn.",
+               "tag": "[ERG 2024 Guide 115]"
+              }
+             }
+            },
+            {
+             "basis": [
+              {
+               "locator": "erg2024-en-pdf#p49",
+               "supports": "ID number, names and guide",
+               "tag": "[ERG 2024 yellow index, UN1978]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p290",
+               "supports": "spill size",
+               "tag": "[ERG 2024 Table 1 how to use]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p290",
+               "supports": "day or night",
+               "tag": "[ERG 2024 Table 1 how to use, sunrise and sunset by the NOAA solar equations]"
+              },
+              {
+               "locator": "cfr49-govinfo-bulk#172.101:table2:row2866",
+               "supports": "hazard class and label codes",
+               "tag": "[49 CFR 172.101 Hazardous Materials Table, UN1978]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p162",
+               "supports": "guide title",
+               "tag": "[ERG 2024 Guide 115]"
+              },
+              {
+               "locator": null,
+               "supports": "wind speed and direction",
+               "tag": "[worked example wind, as of 10/20/2026 17:40 UTC]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p343",
+               "supports": "wind band",
+               "tag": "[ERG 2024 Table 3 wind categories]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p162",
+               "supports": "immediate precautionary measure",
+               "tag": "[ERG 2024 Guide 115]"
+              },
+              {
+               "locator": "erg2024-en-pdf#p162",
+               "supports": "large spill downwind distance",
+               "tag": "[ERG 2024 Guide 115]"
+              }
+             ],
+             "entry_point": "material",
+             "erg_table": {
+              "also_guide_fire_distances": false,
+              "container": null,
+              "reason": "Guide 115 EVACUATION distances: ERG 2024 Table 1 does not list UN1978.",
+              "spill_size_used": "large",
+              "table": "guide"
+             },
+             "flag_inputs": {
+              "fire_involved": false,
+              "footprint_present": true,
+              "guide_designated_p": false,
+              "guide_page": "115",
+              "period": "daytime",
+              "spill_size": "large",
+              "table3_listed": false,
+              "tih": false,
+              "where_spilled": "land",
+              "where_spilled_matters": false
+             },
+             "flags": [],
+             "governing": false,
+             "guide": "115",
+             "guide_title": "Gases - Flammable (Including Refrigerated Liquids)",
+             "hazard_class": {
+              "class_id": "flammable_liquefied_gas",
+              "rule_set_id": "rules.flammable_liquefied_gas",
+              "title": "flammable liquefied gases"
+             },
+             "id_number": "UN1978",
+             "identified_by": null,
+             "label": "Propane (UN1978), Guide 115",
+             "limits": [
+              "Guide 115 gives 800 m (1/2 mile) downwind for a large spill, and no zone shape [ERG 2024 Guide 115]. The footprint draws none; a shape drawn for it is not the ERG's.",
+              "verify_in_erg_app opens PHMSA's ERG app at this material, spill size, period, surface, wind and point. Compare its drawing with this footprint. Its link specification is the ERG 2020 app's. The app may draw ERG 2020 distances; this footprint uses ERG 2024.",
+              "The container is unknown, so the link names no container. The ERG app then takes the first container it lists. This footprint takes the container with the largest distances."
+             ],
+             "locator": "erg2024-en-pdf#p49",
+             "material": {
+              "id_number": "UN1978",
+              "matched_name": "Propane",
+              "names": [
+               "Propane"
+              ],
+              "un_number": "1978"
+             },
+             "names": [
+              "Propane"
+             ],
+             "placard": null,
+             "reach": {
+              "tag": "[ERG 2024 Guide 115]",
+              "text": "800 m (1/2 mile)",
+              "zone": "large_spill_downwind"
+             },
+             "reach_m": 800,
+             "table_row": null,
+             "tih": false,
+             "verify_in_erg_app": "https://www.phmsa.dot.gov/erg/material?materialName=Propane&materialUn=1978&lat=39.722&lon=-77.724&windDir=270&spillSize=large&timeOfDay=day&whereSpilled=land&windSpeed=moderate&showMap=true",
+             "zones": {
+              "initial_isolation_zone": {
+               "distance": {
+                "erg_units": {
+                 "imperial": "330 feet",
+                 "m": 100
+                },
+                "metres": 100,
+                "text": "100 m (330 feet)"
+               },
+               "note": "The guide's immediate precautionary measure: isolate in all directions.",
+               "tag": "[ERG 2024 Guide 115]"
+              },
+              "large_spill_downwind": {
+               "distance": {
+                "erg_units": {
+                 "imperial": "1/2 mile",
+                 "m": 800
+                },
+                "metres": 800,
+                "text": "800 m (1/2 mile)"
+               },
+               "note": "The guide gives this downwind distance for initial evacuation but no zone shape, so none is drawn.",
+               "tag": "[ERG 2024 Guide 115]"
+              }
+             }
+            }
+           ]
+          },
+          {
+           "kind": "tool",
+           "path": "incident.incident_time",
+           "tool": "assess_incident",
+           "value": "2026-10-21T14:00:00-04:00"
+          }
+         ],
+         "text": "Unresolved: Propane (UN1075, Guide 115) or Propane (UN1978, Guide 115) release, State Line, PA, 10/21/2026"
+        }
+       ]
+      }
+     ],
+     "title": "Incident Name"
+    },
+    {
+     "blank": [
+      {
+       "field": "Incident Number",
+       "label": "Incident Commander"
+      }
+     ],
+     "filled_by": "Incident Commander",
+     "number": 2,
+     "receipt": "ics-201#b2:45-61",
+     "sections": [],
+     "title": "Incident Number"
+    },
+    {
+     "blank": [],
+     "fields": {
+      "As given": "2026-10-21T14:00:00-04:00",
+      "Date": "10/21/2026",
+      "Time": "14:00 EDT (18:00 UTC)"
+     },
+     "filled_by": "hazbrief",
+     "number": 3,
+     "receipt": "ics-201#b3:63-83",
+     "sections": [
+      {
+       "heading": null,
+       "sentences": [
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "day_night.word",
+           "tool": "protective_action_footprint",
+           "value": "daytime"
+          },
+          {
+           "kind": "tool",
+           "path": "day_night.sunrise",
+           "tool": "protective_action_footprint",
+           "value": "2026-10-21T07:27:42-04:00"
+          },
+          {
+           "kind": "tool",
+           "path": "day_night.sunset",
+           "tool": "protective_action_footprint",
+           "value": "2026-10-21T18:22:37-04:00"
+          }
+         ],
+         "text": "It is daytime at the spill: sunrise 10/21/2026 07:27 EDT (11:27 UTC), sunset 10/21/2026 18:22 EDT (22:22 UTC) [ERG 2024 Table 1 how to use, sunrise and sunset by the NOAA solar equations]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "time_zone",
+           "tool": "nws_time_zone",
+           "value": "America/New_York"
+          },
+          {
+           "kind": "tool",
+           "path": "url",
+           "tool": "nws_time_zone",
+           "value": "https://api.weather.gov/points/39.722,-77.724"
+          }
+         ],
+         "text": "Local times are in America/New_York, the zone NWS gives for the spill point [NWS api.weather.gov points]."
+        }
+       ]
+      }
+     ],
+     "title": "Date/Time Initiated"
+    },
+    {
+     "blank": [],
+     "filled_by": "hazbrief",
+     "geojson": "geojson",
+     "map": {
+      "alt": "Block 4 sketch: the protective action footprint, the wind, the facilities and the receiving hospitals over TIGERweb roads",
+      "basemap": {
+       "kind": "tool",
+       "path": "url",
+       "tool": "tigerweb_basemap",
+       "value": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/export?bbox=-8657896.41%2C4810024.41%2C-8644378.61%2C4826921.66&bboxSR=3857&imageSR=3857&size=960%2C1200&dpi=96&format=png8&transparent=false&layers=show%3A2%2C4%2C5%2C6%2C7%2C8%2C9&f=image"
+      },
+      "href": "ics201_block4.svg",
+      "svg": "map_svg"
+     },
+     "map_summary": "The `geojson` output: spill 1; initial isolation zone 2; wind 1; receiving hospital 10.",
+     "number": 4,
+     "receipt": "ics-201#b6:99-348",
+     "sections": [
+      {
+       "heading": null,
+       "sentences": [
+        {
+         "link": "https://www.phmsa.dot.gov/erg/material?materialName=Propane&materialUn=1075&lat=39.722&lon=-77.724&windDir=270&spillSize=large&timeOfDay=day&whereSpilled=land&windSpeed=moderate&showMap=true",
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "verify_in_erg_app",
+           "tool": "protective_action_footprint",
+           "value": "https://www.phmsa.dot.gov/erg/material?materialName=Propane&materialUn=1075&lat=39.722&lon=-77.724&windDir=270&spillSize=large&timeOfDay=day&whereSpilled=land&windSpeed=moderate&showMap=true"
+          }
+         ],
+         "text": "Check against the PHMSA ERG app: https://www.phmsa.dot.gov/erg/material?materialName=Propane&materialUn=1075&lat=39.722&lon=-77.724&windDir=270&spillSize=large&timeOfDay=day&whereSpilled=land&windSpeed=moderate&showMap=true."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "limits.2",
+           "tool": "protective_action_footprint",
+           "value": "verify_in_erg_app opens PHMSA's ERG app at this material, spill size, period, surface, wind and point. Compare its drawing with this footprint. Its link specification is the ERG 2020 app's. The app may draw ERG 2020 distances; this footprint uses ERG 2024."
+          }
+         ],
+         "text": "The app may use ERG 2020 distances."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "pack_versions.erg",
+           "tool": "protective_action_footprint",
+           "value": "erg2024.5"
+          }
+         ],
+         "text": "This footprint uses ERG 2024."
+        }
+       ]
+      }
+     ],
+     "title": "Map/Sketch"
+    },
+    {
+     "blank": [],
+     "filled_by": "hazbrief",
+     "number": 5,
+     "receipt": "ics-201#b7:350-649",
+     "sections": [
+      {
+       "heading": "Material and protective distances",
+       "sentences": [
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "place.name",
+           "tool": "tigerweb_place",
+           "value": "State Line CDP"
+          },
+          {
+           "kind": "tool",
+           "path": "county.name",
+           "tool": "tigerweb_place",
+           "value": "Franklin County"
+          },
+          {
+           "kind": "tool",
+           "path": "county.state",
+           "tool": "tigerweb_place",
+           "value": "PA"
+          }
+         ],
+         "text": "The spill is in State Line CDP, Franklin County, PA [TIGERweb Census Current (2026), January 1, 2026 vintage]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "ambiguity.candidate_count",
+           "tool": "protective_action_footprint",
+           "value": 2
+          },
+          {
+           "kind": "tool",
+           "path": "ambiguity.input",
+           "tool": "protective_action_footprint",
+           "value": "'propane' is listed under 2 ID numbers in the ERG 2024 yellow index."
+          }
+         ],
+         "text": "The load is not identified: as reported, it matches 2 candidates [ERG 2024 yellow index]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "ambiguity.candidates.0.label",
+           "tool": "protective_action_footprint",
+           "value": "Propane (UN1075), Guide 115"
+          },
+          {
+           "kind": "tool",
+           "path": "ambiguity.candidates.0.reach.text",
+           "tool": "protective_action_footprint",
+           "value": "800 m (1/2 mile)"
+          },
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p162",
+           "page": 162
+          }
+         ],
+         "text": "Propane (UN1075), Guide 115: up to 800 m (1/2 mile), downwind for a large spill [ERG 2024 Guide 115, PDF p. 162]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "ambiguity.candidates.1.label",
+           "tool": "protective_action_footprint",
+           "value": "Propane (UN1978), Guide 115"
+          },
+          {
+           "kind": "tool",
+           "path": "ambiguity.candidates.1.reach.text",
+           "tool": "protective_action_footprint",
+           "value": "800 m (1/2 mile)"
+          },
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p162",
+           "page": 162
+          }
+         ],
+         "text": "Propane (UN1978), Guide 115: up to 800 m (1/2 mile), downwind for a large spill [ERG 2024 Guide 115, PDF p. 162]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "ambiguity.governing",
+           "tool": "protective_action_footprint",
+           "value": 0
+          },
+          {
+           "kind": "tool",
+           "path": "ambiguity.candidates.0.label",
+           "tool": "protective_action_footprint",
+           "value": "Propane (UN1075), Guide 115"
+          },
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p9",
+           "page": 9
+          }
+         ],
+         "text": "The distances below are the largest, those of Propane (UN1075), Guide 115 [ERG 2024 Table of Markings, Labels and Placards introduction, PDF p. 9]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "guide.title",
+           "tool": "material_response_guidance",
+           "value": "Gases - Flammable (Including Refrigerated Liquids)"
+          },
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p162",
+           "page": 162
+          }
+         ],
+         "text": "Guide 115 is Gases - Flammable (Including Refrigerated Liquids) [ERG 2024 Guide 115, PDF p. 162]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "incident.container",
+           "tool": "assess_incident",
+           "value": "unknown"
+          },
+          {
+           "kind": "tool",
+           "path": "incident.spill_size",
+           "tool": "assess_incident",
+           "value": "large"
+          }
+         ],
+         "text": "The container is unknown; the spill is large [incident report]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "incident.fire_involved",
+           "tool": "assess_incident",
+           "value": false
+          },
+          {
+           "kind": "tool",
+           "path": "incident.where_spilled",
+           "tool": "assess_incident",
+           "value": "land"
+          }
+         ],
+         "text": "No fire is reported, and the spill is on land [incident report]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "zones.initial_isolation_zone.distance.text",
+           "tool": "protective_action_footprint",
+           "value": "100 m (330 feet)"
+          },
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p162",
+           "page": 162
+          }
+         ],
+         "text": "The initial isolation distance is 100 m (330 feet) in all directions, the guide's immediate precautionary measure [ERG 2024 Guide 115, PDF p. 162]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "zones.large_spill_downwind.distance.text",
+           "tool": "protective_action_footprint",
+           "value": "800 m (1/2 mile)"
+          },
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p162",
+           "page": 162
+          }
+         ],
+         "text": "For a large spill, the guide gives 800 m (1/2 mile) downwind for initial evacuation [ERG 2024 Guide 115, PDF p. 162]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "wind.direction_from_compass",
+           "tool": "protective_action_footprint",
+           "value": "west"
+          },
+          {
+           "kind": "tool",
+           "path": "wind.speed_kmh",
+           "tool": "protective_action_footprint",
+           "value": 13.0
+          },
+          {
+           "kind": "tool",
+           "path": "wind.band",
+           "tool": "protective_action_footprint",
+           "value": "moderate"
+          }
+         ],
+         "text": "Wind is from the west at 13 km/h (8.1 mph), a moderate wind [worked example wind, as of 10/20/2026 17:40 UTC]."
+        }
+       ]
+      },
+      {
+       "heading": "Flags",
+       "sentences": [
+        {
+         "flag": "FR-AMB-01",
+         "heading": "High: the load matches several ERG entries",
+         "priority": "high",
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "flag_inputs.candidate_count",
+           "tool": "protective_action_footprint",
+           "value": 2
+          }
+         ],
+         "role": "fired_on",
+         "terms": [
+          {
+           "input": "candidate_count",
+           "receipt": {
+            "kind": "tool",
+            "path": "flag_inputs.candidate_count",
+            "tool": "protective_action_footprint",
+            "value": 2
+           }
+          }
+         ],
+         "text": "Fired on: 2 candidates match the load as reported [ERG 2024 yellow index, PDF p. 32]."
+        },
+        {
+         "flag": "FR-AMB-01",
+         "priority": "high",
+         "quotation": true,
+         "quote": "If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions).",
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "all.0.consequence.quote",
+           "tool": "flag_evaluator",
+           "value": "If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions)."
+          },
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p9",
+           "page": 9
+          }
+         ],
+         "role": "consequence",
+         "text": "“If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions).” [ERG 2024, PDF p. 9]"
+        },
+        {
+         "flag": "FR-AMB-01",
+         "priority": "high",
+         "quotation": true,
+         "quote": "When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted.",
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "all.0.response.quote",
+           "tool": "flag_evaluator",
+           "value": "When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted."
+          },
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p9",
+           "page": 9
+          }
+         ],
+         "role": "response",
+         "text": "“When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted.” [ERG 2024, PDF p. 9]"
+        }
+       ]
+      },
+      {
+       "heading": "Population at risk",
+       "sentences": [
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "daytime.workers",
+           "tool": "population_at_risk",
+           "value": 10
+          }
+         ],
+         "text": "10 jobs are located in the footprint [LEHD LODES8 workplace area characteristics 2023, as of 12/03/2025]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "nighttime.total",
+           "tool": "population_at_risk",
+           "value": 49
+          }
+         ],
+         "text": "49 residents live in the footprint [2020 Census DHC, table P1, as of 04/01/2020]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "primary",
+           "tool": "population_at_risk",
+           "value": "day"
+          }
+         ],
+         "text": "It is daytime, so the daytime count comes first."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "nighttime.group_quarters.total",
+           "tool": "population_at_risk",
+           "value": 0
+          }
+         ],
+         "text": "0 residents live in group quarters in the footprint [2020 Census DHC, table P18, as of 04/01/2020]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "characteristics.age_65_and_over.estimate",
+           "tool": "population_at_risk",
+           "value": 1
+          },
+          {
+           "kind": "tool",
+           "path": "characteristics.age_65_and_over.moe",
+           "tool": "population_at_risk",
+           "value": 0
+          }
+         ],
+         "text": "1 person aged 65 years and over lives in the footprint (margin of error 0 people) [ACS 2020-2024 5-year, table B01001, as of 01/29/2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "characteristics.disability.estimate",
+           "tool": "population_at_risk",
+           "value": 0
+          },
+          {
+           "kind": "tool",
+           "path": "characteristics.disability.moe",
+           "tool": "population_at_risk",
+           "value": 0
+          }
+         ],
+         "text": "0 people with a disability live in the footprint (margin of error 0 people) [ACS 2020-2024 5-year, table B18101, as of 01/29/2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "characteristics.no_vehicle_households.estimate",
+           "tool": "population_at_risk",
+           "value": 0
+          },
+          {
+           "kind": "tool",
+           "path": "characteristics.no_vehicle_households.moe",
+           "tool": "population_at_risk",
+           "value": 0
+          }
+         ],
+         "text": "0 households in the footprint have no vehicle (margin of error 0 households) [ACS 2020-2024 5-year, table B08201, as of 01/29/2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "characteristics.limited_english_households.estimate",
+           "tool": "population_at_risk",
+           "value": 0
+          },
+          {
+           "kind": "tool",
+           "path": "characteristics.limited_english_households.moe",
+           "tool": "population_at_risk",
+           "value": 0
+          }
+         ],
+         "text": "0 households in the footprint are limited English speaking (margin of error 0 households) [ACS 2020-2024 5-year, table C16002, as of 01/29/2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "characteristics.group_quarters_population.estimate",
+           "tool": "population_at_risk",
+           "value": 0
+          },
+          {
+           "kind": "tool",
+           "path": "characteristics.group_quarters_population.moe",
+           "tool": "population_at_risk",
+           "value": 0
+          }
+         ],
+         "text": "0 people in the footprint live in group quarters (margin of error 0 people) [ACS 2020-2024 5-year, table B26001, as of 01/29/2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "resilience.count",
+           "tool": "population_at_risk",
+           "value": 0
+          }
+         ],
+         "text": "0 people in the footprint have three or more components of social vulnerability [Community Resilience Estimates 2024, as of 11/26/2025]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "resilience.rate",
+           "tool": "population_at_risk",
+           "value": 12.34
+          },
+          {
+           "kind": "tool",
+           "path": "resilience.universe",
+           "tool": "population_at_risk",
+           "value": 3
+          },
+          {
+           "kind": "tool",
+           "path": "resilience.national_rate",
+           "tool": "population_at_risk",
+           "value": 20.28
+          }
+         ],
+         "text": "That is 12.34 % of 3 people, against 20.28 % nationally [Community Resilience Estimates 2024, as of 11/26/2025]."
+        },
+        {
+         "limit": "briefing",
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "limits.0",
+           "tool": "population_at_risk",
+           "value": "Blocks partly inside the footprint count by the share of their area inside it."
+          }
+         ],
+         "text": "Blocks partly inside the footprint count by the share of their area inside it."
+        },
+        {
+         "limit": "briefing",
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "limits.5",
+           "tool": "population_at_risk",
+           "value": "Daytime counts jobs located in the footprint; a worker with two jobs counts twice."
+          }
+         ],
+         "text": "Daytime counts jobs located in the footprint; a worker with two jobs counts twice."
+        }
+       ]
+      },
+      {
+       "heading": "Facilities",
+       "sentences": [
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "counts.schools",
+           "tool": "facilities_in_footprint",
+           "value": 0
+          }
+         ],
+         "text": "0 schools are inside the footprint [USGS National Structures Dataset, College / University and Technical / Trade School and School, Data Refreshed October, 2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "counts.hospitals",
+           "tool": "facilities_in_footprint",
+           "value": 0
+          }
+         ],
+         "text": "0 hospitals are inside the footprint [USGS National Structures Dataset, Hospital / Medical Center, Data Refreshed October, 2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "counts.nursing_homes",
+           "tool": "facilities_in_footprint",
+           "value": 0
+          }
+         ],
+         "text": "0 nursing homes are inside the footprint [CMS Nursing Home Provider Information, as of 09/30/2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "counts.emergency_services",
+           "tool": "facilities_in_footprint",
+           "value": 0
+          }
+         ],
+         "text": "0 emergency services are inside the footprint [USGS National Structures Dataset, Ambulance Service and Fire Station / EMS Station and Police Station, Data Refreshed October, 2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "waterways.count",
+           "tool": "facilities_in_footprint",
+           "value": 0
+          }
+         ],
+         "text": "0 waterways are inside the footprint [USGS 3D Hydrography Program (3DHP), Data refreshed September 4, 2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "counts.rail_segments",
+           "tool": "facilities_in_footprint",
+           "value": 0
+          },
+          {
+           "kind": "tool",
+           "path": "rail.length_inside_m",
+           "tool": "facilities_in_footprint",
+           "value": 0
+          }
+         ],
+         "text": "0 rail segments are inside the footprint, 0 m of line [NTAD North American Rail Network Lines, updated 10/19/2026]."
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "counts.grade_crossings",
+           "tool": "facilities_in_footprint",
+           "value": 0
+          }
+         ],
+         "text": "0 grade crossings are inside the footprint [NTAD Railroad Grade Crossings (FRA National Highway-Rail Crossing Inventory), updated 10/09/2026]."
+        },
+        {
+         "limit": "briefing",
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "limits.0",
+           "tool": "facilities_in_footprint",
+           "value": "The structures dataset holds selected facilities, so a school, hospital, fire station or police station it omits is not listed [USGS National Structures Dataset service description]."
+          }
+         ],
+         "text": "The structures dataset holds selected facilities, so a school, hospital, fire station or police station it omits is not listed [USGS National Structures Dataset service description]."
+        }
+       ]
+      }
+     ],
+     "title": "Situation Summary and Health and Safety Briefing"
+    },
+    {
+     "blank": [
+      {
+       "field": "Name",
+       "label": "Incident Commander"
+      },
+      {
+       "field": "Position/Title",
+       "label": "Incident Commander"
+      },
+      {
+       "field": "Signature",
+       "label": "Incident Commander"
+      },
+      {
+       "field": "Date/Time",
+       "label": "Incident Commander"
+      }
+     ],
+     "fields": {
+      "draft_source": "hazbrief 0.1.0, from public data; not a substitute for the ERG or for ICS procedures",
+      "pack_versions": {
+       "cameo": "cameo3.1.0.1",
+       "cfr172": "cfr2025.1",
+       "erg": "erg2024.5",
+       "flag_rules": "hb18.1",
+       "hazard_classes": "dn001.1"
+      }
+     },
+     "filled_by": "partly",
+     "number": 6,
+     "receipt": "ics-201#b8:651-663",
+     "sections": [],
+     "title": "Prepared by"
+    },
+    {
+     "blank": [],
+     "filled_by": "hazbrief",
+     "number": 7,
+     "receipt": "ics-201#b18:815-846",
+     "sections": [
+      {
+       "heading": null,
+       "sentences": [
+        {
+         "quotation": true,
+         "quote": "Isolate spill or leak area for at least 100 meters (330 feet) in all directions.",
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "public_safety.10.text",
+           "tool": "material_response_guidance",
+           "value": "Isolate spill or leak area for at least 100 meters (330 feet) in all directions."
+          },
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p162",
+           "page": 162
+          }
+         ],
+         "text": "“Isolate spill or leak area for at least 100 meters (330 feet) in all directions.” [ERG 2024 Guide 115, PDF p. 162]"
+        },
+        {
+         "quotation": true,
+         "quote": "Consider initial downwind evacuation for at least 800 meters (1/2 mile).",
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "public_safety.12.text",
+           "tool": "material_response_guidance",
+           "value": "Consider initial downwind evacuation for at least 800 meters (1/2 mile)."
+          },
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p162",
+           "page": 162
+          }
+         ],
+         "text": "“Consider initial downwind evacuation for at least 800 meters (1/2 mile).” [ERG 2024 Guide 115, PDF p. 162]"
+        },
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "doc_id": "erg2024-en-pdf",
+           "kind": "document",
+           "locator": "erg2024-en-pdf#p286",
+           "page": 286
+          },
+          {
+           "kind": "tool",
+           "path": "zones.large_spill_downwind.distance.text",
+           "tool": "protective_action_footprint",
+           "value": "800 m (1/2 mile)"
+          }
+         ],
+         "text": "Choose evacuation or shelter-in-place for the downwind evacuation area from the ERG decision factors [ERG 2024 Protective Actions, PDF p. 286]."
+        }
+       ]
+      }
+     ],
+     "title": "Current and Planned Objectives"
+    },
+    {
+     "blank": [
+      {
+       "field": "Current and Planned Actions, Strategies, and Tactics",
+       "label": "Incident Commander"
+      }
+     ],
+     "filled_by": "Incident Commander",
+     "number": 8,
+     "receipt": "ics-201#b19:848-901",
+     "sections": [],
+     "title": "Current and Planned Actions, Strategies, and Tactics"
+    },
+    {
+     "blank": [
+      {
+       "field": "Current Organization",
+       "label": "Incident Commander"
+      }
+     ],
+     "filled_by": "Incident Commander",
+     "number": 9,
+     "receipt": "ics-201#b32:1097-1168",
+     "sections": [],
+     "title": "Current Organization"
+    },
+    {
+     "blank": [
+      {
+       "field": "Resource",
+       "label": "Incident Commander"
+      },
+      {
+       "field": "Resource Identifier",
+       "label": "Incident Commander"
+      },
+      {
+       "field": "Date/Time Ordered",
+       "label": "Incident Commander"
+      },
+      {
+       "field": "ETA",
+       "label": "Incident Commander"
+      },
+      {
+       "field": "Arrived",
+       "label": "Incident Commander"
+      },
+      {
+       "field": "Notes",
+       "label": "Incident Commander"
+      }
+     ],
+     "filled_by": "partly",
+     "number": 10,
+     "receipt": "ics-201#b47:1477-2221",
+     "sections": [
+      {
+       "heading": null,
+       "sentences": [
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "max_km",
+           "tool": "receiving_hospitals",
+           "value": 50.0
+          },
+          {
+           "kind": "tool",
+           "path": "hospitals.0.name",
+           "tool": "receiving_hospitals",
+           "value": "MERITUS MEDICAL CENTER"
+          },
+          {
+           "kind": "tool",
+           "path": "hospitals.1.name",
+           "tool": "receiving_hospitals",
+           "value": "WELLSPAN WAYNESBORO HOSPITAL"
+          },
+          {
+           "kind": "tool",
+           "path": "hospitals.2.name",
+           "tool": "receiving_hospitals",
+           "value": "WELLSPAN CHAMBERSBURG HOSPITAL"
+          },
+          {
+           "kind": "tool",
+           "path": "hospitals.3.name",
+           "tool": "receiving_hospitals",
+           "value": "FULTON COUNTY MEDICAL CENTER"
+          },
+          {
+           "kind": "tool",
+           "path": "hospitals.4.name",
+           "tool": "receiving_hospitals",
+           "value": "BERKELEY MEDICAL CENTER"
+          },
+          {
+           "kind": "tool",
+           "path": "hospitals.5.name",
+           "tool": "receiving_hospitals",
+           "value": "MARTINSBURG VA MEDICAL CENTER"
+          },
+          {
+           "kind": "tool",
+           "path": "hospitals.6.name",
+           "tool": "receiving_hospitals",
+           "value": "VALLEY HEALTH WAR MEMORIAL HOSPITAL"
+          },
+          {
+           "kind": "tool",
+           "path": "hospitals.7.name",
+           "tool": "receiving_hospitals",
+           "value": "FREDERICK HEALTH HOSPITAL"
+          },
+          {
+           "kind": "tool",
+           "path": "hospitals.8.name",
+           "tool": "receiving_hospitals",
+           "value": "GETTYSBURG HOSPITAL"
+          },
+          {
+           "kind": "tool",
+           "path": "hospitals.9.name",
+           "tool": "receiving_hospitals",
+           "value": "JEFFERSON MEDICAL CENTER"
+          }
+         ],
+         "text": "10 hospitals with emergency services are ranked within 50 km of the spill; receiving_hospitals lists every one [CMS Hospital General Information, as of 07/22/2026]."
+        }
+       ],
+       "table": {
+        "columns": [
+         "Hospital",
+         "Beds",
+         "km",
+         "Bearing",
+         "Crosses zone"
+        ],
+        "rows": [
+         {
+          "cells": [
+           "Meritus Medical Center",
+           "271",
+           "11.7",
+           "162° (S)",
+           "not assessed"
+          ],
+          "hospital": "MERITUS MEDICAL CENTER",
+          "receipts": [
+           {
+            "kind": "tool",
+            "path": "hospitals.0.name",
+            "tool": "receiving_hospitals",
+            "value": "MERITUS MEDICAL CENTER"
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.0.beds",
+            "tool": "receiving_hospitals",
+            "value": 271
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.0.distance_km",
+            "tool": "receiving_hospitals",
+            "value": 11.7
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.0.bearing_deg",
+            "tool": "receiving_hospitals",
+            "value": 162
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.0.direction",
+            "tool": "receiving_hospitals",
+            "value": "S"
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.0.crosses_footprint",
+            "tool": "receiving_hospitals",
+            "value": null
+           }
+          ]
+         },
+         {
+          "cells": [
+           "WellSpan Waynesboro Hospital",
+           "57",
+           "13.6",
+           "76° (E)",
+           "not assessed"
+          ],
+          "hospital": "WELLSPAN WAYNESBORO HOSPITAL",
+          "receipts": [
+           {
+            "kind": "tool",
+            "path": "hospitals.1.name",
+            "tool": "receiving_hospitals",
+            "value": "WELLSPAN WAYNESBORO HOSPITAL"
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.1.beds",
+            "tool": "receiving_hospitals",
+            "value": 57
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.1.distance_km",
+            "tool": "receiving_hospitals",
+            "value": 13.6
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.1.bearing_deg",
+            "tool": "receiving_hospitals",
+            "value": 76
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.1.direction",
+            "tool": "receiving_hospitals",
+            "value": "E"
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.1.crosses_footprint",
+            "tool": "receiving_hospitals",
+            "value": null
+           }
+          ]
+         },
+         {
+          "cells": [
+           "WellSpan Chambersburg Hospital",
+           "274",
+           "24.5",
+           "15° (N)",
+           "not assessed"
+          ],
+          "hospital": "WELLSPAN CHAMBERSBURG HOSPITAL",
+          "receipts": [
+           {
+            "kind": "tool",
+            "path": "hospitals.2.name",
+            "tool": "receiving_hospitals",
+            "value": "WELLSPAN CHAMBERSBURG HOSPITAL"
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.2.beds",
+            "tool": "receiving_hospitals",
+            "value": 274
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.2.distance_km",
+            "tool": "receiving_hospitals",
+            "value": 24.5
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.2.bearing_deg",
+            "tool": "receiving_hospitals",
+            "value": 15
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.2.direction",
+            "tool": "receiving_hospitals",
+            "value": "N"
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.2.crosses_footprint",
+            "tool": "receiving_hospitals",
+            "value": null
+           }
+          ]
+         },
+         {
+          "cells": [
+           "Fulton County Medical Center",
+           "21",
+           "34.3",
+           "315° (NW)",
+           "not assessed"
+          ],
+          "hospital": "FULTON COUNTY MEDICAL CENTER",
+          "receipts": [
+           {
+            "kind": "tool",
+            "path": "hospitals.3.name",
+            "tool": "receiving_hospitals",
+            "value": "FULTON COUNTY MEDICAL CENTER"
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.3.beds",
+            "tool": "receiving_hospitals",
+            "value": 21
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.3.distance_km",
+            "tool": "receiving_hospitals",
+            "value": 34.3
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.3.bearing_deg",
+            "tool": "receiving_hospitals",
+            "value": 315
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.3.direction",
+            "tool": "receiving_hospitals",
+            "value": "NW"
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.3.crosses_footprint",
+            "tool": "receiving_hospitals",
+            "value": null
+           }
+          ]
+         },
+         {
+          "cells": [
+           "Berkeley Medical Center",
+           "241",
+           "35",
+           "219° (SW)",
+           "not assessed"
+          ],
+          "hospital": "BERKELEY MEDICAL CENTER",
+          "receipts": [
+           {
+            "kind": "tool",
+            "path": "hospitals.4.name",
+            "tool": "receiving_hospitals",
+            "value": "BERKELEY MEDICAL CENTER"
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.4.beds",
+            "tool": "receiving_hospitals",
+            "value": 241
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.4.distance_km",
+            "tool": "receiving_hospitals",
+            "value": 35.0
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.4.bearing_deg",
+            "tool": "receiving_hospitals",
+            "value": 219
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.4.direction",
+            "tool": "receiving_hospitals",
+            "value": "SW"
+           },
+           {
+            "kind": "tool",
+            "path": "hospitals.4.crosses_footprint",
+            "tool": "receiving_hospitals",
+            "value": null
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "heading": null,
+       "sentences": [
+        {
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "basis.1.tag",
+           "tool": "receiving_hospitals",
+           "value": "[CMS Provider of Services, hospital and non-hospital, as of 2026-10-16]"
+          }
+         ],
+         "text": "Beds come from the CMS Provider of Services file [CMS Provider of Services, hospital and non-hospital, as of 10/16/2026]."
+        },
+        {
+         "limit": "briefing",
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "limits.0",
+           "tool": "receiving_hospitals",
+           "value": "Distances are straight lines from the spill, not drive times."
+          }
+         ],
+         "text": "Distances are straight lines from the spill, not drive times."
+        },
+        {
+         "limit": "briefing",
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "limits.6",
+           "tool": "receiving_hospitals",
+           "value": "Roads are not read, so a flagged hospital may have a route around the zone."
+          }
+         ],
+         "text": "Roads are not read, so a flagged hospital may have a route around the zone."
+        },
+        {
+         "limit": "briefing",
+         "quotation": false,
+         "receipts": [
+          {
+           "kind": "tool",
+           "path": "limits.8",
+           "tool": "receiving_hospitals",
+           "value": "252 hospitals could not be placed by address and are not ranked, of 4,495 hospitals with emergency services [CMS Hospital General Information, as of 2026-07-22]."
+          }
+         ],
+         "text": "252 hospitals could not be placed by address and are not ranked, of 4,495 hospitals with emergency services [CMS Hospital General Information, as of 07/22/2026]."
+        }
+       ]
+      }
+     ],
+     "title": "Resource Summary"
+    }
+   ],
+   "errors": [],
+   "flags": {
+    "all": [
+     {
+      "consequence": {
+       "doc_id": "erg2024-en-pdf",
+       "page": 9,
+       "quote": "If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions).",
+       "text_layer": "pdf_text"
+      },
+      "indication": false,
+      "kind": "identification.ambiguous_material",
+      "merged": [],
+      "priority": "high",
+      "receipts": [
+       {
+        "doc_id": "erg2024-en-pdf",
+        "page": 9,
+        "quote": "If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions).",
+        "supports": "Several candidates are answered by the one needing the most protective action.",
+        "text_layer": "pdf_text"
+       },
+       {
+        "doc_id": "erg2024-en-pdf",
+        "page": 290,
+        "quote": "If you do not know the shipping name and Table 1 lists more than one name for the same ID number, use the entry with the largest distances.",
+        "supports": "The same rule for Table 1's names under one ID number.",
+        "text_layer": "pdf_text"
+       },
+       {
+        "doc_id": "erg2024-en-pdf",
+        "page": 9,
+        "quote": "When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted.",
+        "supports": "Identifying the material settles the candidates.",
+        "text_layer": "pdf_text"
+       }
+      ],
+      "response": {
+       "doc_id": "erg2024-en-pdf",
+       "page": 9,
+       "quote": "When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted.",
+       "text_layer": "pdf_text"
+      },
+      "rule_id": "FR-AMB-01",
+      "sentence": "The load as reported matches 2 candidates. The distances shown are the largest among them, those of Propane (UN1075), Guide 115."
+     }
+    ],
+    "briefing": {
+     "rule_ids": [
+      "FR-AMB-01"
+     ],
+     "withheld": 0
+    }
+   },
+   "form": "Incident Briefing (ICS 201)",
+   "geojson": {
+    "features": [
+     {
+      "geometry": {
+       "coordinates": [
+        -77.724,
+        39.722
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "zone": "spill"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        [
+         [
+          -77.722834,
+          39.722
+         ],
+         [
+          -77.722838,
+          39.722078
+         ],
+         [
+          -77.722851,
+          39.722156
+         ],
+         [
+          -77.722873,
+          39.722233
+         ],
+         [
+          -77.722904,
+          39.722308
+         ],
+         [
+          -77.722943,
+          39.722381
+         ],
+         [
+          -77.72299,
+          39.72245
+         ],
+         [
+          -77.723045,
+          39.722517
+         ],
+         [
+          -77.723107,
+          39.722579
+         ],
+         [
+          -77.723175,
+          39.722637
+         ],
+         [
+          -77.72325,
+          39.72269
+         ],
+         [
+          -77.723331,
+          39.722738
+         ],
+         [
+          -77.723417,
+          39.72278
+         ],
+         [
+          -77.723507,
+          39.722816
+         ],
+         [
+          -77.723601,
+          39.722846
+         ],
+         [
+          -77.723698,
+          39.72287
+         ],
+         [
+          -77.723797,
+          39.722887
+         ],
+         [
+          -77.723898,
+          39.722897
+         ],
+         [
+          -77.724,
+          39.722901
+         ],
+         [
+          -77.724102,
+          39.722897
+         ],
+         [
+          -77.724203,
+          39.722887
+         ],
+         [
+          -77.724302,
+          39.72287
+         ],
+         [
+          -77.724399,
+          39.722846
+         ],
+         [
+          -77.724493,
+          39.722816
+         ],
+         [
+          -77.724583,
+          39.72278
+         ],
+         [
+          -77.724669,
+          39.722738
+         ],
+         [
+          -77.72475,
+          39.72269
+         ],
+         [
+          -77.724825,
+          39.722637
+         ],
+         [
+          -77.724893,
+          39.722579
+         ],
+         [
+          -77.724955,
+          39.722517
+         ],
+         [
+          -77.72501,
+          39.72245
+         ],
+         [
+          -77.725057,
+          39.722381
+         ],
+         [
+          -77.725096,
+          39.722308
+         ],
+         [
+          -77.725127,
+          39.722233
+         ],
+         [
+          -77.725149,
+          39.722156
+         ],
+         [
+          -77.725162,
+          39.722078
+         ],
+         [
+          -77.725166,
+          39.722
+         ],
+         [
+          -77.725162,
+          39.721921
+         ],
+         [
+          -77.725149,
+          39.721844
+         ],
+         [
+          -77.725127,
+          39.721767
+         ],
+         [
+          -77.725096,
+          39.721692
+         ],
+         [
+          -77.725057,
+          39.721619
+         ],
+         [
+          -77.72501,
+          39.72155
+         ],
+         [
+          -77.724955,
+          39.721483
+         ],
+         [
+          -77.724893,
+          39.721421
+         ],
+         [
+          -77.724825,
+          39.721363
+         ],
+         [
+          -77.72475,
+          39.72131
+         ],
+         [
+          -77.724669,
+          39.721262
+         ],
+         [
+          -77.724583,
+          39.72122
+         ],
+         [
+          -77.724493,
+          39.721184
+         ],
+         [
+          -77.724399,
+          39.721154
+         ],
+         [
+          -77.724302,
+          39.72113
+         ],
+         [
+          -77.724203,
+          39.721113
+         ],
+         [
+          -77.724102,
+          39.721103
+         ],
+         [
+          -77.724,
+          39.721099
+         ],
+         [
+          -77.723898,
+          39.721103
+         ],
+         [
+          -77.723797,
+          39.721113
+         ],
+         [
+          -77.723698,
+          39.72113
+         ],
+         [
+          -77.723601,
+          39.721154
+         ],
+         [
+          -77.723507,
+          39.721184
+         ],
+         [
+          -77.723417,
+          39.72122
+         ],
+         [
+          -77.723331,
+          39.721262
+         ],
+         [
+          -77.72325,
+          39.72131
+         ],
+         [
+          -77.723175,
+          39.721363
+         ],
+         [
+          -77.723107,
+          39.721421
+         ],
+         [
+          -77.723045,
+          39.721483
+         ],
+         [
+          -77.72299,
+          39.72155
+         ],
+         [
+          -77.722943,
+          39.721619
+         ],
+         [
+          -77.722904,
+          39.721692
+         ],
+         [
+          -77.722873,
+          39.721767
+         ],
+         [
+          -77.722851,
+          39.721844
+         ],
+         [
+          -77.722838,
+          39.721921
+         ],
+         [
+          -77.722834,
+          39.722
+         ]
+        ]
+       ],
+       "type": "Polygon"
+      },
+      "properties": {
+       "candidate": 0,
+       "candidate_label": "Propane (UN1075), Guide 115",
+       "governing": true,
+       "radius_m": 100,
+       "tag": "[ERG 2024 Guide 115]",
+       "text": "100 m (330 feet)",
+       "zone": "initial_isolation_zone"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        [
+         [
+          -77.722834,
+          39.722
+         ],
+         [
+          -77.722838,
+          39.722078
+         ],
+         [
+          -77.722851,
+          39.722156
+         ],
+         [
+          -77.722873,
+          39.722233
+         ],
+         [
+          -77.722904,
+          39.722308
+         ],
+         [
+          -77.722943,
+          39.722381
+         ],
+         [
+          -77.72299,
+          39.72245
+         ],
+         [
+          -77.723045,
+          39.722517
+         ],
+         [
+          -77.723107,
+          39.722579
+         ],
+         [
+          -77.723175,
+          39.722637
+         ],
+         [
+          -77.72325,
+          39.72269
+         ],
+         [
+          -77.723331,
+          39.722738
+         ],
+         [
+          -77.723417,
+          39.72278
+         ],
+         [
+          -77.723507,
+          39.722816
+         ],
+         [
+          -77.723601,
+          39.722846
+         ],
+         [
+          -77.723698,
+          39.72287
+         ],
+         [
+          -77.723797,
+          39.722887
+         ],
+         [
+          -77.723898,
+          39.722897
+         ],
+         [
+          -77.724,
+          39.722901
+         ],
+         [
+          -77.724102,
+          39.722897
+         ],
+         [
+          -77.724203,
+          39.722887
+         ],
+         [
+          -77.724302,
+          39.72287
+         ],
+         [
+          -77.724399,
+          39.722846
+         ],
+         [
+          -77.724493,
+          39.722816
+         ],
+         [
+          -77.724583,
+          39.72278
+         ],
+         [
+          -77.724669,
+          39.722738
+         ],
+         [
+          -77.72475,
+          39.72269
+         ],
+         [
+          -77.724825,
+          39.722637
+         ],
+         [
+          -77.724893,
+          39.722579
+         ],
+         [
+          -77.724955,
+          39.722517
+         ],
+         [
+          -77.72501,
+          39.72245
+         ],
+         [
+          -77.725057,
+          39.722381
+         ],
+         [
+          -77.725096,
+          39.722308
+         ],
+         [
+          -77.725127,
+          39.722233
+         ],
+         [
+          -77.725149,
+          39.722156
+         ],
+         [
+          -77.725162,
+          39.722078
+         ],
+         [
+          -77.725166,
+          39.722
+         ],
+         [
+          -77.725162,
+          39.721921
+         ],
+         [
+          -77.725149,
+          39.721844
+         ],
+         [
+          -77.725127,
+          39.721767
+         ],
+         [
+          -77.725096,
+          39.721692
+         ],
+         [
+          -77.725057,
+          39.721619
+         ],
+         [
+          -77.72501,
+          39.72155
+         ],
+         [
+          -77.724955,
+          39.721483
+         ],
+         [
+          -77.724893,
+          39.721421
+         ],
+         [
+          -77.724825,
+          39.721363
+         ],
+         [
+          -77.72475,
+          39.72131
+         ],
+         [
+          -77.724669,
+          39.721262
+         ],
+         [
+          -77.724583,
+          39.72122
+         ],
+         [
+          -77.724493,
+          39.721184
+         ],
+         [
+          -77.724399,
+          39.721154
+         ],
+         [
+          -77.724302,
+          39.72113
+         ],
+         [
+          -77.724203,
+          39.721113
+         ],
+         [
+          -77.724102,
+          39.721103
+         ],
+         [
+          -77.724,
+          39.721099
+         ],
+         [
+          -77.723898,
+          39.721103
+         ],
+         [
+          -77.723797,
+          39.721113
+         ],
+         [
+          -77.723698,
+          39.72113
+         ],
+         [
+          -77.723601,
+          39.721154
+         ],
+         [
+          -77.723507,
+          39.721184
+         ],
+         [
+          -77.723417,
+          39.72122
+         ],
+         [
+          -77.723331,
+          39.721262
+         ],
+         [
+          -77.72325,
+          39.72131
+         ],
+         [
+          -77.723175,
+          39.721363
+         ],
+         [
+          -77.723107,
+          39.721421
+         ],
+         [
+          -77.723045,
+          39.721483
+         ],
+         [
+          -77.72299,
+          39.72155
+         ],
+         [
+          -77.722943,
+          39.721619
+         ],
+         [
+          -77.722904,
+          39.721692
+         ],
+         [
+          -77.722873,
+          39.721767
+         ],
+         [
+          -77.722851,
+          39.721844
+         ],
+         [
+          -77.722838,
+          39.721921
+         ],
+         [
+          -77.722834,
+          39.722
+         ]
+        ]
+       ],
+       "type": "Polygon"
+      },
+      "properties": {
+       "candidate": 1,
+       "candidate_label": "Propane (UN1978), Guide 115",
+       "governing": false,
+       "radius_m": 100,
+       "tag": "[ERG 2024 Guide 115]",
+       "text": "100 m (330 feet)",
+       "zone": "initial_isolation_zone"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        [
+         -77.747327,
+         39.721998
+        ],
+        [
+         -77.724,
+         39.722
+        ]
+       ],
+       "type": "LineString"
+      },
+      "properties": {
+       "as_of": "2026-10-20T13:40:00-04:00",
+       "from_deg": 270.0,
+       "layer": "wind",
+       "speed_kmh": 13.0,
+       "text": "from the west at 13 km/h"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        -77.681654,
+        39.622182
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "beds": 271,
+       "crosses_footprint": null,
+       "distance_km": 11.7,
+       "layer": "receiving_hospital",
+       "name": "MERITUS MEDICAL CENTER"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        -77.569766,
+        39.751609
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "beds": 57,
+       "crosses_footprint": null,
+       "distance_km": 13.6,
+       "layer": "receiving_hospital",
+       "name": "WELLSPAN WAYNESBORO HOSPITAL"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        -77.647366,
+        39.934874
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "beds": 274,
+       "crosses_footprint": null,
+       "distance_km": 24.5,
+       "layer": "receiving_hospital",
+       "name": "WELLSPAN CHAMBERSBURG HOSPITAL"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        -78.009133,
+        39.938483
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "beds": 21,
+       "crosses_footprint": null,
+       "distance_km": 34.3,
+       "layer": "receiving_hospital",
+       "name": "FULTON COUNTY MEDICAL CENTER"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        -77.980455,
+        39.477472
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "beds": 241,
+       "crosses_footprint": null,
+       "distance_km": 35.0,
+       "layer": "receiving_hospital",
+       "name": "BERKELEY MEDICAL CENTER"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        -77.913363,
+        39.413779
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "beds": 559,
+       "crosses_footprint": null,
+       "distance_km": 37.9,
+       "layer": "receiving_hospital",
+       "name": "MARTINSBURG VA MEDICAL CENTER"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        -78.2004,
+        39.6424
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "beds": 25,
+       "crosses_footprint": null,
+       "distance_km": 41.8,
+       "layer": "receiving_hospital",
+       "name": "VALLEY HEALTH WAR MEMORIAL HOSPITAL"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        -77.413937,
+        39.423633
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "beds": 248,
+       "crosses_footprint": null,
+       "distance_km": 42.5,
+       "layer": "receiving_hospital",
+       "name": "FREDERICK HEALTH HOSPITAL"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        -77.233777,
+        39.823334
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "beds": 76,
+       "crosses_footprint": null,
+       "distance_km": 43.5,
+       "layer": "receiving_hospital",
+       "name": "GETTYSBURG HOSPITAL"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        -77.858571,
+        39.296348
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "beds": 25,
+       "crosses_footprint": null,
+       "distance_km": 48.7,
+       "layer": "receiving_hospital",
+       "name": "JEFFERSON MEDICAL CENTER"
+      },
+      "type": "Feature"
+     }
+    ],
+    "type": "FeatureCollection"
+   },
+   "map_svg": {
+    "chars": 172778,
+    "sha256": "cd78f03bbaf559dc4a747a6ee583f9e229afadc3b5097e8c935b15d77a171e32"
+   },
+   "markdown": "# Incident Briefing (ICS 201)\n\nDraft for the Incident Commander to review, correct and sign. hazbrief assembled it from public data; no model wrote any sentence.\n\n## 1. Incident Name\n\n- Incident Name: Unresolved: Propane (UN1075, Guide 115) or Propane (UN1978, Guide 115) release, State Line, PA, 10/21/2026\n\n## 2. Incident Number\n\nBlank: the Incident Commander writes this block.\n\n## 3. Date/Time Initiated\n\n- Date: 10/21/2026\n- Time: 14:00 EDT (18:00 UTC)\n- As given: 2026-10-21T14:00:00-04:00\n\n- It is daytime at the spill: sunrise 10/21/2026 07:27 EDT (11:27 UTC), sunset 10/21/2026 18:22 EDT (22:22 UTC) [ERG 2024 Table 1 how to use, sunrise and sunset by the NOAA solar equations].\n- Local times are in America/New_York, the zone NWS gives for the spill point [NWS api.weather.gov points].\n\n## 4. Map/Sketch\n\n![Block 4 sketch: the protective action footprint, the wind, the facilities and the receiving hospitals over TIGERweb roads](ics201_block4.svg)\n\n- Check against the PHMSA ERG app: https://www.phmsa.dot.gov/erg/material?materialName=Propane&materialUn=1075&lat=39.722&lon=-77.724&windDir=270&spillSize=large&timeOfDay=day&whereSpilled=land&windSpeed=moderate&showMap=true.\n- The app may use ERG 2020 distances.\n- This footprint uses ERG 2024.\n\n## 5. Situation Summary and Health and Safety Briefing\n\n### Material and protective distances\n\n- The spill is in State Line CDP, Franklin County, PA [TIGERweb Census Current (2026), January 1, 2026 vintage].\n- The load is not identified: as reported, it matches 2 candidates [ERG 2024 yellow index].\n- Propane (UN1075), Guide 115: up to 800 m (1/2 mile), downwind for a large spill [ERG 2024 Guide 115, PDF p. 162].\n- Propane (UN1978), Guide 115: up to 800 m (1/2 mile), downwind for a large spill [ERG 2024 Guide 115, PDF p. 162].\n- The distances below are the largest, those of Propane (UN1075), Guide 115 [ERG 2024 Table of Markings, Labels and Placards introduction, PDF p. 9].\n- Guide 115 is Gases - Flammable (Including Refrigerated Liquids) [ERG 2024 Guide 115, PDF p. 162].\n- The container is unknown; the spill is large [incident report].\n- No fire is reported, and the spill is on land [incident report].\n- The initial isolation distance is 100 m (330 feet) in all directions, the guide's immediate precautionary measure [ERG 2024 Guide 115, PDF p. 162].\n- For a large spill, the guide gives 800 m (1/2 mile) downwind for initial evacuation [ERG 2024 Guide 115, PDF p. 162].\n- Wind is from the west at 13 km/h (8.1 mph), a moderate wind [worked example wind, as of 10/20/2026 17:40 UTC].\n\n### Flags\n\n- **High: the load matches several ERG entries**\n  - Fired on: 2 candidates match the load as reported [ERG 2024 yellow index, PDF p. 32].\n  - Consequence: “If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions).” [ERG 2024, PDF p. 9]\n  - Response: “When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted.” [ERG 2024, PDF p. 9]\n\n### Population at risk\n\n- 10 jobs are located in the footprint [LEHD LODES8 workplace area characteristics 2023, as of 12/03/2025].\n- 49 residents live in the footprint [2020 Census DHC, table P1, as of 04/01/2020].\n- It is daytime, so the daytime count comes first.\n- 0 residents live in group quarters in the footprint [2020 Census DHC, table P18, as of 04/01/2020].\n- 1 person aged 65 years and over lives in the footprint (margin of error 0 people) [ACS 2020-2024 5-year, table B01001, as of 01/29/2026].\n- 0 people with a disability live in the footprint (margin of error 0 people) [ACS 2020-2024 5-year, table B18101, as of 01/29/2026].\n- 0 households in the footprint have no vehicle (margin of error 0 households) [ACS 2020-2024 5-year, table B08201, as of 01/29/2026].\n- 0 households in the footprint are limited English speaking (margin of error 0 households) [ACS 2020-2024 5-year, table C16002, as of 01/29/2026].\n- 0 people in the footprint live in group quarters (margin of error 0 people) [ACS 2020-2024 5-year, table B26001, as of 01/29/2026].\n- 0 people in the footprint have three or more components of social vulnerability [Community Resilience Estimates 2024, as of 11/26/2025].\n- That is 12.34 % of 3 people, against 20.28 % nationally [Community Resilience Estimates 2024, as of 11/26/2025].\n- Blocks partly inside the footprint count by the share of their area inside it.\n- Daytime counts jobs located in the footprint; a worker with two jobs counts twice.\n\n### Facilities\n\n- 0 schools are inside the footprint [USGS National Structures Dataset, College / University and Technical / Trade School and School, Data Refreshed October, 2026].\n- 0 hospitals are inside the footprint [USGS National Structures Dataset, Hospital / Medical Center, Data Refreshed October, 2026].\n- 0 nursing homes are inside the footprint [CMS Nursing Home Provider Information, as of 09/30/2026].\n- 0 emergency services are inside the footprint [USGS National Structures Dataset, Ambulance Service and Fire Station / EMS Station and Police Station, Data Refreshed October, 2026].\n- 0 waterways are inside the footprint [USGS 3D Hydrography Program (3DHP), Data refreshed September 4, 2026].\n- 0 rail segments are inside the footprint, 0 m of line [NTAD North American Rail Network Lines, updated 10/19/2026].\n- 0 grade crossings are inside the footprint [NTAD Railroad Grade Crossings (FRA National Highway-Rail Crossing Inventory), updated 10/09/2026].\n- The structures dataset holds selected facilities, so a school, hospital, fire station or police station it omits is not listed [USGS National Structures Dataset service description].\n\n## 6. Prepared by\n\n- Draft source: hazbrief 0.1.0, from public data; not a substitute for the ERG or for ICS procedures\n- Pack versions: erg erg2024.5; flag_rules hb18.1; cfr172 cfr2025.1; cameo cameo3.1.0.1; hazard_classes dn001.1\n\n- Name: blank; Incident Commander writes it.\n- Position/Title: blank; Incident Commander writes it.\n- Signature: blank; Incident Commander writes it.\n- Date/Time: blank; Incident Commander writes it.\n\n## 7. Current and Planned Objectives\n\n- “Isolate spill or leak area for at least 100 meters (330 feet) in all directions.” [ERG 2024 Guide 115, PDF p. 162]\n- “Consider initial downwind evacuation for at least 800 meters (1/2 mile).” [ERG 2024 Guide 115, PDF p. 162]\n- Choose evacuation or shelter-in-place for the downwind evacuation area from the ERG decision factors [ERG 2024 Protective Actions, PDF p. 286].\n\n## 8. Current and Planned Actions, Strategies, and Tactics\n\nBlank: the Incident Commander writes this block.\n\n## 9. Current Organization\n\nBlank: the Incident Commander writes this block.\n\n## 10. Resource Summary\n\n- 10 hospitals with emergency services are ranked within 50 km of the spill; receiving_hospitals lists every one [CMS Hospital General Information, as of 07/22/2026].\n\n| Hospital | Beds | km | Bearing | Crosses zone |\n|---|---|---|---|---|\n| Meritus Medical Center | 271 | 11.7 | 162° (S) | not assessed |\n| WellSpan Waynesboro Hospital | 57 | 13.6 | 76° (E) | not assessed |\n| WellSpan Chambersburg Hospital | 274 | 24.5 | 15° (N) | not assessed |\n| Fulton County Medical Center | 21 | 34.3 | 315° (NW) | not assessed |\n| Berkeley Medical Center | 241 | 35 | 219° (SW) | not assessed |\n\n- Beds come from the CMS Provider of Services file [CMS Provider of Services, hospital and non-hospital, as of 10/16/2026].\n- Distances are straight lines from the spill, not drive times.\n- Roads are not read, so a flagged hospital may have a route around the zone.\n- 252 hospitals could not be placed by address and are not ranked, of 4,495 hospitals with emergency services [CMS Hospital General Information, as of 07/22/2026].\n\n- Resource: blank; Incident Commander writes it.\n- Resource Identifier: blank; Incident Commander writes it.\n- Date/Time Ordered: blank; Incident Commander writes it.\n- ETA: blank; Incident Commander writes it.\n- Arrived: blank; Incident Commander writes it.\n- Notes: blank; Incident Commander writes it.\n\n## Annex A: Data limits and sources\n\n### Limits\n\n- The load as reported matches 2 candidates [ERG 2024 yellow index]. The distances shown are the largest among them, those of Propane (UN1075), Guide 115 [ERG 2024 Table of Markings, Labels and Placards introduction].\n- Guide 115 gives 800 m (1/2 mile) downwind for a large spill, and no zone shape [ERG 2024 Guide 115]. The footprint draws none; a shape drawn for it is not the ERG's.\n- verify_in_erg_app opens PHMSA's ERG app at this material, spill size, period, surface, wind and point. Compare its drawing with this footprint. Its link specification is the ERG 2020 app's. The app may draw ERG 2020 distances; this footprint uses ERG 2024.\n- The container is unknown, so the link names no container. The ERG app then takes the first container it lists. This footprint takes the container with the largest distances.\n- Blocks partly inside the footprint count by the share of their area inside it.\n- Area weighting assumes people are spread evenly across each block, block group and tract.\n- Derived margins of error assume no covariance between cells, so they are approximate.\n- A partial area's margin of error is scaled by the same area share as its estimate.\n- Census block counts carry disclosure avoidance noise, so a small block's count can be off.\n- Daytime counts jobs located in the footprint; a worker with two jobs counts twice.\n- Daytime does not add residents who stay home during the day.\n- Disability, vehicle and group quarters estimates are tract estimates, the finest the survey publishes.\n- The resilience count has no margin of error; the Census Data API publishes none.\n- The structures dataset holds selected facilities, so a school, hospital, fire station or police station it omits is not listed [USGS National Structures Dataset service description].\n- Nursing homes are those certified by Medicare or Medicaid; assisted living facilities are not listed [CMS Nursing Home Provider Information].\n- People in nursing facilities, correctional facilities, college housing and other group quarters are counted by population_at_risk, not here.\n- A waterway counts once per named stream or 3DHP mainstem, and its reaches inside are summed [USGS 3D Hydrography Program].\n- Drinking water intakes are not published, so waterways are listed, not intakes [Safe Drinking Water Act section 1433].\n- Rail lines count by segment between network nodes, so one line can count more than once [NTAD North American Rail Network Lines].\n- Grade crossings are the at-grade crossings of the FRA inventory, public and private; bridges and underpasses are not counted [NTAD Railroad Grade Crossings].\n- A facility just outside the footprint is not listed unless buffer_m is set.\n- Distances are straight lines from the spill, not drive times.\n- Trauma level, burn care and toxicology capability are not in these datasets; confirm capability with each hospital.\n- Hospitals listed are those registered with Medicare that report emergency services [CMS Hospital General Information].\n- Emergency services means the hospital reports providing them, not that it has capacity now [CMS Hospital General Information].\n- Bed counts are the Provider of Services bed counts, not beds available now [CMS Provider of Services].\n- A hospital is flagged when the straight line to it from the upwind edge crosses the protective action zone.\n- Roads are not read, so a flagged hospital may have a route around the zone.\n- The footprint has no protective action zone, so distances are measured from the spill, with no crossing test.\n- 252 hospitals could not be placed by address and are not ranked, of 4,495 hospitals with emergency services [CMS Hospital General Information, as of 07/22/2026].\n- unplaced_in_states names the unplaced hospitals in each state listed.\n- Each line is printed as the ERG prints it, with its PDF page, as a quotation.\n- The incident selects the lines; `selection.omitted` names every line left out and why.\n- The guide refers to the General First Aid section, which is not reprinted here.\n\n### Sources\n\n| Source | Used for |\n|---|---|\n| [ERG 2024 yellow index, UN1075] | ID number, names and guide |\n| [ERG 2024 Table 1 how to use] | spill size |\n| [ERG 2024 Table 1 how to use, sunrise and sunset by the NOAA solar equations] | day or night |\n| [49 CFR 172.101 Hazardous Materials Table, UN1075] | hazard class and label codes |\n| [ERG 2024 Guide 115] | guide title |\n| [worked example wind, as of 10/20/2026 17:40 UTC] | wind speed and direction |\n| [ERG 2024 Table 3 wind categories] | wind band |\n| [ERG 2024 yellow index] | candidates |\n| [ERG 2024 Table of Markings, Labels and Placards introduction] | governing candidate |\n| [TIGERweb Census 2020 tabulation geography, January 1, 2020 vintage] | geography and area shares |\n| [2020 Census DHC, table P1, as of 04/01/2020] | nighttime residents |\n| [2020 Census DHC, table P18, as of 04/01/2020] | group quarters by type |\n| [LEHD LODES8 workplace area characteristics 2023, as of 12/03/2025] | daytime workforce |\n| [ACS 2020-2024 5-year, table B01001, as of 01/29/2026] | age 65 and over |\n| [ACS 2020-2024 5-year, table B18101, as of 01/29/2026] | disability |\n| [ACS 2020-2024 5-year, table B08201, as of 01/29/2026] | no vehicle households |\n| [ACS 2020-2024 5-year, table C16002, as of 01/29/2026] | limited english households |\n| [ACS 2020-2024 5-year, table B26001, as of 01/29/2026] | group quarters population |\n| [Community Resilience Estimates 2024, as of 11/26/2025] | resilience |\n| [USGS National Structures Dataset, College / University and Technical / Trade School and School, Data Refreshed October, 2026] | schools |\n| [USGS National Structures Dataset, Hospital / Medical Center, Data Refreshed October, 2026] | hospitals |\n| [USGS National Structures Dataset, Ambulance Service and Fire Station / EMS Station and Police Station, Data Refreshed October, 2026] | emergency services |\n| [CMS Nursing Home Provider Information, as of 09/30/2026] | nursing homes |\n| [USGS 3D Hydrography Program (3DHP), Data refreshed September 4, 2026] | waterways |\n| [NTAD North American Rail Network Lines, updated 10/19/2026] | rail lines |\n| [NTAD Railroad Grade Crossings (FRA National Highway-Rail Crossing Inventory), updated 10/09/2026] | grade crossings |\n| [CMS Hospital General Information, as of 07/22/2026] | hospitals and emergency services |\n| [CMS Provider of Services, hospital and non-hospital, as of 10/16/2026] | beds |\n| [Census Geocoder, benchmark Public_AR_Current; USGS National Structures Dataset by address, as of 10/21/2026] | hospital locations |\n| [ERG 2024 General First Aid] | General First Aid |\n| [TIGERweb Census Current (2026), January 1, 2026 vintage] | place and county at the spill |\n| [TIGERweb Transportation, as of 10/22/2026] | Block 4 sketch roads and railroads |\n| [NWS api.weather.gov points] | the spill point's time zone |\n",
+   "pack_versions": {
+    "cameo": "cameo3.1.0.1",
+    "cfr172": "cfr2025.1",
+    "erg": "erg2024.5",
+    "flag_rules": "hb18.1",
+    "hazard_classes": "dn001.1"
+   },
+   "receipt_counts": {
+    "1": {
+     "document_receipts": 0,
+     "quotations": 0,
+     "sentences": 1,
+     "table_rows": 0,
+     "tool_receipts": 4,
+     "without_receipt": 0
+    },
+    "10": {
+     "document_receipts": 0,
+     "quotations": 0,
+     "sentences": 5,
+     "table_rows": 5,
+     "tool_receipts": 15,
+     "without_receipt": 0
+    },
+    "5": {
+     "document_receipts": 8,
+     "quotations": 2,
+     "sentences": 35,
+     "table_rows": 0,
+     "tool_receipts": 53,
+     "without_receipt": 0
+    },
+    "7": {
+     "document_receipts": 3,
+     "quotations": 2,
+     "sentences": 3,
+     "table_rows": 0,
+     "tool_receipts": 3,
+     "without_receipt": 0
+    }
+   },
+   "style_findings": [],
+   "tool_outputs": {
+    "flag_evaluator": {
+     "all": [
+      {
+       "consequence": {
+        "doc_id": "erg2024-en-pdf",
+        "page": 9,
+        "quote": "If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions).",
+        "text_layer": "pdf_text"
+       },
+       "indication": false,
+       "kind": "identification.ambiguous_material",
+       "merged": [],
+       "priority": "high",
+       "receipts": [
+        {
+         "doc_id": "erg2024-en-pdf",
+         "page": 9,
+         "quote": "If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions).",
+         "supports": "Several candidates are answered by the one needing the most protective action.",
+         "text_layer": "pdf_text"
+        },
+        {
+         "doc_id": "erg2024-en-pdf",
+         "page": 290,
+         "quote": "If you do not know the shipping name and Table 1 lists more than one name for the same ID number, use the entry with the largest distances.",
+         "supports": "The same rule for Table 1's names under one ID number.",
+         "text_layer": "pdf_text"
+        },
+        {
+         "doc_id": "erg2024-en-pdf",
+         "page": 9,
+         "quote": "When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted.",
+         "supports": "Identifying the material settles the candidates.",
+         "text_layer": "pdf_text"
+        }
+       ],
+       "response": {
+        "doc_id": "erg2024-en-pdf",
+        "page": 9,
+        "quote": "When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted.",
+        "text_layer": "pdf_text"
+       },
+       "rule_id": "FR-AMB-01",
+       "sentence": "The load as reported matches 2 candidates. The distances shown are the largest among them, those of Propane (UN1075), Guide 115."
+      }
+     ],
+     "briefing": {
+      "rule_ids": [
+       "FR-AMB-01"
+      ],
+      "withheld": 0
+     },
+     "rule_candidate": {},
+     "value_tools": {
+      "candidate_count": "protective_action_footprint",
+      "fire_involved": "protective_action_footprint",
+      "footprint_present": "protective_action_footprint",
+      "governing_candidate": "protective_action_footprint",
+      "gq_population": "population_at_risk",
+      "grade_crossings": "facilities_in_footprint",
+      "guide_designated_p": "protective_action_footprint",
+      "guide_page": "protective_action_footprint",
+      "hospitals_in_footprint": "facilities_in_footprint",
+      "limited_english_households": "population_at_risk",
+      "limited_english_households_moe": "population_at_risk",
+      "national_pred3_pe": "population_at_risk",
+      "no_vehicle_households": "population_at_risk",
+      "no_vehicle_households_moe": "population_at_risk",
+      "period": "protective_action_footprint",
+      "pred3_e": "population_at_risk",
+      "pred3_m": "population_at_risk",
+      "pred3_pe": "population_at_risk",
+      "rail_features_in_footprint": "facilities_in_footprint",
+      "schools_in_footprint": "facilities_in_footprint",
+      "spill_size": "protective_action_footprint",
+      "table3_listed": "protective_action_footprint",
+      "tih": "protective_action_footprint",
+      "waterways_in_footprint": "facilities_in_footprint",
+      "where_spilled": "protective_action_footprint",
+      "where_spilled_matters": "protective_action_footprint"
+     },
+     "values": {
+      "candidate_count": 2,
+      "fire_involved": false,
+      "footprint_present": true,
+      "governing_candidate": "Propane (UN1075), Guide 115",
+      "gq_population": 0,
+      "grade_crossings": 0,
+      "guide_designated_p": false,
+      "guide_page": "115",
+      "hospitals_in_footprint": 0,
+      "limited_english_households": 0,
+      "limited_english_households_moe": 0,
+      "national_pred3_pe": 20.28,
+      "no_vehicle_households": 0,
+      "no_vehicle_households_moe": 0,
+      "period": "daytime",
+      "pred3_e": 0,
+      "pred3_m": null,
+      "pred3_pe": 12.34,
+      "rail_features_in_footprint": 0,
+      "schools_in_footprint": 0,
+      "spill_size": "large",
+      "table3_listed": false,
+      "tih": false,
+      "waterways_in_footprint": 0,
+      "where_spilled": "land",
+      "where_spilled_matters": false
+     }
+    },
+    "nws_time_zone": {
+     "tag": "[NWS api.weather.gov points]",
+     "time_zone": "America/New_York",
+     "url": "https://api.weather.gov/points/39.722,-77.724"
+    },
+    "tigerweb_basemap": {
+     "bytes": 123563,
+     "content_type": "image/png",
+     "description": "Primary roads, secondary roads, local roads, and railroads",
+     "frame": {
+      "height": 1200,
+      "srid": 3857,
+      "width": 960,
+      "xmax": -8644378.61,
+      "xmin": -8657896.41,
+      "ymax": 4826921.66,
+      "ymin": 4810024.41
+     },
+     "layers": [
+      "Primary Roads",
+      "Secondary Roads 578k scale",
+      "Secondary Roads 289_144k scale",
+      "Secondary Roads 72_1k scale",
+      "Local Roads 72k scale",
+      "Local Roads",
+      "Railroads"
+     ],
+     "retrieved": "2026-10-22",
+     "service": "TIGERweb/Transportation/MapServer",
+     "sha256": "a582dacc1787f2b925478625d13154073833d9d93fe4703a2b8a23f5893c9bd0",
+     "tag": "[TIGERweb Transportation, as of 10/22/2026]",
+     "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/export?bbox=-8657896.41%2C4810024.41%2C-8644378.61%2C4826921.66&bboxSR=3857&imageSR=3857&size=960%2C1200&dpi=96&format=png8&transparent=false&layers=show%3A2%2C4%2C5%2C6%2C7%2C8%2C9&f=image"
+    },
+    "tigerweb_place": {
+     "county": {
+      "basename": "Franklin",
+      "geoid": "42055",
+      "layer": "Counties",
+      "name": "Franklin County",
+      "state": "PA",
+      "state_fips": "42"
+     },
+     "errors": [],
+     "outline": {
+      "coordinates": [
+       [
+        [
+         -77.526357,
+         40.045768
+        ],
+        [
+         -77.527805,
+         40.047292
+        ],
+        [
+         -77.532505,
+         40.048739
+        ],
+        [
+         -77.530495,
+         40.059232
+        ],
+        [
+         -77.531794,
+         40.060101
+        ],
+        [
+         -77.531572,
+         40.061185
+        ],
+        [
+         -77.532974,
+         40.062831
+        ],
+        [
+         -77.533351,
+         40.065923
+        ],
+        [
+         -77.532265,
+         40.067169
+        ],
+        [
+         -77.535652,
+         40.070659
+        ],
+        [
+         -77.541948,
+         40.069843
+        ],
+        [
+         -77.539902,
+         40.07409
+        ],
+        [
+         -77.540516,
+         40.074885
+        ],
+        [
+         -77.542315,
+         40.074885
+        ],
+        [
+         -77.540285,
+         40.076765
+        ],
+        [
+         -77.545654,
+         40.078003
+        ],
+        [
+         -77.540885,
+         40.079875
+        ],
+        [
+         -77.541683,
+         40.081235
+        ],
+        [
+         -77.543686,
+         40.082288
+        ],
+        [
+         -77.542448,
+         40.083844
+        ],
+        [
+         -77.546925,
+         40.086312
+        ],
+        [
+         -77.543084,
+         40.087195
+        ],
+        [
+         -77.542955,
+         40.089597
+        ],
+        [
+         -77.550126,
+         40.091035
+        ],
+        [
+         -77.550847,
+         40.093215
+        ],
+        [
+         -77.553883,
+         40.095883
+        ],
+        [
+         -77.559311,
+         40.093934
+        ],
+        [
+         -77.560511,
+         40.094356
+        ],
+        [
+         -77.561588,
+         40.098335
+        ],
+        [
+         -77.557914,
+         40.103097
+        ],
+        [
+         -77.561016,
+         40.108358
+        ],
+        [
+         -77.562621,
+         40.114168
+        ],
+        [
+         -77.562871,
+         40.119286
+        ],
+        [
+         -77.564466,
+         40.119791
+        ],
+        [
+         -77.564638,
+         40.121734
+        ],
+        [
+         -77.566497,
+         40.122936
+        ],
+        [
+         -77.568601,
+         40.126077
+        ],
+        [
+         -77.575623,
+         40.128283
+        ],
+        [
+         -77.581745,
+         40.134106
+        ],
+        [
+         -77.590077,
+         40.133819
+        ],
+        [
+         -77.592838,
+         40.135245
+        ],
+        [
+         -77.592239,
+         40.139109
+        ],
+        [
+         -77.593256,
+         40.142293
+        ],
+        [
+         -77.595974,
+         40.143576
+        ],
+        [
+         -77.599016,
+         40.14716
+        ],
+        [
+         -77.60147,
+         40.147861
+        ],
+        [
+         -77.604218,
+         40.15145
+        ],
+        [
+         -77.608753,
+         40.153301
+        ],
+        [
+         -77.610174,
+         40.157699
+        ],
+        [
+         -77.612918,
+         40.161234
+        ],
+        [
+         -77.613737,
+         40.163862
+        ],
+        [
+         -77.614303,
+         40.166858
+        ],
+        [
+         -77.613642,
+         40.170161
+        ],
+        [
+         -77.616385,
+         40.17248
+        ],
+        [
+         -77.623052,
+         40.183248
+        ],
+        [
+         -77.627552,
+         40.188665
+        ],
+        [
+         -77.605022,
+         40.205513
+        ],
+        [
+         -77.604888,
+         40.224922
+        ],
+        [
+         -77.602717,
+         40.2282
+        ],
+        [
+         -77.606612,
+         40.229719
+        ],
+        [
+         -77.609171,
+         40.232753
+        ],
+        [
+         -77.612967,
+         40.233236
+        ],
+        [
+         -77.616167,
+         40.232616
+        ],
+        [
+         -77.639893,
+         40.217678
+        ],
+        [
+         -77.642831,
+         40.21814
+        ],
+        [
+         -77.643394,
+         40.223165
+        ],
+        [
+         -77.645325,
+         40.222494
+        ],
+        [
+         -77.645884,
+         40.22381
+        ],
+        [
+         -77.647642,
+         40.222477
+        ],
+        [
+         -77.650156,
+         40.227538
+        ],
+        [
+         -77.648878,
+         40.233319
+        ],
+        [
+         -77.645402,
+         40.238928
+        ],
+        [
+         -77.64999,
+         40.247957
+        ],
+        [
+         -77.645128,
+         40.253754
+        ],
+        [
+         -77.64509,
+         40.255143
+        ],
+        [
+         -77.648164,
+         40.257227
+        ],
+        [
+         -77.65276,
+         40.25753
+        ],
+        [
+         -77.665494,
+         40.252049
+        ],
+        [
+         -77.667711,
+         40.252001
+        ],
+        [
+         -77.671155,
+         40.257569
+        ],
+        [
+         -77.670534,
+         40.258052
+        ],
+        [
+         -77.670921,
+         40.258622
+        ],
+        [
+         -77.656416,
+         40.270393
+        ],
+        [
+         -77.659871,
+         40.274805
+        ],
+        [
+         -77.664275,
+         40.278227
+        ],
+        [
+         -77.665195,
+         40.279471
+        ],
+        [
+         -77.664195,
+         40.280479
+        ],
+        [
+         -77.67181,
+         40.289885
+        ],
+        [
+         -77.680159,
+         40.280623
+        ],
+        [
+         -77.698954,
+         40.265775
+        ],
+        [
+         -77.708389,
+         40.261348
+        ],
+        [
+         -77.713476,
+         40.256512
+        ],
+        [
+         -77.724197,
+         40.250124
+        ],
+        [
+         -77.737632,
+         40.237405
+        ],
+        [
+         -77.768325,
+         40.204129
+        ],
+        [
+         -77.796386,
+         40.166814
+        ],
+        [
+         -77.805177,
+         40.153006
+        ],
+        [
+         -77.815866,
+         40.132442
+        ],
+        [
+         -77.827993,
+         40.116764
+        ],
+        [
+         -77.859356,
+         40.065207
+        ],
+        [
+         -77.862272,
+         40.062238
+        ],
+        [
+         -77.867991,
+         40.060225
+        ],
+        [
+         -77.873773,
+         40.055841
+        ],
+        [
+         -77.876655,
+         40.054661
+        ],
+        [
+         -77.883793,
+         40.048308
+        ],
+        [
+         -77.893592,
+         40.033092
+        ],
+        [
+         -77.9001,
+         40.027938
+        ],
+        [
+         -77.904105,
+         40.023571
+        ],
+        [
+         -77.905402,
+         40.021209
+        ],
+        [
+         -77.904983,
+         40.020076
+        ],
+        [
+         -77.905632,
+         40.018726
+        ],
+        [
+         -77.914329,
+         40.010303
+        ],
+        [
+         -77.918602,
+         40.004646
+        ],
+        [
+         -77.92102,
+         40.00023
+        ],
+        [
+         -77.921089,
+         39.996219
+        ],
+        [
+         -77.919792,
+         39.992652
+        ],
+        [
+         -77.921508,
+         39.988246
+        ],
+        [
+         -77.924529,
+         39.984966
+        ],
+        [
+         -77.926589,
+         39.97919
+        ],
+        [
+         -77.929985,
+         39.974979
+        ],
+        [
+         -77.929985,
+         39.973789
+        ],
+        [
+         -77.932411,
+         39.972393
+        ],
+        [
+         -77.933845,
+         39.965415
+        ],
+        [
+         -77.935027,
+         39.962394
+        ],
+        [
+         -77.936553,
+         39.961124
+        ],
+        [
+         -77.937789,
+         39.948944
+        ],
+        [
+         -77.943092,
+         39.942287
+        ],
+        [
+         -77.947273,
+         39.93494
+        ],
+        [
+         -77.953171,
+         39.931633
+        ],
+        [
+         -77.955511,
+         39.928861
+        ],
+        [
+         -77.956168,
+         39.926091
+        ],
+        [
+         -77.954247,
+         39.922778
+        ],
+        [
+         -77.956479,
+         39.914906
+        ],
+        [
+         -77.958814,
+         39.911929
+        ],
+        [
+         -77.961661,
+         39.903463
+        ],
+        [
+         -77.964675,
+         39.899887
+        ],
+        [
+         -77.965257,
+         39.894272
+        ],
+        [
+         -77.967376,
+         39.892395
+        ],
+        [
+         -77.973991,
+         39.874317
+        ],
+        [
+         -77.982612,
+         39.857852
+        ],
+        [
+         -77.992775,
+         39.843727
+        ],
+        [
+         -77.995437,
+         39.838016
+        ],
+        [
+         -78.0,
+         39.831882
+        ],
+        [
+         -78.0027,
+         39.826599
+        ],
+        [
+         -78.014701,
+         39.811698
+        ],
+        [
+         -78.019096,
+         39.807098
+        ],
+        [
+         -78.028503,
+         39.7999
+        ],
+        [
+         -78.036499,
+         39.791999
+        ],
+        [
+         -78.0372,
+         39.79
+        ],
+        [
+         -78.0531,
+         39.770301
+        ],
+        [
+         -78.063003,
+         39.759799
+        ],
+        [
+         -78.069297,
+         39.748298
+        ],
+        [
+         -78.099403,
+         39.722099
+        ],
+        [
+         -77.874719,
+         39.722217
+        ],
+        [
+         -77.724115,
+         39.720894
+        ],
+        [
+         -77.459134,
+         39.719984
+        ],
+        [
+         -77.459417,
+         39.735423
+        ],
+        [
+         -77.461545,
+         39.76571
+        ],
+        [
+         -77.463194,
+         39.820847
+        ],
+        [
+         -77.471085,
+         39.944077
+        ],
+        [
+         -77.454109,
+         39.972432
+        ],
+        [
+         -77.461654,
+         39.976831
+        ],
+        [
+         -77.465783,
+         39.984436
+        ],
+        [
+         -77.470972,
+         39.986845
+        ],
+        [
+         -77.474392,
+         39.991937
+        ],
+        [
+         -77.478313,
+         39.991641
+        ],
+        [
+         -77.480021,
+         39.992312
+        ],
+        [
+         -77.484331,
+         39.995584
+        ],
+        [
+         -77.489232,
+         40.001333
+        ],
+        [
+         -77.495403,
+         40.005145
+        ],
+        [
+         -77.499626,
+         40.010133
+        ],
+        [
+         -77.500114,
+         40.013446
+        ],
+        [
+         -77.509208,
+         40.024934
+        ],
+        [
+         -77.50782,
+         40.028968
+        ],
+        [
+         -77.512472,
+         40.033768
+        ],
+        [
+         -77.515114,
+         40.03457
+        ],
+        [
+         -77.519367,
+         40.03934
+        ],
+        [
+         -77.519147,
+         40.042445
+        ],
+        [
+         -77.517171,
+         40.044446
+        ],
+        [
+         -77.518514,
+         40.045625
+        ],
+        [
+         -77.521992,
+         40.046582
+        ],
+        [
+         -77.526357,
+         40.045768
+        ]
+       ]
+      ],
+      "type": "Polygon"
+     },
+     "place": {
+      "basename": "State Line",
+      "geoid": "4273848",
+      "layer": "Census Designated Places",
+      "name": "State Line CDP"
+     },
+     "service": "TIGERweb/tigerWMS_Current/MapServer",
+     "tag": "[TIGERweb Census Current (2026), January 1, 2026 vintage]",
+     "urls": [
+      "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/identify?geometry=-77.724%2C39.722&geometryType=esriGeometryPoint&sr=4326&layers=all%3A28%2C30&tolerance=0&mapExtent=-77.734000%2C39.712000%2C-77.714000%2C39.732000&imageDisplay=400%2C400%2C96&returnGeometry=false&f=json",
+      "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/82/query?geometry=-77.724%2C39.722&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=GEOID%2CSTATE%2CCOUNTY%2CNAME%2CBASENAME&returnGeometry=true&outSR=4326&maxAllowableOffset=0.0005&geometryPrecision=6&f=geojson"
+     ],
+     "vintage": "Census Current (2026), January 1, 2026 vintage"
+    }
+   }
+  },
+  "facilities_in_footprint": {
+   "basis": [
+    {
+     "locator": null,
+     "supports": "schools",
+     "tag": "[USGS National Structures Dataset, College / University and Technical / Trade School and School, Data Refreshed October, 2026]"
+    },
+    {
+     "locator": null,
+     "supports": "hospitals",
+     "tag": "[USGS National Structures Dataset, Hospital / Medical Center, Data Refreshed October, 2026]"
+    },
+    {
+     "locator": null,
+     "supports": "emergency_services",
+     "tag": "[USGS National Structures Dataset, Ambulance Service and Fire Station / EMS Station and Police Station, Data Refreshed October, 2026]"
+    },
+    {
+     "locator": null,
+     "supports": "nursing_homes",
+     "tag": "[CMS Nursing Home Provider Information, as of 2026-09-30]"
+    },
+    {
+     "locator": null,
+     "supports": "waterways",
+     "tag": "[USGS 3D Hydrography Program (3DHP), Data refreshed September 4, 2026]"
+    },
+    {
+     "locator": null,
+     "supports": "rail lines",
+     "tag": "[NTAD North American Rail Network Lines, updated 2026-10-19]"
+    },
+    {
+     "locator": null,
+     "supports": "grade crossings",
+     "tag": "[NTAD Railroad Grade Crossings (FRA National Highway-Rail Crossing Inventory), updated 2026-10-09]"
+    }
+   ],
+   "buffer_m": 0,
+   "counts": {
+    "emergency_services": 0,
+    "grade_crossings": 0,
+    "hospitals": 0,
+    "nursing_homes": 0,
+    "rail_segments": 0,
+    "schools": 0,
+    "waterways": 0
+   },
+   "emergency_services": [],
+   "flag_inputs": {
+    "grade_crossings": 0,
+    "hospitals_in_footprint": 0,
+    "rail_features_in_footprint": 0,
+    "schools_in_footprint": 0,
+    "waterways_in_footprint": 0
+   },
+   "group_quarters": "Residents of nursing facilities, correctional facilities, college housing and other group quarters are counted by population_at_risk (nighttime.group_quarters), by census block. This tool names facilities and counts no people.",
+   "hospitals": [],
+   "limits": [
+    "The structures dataset holds selected facilities, so a school, hospital, fire station or police station it omits is not listed [USGS National Structures Dataset service description].",
+    "Nursing homes are those certified by Medicare or Medicaid; assisted living facilities are not listed [CMS Nursing Home Provider Information].",
+    "People in nursing facilities, correctional facilities, college housing and other group quarters are counted by population_at_risk, not here.",
+    "A waterway counts once per named stream or 3DHP mainstem, and its reaches inside are summed [USGS 3D Hydrography Program].",
+    "Drinking water intakes are not published, so waterways are listed, not intakes [Safe Drinking Water Act section 1433].",
+    "Rail lines count by segment between network nodes, so one line can count more than once [NTAD North American Rail Network Lines].",
+    "Grade crossings are the at-grade crossings of the FRA inventory, public and private; bridges and underpasses are not counted [NTAD Railroad Grade Crossings].",
+    "A facility just outside the footprint is not listed unless buffer_m is set."
+   ],
+   "nursing_homes": [],
+   "query": {
+    "emergency_services": {
+     "candidates": 0,
+     "envelope": "-77.725166,39.721099,-77.722834,39.722901",
+     "layers": [
+      15,
+      16,
+      18
+     ],
+     "service": "structures/MapServer",
+     "urls": [
+      "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/15/query?where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson",
+      "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/16/query?where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson",
+      "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/18/query?where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+     ]
+    },
+    "hospitals": {
+     "candidates": 0,
+     "envelope": "-77.725166,39.721099,-77.722834,39.722901",
+     "layers": [
+      14
+     ],
+     "service": "structures/MapServer",
+     "urls": [
+      "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/14/query?where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+     ]
+    },
+    "rail": {
+     "candidates": 0,
+     "envelope": "-77.725166,39.721099,-77.722834,39.722901",
+     "layers": [
+      "NTAD_North_American_Rail_Network_Lines/FeatureServer/0",
+      "NTAD_Railroad_Grade_Crossings/FeatureServer/0"
+     ],
+     "urls": [
+      "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_North_American_Rail_Network_Lines/FeatureServer/0/query?where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CFRAARCID%2CRROWNER1%2CSUBDIV%2CYARDNAME%2CNET%2CTRACKS%2CSTATEAB&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson",
+      "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0/query?where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CCrossingID%2CCrossingPosition%2CCrossingType%2CHighwayName%2CSTREET%2CRailroadCode%2CLATITUDE%2CLongitude&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+     ]
+    },
+    "schools": {
+     "candidates": 0,
+     "envelope": "-77.725166,39.721099,-77.722834,39.722901",
+     "layers": [
+      21,
+      22,
+      23
+     ],
+     "service": "structures/MapServer",
+     "urls": [
+      "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/21/query?where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson",
+      "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/22/query?where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson",
+      "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/23/query?where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+     ]
+    },
+    "waterways": {
+     "candidates": 0,
+     "envelope": "-77.725166,39.721099,-77.722834,39.722901",
+     "layers": [
+      50,
+      60
+     ],
+     "service": "3DHP_all/MapServer",
+     "urls": [
+      "https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer/50/query?maxAllowableOffset=1e-05&where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cid3dhp%2Cgnisidlabel%2Cfeaturetypelabel%2Cmainstemid%2Clengthkm&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=1000&f=geojson",
+      "https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer/60/query?maxAllowableOffset=1e-05&where=1%3D1&geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cid3dhp%2Cgnisidlabel%2Cfeaturetypelabel%2Careasqkm&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=100&f=geojson"
+     ]
+    }
+   },
+   "rail": {
+    "as_of": {
+     "crossings": "2026-10-09",
+     "lines": "2026-10-19"
+    },
+    "crossings": [],
+    "length_inside_m": 0,
+    "owners": [],
+    "segments": [],
+    "source": {
+     "crossings": "NTAD Railroad Grade Crossings (FRA National Highway-Rail Crossing Inventory)",
+     "lines": "NTAD North American Rail Network Lines"
+    }
+   },
+   "reason": "No school, hospital, nursing home, emergency service, waterway or rail feature in these sources lies inside the footprint.",
+   "schools": [],
+   "waterways": {
+    "as_of": "Data refreshed September 4, 2026",
+    "count": 0,
+    "flowlines": [],
+    "in_isolation_zone": false,
+    "named": [],
+    "source": "USGS 3D Hydrography Program (3DHP)",
+    "waterbodies": []
+   },
+   "zones": [
+    "isolation"
+   ]
+  },
+  "material_response_guidance": {
+   "candidates": [
+    "UN1075",
+    "UN1978"
+   ],
+   "error": "'propane' is listed under 2 ID numbers in the ERG 2024 yellow index.",
+   "hint": "Give the ID number from the placard or shipping paper. Meanwhile protective_action_footprint and build_ics_201 draw every candidate and print the largest distances."
+  },
+  "population_at_risk": {
+   "basis": [
+    {
+     "locator": null,
+     "supports": "geography and area shares",
+     "tag": "[TIGERweb Census 2020 tabulation geography, January 1, 2020 vintage]"
+    },
+    {
+     "locator": null,
+     "supports": "nighttime residents",
+     "tag": "[2020 Census DHC, table P1, as of 04/01/2020]"
+    },
+    {
+     "locator": null,
+     "supports": "group quarters by type",
+     "tag": "[2020 Census DHC, table P18, as of 04/01/2020]"
+    },
+    {
+     "locator": null,
+     "supports": "daytime workforce",
+     "tag": "[LEHD LODES8 workplace area characteristics 2023, as of 12/03/2025]"
+    },
+    {
+     "locator": null,
+     "supports": "age_65_and_over",
+     "tag": "[ACS 2020-2024 5-year, table B01001, as of 01/29/2026]"
+    },
+    {
+     "locator": null,
+     "supports": "disability",
+     "tag": "[ACS 2020-2024 5-year, table B18101, as of 01/29/2026]"
+    },
+    {
+     "locator": null,
+     "supports": "no_vehicle_households",
+     "tag": "[ACS 2020-2024 5-year, table B08201, as of 01/29/2026]"
+    },
+    {
+     "locator": null,
+     "supports": "limited_english_households",
+     "tag": "[ACS 2020-2024 5-year, table C16002, as of 01/29/2026]"
+    },
+    {
+     "locator": null,
+     "supports": "group_quarters_population",
+     "tag": "[ACS 2020-2024 5-year, table B26001, as of 01/29/2026]"
+    },
+    {
+     "locator": null,
+     "supports": "resilience",
+     "tag": "[Community Resilience Estimates 2024, as of 11/26/2025]"
+    }
+   ],
+   "characteristics": {
+    "age_65_and_over": {
+     "as_of": "2026-01-29",
+     "cells": [
+      "B01001_020E",
+      "B01001_021E",
+      "B01001_022E",
+      "B01001_023E",
+      "B01001_024E",
+      "B01001_025E",
+      "B01001_044E",
+      "B01001_045E",
+      "B01001_046E",
+      "B01001_047E",
+      "B01001_048E",
+      "B01001_049E"
+     ],
+     "counts": "people aged 65 and over",
+     "estimate": 1,
+     "geography": "block_group",
+     "missing_units": [],
+     "moe": 0,
+     "moe_method": "derived: square root of the sum of squared component MOEs, zero covariance (ACS General Handbook 2020, chapter 8, formula 1); among zero-estimate cells only the largest MOE (OnTheMap for Emergency Management statistical methodology); a partial unit's estimate and MOE scaled by its area share; approximate",
+     "source": "ACS 2020-2024 5-year, table B01001",
+     "suppressed_cells": 0,
+     "table": "B01001",
+     "units": {
+      "partial": 2,
+      "total": 2,
+      "whole": 0
+     },
+     "vintage": "ACS 2020-2024 5-year"
+    },
+    "disability": {
+     "as_of": "2026-01-29",
+     "cells": [
+      "B18101_004E",
+      "B18101_007E",
+      "B18101_010E",
+      "B18101_013E",
+      "B18101_016E",
+      "B18101_019E",
+      "B18101_023E",
+      "B18101_026E",
+      "B18101_029E",
+      "B18101_032E",
+      "B18101_035E",
+      "B18101_038E"
+     ],
+     "counts": "civilian noninstitutionalized people with a disability",
+     "estimate": 0,
+     "geography": "tract",
+     "missing_units": [],
+     "moe": 0,
+     "moe_method": "derived: square root of the sum of squared component MOEs, zero covariance (ACS General Handbook 2020, chapter 8, formula 1); among zero-estimate cells only the largest MOE (OnTheMap for Emergency Management statistical methodology); a partial unit's estimate and MOE scaled by its area share; approximate",
+     "source": "ACS 2020-2024 5-year, table B18101",
+     "suppressed_cells": 0,
+     "table": "B18101",
+     "units": {
+      "partial": 2,
+      "total": 2,
+      "whole": 0
+     },
+     "vintage": "ACS 2020-2024 5-year"
+    },
+    "group_quarters_population": {
+     "as_of": "2026-01-29",
+     "cells": [
+      "B26001_001E"
+     ],
+     "counts": "people living in group quarters",
+     "estimate": 0,
+     "geography": "tract",
+     "missing_units": [],
+     "moe": 0,
+     "moe_method": "derived: square root of the sum of squared component MOEs, zero covariance (ACS General Handbook 2020, chapter 8, formula 1); among zero-estimate cells only the largest MOE (OnTheMap for Emergency Management statistical methodology); a partial unit's estimate and MOE scaled by its area share; approximate",
+     "source": "ACS 2020-2024 5-year, table B26001",
+     "suppressed_cells": 0,
+     "table": "B26001",
+     "units": {
+      "partial": 2,
+      "total": 2,
+      "whole": 0
+     },
+     "vintage": "ACS 2020-2024 5-year"
+    },
+    "limited_english_households": {
+     "as_of": "2026-01-29",
+     "cells": [
+      "C16002_004E",
+      "C16002_007E",
+      "C16002_010E",
+      "C16002_013E"
+     ],
+     "counts": "limited English speaking households",
+     "estimate": 0,
+     "geography": "block_group",
+     "missing_units": [],
+     "moe": 0,
+     "moe_method": "derived: square root of the sum of squared component MOEs, zero covariance (ACS General Handbook 2020, chapter 8, formula 1); among zero-estimate cells only the largest MOE (OnTheMap for Emergency Management statistical methodology); a partial unit's estimate and MOE scaled by its area share; approximate",
+     "source": "ACS 2020-2024 5-year, table C16002",
+     "suppressed_cells": 0,
+     "table": "C16002",
+     "units": {
+      "partial": 2,
+      "total": 2,
+      "whole": 0
+     },
+     "vintage": "ACS 2020-2024 5-year"
+    },
+    "no_vehicle_households": {
+     "as_of": "2026-01-29",
+     "cells": [
+      "B08201_002E"
+     ],
+     "counts": "households with no vehicle available",
+     "estimate": 0,
+     "geography": "tract",
+     "missing_units": [],
+     "moe": 0,
+     "moe_method": "derived: square root of the sum of squared component MOEs, zero covariance (ACS General Handbook 2020, chapter 8, formula 1); among zero-estimate cells only the largest MOE (OnTheMap for Emergency Management statistical methodology); a partial unit's estimate and MOE scaled by its area share; approximate",
+     "source": "ACS 2020-2024 5-year, table B08201",
+     "suppressed_cells": 0,
+     "table": "B08201",
+     "units": {
+      "partial": 2,
+      "total": 2,
+      "whole": 0
+     },
+     "vintage": "ACS 2020-2024 5-year"
+    }
+   },
+   "day_night": {
+    "given": true,
+    "period": "day"
+   },
+   "daytime": {
+    "as_of": "2025-12-03",
+    "counts": "jobs located in the footprint (LODES C000, total number of jobs)",
+    "files": [
+     "pa_wac_S000_JT00_2023.csv.gz"
+    ],
+    "from_partial_blocks": 10,
+    "missing_states": [],
+    "share_from_partial_blocks": 1.0,
+    "source": "LEHD LODES8 workplace area characteristics 2023 (S000, JT00), LODES 8.4",
+    "vintage": "LODES 8.4, 2023",
+    "workers": 10
+   },
+   "flag_inputs": {
+    "gq_population": 0,
+    "limited_english_households": 0,
+    "limited_english_households_moe": 0,
+    "national_pred3_pe": 20.28,
+    "no_vehicle_households": 0,
+    "no_vehicle_households_moe": 0,
+    "pred3_e": 0,
+    "pred3_m": null,
+    "pred3_pe": 12.34
+   },
+   "geography": {
+    "block_groups": {
+     "partial": 2,
+     "total": 2,
+     "whole": 0
+    },
+    "blocks": {
+     "partial": 7,
+     "total": 8,
+     "whole": 1
+    },
+    "footprint_area_km2": 0.031,
+    "query": {
+     "block": {
+      "candidates": 8,
+      "envelope": "-77.725166,39.721099,-77.722834,39.722901",
+      "layer": 10,
+      "service": "TIGERweb/tigerWMS_Census2020/MapServer",
+      "spatial_relation": "esriSpatialRelIntersects, then the area share by GEOS",
+      "urls": [
+       "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/10/query?geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=GEOID%2CSTATE%2CCOUNTY%2CTRACT%2CBLKGRP%2CBLOCK&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=GEOID&resultOffset=0&resultRecordCount=1000&f=geojson"
+      ],
+      "vintage": "Census 2020 tabulation geography"
+     },
+     "block_group": {
+      "candidates": 2,
+      "envelope": "-77.725166,39.721099,-77.722834,39.722901",
+      "layer": 8,
+      "service": "TIGERweb/tigerWMS_Census2020/MapServer",
+      "spatial_relation": "esriSpatialRelIntersects, then the area share by GEOS",
+      "urls": [
+       "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/8/query?geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=GEOID%2CSTATE%2CCOUNTY%2CTRACT%2CBLKGRP&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=GEOID&resultOffset=0&resultRecordCount=1000&f=geojson"
+      ],
+      "vintage": "Census 2020 tabulation geography"
+     },
+     "tract": {
+      "candidates": 2,
+      "envelope": "-77.725166,39.721099,-77.722834,39.722901",
+      "layer": 6,
+      "service": "TIGERweb/tigerWMS_Census2020/MapServer",
+      "spatial_relation": "esriSpatialRelIntersects, then the area share by GEOS",
+      "urls": [
+       "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/6/query?geometry=-77.725166%2C39.721099%2C-77.722834%2C39.722901&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=GEOID%2CSTATE%2CCOUNTY%2CTRACT&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=GEOID&resultOffset=0&resultRecordCount=1000&f=geojson"
+      ],
+      "vintage": "Census 2020 tabulation geography"
+     }
+    },
+    "states": [
+     "42"
+    ],
+    "tracts": {
+     "partial": 2,
+     "total": 2,
+     "whole": 0
+    }
+   },
+   "limits": [
+    "Blocks partly inside the footprint count by the share of their area inside it.",
+    "Area weighting assumes people are spread evenly across each block, block group and tract.",
+    "Derived margins of error assume no covariance between cells, so they are approximate.",
+    "A partial area's margin of error is scaled by the same area share as its estimate.",
+    "Census block counts carry disclosure avoidance noise, so a small block's count can be off.",
+    "Daytime counts jobs located in the footprint; a worker with two jobs counts twice.",
+    "Daytime does not add residents who stay home during the day.",
+    "Disability, vehicle and group quarters estimates are tract estimates, the finest the survey publishes.",
+    "The resilience count has no margin of error; the Census Data API publishes none."
+   ],
+   "nighttime": {
+    "as_of": "2020-04-01",
+    "from_partial_blocks": 23,
+    "group_quarters": {
+     "by_type": {
+      "college_university_student_housing": 0,
+      "correctional_facilities_for_adults": 0,
+      "juvenile_facilities": 0,
+      "military_quarters": 0,
+      "nursing_facilities": 0,
+      "other_institutional_facilities": 0,
+      "other_noninstitutional_facilities": 0
+     },
+     "facilities": [],
+     "total": 0
+    },
+    "missing_blocks": [],
+    "share_from_partial_blocks": 0.468,
+    "source": "2020 Census DHC, tables P1 and P18 (block)",
+    "total": 49,
+    "vintage": "2020 Census DHC"
+   },
+   "notice": "This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau.",
+   "primary": "day",
+   "primary_count": "daytime",
+   "resilience": {
+    "as_of": "2025-11-26",
+    "count": 0,
+    "counts": "people with three or more components of social vulnerability",
+    "missing_tracts": [],
+    "moe": null,
+    "moe_note": "The Census Data API's CRE 2024 dataset publishes no margin of error; PRED3_M is in the tract CSV (cre-2024-tract), not held.",
+    "national_rate": 20.28,
+    "rate": 12.34,
+    "source": "Community Resilience Estimates 2024, tract",
+    "units": {
+     "partial": 2,
+     "total": 2,
+     "whole": 0
+    },
+    "universe": 3,
+    "variable": "PRED3_E",
+    "vintage": "Community Resilience Estimates 2024"
+   }
+  },
+  "protective_action_footprint": {
+   "ambiguity": {
+    "candidate_count": 2,
+    "candidates": [
+     {
+      "basis": [
+       {
+        "locator": "erg2024-en-pdf#p32",
+        "supports": "ID number, names and guide",
+        "tag": "[ERG 2024 yellow index, UN1075]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p290",
+        "supports": "spill size",
+        "tag": "[ERG 2024 Table 1 how to use]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p290",
+        "supports": "day or night",
+        "tag": "[ERG 2024 Table 1 how to use, sunrise and sunset by the NOAA solar equations]"
+       },
+       {
+        "locator": "cfr49-govinfo-bulk#172.101:table2:row2672",
+        "supports": "hazard class and label codes",
+        "tag": "[49 CFR 172.101 Hazardous Materials Table, UN1075]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p162",
+        "supports": "guide title",
+        "tag": "[ERG 2024 Guide 115]"
+       },
+       {
+        "locator": null,
+        "supports": "wind speed and direction",
+        "tag": "[worked example wind, as of 10/20/2026 17:40 UTC]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p343",
+        "supports": "wind band",
+        "tag": "[ERG 2024 Table 3 wind categories]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p162",
+        "supports": "immediate precautionary measure",
+        "tag": "[ERG 2024 Guide 115]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p162",
+        "supports": "large spill downwind distance",
+        "tag": "[ERG 2024 Guide 115]"
+       }
+      ],
+      "entry_point": "material",
+      "erg_table": {
+       "also_guide_fire_distances": false,
+       "container": null,
+       "reason": "Guide 115 EVACUATION distances: ERG 2024 Table 1 does not list UN1075.",
+       "spill_size_used": "large",
+       "table": "guide"
+      },
+      "flag_inputs": {
+       "fire_involved": false,
+       "footprint_present": true,
+       "guide_designated_p": false,
+       "guide_page": "115",
+       "period": "daytime",
+       "spill_size": "large",
+       "table3_listed": false,
+       "tih": false,
+       "where_spilled": "land",
+       "where_spilled_matters": false
+      },
+      "flags": [],
+      "governing": true,
+      "guide": "115",
+      "guide_title": "Gases - Flammable (Including Refrigerated Liquids)",
+      "hazard_class": {
+       "class_id": "flammable_liquefied_gas",
+       "rule_set_id": "rules.flammable_liquefied_gas",
+       "title": "flammable liquefied gases"
+      },
+      "id_number": "UN1075",
+      "identified_by": null,
+      "label": "Propane (UN1075), Guide 115",
+      "limits": [
+       "Guide 115 gives 800 m (1/2 mile) downwind for a large spill, and no zone shape [ERG 2024 Guide 115]. The footprint draws none; a shape drawn for it is not the ERG's.",
+       "verify_in_erg_app opens PHMSA's ERG app at this material, spill size, period, surface, wind and point. Compare its drawing with this footprint. Its link specification is the ERG 2020 app's. The app may draw ERG 2020 distances; this footprint uses ERG 2024.",
+       "The container is unknown, so the link names no container. The ERG app then takes the first container it lists. This footprint takes the container with the largest distances."
+      ],
+      "locator": "erg2024-en-pdf#p32",
+      "material": {
+       "id_number": "UN1075",
+       "matched_name": "Propane",
+       "names": [
+        "Butane",
+        "Butylene",
+        "Isobutane",
+        "Isobutylene",
+        "Liquefied petroleum gas",
+        "LPG",
+        "Petroleum gases, liquefied",
+        "Propane",
+        "Propylene"
+       ],
+       "un_number": "1075"
+      },
+      "names": [
+       "Propane"
+      ],
+      "placard": null,
+      "reach": {
+       "tag": "[ERG 2024 Guide 115]",
+       "text": "800 m (1/2 mile)",
+       "zone": "large_spill_downwind"
+      },
+      "reach_m": 800,
+      "table_row": null,
+      "tih": false,
+      "verify_in_erg_app": "https://www.phmsa.dot.gov/erg/material?materialName=Propane&materialUn=1075&lat=39.722&lon=-77.724&windDir=270&spillSize=large&timeOfDay=day&whereSpilled=land&windSpeed=moderate&showMap=true",
+      "zones": {
+       "initial_isolation_zone": {
+        "distance": {
+         "erg_units": {
+          "imperial": "330 feet",
+          "m": 100
+         },
+         "metres": 100,
+         "text": "100 m (330 feet)"
+        },
+        "note": "The guide's immediate precautionary measure: isolate in all directions.",
+        "tag": "[ERG 2024 Guide 115]"
+       },
+       "large_spill_downwind": {
+        "distance": {
+         "erg_units": {
+          "imperial": "1/2 mile",
+          "m": 800
+         },
+         "metres": 800,
+         "text": "800 m (1/2 mile)"
+        },
+        "note": "The guide gives this downwind distance for initial evacuation but no zone shape, so none is drawn.",
+        "tag": "[ERG 2024 Guide 115]"
+       }
+      }
+     },
+     {
+      "basis": [
+       {
+        "locator": "erg2024-en-pdf#p49",
+        "supports": "ID number, names and guide",
+        "tag": "[ERG 2024 yellow index, UN1978]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p290",
+        "supports": "spill size",
+        "tag": "[ERG 2024 Table 1 how to use]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p290",
+        "supports": "day or night",
+        "tag": "[ERG 2024 Table 1 how to use, sunrise and sunset by the NOAA solar equations]"
+       },
+       {
+        "locator": "cfr49-govinfo-bulk#172.101:table2:row2866",
+        "supports": "hazard class and label codes",
+        "tag": "[49 CFR 172.101 Hazardous Materials Table, UN1978]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p162",
+        "supports": "guide title",
+        "tag": "[ERG 2024 Guide 115]"
+       },
+       {
+        "locator": null,
+        "supports": "wind speed and direction",
+        "tag": "[worked example wind, as of 10/20/2026 17:40 UTC]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p343",
+        "supports": "wind band",
+        "tag": "[ERG 2024 Table 3 wind categories]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p162",
+        "supports": "immediate precautionary measure",
+        "tag": "[ERG 2024 Guide 115]"
+       },
+       {
+        "locator": "erg2024-en-pdf#p162",
+        "supports": "large spill downwind distance",
+        "tag": "[ERG 2024 Guide 115]"
+       }
+      ],
+      "entry_point": "material",
+      "erg_table": {
+       "also_guide_fire_distances": false,
+       "container": null,
+       "reason": "Guide 115 EVACUATION distances: ERG 2024 Table 1 does not list UN1978.",
+       "spill_size_used": "large",
+       "table": "guide"
+      },
+      "flag_inputs": {
+       "fire_involved": false,
+       "footprint_present": true,
+       "guide_designated_p": false,
+       "guide_page": "115",
+       "period": "daytime",
+       "spill_size": "large",
+       "table3_listed": false,
+       "tih": false,
+       "where_spilled": "land",
+       "where_spilled_matters": false
+      },
+      "flags": [],
+      "governing": false,
+      "guide": "115",
+      "guide_title": "Gases - Flammable (Including Refrigerated Liquids)",
+      "hazard_class": {
+       "class_id": "flammable_liquefied_gas",
+       "rule_set_id": "rules.flammable_liquefied_gas",
+       "title": "flammable liquefied gases"
+      },
+      "id_number": "UN1978",
+      "identified_by": null,
+      "label": "Propane (UN1978), Guide 115",
+      "limits": [
+       "Guide 115 gives 800 m (1/2 mile) downwind for a large spill, and no zone shape [ERG 2024 Guide 115]. The footprint draws none; a shape drawn for it is not the ERG's.",
+       "verify_in_erg_app opens PHMSA's ERG app at this material, spill size, period, surface, wind and point. Compare its drawing with this footprint. Its link specification is the ERG 2020 app's. The app may draw ERG 2020 distances; this footprint uses ERG 2024.",
+       "The container is unknown, so the link names no container. The ERG app then takes the first container it lists. This footprint takes the container with the largest distances."
+      ],
+      "locator": "erg2024-en-pdf#p49",
+      "material": {
+       "id_number": "UN1978",
+       "matched_name": "Propane",
+       "names": [
+        "Propane"
+       ],
+       "un_number": "1978"
+      },
+      "names": [
+       "Propane"
+      ],
+      "placard": null,
+      "reach": {
+       "tag": "[ERG 2024 Guide 115]",
+       "text": "800 m (1/2 mile)",
+       "zone": "large_spill_downwind"
+      },
+      "reach_m": 800,
+      "table_row": null,
+      "tih": false,
+      "verify_in_erg_app": "https://www.phmsa.dot.gov/erg/material?materialName=Propane&materialUn=1978&lat=39.722&lon=-77.724&windDir=270&spillSize=large&timeOfDay=day&whereSpilled=land&windSpeed=moderate&showMap=true",
+      "zones": {
+       "initial_isolation_zone": {
+        "distance": {
+         "erg_units": {
+          "imperial": "330 feet",
+          "m": 100
+         },
+         "metres": 100,
+         "text": "100 m (330 feet)"
+        },
+        "note": "The guide's immediate precautionary measure: isolate in all directions.",
+        "tag": "[ERG 2024 Guide 115]"
+       },
+       "large_spill_downwind": {
+        "distance": {
+         "erg_units": {
+          "imperial": "1/2 mile",
+          "m": 800
+         },
+         "metres": 800,
+         "text": "800 m (1/2 mile)"
+        },
+        "note": "The guide gives this downwind distance for initial evacuation but no zone shape, so none is drawn.",
+        "tag": "[ERG 2024 Guide 115]"
+       }
+      }
+     }
+    ],
+    "governing": 0,
+    "input": "'propane' is listed under 2 ID numbers in the ERG 2024 yellow index.",
+    "kind": "name",
+    "rule": "The governing candidate is the one whose zones give the farthest distance, then the larger initial isolation distance, then the first printed. A guide that sends a spill to Table 1 reaches only its own circle here: Table 1 needs the material."
+   },
+   "basis": [
+    {
+     "locator": "erg2024-en-pdf#p32",
+     "supports": "ID number, names and guide",
+     "tag": "[ERG 2024 yellow index, UN1075]"
+    },
+    {
+     "locator": "erg2024-en-pdf#p290",
+     "supports": "spill size",
+     "tag": "[ERG 2024 Table 1 how to use]"
+    },
+    {
+     "locator": "erg2024-en-pdf#p290",
+     "supports": "day or night",
+     "tag": "[ERG 2024 Table 1 how to use, sunrise and sunset by the NOAA solar equations]"
+    },
+    {
+     "locator": "cfr49-govinfo-bulk#172.101:table2:row2672",
+     "supports": "hazard class and label codes",
+     "tag": "[49 CFR 172.101 Hazardous Materials Table, UN1075]"
+    },
+    {
+     "locator": "erg2024-en-pdf#p162",
+     "supports": "guide title",
+     "tag": "[ERG 2024 Guide 115]"
+    },
+    {
+     "locator": null,
+     "supports": "wind speed and direction",
+     "tag": "[worked example wind, as of 10/20/2026 17:40 UTC]"
+    },
+    {
+     "locator": "erg2024-en-pdf#p343",
+     "supports": "wind band",
+     "tag": "[ERG 2024 Table 3 wind categories]"
+    },
+    {
+     "locator": "erg2024-en-pdf#p162",
+     "supports": "immediate precautionary measure",
+     "tag": "[ERG 2024 Guide 115]"
+    },
+    {
+     "locator": "erg2024-en-pdf#p162",
+     "supports": "large spill downwind distance",
+     "tag": "[ERG 2024 Guide 115]"
+    },
+    {
+     "locator": "erg2024-en-pdf#p32",
+     "supports": "candidates",
+     "tag": "[ERG 2024 yellow index]"
+    },
+    {
+     "locator": "erg2024-en-pdf#p9",
+     "supports": "governing candidate",
+     "tag": "[ERG 2024 Table of Markings, Labels and Placards introduction]"
+    }
+   ],
+   "day_night": {
+    "period": "day",
+    "sunrise": "2026-10-21T07:27:42-04:00",
+    "sunset": "2026-10-21T18:22:37-04:00",
+    "word": "daytime"
+   },
+   "erg_table": {
+    "also_guide_fire_distances": false,
+    "container": null,
+    "reason": "Guide 115 EVACUATION distances: ERG 2024 Table 1 does not list UN1075.",
+    "spill_size_used": "large",
+    "table": "guide"
+   },
+   "flag_inputs": {
+    "candidate_count": 2,
+    "fire_involved": false,
+    "footprint_present": true,
+    "governing_candidate": "Propane (UN1075), Guide 115",
+    "guide_designated_p": false,
+    "guide_page": "115",
+    "period": "daytime",
+    "spill_size": "large",
+    "table3_listed": false,
+    "tih": false,
+    "where_spilled": "land",
+    "where_spilled_matters": false
+   },
+   "flags": {
+    "all": [
+     {
+      "candidates": [
+       {
+        "entry_point": "material",
+        "guide": "115",
+        "id_number": "UN1075",
+        "label": "Propane (UN1075), Guide 115",
+        "locator": "erg2024-en-pdf#p32",
+        "names": [
+         "Propane"
+        ],
+        "placard": null
+       },
+       {
+        "entry_point": "material",
+        "guide": "115",
+        "id_number": "UN1978",
+        "label": "Propane (UN1978), Guide 115",
+        "locator": "erg2024-en-pdf#p49",
+        "names": [
+         "Propane"
+        ],
+        "placard": null
+       }
+      ],
+      "consequence": {
+       "doc_id": "erg2024-en-pdf",
+       "page": 9,
+       "quote": "If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions).",
+       "text_layer": "pdf_text"
+      },
+      "indication": false,
+      "kind": "identification.ambiguous_material",
+      "merged": [],
+      "priority": "high",
+      "receipts": [
+       {
+        "doc_id": "erg2024-en-pdf",
+        "page": 9,
+        "quote": "If multiple placards point to more than one guide, initially use the most conservative guide (i.e., the guide requiring the greatest degree of protective actions).",
+        "supports": "Several candidates are answered by the one needing the most protective action.",
+        "text_layer": "pdf_text"
+       },
+       {
+        "doc_id": "erg2024-en-pdf",
+        "page": 290,
+        "quote": "If you do not know the shipping name and Table 1 lists more than one name for the same ID number, use the entry with the largest distances.",
+        "supports": "The same rule for Table 1's names under one ID number.",
+        "text_layer": "pdf_text"
+       },
+       {
+        "doc_id": "erg2024-en-pdf",
+        "page": 9,
+        "quote": "When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted.",
+        "supports": "Identifying the material settles the candidates.",
+        "text_layer": "pdf_text"
+       }
+      ],
+      "response": {
+       "doc_id": "erg2024-en-pdf",
+       "page": 9,
+       "quote": "When specific information, such as ID number or proper shipping name, becomes available, the more specific Guide recommended for that material must be consulted.",
+       "text_layer": "pdf_text"
+      },
+      "rule_id": "FR-AMB-01",
+      "sentence": "The load as reported matches 2 candidates. The distances shown are the largest among them, those of Propane (UN1075), Guide 115."
+     }
+    ],
+    "briefing": {
+     "rule_ids": [
+      "FR-AMB-01"
+     ],
+     "withheld": 0
+    }
+   },
+   "footprint": {
+    "features": [
+     {
+      "geometry": {
+       "coordinates": [
+        -77.724,
+        39.722
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "zone": "spill"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        [
+         [
+          -77.722834,
+          39.722
+         ],
+         [
+          -77.722838,
+          39.722078
+         ],
+         [
+          -77.722851,
+          39.722156
+         ],
+         [
+          -77.722873,
+          39.722233
+         ],
+         [
+          -77.722904,
+          39.722308
+         ],
+         [
+          -77.722943,
+          39.722381
+         ],
+         [
+          -77.72299,
+          39.72245
+         ],
+         [
+          -77.723045,
+          39.722517
+         ],
+         [
+          -77.723107,
+          39.722579
+         ],
+         [
+          -77.723175,
+          39.722637
+         ],
+         [
+          -77.72325,
+          39.72269
+         ],
+         [
+          -77.723331,
+          39.722738
+         ],
+         [
+          -77.723417,
+          39.72278
+         ],
+         [
+          -77.723507,
+          39.722816
+         ],
+         [
+          -77.723601,
+          39.722846
+         ],
+         [
+          -77.723698,
+          39.72287
+         ],
+         [
+          -77.723797,
+          39.722887
+         ],
+         [
+          -77.723898,
+          39.722897
+         ],
+         [
+          -77.724,
+          39.722901
+         ],
+         [
+          -77.724102,
+          39.722897
+         ],
+         [
+          -77.724203,
+          39.722887
+         ],
+         [
+          -77.724302,
+          39.72287
+         ],
+         [
+          -77.724399,
+          39.722846
+         ],
+         [
+          -77.724493,
+          39.722816
+         ],
+         [
+          -77.724583,
+          39.72278
+         ],
+         [
+          -77.724669,
+          39.722738
+         ],
+         [
+          -77.72475,
+          39.72269
+         ],
+         [
+          -77.724825,
+          39.722637
+         ],
+         [
+          -77.724893,
+          39.722579
+         ],
+         [
+          -77.724955,
+          39.722517
+         ],
+         [
+          -77.72501,
+          39.72245
+         ],
+         [
+          -77.725057,
+          39.722381
+         ],
+         [
+          -77.725096,
+          39.722308
+         ],
+         [
+          -77.725127,
+          39.722233
+         ],
+         [
+          -77.725149,
+          39.722156
+         ],
+         [
+          -77.725162,
+          39.722078
+         ],
+         [
+          -77.725166,
+          39.722
+         ],
+         [
+          -77.725162,
+          39.721921
+         ],
+         [
+          -77.725149,
+          39.721844
+         ],
+         [
+          -77.725127,
+          39.721767
+         ],
+         [
+          -77.725096,
+          39.721692
+         ],
+         [
+          -77.725057,
+          39.721619
+         ],
+         [
+          -77.72501,
+          39.72155
+         ],
+         [
+          -77.724955,
+          39.721483
+         ],
+         [
+          -77.724893,
+          39.721421
+         ],
+         [
+          -77.724825,
+          39.721363
+         ],
+         [
+          -77.72475,
+          39.72131
+         ],
+         [
+          -77.724669,
+          39.721262
+         ],
+         [
+          -77.724583,
+          39.72122
+         ],
+         [
+          -77.724493,
+          39.721184
+         ],
+         [
+          -77.724399,
+          39.721154
+         ],
+         [
+          -77.724302,
+          39.72113
+         ],
+         [
+          -77.724203,
+          39.721113
+         ],
+         [
+          -77.724102,
+          39.721103
+         ],
+         [
+          -77.724,
+          39.721099
+         ],
+         [
+          -77.723898,
+          39.721103
+         ],
+         [
+          -77.723797,
+          39.721113
+         ],
+         [
+          -77.723698,
+          39.72113
+         ],
+         [
+          -77.723601,
+          39.721154
+         ],
+         [
+          -77.723507,
+          39.721184
+         ],
+         [
+          -77.723417,
+          39.72122
+         ],
+         [
+          -77.723331,
+          39.721262
+         ],
+         [
+          -77.72325,
+          39.72131
+         ],
+         [
+          -77.723175,
+          39.721363
+         ],
+         [
+          -77.723107,
+          39.721421
+         ],
+         [
+          -77.723045,
+          39.721483
+         ],
+         [
+          -77.72299,
+          39.72155
+         ],
+         [
+          -77.722943,
+          39.721619
+         ],
+         [
+          -77.722904,
+          39.721692
+         ],
+         [
+          -77.722873,
+          39.721767
+         ],
+         [
+          -77.722851,
+          39.721844
+         ],
+         [
+          -77.722838,
+          39.721921
+         ],
+         [
+          -77.722834,
+          39.722
+         ]
+        ]
+       ],
+       "type": "Polygon"
+      },
+      "properties": {
+       "candidate": 0,
+       "candidate_label": "Propane (UN1075), Guide 115",
+       "governing": true,
+       "radius_m": 100,
+       "tag": "[ERG 2024 Guide 115]",
+       "text": "100 m (330 feet)",
+       "zone": "initial_isolation_zone"
+      },
+      "type": "Feature"
+     },
+     {
+      "geometry": {
+       "coordinates": [
+        [
+         [
+          -77.722834,
+          39.722
+         ],
+         [
+          -77.722838,
+          39.722078
+         ],
+         [
+          -77.722851,
+          39.722156
+         ],
+         [
+          -77.722873,
+          39.722233
+         ],
+         [
+          -77.722904,
+          39.722308
+         ],
+         [
+          -77.722943,
+          39.722381
+         ],
+         [
+          -77.72299,
+          39.72245
+         ],
+         [
+          -77.723045,
+          39.722517
+         ],
+         [
+          -77.723107,
+          39.722579
+         ],
+         [
+          -77.723175,
+          39.722637
+         ],
+         [
+          -77.72325,
+          39.72269
+         ],
+         [
+          -77.723331,
+          39.722738
+         ],
+         [
+          -77.723417,
+          39.72278
+         ],
+         [
+          -77.723507,
+          39.722816
+         ],
+         [
+          -77.723601,
+          39.722846
+         ],
+         [
+          -77.723698,
+          39.72287
+         ],
+         [
+          -77.723797,
+          39.722887
+         ],
+         [
+          -77.723898,
+          39.722897
+         ],
+         [
+          -77.724,
+          39.722901
+         ],
+         [
+          -77.724102,
+          39.722897
+         ],
+         [
+          -77.724203,
+          39.722887
+         ],
+         [
+          -77.724302,
+          39.72287
+         ],
+         [
+          -77.724399,
+          39.722846
+         ],
+         [
+          -77.724493,
+          39.722816
+         ],
+         [
+          -77.724583,
+          39.72278
+         ],
+         [
+          -77.724669,
+          39.722738
+         ],
+         [
+          -77.72475,
+          39.72269
+         ],
+         [
+          -77.724825,
+          39.722637
+         ],
+         [
+          -77.724893,
+          39.722579
+         ],
+         [
+          -77.724955,
+          39.722517
+         ],
+         [
+          -77.72501,
+          39.72245
+         ],
+         [
+          -77.725057,
+          39.722381
+         ],
+         [
+          -77.725096,
+          39.722308
+         ],
+         [
+          -77.725127,
+          39.722233
+         ],
+         [
+          -77.725149,
+          39.722156
+         ],
+         [
+          -77.725162,
+          39.722078
+         ],
+         [
+          -77.725166,
+          39.722
+         ],
+         [
+          -77.725162,
+          39.721921
+         ],
+         [
+          -77.725149,
+          39.721844
+         ],
+         [
+          -77.725127,
+          39.721767
+         ],
+         [
+          -77.725096,
+          39.721692
+         ],
+         [
+          -77.725057,
+          39.721619
+         ],
+         [
+          -77.72501,
+          39.72155
+         ],
+         [
+          -77.724955,
+          39.721483
+         ],
+         [
+          -77.724893,
+          39.721421
+         ],
+         [
+          -77.724825,
+          39.721363
+         ],
+         [
+          -77.72475,
+          39.72131
+         ],
+         [
+          -77.724669,
+          39.721262
+         ],
+         [
+          -77.724583,
+          39.72122
+         ],
+         [
+          -77.724493,
+          39.721184
+         ],
+         [
+          -77.724399,
+          39.721154
+         ],
+         [
+          -77.724302,
+          39.72113
+         ],
+         [
+          -77.724203,
+          39.721113
+         ],
+         [
+          -77.724102,
+          39.721103
+         ],
+         [
+          -77.724,
+          39.721099
+         ],
+         [
+          -77.723898,
+          39.721103
+         ],
+         [
+          -77.723797,
+          39.721113
+         ],
+         [
+          -77.723698,
+          39.72113
+         ],
+         [
+          -77.723601,
+          39.721154
+         ],
+         [
+          -77.723507,
+          39.721184
+         ],
+         [
+          -77.723417,
+          39.72122
+         ],
+         [
+          -77.723331,
+          39.721262
+         ],
+         [
+          -77.72325,
+          39.72131
+         ],
+         [
+          -77.723175,
+          39.721363
+         ],
+         [
+          -77.723107,
+          39.721421
+         ],
+         [
+          -77.723045,
+          39.721483
+         ],
+         [
+          -77.72299,
+          39.72155
+         ],
+         [
+          -77.722943,
+          39.721619
+         ],
+         [
+          -77.722904,
+          39.721692
+         ],
+         [
+          -77.722873,
+          39.721767
+         ],
+         [
+          -77.722851,
+          39.721844
+         ],
+         [
+          -77.722838,
+          39.721921
+         ],
+         [
+          -77.722834,
+          39.722
+         ]
+        ]
+       ],
+       "type": "Polygon"
+      },
+      "properties": {
+       "candidate": 1,
+       "candidate_label": "Propane (UN1978), Guide 115",
+       "governing": false,
+       "radius_m": 100,
+       "tag": "[ERG 2024 Guide 115]",
+       "text": "100 m (330 feet)",
+       "zone": "initial_isolation_zone"
+      },
+      "type": "Feature"
+     }
+    ],
+    "type": "FeatureCollection"
+   },
+   "guide": {
+    "number": "115",
+    "title": "Gases - Flammable (Including Refrigerated Liquids)"
+   },
+   "hazard_class": {
+    "class_id": "flammable_liquefied_gas",
+    "rule_set_id": "rules.flammable_liquefied_gas",
+    "title": "flammable liquefied gases"
+   },
+   "identified_by": null,
+   "limits": [
+    "The load as reported matches 2 candidates [ERG 2024 yellow index]. The distances shown are the largest among them, those of Propane (UN1075), Guide 115 [ERG 2024 Table of Markings, Labels and Placards introduction].",
+    "Guide 115 gives 800 m (1/2 mile) downwind for a large spill, and no zone shape [ERG 2024 Guide 115]. The footprint draws none; a shape drawn for it is not the ERG's.",
+    "verify_in_erg_app opens PHMSA's ERG app at this material, spill size, period, surface, wind and point. Compare its drawing with this footprint. Its link specification is the ERG 2020 app's. The app may draw ERG 2020 distances; this footprint uses ERG 2024.",
+    "The container is unknown, so the link names no container. The ERG app then takes the first container it lists. This footprint takes the container with the largest distances."
+   ],
+   "material": {
+    "id_number": "UN1075",
+    "matched_name": "Propane",
+    "names": [
+     "Butane",
+     "Butylene",
+     "Isobutane",
+     "Isobutylene",
+     "Liquefied petroleum gas",
+     "LPG",
+     "Petroleum gases, liquefied",
+     "Propane",
+     "Propylene"
+    ],
+    "un_number": "1075"
+   },
+   "pack_versions": {
+    "cameo": "cameo3.1.0.1",
+    "cfr172": "cfr2025.1",
+    "erg": "erg2024.5",
+    "hazard_classes": "dn001.1"
+   },
+   "table_row": null,
+   "tih": false,
+   "verify_in_erg_app": "https://www.phmsa.dot.gov/erg/material?materialName=Propane&materialUn=1075&lat=39.722&lon=-77.724&windDir=270&spillSize=large&timeOfDay=day&whereSpilled=land&windSpeed=moderate&showMap=true",
+   "wind": {
+    "as_of": "2026-10-20T13:40:00-04:00",
+    "as_of_display": "10/20/2026 17:40 UTC",
+    "band": "moderate",
+    "band_label": "Moderate wind",
+    "direction_deg_from": 270.0,
+    "direction_from_compass": "west",
+    "downwind_bearing_deg": 90.0,
+    "origin": "caller",
+    "source": "worked example wind",
+    "speed_kmh": 13.0,
+    "speed_mph": 8.1,
+    "tag": "[worked example wind, as of 10/20/2026 17:40 UTC]"
+   },
+   "wind_error": null,
+   "zones": {
+    "initial_isolation_zone": {
+     "distance": {
+      "erg_units": {
+       "imperial": "330 feet",
+       "m": 100
+      },
+      "metres": 100,
+      "text": "100 m (330 feet)"
+     },
+     "note": "The guide's immediate precautionary measure: isolate in all directions.",
+     "tag": "[ERG 2024 Guide 115]"
+    },
+    "large_spill_downwind": {
+     "distance": {
+      "erg_units": {
+       "imperial": "1/2 mile",
+       "m": 800
+      },
+      "metres": 800,
+      "text": "800 m (1/2 mile)"
+     },
+     "note": "The guide gives this downwind distance for initial evacuation but no zone shape, so none is drawn.",
+     "tag": "[ERG 2024 Guide 115]"
+    }
+   }
+  },
+  "receiving_hospitals": {
+   "basis": [
+    {
+     "locator": null,
+     "supports": "hospitals and emergency services",
+     "tag": "[CMS Hospital General Information, as of 2026-07-22]"
+    },
+    {
+     "locator": null,
+     "supports": "beds",
+     "tag": "[CMS Provider of Services, hospital and non-hospital, as of 2026-10-16]"
+    },
+    {
+     "locator": null,
+     "supports": "hospital locations",
+     "tag": "[Census Geocoder, benchmark Public_AR_Current; USGS National Structures Dataset by address, as of 2026-10-21]"
+    }
+   ],
+   "hospitals": [
+    {
+     "address": "11116 MEDICAL CAMPUS ROAD, HAGERSTOWN, MD 21742",
+     "bearing_deg": 162,
+     "beds": 271,
+     "ccn": "210001",
+     "coordinates": [
+      -77.681654,
+      39.622182
+     ],
+     "crosses_footprint": null,
+     "direction": "S",
+     "distance_km": 11.7,
+     "line_in_isolation_zone_m": null,
+     "line_in_protective_action_zone_m": null,
+     "name": "MERITUS MEDICAL CENTER",
+     "placed_by": "hgi",
+     "type": "Acute Care Hospitals"
+    },
+    {
+     "address": "501 EAST MAIN ST, WAYNESBORO, PA 17268",
+     "bearing_deg": 76,
+     "beds": 57,
+     "ccn": "390138",
+     "coordinates": [
+      -77.569766,
+      39.751609
+     ],
+     "crosses_footprint": null,
+     "direction": "E",
+     "distance_km": 13.6,
+     "line_in_isolation_zone_m": null,
+     "line_in_protective_action_zone_m": null,
+     "name": "WELLSPAN WAYNESBORO HOSPITAL",
+     "placed_by": "hgi",
+     "type": "Acute Care Hospitals"
+    },
+    {
+     "address": "112 NORTH SEVENTH STREET, CHAMBERSBURG, PA 17201",
+     "bearing_deg": 15,
+     "beds": 274,
+     "ccn": "390151",
+     "coordinates": [
+      -77.647366,
+      39.934874
+     ],
+     "crosses_footprint": null,
+     "direction": "N",
+     "distance_km": 24.5,
+     "line_in_isolation_zone_m": null,
+     "line_in_protective_action_zone_m": null,
+     "name": "WELLSPAN CHAMBERSBURG HOSPITAL",
+     "placed_by": "hgi",
+     "type": "Acute Care Hospitals"
+    },
+    {
+     "address": "214 PEACH ORCHARD ROAD, MCCONNELLSBURG, PA 17233",
+     "bearing_deg": 315,
+     "beds": 21,
+     "ccn": "391303",
+     "coordinates": [
+      -78.009133,
+      39.938483
+     ],
+     "crosses_footprint": null,
+     "direction": "NW",
+     "distance_km": 34.3,
+     "line_in_isolation_zone_m": null,
+     "line_in_protective_action_zone_m": null,
+     "name": "FULTON COUNTY MEDICAL CENTER",
+     "placed_by": "hgi",
+     "type": "Critical Access Hospitals"
+    },
+    {
+     "address": "2500 HOSPITAL DRIVE, MARTINSBURG, WV 25401",
+     "bearing_deg": 219,
+     "beds": 241,
+     "ccn": "510008",
+     "coordinates": [
+      -77.980455,
+      39.477472
+     ],
+     "crosses_footprint": null,
+     "direction": "SW",
+     "distance_km": 35.0,
+     "line_in_isolation_zone_m": null,
+     "line_in_protective_action_zone_m": null,
+     "name": "BERKELEY MEDICAL CENTER",
+     "placed_by": "hgi",
+     "type": "Acute Care Hospitals"
+    },
+    {
+     "address": "510 BUTLER AVE., MARTINSBURG, WV 25405",
+     "bearing_deg": 205,
+     "beds": 559,
+     "ccn": "51005F",
+     "coordinates": [
+      -77.913363,
+      39.413779
+     ],
+     "crosses_footprint": null,
+     "direction": "SW",
+     "distance_km": 37.9,
+     "line_in_isolation_zone_m": null,
+     "line_in_protective_action_zone_m": null,
+     "name": "MARTINSBURG VA MEDICAL CENTER",
+     "placed_by": "hgi",
+     "type": "Acute Care - Veterans Administration"
+    },
+    {
+     "address": "1 HEALTHY WAY, BERKELEY SPRINGS, WV 25411",
+     "bearing_deg": 258,
+     "beds": 25,
+     "ccn": "511309",
+     "coordinates": [
+      -78.2004,
+      39.6424
+     ],
+     "crosses_footprint": null,
+     "direction": "W",
+     "distance_km": 41.8,
+     "line_in_isolation_zone_m": null,
+     "line_in_protective_action_zone_m": null,
+     "name": "VALLEY HEALTH WAR MEMORIAL HOSPITAL",
+     "placed_by": "nsd_address",
+     "type": "Critical Access Hospitals"
+    },
+    {
+     "address": "400 WEST SEVENTH ST, FREDERICK, MD 21701",
+     "bearing_deg": 141,
+     "beds": 248,
+     "ccn": "210005",
+     "coordinates": [
+      -77.413937,
+      39.423633
+     ],
+     "crosses_footprint": null,
+     "direction": "SE",
+     "distance_km": 42.5,
+     "line_in_isolation_zone_m": null,
+     "line_in_protective_action_zone_m": null,
+     "name": "FREDERICK HEALTH HOSPITAL",
+     "placed_by": "hgi",
+     "type": "Acute Care Hospitals"
+    },
+    {
+     "address": "147 GETTYS STREET, GETTYSBURG, PA 17325",
+     "bearing_deg": 75,
+     "beds": 76,
+     "ccn": "390065",
+     "coordinates": [
+      -77.233777,
+      39.823334
+     ],
+     "crosses_footprint": null,
+     "direction": "E",
+     "distance_km": 43.5,
+     "line_in_isolation_zone_m": null,
+     "line_in_protective_action_zone_m": null,
+     "name": "GETTYSBURG HOSPITAL",
+     "placed_by": "hgi",
+     "type": "Acute Care Hospitals"
+    },
+    {
+     "address": "300 SOUTH PRESTON STREET, RANSON, WV 25438",
+     "bearing_deg": 194,
+     "beds": 25,
+     "ccn": "511319",
+     "coordinates": [
+      -77.858571,
+      39.296348
+     ],
+     "crosses_footprint": null,
+     "direction": "S",
+     "distance_km": 48.7,
+     "line_in_isolation_zone_m": null,
+     "line_in_protective_action_zone_m": null,
+     "name": "JEFFERSON MEDICAL CENTER",
+     "placed_by": "hgi",
+     "type": "Critical Access Hospitals"
+    }
+   ],
+   "inside_footprint": [],
+   "limits": [
+    "Distances are straight lines from the spill, not drive times.",
+    "Trauma level, burn care and toxicology capability are not in these datasets; confirm capability with each hospital.",
+    "Hospitals listed are those registered with Medicare that report emergency services [CMS Hospital General Information].",
+    "Emergency services means the hospital reports providing them, not that it has capacity now [CMS Hospital General Information].",
+    "Bed counts are the Provider of Services bed counts, not beds available now [CMS Provider of Services].",
+    "A hospital is flagged when the straight line to it from the upwind edge crosses the protective action zone.",
+    "Roads are not read, so a flagged hospital may have a route around the zone.",
+    "The footprint has no protective action zone, so distances are measured from the spill, with no crossing test.",
+    "252 hospitals could not be placed by address and are not ranked, of 4,495 hospitals with emergency services [CMS Hospital General Information, as of 2026-07-22].",
+    "unplaced_in_states names the unplaced hospitals in each state listed."
+   ],
+   "max_km": 50.0,
+   "measured_from": {
+    "coordinates": [
+     -77.724,
+     39.722
+    ],
+    "kind": "spill"
+   },
+   "more": 0,
+   "unplaced_in_states": {
+    "MD": [
+     "UM UPPER CHESAPEAKE BEHAVIORAL HEALTH PAVILION AT, ABERDEEN",
+     "Walter Reed National Military Med Cen, Bethesda"
+    ],
+    "PA": [
+     "GEISINGER BEHAVIORAL HEALTH CENTER DANVILLE, DANVILLE",
+     "MEADOWS PSYCHIATRIC CENTER, CENTRE HALL",
+     "MOUNT NITTANY MEDICAL CENTER, STATE COLLEGE",
+     "ST LUKE'S HOSPITAL - CARBON CAMPUS, LEHIGHTON",
+     "ST LUKE'S HOSPITAL - UPPER BUCKS CAMPUS, QUAKERTOWN",
+     "ST MARY MEDICAL CENTER, LANGHORNE",
+     "UNIONTOWN HOSPITAL, UNIONTOWN",
+     "UPMC CHILDREN'S HOSPITAL OF PITTSBURGH, PITTSBURGH",
+     "UPMC KANE, KANE",
+     "UPMC PINNACLE HOSPITALS, HARRISBURG",
+     "VA PITTSBURGH HEALTHCARE SYSTEM - UNIV DR, PITTSBURGH"
+    ],
+    "WV": [
+     "SUMMERS COUNTY ARH HOSPITAL, HINTON",
+     "VANDALIA HEALTH BROADDUS HOSPITAL, PHILIPPI"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,258 @@
+{
+ "api": "pasda_penndot",
+ "body": {
+  "displayFieldName": "T_RT_NO",
+  "features": [
+   {
+    "attributes": {
+     "CTY_CODE": "28",
+     "CUM_OFFSET": 0,
+     "CUM_OFFS_1": 2655,
+     "SEG_LNGTH_": 2655,
+     "SEG_NO": "0002",
+     "SIDE_IND": "1",
+     "T_RT_NO": "0081"
+    },
+    "geometry": {
+     "paths": [
+      [
+       [
+        -77.73242727878936,
+        39.72110193419727
+       ],
+       [
+        -77.73224739295036,
+        39.72124089486836
+       ],
+       [
+        -77.73191427967669,
+        39.72150095713079
+       ],
+       [
+        -77.73176548902124,
+        39.72161702731478
+       ],
+       [
+        -77.72919921695186,
+        39.72360426888058
+       ],
+       [
+        -77.728713883255,
+        39.72402416047698
+       ],
+       [
+        -77.72824497345646,
+        39.7244989927164
+       ],
+       [
+        -77.72801383693387,
+        39.72474645144901
+       ],
+       [
+        -77.72770194635878,
+        39.72511494332691
+       ],
+       [
+        -77.7274751064782,
+        39.72540671406687
+       ],
+       [
+        -77.72718207872747,
+        39.725855817184566
+       ],
+       [
+        -77.72697703377227,
+        39.72618523890773
+       ],
+       [
+        -77.72678024792783,
+        39.72657617725725
+       ],
+       [
+        -77.72671638310102,
+        39.7267341140913
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "attributes": {
+     "CTY_CODE": "28",
+     "CUM_OFFSET": 2655,
+     "CUM_OFFS_1": 5323,
+     "SEG_LNGTH_": 2668,
+     "SEG_NO": "0004",
+     "SIDE_IND": "1",
+     "T_RT_NO": "0081"
+    },
+    "geometry": {
+     "paths": [
+      [
+       [
+        -77.72671638310102,
+        39.7267341140913
+       ],
+       [
+        -77.72655424258214,
+        39.727135083147324
+       ],
+       [
+        -77.72639064679247,
+        39.72766499976261
+       ],
+       [
+        -77.72629847335612,
+        39.72808180740507
+       ],
+       [
+        -77.72623161534278,
+        39.72848556046146
+       ],
+       [
+        -77.72620614540953,
+        39.728944442873896
+       ],
+       [
+        -77.7262059666448,
+        39.72946466513771
+       ],
+       [
+        -77.72620586513516,
+        39.72976188359668
+       ],
+       [
+        -77.72623910639393,
+        39.730107654555724
+       ],
+       [
+        -77.72643955017823,
+        39.73168898720233
+       ],
+       [
+        -77.72652821659172,
+        39.732337932326146
+       ],
+       [
+        -77.72674605625147,
+        39.73395754760115
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "attributes": {
+     "CTY_CODE": "28",
+     "CUM_OFFSET": 5323,
+     "CUM_OFFS_1": 7977,
+     "SEG_LNGTH_": 2654,
+     "SEG_NO": "0010",
+     "SIDE_IND": "1",
+     "T_RT_NO": "0081"
+    },
+    "geometry": {
+     "paths": [
+      [
+       [
+        -77.72674605625147,
+        39.73395754760115
+       ],
+       [
+        -77.72690580994667,
+        39.735145279324485
+       ],
+       [
+        -77.72720323045912,
+        39.73742184826637
+       ],
+       [
+        -77.72743565875913,
+        39.73918661678443
+       ],
+       [
+        -77.72750090878809,
+        39.73968202405402
+       ],
+       [
+        -77.72767509212169,
+        39.74110942429948
+       ],
+       [
+        -77.72768505264156,
+        39.741188223112495
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "fieldAliases": {
+   "CTY_CODE": "CTY_CODE",
+   "CUM_OFFSET": "CUM_OFFSET",
+   "CUM_OFFS_1": "CUM_OFFS_1",
+   "SEG_LNGTH_": "SEG_LNGTH_",
+   "SEG_NO": "SEG_NO",
+   "SIDE_IND": "SIDE_IND",
+   "T_RT_NO": "T_RT_NO"
+  },
+  "fields": [
+   {
+    "alias": "T_RT_NO",
+    "length": 4,
+    "name": "T_RT_NO",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "CTY_CODE",
+    "length": 2,
+    "name": "CTY_CODE",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "SEG_NO",
+    "length": 4,
+    "name": "SEG_NO",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "SEG_LNGTH_",
+    "name": "SEG_LNGTH_",
+    "type": "esriFieldTypeDouble"
+   },
+   {
+    "alias": "CUM_OFFSET",
+    "name": "CUM_OFFSET",
+    "type": "esriFieldTypeDouble"
+   },
+   {
+    "alias": "CUM_OFFS_1",
+    "name": "CUM_OFFS_1",
+    "type": "esriFieldTypeDouble"
+   },
+   {
+    "alias": "SIDE_IND",
+    "length": 1,
+    "name": "SIDE_IND",
+    "type": "esriFieldTypeString"
+   }
+  ],
+  "geometryType": "esriGeometryPolyline",
+  "spatialReference": {
+   "latestWkid": 4326,
+   "wkid": 4326
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-27T03:33:56Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "public, must-revalidate, max-age=0",
+  "Date": "Tue, 27 Oct 2026 03:33:56 GMT",
+  "ETag": "\"1783684865\""
+ },
+ "status": 200,
+ "url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/4/query?where=T_RT_NO%3D%270081%27+AND+CTY_CODE%3D%2728%27+AND+SIDE_IND%3D%271%27+AND+SEG_NO%3E%3D%270002%27+AND+SEG_NO%3C%3D%270010%27&outFields=T_RT_NO%2CCTY_CODE%2CSEG_NO%2CSEG_LNGTH_%2CCUM_OFFSET%2CCUM_OFFS_1%2CSIDE_IND&returnGeometry=true&outSR=4326&f=json&orderByFields=SEG_NO"
+}

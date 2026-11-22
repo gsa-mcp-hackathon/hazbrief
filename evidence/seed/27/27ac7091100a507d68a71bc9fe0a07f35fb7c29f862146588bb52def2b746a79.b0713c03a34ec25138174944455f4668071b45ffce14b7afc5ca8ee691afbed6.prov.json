@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T16:36:51Z",
+  "http_mode": "record",
+  "id": "b0713c03a34ec25138174944455f4668071b45ffce14b7afc5ca8ee691afbed6",
+  "name": "GET census",
+  "params": {
+   "method": "GET",
+   "url": "https://api.census.gov/data/2023/cbp?get=NAICS2017%2CNAICS2017_LABEL%2CESTAB&for=county%3A005&in=state%3A24&INDLEVEL=2"
+  },
+  "startedAtTime": "2026-10-27T16:36:51Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.census.gov/data/2023/cbp?get=NAICS2017%2CNAICS2017_LABEL%2CESTAB&for=county%3A005&in=state%3A24&INDLEVEL=2",
+    "id": "census:cbp"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T16:36:51Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 1348,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "27ac7091100a507d68a71bc9fe0a07f35fb7c29f862146588bb52def2b746a79"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "census:cbp",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

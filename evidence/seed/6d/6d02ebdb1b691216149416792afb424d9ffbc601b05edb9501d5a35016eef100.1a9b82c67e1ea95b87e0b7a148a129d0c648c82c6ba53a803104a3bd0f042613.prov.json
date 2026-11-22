@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:33:56Z",
+  "http_mode": "record",
+  "id": "1a9b82c67e1ea95b87e0b7a148a129d0c648c82c6ba53a803104a3bd0f042613",
+  "name": "GET pasda_penndot",
+  "params": {
+   "method": "GET",
+   "url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/0/query?where=ST_RT_NO%3D%270081%27+AND+MILE_MARKE+IN+%280%2C1%29&outFields=ST_RT_NO%2CSEG_NO%2CMILE_MARKE%2CTY_CODE%2CGIS_UPDATE&returnGeometry=true&outSR=4326&f=json&orderByFields=MILE_MARKE"
+  },
+  "startedAtTime": "2026-10-27T03:33:56Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/0/query?where=ST_RT_NO%3D%270081%27+AND+MILE_MARKE+IN+%280%2C1%29&outFields=ST_RT_NO%2CSEG_NO%2CMILE_MARKE%2CTY_CODE%2CGIS_UPDATE&returnGeometry=true&outSR=4326&f=json&orderByFields=MILE_MARKE",
+    "id": "lrs:penndot"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T03:33:56Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 985,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "6d02ebdb1b691216149416792afb424d9ffbc601b05edb9501d5a35016eef100"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "lrs:penndot",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

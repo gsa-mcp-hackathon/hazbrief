@@ -1,0 +1,1538 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.582799,
+      39.762082
+     ],
+     "type": "Point"
+    },
+    "id": 6425099,
+    "properties": {
+     "address": "127 Cumbreland Valley Avenue",
+     "city": "Waynesboro",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "City Light Christian School",
+     "objectid": 6425099,
+     "permanent_identifier": "11ace273-e627-4b76-abdc-95523c208c8b",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.900143,
+      39.798371
+     ],
+     "type": "Point"
+    },
+    "id": 6489033,
+    "properties": {
+     "address": "9138 Fort Loudon Road",
+     "city": "Mercersburg",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Montgomery Elementary School",
+     "objectid": 6489033,
+     "permanent_identifier": "5f043e53-1ba4-429a-9c6a-28cbe2246427",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.898755,
+      39.828301
+     ],
+     "type": "Point"
+    },
+    "id": 6504873,
+    "properties": {
+     "address": "300 East Seminary Street",
+     "city": "Mercersburg",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1477008000000,
+     "name": "Mercersburg Academy",
+     "objectid": 6504873,
+     "permanent_identifier": "71b0fc09-f0dd-43d4-a8ab-f1a5649f78df",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.901515,
+      39.85418
+     ],
+     "type": "Point"
+    },
+    "id": 6560938,
+    "properties": {
+     "address": "4773 Fort Loudon Road",
+     "city": "Mercersburg",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "James Buchanan High School",
+     "objectid": 6560938,
+     "permanent_identifier": "b5263571-728c-4b6b-bb00-f7ac3eb28dce",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.573903,
+      39.754113
+     ],
+     "type": "Point"
+    },
+    "id": 6572992,
+    "properties": {
+     "address": "213 East Main Street",
+     "city": "Waynesboro",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Saint Andrew School",
+     "objectid": 6572992,
+     "permanent_identifier": "c33970ee-2b0e-45cb-8c73-52cbd1097b22",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.681753,
+      39.77985
+     ],
+     "type": "Point"
+    },
+    "id": 6595057,
+    "properties": {
+     "address": "1442 Buchanan Trail East",
+     "city": "Greencastle",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Shady Grove Mennonite School",
+     "objectid": 6595057,
+     "permanent_identifier": "dd898c7a-9fee-479d-ad3f-e004d18cf4b9",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.81017,
+      39.596735
+     ],
+     "type": "Point"
+    },
+    "id": 6624121,
+    "properties": {
+     "address": "5 South Clifton Drive",
+     "city": "Williamsport",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Williamsport High School",
+     "objectid": 6624121,
+     "permanent_identifier": "00f42930-8073-4022-8b8c-65f15c31f209",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.794302,
+      39.68685
+     ],
+     "type": "Point"
+    },
+    "id": 6633200,
+    "properties": {
+     "address": "13535 Broadfording Church Road",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Broadfording Christian Academy",
+     "objectid": 6633200,
+     "permanent_identifier": "0a2896f9-8ac9-429d-9bb8-45995c49c394",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.608675,
+      39.679172
+     ],
+     "type": "Point"
+    },
+    "id": 6637526,
+    "properties": {
+     "address": "13121 Brook Lane",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Laurel Hall School - Hagerstown",
+     "objectid": 6637526,
+     "permanent_identifier": "0e1d98fe-24a1-4607-b101-402815294528",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.574318,
+      39.662056
+     ],
+     "type": "Point"
+    },
+    "id": 6642832,
+    "properties": {
+     "address": "68 North Main Street",
+     "city": "Smithsburg",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Smithsburg Middle School",
+     "objectid": 6642832,
+     "permanent_identifier": "14203993-a76f-4419-9fbf-326dc2a10d21",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.564687,
+      39.746621
+     ],
+     "type": "Point"
+    },
+    "id": 6643543,
+    "properties": {
+     "address": "840 East Second Street",
+     "city": "Waynesboro",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Summitview Elementary School",
+     "objectid": 6643543,
+     "permanent_identifier": "148215aa-a5f4-4a6d-b1ba-d894e976c768",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.720327,
+      39.780495
+     ],
+     "type": "Point"
+    },
+    "id": 6643847,
+    "properties": {
+     "address": "500 East Leitersburg Street",
+     "city": "Greencastle",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Greencastle - Antrim Elementary School",
+     "objectid": 6643847,
+     "permanent_identifier": "14fd21c1-f041-478b-9318-91129e18b1a6",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.579427,
+      39.754181
+     ],
+     "type": "Point"
+    },
+    "id": 6647691,
+    "properties": {
+     "address": "100 South Church Street",
+     "city": "Waynesboro",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Noahs Ark Christian Child Care Center",
+     "objectid": 6647691,
+     "permanent_identifier": "188dac3d-e431-4ed1-9ff4-63e49b7bfbdb",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.721046,
+      39.641733
+     ],
+     "type": "Point"
+    },
+    "id": 6647775,
+    "properties": {
+     "address": "7 South Potomac Street",
+     "city": "Hagerstown",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Barbara Ingram School For the Arts",
+     "objectid": 6647775,
+     "permanent_identifier": "18d42ef6-917f-43e2-90ee-9d87c633adcd",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.734161,
+      39.614103
+     ],
+     "type": "Point"
+    },
+    "id": 6647784,
+    "properties": {
+     "address": "40 West Oak Ridge Drive",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Antietam Academy",
+     "objectid": 6647784,
+     "permanent_identifier": "18d7419a-b35d-4e04-ad6b-29b4ef7d6e0e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.730988,
+      39.661411
+     ],
+     "type": "Point"
+    },
+    "id": 6650093,
+    "properties": {
+     "address": "1350 Marshall Street",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Marshall Street School",
+     "objectid": 6650093,
+     "permanent_identifier": "1b19f3b4-891d-4183-82a0-18c775cfd478",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.732284,
+      39.620387
+     ],
+     "type": "Point"
+    },
+    "id": 6660244,
+    "properties": {
+     "address": "1101 South Potomac Street",
+     "city": "Hagerstown",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "South Hagerstown High School",
+     "objectid": 6660244,
+     "permanent_identifier": "259581bc-5901-4e5e-8572-7e13e74a27db",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.735072,
+      39.648913
+     ],
+     "type": "Point"
+    },
+    "id": 6667735,
+    "properties": {
+     "address": "41 Bryan Circle",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Truth Christian Academy",
+     "objectid": 6667735,
+     "permanent_identifier": "2d2a37d7-493c-4d4e-a092-6ac6eda349ba",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.57018,
+      39.815217
+     ],
+     "type": "Point"
+    },
+    "id": 6667890,
+    "properties": {
+     "address": "7891 Tomstown Road",
+     "city": "Waynesboro",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Mowrey Elementary School",
+     "objectid": 6667890,
+     "permanent_identifier": "2d26a02a-0aba-4ae9-9e55-e2556f416257",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.601373,
+      39.594573
+     ],
+     "type": "Point"
+    },
+    "id": 6673147,
+    "properties": {
+     "address": "10207 Crystal Falls Drive",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1660694400000,
+     "name": "Mount Aetna Adventist School",
+     "objectid": 6673147,
+     "permanent_identifier": "326de605-7606-42ff-9476-7fb98c1bbeb2",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.728028,
+      39.716623
+     ],
+     "type": "Point"
+    },
+    "id": 6673234,
+    "properties": {
+     "address": "14629 Citicorp Drive",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1465914479000,
+     "name": "Citicorp Family Center",
+     "objectid": 6673234,
+     "permanent_identifier": "329f553f-1caf-4f84-a4ba-4ad6232d2160",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.575133,
+      39.659776
+     ],
+     "type": "Point"
+    },
+    "id": 6678206,
+    "properties": {
+     "address": "66 North Main Street",
+     "city": "Smithsburg",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Smithsburg High School",
+     "objectid": 6678206,
+     "permanent_identifier": "379d6a62-bfa5-4c68-84be-bf026bc6ab85",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.713792,
+      39.665327
+     ],
+     "type": "Point"
+    },
+    "id": 6695871,
+    "properties": {
+     "address": "701 Northern Avenue",
+     "city": "Hagerstown",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Northern Middle School",
+     "objectid": 6695871,
+     "permanent_identifier": "499d8fcd-2b4b-4d81-b1f6-d254613161a4",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.776031,
+      39.619102
+     ],
+     "type": "Point"
+    },
+    "id": 6695986,
+    "properties": {
+     "address": "11101 Hickory School Road",
+     "city": "Williamsport",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Hickory Elementary School",
+     "objectid": 6695986,
+     "permanent_identifier": "49de4fef-a9ab-4d16-b57f-0714dd4c1221",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.696122,
+      39.655919
+     ],
+     "type": "Point"
+    },
+    "id": 6698037,
+    "properties": {
+     "address": "301 East Magnolia Avenue",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Potomac Heights Elementary School",
+     "objectid": 6698037,
+     "permanent_identifier": "4bcd7940-4147-49b8-9e2f-0a41c83f86f6",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.828645,
+      39.650188
+     ],
+     "type": "Point"
+    },
+    "id": 6706299,
+    "properties": {
+     "address": "12215 Walnut Point West",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Heritage Academy",
+     "objectid": 6706299,
+     "permanent_identifier": "5473c0c8-5edf-48f8-9edd-d851dfd25943",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.807154,
+      39.65122
+     ],
+     "type": "Point"
+    },
+    "id": 6706513,
+    "properties": {
+     "address": "16221 National Pike",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Emmanuel Christian School",
+     "objectid": 6706513,
+     "permanent_identifier": "54e1be4d-bcf6-4b8a-bcf6-03fd0c78cb2d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.758899,
+      39.617504
+     ],
+     "type": "Point"
+    },
+    "id": 6712093,
+    "properties": {
+     "address": "17545 Lincolnshire Road",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Lincolnshire Elementary School",
+     "objectid": 6712093,
+     "permanent_identifier": "5aa262c3-0b0d-4592-945a-90ad03990a23",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.810988,
+      39.632729
+     ],
+     "type": "Point"
+    },
+    "id": 6713218,
+    "properties": {
+     "address": "11610 Greencastle Pike",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Hillside Mennonite School",
+     "objectid": 6713218,
+     "permanent_identifier": "5b5f52e5-24c7-4c58-8865-91d58af81177",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.697802,
+      39.859139
+     ],
+     "type": "Point"
+    },
+    "id": 6716457,
+    "properties": {
+     "address": "145 Colorado Street",
+     "city": "Marion",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1509667200000,
+     "name": "Marion Elementary School",
+     "objectid": 6716457,
+     "permanent_identifier": "5eb04e6a-fd0f-404c-9e38-96d5f3620acb",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.741248,
+      39.690354
+     ],
+     "type": "Point"
+    },
+    "id": 6719542,
+    "properties": {
+     "address": "18023 Maugans Avenue",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Maugansville Elementary School",
+     "objectid": 6719542,
+     "permanent_identifier": "61bb91d9-060a-4dc3-b381-84abfc3d0497",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.567685,
+      39.746991
+     ],
+     "type": "Point"
+    },
+    "id": 6725800,
+    "properties": {
+     "address": "702 East Second Street",
+     "city": "Waynesboro",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Waynesboro Area Middle School",
+     "objectid": 6725800,
+     "permanent_identifier": "6896d396-3736-4e8b-a69a-ebca06664edc",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.809242,
+      39.599919
+     ],
+     "type": "Point"
+    },
+    "id": 6727194,
+    "properties": {
+     "address": "1 South Clifton Drive",
+     "city": "Williamsport",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Williamsport Elementary School",
+     "objectid": 6727194,
+     "permanent_identifier": "69bb4382-d445-4238-bfe4-93d4127c5f4a",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.718428,
+      39.668778
+     ],
+     "type": "Point"
+    },
+    "id": 6728416,
+    "properties": {
+     "address": "901 Northern Avenue",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Fountaindale Elementary School",
+     "objectid": 6728416,
+     "permanent_identifier": "6ac66c7c-fbac-41d1-ae94-ab6b049c6a24",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.701035,
+      39.636931
+     ],
+     "type": "Point"
+    },
+    "id": 6742509,
+    "properties": {
+     "address": "195 Pangborn Boulevard",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Pangborn Elementary School",
+     "objectid": 6742509,
+     "permanent_identifier": "7975863a-5d62-4f78-b95d-89917b5699a5",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.694642,
+      39.683609
+     ],
+     "type": "Point"
+    },
+    "id": 6747462,
+    "properties": {
+     "address": "19410 Longmeadow Road",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Paramount Elementary School",
+     "objectid": 6747462,
+     "permanent_identifier": "7de43802-538f-4ad7-b892-115dce3b537a",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.692593,
+      39.624786
+     ],
+     "type": "Point"
+    },
+    "id": 6751798,
+    "properties": {
+     "address": "1320 Yale Drive",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1555977600000,
+     "name": "Eastern Elementary School",
+     "objectid": 6751798,
+     "permanent_identifier": "82a4de60-ff42-41f4-a503-4b5227cd091d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.72344,
+      39.784889
+     ],
+     "type": "Point"
+    },
+    "id": 6751867,
+    "properties": {
+     "address": "300 South Ridge Avenue",
+     "city": "Greencastle",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Greencastle - Antrim High School",
+     "objectid": 6751867,
+     "permanent_identifier": "828f770d-4229-4ba7-8aa3-82631bf0b2ec",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.720354,
+      39.633192
+     ],
+     "type": "Point"
+    },
+    "id": 6752989,
+    "properties": {
+     "address": "385 Mill Street",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Bester Elementary School",
+     "objectid": 6752989,
+     "permanent_identifier": "8406d712-eb1c-4249-bfb1-7f29b337c299",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.732389,
+      39.614958
+     ],
+     "type": "Point"
+    },
+    "id": 6754515,
+    "properties": {
+     "address": "1321 South Potomac Street",
+     "city": "Hagerstown",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "E Russell Hicks Middle School",
+     "objectid": 6754515,
+     "permanent_identifier": "858b07f8-cb52-4eb3-b8d4-56226f215119",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.69856,
+      39.704023
+     ],
+     "type": "Point"
+    },
+    "id": 6754687,
+    "properties": {
+     "address": "19308 Air View Road",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1465914479000,
+     "name": "Paradise Mennonite School",
+     "objectid": 6754687,
+     "permanent_identifier": "852135de-cd09-4cda-a64d-006c6f686f28",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.906949,
+      39.827114
+     ],
+     "type": "Point"
+    },
+    "id": 6765715,
+    "properties": {
+     "address": "30 South Park Avenue",
+     "city": "Mercersburg",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Mercersburg Elementary School",
+     "objectid": 6765715,
+     "permanent_identifier": "90c21e1d-fd01-4edc-8bf9-fe3724e6301b",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.756596,
+      39.683662
+     ],
+     "type": "Point"
+    },
+    "id": 6772366,
+    "properties": {
+     "address": "13321 Cearfoss Pike",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Grace Academy",
+     "objectid": 6772366,
+     "permanent_identifier": "968527f5-5547-48a4-88a6-1683863ea010",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.616468,
+      39.655919
+     ],
+     "type": "Point"
+    },
+    "id": 6772697,
+    "properties": {
+     "address": "21615 Old Forge Road",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Old Forge Elementary School",
+     "objectid": 6772697,
+     "permanent_identifier": "972c2129-a15e-4a99-b4d3-5df5779ba9d3",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.537313,
+      39.740826
+     ],
+     "type": "Point"
+    },
+    "id": 6773879,
+    "properties": {
+     "address": "10829 Buchanan Trail East",
+     "city": "Waynesboro",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Hooverville Elementary School",
+     "objectid": 6773879,
+     "permanent_identifier": "97edd625-170f-4dd4-9783-16e55fade8f9",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.72418,
+      39.782993
+     ],
+     "type": "Point"
+    },
+    "id": 6777019,
+    "properties": {
+     "address": "370 South Ridge Avenue",
+     "city": "Greencastle",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Greencastle - Antrim Middle School",
+     "objectid": 6777019,
+     "permanent_identifier": "9bb7da70-9086-4a6d-8992-8731df8be686",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.811679,
+      39.593494
+     ],
+     "type": "Point"
+    },
+    "id": 6777818,
+    "properties": {
+     "address": "334 Sunset Avenue",
+     "city": "Williamsport",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Springfield Middle School",
+     "objectid": 6777818,
+     "permanent_identifier": "9c8ac7fc-0669-4329-a5f1-359d6d2e2131",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.897143,
+      39.850117
+     ],
+     "type": "Point"
+    },
+    "id": 6783094,
+    "properties": {
+     "address": "5191 Fort Loudon Road",
+     "city": "Mercersburg",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "James Buchanan Middle School",
+     "objectid": 6783094,
+     "permanent_identifier": "a174ad8b-77b6-4069-8fd2-d157928f3ef9",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.757867,
+      39.660478
+     ],
+     "type": "Point"
+    },
+    "id": 6793715,
+    "properties": {
+     "address": "12615 Sedgwick Way",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Jonathan Hager Elementary School",
+     "objectid": 6793715,
+     "permanent_identifier": "ac62b831-db17-41bc-b134-47d01d04284e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.722387,
+      39.67285
+     ],
+     "type": "Point"
+    },
+    "id": 6796575,
+    "properties": {
+     "address": "18614 Crestwood Drive",
+     "city": "Hagerstown",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Saint Maria Goretti High School",
+     "objectid": 6796575,
+     "permanent_identifier": "af1a0e5d-dba0-4829-b521-aa0e0cd2b05c",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.720022,
+      39.781849
+     ],
+     "type": "Point"
+    },
+    "id": 6808759,
+    "properties": {
+     "address": "504 East Leitersburg Street",
+     "city": "Greencastle",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Greencastle - Antrim Primary School",
+     "objectid": 6808759,
+     "permanent_identifier": "bb33057f-84a5-4ced-9842-4f7e2ea354e5",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.576971,
+      39.657051
+     ],
+     "type": "Point"
+    },
+    "id": 6817364,
+    "properties": {
+     "address": "67 North Main Street",
+     "city": "Smithsburg",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Smithsburg Elementary School",
+     "objectid": 6817364,
+     "permanent_identifier": "c3ed68c5-ed10-4621-a63f-c320406b9ddc",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.860016,
+      39.58702
+     ],
+     "type": "Point"
+    },
+    "id": 6818341,
+    "properties": {
+     "address": "9580 Williamsport Pike",
+     "city": "Falling Waters",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1657929600000,
+     "name": "Marlowe Elementary School",
+     "objectid": 6818341,
+     "permanent_identifier": "c4e635aa-cf26-4fdd-93f1-7c92cad69286",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.614977,
+      39.592726
+     ],
+     "type": "Point"
+    },
+    "id": 6824166,
+    "properties": {
+     "address": "10100 Academy Drive",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1660694400000,
+     "name": "Highland View Academy",
+     "objectid": 6824166,
+     "permanent_identifier": "cb283ac4-d8ef-4427-b8b7-0b3dff689dee",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.691368,
+      39.622857
+     ],
+     "type": "Point"
+    },
+    "id": 6832041,
+    "properties": {
+     "address": "1311 Yale Drive",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1561680000000,
+     "name": "Ruth Ann Monroe Primary School",
+     "objectid": 6832041,
+     "permanent_identifier": "d31c0fa1-bcd0-4beb-8b65-a4634d1ffafa",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.731404,
+      39.61697
+     ],
+     "type": "Point"
+    },
+    "id": 6836075,
+    "properties": {
+     "address": "1221 South Potomac Street",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Emma Doub Elementary School",
+     "objectid": 6836075,
+     "permanent_identifier": "d7294e77-df20-472c-915b-7e8463f25569",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.598637,
+      39.82
+     ],
+     "type": "Point"
+    },
+    "id": 6836939,
+    "properties": {
+     "address": "7760 Burkholder Road",
+     "city": "Waynesboro",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Providence School Oak Hill Building",
+     "objectid": 6836939,
+     "permanent_identifier": "d82547f6-9536-46d7-b964-1c72edbfa07e",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.72476,
+      39.644494
+     ],
+     "type": "Point"
+    },
+    "id": 6857266,
+    "properties": {
+     "address": "218 West Washington Street",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Saint Mary Catholic School",
+     "objectid": 6857266,
+     "permanent_identifier": "ec82dba7-dde5-4e97-b306-50aa378a71aa",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.859455,
+      39.648598
+     ],
+     "type": "Point"
+    },
+    "id": 6857738,
+    "properties": {
+     "address": "12146 Cedar Ridge Road",
+     "city": "Williamsport",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Cedar Ridge School",
+     "objectid": 6857738,
+     "permanent_identifier": "ed5b733f-fada-4a9a-badb-5b2fdbce4d5f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.624762,
+      39.604735
+     ],
+     "type": "Point"
+    },
+    "id": 6858296,
+    "properties": {
+     "address": "21328 Mount Aetna Road",
+     "city": "Hagerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1660694400000,
+     "name": "Shiningtree School",
+     "objectid": 6858296,
+     "permanent_identifier": "edaaec86-fab3-445e-bc79-e4b149f52ad4",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.837389,
+      39.666533
+     ],
+     "type": "Point"
+    },
+    "id": 6859223,
+    "properties": {
+     "address": "12806 Independence Road",
+     "city": "Clear Spring",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Oak Hill House School",
+     "objectid": 6859223,
+     "permanent_identifier": "eebe0c22-c534-4c9f-8c1c-1280f64157a2",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.737167,
+      39.656477
+     ],
+     "type": "Point"
+    },
+    "id": 6859520,
+    "properties": {
+     "address": "1323 Salem Avenue",
+     "city": "Hagerstown",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Salem Avenue Elementary School",
+     "objectid": 6859520,
+     "permanent_identifier": "ee8f46a0-3a9c-48f8-81ee-9405b11211fa",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.702512,
+      39.813236
+     ],
+     "type": "Point"
+    },
+    "id": 6862776,
+    "properties": {
+     "address": "414 Zarger Road",
+     "city": "Greencastle",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Antrim Mennonite School",
+     "objectid": 6862776,
+     "permanent_identifier": "f1e6008a-c038-46ca-8a90-a3cbe5adea4e",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.571302,
+      39.748807
+     ],
+     "type": "Point"
+    },
+    "id": 6866272,
+    "properties": {
+     "address": "550 East Second Street",
+     "city": "Waynesboro",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Waynesboro Area Senior High School",
+     "objectid": 6866272,
+     "permanent_identifier": "f5afe2db-f689-459c-a211-ec41e13f6e08",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.590329,
+      39.756142
+     ],
+     "type": "Point"
+    },
+    "id": 6869550,
+    "properties": {
+     "address": "220 Fairview Avenue",
+     "city": "Waynesboro",
+     "fcode": 73003,
+     "ftype": 730,
+     "loaddate": 1509753600000,
+     "name": "Fairview Avenue Elementary School",
+     "objectid": 6869550,
+     "permanent_identifier": "f91270ce-8e2d-43dc-b830-1c8e9039c732",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.728981,
+      39.659969
+     ],
+     "type": "Point"
+    },
+    "id": 6870010,
+    "properties": {
+     "address": "1300 Marshall Street",
+     "city": "Hagerstown",
+     "fcode": 73004,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Western Heights Middle School",
+     "objectid": 6870010,
+     "permanent_identifier": "f942a959-13c6-4d8f-b66f-e04b1b4bf75a",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.716308,
+      39.662326
+     ],
+     "type": "Point"
+    },
+    "id": 6874196,
+    "properties": {
+     "address": "1200 Pennsylvania Avenue",
+     "city": "Hagerstown",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "North Hagerstown High School",
+     "objectid": 6874196,
+     "permanent_identifier": "fdab169d-9ac4-4adb-8eb2-0a4745581c54",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.736002,
+      39.614557
+     ],
+     "type": "Point"
+    },
+    "id": 6874219,
+    "properties": {
+     "address": "50 West Oak Ridge Drive",
+     "city": "Hagerstown",
+     "fcode": 73005,
+     "ftype": 730,
+     "loaddate": 1658793600000,
+     "name": "Boyd Michael Technical High School",
+     "objectid": 6874219,
+     "permanent_identifier": "fdb70672-ae8d-4196-8d93-febe7e779e1e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.764545,
+      39.598058
+     ],
+     "type": "Point"
+    },
+    "id": 7001963,
+    "properties": {
+     "address": "Downsville Pike",
+     "city": "Hangerstown",
+     "fcode": 73002,
+     "ftype": 730,
+     "loaddate": 1774530594000,
+     "name": "Washington County Public School Center",
+     "objectid": 7001963,
+     "permanent_identifier": "97daa494-0efa-4159-9071-2adfca8ba5bf",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-13T08:17:06Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Fri, 13 Nov 2026 08:17:06 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/23/query?where=1%3D1&geometry=-77.912165%2C39.577272%2C-77.535835%2C39.866728&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

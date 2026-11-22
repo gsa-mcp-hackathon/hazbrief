@@ -1,0 +1,438 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.725919,
+      39.790047
+     ],
+     "type": "Point"
+    },
+    "id": 6651230,
+    "properties": {
+     "address": "2 North Washington Street",
+     "city": "Greencastle",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1509667200000,
+     "name": "Greencastle Post Office",
+     "objectid": 6651230,
+     "permanent_identifier": "1c89babb-5c5d-4cf8-b124-5bb278b3e058",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.575414,
+      39.803719
+     ],
+     "type": "Point"
+    },
+    "id": 6662203,
+    "properties": {
+     "address": "6617 Orphanage Road",
+     "city": "Quincy",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1528761600000,
+     "name": "Quincy Post Office",
+     "objectid": 6662203,
+     "permanent_identifier": "27b710cb-aa45-467c-a83c-ddaf74b08a64",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.720697,
+      39.644339
+     ],
+     "type": "Point"
+    },
+    "id": 6662554,
+    "properties": {
+     "address": "44 West Franklin Street",
+     "city": "Hagerstown",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Hagerstown Post Office",
+     "objectid": 6662554,
+     "permanent_identifier": "27f1ced0-675a-4912-bc70-726fcc46b4e7",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.559216,
+      39.844746
+     ],
+     "type": "Point"
+    },
+    "id": 6711212,
+    "properties": {
+     "address": "3 Ash Street",
+     "city": "Mont Alto",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1509667200000,
+     "name": "Mont Alto Post Office",
+     "objectid": 6711212,
+     "permanent_identifier": "5999d652-1c54-4728-8e79-643c3fbbd712",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.822446,
+      39.598862
+     ],
+     "type": "Point"
+    },
+    "id": 6740467,
+    "properties": {
+     "address": "28 West Salisbury Street",
+     "city": "Williamsport",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1652832000000,
+     "name": "Williamsport Post Office",
+     "objectid": 6740467,
+     "permanent_identifier": "773636b5-e01d-4cc5-943a-842713223c56",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.859454,
+      39.860096
+     ],
+     "type": "Point"
+    },
+    "id": 6743146,
+    "properties": {
+     "address": "4729 Steele Avenue",
+     "city": "Lemasters",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1528761600000,
+     "name": "Lemasters Post Office",
+     "objectid": 6743146,
+     "permanent_identifier": "7a0041ca-e5e6-4809-953e-1cb650d2625d",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.575101,
+      39.753926
+     ],
+     "type": "Point"
+    },
+    "id": 6747537,
+    "properties": {
+     "address": "118 East Main Street",
+     "city": "Waynesboro",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1509667200000,
+     "name": "Waynesboro Post Office",
+     "objectid": 6747537,
+     "permanent_identifier": "7e09327f-d079-4821-a477-025a9b00b71d",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.744633,
+      39.693652
+     ],
+     "type": "Point"
+    },
+    "id": 6751299,
+    "properties": {
+     "address": "13809 Maugansville Road",
+     "city": "Maugansville",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Maugansville Post Office",
+     "objectid": 6751299,
+     "permanent_identifier": "8233ecfe-7623-43b0-8eea-3f790a0bed89",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.699164,
+      39.66737
+     ],
+     "type": "Point"
+    },
+    "id": 6784825,
+    "properties": {
+     "address": "12912 Conamar Drive",
+     "city": "Hagerstown",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Northern Post Office",
+     "objectid": 6784825,
+     "permanent_identifier": "a353158f-fd47-4e70-98c9-15e8042dfb79",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.672948,
+      39.778534
+     ],
+     "type": "Point"
+    },
+    "id": 6792181,
+    "properties": {
+     "address": "1814 Buchanan Trail East",
+     "city": "Shady Grove",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1509667200000,
+     "name": "Shady Grove Post Office",
+     "objectid": 6792181,
+     "permanent_identifier": "aaf62462-b669-4651-8734-e9a2807b6b73",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.704888,
+      39.607178
+     ],
+     "type": "Point"
+    },
+    "id": 6812761,
+    "properties": {
+     "address": "29 Frederick Road",
+     "city": "Funkstown",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Funkstown Post Office",
+     "objectid": 6812761,
+     "permanent_identifier": "bf392182-97d9-4fb9-8d59-8f4a4f68d31b",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.621831,
+      39.767727
+     ],
+     "type": "Point"
+    },
+    "id": 6813324,
+    "properties": {
+     "address": "5012 Buchanan Trail East",
+     "city": "Zullinger",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1509667200000,
+     "name": "Zullinger Post Office",
+     "objectid": 6813324,
+     "permanent_identifier": "bfb2fde3-51cd-4ca3-bf63-94cb3772cd74",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.585045,
+      39.644176
+     ],
+     "type": "Point"
+    },
+    "id": 6821888,
+    "properties": {
+     "address": "22509 Cavetown Church Road",
+     "city": "Cavetown",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Cavetown Post Office",
+     "objectid": 6821888,
+     "permanent_identifier": "c83a6044-8872-4c32-8c76-bb9b4d171bf3",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.904004,
+      39.825897
+     ],
+     "type": "Point"
+    },
+    "id": 6831423,
+    "properties": {
+     "address": "128 South Main Street",
+     "city": "Mercersburg",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1528761600000,
+     "name": "Mercersburg Post Office",
+     "objectid": 6831423,
+     "permanent_identifier": "d2ac89b0-ba3b-4515-b414-5869ce0e9cd2",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.699458,
+      39.858609
+     ],
+     "type": "Point"
+    },
+    "id": 6831980,
+    "properties": {
+     "address": "144 Colorado Street",
+     "city": "Marion",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1509667200000,
+     "name": "Marion Post Office",
+     "objectid": 6831980,
+     "permanent_identifier": "d2fe818b-3e57-4315-ac7d-cf7568a1edd9",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.634593,
+      39.643137
+     ],
+     "type": "Point"
+    },
+    "id": 6841556,
+    "properties": {
+     "address": "21106 Twin Springs Drive",
+     "city": "Chewsville",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Chewsville Post Office",
+     "objectid": 6841556,
+     "permanent_identifier": "dcb21e23-aa02-4c02-83ed-354d02cd6cd6",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.570453,
+      39.65417
+     ],
+     "type": "Point"
+    },
+    "id": 6850427,
+    "properties": {
+     "address": "43 Grove Lane",
+     "city": "Smithsburg",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Smithsburg Post Office",
+     "objectid": 6850427,
+     "permanent_identifier": "e5cb63ff-7bf2-45d2-ad27-f109a69e9b24",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.856762,
+      39.590421
+     ],
+     "type": "Point"
+    },
+    "id": 6852754,
+    "properties": {
+     "address": "9853 Williamsport Pike",
+     "city": "Falling Waters",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653350400000,
+     "name": "Falling Waters Post Office",
+     "objectid": 6852754,
+     "permanent_identifier": "e81cb274-79ed-41ec-95e6-f6706dd66c2a",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.724615,
+      39.722538
+     ],
+     "type": "Point"
+    },
+    "id": 6856860,
+    "properties": {
+     "address": "15753 Pennsylvania Avenue South",
+     "city": "State Line",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1509667200000,
+     "name": "State Line Post Office",
+     "objectid": 6856860,
+     "permanent_identifier": "ec64b896-69a6-4cc4-9d93-6ca58c50df24",
+     "state": "PA"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-13T08:17:04Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Fri, 13 Nov 2026 08:17:04 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/3/query?where=1%3D1&geometry=-77.912165%2C39.577272%2C-77.535835%2C39.866728&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

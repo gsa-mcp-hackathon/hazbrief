@@ -1,0 +1,17 @@
+{
+ "doc_id": "usfs-lavdas-1996-vsmoke-users-manual",
+ "held_sha256": "d5d5bcdec2fc2be32aabda01056889168cdc11f4e63a67271ebb4f0772978fdf",
+ "pdf_page": 121,
+ "printed_page": 118,
+ "image": "vsmoke_manual-121.png",
+ "image_sha256": "918bce2e6face2fd919c22331d7d762dca780c2d1bb16956507bf4f484493ba5",
+ "rendered_by": "pdftoppm -f 121 -l 122 -r 110 -gray -png corpus/raw/usfs-lavdas-1996-vsmoke-users-manual.pdf the HB-150 evidence (held privately)",
+ "why_an_image": "The scanned page's text layer carries none of the echoed numbers (pdftotext finds no 47.0 or 590 on PDF pp. 121-122), so the page image is the receipt and the values were read by eye.",
+ "read": {
+  "where": "Appendix III, 'ECHO PRINT (LIST-DIRECTED OUTPUT) OF INPUT VALUES', NUMDRT(I),EMTQPM(I),EMTQCO(I),EMTQH(I),EMTQR(I) FOR I = 1",
+  "line": "14 47.000000 370.000000 590.000000 -7.500000E-01",
+  "EMTQPM_g_s": 47.0,
+  "EMTQH_MW": 590.0,
+  "units": "EMTQPM grams per second, total particulate matter of any size class (manual, Appendix I, EMTQPM: 'emission rates in grams per second'); EMTQH megawatts ('total sensible heat emission rate in megawatts')"
+ }
+}

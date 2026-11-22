@@ -1,0 +1,96 @@
+{"at": "2026-11-13T08:07:41Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "tigerWMS_Census2020/MapServer/10/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:42Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "tigerWMS_Census2020/MapServer/8/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:42Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "tigerWMS_Census2020/MapServer/6/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:43Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/21/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:43Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/22/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:44Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/23/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:44Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/14/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:44Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/15/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:45Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/16/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:45Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/18/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:46Z", "host": "hydro.nationalmap.gov", "outcome": "status 200", "path": "3DHP_all/MapServer/50/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:46Z", "host": "hydro.nationalmap.gov", "outcome": "status 200", "path": "3DHP_all/MapServer/60/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:47Z", "host": "services.arcgis.com", "outcome": "status 200", "path": "NTAD_North_American_Rail_Network_Lines/FeatureServer/0/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:47Z", "host": "services.arcgis.com", "outcome": "status 200", "path": "NTAD_Railroad_Grade_Crossings/FeatureServer/0/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:48Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/export", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:54Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "tigerWMS_Census2020/MapServer/10/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:54Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "tigerWMS_Census2020/MapServer/8/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:54Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "tigerWMS_Census2020/MapServer/6/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:55Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/21/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:56Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/22/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:56Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/23/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:57Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/14/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:57Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/15/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:57Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/16/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:58Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/18/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:58Z", "host": "hydro.nationalmap.gov", "outcome": "status 200", "path": "3DHP_all/MapServer/50/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:07:59Z", "host": "hydro.nationalmap.gov", "outcome": "status 200", "path": "3DHP_all/MapServer/60/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:00Z", "host": "services.arcgis.com", "outcome": "status 200", "path": "NTAD_North_American_Rail_Network_Lines/FeatureServer/0/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:00Z", "host": "services.arcgis.com", "outcome": "status 200", "path": "NTAD_Railroad_Grade_Crossings/FeatureServer/0/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:01Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/export", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:02Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "tigerWMS_Census2020/MapServer/10/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:03Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "tigerWMS_Census2020/MapServer/8/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:03Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "tigerWMS_Census2020/MapServer/6/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:03Z", "host": "api.census.gov", "outcome": "status 200", "path": "2024/acs/acs5", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:04Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/21/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:04Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/22/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:05Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/23/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:05Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/14/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:06Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/15/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:06Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/16/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:07Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/18/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:07Z", "host": "hydro.nationalmap.gov", "outcome": "status 200", "path": "3DHP_all/MapServer/50/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:08Z", "host": "hydro.nationalmap.gov", "outcome": "status 200", "path": "3DHP_all/MapServer/60/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:08Z", "host": "services.arcgis.com", "outcome": "status 200", "path": "NTAD_North_American_Rail_Network_Lines/FeatureServer/0/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:08Z", "host": "services.arcgis.com", "outcome": "status 200", "path": "NTAD_Railroad_Grade_Crossings/FeatureServer/0/query", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:08:09Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/export", "recorder": "hb175_record_requests"}
+{"at": "2026-11-13T08:16:47Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/2/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:16:48Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/6/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:16:48Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/2/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:16:48Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/6/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:16:48Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/8/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:16:50Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/16/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:16:51Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/15/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:16:51Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/18/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:16:52Z", "host": "hydro.nationalmap.gov", "outcome": "status 200", "path": "3DHP_all/MapServer/50/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:16:54Z", "host": "elevation.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "3DEPElevation/ImageServer/getSamples", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:16:54Z", "host": "epqs.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "json", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:00Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/2/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:00Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/6/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:01Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/8/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:03Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/3/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:04Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/4/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:05Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/5/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:05Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/21/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:05Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/22/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:06Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/23/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:06Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/8/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:06Z", "host": "services.arcgis.com", "outcome": "status 200", "path": "NTAD_Truck_Stop_Parking/FeatureServer/0/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:12Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/16/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:13Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/15/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:14Z", "host": "carto.nationalmap.gov", "outcome": "status 200", "path": "structures/MapServer/18/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:14Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/2/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:15Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/6/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:18Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/2/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:19Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/6/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:19Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/2/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:20Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/6/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:20Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/8/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:22Z", "host": "elevation.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "3DEPElevation/ImageServer/getSamples", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:17:22Z", "host": "epqs.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "json", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:23:34Z", "host": "elevation.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "3DEPElevation/ImageServer/getSamples", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:23:34Z", "host": "epqs.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "json", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:23:42Z", "host": "elevation.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "3DEPElevation/ImageServer/getSamples", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:23:42Z", "host": "epqs.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "json", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:23:42Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "tigerWMS_Census2020/MapServer/10/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:23:43Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/2/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:23:43Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/6/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:23:43Z", "host": "tigerweb.geo.census.gov", "outcome": "status 200", "path": "Transportation/MapServer/8/query", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:24:11Z", "host": "elevation.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "3DEPElevation/ImageServer/getSamples", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:24:11Z", "host": "epqs.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "json", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:24:18Z", "host": "elevation.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "3DEPElevation/ImageServer/getSamples", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:24:18Z", "host": "epqs.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "json", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:24:29Z", "host": "elevation.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "3DEPElevation/ImageServer/getSamples", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:24:29Z", "host": "epqs.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "json", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:24:36Z", "host": "elevation.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "3DEPElevation/ImageServer/getSamples", "recorder": "record_derivations"}
+{"at": "2026-11-13T08:24:36Z", "host": "epqs.nationalmap.gov", "outcome": "refused_not_on_network_line", "path": "json", "recorder": "record_derivations"}

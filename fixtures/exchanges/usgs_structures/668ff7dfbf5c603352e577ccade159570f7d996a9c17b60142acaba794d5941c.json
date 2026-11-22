@@ -1,0 +1,130 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.640745,
+      39.316635
+     ],
+     "type": "Point"
+    },
+    "id": 6508481,
+    "properties": {
+     "address": "811 West Potomac Street",
+     "city": "Brunswick",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1754274582000,
+     "name": "Brunswick Police Department",
+     "objectid": 6508481,
+     "permanent_identifier": "76519073-3dec-4b91-a4ec-895f2366a0a8",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.407683,
+      39.411535
+     ],
+     "type": "Point"
+    },
+    "id": 6524506,
+    "properties": {
+     "address": "100 East All Saints Street",
+     "city": "Frederick",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1755357005000,
+     "name": "Frederick Police Department",
+     "objectid": 6524506,
+     "permanent_identifier": "8995c5de-c761-43c3-a0d3-6e9703ad3b0e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.375152,
+      39.40706
+     ],
+     "type": "Point"
+    },
+    "id": 6530463,
+    "properties": {
+     "address": "110 Airport Drive East",
+     "city": "Frederick",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1470954509000,
+     "name": "Frederick County Sheriff's Office",
+     "objectid": 6530463,
+     "permanent_identifier": "904d7794-52b4-4629-8a66-6c63a0c820b2",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.714594,
+      39.143579
+     ],
+     "type": "Point"
+    },
+    "id": 6536117,
+    "properties": {
+     "address": "125 East Hirst Road",
+     "city": "Purcellville",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1630540800000,
+     "name": "Purcellville Police Department",
+     "objectid": 6536117,
+     "permanent_identifier": "9757a54c-f04e-4b32-824a-83ce68b5c2c5",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.375305,
+      39.407259
+     ],
+     "type": "Point"
+    },
+    "id": 6872170,
+    "properties": {
+     "address": "110 Airport Drive East",
+     "city": "Frederick",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1557100800000,
+     "name": "Maryland State Police - Barrack B Frederick",
+     "objectid": 6872170,
+     "permanent_identifier": "fc040d88-26cb-4fb1-932c-a457532e551f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-11T11:48:54Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 11 Nov 2026 11:48:54 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/18/query?where=1%3D1&geometry=-77.726361%2C39.130872%2C-77.352439%2C39.420328&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

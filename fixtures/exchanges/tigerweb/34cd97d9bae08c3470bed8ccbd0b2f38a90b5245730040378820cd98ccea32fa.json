@@ -1,0 +1,123 @@
+{
+ "api": "tigerweb",
+ "body": {
+  "displayFieldName": "BASENAME",
+  "features": [
+   {
+    "attributes": {
+     "BASENAME": "Jones Point",
+     "MTFCC": "S1400",
+     "NAME": "Jones Point Dr",
+     "OID": "110451043017"
+    },
+    "geometry": {
+     "paths": [
+      [
+       [
+        -77.03989399957086,
+        38.79337300032125
+       ],
+       [
+        -77.04289399981897,
+        38.7935329998607
+       ],
+       [
+        -77.04353800024953,
+        38.793578000191566
+       ],
+       [
+        -77.0437890003197,
+        38.793576999671096
+       ],
+       [
+        -77.04393800028261,
+        38.79367699983929
+       ],
+       [
+        -77.04412599970527,
+        38.79383700009668
+       ],
+       [
+        -77.04431900004911,
+        38.79397000009851
+       ],
+       [
+        -77.04456199972337,
+        38.794113000081566
+       ],
+       [
+        -77.0447829996563,
+        38.7941739998402
+       ],
+       [
+        -77.04508700032824,
+        38.79422400022316
+       ],
+       [
+        -77.04536900036055,
+        38.794246000268544
+       ],
+       [
+        -77.04552900019411,
+        38.794257000288724
+       ],
+       [
+        -77.04582799994486,
+        38.79434300006947
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "fieldAliases": {
+   "BASENAME": "BASENAME",
+   "MTFCC": "MTFCC",
+   "NAME": "NAME",
+   "OID": "OID"
+  },
+  "fields": [
+   {
+    "alias": "OID",
+    "length": 22,
+    "name": "OID",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "NAME",
+    "length": 100,
+    "name": "NAME",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "BASENAME",
+    "length": 100,
+    "name": "BASENAME",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "MTFCC",
+    "length": 5,
+    "name": "MTFCC",
+    "type": "esriFieldTypeString"
+   }
+  ],
+  "geometryType": "esriGeometryPolyline",
+  "spatialReference": {
+   "latestWkid": 4326,
+   "wkid": 4326
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-27T05:02:12Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Tue, 27 Oct 2026 05:02:12 GMT",
+  "ETag": "\"1784752640\""
+ },
+ "status": 200,
+ "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/8/query?where=UPPER%28BASENAME%29%3D%27JONES+POINT%27&outFields=OID%2CNAME%2CBASENAME%2CMTFCC&returnGeometry=true&outSR=4326&f=json&geometry=-77.046311%2C38.792984%2C-77.039385%2C38.794827&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects"
+}

@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-22T15:16:03Z",
+  "http_mode": "record",
+  "id": "58a747ce2d2e7bd81fb035ce8390acdc705d47cd4cc9fd023c8b949106ecc628",
+  "name": "GET usgs_3dhp",
+  "params": {
+   "method": "GET",
+   "url": "https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer/50/query?where=1%3D1&geometry=-77.061210%2C38.774536%2C-77.012790%2C38.812264&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cid3dhp%2Cgnisidlabel%2Cmainstemid%2Cwaterbodyid3dhp%2Cstreamlevel%2Carbolatesum&returnGeometry=false&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2500&f=geojson"
+  },
+  "startedAtTime": "2026-10-22T15:16:03Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer/50/query?where=1%3D1&geometry=-77.061210%2C38.774536%2C-77.012790%2C38.812264&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cid3dhp%2Cgnisidlabel%2Cmainstemid%2Cwaterbodyid3dhp%2Cstreamlevel%2Carbolatesum&returnGeometry=false&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2500&f=geojson",
+    "id": "usgs_3dhp"
+   }
+  ]
+ },
+ "as_of": "2026-10-22T15:16:03Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 18386,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "6509c06694457b353701c800b3f7c41d8cc99b6119b8aaec165da680e1c8bddf"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "usgs_3dhp",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

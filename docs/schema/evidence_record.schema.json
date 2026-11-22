@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hazbrief-mcp.local/schema/evidence_record.schema.json",
+  "title": "hazbrief evidence record (DN-010 D3)",
+  "description": "One record per activity that produced an evidence entity: an MCP tool call (written by hazbrief.evidence.client.RecordingClient) or an upstream exchange (the seed, scripts/migrate_exchanges_to_store.py). Field names are W3C PROV-O's where PROV has one (startedAtTime, endedAtTime, generatedAtTime as as_of, used, wasRevisionOf); provenance_class and horizon_s are DN-009 C1's. The model never writes a record (DN-010 D5): narrated_by_model is not a provenance_class here.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["record_version", "entity", "activity", "agent", "provenance_class", "as_of", "as_of_basis", "horizon_s", "horizon_source", "used", "wasRevisionOf"],
+  "properties": {
+    "record_version": {"const": 1},
+    "entity": {
+      "description": "prov:Entity. sha256 of the canonical JSON of the response body (hazbrief.packs.canonical_json), or of the raw bytes for a body that is not JSON.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sha256", "bytes", "encoding", "media_type"],
+      "properties": {
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 0},
+        "encoding": {"enum": ["json", "bytes"]},
+        "media_type": {"type": "string", "minLength": 1}
+      }
+    },
+    "activity": {
+      "description": "prov:Activity. `id` is sha256 of the canonical activity without `id`, so a second call is a second id.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "name", "params", "startedAtTime", "endedAtTime"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "type": {"enum": ["mcp_tool_call", "upstream_exchange"]},
+        "name": {"type": "string", "minLength": 1, "description": "the tool name, or `GET <api>` for an upstream exchange"},
+        "params": {"type": "object", "description": "the request parameters; for an upstream exchange, {method, url} with the url as recorded (credentials removed)"},
+        "startedAtTime": {"type": "string", "format": "date-time"},
+        "endedAtTime": {"type": "string", "format": "date-time"},
+        "http_mode": {"enum": ["live", "record", "replay"], "description": "the server's HAZBRIEF_HTTP_MODE: a replayed live source is not a live read"},
+        "is_error": {"type": "boolean", "description": "an MCP error result (a structured error, DN-003 s1, is a record like any other)"}
+      }
+    },
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["server", "source"],
+      "properties": {
+        "server": {
+          "description": "prov:SoftwareAgent: the hazbrief server.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "version", "tool_surface_sha256"],
+          "properties": {
+            "name": {"type": "string", "minLength": 1, "description": "as the server named itself on the channel the activity used: the MCP serverInfo name for a tool call, the User-Agent product token for an upstream exchange"},
+            "version": {"type": "string", "description": "the hazbrief package version (pyproject `version`)"},
+            "tool_surface_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$", "description": "null for an upstream exchange, whose recording named no surface"},
+            "reported": {"type": "object", "additionalProperties": false, "required": ["name", "version"], "properties": {"name": {"type": "string"}, "version": {"type": "string"}}, "description": "the MCP initialize handshake's serverInfo as sent (its version is the framework's, so `version` above is the package's)"}
+          }
+        },
+        "source": {
+          "description": "prov:Organization(s): the catalog rows (docs/sources/catalog.yaml) the activity read.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "endpoint"],
+            "properties": {
+              "id": {"type": "string", "minLength": 1},
+              "endpoint": {"type": ["string", "null"]}
+            }
+          }
+        }
+      }
+    },
+    "provenance_class": {"enum": ["recorded_pack", "live_call", "derived_by_code", "caller_supplied"], "description": "caller_supplied: a value the request gave, with no source behind it (DN-010 ADDENDUM-00); labels carry it as a source of a tool call. narrated_by_model is never a record (D5)."},
+    "as_of": {"type": "string", "format": "date-time", "description": "prov:generatedAtTime of the source value: the source's own timestamp when it gives one, else endedAtTime"},
+    "as_of_basis": {"type": "string", "minLength": 1, "description": "which: e.g. `Last-Modified header`, `recorded_at`, `endedAtTime`"},
+    "horizon_s": {"type": ["integer", "null"], "minimum": 1, "description": "from the catalog; the shortest horizon among the sources read; null when every source is `computed`"},
+    "horizon_source": {"type": ["string", "null"], "description": "the catalog row the horizon is taken from"},
+    "used": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "description": "prov:used: entity hashes this activity read"},
+    "wasRevisionOf": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$", "description": "prov:wasRevisionOf: the activity id this record corrects (DN-010 D2)"}
+  }
+}

@@ -1,0 +1,218 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.624791,
+      39.388673
+     ],
+     "type": "Point"
+    },
+    "id": 6428998,
+    "properties": {
+     "address": "500 East Street",
+     "city": "Burkittsville",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1556755200000,
+     "name": "Burkittsville Town Hall",
+     "objectid": 6428998,
+     "permanent_identifier": "16a364ee-f63a-4a64-8774-e534371f82c1",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.66288,
+      39.134624
+     ],
+     "type": "Point"
+    },
+    "id": 6438316,
+    "properties": {
+     "address": "53 East Colonial Highway",
+     "city": "Hamilton",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1616630400000,
+     "name": "Hamilton Town Hall",
+     "objectid": 6438316,
+     "permanent_identifier": "21b22bc1-91f3-4b0a-a8e6-376fa039dfe0",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.720454,
+      39.198402
+     ],
+     "type": "Point"
+    },
+    "id": 6454125,
+    "properties": {
+     "address": "37098 Charles Town Pike",
+     "city": "Hillsboro",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1555632000000,
+     "name": "Hillsboro Town Hall",
+     "objectid": 6454125,
+     "permanent_identifier": "34c5a37e-572a-448a-a945-4a5982a06d8c",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.627018,
+      39.313137
+     ],
+     "type": "Point"
+    },
+    "id": 6457103,
+    "properties": {
+     "address": "1 West Potomac Street",
+     "city": "Brunswick",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1556064000000,
+     "name": "Brunswick City Hall",
+     "objectid": 6457103,
+     "permanent_identifier": "3823a24f-70ea-4b9e-8f61-dd27f421edde",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.716574,
+      39.134786
+     ],
+     "type": "Point"
+    },
+    "id": 6494226,
+    "properties": {
+     "address": "221 South Nursery Avenue",
+     "city": "Purcellville",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1616630400000,
+     "name": "Purcellville Town Hall",
+     "objectid": 6494226,
+     "permanent_identifier": "65578409-beff-4824-8869-18a1ce146a89",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.638749,
+      39.273604
+     ],
+     "type": "Point"
+    },
+    "id": 6557853,
+    "properties": {
+     "address": "6 East Pennsylvania Avenue",
+     "city": "Lovettsville",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1555632000000,
+     "name": "Lovettsvile Town Hall",
+     "objectid": 6557853,
+     "permanent_identifier": "b0d53cfe-e88c-4650-b934-1edc8c312b90",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.411899,
+      39.145975
+     ],
+     "type": "Point"
+    },
+    "id": 6563025,
+    "properties": {
+     "address": "19721 Beall Street",
+     "city": "Poolesville",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1543881600000,
+     "name": "Poolesville Town Hall",
+     "objectid": 6563025,
+     "permanent_identifier": "b79f5092-9bce-49c1-8489-3e9e00789213",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.375745,
+      39.220973
+     ],
+     "type": "Point"
+    },
+    "id": 6575285,
+    "properties": {
+     "address": "18001 Barnesville Road",
+     "city": "Barnesville",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1543881600000,
+     "name": "Barnesville Town Hall",
+     "objectid": 6575285,
+     "permanent_identifier": "c6137b89-3a03-41eb-ac15-551424dd6d8c",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.412772,
+      39.41581
+     ],
+     "type": "Point"
+    },
+    "id": 6609165,
+    "properties": {
+     "address": "101 North Court Street",
+     "city": "Frederick",
+     "fcode": 83044,
+     "ftype": 830,
+     "loaddate": 1556064000000,
+     "name": "Frederick City Hall",
+     "objectid": 6609165,
+     "permanent_identifier": "ee70a4bc-99db-4ebd-817c-d12e9beb568d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-11T11:49:05Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 11 Nov 2026 11:49:05 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/4/query?where=1%3D1&geometry=-77.726361%2C39.130872%2C-77.352439%2C39.420328&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

@@ -1,0 +1,593 @@
+{
+ "attribution": {
+  "credits": [
+   {
+    "doc_id": "cameo-unna-1005",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1005 datasheet (Ammonia, anhydrous)",
+    "url": "https://cameochemicals.noaa.gov/unna/1005"
+   },
+   {
+    "doc_id": "cameo-unna-1017",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1017 datasheet (Chlorine)",
+    "url": "https://cameochemicals.noaa.gov/unna/1017"
+   },
+   {
+    "doc_id": "cameo-unna-1075",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1075 datasheet (Liquefied petroleum gas, LPG)",
+    "url": "https://cameochemicals.noaa.gov/unna/1075"
+   },
+   {
+    "doc_id": "cameo-unna-1202",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1202 datasheet (Diesel fuel)",
+    "url": "https://cameochemicals.noaa.gov/unna/1202"
+   },
+   {
+    "doc_id": "cameo-unna-1203",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1203 datasheet (Gasoline)",
+    "url": "https://cameochemicals.noaa.gov/unna/1203"
+   },
+   {
+    "doc_id": "cameo-unna-1951",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1951 datasheet (Argon, refrigerated liquid)",
+    "url": "https://cameochemicals.noaa.gov/unna/1951"
+   },
+   {
+    "doc_id": "cameo-unna-1977",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1977 datasheet (Nitrogen, refrigerated liquid)",
+    "url": "https://cameochemicals.noaa.gov/unna/1977"
+   },
+   {
+    "doc_id": "cameo-unna-1978",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1978 datasheet (Propane)",
+    "url": "https://cameochemicals.noaa.gov/unna/1978"
+   },
+   {
+    "doc_id": "cfr49-govinfo-bulk",
+    "edition": "CFR 2025 annual edition, title 49 volume 2 (parts 100 to 177); AMDDATE June 23, 2025",
+    "publisher": "US GPO GovInfo",
+    "title": "Code of Federal Regulations, Title 49, annual edition (GovInfo bulk XML)",
+    "url": "https://www.govinfo.gov/bulkdata/CFR/2025/title-49/CFR-2025-title49-vol2.xml"
+   }
+  ],
+  "notices": [
+   {
+    "doc_id": "cfr49-govinfo-bulk",
+    "locator": "cfr49-govinfo-bulk#OENOTICE",
+    "text": "It is prohibited to use NARA's official seal and the stylized Code of Federal Regulations logo on any republication of this material without the express, written permission of the Archivist of the United States or the Archivist's designee. Any person using NARA's official seals and logos in a manner inconsistent with the provisions of 36 CFR part 1200 is subject to the penalties specified in 18 U.S.C. 506, 701, and 1017."
+   }
+  ]
+ },
+ "built_at": "2026-10-20T14:16:26Z",
+ "data": {
+  "columns": {
+   "description": "Hazardous materials descriptions and proper shipping names",
+   "hazard_class": "Hazard class or Division",
+   "identification_number": "Identification Numbers",
+   "label_codes": "Label Codes",
+   "packing_group": "PG",
+   "special_provisions": "Special provisions (§ 172.102)",
+   "symbols": "Symbols"
+  },
+  "edition": "Title 49 Parts 100 to 177 Revised as of October 1, 2025",
+  "materials": {
+   "1005": {
+    "cross_checks": [
+     {
+      "field": "rows",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "Ammonia, anhydrous [2.2] | Ammonia, anhydrous [2.3]",
+       "cfr_xml": "Ammonia, anhydrous [2.2] | Ammonia, anhydrous [2.3]"
+      }
+     },
+     {
+      "field": "rows[Ammonia, anhydrous | I].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "2.3, 8",
+       "cfr_xml": "2.3, 8"
+      }
+     },
+     {
+      "field": "rows[Ammonia, anhydrous | D].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "2.2",
+       "cfr_xml": "2.2"
+      }
+     }
+    ],
+    "disputed": false,
+    "rows": [
+     {
+      "description": "Ammonia, anhydrous",
+      "hazard_class": "2.3",
+      "identification_number": "UN1005",
+      "label_codes": [
+       "2.3",
+       "8"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row188",
+      "packing_group": null,
+      "roman_segments": [
+       "Ammonia, anhydrous"
+      ],
+      "special_provisions": [
+       "4",
+       "379",
+       "N87",
+       "T50"
+      ],
+      "symbols": "I"
+     },
+     {
+      "description": "Ammonia, anhydrous",
+      "hazard_class": "2.2",
+      "identification_number": "UN1005",
+      "label_codes": [
+       "2.2"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row189",
+      "packing_group": null,
+      "roman_segments": [
+       "Ammonia, anhydrous"
+      ],
+      "special_provisions": [
+       "13",
+       "379",
+       "T50"
+      ],
+      "symbols": "D"
+     }
+    ],
+    "un": "1005"
+   },
+   "1017": {
+    "cross_checks": [
+     {
+      "field": "rows",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "Chlorine [2.3]",
+       "cfr_xml": "Chlorine [2.3]"
+      }
+     },
+     {
+      "field": "rows[Chlorine | -].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "2.3, 5.1, 8",
+       "cfr_xml": "2.3, 5.1, 8"
+      }
+     }
+    ],
+    "disputed": false,
+    "rows": [
+     {
+      "description": "Chlorine",
+      "hazard_class": "2.3",
+      "identification_number": "UN1017",
+      "label_codes": [
+       "2.3",
+       "5.1",
+       "8"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row784",
+      "packing_group": null,
+      "roman_segments": [
+       "Chlorine"
+      ],
+      "special_provisions": [
+       "2",
+       "B9",
+       "B14",
+       "N86",
+       "T50",
+       "TP19"
+      ],
+      "symbols": ""
+     }
+    ],
+    "un": "1017"
+   },
+   "1075": {
+    "cross_checks": [
+     {
+      "field": "rows",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "Petroleum gases, liquefied or Liquefied petroleum gas [2.1]",
+       "cfr_xml": "Petroleum gases, liquefied or Liquefied petroleum gas [2.1]"
+      }
+     },
+     {
+      "field": "rows[Petroleum gases, liquefied or Liquefied petroleum gas | -].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "2.1",
+       "cfr_xml": "2.1"
+      }
+     }
+    ],
+    "disputed": false,
+    "rows": [
+     {
+      "description": "Petroleum gases, liquefied or Liquefied petroleum gas",
+      "hazard_class": "2.1",
+      "identification_number": "UN1075",
+      "label_codes": [
+       "2.1"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row2672",
+      "packing_group": null,
+      "roman_segments": [
+       "Petroleum gases, liquefied",
+       "Liquefied petroleum gas"
+      ],
+      "special_provisions": [
+       "T50",
+       "N95"
+      ],
+      "symbols": ""
+     }
+    ],
+    "un": "1075"
+   },
+   "1202": {
+    "cross_checks": [
+     {
+      "field": "rows",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "Diesel fuel [3] | Gas oil [3] | Heating oil, light [3]",
+       "cfr_xml": "Diesel fuel [3] | Gas oil [3] | Heating oil, light [3]"
+      }
+     },
+     {
+      "field": "rows[Diesel fuel | I].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "3",
+       "cfr_xml": "3"
+      }
+     },
+     {
+      "field": "rows[Gas oil | -].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "3",
+       "cfr_xml": "3"
+      }
+     },
+     {
+      "field": "rows[Heating oil, light | -].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "3",
+       "cfr_xml": "3"
+      }
+     }
+    ],
+    "disputed": false,
+    "rows": [
+     {
+      "description": "Diesel fuel",
+      "hazard_class": "3",
+      "identification_number": "UN1202",
+      "label_codes": [
+       "3"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row1219",
+      "packing_group": "III",
+      "roman_segments": [
+       "Diesel fuel"
+      ],
+      "special_provisions": [
+       "144",
+       "B1",
+       "IB3",
+       "T2",
+       "TP1"
+      ],
+      "symbols": "I"
+     },
+     {
+      "description": "Gas oil",
+      "hazard_class": "3",
+      "identification_number": "UN1202",
+      "label_codes": [
+       "3"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row1635",
+      "packing_group": "III",
+      "roman_segments": [
+       "Gas oil"
+      ],
+      "special_provisions": [
+       "144",
+       "B1",
+       "IB3",
+       "T2",
+       "TP1"
+      ],
+      "symbols": ""
+     },
+     {
+      "description": "Heating oil, light",
+      "hazard_class": "3",
+      "identification_number": "UN1202",
+      "label_codes": [
+       "3"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row1679",
+      "packing_group": "III",
+      "roman_segments": [
+       "Heating oil, light"
+      ],
+      "special_provisions": [
+       "B1",
+       "IB3",
+       "T2",
+       "TP1"
+      ],
+      "symbols": ""
+     }
+    ],
+    "un": "1202"
+   },
+   "1203": {
+    "cross_checks": [
+     {
+      "field": "rows",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "Gasoline includes gasoline mixed with ethyl alcohol, with not more than 10% alcohol [3]",
+       "cfr_xml": "Gasoline includes gasoline mixed with ethyl alcohol, with not more than 10% alcohol [3]"
+      }
+     },
+     {
+      "field": "rows[Gasoline includes gasoline mixed with ethyl alcohol, with not more than 10% alcohol | -].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "3",
+       "cfr_xml": "3"
+      }
+     }
+    ],
+    "disputed": false,
+    "rows": [
+     {
+      "description": "Gasoline includes gasoline mixed with ethyl alcohol, with not more than 10% alcohol",
+      "hazard_class": "3",
+      "identification_number": "UN1203",
+      "label_codes": [
+       "3"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row1642",
+      "packing_group": "II",
+      "roman_segments": [
+       "Gasoline"
+      ],
+      "special_provisions": [
+       "144",
+       "177",
+       "B1",
+       "B33",
+       "IB2",
+       "T4"
+      ],
+      "symbols": ""
+     }
+    ],
+    "un": "1203"
+   },
+   "1951": {
+    "cross_checks": [
+     {
+      "field": "rows",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "Argon, refrigerated liquid (cryogenic liquid) [2.2]",
+       "cfr_xml": "Argon, refrigerated liquid (cryogenic liquid) [2.2]"
+      }
+     },
+     {
+      "field": "rows[Argon, refrigerated liquid (cryogenic liquid) | -].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "2.2",
+       "cfr_xml": "2.2"
+      }
+     }
+    ],
+    "disputed": false,
+    "rows": [
+     {
+      "description": "Argon, refrigerated liquid (cryogenic liquid)",
+      "hazard_class": "2.2",
+      "identification_number": "UN1951",
+      "label_codes": [
+       "2.2"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row302",
+      "packing_group": null,
+      "roman_segments": [
+       "Argon, refrigerated liquid"
+      ],
+      "special_provisions": [
+       "T75",
+       "TP5"
+      ],
+      "symbols": ""
+     }
+    ],
+    "un": "1951"
+   },
+   "1977": {
+    "cross_checks": [
+     {
+      "field": "rows",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "Nitrogen, refrigerated liquid cryogenic liquid [2.2]",
+       "cfr_xml": "Nitrogen, refrigerated liquid cryogenic liquid [2.2]"
+      }
+     },
+     {
+      "field": "rows[Nitrogen, refrigerated liquid cryogenic liquid | -].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "2.2",
+       "cfr_xml": "2.2"
+      }
+     }
+    ],
+    "disputed": false,
+    "rows": [
+     {
+      "description": "Nitrogen, refrigerated liquid cryogenic liquid",
+      "hazard_class": "2.2",
+      "identification_number": "UN1977",
+      "label_codes": [
+       "2.2"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row2381",
+      "packing_group": null,
+      "roman_segments": [
+       "Nitrogen, refrigerated liquid"
+      ],
+      "special_provisions": [
+       "345",
+       "346",
+       "T75",
+       "TP5"
+      ],
+      "symbols": ""
+     }
+    ],
+    "un": "1977"
+   },
+   "1978": {
+    "cross_checks": [
+     {
+      "field": "rows",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "Propane, see also Petroleum gases, liquefied [2.1]",
+       "cfr_xml": "Propane, see also Petroleum gases, liquefied [2.1]"
+      }
+     },
+     {
+      "field": "rows[Propane, see also Petroleum gases, liquefied | -].label_codes",
+      "status": "agree",
+      "values": {
+       "cameo_unna": "2.1",
+       "cfr_xml": "2.1"
+      }
+     }
+    ],
+    "disputed": false,
+    "rows": [
+     {
+      "description": "Propane, see also Petroleum gases, liquefied",
+      "hazard_class": "2.1",
+      "identification_number": "UN1978",
+      "label_codes": [
+       "2.1"
+      ],
+      "locator": "cfr49-govinfo-bulk#172.101:table2:row2866",
+      "packing_group": null,
+      "roman_segments": [
+       "Propane,",
+       "Petroleum gases, liquefied"
+      ],
+      "special_provisions": [
+       "19",
+       "T50",
+       "N95"
+      ],
+      "symbols": ""
+     }
+    ],
+    "un": "1978"
+   }
+  }
+ },
+ "kind": "cfr172",
+ "pack_id": "cfr172",
+ "schema_version": 8,
+ "sha256": "69a7bf0f9a3e5b3593b0c6e93e95ce3fba42a5510dc5261cd5ef102ca06aaf69",
+ "sources": [
+  {
+   "doc_id": "cameo-unna-1005",
+   "licence": "public-domain",
+   "locator": "Hazmat Table (49 CFR 172.101)",
+   "raw_sha256": "5dcfa92c58fec9b261a1dfa57c207a79691f36e0cd251d537133596dd10c080c"
+  },
+  {
+   "doc_id": "cameo-unna-1017",
+   "licence": "public-domain",
+   "locator": "Hazmat Table (49 CFR 172.101)",
+   "raw_sha256": "fce6798bab419890cfcd4b4346c57734657a8ed1dfea64862d426501cb52efe2"
+  },
+  {
+   "doc_id": "cameo-unna-1075",
+   "licence": "public-domain",
+   "locator": "Hazmat Table (49 CFR 172.101)",
+   "raw_sha256": "fce69d8cb073d9aa1dc358d67f4a07a5a5315031a40cf6715f584c0069c4227d"
+  },
+  {
+   "doc_id": "cameo-unna-1202",
+   "licence": "public-domain",
+   "locator": "Hazmat Table (49 CFR 172.101)",
+   "raw_sha256": "9a77277606af7de4b376f39fc5440309c2edd375b9a366a9b724b6dd98abf224"
+  },
+  {
+   "doc_id": "cameo-unna-1203",
+   "licence": "public-domain",
+   "locator": "Hazmat Table (49 CFR 172.101)",
+   "raw_sha256": "7fbd68870589ccee56dad8595860bb8a298ca636cdc2d1cb5ff76502c040f58b"
+  },
+  {
+   "doc_id": "cameo-unna-1951",
+   "licence": "public-domain",
+   "locator": "Hazmat Table (49 CFR 172.101)",
+   "raw_sha256": "3219e7ba7412208d25b6c5bf30e455ac54537c87e8f8532ef788720c2948de6c"
+  },
+  {
+   "doc_id": "cameo-unna-1977",
+   "licence": "public-domain",
+   "locator": "Hazmat Table (49 CFR 172.101)",
+   "raw_sha256": "5e5bb9eb06fa3462d2591aac3b657ec30265f2778b715b3f96333742c78f37dd"
+  },
+  {
+   "doc_id": "cameo-unna-1978",
+   "licence": "public-domain",
+   "locator": "Hazmat Table (49 CFR 172.101)",
+   "raw_sha256": "bd50a62affdf9c72827621f66774475a7d46e228acbea9065724b98259b5eb7a"
+  },
+  {
+   "doc_id": "cfr49-govinfo-bulk",
+   "licence": "public-domain",
+   "locator": "§ 172.101 Hazardous Materials Table",
+   "raw_sha256": "82d0fea4df4b1d91dfd704b663524aec4daf9c6e69640157e292ce2914204462"
+  }
+ ],
+ "version": "cfr2025.1"
+}

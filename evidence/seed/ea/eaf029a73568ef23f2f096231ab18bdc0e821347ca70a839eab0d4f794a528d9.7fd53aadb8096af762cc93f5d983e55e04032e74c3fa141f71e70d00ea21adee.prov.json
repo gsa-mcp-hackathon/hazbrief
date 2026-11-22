@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:33:58Z",
+  "http_mode": "record",
+  "id": "7fd53aadb8096af762cc93f5d983e55e04032e74c3fa141f71e70d00ea21adee",
+  "name": "GET bts_ntad",
+  "params": {
+   "method": "GET",
+   "url": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0/query?where=CrossingID%3D%27915128A%27&outFields=CrossingID%2CStateAbbreviation%2CCITYNAME%2CSTREET%2CHighwayName%2CCrossingPosition%2CLatLongSource%2CLATITUDE%2CLongitude&returnGeometry=true&outSR=4326&f=json"
+  },
+  "startedAtTime": "2026-10-27T03:33:58Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0/query?where=CrossingID%3D%27915128A%27&outFields=CrossingID%2CStateAbbreviation%2CCITYNAME%2CSTREET%2CHighwayName%2CCrossingPosition%2CLatLongSource%2CLATITUDE%2CLongitude&returnGeometry=true&outSR=4326&f=json",
+    "id": "bts_ntad"
+   }
+  ]
+ },
+ "as_of": "2026-10-20T23:34:00Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 1792,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "eaf029a73568ef23f2f096231ab18bdc0e821347ca70a839eab0d4f794a528d9"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "bts_ntad",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

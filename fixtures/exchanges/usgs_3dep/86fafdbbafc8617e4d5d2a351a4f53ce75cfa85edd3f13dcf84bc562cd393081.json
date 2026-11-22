@@ -1,0 +1,117 @@
+{
+ "api": "usgs_3dep",
+ "body": {
+  "samples": [
+   {
+    "location": {
+     "spatialReference": {
+      "latestWkid": 4326,
+      "wkid": 4326
+     },
+     "x": -76.660417,
+     "y": 39.722
+    },
+    "locationId": 0,
+    "rasterId": 122655,
+    "resolution": 1,
+    "value": "263.312561035"
+   },
+   {
+    "location": {
+     "spatialReference": {
+      "latestWkid": 4326,
+      "wkid": 4326
+     },
+     "x": -76.661526,
+     "y": 39.721805
+    },
+    "locationId": 4,
+    "rasterId": 122655,
+    "resolution": 1,
+    "value": "258.861083984"
+   },
+   {
+    "location": {
+     "spatialReference": {
+      "latestWkid": 4326,
+      "wkid": 4326
+     },
+     "x": -76.66113,
+     "y": 39.721562
+    },
+    "locationId": 5,
+    "rasterId": 122655,
+    "resolution": 1,
+    "value": "260.092285156"
+   },
+   {
+    "location": {
+     "spatialReference": {
+      "latestWkid": 4326,
+      "wkid": 4326
+     },
+     "x": -76.660636,
+     "y": 39.721648
+    },
+    "locationId": 6,
+    "rasterId": 122655,
+    "resolution": 1,
+    "value": "262.890533447"
+   },
+   {
+    "location": {
+     "spatialReference": {
+      "latestWkid": 4326,
+      "wkid": 4326
+     },
+     "x": -76.660636,
+     "y": 39.722352
+    },
+    "locationId": 1,
+    "rasterId": 114311,
+    "resolution": 1,
+    "value": "260.523010254"
+   },
+   {
+    "location": {
+     "spatialReference": {
+      "latestWkid": 4326,
+      "wkid": 4326
+     },
+     "x": -76.66113,
+     "y": 39.722438
+    },
+    "locationId": 2,
+    "rasterId": 114311,
+    "resolution": 1,
+    "value": "258.361999512"
+   },
+   {
+    "location": {
+     "spatialReference": {
+      "latestWkid": 4326,
+      "wkid": 4326
+     },
+     "x": -76.661526,
+     "y": 39.722195
+    },
+    "locationId": 3,
+    "rasterId": 114311,
+    "resolution": 1,
+    "value": "258.605010986"
+   }
+  ]
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-28T03:22:25Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 28 Oct 2026 03:22:25 GMT",
+  "ETag": "W/\"ef6f7045\""
+ },
+ "status": 200,
+ "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples?geometry=%7B%22points%22%3A%5B%5B-76.660417%2C39.722%5D%2C%5B-76.660636%2C39.722352%5D%2C%5B-76.66113%2C39.722438%5D%2C%5B-76.661526%2C39.722195%5D%2C%5B-76.661526%2C39.721805%5D%2C%5B-76.66113%2C39.721562%5D%2C%5B-76.660636%2C39.721648%5D%5D%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryMultipoint&returnFirstValueOnly=true&f=json"
+}

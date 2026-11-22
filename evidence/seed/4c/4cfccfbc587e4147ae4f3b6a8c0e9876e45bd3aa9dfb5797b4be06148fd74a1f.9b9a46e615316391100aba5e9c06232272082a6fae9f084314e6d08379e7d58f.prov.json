@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-07T08:30:12Z",
+  "http_mode": "record",
+  "id": "9b9a46e615316391100aba5e9c06232272082a6fae9f084314e6d08379e7d58f",
+  "name": "GET pubchem",
+  "params": {
+   "method": "GET",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Poisonous%20by%20inhalation%20liquid%2C%20corrosive%2C%20flammable%2C%20n.o.s.%20%28Inhalation%20Hazard%20Zone%20A%29/cids/JSON"
+  },
+  "startedAtTime": "2026-11-07T08:30:12Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Poisonous%20by%20inhalation%20liquid%2C%20corrosive%2C%20flammable%2C%20n.o.s.%20%28Inhalation%20Hazard%20Zone%20A%29/cids/JSON",
+    "id": "pubchem:pug_rest"
+   }
+  ]
+ },
+ "as_of": "2026-11-07T08:30:12Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 117,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "4cfccfbc587e4147ae4f3b6a8c0e9876e45bd3aa9dfb5797b4be06148fd74a1f"
+ },
+ "horizon_s": 126230400,
+ "horizon_source": "pubchem:pug_rest",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

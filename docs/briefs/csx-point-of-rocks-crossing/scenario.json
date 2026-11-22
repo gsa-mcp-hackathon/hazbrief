@@ -1,0 +1,30 @@
+{
+ "as_given": "2026-10-21T14:00:00-04:00",
+ "given": {
+  "city": "Point of Rocks",
+  "kind": "crossing",
+  "state": "MD",
+  "street": "Canal Road"
+ },
+ "id": "csx-point-of-rocks-crossing",
+ "incident": {
+  "container": "Rail tank car",
+  "fire_involved": false,
+  "incident_time": "2026-10-21T14:00:00-04:00",
+  "material": "UN1017",
+  "spill_size": "large"
+ },
+ "not_run": {
+  "build_ics_201": "the frozen ICS 201 takes a point and draws its footprint around it, without the crossing's stated accuracy (DN-013 section 2); it takes a location record after 2026-11-20 (DN-013 section 6)"
+ },
+ "release": {
+  "quantity_kg": 80000,
+  "quantity_source": "scenario author's stated quantity; basis ERG 2024 methodology Table 2.3 (an example profile), not this car's papers: DOT Class 105/112 tank car, 80,000 kg"
+ },
+ "wind": {
+  "direction_deg_from": 270,
+  "observed_at": "2026-10-20T13:40:00-04:00",
+  "source": "worked example wind",
+  "speed_kmh": 13
+ }
+}

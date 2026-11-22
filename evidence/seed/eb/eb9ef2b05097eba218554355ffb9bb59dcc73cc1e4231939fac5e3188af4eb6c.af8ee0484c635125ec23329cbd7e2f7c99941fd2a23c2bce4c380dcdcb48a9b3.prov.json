@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T02:41:02Z",
+  "http_mode": "record",
+  "id": "af8ee0484c635125ec23329cbd7e2f7c99941fd2a23c2bce4c380dcdcb48a9b3",
+  "name": "GET nldi",
+  "params": {
+   "method": "GET",
+   "url": "https://api.water.usgs.gov/nldi/linked-data/comid/position?coords=POINT%28-77.539975+39.273473%29"
+  },
+  "startedAtTime": "2026-10-28T02:41:02Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.water.usgs.gov/nldi/linked-data/comid/position?coords=POINT%28-77.539975+39.273473%29",
+    "id": "nldi"
+   }
+  ]
+ },
+ "as_of": "2026-10-28T02:41:02Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 360,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "eb9ef2b05097eba218554355ffb9bb59dcc73cc1e4231939fac5e3188af4eb6c"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "nldi",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-07T08:30:13Z",
+  "http_mode": "record",
+  "id": "0510692ceef9faea07f7357c473150ad67bab024e4af6c30dbbc7a80d6bc4800",
+  "name": "GET cameo",
+  "params": {
+   "method": "GET",
+   "url": "https://cameochemicals.noaa.gov/chemical/2907"
+  },
+  "startedAtTime": "2026-11-07T08:30:13Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://cameochemicals.noaa.gov/chemical/2907",
+    "id": "cameo:chemical"
+   }
+  ]
+ },
+ "as_of": "2026-11-07T08:30:13Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 26313,
+  "encoding": "bytes",
+  "media_type": "text/html",
+  "sha256": "1d08714ced57c64db697459210664dc0f2efc57a4dbbc6afa4d37575c7ee272f"
+ },
+ "horizon_s": 126230400,
+ "horizon_source": "cameo:chemical",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

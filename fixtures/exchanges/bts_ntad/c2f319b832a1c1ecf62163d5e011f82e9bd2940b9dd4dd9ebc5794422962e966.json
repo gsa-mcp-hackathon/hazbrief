@@ -1,0 +1,384 @@
+{
+ "api": "bts_ntad",
+ "body": {
+  "features": [
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "140459T",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "PRIVATE",
+     "LATITUDE": 39.291347,
+     "LatLongSource": "Actual",
+     "Longitude": -77.513469,
+     "STREET": "PRIVATE ROAD",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.51346899999824,
+     "y": 39.29134699979454
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "140460M",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "PRIVATE",
+     "LATITUDE": 39.284136,
+     "LatLongSource": "Actual",
+     "Longitude": -77.518747,
+     "STREET": "PRIVATE ROAD",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.51874700024611,
+     "y": 39.28413600023825
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "140461U",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "MD 28",
+     "LATITUDE": 39.275512,
+     "LatLongSource": "Actual",
+     "Longitude": -77.5274876,
+     "STREET": "TUSCARORA ROAD",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.52748759987576,
+     "y": 39.27551199977116
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "140527S",
+     "CrossingPosition": "RR Over",
+     "HighwayName": "CO 335",
+     "LATITUDE": 39.251322,
+     "LatLongSource": "Actual",
+     "Longitude": -77.480972,
+     "STREET": "NOLANS FERRY RD",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.48097199992914,
+     "y": 39.251321999838645
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "140528Y",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "PRIVATE",
+     "LATITUDE": 39.273694,
+     "LatLongSource": "Actual",
+     "Longitude": -77.533086,
+     "STREET": "PRIVATE ROAD",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.53308600043938,
+     "y": 39.27369399998457
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "140529F",
+     "CrossingPosition": "RR Under",
+     "HighwayName": "US 15",
+     "LATITUDE": 39.274097,
+     "LatLongSource": "Actual",
+     "Longitude": -77.542747,
+     "STREET": "Catoctin mountain hwy",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.5427470004344,
+     "y": 39.27409700007404
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "140530A",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "LS",
+     "LATITUDE": 39.308546,
+     "LatLongSource": "Actual",
+     "Longitude": -77.559911,
+     "STREET": "LANDER ROAD",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.5599110000753,
+     "y": 39.30854600015848
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "141364N",
+     "CrossingPosition": "RR Over",
+     "HighwayName": "CO 336",
+     "LATITUDE": 39.243292,
+     "LatLongSource": "Actual",
+     "Longitude": -77.464217,
+     "STREET": "NOLANS FERRY RD",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.46421699964385,
+     "y": 39.24329200026733
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "915128A",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "LS",
+     "LATITUDE": 39.273881,
+     "LatLongSource": "Actual",
+     "Longitude": -77.539906,
+     "STREET": "CANAL ROAD",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.53990600019495,
+     "y": 39.2738809999416
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "926226W",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "PED",
+     "LATITUDE": 39.273539,
+     "LatLongSource": "Actual",
+     "Longitude": -77.533703,
+     "STREET": "PEDESTRIAN XING",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.53370300020744,
+     "y": 39.273538999760895
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "928536X",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "PED",
+     "LATITUDE": 39.273672,
+     "LatLongSource": "Actual",
+     "Longitude": -77.533692,
+     "STREET": "PEDESTRIAN XING",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.53369200033679,
+     "y": 39.27367199987502
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "928538L",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "PED",
+     "LATITUDE": 39.273661,
+     "LatLongSource": "Actual",
+     "Longitude": -77.534394,
+     "STREET": "PEDESTRIAN XING",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.53439399959535,
+     "y": 39.27366099981766
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "937971D",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "PRIVATE",
+     "LATITUDE": 39.265692,
+     "LatLongSource": "Actual",
+     "Longitude": -77.523339,
+     "STREET": "PRIVATE PEDESTRIAN XING",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.52333900023062,
+     "y": 39.26569200034685
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "973736B",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "CO 294",
+     "LATITUDE": 39.293894,
+     "LatLongSource": "Actual",
+     "Longitude": -77.512508,
+     "STREET": "BALLENGER CREEK PIKE",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.5125080002736,
+     "y": 39.2938939997044
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "977208N",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "PRIVATE",
+     "LATITUDE": 39.272329,
+     "LatLongSource": "Actual",
+     "Longitude": -77.531016,
+     "STREET": "PRIVATE RD",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.53101599995378,
+     "y": 39.27232900027197
+    }
+   },
+   {
+    "attributes": {
+     "CITYNAME": "POINT OF ROCKS",
+     "CrossingID": "977228A",
+     "CrossingPosition": "At Grade",
+     "HighwayName": "PRIVATE",
+     "LATITUDE": 39.272329,
+     "LatLongSource": "Actual",
+     "Longitude": -77.531016,
+     "STREET": "CSX ONLY CROSSING",
+     "StateAbbreviation": "MD"
+    },
+    "geometry": {
+     "x": -77.53101599995378,
+     "y": 39.27232900027197
+    }
+   }
+  ],
+  "fields": [
+   {
+    "alias": "CrossingID",
+    "defaultValue": null,
+    "domain": null,
+    "length": 7,
+    "name": "CrossingID",
+    "sqlType": "sqlTypeOther",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "StateAbbreviation",
+    "defaultValue": null,
+    "domain": null,
+    "length": 2,
+    "name": "StateAbbreviation",
+    "sqlType": "sqlTypeOther",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "CityName",
+    "defaultValue": null,
+    "domain": null,
+    "length": 23,
+    "name": "CITYNAME",
+    "sqlType": "sqlTypeOther",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "Street",
+    "defaultValue": null,
+    "domain": null,
+    "length": 64,
+    "name": "STREET",
+    "sqlType": "sqlTypeOther",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "HighwayName",
+    "defaultValue": null,
+    "domain": null,
+    "length": 44,
+    "name": "HighwayName",
+    "sqlType": "sqlTypeOther",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "CrossingPosition",
+    "defaultValue": null,
+    "domain": null,
+    "length": 8,
+    "name": "CrossingPosition",
+    "sqlType": "sqlTypeOther",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "LatLongSource",
+    "defaultValue": null,
+    "domain": null,
+    "length": 9,
+    "name": "LatLongSource",
+    "sqlType": "sqlTypeOther",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "Latitude",
+    "defaultValue": null,
+    "domain": null,
+    "name": "LATITUDE",
+    "sqlType": "sqlTypeOther",
+    "type": "esriFieldTypeDouble"
+   },
+   {
+    "alias": "Longitude",
+    "defaultValue": null,
+    "domain": null,
+    "name": "Longitude",
+    "sqlType": "sqlTypeOther",
+    "type": "esriFieldTypeDouble"
+   }
+  ],
+  "geometryType": "esriGeometryPoint",
+  "globalIdFieldName": "",
+  "objectIdFieldName": "OBJECTID",
+  "spatialReference": {
+   "latestWkid": 4326,
+   "wkid": 4326
+  },
+  "uniqueIdField": {
+   "isSystemMaintained": true,
+   "name": "OBJECTID"
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-27T03:33:57Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "public, max-age=30, s-maxage=30",
+  "Date": "Tue, 27 Oct 2026 03:33:57 GMT",
+  "ETag": "sd24371_-1769042542",
+  "Last-Modified": "Tue, 20 Oct 2026 23:34:00 GMT"
+ },
+ "status": 200,
+ "url": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0/query?where=StateAbbreviation%3D%27MD%27+AND+CITYNAME%3D%27POINT+OF+ROCKS%27&outFields=CrossingID%2CStateAbbreviation%2CCITYNAME%2CSTREET%2CHighwayName%2CCrossingPosition%2CLatLongSource%2CLATITUDE%2CLongitude&returnGeometry=true&outSR=4326&f=json&orderByFields=CrossingID"
+}

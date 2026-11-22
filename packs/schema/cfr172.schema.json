@@ -1,0 +1,366 @@
+{
+ "$defs": {
+  "AttributionCredit": {
+   "additionalProperties": false,
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "edition": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Edition"
+    },
+    "publisher": {
+     "title": "Publisher",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "url": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Url"
+    }
+   },
+   "required": [
+    "doc_id",
+    "title",
+    "publisher",
+    "edition",
+    "url"
+   ],
+   "title": "AttributionCredit",
+   "type": "object"
+  },
+  "AttributionNotice": {
+   "additionalProperties": false,
+   "description": "A reuse or credit notice, verbatim from the held document at `locator`.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "locator",
+    "text"
+   ],
+   "title": "AttributionNotice",
+   "type": "object"
+  },
+  "Cfr172Data": {
+   "additionalProperties": false,
+   "properties": {
+    "columns": {
+     "additionalProperties": {
+      "type": "string"
+     },
+     "title": "Columns",
+     "type": "object"
+    },
+    "edition": {
+     "title": "Edition",
+     "type": "string"
+    },
+    "materials": {
+     "additionalProperties": {
+      "$ref": "#/$defs/CfrMaterial"
+     },
+     "title": "Materials",
+     "type": "object"
+    }
+   },
+   "required": [
+    "edition",
+    "columns",
+    "materials"
+   ],
+   "title": "Cfr172Data",
+   "type": "object"
+  },
+  "CfrMaterial": {
+   "additionalProperties": false,
+   "properties": {
+    "cross_checks": {
+     "items": {
+      "$ref": "#/$defs/CrossCheck"
+     },
+     "title": "Cross Checks",
+     "type": "array"
+    },
+    "disputed": {
+     "title": "Disputed",
+     "type": "boolean"
+    },
+    "rows": {
+     "items": {
+      "$ref": "#/$defs/CfrRow"
+     },
+     "title": "Rows",
+     "type": "array"
+    },
+    "un": {
+     "title": "Un",
+     "type": "string"
+    }
+   },
+   "required": [
+    "un",
+    "rows",
+    "cross_checks",
+    "disputed"
+   ],
+   "title": "CfrMaterial",
+   "type": "object"
+  },
+  "CfrRow": {
+   "additionalProperties": false,
+   "description": "One row of the 49 CFR 172.101 Hazardous Materials Table. `description` is column\n2 as printed; `roman_segments` are its Roman-type runs in order, italic words\nremoved (172.101(c)(1): proper shipping names are limited to Roman type; (c)(2): an\nitalic \"or\" marks alternatives). Which run is the proper shipping name is the\nregulation's reading, not this pack's; the runs are given as printed.",
+   "properties": {
+    "description": {
+     "title": "Description",
+     "type": "string"
+    },
+    "hazard_class": {
+     "title": "Hazard Class",
+     "type": "string"
+    },
+    "identification_number": {
+     "title": "Identification Number",
+     "type": "string"
+    },
+    "label_codes": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Label Codes",
+     "type": "array"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "packing_group": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Packing Group"
+    },
+    "roman_segments": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Roman Segments",
+     "type": "array"
+    },
+    "special_provisions": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Special Provisions",
+     "type": "array"
+    },
+    "symbols": {
+     "title": "Symbols",
+     "type": "string"
+    }
+   },
+   "required": [
+    "symbols",
+    "description",
+    "roman_segments",
+    "hazard_class",
+    "identification_number",
+    "packing_group",
+    "label_codes",
+    "special_provisions",
+    "locator"
+   ],
+   "title": "CfrRow",
+   "type": "object"
+  },
+  "CrossCheck": {
+   "additionalProperties": false,
+   "description": "One field compared across sources (DN-003 section 5). `values` maps each source\nrole to its value as that source prints it, or None where the source does not carry\nthe field. `agree`: every carrying source agrees and at least two carry it;\n`disputed`: two carrying sources differ; `single_source`: only one source carries\nit.",
+   "properties": {
+    "field": {
+     "title": "Field",
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "agree",
+      "disputed",
+      "single_source"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "values": {
+     "additionalProperties": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "title": "Values",
+     "type": "object"
+    }
+   },
+   "required": [
+    "field",
+    "values",
+    "status"
+   ],
+   "title": "CrossCheck",
+   "type": "object"
+  },
+  "PackAttribution": {
+   "additionalProperties": false,
+   "properties": {
+    "credits": {
+     "items": {
+      "$ref": "#/$defs/AttributionCredit"
+     },
+     "title": "Credits",
+     "type": "array"
+    },
+    "notices": {
+     "items": {
+      "$ref": "#/$defs/AttributionNotice"
+     },
+     "title": "Notices",
+     "type": "array"
+    }
+   },
+   "required": [
+    "credits",
+    "notices"
+   ],
+   "title": "PackAttribution",
+   "type": "object"
+  },
+  "PackSource": {
+   "additionalProperties": false,
+   "description": "One held document a pack was parsed from: its corpus doc_id, the sha256 of the\nheld bytes, where in it the pack reads, and its licence as `corpus/sources.yaml`\nrecords it.",
+   "properties": {
+    "doc_id": {
+     "title": "Doc Id",
+     "type": "string"
+    },
+    "licence": {
+     "title": "Licence",
+     "type": "string"
+    },
+    "locator": {
+     "title": "Locator",
+     "type": "string"
+    },
+    "raw_sha256": {
+     "pattern": "^[0-9a-f]{64}$",
+     "title": "Raw Sha256",
+     "type": "string"
+    }
+   },
+   "required": [
+    "doc_id",
+    "raw_sha256",
+    "locator",
+    "licence"
+   ],
+   "title": "PackSource",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "properties": {
+  "attribution": {
+   "$ref": "#/$defs/PackAttribution"
+  },
+  "built_at": {
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+   "title": "Built At",
+   "type": "string"
+  },
+  "data": {
+   "$ref": "#/$defs/Cfr172Data"
+  },
+  "kind": {
+   "const": "cfr172",
+   "title": "Kind",
+   "type": "string"
+  },
+  "pack_id": {
+   "title": "Pack Id",
+   "type": "string"
+  },
+  "schema_version": {
+   "title": "Schema Version",
+   "type": "integer"
+  },
+  "sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "title": "Sha256",
+   "type": "string"
+  },
+  "sources": {
+   "items": {
+    "$ref": "#/$defs/PackSource"
+   },
+   "title": "Sources",
+   "type": "array"
+  },
+  "version": {
+   "title": "Version",
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema_version",
+  "pack_id",
+  "version",
+  "built_at",
+  "sha256",
+  "sources",
+  "attribution",
+  "kind",
+  "data"
+ ],
+ "title": "Cfr172Pack",
+ "type": "object"
+}

@@ -1,0 +1,4821 @@
+{
+ "attribution": {
+  "credits": [
+   {
+    "doc_id": "aegl-tsd-gasoline-proposed",
+    "edition": "Proposed, October 2009",
+    "publisher": "National Advisory Committee for AEGLs (hosted by US EPA)",
+    "title": "Automotive Gasoline (Unleaded), Proposed AEGL Technical Support Document",
+    "url": "https://www.epa.gov/sites/default/files/2014-11/documents/gasoline_proposed_oct_2009.v1.pdf"
+   },
+   {
+    "doc_id": "cameo-chem-11452",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 11452, FUEL OIL, [DIESEL]",
+    "url": "https://cameochemicals.noaa.gov/chemical/11452"
+   },
+   {
+    "doc_id": "cameo-chem-11498",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 11498, GASOLINE",
+    "url": "https://cameochemicals.noaa.gov/chemical/11498"
+   },
+   {
+    "doc_id": "cameo-chem-2509",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 2509, ARGON, REFRIGERATED LIQUID (CRYOGENIC LIQUID)",
+    "url": "https://cameochemicals.noaa.gov/chemical/2509"
+   },
+   {
+    "doc_id": "cameo-chem-2862",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 2862, CHLORINE",
+    "url": "https://cameochemicals.noaa.gov/chemical/2862"
+   },
+   {
+    "doc_id": "cameo-chem-4069",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 4069, NITROGEN, REFRIGERATED LIQUID (CRYOGENIC LIQUID)",
+    "url": "https://cameochemicals.noaa.gov/chemical/4069"
+   },
+   {
+    "doc_id": "cameo-chem-4860",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 4860, AMMONIA, ANHYDROUS",
+    "url": "https://cameochemicals.noaa.gov/chemical/4860"
+   },
+   {
+    "doc_id": "cameo-chem-9018",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 9018, PROPANE",
+    "url": "https://cameochemicals.noaa.gov/chemical/9018"
+   },
+   {
+    "doc_id": "cameo-chem-987",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 987, LIQUEFIED PETROLEUM GAS",
+    "url": "https://cameochemicals.noaa.gov/chemical/987"
+   },
+   {
+    "doc_id": "cfr-1910-134",
+    "edition": "CFR 2025, title 29 volume 5 (revised as of July 1, 2025)",
+    "publisher": "Office of the Federal Register, National Archives (GovInfo)",
+    "title": "29 CFR 1910.134, Respiratory protection (CFR 2025 annual edition, GovInfo XML)",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title29-vol5/xml/CFR-2025-title29-vol5-sec1910-134.xml"
+   },
+   {
+    "doc_id": "epa-aegl-compiled-2018",
+    "edition": "2018-07-27",
+    "publisher": "US EPA",
+    "title": "COMPILED AEGL VALUES (July 27, 2018)",
+    "url": "https://www.epa.gov/sites/default/files/2018-08/documents/compiled_aegls_update_27jul2018.pdf"
+   },
+   {
+    "doc_id": "epa-aegl-results-ammonia",
+    "edition": "live (HB-65)",
+    "publisher": "U.S. EPA",
+    "title": "Ammonia Results - AEGL Program",
+    "url": "https://www.epa.gov/aegl/ammonia-results-aegl-program"
+   },
+   {
+    "doc_id": "epa-aegl-results-chlorine",
+    "edition": "live (HB-65)",
+    "publisher": "U.S. EPA",
+    "title": "Chlorine Results - AEGL Program",
+    "url": "https://www.epa.gov/aegl/chlorine-results-aegl-program"
+   },
+   {
+    "doc_id": "epa-rmp-oca-guidance-2009",
+    "edition": "March 2009",
+    "publisher": "US EPA, OSWER / Office of Emergency Management",
+    "title": "Risk Management Program Guidance for Offsite Consequence Analysis (EPA 550-B-99-009)",
+    "url": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf"
+   },
+   {
+    "doc_id": "epa-slab-users-guide-1990",
+    "edition": "June 1990",
+    "publisher": "Lawrence Livermore National Laboratory (D. L. Ermak), served by U.S. EPA SCRAM",
+    "title": "User's Manual for SLAB: An Atmospheric Dispersion Model for Denser-than-Air Releases",
+    "url": "https://gaftp.epa.gov/Air/aqmg/SCRAM/models/nonepa/slab/SLAB.PDF"
+   },
+   {
+    "doc_id": "niosh-npg-2005-149",
+    "edition": "September 2007",
+    "publisher": "NIOSH",
+    "title": "NIOSH Pocket Guide to Chemical Hazards, DHHS (NIOSH) Publication No. 2005-149, Third Printing September 2007",
+    "url": "https://www.cdc.gov/niosh/docs/2005-149/pdfs/2005-149.pdf"
+   },
+   {
+    "doc_id": "nist-fluid-saturation-1005",
+    "edition": "live (HB-124)",
+    "publisher": "NIST",
+    "title": "NIST Chemistry WebBook (SRD 69), Thermophysical Properties of Fluid Systems: Ammonia, saturation properties, 219 to 260 K at 1 K (tab-delimited)",
+    "url": "https://webbook.nist.gov/cgi/fluid.cgi?Action=Data&Wide=on&ID=C7664417&Type=SatP&Digits=5&THigh=260&TLow=219&TInc=1&RefState=DEF&TUnit=K&PUnit=bar&DUnit=kg%2Fm3&HUnit=kJ%2Fmol&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm"
+   },
+   {
+    "doc_id": "nist-fluid-saturation-1951",
+    "edition": "live (HB-124)",
+    "publisher": "NIST",
+    "title": "NIST Chemistry WebBook (SRD 69), Thermophysical Properties of Fluid Systems: Argon, saturation properties, 84 to 108 K at 1 K (tab-delimited)",
+    "url": "https://webbook.nist.gov/cgi/fluid.cgi?Action=Data&Wide=on&ID=C7440371&Type=SatP&Digits=5&THigh=108&TLow=84&TInc=1&RefState=DEF&TUnit=K&PUnit=bar&DUnit=kg%2Fm3&HUnit=kJ%2Fmol&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm"
+   },
+   {
+    "doc_id": "nist-fluid-saturation-1977",
+    "edition": "live (HB-124)",
+    "publisher": "NIST",
+    "title": "NIST Chemistry WebBook (SRD 69), Thermophysical Properties of Fluid Systems: Nitrogen, saturation properties, 64 to 98 K at 1 K (tab-delimited)",
+    "url": "https://webbook.nist.gov/cgi/fluid.cgi?Action=Data&Wide=on&ID=C7727379&Type=SatP&Digits=5&THigh=98&TLow=64&TInc=1&RefState=DEF&TUnit=K&PUnit=bar&DUnit=kg%2Fm3&HUnit=kJ%2Fmol&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm"
+   },
+   {
+    "doc_id": "nist-fluid-saturation-1978",
+    "edition": "live (HB-124)",
+    "publisher": "NIST",
+    "title": "NIST Chemistry WebBook (SRD 69), Thermophysical Properties of Fluid Systems: Propane, saturation properties, 211 to 252 K at 1 K (tab-delimited)",
+    "url": "https://webbook.nist.gov/cgi/fluid.cgi?Action=Data&Wide=on&ID=C74986&Type=SatP&Digits=5&THigh=252&TLow=211&TInc=1&RefState=DEF&TUnit=K&PUnit=bar&DUnit=kg%2Fm3&HUnit=kJ%2Fmol&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm"
+   },
+   {
+    "doc_id": "nist-webbook-1005",
+    "edition": "live (HB-65)",
+    "publisher": "NIST",
+    "title": "NIST Chemistry WebBook (SRD 69): Ammonia, species page with gas phase thermochemistry and phase change data",
+    "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7664417&Units=SI&Mask=5"
+   },
+   {
+    "doc_id": "nist-webbook-1017",
+    "edition": "live (HB-65)",
+    "publisher": "NIST",
+    "title": "NIST Chemistry WebBook (SRD 69): Chlorine, species page with gas phase thermochemistry and phase change data",
+    "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7782505&Units=SI&Mask=5"
+   },
+   {
+    "doc_id": "nist-webbook-1951",
+    "edition": "live (HB-65)",
+    "publisher": "NIST",
+    "title": "NIST Chemistry WebBook (SRD 69): Argon, species page with gas phase thermochemistry and phase change data",
+    "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7440371&Units=SI&Mask=5"
+   },
+   {
+    "doc_id": "nist-webbook-1977",
+    "edition": "live (HB-65)",
+    "publisher": "NIST",
+    "title": "NIST Chemistry WebBook (SRD 69): Nitrogen, species page with gas phase thermochemistry and phase change data",
+    "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Units=SI&Mask=5"
+   },
+   {
+    "doc_id": "nist-webbook-1978",
+    "edition": "live (HB-65)",
+    "publisher": "NIST",
+    "title": "NIST Chemistry WebBook (SRD 69): Propane, species page with gas phase thermochemistry and phase change data",
+    "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C74986&Units=SI&Mask=5"
+   },
+   {
+    "doc_id": "noaa-aloha-technical-documentation",
+    "edition": "November 2013",
+    "publisher": "NOAA NOS Office of Response and Restoration (Jones, Lehr, Simecek-Beatty, Reynolds)",
+    "title": "ALOHA (Areal Locations of Hazardous Atmospheres) 5.4.4 Technical Documentation (NOAA Technical Memorandum NOS OR&R 43)",
+    "url": "https://response.restoration.noaa.gov/sites/default/files/ALOHA_Tech_Doc.pdf"
+   },
+   {
+    "doc_id": "us-standard-atmosphere-1976",
+    "edition": "October 1976",
+    "publisher": "NOAA, NASA and the U.S. Air Force",
+    "title": "U.S. Standard Atmosphere, 1976 (NOAA-S/T 76-1562; NASA-TM-X-74335)",
+    "url": "https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf"
+   }
+  ],
+  "notices": []
+ },
+ "built_at": "2026-11-07T00:39:35Z",
+ "data": {
+  "air": {
+   "asphyxiant_vol_pct_at_threshold": {
+    "derived_from": [
+     "oxygen_deficiency_threshold_vol_pct",
+     "oxygen_volume_fraction"
+    ],
+    "reason": null,
+    "receipt": null,
+    "status": "held",
+    "unit": "vol %",
+    "value": 6.910576868
+   },
+   "avogadro_constant_per_kmol": {
+    "derived_from": [],
+    "reason": null,
+    "receipt": {
+     "doc_id": "us-standard-atmosphere-1976",
+     "locator": "us-standard-atmosphere-1976#p18",
+     "page": 18,
+     "quote": "N_A 6.022169 x 10^26 kmol^-1",
+     "read_by": "rendered_page",
+     "sha256": "23eb6b68346d4abc6071fc598872d51c40cf8c613d1a5d1006c6261bcd09dcea"
+    },
+    "status": "held",
+    "unit": "1/kmol",
+    "value": 6.022169e+26
+   },
+   "boltzmann_constant_n_m_k": {
+    "derived_from": [],
+    "reason": null,
+    "receipt": {
+     "doc_id": "us-standard-atmosphere-1976",
+     "locator": "us-standard-atmosphere-1976#p18",
+     "page": 18,
+     "quote": "k 1.380622 x 10^-23 N·m/K",
+     "read_by": "rendered_page",
+     "sha256": "23eb6b68346d4abc6071fc598872d51c40cf8c613d1a5d1006c6261bcd09dcea"
+    },
+    "status": "held",
+    "unit": "N m/K",
+    "value": 1.380622e-23
+   },
+   "conversion_pressure_atm": {
+    "derived_from": [],
+    "reason": null,
+    "receipt": {
+     "doc_id": "niosh-npg-2005-149",
+     "locator": "niosh-npg-2005-149#p11",
+     "page": 11,
+     "quote": "at 25°C and 1 atmosphere",
+     "read_by": "text_layer",
+     "sha256": "c008054cef5aae66addaeab70549d4d549de409f3db75df73c5e7c631a674ad9"
+    },
+    "status": "held",
+    "unit": "atm",
+    "value": 1.0
+   },
+   "conversion_temperature_c": {
+    "derived_from": [],
+    "reason": null,
+    "receipt": {
+     "doc_id": "niosh-npg-2005-149",
+     "locator": "niosh-npg-2005-149#p11",
+     "page": 11,
+     "quote": "at 25°C and 1 atmosphere",
+     "read_by": "text_layer",
+     "sha256": "c008054cef5aae66addaeab70549d4d549de409f3db75df73c5e7c631a674ad9"
+    },
+    "status": "held",
+    "unit": "degC",
+    "value": 25.0
+   },
+   "conversion_temperature_k": {
+    "derived_from": [],
+    "reason": null,
+    "receipt": {
+     "doc_id": "epa-rmp-oca-guidance-2009",
+     "locator": "epa-rmp-oca-guidance-2009#p78",
+     "page": 78,
+     "quote": "(77 F) is 298 K",
+     "read_by": "text_layer",
+     "sha256": "054fa19050e27d1068d9ee99bc79fd4287296d137e5c7c5f243eaf7d35a3d3e7"
+    },
+    "status": "held",
+    "unit": "K",
+    "value": 298.0
+   },
+   "gas_constant_j_kmol_k": {
+    "derived_from": [
+     "boltzmann_constant_n_m_k",
+     "avogadro_constant_per_kmol"
+    ],
+    "reason": null,
+    "receipt": null,
+    "status": "held",
+    "unit": "J/(kmol K)",
+    "value": 8314.339009118
+   },
+   "molar_volume_m3_kmol": {
+    "derived_from": [
+     "gas_constant_j_kmol_k",
+     "conversion_temperature_k",
+     "standard_pressure_pa",
+     "conversion_pressure_atm"
+    ],
+    "reason": null,
+    "receipt": null,
+    "status": "held",
+    "unit": "m3/kmol",
+    "value": 24.4527315541
+   },
+   "oxygen_volume_fraction": {
+    "derived_from": [],
+    "reason": null,
+    "receipt": {
+     "doc_id": "us-standard-atmosphere-1976",
+     "locator": "us-standard-atmosphere-1976#p19",
+     "page": 19,
+     "quote": "O2 31.9988 .209476",
+     "read_by": "rendered_page",
+     "sha256": "23eb6b68346d4abc6071fc598872d51c40cf8c613d1a5d1006c6261bcd09dcea"
+    },
+    "status": "held",
+    "unit": "1",
+    "value": 0.209476
+   },
+   "standard_pressure_pa": {
+    "derived_from": [],
+    "reason": null,
+    "receipt": {
+     "doc_id": "us-standard-atmosphere-1976",
+     "locator": "us-standard-atmosphere-1976#p18",
+     "page": 18,
+     "quote": "P_0 1.013250 x 10^5 N/m^2 (or Pa)",
+     "read_by": "rendered_page",
+     "sha256": "23eb6b68346d4abc6071fc598872d51c40cf8c613d1a5d1006c6261bcd09dcea"
+    },
+    "status": "held",
+    "unit": "Pa",
+    "value": 101325.0
+   }
+  },
+  "classes": {
+   "cryogenic_asphyxiant": {
+    "basis": "DN-018 section 3, row 2: passive puff to an oxygen-displacement threshold (29 CFR 1910.134(b))",
+    "dense_gas_caveat": true,
+    "thresholds": [
+     "oxygen_deficiency"
+    ]
+   },
+   "flammable": {
+    "basis": "DN-018 section 3, row 3: passive puff to the LFL, drawn as a flash-fire envelope",
+    "dense_gas_caveat": false,
+    "thresholds": [
+     "LFL"
+    ]
+   },
+   "pressure_liquefied_toxic": {
+    "basis": "DN-018 section 3, row 1: passive puff to AEGL-2 and AEGL-3; dense-gas slumping not modelled",
+    "dense_gas_caveat": true,
+    "thresholds": [
+     "AEGL-2",
+     "AEGL-3"
+    ]
+   }
+  },
+  "materials": {
+   "1005": {
+    "aegl_ppm": {
+     "AEGL-1": {
+      "10": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p42",
+        "page": 42,
+        "quote": "AEGL 1 30 30 30 30 30",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 30.0
+      },
+      "30": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p42",
+        "page": 42,
+        "quote": "AEGL 1 30 30 30 30 30",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 30.0
+      },
+      "60": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p42",
+        "page": 42,
+        "quote": "AEGL 1 30 30 30 30 30",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 30.0
+      }
+     },
+     "AEGL-2": {
+      "10": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p42",
+        "page": 42,
+        "quote": "AEGL 2 220 220 160 110 110",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 220.0
+      },
+      "30": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p42",
+        "page": 42,
+        "quote": "AEGL 2 220 220 160 110 110",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 220.0
+      },
+      "60": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p42",
+        "page": 42,
+        "quote": "AEGL 2 220 220 160 110 110",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 160.0
+      }
+     },
+     "AEGL-3": {
+      "10": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p42",
+        "page": 42,
+        "quote": "AEGL 3 2,700 1,600 1,100 550 390",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 2700.0
+      },
+      "30": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p42",
+        "page": 42,
+        "quote": "AEGL 3 2,700 1,600 1,100 550 390",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 1600.0
+      },
+      "60": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p42",
+        "page": 42,
+        "quote": "AEGL 3 2,700 1,600 1,100 550 390",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 1100.0
+      }
+     }
+    },
+    "aegl_reason": null,
+    "aegl_status": "Final",
+    "cross_checks": [
+     {
+      "field": "molecular weight (g/mol)",
+      "status": "agree",
+      "values": {
+       "cameo-chem-4860": "17.03",
+       "nist-webbook-1005": "17.0305"
+      }
+     },
+     {
+      "field": "AEGL-1 ppm at 10, 30, 60 min",
+      "status": "agree",
+      "values": {
+       "epa-aegl-compiled-2018": "30 | 30 | 30",
+       "epa-aegl-results-ammonia": "30 | 30 | 30"
+      }
+     },
+     {
+      "field": "AEGL-2 ppm at 10, 30, 60 min",
+      "status": "agree",
+      "values": {
+       "epa-aegl-compiled-2018": "220 | 220 | 160",
+       "epa-aegl-results-ammonia": "220 | 220 | 160"
+      }
+     },
+     {
+      "field": "AEGL-3 ppm at 10, 30, 60 min",
+      "status": "agree",
+      "values": {
+       "epa-aegl-compiled-2018": "2,700 | 1,600 | 1,100",
+       "epa-aegl-results-ammonia": "2,700 | 1,600 | 1,100"
+      }
+     },
+     {
+      "field": "mg/m3 per ppm at 25 C and 1 atm",
+      "status": "agree",
+      "values": {
+       "molecular weight / molar volume": "0.6965",
+       "niosh-npg-2005-149": "0.70"
+      }
+     }
+    ],
+    "dense_gas_caveat": true,
+    "dispersion_class": "pressure_liquefied_toxic",
+    "guide": "125",
+    "levels_of_concern": [
+     {
+      "basis": "toxic inhalation hazard: AEGL-2 at the model's averaging time (DN-020 ADDENDUM-01 section 2 item 2; the ERG's own basis); the pack's AEGL-2 cells and their page",
+      "components": {},
+      "kind": "aegl2",
+      "proxy_for": null,
+      "unit": "ppm",
+      "values": {
+       "10": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "epa-aegl-compiled-2018",
+         "locator": "epa-aegl-compiled-2018#p42",
+         "page": 42,
+         "quote": "AEGL 2 220 220 160 110 110",
+         "read_by": "text_layer",
+         "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+        },
+        "status": "held",
+        "unit": "ppm",
+        "value": 220.0
+       },
+       "30": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "epa-aegl-compiled-2018",
+         "locator": "epa-aegl-compiled-2018#p42",
+         "page": 42,
+         "quote": "AEGL 2 220 220 160 110 110",
+         "read_by": "text_layer",
+         "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+        },
+        "status": "held",
+        "unit": "ppm",
+        "value": 220.0
+       },
+       "60": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "epa-aegl-compiled-2018",
+         "locator": "epa-aegl-compiled-2018#p42",
+         "page": 42,
+         "quote": "AEGL 2 220 220 160 110 110",
+         "read_by": "text_layer",
+         "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+        },
+        "status": "held",
+        "unit": "ppm",
+        "value": 160.0
+       }
+      }
+     }
+    ],
+    "lfl_vol_pct": {
+     "derived_from": [],
+     "reason": "not drawn to an LFL: the pressure_liquefied_toxic class (DN-018 section 3)",
+     "receipt": null,
+     "status": "not_applicable",
+     "unit": "vol %",
+     "value": null
+    },
+    "molecular_weight_g_mol": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "nist-webbook-1005",
+      "locator": "nist-webbook-1005#p22",
+      "page": 22,
+      "quote": "17.0305",
+      "read_by": "text_layer",
+      "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+     },
+     "status": "held",
+     "unit": "g/mol",
+     "value": 17.0305
+    },
+    "name": "AMMONIA, ANHYDROUS",
+    "oxygen_deficiency_threshold_vol_pct": {
+     "derived_from": [],
+     "reason": "not drawn to an oxygen threshold: the pressure_liquefied_toxic class (DN-018 section 3)",
+     "receipt": null,
+     "status": "not_applicable",
+     "unit": "vol %",
+     "value": null
+    },
+    "thermodynamics": {
+     "critical_pressure_bar": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1005",
+       "locator": "nist-webbook-1005#p79",
+       "page": 79,
+       "quote": "113.00 | bar",
+       "read_by": "text_layer",
+       "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "bar",
+      "value": 113.0,
+      "value_range": null
+     },
+     "critical_temperature_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1005",
+       "locator": "nist-webbook-1005#p79",
+       "page": 79,
+       "quote": "405.4 | K",
+       "read_by": "text_layer",
+       "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 405.4,
+      "value_range": null
+     },
+     "cross_checks": [
+      {
+       "field": "normal boiling point (K)",
+       "status": "single_source",
+       "values": {
+        "cameo-chem-4860": "239.80 K (-28.03 °F)"
+       }
+      },
+      {
+       "field": "critical temperature (K)",
+       "status": "agree",
+       "values": {
+        "nist-webbook-1005 (Brunner, 1988, p79)": "405.4 K ± 0.1",
+        "nist-webbook-1005 (Hentze, 1977, p79)": "405.6 K ± 5."
+       }
+      },
+      {
+       "field": "critical pressure (bar)",
+       "status": "single_source",
+       "values": {
+        "nist-webbook-1005 (Brunner, 1988, p79)": "113.00 bar ± 0.05"
+       }
+      }
+     ],
+     "heat_of_vaporization_j_mol": {
+      "as_printed": "23.5 kJ/mol at 239. K",
+      "conversion": "1 kJ/mol = 1000 J/mol (the SI prefix kilo)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1005",
+       "locator": "nist-webbook-1005#p80",
+       "page": 80,
+       "quote": "23.5 | 239.",
+       "read_by": "text_layer",
+       "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 239.0,
+      "unit": "J/mol",
+      "value": 23500.0,
+      "value_range": null
+     },
+     "liquid_density_kg_m3": {
+      "as_printed": "681.43 kg/m3 at 240.00 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1005",
+       "locator": "nist-fluid-saturation-1005#p1",
+       "page": 1,
+       "quote": "240.00 1.0217 681.43 0.0014675 3.3209 3.3234 15.295 49.746 76.058 1734.6 -0.018596 251.04 0.57831 0.034103 0.89692 1.1149 24.701 26.641 112.45 28.870 39.054 386.85 6.7564 8.0714 0.019544",
+       "read_by": "text_layer",
+       "sha256": "352795b7eaa3ddbd7b354f6a7f8541d5fb1ff06ab20d0aa439db284bb72fb9d9"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 240.0,
+      "unit": "kg/m3",
+      "value": 681.43,
+      "value_range": null
+     },
+     "liquid_heat_capacity_j_mol_k": {
+      "as_printed": "76.058 J/mol*K at 240.00 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1005",
+       "locator": "nist-fluid-saturation-1005#p1",
+       "page": 1,
+       "quote": "240.00 1.0217 681.43 0.0014675 3.3209 3.3234 15.295 49.746 76.058 1734.6 -0.018596 251.04 0.57831 0.034103 0.89692 1.1149 24.701 26.641 112.45 28.870 39.054 386.85 6.7564 8.0714 0.019544",
+       "read_by": "text_layer",
+       "sha256": "352795b7eaa3ddbd7b354f6a7f8541d5fb1ff06ab20d0aa439db284bb72fb9d9"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 240.0,
+      "unit": "J/mol/K",
+      "value": 76.058,
+      "value_range": null
+     },
+     "liquid_specific_gravity": {
+      "as_printed": "0.6818 1 (relative to water) at -28.03 °F",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-4860",
+       "locator": "cameo-chem-4860#p114",
+       "page": 114,
+       "quote": "Specific Gravity: 0.6818 at -28.03°F (EPA, 1998)",
+       "read_by": "text_layer",
+       "sha256": "024e8f67481351301770501b60b5880e309125ca8a759eec1bf241030eab12a1"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 239.8,
+      "unit": "1 (relative to water)",
+      "value": 0.6818,
+      "value_range": null
+     },
+     "missing": [],
+     "molecular_weight_g_mol": {
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1005",
+       "locator": "nist-webbook-1005#p22",
+       "page": 22,
+       "quote": "17.0305",
+       "read_by": "text_layer",
+       "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+      },
+      "status": "held",
+      "unit": "g/mol",
+      "value": 17.0305
+     },
+     "normal_boiling_point_k": {
+      "as_printed": "-28.03 °F at 760 mmHg",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-4860",
+       "locator": "cameo-chem-4860#p115",
+       "page": 115,
+       "quote": "Boiling Point: -28.03°F at 760 mmHg (EPA, 1998)",
+       "read_by": "text_layer",
+       "sha256": "024e8f67481351301770501b60b5880e309125ca8a759eec1bf241030eab12a1"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 239.8,
+      "value_range": null
+     },
+     "proxy": null,
+     "saturation_pressure_antoine": {
+      "form": "log10(P) = A − (B / (T + C)); P = vapor pressure (bar); T = temperature (K)",
+      "reason": null,
+      "rows": [
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p86",
+           "page": 86,
+           "quote": "164.0 to 239.6 | 3.18757 | 506.713 | -80.78",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 3.18757
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p86",
+           "page": 86,
+           "quote": "164.0 to 239.6 | 3.18757 | 506.713 | -80.78",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 506.713
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p86",
+           "page": 86,
+           "quote": "164.0 to 239.6 | 3.18757 | 506.713 | -80.78",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -80.78
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1005",
+         "locator": "nist-webbook-1005#p86",
+         "page": 86,
+         "quote": "164.0 to 239.6 | 3.18757 | 506.713 | -80.78",
+         "read_by": "text_layer",
+         "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+        },
+        "t_max_k": 239.6,
+        "t_min_k": 164.0
+       },
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p86",
+           "page": 86,
+           "quote": "239.6 to 371.5 | 4.86886 | 1113.928 | -10.409",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 4.86886
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p86",
+           "page": 86,
+           "quote": "239.6 to 371.5 | 4.86886 | 1113.928 | -10.409",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 1113.928
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p86",
+           "page": 86,
+           "quote": "239.6 to 371.5 | 4.86886 | 1113.928 | -10.409",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -10.409
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1005",
+         "locator": "nist-webbook-1005#p86",
+         "page": 86,
+         "quote": "239.6 to 371.5 | 4.86886 | 1113.928 | -10.409",
+         "read_by": "text_layer",
+         "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+        },
+        "t_max_k": 371.5,
+        "t_min_k": 239.6
+       }
+      ],
+      "status": "held"
+     },
+     "vapour_heat_capacity_j_mol_k": {
+      "as_printed": "39.054 J/mol*K at 240.00 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1005",
+       "locator": "nist-fluid-saturation-1005#p1",
+       "page": 1,
+       "quote": "240.00 1.0217 681.43 0.0014675 3.3209 3.3234 15.295 49.746 76.058 1734.6 -0.018596 251.04 0.57831 0.034103 0.89692 1.1149 24.701 26.641 112.45 28.870 39.054 386.85 6.7564 8.0714 0.019544",
+       "read_by": "text_layer",
+       "sha256": "352795b7eaa3ddbd7b354f6a7f8541d5fb1ff06ab20d0aa439db284bb72fb9d9"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 240.0,
+      "unit": "J/mol/K",
+      "value": 39.054,
+      "value_range": null
+     },
+     "vapour_heat_capacity_shomate": {
+      "form": "Cp° = A + B*t + C*t2 + D*t3 + E/t2; Cp = heat capacity (J/mol*K); t = temperature (K) / 1000.",
+      "reason": null,
+      "rows": [
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p72",
+           "page": 72,
+           "quote": "19.99563",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 19.99563
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p72",
+           "page": 72,
+           "quote": "49.77119",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 49.77119
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p72",
+           "page": 72,
+           "quote": "-15.37599",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": -15.37599
+         },
+         "D": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p72",
+           "page": 72,
+           "quote": "1.921168",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 1.921168
+         },
+         "E": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1005",
+           "locator": "nist-webbook-1005#p72",
+           "page": 72,
+           "quote": "0.189174",
+           "read_by": "text_layer",
+           "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 0.189174
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1005",
+         "locator": "nist-webbook-1005#p72",
+         "page": 72,
+         "quote": "298. to 1400.",
+         "read_by": "text_layer",
+         "sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+        },
+        "t_max_k": 1400.0,
+        "t_min_k": 298.0
+       }
+      ],
+      "status": "held"
+     },
+     "vapour_pressure_as_printed": {
+      "as_printed": "400 mmHg at -49.72 °F",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-4860",
+       "locator": "cameo-chem-4860#p112",
+       "page": 112,
+       "quote": "Vapor Pressure: 400 mmHg at -49.72°F (EPA, 1998)",
+       "read_by": "text_layer",
+       "sha256": "024e8f67481351301770501b60b5880e309125ca8a759eec1bf241030eab12a1"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 227.75,
+      "unit": "mmHg",
+      "value": 400.0,
+      "value_range": null
+     }
+    },
+    "un": "1005"
+   },
+   "1017": {
+    "aegl_ppm": {
+     "AEGL-1": {
+      "10": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p43",
+        "page": 43,
+        "quote": "AEGL 1 0.50 0.50 0.50 0.50 0.50",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 0.5
+      },
+      "30": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p43",
+        "page": 43,
+        "quote": "AEGL 1 0.50 0.50 0.50 0.50 0.50",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 0.5
+      },
+      "60": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p43",
+        "page": 43,
+        "quote": "AEGL 1 0.50 0.50 0.50 0.50 0.50",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 0.5
+      }
+     },
+     "AEGL-2": {
+      "10": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p43",
+        "page": 43,
+        "quote": "AEGL 2 2.8 2.8 2.0 1.0 0.71",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 2.8
+      },
+      "30": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p43",
+        "page": 43,
+        "quote": "AEGL 2 2.8 2.8 2.0 1.0 0.71",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 2.8
+      },
+      "60": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p43",
+        "page": 43,
+        "quote": "AEGL 2 2.8 2.8 2.0 1.0 0.71",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 2.0
+      }
+     },
+     "AEGL-3": {
+      "10": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p43",
+        "page": 43,
+        "quote": "AEGL 3 50 28 20 10 7.1",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 50.0
+      },
+      "30": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p43",
+        "page": 43,
+        "quote": "AEGL 3 50 28 20 10 7.1",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 28.0
+      },
+      "60": {
+       "derived_from": [],
+       "reason": null,
+       "receipt": {
+        "doc_id": "epa-aegl-compiled-2018",
+        "locator": "epa-aegl-compiled-2018#p43",
+        "page": 43,
+        "quote": "AEGL 3 50 28 20 10 7.1",
+        "read_by": "text_layer",
+        "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+       },
+       "status": "held",
+       "unit": "ppm",
+       "value": 20.0
+      }
+     }
+    },
+    "aegl_reason": null,
+    "aegl_status": "Final",
+    "cross_checks": [
+     {
+      "field": "molecular weight (g/mol)",
+      "status": "agree",
+      "values": {
+       "cameo-chem-2862": "70.91",
+       "nist-webbook-1017": "70.906"
+      }
+     },
+     {
+      "field": "AEGL-1 ppm at 10, 30, 60 min",
+      "status": "agree",
+      "values": {
+       "epa-aegl-compiled-2018": "0.50 | 0.50 | 0.50",
+       "epa-aegl-results-chlorine": "0.50 | 0.50 | 0.50"
+      }
+     },
+     {
+      "field": "AEGL-2 ppm at 10, 30, 60 min",
+      "status": "agree",
+      "values": {
+       "epa-aegl-compiled-2018": "2.8 | 2.8 | 2.0",
+       "epa-aegl-results-chlorine": "2.8 | 2.8 | 2.0"
+      }
+     },
+     {
+      "field": "AEGL-3 ppm at 10, 30, 60 min",
+      "status": "agree",
+      "values": {
+       "epa-aegl-compiled-2018": "50 | 28 | 20",
+       "epa-aegl-results-chlorine": "50 | 28 | 20"
+      }
+     },
+     {
+      "field": "mg/m3 per ppm at 25 C and 1 atm",
+      "status": "agree",
+      "values": {
+       "molecular weight / molar volume": "2.8997",
+       "niosh-npg-2005-149": "2.90"
+      }
+     }
+    ],
+    "dense_gas_caveat": true,
+    "dispersion_class": "pressure_liquefied_toxic",
+    "guide": "124",
+    "levels_of_concern": [
+     {
+      "basis": "toxic inhalation hazard: AEGL-2 at the model's averaging time (DN-020 ADDENDUM-01 section 2 item 2; the ERG's own basis); the pack's AEGL-2 cells and their page",
+      "components": {},
+      "kind": "aegl2",
+      "proxy_for": null,
+      "unit": "ppm",
+      "values": {
+       "10": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "epa-aegl-compiled-2018",
+         "locator": "epa-aegl-compiled-2018#p43",
+         "page": 43,
+         "quote": "AEGL 2 2.8 2.8 2.0 1.0 0.71",
+         "read_by": "text_layer",
+         "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+        },
+        "status": "held",
+        "unit": "ppm",
+        "value": 2.8
+       },
+       "30": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "epa-aegl-compiled-2018",
+         "locator": "epa-aegl-compiled-2018#p43",
+         "page": 43,
+         "quote": "AEGL 2 2.8 2.8 2.0 1.0 0.71",
+         "read_by": "text_layer",
+         "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+        },
+        "status": "held",
+        "unit": "ppm",
+        "value": 2.8
+       },
+       "60": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "epa-aegl-compiled-2018",
+         "locator": "epa-aegl-compiled-2018#p43",
+         "page": 43,
+         "quote": "AEGL 2 2.8 2.8 2.0 1.0 0.71",
+         "read_by": "text_layer",
+         "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+        },
+        "status": "held",
+        "unit": "ppm",
+        "value": 2.0
+       }
+      }
+     }
+    ],
+    "lfl_vol_pct": {
+     "derived_from": [],
+     "reason": "not drawn to an LFL: the pressure_liquefied_toxic class (DN-018 section 3)",
+     "receipt": null,
+     "status": "not_applicable",
+     "unit": "vol %",
+     "value": null
+    },
+    "molecular_weight_g_mol": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "nist-webbook-1017",
+      "locator": "nist-webbook-1017#p22",
+      "page": 22,
+      "quote": "70.906",
+      "read_by": "text_layer",
+      "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+     },
+     "status": "held",
+     "unit": "g/mol",
+     "value": 70.906
+    },
+    "name": "CHLORINE",
+    "oxygen_deficiency_threshold_vol_pct": {
+     "derived_from": [],
+     "reason": "not drawn to an oxygen threshold: the pressure_liquefied_toxic class (DN-018 section 3)",
+     "receipt": null,
+     "status": "not_applicable",
+     "unit": "vol %",
+     "value": null
+    },
+    "thermodynamics": {
+     "critical_pressure_bar": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1017",
+       "locator": "nist-webbook-1017#p71",
+       "page": 71,
+       "quote": "79.914 | bar",
+       "read_by": "text_layer",
+       "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "bar",
+      "value": 79.914,
+      "value_range": null
+     },
+     "critical_temperature_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1017",
+       "locator": "nist-webbook-1017#p71",
+       "page": 71,
+       "quote": "416.956 | K",
+       "read_by": "text_layer",
+       "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 416.956,
+      "value_range": null
+     },
+     "cross_checks": [
+      {
+       "field": "normal boiling point (K)",
+       "status": "disputed",
+       "values": {
+        "cameo-chem-2862": "238.54 K (-30.3 °F)",
+        "nist-webbook-1017 (Thiele and Schulte, 1920, p71)": "239.5 K ± 0.6"
+       }
+      },
+      {
+       "field": "critical temperature (K)",
+       "status": "agree",
+       "values": {
+        "nist-webbook-1017 (Ambrose, Hall, et al., 1979, p71)": "416.9 K ± 0.5",
+        "nist-webbook-1017 (Angus, Armstrong, et al., 1984, p71)": "416.956 K"
+       }
+      },
+      {
+       "field": "critical pressure (bar)",
+       "status": "agree",
+       "values": {
+        "nist-webbook-1017 (Ambrose, Hall, et al., 1979, p71)": "79.77 bar ± 0.50",
+        "nist-webbook-1017 (Angus, Armstrong, et al., 1984, p71)": "79.914 bar"
+       }
+      },
+      {
+       "field": "SLAB chlorine DHE (J/kg)",
+       "status": "agree",
+       "values": {
+        "epa-slab-users-guide-1990 (Table 2, p54)": "287840.",
+        "epa-slab-users-guide-1990 (test case input, p136)": "287840."
+       }
+      },
+      {
+       "field": "SLAB chlorine CPSL (J/kg*K)",
+       "status": "agree",
+       "values": {
+        "epa-slab-users-guide-1990 (Table 2, p54)": "926.3",
+        "epa-slab-users-guide-1990 (test case input, p136)": "926.30"
+       }
+      },
+      {
+       "field": "SLAB chlorine RHOSL (kg/m3)",
+       "status": "agree",
+       "values": {
+        "epa-slab-users-guide-1990 (Table 2, p54)": "1574.",
+        "epa-slab-users-guide-1990 (test case input, p136)": "1574.00"
+       }
+      },
+      {
+       "field": "SLAB chlorine CPS (J/kg*K)",
+       "status": "agree",
+       "values": {
+        "epa-slab-users-guide-1990 (Table 2, p54)": "498.1",
+        "epa-slab-users-guide-1990 (test case input, p136)": "498.10"
+       }
+      }
+     ],
+     "heat_of_vaporization_j_mol": {
+      "as_printed": "287840. J/kg at TBP 239.10 K (\"Heat of vaporization at the boiling point temperature\")",
+      "conversion": "per mole = per kilogram × WMS (kg/mol), the molecular weight the same SLAB input prints (WMS 0.070906 kg/mol)",
+      "derived_from": [
+       "WMS = 0.070906"
+      ],
+      "reason": null,
+      "receipt": {
+       "doc_id": "epa-slab-users-guide-1990",
+       "locator": "epa-slab-users-guide-1990#p136",
+       "page": 136,
+       "quote": "DHE = 287840.",
+       "read_by": "rendered_page",
+       "sha256": "2ce0e7b775ee20972fdc6e751e6cbb109d6d881ab0a46c9ab18ccbe6e655503d"
+      },
+      "source_tier": "model-test-input",
+      "status": "held",
+      "temperature_k": 239.1,
+      "unit": "J/mol",
+      "value": 20409.58304,
+      "value_range": null
+     },
+     "liquid_density_kg_m3": {
+      "as_printed": "1574.00 kg/m3 (no temperature printed)",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "epa-slab-users-guide-1990",
+       "locator": "epa-slab-users-guide-1990#p136",
+       "page": 136,
+       "quote": "RHOSL = 1574.00",
+       "read_by": "rendered_page",
+       "sha256": "2ce0e7b775ee20972fdc6e751e6cbb109d6d881ab0a46c9ab18ccbe6e655503d"
+      },
+      "source_tier": "model-test-input",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "kg/m3",
+      "value": 1574.0,
+      "value_range": null
+     },
+     "liquid_heat_capacity_j_mol_k": {
+      "as_printed": "926.30 J/kg*K (no temperature printed)",
+      "conversion": "per mole = per kilogram × WMS (kg/mol), the molecular weight the same SLAB input prints (WMS 0.070906 kg/mol)",
+      "derived_from": [
+       "WMS = 0.070906"
+      ],
+      "reason": null,
+      "receipt": {
+       "doc_id": "epa-slab-users-guide-1990",
+       "locator": "epa-slab-users-guide-1990#p136",
+       "page": 136,
+       "quote": "CPSL = 926.30",
+       "read_by": "rendered_page",
+       "sha256": "2ce0e7b775ee20972fdc6e751e6cbb109d6d881ab0a46c9ab18ccbe6e655503d"
+      },
+      "source_tier": "model-test-input",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "J/mol/K",
+      "value": 65.6802278,
+      "value_range": null
+     },
+     "liquid_specific_gravity": {
+      "as_printed": "1.424 1 (relative to water) at 59 °F",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-2862",
+       "locator": "cameo-chem-2862#p119",
+       "page": 119,
+       "quote": "Specific Gravity: 1.424 at 59°F (pressurized liquid) (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "c601eae3a31c0f2db6a348a7de40cd430caab810de0bd20ad7d514d891ecc4a7"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 288.15,
+      "unit": "1 (relative to water)",
+      "value": 1.424,
+      "value_range": null
+     },
+     "missing": [],
+     "molecular_weight_g_mol": {
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1017",
+       "locator": "nist-webbook-1017#p22",
+       "page": 22,
+       "quote": "70.906",
+       "read_by": "text_layer",
+       "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+      },
+      "status": "held",
+      "unit": "g/mol",
+      "value": 70.906
+     },
+     "normal_boiling_point_k": {
+      "as_printed": "-30.3 °F at 760 mmHg",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-2862",
+       "locator": "cameo-chem-2862#p120",
+       "page": 120,
+       "quote": "Boiling Point: -30.3°F at 760 mmHg (EPA, 1998)",
+       "read_by": "text_layer",
+       "sha256": "c601eae3a31c0f2db6a348a7de40cd430caab810de0bd20ad7d514d891ecc4a7"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 238.5388888889,
+      "value_range": null
+     },
+     "proxy": null,
+     "saturation_pressure_antoine": {
+      "form": "log10(P) = A − (B / (T + C)); P = vapor pressure (bar); T = temperature (K)",
+      "reason": null,
+      "rows": [
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p77",
+           "page": 77,
+           "quote": "155. to 239.4 | 3.0213 | 530.591 | -64.639",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 3.0213
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p77",
+           "page": 77,
+           "quote": "155. to 239.4 | 3.0213 | 530.591 | -64.639",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 530.591
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p77",
+           "page": 77,
+           "quote": "155. to 239.4 | 3.0213 | 530.591 | -64.639",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -64.639
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1017",
+         "locator": "nist-webbook-1017#p77",
+         "page": 77,
+         "quote": "155. to 239.4 | 3.0213 | 530.591 | -64.639",
+         "read_by": "text_layer",
+         "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+        },
+        "t_max_k": 239.4,
+        "t_min_k": 155.0
+       },
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p77",
+           "page": 77,
+           "quote": "239.4 to 400.3 | 4.28814 | 969.992 | -12.791",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 4.28814
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p77",
+           "page": 77,
+           "quote": "239.4 to 400.3 | 4.28814 | 969.992 | -12.791",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 969.992
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p77",
+           "page": 77,
+           "quote": "239.4 to 400.3 | 4.28814 | 969.992 | -12.791",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -12.791
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1017",
+         "locator": "nist-webbook-1017#p77",
+         "page": 77,
+         "quote": "239.4 to 400.3 | 4.28814 | 969.992 | -12.791",
+         "read_by": "text_layer",
+         "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+        },
+        "t_max_k": 400.3,
+        "t_min_k": 239.4
+       }
+      ],
+      "status": "held"
+     },
+     "vapour_heat_capacity_j_mol_k": {
+      "as_printed": "498.10 J/kg*K (no temperature printed)",
+      "conversion": "per mole = per kilogram × WMS (kg/mol), the molecular weight the same SLAB input prints (WMS 0.070906 kg/mol)",
+      "derived_from": [
+       "WMS = 0.070906"
+      ],
+      "reason": null,
+      "receipt": {
+       "doc_id": "epa-slab-users-guide-1990",
+       "locator": "epa-slab-users-guide-1990#p136",
+       "page": 136,
+       "quote": "CPS = 498.10",
+       "read_by": "rendered_page",
+       "sha256": "2ce0e7b775ee20972fdc6e751e6cbb109d6d881ab0a46c9ab18ccbe6e655503d"
+      },
+      "source_tier": "model-test-input",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "J/mol/K",
+      "value": 35.3182786,
+      "value_range": null
+     },
+     "vapour_heat_capacity_shomate": {
+      "form": "Cp° = A + B*t + C*t2 + D*t3 + E/t2; Cp = heat capacity (J/mol*K); t = temperature (K) / 1000.",
+      "reason": null,
+      "rows": [
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p65",
+           "page": 65,
+           "quote": "33.05060",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 33.0506
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p65",
+           "page": 65,
+           "quote": "12.22940",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 12.2294
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p65",
+           "page": 65,
+           "quote": "-12.06510",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": -12.0651
+         },
+         "D": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p65",
+           "page": 65,
+           "quote": "4.385330",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 4.38533
+         },
+         "E": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1017",
+           "locator": "nist-webbook-1017#p65",
+           "page": 65,
+           "quote": "-0.159494",
+           "read_by": "text_layer",
+           "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": -0.159494
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1017",
+         "locator": "nist-webbook-1017#p65",
+         "page": 65,
+         "quote": "298. to 1000.",
+         "read_by": "text_layer",
+         "sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+        },
+        "t_max_k": 1000.0,
+        "t_min_k": 298.0
+       }
+      ],
+      "status": "held"
+     },
+     "vapour_pressure_as_printed": {
+      "as_printed": "7600 mmHg at 86 °F",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-2862",
+       "locator": "cameo-chem-2862#p117",
+       "page": 117,
+       "quote": "Vapor Pressure: 7600 mmHg at 86°F (EPA, 1998)",
+       "read_by": "text_layer",
+       "sha256": "c601eae3a31c0f2db6a348a7de40cd430caab810de0bd20ad7d514d891ecc4a7"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 303.15,
+      "unit": "mmHg",
+      "value": 7600.0,
+      "value_range": null
+     }
+    },
+    "un": "1017"
+   },
+   "1075": {
+    "aegl_ppm": null,
+    "aegl_reason": "not drawn to an AEGL: the flammable class (DN-018 section 3)",
+    "aegl_status": null,
+    "cross_checks": [
+     {
+      "field": "LFL as printed",
+      "status": "single_source",
+      "values": {
+       "cameo-chem-987": "Propane: 2.2 %; butane: 1.8 %"
+      }
+     }
+    ],
+    "dense_gas_caveat": false,
+    "dispersion_class": "flammable",
+    "guide": "115",
+    "levels_of_concern": [
+     {
+      "basis": "flammable gas or liquid: a fraction of the lower flammability limit, the fraction and its reason as ALOHA's technical documentation states them (concentration averaging), applied to the pack's LFL; a flammable-cloud footprint, not a toxic one",
+      "components": {
+       "fraction": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "noaa-aloha-technical-documentation",
+         "locator": "noaa-aloha-technical-documentation#p90",
+         "page": 90,
+         "quote": "the choice was made to use 60% of the lower flammability limit as the level of concern in defining this threat zone. This value reflects the fact that the concentration calculation in ALOHA involves some time averaging.",
+         "read_by": "text_layer",
+         "sha256": "2f7663950899c948d1a8ca6ef2e36b31b9d78f6d955b6271bd411d4d0d638c9a"
+        },
+        "status": "held",
+        "unit": "% of LFL",
+        "value": 60.0
+       },
+       "lfl": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "epa-aegl-compiled-2018",
+         "locator": "epa-aegl-compiled-2018#p10",
+         "page": 10,
+         "quote": "Lower Explosive Limit (LEL) = 23,000 ppm",
+         "read_by": "text_layer",
+         "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+        },
+        "status": "held",
+        "unit": "vol %",
+        "value": 2.3
+       }
+      },
+      "kind": "lfl_fraction",
+      "proxy_for": "UN1075",
+      "unit": "vol %",
+      "values": {
+       "any": {
+        "derived_from": [
+         "lfl",
+         "fraction"
+        ],
+        "reason": null,
+        "receipt": null,
+        "status": "held",
+        "unit": "vol %",
+        "value": 1.38
+       }
+      }
+     }
+    ],
+    "lfl_vol_pct": {
+     "derived_from": [],
+     "reason": "a mixture: no held source states one LFL for it",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "vol %",
+     "value": null
+    },
+    "molecular_weight_g_mol": {
+     "derived_from": [],
+     "reason": "mixture; no held molecular weight (CAMEO prints only \"greater than 44\")",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "g/mol",
+     "value": null
+    },
+    "name": "LIQUEFIED PETROLEUM GAS",
+    "oxygen_deficiency_threshold_vol_pct": {
+     "derived_from": [],
+     "reason": "not drawn to an oxygen threshold: the flammable class (DN-018 section 3)",
+     "receipt": null,
+     "status": "not_applicable",
+     "unit": "vol %",
+     "value": null
+    },
+    "thermodynamics": {
+     "critical_pressure_bar": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1978",
+       "locator": "nist-webbook-1978#p93",
+       "page": 93,
+       "quote": "42.5 ± 0.1 | bar",
+       "read_by": "text_layer",
+       "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "bar",
+      "value": 42.5,
+      "value_range": null
+     },
+     "critical_temperature_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1978",
+       "locator": "nist-webbook-1978#p91",
+       "page": 91,
+       "quote": "369.9 ± 0.2 | K",
+       "read_by": "text_layer",
+       "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 369.9,
+      "value_range": null
+     },
+     "cross_checks": [
+      {
+       "field": "normal boiling point (K)",
+       "status": "agree",
+       "values": {
+        "cameo-chem-9018": "231.04 K (-43.8 °F)",
+        "nist-webbook-1978 (N/A, p78)": "231.1 K ± 0.2"
+       }
+      },
+      {
+       "field": "critical temperature (K)",
+       "status": "single_source",
+       "values": {
+        "nist-webbook-1978 (N/A, p91)": "369.9 K ± 0.2"
+       }
+      },
+      {
+       "field": "critical pressure (bar)",
+       "status": "single_source",
+       "values": {
+        "nist-webbook-1978 (N/A, p93)": "42.5 bar ± 0.1"
+       }
+      }
+     ],
+     "heat_of_vaporization_j_mol": {
+      "as_printed": "18.774 kJ/mol at 231.04 K",
+      "conversion": "1 kJ/mol = 1000 J/mol (the SI prefix kilo)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1978",
+       "locator": "nist-webbook-1978#p103",
+       "page": 103,
+       "quote": "18.774 | 231.04",
+       "read_by": "text_layer",
+       "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 231.04,
+      "unit": "J/mol",
+      "value": 18774.0,
+      "value_range": null
+     },
+     "liquid_density_kg_m3": {
+      "as_printed": "580.92 kg/m3 at 231.00 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1978",
+       "locator": "nist-fluid-saturation-1978#p1",
+       "page": 1,
+       "quote": "231.00 1.0116 580.92 0.0017214 4.4140 4.4217 26.753 63.770 99.033 1161.1 -0.041290 196.46 0.12921 0.015677 2.4126 0.41450 21.341 23.190 108.00 53.668 63.507 218.39 3.7644 6.2817 0.011565",
+       "read_by": "text_layer",
+       "sha256": "d17236337eea2ee27139e0b3a3602dfc1136b41cee312c6062a049584dfe15cb"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 231.0,
+      "unit": "kg/m3",
+      "value": 580.92,
+      "value_range": null
+     },
+     "liquid_heat_capacity_j_mol_k": {
+      "as_printed": "99.033 J/mol*K at 231.00 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1978",
+       "locator": "nist-fluid-saturation-1978#p1",
+       "page": 1,
+       "quote": "231.00 1.0116 580.92 0.0017214 4.4140 4.4217 26.753 63.770 99.033 1161.1 -0.041290 196.46 0.12921 0.015677 2.4126 0.41450 21.341 23.190 108.00 53.668 63.507 218.39 3.7644 6.2817 0.011565",
+       "read_by": "text_layer",
+       "sha256": "d17236337eea2ee27139e0b3a3602dfc1136b41cee312c6062a049584dfe15cb"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 231.0,
+      "unit": "J/mol/K",
+      "value": 99.033,
+      "value_range": null
+     },
+     "liquid_specific_gravity": {
+      "as_printed": "0.59 1 (relative to water) at -58 °F",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-9018",
+       "locator": "cameo-chem-9018#p98",
+       "page": 98,
+       "quote": "Specific Gravity: 0.59 at -58°F (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "a5a30579fb24e0f07be58c92823da93f2a3f2a6b74f0070f48ff599eb1311e2f"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 223.15,
+      "unit": "1 (relative to water)",
+      "value": 0.59,
+      "value_range": null
+     },
+     "missing": [],
+     "molecular_weight_g_mol": {
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1978",
+       "locator": "nist-webbook-1978#p22",
+       "page": 22,
+       "quote": "44.0956",
+       "read_by": "text_layer",
+       "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+      },
+      "status": "held",
+      "unit": "g/mol",
+      "value": 44.0956
+     },
+     "normal_boiling_point_k": {
+      "as_printed": "-43.8 °F at 760 mmHg",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-9018",
+       "locator": "cameo-chem-9018#p99",
+       "page": 99,
+       "quote": "Boiling Point: -43.8°F at 760 mmHg (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "a5a30579fb24e0f07be58c92823da93f2a3f2a6b74f0070f48ff599eb1311e2f"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 231.0388888889,
+      "value_range": null
+     },
+     "proxy": {
+      "label": "propane properties used for LPG",
+      "properties_of": "UN1978",
+      "proxy_for": "UN1075",
+      "receipt": {
+       "doc_id": "cameo-chem-987",
+       "locator": "cameo-chem-987#p21",
+       "page": 21,
+       "quote": "A mixture of butane, isobutane, propane, propylene, butylenes and other hydrocarbons of low molecular weight that is refined from petroleum.",
+       "read_by": "text_layer",
+       "sha256": "47ecfe15ad224a131937332f85444923e0df80490027ee758c7e0746f3293b04"
+      }
+     },
+     "saturation_pressure_antoine": {
+      "form": "log10(P) = A − (B / (T + C)); P = vapor pressure (bar); T = temperature (K)",
+      "reason": null,
+      "rows": [
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "277.6 to 360.8 | 4.53678 | 1149.36 | 24.906",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 4.53678
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "277.6 to 360.8 | 4.53678 | 1149.36 | 24.906",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 1149.36
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "277.6 to 360.8 | 4.53678 | 1149.36 | 24.906",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 24.906
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1978",
+         "locator": "nist-webbook-1978#p116",
+         "page": 116,
+         "quote": "277.6 to 360.8 | 4.53678 | 1149.36 | 24.906",
+         "read_by": "text_layer",
+         "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+        },
+        "t_max_k": 360.8,
+        "t_min_k": 277.6
+       },
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "230.6 to 320.7 | 3.98292 | 819.296 | -24.417",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 3.98292
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "230.6 to 320.7 | 3.98292 | 819.296 | -24.417",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 819.296
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "230.6 to 320.7 | 3.98292 | 819.296 | -24.417",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -24.417
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1978",
+         "locator": "nist-webbook-1978#p116",
+         "page": 116,
+         "quote": "230.6 to 320.7 | 3.98292 | 819.296 | -24.417",
+         "read_by": "text_layer",
+         "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+        },
+        "t_max_k": 320.7,
+        "t_min_k": 230.6
+       },
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "166.02 to 231.41 | 4.01158 | 834.26 | -22.763",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 4.01158
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "166.02 to 231.41 | 4.01158 | 834.26 | -22.763",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 834.26
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "166.02 to 231.41 | 4.01158 | 834.26 | -22.763",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -22.763
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1978",
+         "locator": "nist-webbook-1978#p116",
+         "page": 116,
+         "quote": "166.02 to 231.41 | 4.01158 | 834.26 | -22.763",
+         "read_by": "text_layer",
+         "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+        },
+        "t_max_k": 231.41,
+        "t_min_k": 166.02
+       }
+      ],
+      "status": "held"
+     },
+     "vapour_heat_capacity_j_mol_k": {
+      "as_printed": "59.29 J/mol*K at 219.2 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1978",
+       "locator": "nist-webbook-1978#p68",
+       "page": 68,
+       "quote": "59.29 | 219.2",
+       "read_by": "text_layer",
+       "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 219.2,
+      "unit": "J/mol/K",
+      "value": 59.29,
+      "value_range": null
+     },
+     "vapour_heat_capacity_shomate": {
+      "form": "Cp° = A + B*t + C*t2 + D*t3 + E/t2; Cp = heat capacity (J/mol*K); t = temperature (K) / 1000.",
+      "reason": "the held NIST page prints no Shomate correlation for this species",
+      "rows": [],
+      "status": "not_held"
+     },
+     "vapour_pressure_as_printed": {
+      "as_printed": "9823 mmHg",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-9018",
+       "locator": "cameo-chem-9018#p96",
+       "page": 96,
+       "quote": "Vapor Pressure: 9823 mmHg (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "a5a30579fb24e0f07be58c92823da93f2a3f2a6b74f0070f48ff599eb1311e2f"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "mmHg",
+      "value": 9823.0,
+      "value_range": null
+     }
+    },
+    "un": "1075"
+   },
+   "1202": {
+    "aegl_ppm": null,
+    "aegl_reason": "not drawn to an AEGL: the flammable class (DN-018 section 3)",
+    "aegl_status": null,
+    "cross_checks": [
+     {
+      "field": "LFL (vol %)",
+      "status": "single_source",
+      "values": {
+       "cameo-chem-11452": "1.3"
+      }
+     }
+    ],
+    "dense_gas_caveat": false,
+    "dispersion_class": "flammable",
+    "guide": "128",
+    "levels_of_concern": [
+     {
+      "basis": "flammable gas or liquid: a fraction of the lower flammability limit, the fraction and its reason as ALOHA's technical documentation states them (concentration averaging), applied to the pack's LFL; a flammable-cloud footprint, not a toxic one",
+      "components": {
+       "fraction": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "noaa-aloha-technical-documentation",
+         "locator": "noaa-aloha-technical-documentation#p90",
+         "page": 90,
+         "quote": "the choice was made to use 60% of the lower flammability limit as the level of concern in defining this threat zone. This value reflects the fact that the concentration calculation in ALOHA involves some time averaging.",
+         "read_by": "text_layer",
+         "sha256": "2f7663950899c948d1a8ca6ef2e36b31b9d78f6d955b6271bd411d4d0d638c9a"
+        },
+        "status": "held",
+        "unit": "% of LFL",
+        "value": 60.0
+       },
+       "lfl": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "cameo-chem-11452",
+         "locator": "cameo-chem-11452#p88",
+         "page": 88,
+         "quote": "Lower Explosive Limit (LEL): 1.3 %",
+         "read_by": "text_layer",
+         "sha256": "ddc74f59bf82ec0ae09649e28c72c9ef9cf47b45b013370d6522cb63bd615a07"
+        },
+        "status": "held",
+        "unit": "vol %",
+        "value": 1.3
+       }
+      },
+      "kind": "lfl_fraction",
+      "proxy_for": null,
+      "unit": "vol %",
+      "values": {
+       "any": {
+        "derived_from": [
+         "lfl",
+         "fraction"
+        ],
+        "reason": null,
+        "receipt": null,
+        "status": "held",
+        "unit": "vol %",
+        "value": 0.78
+       }
+      }
+     }
+    ],
+    "lfl_vol_pct": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "cameo-chem-11452",
+      "locator": "cameo-chem-11452#p88",
+      "page": 88,
+      "quote": "Lower Explosive Limit (LEL): 1.3 %",
+      "read_by": "text_layer",
+      "sha256": "ddc74f59bf82ec0ae09649e28c72c9ef9cf47b45b013370d6522cb63bd615a07"
+     },
+     "status": "held",
+     "unit": "vol %",
+     "value": 1.3
+    },
+    "molecular_weight_g_mol": {
+     "derived_from": [],
+     "reason": "mixture; no held molecular weight (CAMEO prints \"data unavailable\")",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "g/mol",
+     "value": null
+    },
+    "name": "FUEL OIL, [DIESEL]",
+    "oxygen_deficiency_threshold_vol_pct": {
+     "derived_from": [],
+     "reason": "not drawn to an oxygen threshold: the flammable class (DN-018 section 3)",
+     "receipt": null,
+     "status": "not_applicable",
+     "unit": "vol %",
+     "value": null
+    },
+    "thermodynamics": {
+     "critical_pressure_bar": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "bar",
+      "value": null,
+      "value_range": null
+     },
+     "critical_temperature_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": null,
+      "value_range": null
+     },
+     "cross_checks": [],
+     "heat_of_vaporization_j_mol": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "J/mol",
+      "value": null,
+      "value_range": null
+     },
+     "liquid_density_kg_m3": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "CAMEO prints the specific gravity (liquid_specific_gravity); the density of the reference water is printed on no held page (NIOSH's guide defines Sp.Gr. against water at 4 °C and prints no density), so kg/m3 is not computed; the NIST WebBook lists pure species, not this mixture (HB-124)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "kg/m3",
+      "value": null,
+      "value_range": null
+     },
+     "liquid_heat_capacity_j_mol_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "no held page prints it: the CAMEO datasheet has no heat-capacity field, and the NIST WebBook (species and Fluid Systems pages) lists pure species, not this mixture; a pseudo-component treatment is a design-note question (HB-124)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "J/mol/K",
+      "value": null,
+      "value_range": null
+     },
+     "liquid_specific_gravity": {
+      "as_printed": "0.841 1 (relative to water) at 60.8 °F",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-11452",
+       "locator": "cameo-chem-11452#p94",
+       "page": 94,
+       "quote": "Specific Gravity: 0.841 at 60.8°F (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "ddc74f59bf82ec0ae09649e28c72c9ef9cf47b45b013370d6522cb63bd615a07"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 289.15,
+      "unit": "1 (relative to water)",
+      "value": 0.841,
+      "value_range": null
+     },
+     "missing": [
+      "molecular_weight_g_mol",
+      "heat_of_vaporization_j_mol",
+      "liquid_heat_capacity_j_mol_k",
+      "vapour_heat_capacity",
+      "liquid_density_kg_m3",
+      "saturation_pressure_antoine"
+     ],
+     "molecular_weight_g_mol": {
+      "derived_from": [],
+      "reason": "mixture; no held molecular weight (CAMEO prints \"data unavailable\")",
+      "receipt": null,
+      "status": "not_held",
+      "unit": "g/mol",
+      "value": null
+     },
+     "normal_boiling_point_k": {
+      "as_printed": "540 to 640 °F at 760 mmHg",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-11452",
+       "locator": "cameo-chem-11452#p95",
+       "page": 95,
+       "quote": "Boiling Point: 540 to 640°F at 760 mmHg (NTP, 1992)",
+       "read_by": "text_layer",
+       "sha256": "ddc74f59bf82ec0ae09649e28c72c9ef9cf47b45b013370d6522cb63bd615a07"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": null,
+      "value_range": [
+       555.3722222222,
+       610.9277777778
+      ]
+     },
+     "proxy": null,
+     "saturation_pressure_antoine": {
+      "form": "log10(P) = A − (B / (T + C)); P = vapor pressure (bar); T = temperature (K)",
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "rows": [],
+      "status": "not_held"
+     },
+     "vapour_heat_capacity_j_mol_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "J/mol/K",
+      "value": null,
+      "value_range": null
+     },
+     "vapour_heat_capacity_shomate": {
+      "form": "Cp° = A + B*t + C*t2 + D*t3 + E/t2; Cp = heat capacity (J/mol*K); t = temperature (K) / 1000.",
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "rows": [],
+      "status": "not_held"
+     },
+     "vapour_pressure_as_printed": {
+      "as_printed": "2.17 mmHg at 70 °F",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-11452",
+       "locator": "cameo-chem-11452#p92",
+       "page": 92,
+       "quote": "Vapor Pressure: 2.17 mmHg at 70°F (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "ddc74f59bf82ec0ae09649e28c72c9ef9cf47b45b013370d6522cb63bd615a07"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 294.2611111111,
+      "unit": "mmHg",
+      "value": 2.17,
+      "value_range": null
+     }
+    },
+    "un": "1202"
+   },
+   "1203": {
+    "aegl_ppm": null,
+    "aegl_reason": "not drawn to an AEGL: the flammable class (DN-018 section 3)",
+    "aegl_status": null,
+    "cross_checks": [
+     {
+      "field": "molecular weight (g/mol)",
+      "status": "disputed",
+      "values": {
+       "aegl-tsd-gasoline-proposed": "73",
+       "cameo-chem-11498": "110"
+      }
+     },
+     {
+      "field": "mg/m3 per ppm at 25 C and 1 atm",
+      "status": "agree",
+      "values": {
+       "aegl-tsd-gasoline-proposed": "2.99",
+       "molecular weight / molar volume": "2.9854"
+      }
+     },
+     {
+      "field": "LFL (vol %)",
+      "status": "disputed",
+      "values": {
+       "cameo-chem-11498": "1.4",
+       "epa-aegl-compiled-2018": "1.1"
+      }
+     }
+    ],
+    "dense_gas_caveat": false,
+    "dispersion_class": "flammable",
+    "guide": "128",
+    "levels_of_concern": [
+     {
+      "basis": "flammable gas or liquid: a fraction of the lower flammability limit, the fraction and its reason as ALOHA's technical documentation states them (concentration averaging), applied to the pack's LFL; a flammable-cloud footprint, not a toxic one",
+      "components": {
+       "fraction": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "noaa-aloha-technical-documentation",
+         "locator": "noaa-aloha-technical-documentation#p90",
+         "page": 90,
+         "quote": "the choice was made to use 60% of the lower flammability limit as the level of concern in defining this threat zone. This value reflects the fact that the concentration calculation in ALOHA involves some time averaging.",
+         "read_by": "text_layer",
+         "sha256": "2f7663950899c948d1a8ca6ef2e36b31b9d78f6d955b6271bd411d4d0d638c9a"
+        },
+        "status": "held",
+        "unit": "% of LFL",
+        "value": 60.0
+       },
+       "lfl": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "epa-aegl-compiled-2018",
+         "locator": "epa-aegl-compiled-2018#p72",
+         "page": 72,
+         "quote": "Lower Explosive Limit (LEL) = 11,000 ppm",
+         "read_by": "text_layer",
+         "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+        },
+        "status": "held",
+        "unit": "vol %",
+        "value": 1.1
+       }
+      },
+      "kind": "lfl_fraction",
+      "proxy_for": null,
+      "unit": "vol %",
+      "values": {
+       "any": {
+        "derived_from": [
+         "lfl",
+         "fraction"
+        ],
+        "reason": null,
+        "receipt": null,
+        "status": "held",
+        "unit": "vol %",
+        "value": 0.66
+       }
+      }
+     }
+    ],
+    "lfl_vol_pct": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "epa-aegl-compiled-2018",
+      "locator": "epa-aegl-compiled-2018#p72",
+      "page": 72,
+      "quote": "Lower Explosive Limit (LEL) = 11,000 ppm",
+      "read_by": "text_layer",
+      "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+     },
+     "status": "held",
+     "unit": "vol %",
+     "value": 1.1
+    },
+    "molecular_weight_g_mol": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "aegl-tsd-gasoline-proposed",
+      "locator": "aegl-tsd-gasoline-proposed#p9",
+      "page": 9,
+      "quote": "Calculated (based on average molecular weights of 108 and 73, respectively)",
+      "read_by": "text_layer",
+      "sha256": "f901eeb0ac6a342abbfb317fdd60a65c9a2ad2f9ffae535f790d3580edf78ef5"
+     },
+     "status": "held",
+     "unit": "g/mol",
+     "value": 73.0
+    },
+    "name": "GASOLINE",
+    "oxygen_deficiency_threshold_vol_pct": {
+     "derived_from": [],
+     "reason": "not drawn to an oxygen threshold: the flammable class (DN-018 section 3)",
+     "receipt": null,
+     "status": "not_applicable",
+     "unit": "vol %",
+     "value": null
+    },
+    "thermodynamics": {
+     "critical_pressure_bar": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "bar",
+      "value": null,
+      "value_range": null
+     },
+     "critical_temperature_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": null,
+      "value_range": null
+     },
+     "cross_checks": [],
+     "heat_of_vaporization_j_mol": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "J/mol",
+      "value": null,
+      "value_range": null
+     },
+     "liquid_density_kg_m3": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "CAMEO prints the specific gravity (liquid_specific_gravity); the density of the reference water is printed on no held page (NIOSH's guide defines Sp.Gr. against water at 4 °C and prints no density), so kg/m3 is not computed; the NIST WebBook lists pure species, not this mixture (HB-124)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "kg/m3",
+      "value": null,
+      "value_range": null
+     },
+     "liquid_heat_capacity_j_mol_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "no held page prints it: the CAMEO datasheet has no heat-capacity field, and the NIST WebBook (species and Fluid Systems pages) lists pure species, not this mixture; a pseudo-component treatment is a design-note question (HB-124)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "J/mol/K",
+      "value": null,
+      "value_range": null
+     },
+     "liquid_specific_gravity": {
+      "as_printed": "0.7321 1 (relative to water) at 68 °F",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-11498",
+       "locator": "cameo-chem-11498#p103",
+       "page": 103,
+       "quote": "Specific Gravity: 0.7321 at 68°F (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "b15e39c04d8e5380dcffc3791d46a7fd8e23c7c6eddcb24f553493e2840be988"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 293.15,
+      "unit": "1 (relative to water)",
+      "value": 0.7321,
+      "value_range": null
+     },
+     "missing": [
+      "heat_of_vaporization_j_mol",
+      "liquid_heat_capacity_j_mol_k",
+      "vapour_heat_capacity",
+      "liquid_density_kg_m3",
+      "saturation_pressure_antoine"
+     ],
+     "molecular_weight_g_mol": {
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "aegl-tsd-gasoline-proposed",
+       "locator": "aegl-tsd-gasoline-proposed#p9",
+       "page": 9,
+       "quote": "Calculated (based on average molecular weights of 108 and 73, respectively)",
+       "read_by": "text_layer",
+       "sha256": "f901eeb0ac6a342abbfb317fdd60a65c9a2ad2f9ffae535f790d3580edf78ef5"
+      },
+      "status": "held",
+      "unit": "g/mol",
+      "value": 73.0
+     },
+     "normal_boiling_point_k": {
+      "as_printed": "140 to 390 °F at 760 mmHg",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-11498",
+       "locator": "cameo-chem-11498#p104",
+       "page": 104,
+       "quote": "Boiling Point: 140 to 390°F at 760 mmHg (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "b15e39c04d8e5380dcffc3791d46a7fd8e23c7c6eddcb24f553493e2840be988"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": null,
+      "value_range": [
+       333.15,
+       472.0388888889
+      ]
+     },
+     "proxy": null,
+     "saturation_pressure_antoine": {
+      "form": "log10(P) = A − (B / (T + C)); P = vapor pressure (bar); T = temperature (K)",
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "rows": [],
+      "status": "not_held"
+     },
+     "vapour_heat_capacity_j_mol_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "J/mol/K",
+      "value": null,
+      "value_range": null
+     },
+     "vapour_heat_capacity_shomate": {
+      "form": "Cp° = A + B*t + C*t2 + D*t3 + E/t2; Cp = heat capacity (J/mol*K); t = temperature (K) / 1000.",
+      "reason": "no NIST WebBook page is held for this material (a mixture: the WebBook lists pure species)",
+      "rows": [],
+      "status": "not_held"
+     },
+     "vapour_pressure_as_printed": {
+      "as_printed": "382.58 mmHg",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-11498",
+       "locator": "cameo-chem-11498#p101",
+       "page": 101,
+       "quote": "Vapor Pressure: 382.58 mmHg (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "b15e39c04d8e5380dcffc3791d46a7fd8e23c7c6eddcb24f553493e2840be988"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "mmHg",
+      "value": 382.58,
+      "value_range": null
+     }
+    },
+    "un": "1203"
+   },
+   "1951": {
+    "aegl_ppm": null,
+    "aegl_reason": "not drawn to an AEGL: the cryogenic_asphyxiant class (DN-018 section 3)",
+    "aegl_status": null,
+    "cross_checks": [
+     {
+      "field": "molecular weight (g/mol)",
+      "status": "single_source",
+      "values": {
+       "cameo-chem-2509": null,
+       "nist-webbook-1951": "39.948"
+      }
+     }
+    ],
+    "dense_gas_caveat": true,
+    "dispersion_class": "cryogenic_asphyxiant",
+    "guide": "120",
+    "levels_of_concern": [
+     {
+      "basis": "cryogenic asphyxiant: the oxygen-deficient atmosphere threshold the pack carries (29 CFR 1910.134(b))",
+      "components": {},
+      "kind": "oxygen_deficiency",
+      "proxy_for": null,
+      "unit": "vol % oxygen",
+      "values": {
+       "any": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "cfr-1910-134",
+         "locator": "cfr-1910-134#p28",
+         "page": 28,
+         "quote": "Oxygen deficient atmosphere means an atmosphere with an oxygen content below 19.5% by volume",
+         "read_by": "text_layer",
+         "sha256": "e5551bf2572a09843c93ff6c4db0e9aeac10ec99bd7694eceb5cf849dfef0904"
+        },
+        "status": "held",
+        "unit": "vol %",
+        "value": 19.5
+       }
+      }
+     }
+    ],
+    "lfl_vol_pct": {
+     "derived_from": [],
+     "reason": "not drawn to an LFL: the cryogenic_asphyxiant class (DN-018 section 3)",
+     "receipt": null,
+     "status": "not_applicable",
+     "unit": "vol %",
+     "value": null
+    },
+    "molecular_weight_g_mol": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "nist-webbook-1951",
+      "locator": "nist-webbook-1951#p22",
+      "page": 22,
+      "quote": "39.948",
+      "read_by": "text_layer",
+      "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+     },
+     "status": "held",
+     "unit": "g/mol",
+     "value": 39.948
+    },
+    "name": "ARGON, REFRIGERATED LIQUID (CRYOGENIC LIQUID)",
+    "oxygen_deficiency_threshold_vol_pct": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "cfr-1910-134",
+      "locator": "cfr-1910-134#p28",
+      "page": 28,
+      "quote": "Oxygen deficient atmosphere means an atmosphere with an oxygen content below 19.5% by volume",
+      "read_by": "text_layer",
+      "sha256": "e5551bf2572a09843c93ff6c4db0e9aeac10ec99bd7694eceb5cf849dfef0904"
+     },
+     "status": "held",
+     "unit": "vol %",
+     "value": 19.5
+    },
+    "thermodynamics": {
+     "critical_pressure_bar": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "the held page prints 3 rows (4.8979 bar ± 0.002, 48.9805 bar ± 0.1013, 48.5549 bar ± 0.0709) and no two agree within their stated uncertainties",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "bar",
+      "value": null,
+      "value_range": null
+     },
+     "critical_temperature_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1951",
+       "locator": "nist-webbook-1951#p97",
+       "page": 97,
+       "quote": "150.86 | K",
+       "read_by": "text_layer",
+       "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 150.86,
+      "value_range": null
+     },
+     "cross_checks": [
+      {
+       "field": "normal boiling point (K)",
+       "status": "agree",
+       "values": {
+        "nist-webbook-1951 (Gosman, McCarty, et al., 1969, p83)": "87.28 K ± 0.02",
+        "nist-webbook-1951 (Streng, 1971, p82)": "87.5 K ± 0.3"
+       }
+      },
+      {
+       "field": "critical temperature (K)",
+       "status": "disputed",
+       "values": {
+        "nist-webbook-1951 (Angus, Armstrong, et al., 1972, p97)": "150.86 K ± 0.1",
+        "nist-webbook-1951 (Gosman, McCarty, et al., 1969, p98)": "150.86 K ± 0.1",
+        "nist-webbook-1951 (McCain and Ziegler, 1967, p99)": "150.65 K ± 0.03"
+       }
+      },
+      {
+       "field": "critical pressure (bar)",
+       "status": "disputed",
+       "values": {
+        "nist-webbook-1951 (Angus, Armstrong, et al., 1972, p101)": "4.8979 bar ± 0.002",
+        "nist-webbook-1951 (Gosman, McCarty, et al., 1969, p102)": "48.9805 bar ± 0.1013",
+        "nist-webbook-1951 (McCain and Ziegler, 1967, p103)": "48.5549 bar ± 0.0709"
+       }
+      }
+     ],
+     "heat_of_vaporization_j_mol": {
+      "as_printed": "h(v) 1.7380 kJ/mol, h(l) -4.7082 kJ/mol at 87.000 K",
+      "conversion": "ΔvapH = h(v) − h(l), the saturated vapour and liquid molar enthalpies printed in one row (the definition of the enthalpy of vaporisation); 1 kJ/mol = 1000 J/mol (the SI prefix kilo)",
+      "derived_from": [
+       "Enthalpy (v, kJ/mol)",
+       "Enthalpy (l, kJ/mol)"
+      ],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1951",
+       "locator": "nist-fluid-saturation-1951#p1",
+       "page": 1,
+       "quote": "87.000 0.98131 1397.3 0.00071569 -4.7110 -4.7082 54.774 21.461 44.620 840.43 -0.039386 262.70 0.12896 0.012609 5.6065 0.17836 1.0388 1.7380 128.87 13.092 22.563 170.64 3.3127 7.1414 0.0056006",
+       "read_by": "text_layer",
+       "sha256": "fa3a07e645d9859b86dddcd093ac78393c8d1a1e1adfe8964306d319fbbbea78"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 87.0,
+      "unit": "J/mol",
+      "value": 6446.2,
+      "value_range": null
+     },
+     "liquid_density_kg_m3": {
+      "as_printed": "1397.3 kg/m3 at 87.000 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1951",
+       "locator": "nist-fluid-saturation-1951#p1",
+       "page": 1,
+       "quote": "87.000 0.98131 1397.3 0.00071569 -4.7110 -4.7082 54.774 21.461 44.620 840.43 -0.039386 262.70 0.12896 0.012609 5.6065 0.17836 1.0388 1.7380 128.87 13.092 22.563 170.64 3.3127 7.1414 0.0056006",
+       "read_by": "text_layer",
+       "sha256": "fa3a07e645d9859b86dddcd093ac78393c8d1a1e1adfe8964306d319fbbbea78"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 87.0,
+      "unit": "kg/m3",
+      "value": 1397.3,
+      "value_range": null
+     },
+     "liquid_heat_capacity_j_mol_k": {
+      "as_printed": "44.620 J/mol*K at 87.000 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1951",
+       "locator": "nist-fluid-saturation-1951#p1",
+       "page": 1,
+       "quote": "87.000 0.98131 1397.3 0.00071569 -4.7110 -4.7082 54.774 21.461 44.620 840.43 -0.039386 262.70 0.12896 0.012609 5.6065 0.17836 1.0388 1.7380 128.87 13.092 22.563 170.64 3.3127 7.1414 0.0056006",
+       "read_by": "text_layer",
+       "sha256": "fa3a07e645d9859b86dddcd093ac78393c8d1a1e1adfe8964306d319fbbbea78"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 87.0,
+      "unit": "J/mol/K",
+      "value": 44.62,
+      "value_range": null
+     },
+     "liquid_specific_gravity": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "the CAMEO datasheet prints \"data unavailable\"",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "1 (relative to water)",
+      "value": null,
+      "value_range": null
+     },
+     "missing": [],
+     "molecular_weight_g_mol": {
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1951",
+       "locator": "nist-webbook-1951#p22",
+       "page": 22,
+       "quote": "39.948",
+       "read_by": "text_layer",
+       "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+      },
+      "status": "held",
+      "unit": "g/mol",
+      "value": 39.948
+     },
+     "normal_boiling_point_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1951",
+       "locator": "nist-webbook-1951#p82",
+       "page": 82,
+       "quote": "87.5 | K",
+       "read_by": "text_layer",
+       "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 87.5,
+      "value_range": null
+     },
+     "proxy": null,
+     "saturation_pressure_antoine": {
+      "form": "log10(P) = A − (B / (T + C)); P = vapor pressure (bar); T = temperature (K)",
+      "reason": null,
+      "rows": [
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "114.40 to 150.31 | 4.46903 | 481.012 | 22.156",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 4.46903
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "114.40 to 150.31 | 4.46903 | 481.012 | 22.156",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 481.012
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "114.40 to 150.31 | 4.46903 | 481.012 | 22.156",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 22.156
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1951",
+         "locator": "nist-webbook-1951#p112",
+         "page": 112,
+         "quote": "114.40 to 150.31 | 4.46903 | 481.012 | 22.156",
+         "read_by": "text_layer",
+         "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+        },
+        "t_max_k": 150.31,
+        "t_min_k": 114.4
+       },
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "83.78 to 150.72 | 3.29555 | 215.24 | -22.233",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 3.29555
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "83.78 to 150.72 | 3.29555 | 215.24 | -22.233",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 215.24
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "83.78 to 150.72 | 3.29555 | 215.24 | -22.233",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -22.233
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1951",
+         "locator": "nist-webbook-1951#p112",
+         "page": 112,
+         "quote": "83.78 to 150.72 | 3.29555 | 215.24 | -22.233",
+         "read_by": "text_layer",
+         "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+        },
+        "t_max_k": 150.72,
+        "t_min_k": 83.78
+       },
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "129.33 to 147.40 | 4.97171 | 658.982 | 49.819",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 4.97171
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "129.33 to 147.40 | 4.97171 | 658.982 | 49.819",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 658.982
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "129.33 to 147.40 | 4.97171 | 658.982 | 49.819",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 49.819
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1951",
+         "locator": "nist-webbook-1951#p112",
+         "page": 112,
+         "quote": "129.33 to 147.40 | 4.97171 | 658.982 | 49.819",
+         "read_by": "text_layer",
+         "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+        },
+        "t_max_k": 147.4,
+        "t_min_k": 129.33
+       },
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "90.94 to 101.48 | 3.73479 | 302.683 | -6.083",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 3.73479
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "90.94 to 101.48 | 3.73479 | 302.683 | -6.083",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 302.683
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p112",
+           "page": 112,
+           "quote": "90.94 to 101.48 | 3.73479 | 302.683 | -6.083",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -6.083
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1951",
+         "locator": "nist-webbook-1951#p112",
+         "page": 112,
+         "quote": "90.94 to 101.48 | 3.73479 | 302.683 | -6.083",
+         "read_by": "text_layer",
+         "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+        },
+        "t_max_k": 101.48,
+        "t_min_k": 90.94
+       }
+      ],
+      "status": "held"
+     },
+     "vapour_heat_capacity_j_mol_k": {
+      "as_printed": "22.563 J/mol*K at 87.000 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1951",
+       "locator": "nist-fluid-saturation-1951#p1",
+       "page": 1,
+       "quote": "87.000 0.98131 1397.3 0.00071569 -4.7110 -4.7082 54.774 21.461 44.620 840.43 -0.039386 262.70 0.12896 0.012609 5.6065 0.17836 1.0388 1.7380 128.87 13.092 22.563 170.64 3.3127 7.1414 0.0056006",
+       "read_by": "text_layer",
+       "sha256": "fa3a07e645d9859b86dddcd093ac78393c8d1a1e1adfe8964306d319fbbbea78"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 87.0,
+      "unit": "J/mol/K",
+      "value": 22.563,
+      "value_range": null
+     },
+     "vapour_heat_capacity_shomate": {
+      "form": "Cp° = A + B*t + C*t2 + D*t3 + E/t2; Cp = heat capacity (J/mol*K); t = temperature (K) / 1000.",
+      "reason": null,
+      "rows": [
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p75",
+           "page": 75,
+           "quote": "20.78600",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 20.786
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p75",
+           "page": 75,
+           "quote": "2.825911×10-7",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 2.825911e-07
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p75",
+           "page": 75,
+           "quote": "-1.464191×10-7",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": -1.464191e-07
+         },
+         "D": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p75",
+           "page": 75,
+           "quote": "1.092131×10-8",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 1.092131e-08
+         },
+         "E": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1951",
+           "locator": "nist-webbook-1951#p75",
+           "page": 75,
+           "quote": "-3.661371×10-8",
+           "read_by": "text_layer",
+           "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": -3.661371e-08
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1951",
+         "locator": "nist-webbook-1951#p75",
+         "page": 75,
+         "quote": "298. to 6000.",
+         "read_by": "text_layer",
+         "sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+        },
+        "t_max_k": 6000.0,
+        "t_min_k": 298.0
+       }
+      ],
+      "status": "held"
+     },
+     "vapour_pressure_as_printed": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "the CAMEO datasheet prints \"data unavailable\"",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "mmHg",
+      "value": null,
+      "value_range": null
+     }
+    },
+    "un": "1951"
+   },
+   "1977": {
+    "aegl_ppm": null,
+    "aegl_reason": "not drawn to an AEGL: the cryogenic_asphyxiant class (DN-018 section 3)",
+    "aegl_status": null,
+    "cross_checks": [
+     {
+      "field": "molecular weight (g/mol)",
+      "status": "agree",
+      "values": {
+       "cameo-chem-4069": "28",
+       "nist-webbook-1977": "28.0134"
+      }
+     }
+    ],
+    "dense_gas_caveat": true,
+    "dispersion_class": "cryogenic_asphyxiant",
+    "guide": "120",
+    "levels_of_concern": [
+     {
+      "basis": "cryogenic asphyxiant: the oxygen-deficient atmosphere threshold the pack carries (29 CFR 1910.134(b))",
+      "components": {},
+      "kind": "oxygen_deficiency",
+      "proxy_for": null,
+      "unit": "vol % oxygen",
+      "values": {
+       "any": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "cfr-1910-134",
+         "locator": "cfr-1910-134#p28",
+         "page": 28,
+         "quote": "Oxygen deficient atmosphere means an atmosphere with an oxygen content below 19.5% by volume",
+         "read_by": "text_layer",
+         "sha256": "e5551bf2572a09843c93ff6c4db0e9aeac10ec99bd7694eceb5cf849dfef0904"
+        },
+        "status": "held",
+        "unit": "vol %",
+        "value": 19.5
+       }
+      }
+     }
+    ],
+    "lfl_vol_pct": {
+     "derived_from": [],
+     "reason": "not drawn to an LFL: the cryogenic_asphyxiant class (DN-018 section 3)",
+     "receipt": null,
+     "status": "not_applicable",
+     "unit": "vol %",
+     "value": null
+    },
+    "molecular_weight_g_mol": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "nist-webbook-1977",
+      "locator": "nist-webbook-1977#p22",
+      "page": 22,
+      "quote": "28.0134",
+      "read_by": "text_layer",
+      "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+     },
+     "status": "held",
+     "unit": "g/mol",
+     "value": 28.0134
+    },
+    "name": "NITROGEN, REFRIGERATED LIQUID (CRYOGENIC LIQUID)",
+    "oxygen_deficiency_threshold_vol_pct": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "cfr-1910-134",
+      "locator": "cfr-1910-134#p28",
+      "page": 28,
+      "quote": "Oxygen deficient atmosphere means an atmosphere with an oxygen content below 19.5% by volume",
+      "read_by": "text_layer",
+      "sha256": "e5551bf2572a09843c93ff6c4db0e9aeac10ec99bd7694eceb5cf849dfef0904"
+     },
+     "status": "held",
+     "unit": "vol %",
+     "value": 19.5
+    },
+    "thermodynamics": {
+     "critical_pressure_bar": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1977",
+       "locator": "nist-webbook-1977#p95",
+       "page": 95,
+       "quote": "33.978 | bar",
+       "read_by": "text_layer",
+       "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "bar",
+      "value": 33.978,
+      "value_range": null
+     },
+     "critical_temperature_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1977",
+       "locator": "nist-webbook-1977#p90",
+       "page": 90,
+       "quote": "126.19 | K",
+       "read_by": "text_layer",
+       "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 126.19,
+      "value_range": null
+     },
+     "cross_checks": [
+      {
+       "field": "normal boiling point (K)",
+       "status": "disputed",
+       "values": {
+        "cameo-chem-4069": "77.54 K (-320.1 °F)",
+        "nist-webbook-1977 (Jacobsen, Stewart, et al., 1986, p75)": "77.34 K",
+        "nist-webbook-1977 (Streng, 1971, p76)": "77.4 K ± 0.3"
+       }
+      },
+      {
+       "field": "critical temperature (K)",
+       "status": "disputed",
+       "values": {
+        "nist-webbook-1977 (Angus, de Reuck, et al., 1979, p91)": "126.2 K ± 0.05",
+        "nist-webbook-1977 (Cardoso, 1915, p93)": "128.45 K ± 0.5",
+        "nist-webbook-1977 (Jacobsen, Stewart, et al., 1986, p90)": "126.19 K ± 0.01",
+        "nist-webbook-1977 (Weber, 1970, p92)": "126.2 K ± 0.2"
+       }
+      },
+      {
+       "field": "critical pressure (bar)",
+       "status": "disputed",
+       "values": {
+        "nist-webbook-1977 (Angus, de Reuck, et al., 1979, p96)": "34.00 bar ± 0.05",
+        "nist-webbook-1977 (Cardoso, 1915, p97)": "3.0698 bar ± 0.003",
+        "nist-webbook-1977 (Cardoso, 1915, p98)": "3.0682 bar ± 0.003",
+        "nist-webbook-1977 (Jacobsen, Stewart, et al., 1986, p95)": "33.978 bar ± 0.007"
+       }
+      }
+     ],
+     "heat_of_vaporization_j_mol": {
+      "as_printed": "6.1 kJ/mol at 78. K",
+      "conversion": "1 kJ/mol = 1000 J/mol (the SI prefix kilo)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1977",
+       "locator": "nist-webbook-1977#p102",
+       "page": 102,
+       "quote": "6.1 | 78.",
+       "read_by": "text_layer",
+       "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 78.0,
+      "unit": "J/mol",
+      "value": 6100.0,
+      "value_range": null
+     },
+     "liquid_density_kg_m3": {
+      "as_printed": "803.15 kg/m3 at 78.000 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1977",
+       "locator": "nist-fluid-saturation-1977#p1",
+       "page": 1,
+       "quote": "78.000 1.0926 803.15 0.0012451 -3.3849 -3.3811 79.869 30.264 57.278 844.82 -0.033699 156.64 0.14356 0.0087337 4.9442 0.20226 1.5561 2.1751 151.10 21.646 31.620 175.31 2.6686 5.4943 0.0072640",
+       "read_by": "text_layer",
+       "sha256": "2e346bf73064af449bb4451464c45531f1bd0ccce3e00f1ffad8687dc9b154b3"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 78.0,
+      "unit": "kg/m3",
+      "value": 803.15,
+      "value_range": null
+     },
+     "liquid_heat_capacity_j_mol_k": {
+      "as_printed": "57.278 J/mol*K at 78.000 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1977",
+       "locator": "nist-fluid-saturation-1977#p1",
+       "page": 1,
+       "quote": "78.000 1.0926 803.15 0.0012451 -3.3849 -3.3811 79.869 30.264 57.278 844.82 -0.033699 156.64 0.14356 0.0087337 4.9442 0.20226 1.5561 2.1751 151.10 21.646 31.620 175.31 2.6686 5.4943 0.0072640",
+       "read_by": "text_layer",
+       "sha256": "2e346bf73064af449bb4451464c45531f1bd0ccce3e00f1ffad8687dc9b154b3"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 78.0,
+      "unit": "J/mol/K",
+      "value": 57.278,
+      "value_range": null
+     },
+     "liquid_specific_gravity": {
+      "as_printed": "0.807 1 (relative to water) at -319.9 °F",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-4069",
+       "locator": "cameo-chem-4069#p75",
+       "page": 75,
+       "quote": "Specific Gravity: 0.807 at -319.9°F (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "ac8c9418b54dae731a14d8e69b2cb781199ae6061f33b9e50873458376739889"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 77.65,
+      "unit": "1 (relative to water)",
+      "value": 0.807,
+      "value_range": null
+     },
+     "missing": [],
+     "molecular_weight_g_mol": {
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1977",
+       "locator": "nist-webbook-1977#p22",
+       "page": 22,
+       "quote": "28.0134",
+       "read_by": "text_layer",
+       "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+      },
+      "status": "held",
+      "unit": "g/mol",
+      "value": 28.0134
+     },
+     "normal_boiling_point_k": {
+      "as_printed": "-320.1 °F at 760 mmHg",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-4069",
+       "locator": "cameo-chem-4069#p76",
+       "page": 76,
+       "quote": "Boiling Point: -320.1°F at 760 mmHg (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "ac8c9418b54dae731a14d8e69b2cb781199ae6061f33b9e50873458376739889"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 77.5388888889,
+      "value_range": null
+     },
+     "proxy": null,
+     "saturation_pressure_antoine": {
+      "form": "log10(P) = A − (B / (T + C)); P = vapor pressure (bar); T = temperature (K)",
+      "reason": null,
+      "rows": [
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p108",
+           "page": 108,
+           "quote": "63.14 to 126. | 3.7362 | 264.651 | -6.788",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 3.7362
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p108",
+           "page": 108,
+           "quote": "63.14 to 126. | 3.7362 | 264.651 | -6.788",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 264.651
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p108",
+           "page": 108,
+           "quote": "63.14 to 126. | 3.7362 | 264.651 | -6.788",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -6.788
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1977",
+         "locator": "nist-webbook-1977#p108",
+         "page": 108,
+         "quote": "63.14 to 126. | 3.7362 | 264.651 | -6.788",
+         "read_by": "text_layer",
+         "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+        },
+        "t_max_k": 126.0,
+        "t_min_k": 63.14
+       },
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p108",
+           "page": 108,
+           "quote": "63.14 to 78.00 | 3.63792 | 257.877 | -6.344",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 3.63792
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p108",
+           "page": 108,
+           "quote": "63.14 to 78.00 | 3.63792 | 257.877 | -6.344",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 257.877
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p108",
+           "page": 108,
+           "quote": "63.14 to 78.00 | 3.63792 | 257.877 | -6.344",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -6.344
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1977",
+         "locator": "nist-webbook-1977#p108",
+         "page": 108,
+         "quote": "63.14 to 78.00 | 3.63792 | 257.877 | -6.344",
+         "read_by": "text_layer",
+         "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+        },
+        "t_max_k": 78.0,
+        "t_min_k": 63.14
+       }
+      ],
+      "status": "held"
+     },
+     "vapour_heat_capacity_j_mol_k": {
+      "as_printed": "31.620 J/mol*K at 78.000 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1977",
+       "locator": "nist-fluid-saturation-1977#p1",
+       "page": 1,
+       "quote": "78.000 1.0926 803.15 0.0012451 -3.3849 -3.3811 79.869 30.264 57.278 844.82 -0.033699 156.64 0.14356 0.0087337 4.9442 0.20226 1.5561 2.1751 151.10 21.646 31.620 175.31 2.6686 5.4943 0.0072640",
+       "read_by": "text_layer",
+       "sha256": "2e346bf73064af449bb4451464c45531f1bd0ccce3e00f1ffad8687dc9b154b3"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 78.0,
+      "unit": "J/mol/K",
+      "value": 31.62,
+      "value_range": null
+     },
+     "vapour_heat_capacity_shomate": {
+      "form": "Cp° = A + B*t + C*t2 + D*t3 + E/t2; Cp = heat capacity (J/mol*K); t = temperature (K) / 1000.",
+      "reason": null,
+      "rows": [
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p67",
+           "page": 67,
+           "quote": "28.98641",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 28.98641
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p67",
+           "page": 67,
+           "quote": "1.853978",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 1.853978
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p67",
+           "page": 67,
+           "quote": "-9.647459",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": -9.647459
+         },
+         "D": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p67",
+           "page": 67,
+           "quote": "16.63537",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 16.63537
+         },
+         "E": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1977",
+           "locator": "nist-webbook-1977#p67",
+           "page": 67,
+           "quote": "0.000117",
+           "read_by": "text_layer",
+           "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+          },
+          "status": "held",
+          "unit": "J/mol*K",
+          "value": 0.000117
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1977",
+         "locator": "nist-webbook-1977#p67",
+         "page": 67,
+         "quote": "100. to 500.",
+         "read_by": "text_layer",
+         "sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+        },
+        "t_max_k": 500.0,
+        "t_min_k": 100.0
+       }
+      ],
+      "status": "held"
+     },
+     "vapour_pressure_as_printed": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": "the CAMEO datasheet prints \"data unavailable\"",
+      "receipt": null,
+      "source_tier": null,
+      "status": "not_held",
+      "temperature_k": null,
+      "unit": "mmHg",
+      "value": null,
+      "value_range": null
+     }
+    },
+    "un": "1977"
+   },
+   "1978": {
+    "aegl_ppm": null,
+    "aegl_reason": "not drawn to an AEGL: the flammable class (DN-018 section 3)",
+    "aegl_status": null,
+    "cross_checks": [
+     {
+      "field": "molecular weight (g/mol)",
+      "status": "disputed",
+      "values": {
+       "cameo-chem-9018": "44.09",
+       "nist-webbook-1978": "44.0956"
+      }
+     },
+     {
+      "field": "LFL (vol %)",
+      "status": "disputed",
+      "values": {
+       "cameo-chem-9018": "2.1",
+       "epa-aegl-compiled-2018": "2.3"
+      }
+     }
+    ],
+    "dense_gas_caveat": false,
+    "dispersion_class": "flammable",
+    "guide": "115",
+    "levels_of_concern": [
+     {
+      "basis": "flammable gas or liquid: a fraction of the lower flammability limit, the fraction and its reason as ALOHA's technical documentation states them (concentration averaging), applied to the pack's LFL; a flammable-cloud footprint, not a toxic one",
+      "components": {
+       "fraction": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "noaa-aloha-technical-documentation",
+         "locator": "noaa-aloha-technical-documentation#p90",
+         "page": 90,
+         "quote": "the choice was made to use 60% of the lower flammability limit as the level of concern in defining this threat zone. This value reflects the fact that the concentration calculation in ALOHA involves some time averaging.",
+         "read_by": "text_layer",
+         "sha256": "2f7663950899c948d1a8ca6ef2e36b31b9d78f6d955b6271bd411d4d0d638c9a"
+        },
+        "status": "held",
+        "unit": "% of LFL",
+        "value": 60.0
+       },
+       "lfl": {
+        "derived_from": [],
+        "reason": null,
+        "receipt": {
+         "doc_id": "epa-aegl-compiled-2018",
+         "locator": "epa-aegl-compiled-2018#p10",
+         "page": 10,
+         "quote": "Lower Explosive Limit (LEL) = 23,000 ppm",
+         "read_by": "text_layer",
+         "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+        },
+        "status": "held",
+        "unit": "vol %",
+        "value": 2.3
+       }
+      },
+      "kind": "lfl_fraction",
+      "proxy_for": null,
+      "unit": "vol %",
+      "values": {
+       "any": {
+        "derived_from": [
+         "lfl",
+         "fraction"
+        ],
+        "reason": null,
+        "receipt": null,
+        "status": "held",
+        "unit": "vol %",
+        "value": 1.38
+       }
+      }
+     }
+    ],
+    "lfl_vol_pct": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "epa-aegl-compiled-2018",
+      "locator": "epa-aegl-compiled-2018#p10",
+      "page": 10,
+      "quote": "Lower Explosive Limit (LEL) = 23,000 ppm",
+      "read_by": "text_layer",
+      "sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+     },
+     "status": "held",
+     "unit": "vol %",
+     "value": 2.3
+    },
+    "molecular_weight_g_mol": {
+     "derived_from": [],
+     "reason": null,
+     "receipt": {
+      "doc_id": "nist-webbook-1978",
+      "locator": "nist-webbook-1978#p22",
+      "page": 22,
+      "quote": "44.0956",
+      "read_by": "text_layer",
+      "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+     },
+     "status": "held",
+     "unit": "g/mol",
+     "value": 44.0956
+    },
+    "name": "PROPANE",
+    "oxygen_deficiency_threshold_vol_pct": {
+     "derived_from": [],
+     "reason": "not drawn to an oxygen threshold: the flammable class (DN-018 section 3)",
+     "receipt": null,
+     "status": "not_applicable",
+     "unit": "vol %",
+     "value": null
+    },
+    "thermodynamics": {
+     "critical_pressure_bar": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1978",
+       "locator": "nist-webbook-1978#p93",
+       "page": 93,
+       "quote": "42.5 ± 0.1 | bar",
+       "read_by": "text_layer",
+       "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "bar",
+      "value": 42.5,
+      "value_range": null
+     },
+     "critical_temperature_k": {
+      "as_printed": null,
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1978",
+       "locator": "nist-webbook-1978#p91",
+       "page": 91,
+       "quote": "369.9 ± 0.2 | K",
+       "read_by": "text_layer",
+       "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 369.9,
+      "value_range": null
+     },
+     "cross_checks": [
+      {
+       "field": "normal boiling point (K)",
+       "status": "agree",
+       "values": {
+        "cameo-chem-9018": "231.04 K (-43.8 °F)",
+        "nist-webbook-1978 (N/A, p78)": "231.1 K ± 0.2"
+       }
+      },
+      {
+       "field": "critical temperature (K)",
+       "status": "single_source",
+       "values": {
+        "nist-webbook-1978 (N/A, p91)": "369.9 K ± 0.2"
+       }
+      },
+      {
+       "field": "critical pressure (bar)",
+       "status": "single_source",
+       "values": {
+        "nist-webbook-1978 (N/A, p93)": "42.5 bar ± 0.1"
+       }
+      }
+     ],
+     "heat_of_vaporization_j_mol": {
+      "as_printed": "18.774 kJ/mol at 231.04 K",
+      "conversion": "1 kJ/mol = 1000 J/mol (the SI prefix kilo)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1978",
+       "locator": "nist-webbook-1978#p103",
+       "page": 103,
+       "quote": "18.774 | 231.04",
+       "read_by": "text_layer",
+       "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 231.04,
+      "unit": "J/mol",
+      "value": 18774.0,
+      "value_range": null
+     },
+     "liquid_density_kg_m3": {
+      "as_printed": "580.92 kg/m3 at 231.00 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1978",
+       "locator": "nist-fluid-saturation-1978#p1",
+       "page": 1,
+       "quote": "231.00 1.0116 580.92 0.0017214 4.4140 4.4217 26.753 63.770 99.033 1161.1 -0.041290 196.46 0.12921 0.015677 2.4126 0.41450 21.341 23.190 108.00 53.668 63.507 218.39 3.7644 6.2817 0.011565",
+       "read_by": "text_layer",
+       "sha256": "d17236337eea2ee27139e0b3a3602dfc1136b41cee312c6062a049584dfe15cb"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 231.0,
+      "unit": "kg/m3",
+      "value": 580.92,
+      "value_range": null
+     },
+     "liquid_heat_capacity_j_mol_k": {
+      "as_printed": "99.033 J/mol*K at 231.00 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-fluid-saturation-1978",
+       "locator": "nist-fluid-saturation-1978#p1",
+       "page": 1,
+       "quote": "231.00 1.0116 580.92 0.0017214 4.4140 4.4217 26.753 63.770 99.033 1161.1 -0.041290 196.46 0.12921 0.015677 2.4126 0.41450 21.341 23.190 108.00 53.668 63.507 218.39 3.7644 6.2817 0.011565",
+       "read_by": "text_layer",
+       "sha256": "d17236337eea2ee27139e0b3a3602dfc1136b41cee312c6062a049584dfe15cb"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 231.0,
+      "unit": "J/mol/K",
+      "value": 99.033,
+      "value_range": null
+     },
+     "liquid_specific_gravity": {
+      "as_printed": "0.59 1 (relative to water) at -58 °F",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-9018",
+       "locator": "cameo-chem-9018#p98",
+       "page": 98,
+       "quote": "Specific Gravity: 0.59 at -58°F (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "a5a30579fb24e0f07be58c92823da93f2a3f2a6b74f0070f48ff599eb1311e2f"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 223.15,
+      "unit": "1 (relative to water)",
+      "value": 0.59,
+      "value_range": null
+     },
+     "missing": [],
+     "molecular_weight_g_mol": {
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1978",
+       "locator": "nist-webbook-1978#p22",
+       "page": 22,
+       "quote": "44.0956",
+       "read_by": "text_layer",
+       "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+      },
+      "status": "held",
+      "unit": "g/mol",
+      "value": 44.0956
+     },
+     "normal_boiling_point_k": {
+      "as_printed": "-43.8 °F at 760 mmHg",
+      "conversion": "K = (°F − 32) / 1.8 + 273.15 (the definitions of the degree Fahrenheit and the kelvin)",
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-9018",
+       "locator": "cameo-chem-9018#p99",
+       "page": 99,
+       "quote": "Boiling Point: -43.8°F at 760 mmHg (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "a5a30579fb24e0f07be58c92823da93f2a3f2a6b74f0070f48ff599eb1311e2f"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "K",
+      "value": 231.0388888889,
+      "value_range": null
+     },
+     "proxy": null,
+     "saturation_pressure_antoine": {
+      "form": "log10(P) = A − (B / (T + C)); P = vapor pressure (bar); T = temperature (K)",
+      "reason": null,
+      "rows": [
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "277.6 to 360.8 | 4.53678 | 1149.36 | 24.906",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 4.53678
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "277.6 to 360.8 | 4.53678 | 1149.36 | 24.906",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 1149.36
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "277.6 to 360.8 | 4.53678 | 1149.36 | 24.906",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 24.906
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1978",
+         "locator": "nist-webbook-1978#p116",
+         "page": 116,
+         "quote": "277.6 to 360.8 | 4.53678 | 1149.36 | 24.906",
+         "read_by": "text_layer",
+         "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+        },
+        "t_max_k": 360.8,
+        "t_min_k": 277.6
+       },
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "230.6 to 320.7 | 3.98292 | 819.296 | -24.417",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 3.98292
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "230.6 to 320.7 | 3.98292 | 819.296 | -24.417",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 819.296
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "230.6 to 320.7 | 3.98292 | 819.296 | -24.417",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -24.417
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1978",
+         "locator": "nist-webbook-1978#p116",
+         "page": 116,
+         "quote": "230.6 to 320.7 | 3.98292 | 819.296 | -24.417",
+         "read_by": "text_layer",
+         "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+        },
+        "t_max_k": 320.7,
+        "t_min_k": 230.6
+       },
+       {
+        "constants": {
+         "A": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "166.02 to 231.41 | 4.01158 | 834.26 | -22.763",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "log10(bar)",
+          "value": 4.01158
+         },
+         "B": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "166.02 to 231.41 | 4.01158 | 834.26 | -22.763",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": 834.26
+         },
+         "C": {
+          "derived_from": [],
+          "reason": null,
+          "receipt": {
+           "doc_id": "nist-webbook-1978",
+           "locator": "nist-webbook-1978#p116",
+           "page": 116,
+           "quote": "166.02 to 231.41 | 4.01158 | 834.26 | -22.763",
+           "read_by": "text_layer",
+           "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+          },
+          "status": "held",
+          "unit": "K",
+          "value": -22.763
+         }
+        },
+        "receipt": {
+         "doc_id": "nist-webbook-1978",
+         "locator": "nist-webbook-1978#p116",
+         "page": 116,
+         "quote": "166.02 to 231.41 | 4.01158 | 834.26 | -22.763",
+         "read_by": "text_layer",
+         "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+        },
+        "t_max_k": 231.41,
+        "t_min_k": 166.02
+       }
+      ],
+      "status": "held"
+     },
+     "vapour_heat_capacity_j_mol_k": {
+      "as_printed": "59.29 J/mol*K at 219.2 K",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "nist-webbook-1978",
+       "locator": "nist-webbook-1978#p68",
+       "page": 68,
+       "quote": "59.29 | 219.2",
+       "read_by": "text_layer",
+       "sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": 219.2,
+      "unit": "J/mol/K",
+      "value": 59.29,
+      "value_range": null
+     },
+     "vapour_heat_capacity_shomate": {
+      "form": "Cp° = A + B*t + C*t2 + D*t3 + E/t2; Cp = heat capacity (J/mol*K); t = temperature (K) / 1000.",
+      "reason": "the held NIST page prints no Shomate correlation for this species",
+      "rows": [],
+      "status": "not_held"
+     },
+     "vapour_pressure_as_printed": {
+      "as_printed": "9823 mmHg",
+      "conversion": null,
+      "derived_from": [],
+      "reason": null,
+      "receipt": {
+       "doc_id": "cameo-chem-9018",
+       "locator": "cameo-chem-9018#p96",
+       "page": 96,
+       "quote": "Vapor Pressure: 9823 mmHg (USCG, 1999)",
+       "read_by": "text_layer",
+       "sha256": "a5a30579fb24e0f07be58c92823da93f2a3f2a6b74f0070f48ff599eb1311e2f"
+      },
+      "source_tier": "reference-table",
+      "status": "held",
+      "temperature_k": null,
+      "unit": "mmHg",
+      "value": 9823.0,
+      "value_range": null
+     }
+    },
+    "un": "1978"
+   }
+  }
+ },
+ "kind": "materials_properties",
+ "pack_id": "materials_properties",
+ "schema_version": 8,
+ "sha256": "90ab5939e645901e3b96a23041690fadaf271c5b4a7f285ec88a48cbefd32252",
+ "sources": [
+  {
+   "doc_id": "aegl-tsd-gasoline-proposed",
+   "licence": "public-domain",
+   "locator": "aegl-tsd-gasoline-proposed (HB-66 receipts)",
+   "raw_sha256": "f901eeb0ac6a342abbfb317fdd60a65c9a2ad2f9ffae535f790d3580edf78ef5"
+  },
+  {
+   "doc_id": "cameo-chem-11452",
+   "licence": "public-domain",
+   "locator": "cameo-chem-11452 (HB-66 receipts)",
+   "raw_sha256": "ddc74f59bf82ec0ae09649e28c72c9ef9cf47b45b013370d6522cb63bd615a07"
+  },
+  {
+   "doc_id": "cameo-chem-11498",
+   "licence": "public-domain",
+   "locator": "cameo-chem-11498 (HB-66 receipts)",
+   "raw_sha256": "b15e39c04d8e5380dcffc3791d46a7fd8e23c7c6eddcb24f553493e2840be988"
+  },
+  {
+   "doc_id": "cameo-chem-2509",
+   "licence": "public-domain",
+   "locator": "cameo-chem-2509 (HB-66 receipts)",
+   "raw_sha256": "6bea4d6ada28220f0e77c2143cb449e7997e53d6f48e63caff40f9b4f482e1b7"
+  },
+  {
+   "doc_id": "cameo-chem-2862",
+   "licence": "public-domain",
+   "locator": "cameo-chem-2862 (HB-66 receipts)",
+   "raw_sha256": "c601eae3a31c0f2db6a348a7de40cd430caab810de0bd20ad7d514d891ecc4a7"
+  },
+  {
+   "doc_id": "cameo-chem-4069",
+   "licence": "public-domain",
+   "locator": "cameo-chem-4069 (HB-66 receipts)",
+   "raw_sha256": "ac8c9418b54dae731a14d8e69b2cb781199ae6061f33b9e50873458376739889"
+  },
+  {
+   "doc_id": "cameo-chem-4860",
+   "licence": "public-domain",
+   "locator": "cameo-chem-4860 (HB-66 receipts)",
+   "raw_sha256": "024e8f67481351301770501b60b5880e309125ca8a759eec1bf241030eab12a1"
+  },
+  {
+   "doc_id": "cameo-chem-9018",
+   "licence": "public-domain",
+   "locator": "cameo-chem-9018 (HB-66 receipts)",
+   "raw_sha256": "a5a30579fb24e0f07be58c92823da93f2a3f2a6b74f0070f48ff599eb1311e2f"
+  },
+  {
+   "doc_id": "cameo-chem-987",
+   "licence": "public-domain",
+   "locator": "cameo-chem-987 (HB-66 receipts)",
+   "raw_sha256": "47ecfe15ad224a131937332f85444923e0df80490027ee758c7e0746f3293b04"
+  },
+  {
+   "doc_id": "cfr-1910-134",
+   "licence": "public-domain",
+   "locator": "cfr-1910-134 (HB-66 receipts)",
+   "raw_sha256": "e5551bf2572a09843c93ff6c4db0e9aeac10ec99bd7694eceb5cf849dfef0904"
+  },
+  {
+   "doc_id": "epa-aegl-compiled-2018",
+   "licence": "public-domain",
+   "locator": "epa-aegl-compiled-2018 (HB-66 receipts)",
+   "raw_sha256": "a4ba44d38aba3814f05ee09a794c50f6b1ceab6254c302a451543cba28289db7"
+  },
+  {
+   "doc_id": "epa-aegl-results-ammonia",
+   "licence": "public-domain",
+   "locator": "epa-aegl-results-ammonia (HB-66 receipts)",
+   "raw_sha256": "9b37a1c742f33fe044c93b2345efdaaa8aca2199dd7bf8568397f17d76d6c775"
+  },
+  {
+   "doc_id": "epa-aegl-results-chlorine",
+   "licence": "public-domain",
+   "locator": "epa-aegl-results-chlorine (HB-66 receipts)",
+   "raw_sha256": "c5c5933fb3ce9b2d2eb39fb930af4532b687a8e90b65d70f7483105b47566306"
+  },
+  {
+   "doc_id": "epa-rmp-oca-guidance-2009",
+   "licence": "public-domain",
+   "locator": "epa-rmp-oca-guidance-2009 (HB-66 receipts)",
+   "raw_sha256": "054fa19050e27d1068d9ee99bc79fd4287296d137e5c7c5f243eaf7d35a3d3e7"
+  },
+  {
+   "doc_id": "epa-slab-users-guide-1990",
+   "licence": "public-domain",
+   "locator": "epa-slab-users-guide-1990 (HB-66 receipts)",
+   "raw_sha256": "2ce0e7b775ee20972fdc6e751e6cbb109d6d881ab0a46c9ab18ccbe6e655503d"
+  },
+  {
+   "doc_id": "niosh-npg-2005-149",
+   "licence": "public-domain",
+   "locator": "niosh-npg-2005-149 (HB-66 receipts)",
+   "raw_sha256": "c008054cef5aae66addaeab70549d4d549de409f3db75df73c5e7c631a674ad9"
+  },
+  {
+   "doc_id": "nist-fluid-saturation-1005",
+   "licence": "reference-only",
+   "locator": "nist-fluid-saturation-1005 (HB-66 receipts)",
+   "raw_sha256": "352795b7eaa3ddbd7b354f6a7f8541d5fb1ff06ab20d0aa439db284bb72fb9d9"
+  },
+  {
+   "doc_id": "nist-fluid-saturation-1951",
+   "licence": "reference-only",
+   "locator": "nist-fluid-saturation-1951 (HB-66 receipts)",
+   "raw_sha256": "fa3a07e645d9859b86dddcd093ac78393c8d1a1e1adfe8964306d319fbbbea78"
+  },
+  {
+   "doc_id": "nist-fluid-saturation-1977",
+   "licence": "reference-only",
+   "locator": "nist-fluid-saturation-1977 (HB-66 receipts)",
+   "raw_sha256": "2e346bf73064af449bb4451464c45531f1bd0ccce3e00f1ffad8687dc9b154b3"
+  },
+  {
+   "doc_id": "nist-fluid-saturation-1978",
+   "licence": "reference-only",
+   "locator": "nist-fluid-saturation-1978 (HB-66 receipts)",
+   "raw_sha256": "d17236337eea2ee27139e0b3a3602dfc1136b41cee312c6062a049584dfe15cb"
+  },
+  {
+   "doc_id": "nist-webbook-1005",
+   "licence": "reference-only",
+   "locator": "nist-webbook-1005 (HB-66 receipts)",
+   "raw_sha256": "9e627db9aeca931e7a6782d75a145facfae5022d7cd2f2e17c062011046fe057"
+  },
+  {
+   "doc_id": "nist-webbook-1017",
+   "licence": "reference-only",
+   "locator": "nist-webbook-1017 (HB-66 receipts)",
+   "raw_sha256": "3720219939a914b8222aa2a6d0fa396e0aca0eef9be8809e21f42a25d5ac1ba3"
+  },
+  {
+   "doc_id": "nist-webbook-1951",
+   "licence": "reference-only",
+   "locator": "nist-webbook-1951 (HB-66 receipts)",
+   "raw_sha256": "69ceacaa18e6b389799458ab3d9d5faf15e769a404faf22c6393931ff8df8bc8"
+  },
+  {
+   "doc_id": "nist-webbook-1977",
+   "licence": "reference-only",
+   "locator": "nist-webbook-1977 (HB-66 receipts)",
+   "raw_sha256": "70f060e2437aa7d7808259d29dcfd589fc61000060d2ff4b0b87ca64451b1522"
+  },
+  {
+   "doc_id": "nist-webbook-1978",
+   "licence": "reference-only",
+   "locator": "nist-webbook-1978 (HB-66 receipts)",
+   "raw_sha256": "0c7835eeb99528d548010479bd0cd2c98a2fcb2ec146d79487ebcdd0c341a286"
+  },
+  {
+   "doc_id": "noaa-aloha-technical-documentation",
+   "licence": "public-domain",
+   "locator": "noaa-aloha-technical-documentation (HB-66 receipts)",
+   "raw_sha256": "2f7663950899c948d1a8ca6ef2e36b31b9d78f6d955b6271bd411d4d0d638c9a"
+  },
+  {
+   "doc_id": "us-standard-atmosphere-1976",
+   "licence": "public-domain",
+   "locator": "us-standard-atmosphere-1976 (HB-66 receipts)",
+   "raw_sha256": "23eb6b68346d4abc6071fc598872d51c40cf8c613d1a5d1006c6261bcd09dcea"
+  }
+ ],
+ "version": "hb126.1"
+}

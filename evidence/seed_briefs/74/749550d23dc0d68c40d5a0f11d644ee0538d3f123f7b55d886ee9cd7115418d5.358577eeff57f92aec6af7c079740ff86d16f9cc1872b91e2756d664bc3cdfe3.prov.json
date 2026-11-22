@@ -1,0 +1,85 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-04T04:36:31.583239Z",
+  "http_mode": "replay",
+  "id": "358577eeff57f92aec6af7c079740ff86d16f9cc1872b91e2756d664bc3cdfe3",
+  "is_error": false,
+  "name": "protective_action_footprint",
+  "params": {
+   "incident": {
+    "container": "Highway tank truck or trailer",
+    "fire_involved": false,
+    "incident_time": "2026-10-22T02:00:00-04:00",
+    "location": {
+     "latitude": 39.722,
+     "longitude": -77.724
+    },
+    "material": "UN1017",
+    "spill_size": "large"
+   },
+   "wind": {
+    "direction_deg_from": 270,
+    "observed_at": "2026-10-20T13:40:00-04:00",
+    "source": "worked example wind",
+    "speed_kmh": 13
+   }
+  },
+  "startedAtTime": "2026-11-04T04:36:31.577231Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/points/",
+    "id": "nws:points"
+   },
+   {
+    "endpoint": "https://api.weather.gov/gridpoints/",
+    "id": "nws:gridpoints"
+   },
+   {
+    "endpoint": "packs/erg.json",
+    "id": "pack:erg"
+   },
+   {
+    "endpoint": "packs/cfr172.json",
+    "id": "pack:cfr172"
+   },
+   {
+    "endpoint": "packs/hazard_classes.json",
+    "id": "pack:hazard_classes"
+   },
+   {
+    "endpoint": "packs/flag_rules.json",
+    "id": "pack:flag_rules"
+   },
+   {
+    "endpoint": null,
+    "id": "code:astral"
+   }
+  ]
+ },
+ "as_of": "2026-11-04T04:36:31.583239Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 10180,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "749550d23dc0d68c40d5a0f11d644ee0538d3f123f7b55d886ee9cd7115418d5"
+ },
+ "horizon_s": 3600,
+ "horizon_source": "nws:gridpoints",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

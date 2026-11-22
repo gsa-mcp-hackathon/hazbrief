@@ -1,0 +1,742 @@
+{
+ "attribution": {
+  "credits": [
+   {
+    "doc_id": "epa-isc3-users-guide-vol2",
+    "edition": "September 1995",
+    "publisher": "U.S. EPA Office of Air Quality Planning and Standards",
+    "title": "User's Guide for the Industrial Source Complex (ISC3) Dispersion Models, Volume II - Description of Model Algorithms (EPA-454/B-95-003b)",
+    "url": "https://gaftp.epa.gov/Air/aqmg/SCRAM/models/other/isc3/isc3v2.pdf"
+   }
+  ],
+  "notices": []
+ },
+ "built_at": "2026-10-28T22:23:30Z",
+ "data": {
+  "band_rule": "a distance takes the first band whose printed upper bound (km) it does not exceed; the last band has none",
+  "classes": {
+   "A": {
+    "sigma_y": {
+     "c": 24.167,
+     "d": 2.5334,
+     "receipt": {
+      "doc_id": "epa-isc3-users-guide-vol2",
+      "locator": "epa-isc3-users-guide-vol2#p29",
+      "page": 29,
+      "quote": "A 24.1670 2.5334",
+      "read_by": "text_layer",
+      "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+     }
+    },
+    "sigma_z": [
+     {
+      "a": 122.8,
+      "b": 0.9447,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "A* <.10 0.10 - 0.15 0.16 - 0.20 0.21 - 0.25 0.26 - 0.30 0.31 - 0.40 0.41 - 0.50 0.51 - 3.11 >3.11 122.800 158.080 170.220 179.520 217.410 258.890 346.750 453.850 ** 0.94470 1.05420 1.09320 1.12620 1.26440 1.40940 1.72830 2.11660 **",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.1,
+      "x_range_as_printed": "<.10"
+     },
+     {
+      "a": 158.08,
+      "b": 1.0542,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "A* <.10 0.10 - 0.15 0.16 - 0.20 0.21 - 0.25 0.26 - 0.30 0.31 - 0.40 0.41 - 0.50 0.51 - 3.11 >3.11 122.800 158.080 170.220 179.520 217.410 258.890 346.750 453.850 ** 0.94470 1.05420 1.09320 1.12620 1.26440 1.40940 1.72830 2.11660 **",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.15,
+      "x_range_as_printed": "0.10 - 0.15"
+     },
+     {
+      "a": 170.22,
+      "b": 1.0932,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "A* <.10 0.10 - 0.15 0.16 - 0.20 0.21 - 0.25 0.26 - 0.30 0.31 - 0.40 0.41 - 0.50 0.51 - 3.11 >3.11 122.800 158.080 170.220 179.520 217.410 258.890 346.750 453.850 ** 0.94470 1.05420 1.09320 1.12620 1.26440 1.40940 1.72830 2.11660 **",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.2,
+      "x_range_as_printed": "0.16 - 0.20"
+     },
+     {
+      "a": 179.52,
+      "b": 1.1262,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "A* <.10 0.10 - 0.15 0.16 - 0.20 0.21 - 0.25 0.26 - 0.30 0.31 - 0.40 0.41 - 0.50 0.51 - 3.11 >3.11 122.800 158.080 170.220 179.520 217.410 258.890 346.750 453.850 ** 0.94470 1.05420 1.09320 1.12620 1.26440 1.40940 1.72830 2.11660 **",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.25,
+      "x_range_as_printed": "0.21 - 0.25"
+     },
+     {
+      "a": 217.41,
+      "b": 1.2644,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "A* <.10 0.10 - 0.15 0.16 - 0.20 0.21 - 0.25 0.26 - 0.30 0.31 - 0.40 0.41 - 0.50 0.51 - 3.11 >3.11 122.800 158.080 170.220 179.520 217.410 258.890 346.750 453.850 ** 0.94470 1.05420 1.09320 1.12620 1.26440 1.40940 1.72830 2.11660 **",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.3,
+      "x_range_as_printed": "0.26 - 0.30"
+     },
+     {
+      "a": 258.89,
+      "b": 1.4094,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "A* <.10 0.10 - 0.15 0.16 - 0.20 0.21 - 0.25 0.26 - 0.30 0.31 - 0.40 0.41 - 0.50 0.51 - 3.11 >3.11 122.800 158.080 170.220 179.520 217.410 258.890 346.750 453.850 ** 0.94470 1.05420 1.09320 1.12620 1.26440 1.40940 1.72830 2.11660 **",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.4,
+      "x_range_as_printed": "0.31 - 0.40"
+     },
+     {
+      "a": 346.75,
+      "b": 1.7283,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "A* <.10 0.10 - 0.15 0.16 - 0.20 0.21 - 0.25 0.26 - 0.30 0.31 - 0.40 0.41 - 0.50 0.51 - 3.11 >3.11 122.800 158.080 170.220 179.520 217.410 258.890 346.750 453.850 ** 0.94470 1.05420 1.09320 1.12620 1.26440 1.40940 1.72830 2.11660 **",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.5,
+      "x_range_as_printed": "0.41 - 0.50"
+     },
+     {
+      "a": 453.85,
+      "b": 2.1166,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "A* <.10 0.10 - 0.15 0.16 - 0.20 0.21 - 0.25 0.26 - 0.30 0.31 - 0.40 0.41 - 0.50 0.51 - 3.11 >3.11 122.800 158.080 170.220 179.520 217.410 258.890 346.750 453.850 ** 0.94470 1.05420 1.09320 1.12620 1.26440 1.40940 1.72830 2.11660 **",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 3.11,
+      "x_range_as_printed": "0.51 - 3.11"
+     },
+     {
+      "a": null,
+      "b": null,
+      "fixed_m": 5000.0,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "A* <.10 0.10 - 0.15 0.16 - 0.20 0.21 - 0.25 0.26 - 0.30 0.31 - 0.40 0.41 - 0.50 0.51 - 3.11 >3.11 122.800 158.080 170.220 179.520 217.410 258.890 346.750 453.850 ** 0.94470 1.05420 1.09320 1.12620 1.26440 1.40940 1.72830 2.11660 **",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": null,
+      "x_range_as_printed": ">3.11"
+     }
+    ]
+   },
+   "B": {
+    "sigma_y": {
+     "c": 18.333,
+     "d": 1.8096,
+     "receipt": {
+      "doc_id": "epa-isc3-users-guide-vol2",
+      "locator": "epa-isc3-users-guide-vol2#p29",
+      "page": 29,
+      "quote": "B 18.3330 1.8096",
+      "read_by": "text_layer",
+      "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+     }
+    },
+    "sigma_z": [
+     {
+      "a": 90.673,
+      "b": 0.93198,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "B* <.20 0.21 - 0.40 >0.40 90.673 98.483 109.300 0.93198 0.98332 1.09710",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.2,
+      "x_range_as_printed": "<.20"
+     },
+     {
+      "a": 98.483,
+      "b": 0.98332,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "B* <.20 0.21 - 0.40 >0.40 90.673 98.483 109.300 0.93198 0.98332 1.09710",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.4,
+      "x_range_as_printed": "0.21 - 0.40"
+     },
+     {
+      "a": 109.3,
+      "b": 1.0971,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "B* <.20 0.21 - 0.40 >0.40 90.673 98.483 109.300 0.93198 0.98332 1.09710",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": null,
+      "x_range_as_printed": ">0.40"
+     }
+    ]
+   },
+   "C": {
+    "sigma_y": {
+     "c": 12.5,
+     "d": 1.0857,
+     "receipt": {
+      "doc_id": "epa-isc3-users-guide-vol2",
+      "locator": "epa-isc3-users-guide-vol2#p29",
+      "page": 29,
+      "quote": "C 12.5000 1.0857",
+      "read_by": "text_layer",
+      "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+     }
+    },
+    "sigma_z": [
+     {
+      "a": 61.141,
+      "b": 0.91465,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "C* All 61.141 0.91465",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": null,
+      "x_range_as_printed": "All"
+     }
+    ]
+   },
+   "D": {
+    "sigma_y": {
+     "c": 8.333,
+     "d": 0.72382,
+     "receipt": {
+      "doc_id": "epa-isc3-users-guide-vol2",
+      "locator": "epa-isc3-users-guide-vol2#p29",
+      "page": 29,
+      "quote": "D 8.3330 0.72382",
+      "read_by": "text_layer",
+      "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+     }
+    },
+    "sigma_z": [
+     {
+      "a": 34.459,
+      "b": 0.86974,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "D <.30 0.31 - 1.00 1.01 - 3.00 3.01 - 10.00 10.01 - 30.00 >30.00 34.459 32.093 32.093 33.504 36.650 44.053 0.86974 0.81066 0.64403 0.60486 0.56589 0.51179",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.3,
+      "x_range_as_printed": "<.30"
+     },
+     {
+      "a": 32.093,
+      "b": 0.81066,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "D <.30 0.31 - 1.00 1.01 - 3.00 3.01 - 10.00 10.01 - 30.00 >30.00 34.459 32.093 32.093 33.504 36.650 44.053 0.86974 0.81066 0.64403 0.60486 0.56589 0.51179",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 1.0,
+      "x_range_as_printed": "0.31 - 1.00"
+     },
+     {
+      "a": 32.093,
+      "b": 0.64403,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "D <.30 0.31 - 1.00 1.01 - 3.00 3.01 - 10.00 10.01 - 30.00 >30.00 34.459 32.093 32.093 33.504 36.650 44.053 0.86974 0.81066 0.64403 0.60486 0.56589 0.51179",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 3.0,
+      "x_range_as_printed": "1.01 - 3.00"
+     },
+     {
+      "a": 33.504,
+      "b": 0.60486,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "D <.30 0.31 - 1.00 1.01 - 3.00 3.01 - 10.00 10.01 - 30.00 >30.00 34.459 32.093 32.093 33.504 36.650 44.053 0.86974 0.81066 0.64403 0.60486 0.56589 0.51179",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 10.0,
+      "x_range_as_printed": "3.01 - 10.00"
+     },
+     {
+      "a": 36.65,
+      "b": 0.56589,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "D <.30 0.31 - 1.00 1.01 - 3.00 3.01 - 10.00 10.01 - 30.00 >30.00 34.459 32.093 32.093 33.504 36.650 44.053 0.86974 0.81066 0.64403 0.60486 0.56589 0.51179",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 30.0,
+      "x_range_as_printed": "10.01 - 30.00"
+     },
+     {
+      "a": 44.053,
+      "b": 0.51179,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p30",
+       "page": 30,
+       "quote": "D <.30 0.31 - 1.00 1.01 - 3.00 3.01 - 10.00 10.01 - 30.00 >30.00 34.459 32.093 32.093 33.504 36.650 44.053 0.86974 0.81066 0.64403 0.60486 0.56589 0.51179",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": null,
+      "x_range_as_printed": ">30.00"
+     }
+    ]
+   },
+   "E": {
+    "sigma_y": {
+     "c": 6.25,
+     "d": 0.54287,
+     "receipt": {
+      "doc_id": "epa-isc3-users-guide-vol2",
+      "locator": "epa-isc3-users-guide-vol2#p29",
+      "page": 29,
+      "quote": "E 6.2500 0.54287",
+      "read_by": "text_layer",
+      "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+     }
+    },
+    "sigma_z": [
+     {
+      "a": 24.26,
+      "b": 0.8366,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "E <.10 0.10 - 0.30 0.31 - 1.00 1.01 - 2.00 2.01 - 4.00 4.01 - 10.00 10.01 - 20.00 20.01 - 40.00 >40.00 24.260 23.331 21.628 21.628 22.534 24.703 26.970 35.420 47.618 0.83660 0.81956 0.75660 0.63077 0.57154 0.50527 0.46713 0.37615 0.29592",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.1,
+      "x_range_as_printed": "<.10"
+     },
+     {
+      "a": 23.331,
+      "b": 0.81956,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "E <.10 0.10 - 0.30 0.31 - 1.00 1.01 - 2.00 2.01 - 4.00 4.01 - 10.00 10.01 - 20.00 20.01 - 40.00 >40.00 24.260 23.331 21.628 21.628 22.534 24.703 26.970 35.420 47.618 0.83660 0.81956 0.75660 0.63077 0.57154 0.50527 0.46713 0.37615 0.29592",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.3,
+      "x_range_as_printed": "0.10 - 0.30"
+     },
+     {
+      "a": 21.628,
+      "b": 0.7566,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "E <.10 0.10 - 0.30 0.31 - 1.00 1.01 - 2.00 2.01 - 4.00 4.01 - 10.00 10.01 - 20.00 20.01 - 40.00 >40.00 24.260 23.331 21.628 21.628 22.534 24.703 26.970 35.420 47.618 0.83660 0.81956 0.75660 0.63077 0.57154 0.50527 0.46713 0.37615 0.29592",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 1.0,
+      "x_range_as_printed": "0.31 - 1.00"
+     },
+     {
+      "a": 21.628,
+      "b": 0.63077,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "E <.10 0.10 - 0.30 0.31 - 1.00 1.01 - 2.00 2.01 - 4.00 4.01 - 10.00 10.01 - 20.00 20.01 - 40.00 >40.00 24.260 23.331 21.628 21.628 22.534 24.703 26.970 35.420 47.618 0.83660 0.81956 0.75660 0.63077 0.57154 0.50527 0.46713 0.37615 0.29592",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 2.0,
+      "x_range_as_printed": "1.01 - 2.00"
+     },
+     {
+      "a": 22.534,
+      "b": 0.57154,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "E <.10 0.10 - 0.30 0.31 - 1.00 1.01 - 2.00 2.01 - 4.00 4.01 - 10.00 10.01 - 20.00 20.01 - 40.00 >40.00 24.260 23.331 21.628 21.628 22.534 24.703 26.970 35.420 47.618 0.83660 0.81956 0.75660 0.63077 0.57154 0.50527 0.46713 0.37615 0.29592",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 4.0,
+      "x_range_as_printed": "2.01 - 4.00"
+     },
+     {
+      "a": 24.703,
+      "b": 0.50527,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "E <.10 0.10 - 0.30 0.31 - 1.00 1.01 - 2.00 2.01 - 4.00 4.01 - 10.00 10.01 - 20.00 20.01 - 40.00 >40.00 24.260 23.331 21.628 21.628 22.534 24.703 26.970 35.420 47.618 0.83660 0.81956 0.75660 0.63077 0.57154 0.50527 0.46713 0.37615 0.29592",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 10.0,
+      "x_range_as_printed": "4.01 - 10.00"
+     },
+     {
+      "a": 26.97,
+      "b": 0.46713,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "E <.10 0.10 - 0.30 0.31 - 1.00 1.01 - 2.00 2.01 - 4.00 4.01 - 10.00 10.01 - 20.00 20.01 - 40.00 >40.00 24.260 23.331 21.628 21.628 22.534 24.703 26.970 35.420 47.618 0.83660 0.81956 0.75660 0.63077 0.57154 0.50527 0.46713 0.37615 0.29592",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 20.0,
+      "x_range_as_printed": "10.01 - 20.00"
+     },
+     {
+      "a": 35.42,
+      "b": 0.37615,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "E <.10 0.10 - 0.30 0.31 - 1.00 1.01 - 2.00 2.01 - 4.00 4.01 - 10.00 10.01 - 20.00 20.01 - 40.00 >40.00 24.260 23.331 21.628 21.628 22.534 24.703 26.970 35.420 47.618 0.83660 0.81956 0.75660 0.63077 0.57154 0.50527 0.46713 0.37615 0.29592",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 40.0,
+      "x_range_as_printed": "20.01 - 40.00"
+     },
+     {
+      "a": 47.618,
+      "b": 0.29592,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "E <.10 0.10 - 0.30 0.31 - 1.00 1.01 - 2.00 2.01 - 4.00 4.01 - 10.00 10.01 - 20.00 20.01 - 40.00 >40.00 24.260 23.331 21.628 21.628 22.534 24.703 26.970 35.420 47.618 0.83660 0.81956 0.75660 0.63077 0.57154 0.50527 0.46713 0.37615 0.29592",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": null,
+      "x_range_as_printed": ">40.00"
+     }
+    ]
+   },
+   "F": {
+    "sigma_y": {
+     "c": 4.1667,
+     "d": 0.36191,
+     "receipt": {
+      "doc_id": "epa-isc3-users-guide-vol2",
+      "locator": "epa-isc3-users-guide-vol2#p29",
+      "page": 29,
+      "quote": "F 4.1667 0.36191",
+      "read_by": "text_layer",
+      "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+     }
+    },
+    "sigma_z": [
+     {
+      "a": 15.209,
+      "b": 0.81558,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "F <.20 0.21 - 0.70 0.71 - 1.00 1.01 - 2.00 2.01 - 3.00 3.01 - 7.00 7.01 - 15.00 15.01 - 30.00 30.01 - 60.00 >60.00 15.209 14.457 13.953 13.953 14.823 16.187 17.836 22.651 27.074 34.219 0.81558 0.78407 0.68465 0.63227 0.54503 0.46490 0.41507 0.32681 0.27436 0.21716",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.2,
+      "x_range_as_printed": "<.20"
+     },
+     {
+      "a": 14.457,
+      "b": 0.78407,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "F <.20 0.21 - 0.70 0.71 - 1.00 1.01 - 2.00 2.01 - 3.00 3.01 - 7.00 7.01 - 15.00 15.01 - 30.00 30.01 - 60.00 >60.00 15.209 14.457 13.953 13.953 14.823 16.187 17.836 22.651 27.074 34.219 0.81558 0.78407 0.68465 0.63227 0.54503 0.46490 0.41507 0.32681 0.27436 0.21716",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 0.7,
+      "x_range_as_printed": "0.21 - 0.70"
+     },
+     {
+      "a": 13.953,
+      "b": 0.68465,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "F <.20 0.21 - 0.70 0.71 - 1.00 1.01 - 2.00 2.01 - 3.00 3.01 - 7.00 7.01 - 15.00 15.01 - 30.00 30.01 - 60.00 >60.00 15.209 14.457 13.953 13.953 14.823 16.187 17.836 22.651 27.074 34.219 0.81558 0.78407 0.68465 0.63227 0.54503 0.46490 0.41507 0.32681 0.27436 0.21716",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 1.0,
+      "x_range_as_printed": "0.71 - 1.00"
+     },
+     {
+      "a": 13.953,
+      "b": 0.63227,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "F <.20 0.21 - 0.70 0.71 - 1.00 1.01 - 2.00 2.01 - 3.00 3.01 - 7.00 7.01 - 15.00 15.01 - 30.00 30.01 - 60.00 >60.00 15.209 14.457 13.953 13.953 14.823 16.187 17.836 22.651 27.074 34.219 0.81558 0.78407 0.68465 0.63227 0.54503 0.46490 0.41507 0.32681 0.27436 0.21716",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 2.0,
+      "x_range_as_printed": "1.01 - 2.00"
+     },
+     {
+      "a": 14.823,
+      "b": 0.54503,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "F <.20 0.21 - 0.70 0.71 - 1.00 1.01 - 2.00 2.01 - 3.00 3.01 - 7.00 7.01 - 15.00 15.01 - 30.00 30.01 - 60.00 >60.00 15.209 14.457 13.953 13.953 14.823 16.187 17.836 22.651 27.074 34.219 0.81558 0.78407 0.68465 0.63227 0.54503 0.46490 0.41507 0.32681 0.27436 0.21716",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 3.0,
+      "x_range_as_printed": "2.01 - 3.00"
+     },
+     {
+      "a": 16.187,
+      "b": 0.4649,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "F <.20 0.21 - 0.70 0.71 - 1.00 1.01 - 2.00 2.01 - 3.00 3.01 - 7.00 7.01 - 15.00 15.01 - 30.00 30.01 - 60.00 >60.00 15.209 14.457 13.953 13.953 14.823 16.187 17.836 22.651 27.074 34.219 0.81558 0.78407 0.68465 0.63227 0.54503 0.46490 0.41507 0.32681 0.27436 0.21716",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 7.0,
+      "x_range_as_printed": "3.01 - 7.00"
+     },
+     {
+      "a": 17.836,
+      "b": 0.41507,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "F <.20 0.21 - 0.70 0.71 - 1.00 1.01 - 2.00 2.01 - 3.00 3.01 - 7.00 7.01 - 15.00 15.01 - 30.00 30.01 - 60.00 >60.00 15.209 14.457 13.953 13.953 14.823 16.187 17.836 22.651 27.074 34.219 0.81558 0.78407 0.68465 0.63227 0.54503 0.46490 0.41507 0.32681 0.27436 0.21716",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 15.0,
+      "x_range_as_printed": "7.01 - 15.00"
+     },
+     {
+      "a": 22.651,
+      "b": 0.32681,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "F <.20 0.21 - 0.70 0.71 - 1.00 1.01 - 2.00 2.01 - 3.00 3.01 - 7.00 7.01 - 15.00 15.01 - 30.00 30.01 - 60.00 >60.00 15.209 14.457 13.953 13.953 14.823 16.187 17.836 22.651 27.074 34.219 0.81558 0.78407 0.68465 0.63227 0.54503 0.46490 0.41507 0.32681 0.27436 0.21716",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 30.0,
+      "x_range_as_printed": "15.01 - 30.00"
+     },
+     {
+      "a": 27.074,
+      "b": 0.27436,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "F <.20 0.21 - 0.70 0.71 - 1.00 1.01 - 2.00 2.01 - 3.00 3.01 - 7.00 7.01 - 15.00 15.01 - 30.00 30.01 - 60.00 >60.00 15.209 14.457 13.953 13.953 14.823 16.187 17.836 22.651 27.074 34.219 0.81558 0.78407 0.68465 0.63227 0.54503 0.46490 0.41507 0.32681 0.27436 0.21716",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": 60.0,
+      "x_range_as_printed": "30.01 - 60.00"
+     },
+     {
+      "a": 34.219,
+      "b": 0.21716,
+      "fixed_m": null,
+      "receipt": {
+       "doc_id": "epa-isc3-users-guide-vol2",
+       "locator": "epa-isc3-users-guide-vol2#p31",
+       "page": 31,
+       "quote": "F <.20 0.21 - 0.70 0.71 - 1.00 1.01 - 2.00 2.01 - 3.00 3.01 - 7.00 7.01 - 15.00 15.01 - 30.00 30.01 - 60.00 >60.00 15.209 14.457 13.953 13.953 14.823 16.187 17.836 22.651 27.074 34.219 0.81558 0.78407 0.68465 0.63227 0.54503 0.46490 0.41507 0.32681 0.27436 0.21716",
+       "read_by": "text_layer",
+       "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+      },
+      "x_max_km": null,
+      "x_range_as_printed": ">60.00"
+     }
+    ]
+   }
+  },
+  "sigma_y_form": "sigma_y = 465.11628 x tan(TH), TH = 0.017453293 (c - d ln x); x in km, sigma_y in m",
+  "sigma_y_scale": {
+   "receipt": {
+    "doc_id": "epa-isc3-users-guide-vol2",
+    "locator": "epa-isc3-users-guide-vol2#p29",
+    "page": 29,
+    "quote": "Fy = 465.11628 (x)tan(TH)",
+    "read_by": "text_layer",
+    "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+   },
+   "unit": "m/km",
+   "value": 465.11628
+  },
+  "sigma_z_cap_m": {
+   "receipt": {
+    "doc_id": "epa-isc3-users-guide-vol2",
+    "locator": "epa-isc3-users-guide-vol2#p30",
+    "page": 30,
+    "quote": "If the calculated value of Fz exceed 5000 m, Fz is set to 5000 m.",
+    "read_by": "text_layer",
+    "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+   },
+   "unit": "m",
+   "value": 5000.0
+  },
+  "sigma_z_form": "sigma_z = a x^b; x in km, sigma_z in m, capped",
+  "terrain": "rural",
+  "theta_scale": {
+   "receipt": {
+    "doc_id": "epa-isc3-users-guide-vol2",
+    "locator": "epa-isc3-users-guide-vol2#p29",
+    "page": 29,
+    "quote": "TH = 0.017453293 [c - d ln(x)]",
+    "read_by": "text_layer",
+    "sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+   },
+   "unit": "rad/deg",
+   "value": 0.017453293
+  },
+  "urban": {
+   "reason": "ISC3's urban sigma curves (Briggs) are not built: no held land-cover rule selects urban dispersion for a spill yet (HB-66 step 4)",
+   "status": "not_built"
+  }
+ },
+ "kind": "sigma_curves",
+ "pack_id": "sigma_curves",
+ "schema_version": 8,
+ "sha256": "cd0aa9cec7206958eebe88bdbdd43e7f7c4946323a999cdc02fa58d38f82f854",
+ "sources": [
+  {
+   "doc_id": "epa-isc3-users-guide-vol2",
+   "licence": "public-domain",
+   "locator": "epa-isc3-users-guide-vol2#p29 (Table 1-1); #p30-31 (Table 1-2)",
+   "raw_sha256": "c34d6d7d7e1b109abcf182b24fc2bf3003a621d336c11cf6a8e8ccc5f057fe76"
+  }
+ ],
+ "version": "isc3v2.2"
+}

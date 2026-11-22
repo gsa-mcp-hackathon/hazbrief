@@ -1,0 +1,82 @@
+{
+  "build": {
+    "argv": [
+      "docker",
+      "build",
+      "--network=none",
+      "-t",
+      "hazbrief-mcp",
+      "."
+    ],
+    "cached_steps": 4,
+    "clean_copy": "/var/folders/s1/yqb3d76d7053f7dyy9fwtkzw0000gp/T/hb197_clean_5_d4guh6/clone",
+    "env_mcp_host_lines": [
+      "# MCP_HOST defaults to 127.0.0.1 (src/hazbrief/config.py): the HTTP route has no",
+      "# Dockerfile's MCP_HOST=0.0.0.0, the server would bind the container's loopback and the",
+      "# MCP_HOST=127.0.0.1"
+    ],
+    "exit": 1,
+    "head": "761533d3968f003a46ab51bc7d94becdd66e9355",
+    "readme_command": "docker build -t hazbrief-mcp .",
+    "seconds": 28.6,
+    "tail": "22.41         `fastmcp` (v4.1.1) which depends on `fastmcp-slim[server]` (v4.1.1)\n22.41         which depends on `jsonschema-path` (v0.5.0) which depends on `attrs`\n------\nDockerfile:48\n--------------------\n  46 |     # copy of the software carries (HB-87R).\n  47 |     COPY pyproject.toml uv.lock README.md LICENSE LICENSE-TEMPLATE ./\n  48 | >>> RUN uv sync --locked --no-dev --no-install-project\n  49 |     \n  50 |     COPY src ./src\n--------------------\nERROR: failed to build: failed to solve: process \"/bin/sh -c uv sync --locked --no-dev --no-install-project\" did not complete successfully: exit code: 1\n\nView build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/82jm1hkxoe3nkhgju2nrvin7w"
+  },
+  "serve": {
+    "argv": [
+      "docker",
+      "run",
+      "--name",
+      "hb197-serve",
+      "--rm",
+      "-p",
+      "127.0.0.1:18080:8080",
+      "--env-file",
+      ".env",
+      "hazbrief-mcp"
+    ],
+    "container_exit": 137,
+    "container_log_tail": "[11/18/26 14:18:34] INFO     Starting MCP server 'HazBrief MCP  transport.py:358\n                             Server' with transport 'http' on                   \n                             http://0.0.0.0:8080/mcp                            \nINFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)\nINFO:     172.17.0.1:58274 - \"GET /health HTTP/1.1\" 200 OK\nINFO:     172.17.0.1:58280 - \"GET /version HTTP/1.1\" 200 OK\nINFO:     172.17.0.1:58290 - \"POST /mcp HTTP/1.1\" 200 OK\nINFO:     172.17.0.1:58290 - \"POST /mcp HTTP/1.1\" 200 OK\nINFO:     172.17.0.1:58290 - \"POST /mcp HTTP/1.1\" 200 OK",
+    "health": {
+      "body": "{\"status\":\"healthy\",\"service\":\"hazbrief-mcp\"}",
+      "seconds": 4.5,
+      "status": 200
+    },
+    "host_port_substituted": {
+      "host_port": 18080,
+      "lsof": "COMMAND  PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nPython  1732 brock    4u  IPv4 0x5161dd818764a0d3      0t0  TCP 127.0.0.1:8080 (LISTEN)"
+    },
+    "mcp": {
+      "differences": [],
+      "fields_compared": 20,
+      "protocol_version": "2026-07-28",
+      "server_name": "HazBrief MCP Server",
+      "server_version": "4.1.1",
+      "tools": [
+        "assess_incident",
+        "build_ics_201",
+        "facilities_in_footprint",
+        "material_response_guidance",
+        "population_at_risk",
+        "protective_action_footprint",
+        "receiving_hospitals"
+      ]
+    },
+    "readme_line": "docker run --rm -p 127.0.0.1:8080:8080 --env-file .env hazbrief-mcp   # http://localhost:8080/mcp",
+    "version": {
+      "body": "{\"version\":\"0.1.0\"}",
+      "status": 200
+    }
+  },
+  "served_image": {
+    "hb201_tag": {
+      "created": "2026-11-18T11:59:40.324664342Z",
+      "id": "sha256:d3ea63c83cfdc6955861e0317c8e2e1e552648561c786e9a3f10360aaeefdda8",
+      "size_bytes": 512153341
+    },
+    "readme_tag": {
+      "created": "2026-11-18T11:59:40.324664342Z",
+      "id": "sha256:d3ea63c83cfdc6955861e0317c8e2e1e552648561c786e9a3f10360aaeefdda8",
+      "size_bytes": 512153341
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T05:04:49Z",
+  "http_mode": "record",
+  "id": "49aa132857dbf5b9c32ac17ac2028b3be4be23ce3a6dabf51745f76b0235949c",
+  "name": "GET tigerweb",
+  "params": {
+   "method": "GET",
+   "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/30/query?where=BASENAME%3D%27Nowhere+Such%27+AND+STATE%3D%2751%27&outFields=NAME%2CBASENAME%2CSTATE&returnGeometry=false&outSR=4326&f=json&returnExtentOnly=true"
+  },
+  "startedAtTime": "2026-10-27T05:04:49Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/30/query?where=BASENAME%3D%27Nowhere+Such%27+AND+STATE%3D%2751%27&outFields=NAME%2CBASENAME%2CSTATE&returnGeometry=false&outSR=4326&f=json&returnExtentOnly=true",
+    "id": "tigerweb:current"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T05:04:49Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 115,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "140544fafb36a544dd256a9cb6a0942a7be7449e7e48ebfe40a0843f7eda14dc"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "tigerweb:current",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

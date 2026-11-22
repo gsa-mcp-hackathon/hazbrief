@@ -1,0 +1,548 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.188054,
+      39.118034
+     ],
+     "type": "Point"
+    },
+    "id": 6423659,
+    "properties": {
+     "address": "9125 Gaither Road",
+     "city": "Gaithersburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1487289600000,
+     "name": "Montgomery County Police Department Special Operations Division",
+     "objectid": 6423659,
+     "permanent_identifier": "104cdd85-2949-4fc0-9a01-b3e4bc62c84d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.26279,
+      39.184441
+     ],
+     "type": "Point"
+    },
+    "id": 6429496,
+    "properties": {
+     "address": "20000 Aircraft Drive",
+     "city": "Germantown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1541462400000,
+     "name": "Montgomery County Police Department - Germantown District",
+     "objectid": 6429496,
+     "permanent_identifier": "16f6558e-8fdd-4018-b33d-5b7bbdffb808",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.640745,
+      39.316635
+     ],
+     "type": "Point"
+    },
+    "id": 6508481,
+    "properties": {
+     "address": "811 West Potomac Street",
+     "city": "Brunswick",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1754274582000,
+     "name": "Brunswick Police Department",
+     "objectid": 6508481,
+     "permanent_identifier": "76519073-3dec-4b91-a4ec-895f2366a0a8",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.407683,
+      39.411535
+     ],
+     "type": "Point"
+    },
+    "id": 6524506,
+    "properties": {
+     "address": "100 East All Saints Street",
+     "city": "Frederick",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1755357005000,
+     "name": "Frederick Police Department",
+     "objectid": 6524506,
+     "permanent_identifier": "8995c5de-c761-43c3-a0d3-6e9703ad3b0e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.375152,
+      39.40706
+     ],
+     "type": "Point"
+    },
+    "id": 6530463,
+    "properties": {
+     "address": "110 Airport Drive East",
+     "city": "Frederick",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1470954509000,
+     "name": "Frederick County Sheriff's Office",
+     "objectid": 6530463,
+     "permanent_identifier": "904d7794-52b4-4629-8a66-6c63a0c820b2",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.714594,
+      39.143579
+     ],
+     "type": "Point"
+    },
+    "id": 6536117,
+    "properties": {
+     "address": "125 East Hirst Road",
+     "city": "Purcellville",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1630540800000,
+     "name": "Purcellville Police Department",
+     "objectid": 6536117,
+     "permanent_identifier": "9757a54c-f04e-4b32-824a-83ce68b5c2c5",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.548988,
+      39.11094
+     ],
+     "type": "Point"
+    },
+    "id": 6581764,
+    "properties": {
+     "address": "65 Plaza Street Northeast",
+     "city": "Leesburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1630886400000,
+     "name": "Leesburg Police Department",
+     "objectid": 6581764,
+     "permanent_identifier": "cd84e086-6c84-4b0d-bcb5-e17333a5ef9d",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.805741,
+      39.431376
+     ],
+     "type": "Point"
+    },
+    "id": 6587482,
+    "properties": {
+     "address": "104 North King Street Room 100",
+     "city": "Shepherdstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1462874204000,
+     "name": "Shepherdstown Police Department",
+     "objectid": 6587482,
+     "permanent_identifier": "d49549b6-60d6-44b9-8dfb-5b6366505fcb",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.195409,
+      39.139965
+     ],
+     "type": "Point"
+    },
+    "id": 6593442,
+    "properties": {
+     "address": "14 Fulks Corner Avenue",
+     "city": "Gaithersburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1541462400000,
+     "name": "Gaithersburg Police Department",
+     "objectid": 6593442,
+     "permanent_identifier": "dc193b2f-df88-49ab-8868-2b75368a920d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.236596,
+      39.113155
+     ],
+     "type": "Point"
+    },
+    "id": 6603136,
+    "properties": {
+     "address": "100 Edison Park Drive",
+     "city": "Gaithersburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1660953600000,
+     "name": "Montgomery County Police Department",
+     "objectid": 6603136,
+     "permanent_identifier": "e740a9a6-bd02-4cb3-99fe-5063b007797f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.601514,
+      39.516899
+     ],
+     "type": "Point"
+    },
+    "id": 6637205,
+    "properties": {
+     "address": "2011 Monument Road",
+     "city": "Myersville",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1769291263000,
+     "name": "Maryland Natural Resource Police Department Western Region Echo Lake Office Area 7",
+     "objectid": 6637205,
+     "permanent_identifier": "0e411191-acc4-483b-89fa-d0315155e9f8",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.873936,
+      39.349388
+     ],
+     "type": "Point"
+    },
+    "id": 6677030,
+    "properties": {
+     "address": "409 Industrial Boulevard",
+     "city": "Kearneysville",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1459168747000,
+     "name": "West Virginia State Police Troop 2 - Headquarters",
+     "objectid": 6677030,
+     "permanent_identifier": "369f9976-e3a5-431d-b9e3-157fd76e1d58",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.461263,
+      39.053197
+     ],
+     "type": "Point"
+    },
+    "id": 6705531,
+    "properties": {
+     "address": "20272 Savin Hill Drive",
+     "city": "Ashburn",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1630540800000,
+     "name": "Loudoun County Sheriff's Office Ashburn Station",
+     "objectid": 6705531,
+     "permanent_identifier": "53ad7d9d-23bb-48f9-907f-8007f81cead5",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.234062,
+      39.150244
+     ],
+     "type": "Point"
+    },
+    "id": 6711803,
+    "properties": {
+     "address": "45 West Watkins Mill Road",
+     "city": "Gaithersburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1541462400000,
+     "name": "Montgomery County Police Department - Montgomery Village District",
+     "objectid": 6711803,
+     "permanent_identifier": "5a07c1c8-ad13-4c18-a014-c17ef5e9d285",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.552457,
+      39.075941
+     ],
+     "type": "Point"
+    },
+    "id": 6741486,
+    "properties": {
+     "address": "41904 Loudoun Center Place",
+     "city": "Leesburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1630886400000,
+     "name": "Virginia State Police Division 7 Area 10 Office",
+     "objectid": 6741486,
+     "permanent_identifier": "782bc158-cd2a-4f6f-aff6-a75cf97195c5",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.659326,
+      39.504435
+     ],
+     "type": "Point"
+    },
+    "id": 6743617,
+    "properties": {
+     "address": "241 Potomac Street",
+     "city": "Boonsboro",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1465210783000,
+     "name": "Boonsboro Police Department",
+     "objectid": 6743617,
+     "permanent_identifier": "7a40e932-89dc-4d59-9c95-6e72e453264f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.744804,
+      39.326545
+     ],
+     "type": "Point"
+    },
+    "id": 6745464,
+    "properties": {
+     "address": "1000 Washington Street Suite 100",
+     "city": "Harpers Ferry",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1727194959000,
+     "name": "Harpers Ferry Police Department",
+     "objectid": 6745464,
+     "permanent_identifier": "7c2d8fae-e6d7-4c66-ab91-c6e6c8aee0a3",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.8628,
+      39.304421
+     ],
+     "type": "Point"
+    },
+    "id": 6785759,
+    "properties": {
+     "address": "700 North Preston Street",
+     "city": "Ranson",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1459168747000,
+     "name": "Ranson Police Department",
+     "objectid": 6785759,
+     "permanent_identifier": "a4641b51-d0eb-4817-a5c6-57e764c39b12",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.776876,
+      39.133129
+     ],
+     "type": "Point"
+    },
+    "id": 6790173,
+    "properties": {
+     "address": "47 West Loudoun Street",
+     "city": "Round Hill",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1630540800000,
+     "name": "Loudoun County Sheriff's Office Western Loudoun Station",
+     "objectid": 6790173,
+     "permanent_identifier": "a87a68b8-5c00-474d-babb-3fba2443b3ef",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.878178,
+      39.34777
+     ],
+     "type": "Point"
+    },
+    "id": 6802685,
+    "properties": {
+     "address": "102 Industrial Boulevard",
+     "city": "Kearneysville",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1459168747000,
+     "name": "Jefferson County Sheriff's Office",
+     "objectid": 6802685,
+     "permanent_identifier": "b4b8ca11-1115-454c-9e73-2d85d639185d",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.861614,
+      39.289727
+     ],
+     "type": "Point"
+    },
+    "id": 6819841,
+    "properties": {
+     "address": "114 West Liberty Street",
+     "city": "Charles Town",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1459168747000,
+     "name": "Charles Town Police Department",
+     "objectid": 6819841,
+     "permanent_identifier": "c6841e62-95e5-4357-93f8-483f12c7fc98",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.386756,
+      39.015813
+     ],
+     "type": "Point"
+    },
+    "id": 6855040,
+    "properties": {
+     "address": "46620 East Frederick Drive",
+     "city": "Sterling",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1630540800000,
+     "name": "Loudoun County Sheriff's Office Eastern Loudoun Station",
+     "objectid": 6855040,
+     "permanent_identifier": "ea64e15b-2603-4029-b5cd-fed04fc5e72c",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.375305,
+      39.407259
+     ],
+     "type": "Point"
+    },
+    "id": 6872170,
+    "properties": {
+     "address": "110 Airport Drive East",
+     "city": "Frederick",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1557100800000,
+     "name": "Maryland State Police - Barrack B Frederick",
+     "objectid": 6872170,
+     "permanent_identifier": "fc040d88-26cb-4fb1-932c-a457532e551f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.223854,
+      39.158009
+     ],
+     "type": "Point"
+    },
+    "id": 6998324,
+    "properties": {
+     "address": "222 Paramount Park Drive",
+     "city": "Gaithersburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1760496910000,
+     "name": "Montgomery County Police Department 6th District Station - Montgomery Village",
+     "objectid": 6998324,
+     "permanent_identifier": "b4f9d962-6910-4e36-b943-6acee4661b13",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-11T11:49:36Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 11 Nov 2026 11:49:36 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/18/query?where=1%3D1&geometry=-77.913331%2C38.986136%2C-77.165469%2C39.565064&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

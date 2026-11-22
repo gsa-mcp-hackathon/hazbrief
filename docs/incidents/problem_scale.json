@@ -1,0 +1,87 @@
+{
+ "task": "HB-215",
+ "calls_made": 0,
+ "period": "2016-2025",
+ "years": 10,
+ "rail": {
+  "dataset_doc_id": "fra-form54-rail-equipment-accidents",
+  "dataset_sha256": "a18b348a2dc1dfb8f18a5ecef7596f8305ddc9e2f56df88f2032d98f1be7eafe",
+  "released_incidents": 146,
+  "places": 146,
+  "per_year_mean": 14.6,
+  "damage_usd": 209469766,
+  "damage_million_usd": 209.5,
+  "damage_million_usd_per_year_mean": 20.9,
+  "largest_place_damage_million_usd": 15.8,
+  "zero_damage_places": 1,
+  "by_year": [
+   {
+    "year": 2016,
+    "released_incidents": 14,
+    "damage_usd": 24064308,
+    "damage_million_usd": 24.1
+   },
+   {
+    "year": 2017,
+    "released_incidents": 13,
+    "damage_usd": 18877399,
+    "damage_million_usd": 18.9
+   },
+   {
+    "year": 2018,
+    "released_incidents": 20,
+    "damage_usd": 16691000,
+    "damage_million_usd": 16.7
+   },
+   {
+    "year": 2019,
+    "released_incidents": 15,
+    "damage_usd": 19490935,
+    "damage_million_usd": 19.5
+   },
+   {
+    "year": 2020,
+    "released_incidents": 20,
+    "damage_usd": 31947458,
+    "damage_million_usd": 31.9
+   },
+   {
+    "year": 2021,
+    "released_incidents": 13,
+    "damage_usd": 28996229,
+    "damage_million_usd": 29.0
+   },
+   {
+    "year": 2022,
+    "released_incidents": 13,
+    "damage_usd": 17317909,
+    "damage_million_usd": 17.3
+   },
+   {
+    "year": 2023,
+    "released_incidents": 12,
+    "damage_usd": 16893203,
+    "damage_million_usd": 16.9
+   },
+   {
+    "year": 2024,
+    "released_incidents": 11,
+    "damage_usd": 15251593,
+    "damage_million_usd": 15.3
+   },
+   {
+    "year": 2025,
+    "released_incidents": 15,
+    "damage_usd": 19939732,
+    "damage_million_usd": 19.9
+   }
+  ]
+ },
+ "phmsa_all_modes": {
+  "measure": "Hazmat transportation incidents reported to PHMSA, all modes",
+  "value": 24265,
+  "period": "2023",
+  "doc_id": "bts-tsar-2024",
+  "page": "PDF p.161 (printed 5-24)"
+ }
+}

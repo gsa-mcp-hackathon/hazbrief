@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:33:57Z",
+  "http_mode": "record",
+  "id": "747f85efa0b75f2beab071a30909c894e58e2b9f7480de38f6ed08b0f231e385",
+  "name": "GET bts_ntad",
+  "params": {
+   "method": "GET",
+   "url": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0/query?where=StateAbbreviation%3D%27MD%27+AND+CITYNAME%3D%27POINT+OF+ROCKS%27&outFields=CrossingID%2CStateAbbreviation%2CCITYNAME%2CSTREET%2CHighwayName%2CCrossingPosition%2CLatLongSource%2CLATITUDE%2CLongitude&returnGeometry=true&outSR=4326&f=json&orderByFields=CrossingID"
+  },
+  "startedAtTime": "2026-10-27T03:33:57Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0/query?where=StateAbbreviation%3D%27MD%27+AND+CITYNAME%3D%27POINT+OF+ROCKS%27&outFields=CrossingID%2CStateAbbreviation%2CCITYNAME%2CSTREET%2CHighwayName%2CCrossingPosition%2CLatLongSource%2CLATITUDE%2CLongitude&returnGeometry=true&outSR=4326&f=json&orderByFields=CrossingID",
+    "id": "bts_ntad"
+   }
+  ]
+ },
+ "as_of": "2026-10-20T23:34:00Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 6282,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "73715bb8285b9a72b8f2b3cb1750723a635686d8d55558cb7bea99dbb63de5e8"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "bts_ntad",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

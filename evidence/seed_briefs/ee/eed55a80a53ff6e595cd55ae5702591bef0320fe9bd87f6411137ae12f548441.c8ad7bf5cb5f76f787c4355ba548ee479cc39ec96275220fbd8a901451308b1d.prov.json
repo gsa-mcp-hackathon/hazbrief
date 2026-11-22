@@ -1,0 +1,86 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-07T02:06:08.847142Z",
+  "http_mode": "replay",
+  "id": "c8ad7bf5cb5f76f787c4355ba548ee479cc39ec96275220fbd8a901451308b1d",
+  "is_error": false,
+  "name": "protective_action_footprint",
+  "params": {
+   "incident": {
+    "container": "Highway tank truck or trailer",
+    "fire_involved": true,
+    "incident_time": "2026-10-21T14:00:00-04:00",
+    "location": {
+     "latitude": 39.722,
+     "longitude": -77.724
+    },
+    "material": "UN1075",
+    "spill_size": "large",
+    "where_spilled": "land"
+   },
+   "wind": {
+    "direction_deg_from": 270,
+    "observed_at": "2026-10-20T13:40:00-04:00",
+    "source": "worked example wind",
+    "speed_kmh": 13
+   }
+  },
+  "startedAtTime": "2026-11-07T02:06:08.440160Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.weather.gov/points/",
+    "id": "nws:points"
+   },
+   {
+    "endpoint": "https://api.weather.gov/gridpoints/",
+    "id": "nws:gridpoints"
+   },
+   {
+    "endpoint": "packs/erg.json",
+    "id": "pack:erg"
+   },
+   {
+    "endpoint": "packs/cfr172.json",
+    "id": "pack:cfr172"
+   },
+   {
+    "endpoint": "packs/hazard_classes.json",
+    "id": "pack:hazard_classes"
+   },
+   {
+    "endpoint": "packs/flag_rules.json",
+    "id": "pack:flag_rules"
+   },
+   {
+    "endpoint": null,
+    "id": "code:astral"
+   }
+  ]
+ },
+ "as_of": "2026-11-07T02:06:08.847142Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 9910,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "eed55a80a53ff6e595cd55ae5702591bef0320fe9bd87f6411137ae12f548441"
+ },
+ "horizon_s": 3600,
+ "horizon_source": "nws:gridpoints",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

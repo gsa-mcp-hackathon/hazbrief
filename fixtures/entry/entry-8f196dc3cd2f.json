@@ -1,0 +1,72 @@
+{
+ "as_given": "2026-11-19T16:18:24.858491+00:00",
+ "entry": {
+  "fields": {
+   "container": {
+    "span": null,
+    "value": "Highway tank truck or trailer"
+   },
+   "material": {
+    "erg": {
+     "reason": "'Liquid nitrogen' is not a material name in the ERG 2024 yellow index.",
+     "resolved": false
+    },
+    "span": "Liquid nitrogen",
+    "value": "Liquid nitrogen"
+   },
+   "state": {
+    "span": "rapid leak",
+    "value": "leaking"
+   }
+  },
+  "parse": {
+   "call": {
+    "calls_made": 1,
+    "model": "claude-opus-5-5",
+    "request_sha256": "2e553e18cbe14e417ec058f9084ae8ba3bc4e1c494f9fc113bfeef9574f317a6",
+    "response_sha256": "cf7de3ab17d0a0b9a68fab7904dec838e5ed607d0781f9d9be891319b400ef3f",
+    "transcript": "b2bade64a493a3eb0a0192fa0cbf57f150b612b2c0dd04fd49fc3c3a9a0b1044"
+   },
+   "fields": {
+    "container": {
+     "span": null,
+     "value": "unknown"
+    },
+    "material": {
+     "erg": {
+      "reason": "'Liquid nitrogen' is not a material name in the ERG 2024 yellow index.",
+      "resolved": false
+     },
+     "span": "Liquid nitrogen",
+     "value": "Liquid nitrogen"
+    },
+    "state": {
+     "span": "rapid leak",
+     "value": "leaking"
+    }
+   },
+   "line": "Liquid nitrogen truck flipped, rapid leak",
+   "route": {
+    "guide": null,
+    "kind": "guide",
+    "unresolved": "'Liquid nitrogen' is not a material name in the ERG 2024 yellow index.",
+    "why": "a known material takes its ERG guide and HB-120's release routing"
+   },
+   "via": "model"
+  }
+ },
+ "id": "entry-8f196dc3cd2f",
+ "incident": {
+  "container": "Highway tank truck or trailer",
+  "fire_involved": false,
+  "incident_time": "2026-11-19T16:18:24.858491+00:00",
+  "location": {
+   "latitude": 38.944,
+   "longitude": -76.8588
+  },
+  "material": "Liquid nitrogen",
+  "spill_size": "unknown",
+  "where_spilled": "land"
+ },
+ "situation": "Liquid nitrogen truck flipped, rapid leak"
+}

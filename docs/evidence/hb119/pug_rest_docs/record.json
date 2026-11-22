@@ -1,0 +1,9 @@
+{
+ "url": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest",
+ "status": 200,
+ "content_type": "text/html; charset=utf-8",
+ "bytes": 21399,
+ "sha256": "d8161ba4260343a6bd195b3376eea2ce05f9e06ca04b80991cec9bd1d7604c1e",
+ "read_at": "2026-11-07T08:38:38Z",
+ "mentions_compound_name": false
+}

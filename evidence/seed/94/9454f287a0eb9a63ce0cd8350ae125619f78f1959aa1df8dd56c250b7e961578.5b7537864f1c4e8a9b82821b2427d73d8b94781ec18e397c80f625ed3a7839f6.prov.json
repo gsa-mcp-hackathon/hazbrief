@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-22T03:15:59Z",
+  "http_mode": "record",
+  "id": "5b7537864f1c4e8a9b82821b2427d73d8b94781ec18e397c80f625ed3a7839f6",
+  "name": "GET bts_ntad",
+  "params": {
+   "method": "GET",
+   "url": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0/query?where=1%3D1&geometry=-77.724350%2C39.721550%2C-77.722834%2C39.722450&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CCrossingID%2CCrossingPosition%2CCrossingType%2CHighwayName%2CSTREET%2CRailroadCode%2CLATITUDE%2CLongitude&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+  },
+  "startedAtTime": "2026-10-22T03:15:59Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Railroad_Grade_Crossings/FeatureServer/0/query?where=1%3D1&geometry=-77.724350%2C39.721550%2C-77.722834%2C39.722450&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CCrossingID%2CCrossingPosition%2CCrossingType%2CHighwayName%2CSTREET%2CRailroadCode%2CLATITUDE%2CLongitude&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson",
+    "id": "bts_ntad"
+   }
+  ]
+ },
+ "as_of": "2026-10-20T23:34:00Z",
+ "as_of_basis": "Last-Modified header",
+ "entity": {
+  "bytes": 98,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "9454f287a0eb9a63ce0cd8350ae125619f78f1959aa1df8dd56c250b7e961578"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "bts_ntad",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

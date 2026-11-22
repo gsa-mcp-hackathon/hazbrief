@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-07T08:31:37Z",
+  "http_mode": "record",
+  "id": "1a48c009bda611d2e75ee8d693f7dc413515dc3a8bb82fd4e3ea1c4c7793b9d0",
+  "name": "GET pubchem",
+  "params": {
+   "method": "GET",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Ibuprofen/cids/JSON"
+  },
+  "startedAtTime": "2026-11-07T08:31:37Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Ibuprofen/cids/JSON",
+    "id": "pubchem:pug_rest"
+   }
+  ]
+ },
+ "as_of": "2026-11-07T08:31:37Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 33,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "24caffe896f5306c275193fda1918bf1f73206e9c369058d3e2bad99c5ecd96c"
+ },
+ "horizon_s": 126230400,
+ "horizon_source": "pubchem:pug_rest",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

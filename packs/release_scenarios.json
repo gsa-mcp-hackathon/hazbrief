@@ -1,0 +1,198 @@
+{
+ "attribution": {
+  "credits": [
+   {
+    "doc_id": "epa-rmp-oca-guidance-2009",
+    "edition": "March 2009",
+    "publisher": "US EPA, OSWER / Office of Emergency Management",
+    "title": "Risk Management Program Guidance for Offsite Consequence Analysis (EPA 550-B-99-009)",
+    "url": "https://www.epa.gov/sites/default/files/2013-11/documents/oca-chps.pdf"
+   },
+   {
+    "doc_id": "epa-rmp-oca-guidance-appendices-1999",
+    "edition": "April 1999",
+    "publisher": "US EPA",
+    "title": "Risk Management Program Guidance for Offsite Consequence Analysis - Appendices",
+    "url": "https://www.epa.gov/sites/default/files/2017-05/documents/oca-apds.pdf"
+   }
+  ],
+  "notices": []
+ },
+ "built_at": "2026-10-23T11:04:02Z",
+ "data": {
+  "alternative": {
+   "duration_min": {
+    "derived_from": [],
+    "reason": "EPA's RMP guidance states no alternative-release duration: it is \"based on your scenario and site-specific conditions\" (p. 24)",
+    "receipt": null,
+    "status": "not_held",
+    "unit": "min",
+    "value": null
+   },
+   "hole_size_cm": {
+    "derived_from": [],
+    "reason": "EPA's RMP guidance states no hole size: it is the facility's choice (\"you might assume, for example, the hole size that would result from shearing off a valve or pipe\", p. 77)",
+    "receipt": null,
+    "status": "not_held",
+    "unit": "cm",
+    "value": null
+   },
+   "method": {
+    "receipt": {
+     "doc_id": "epa-rmp-oca-guidance-2009",
+     "locator": "epa-rmp-oca-guidance-2009#p77",
+     "page": 77,
+     "quote": "To estimate a hole size you might assume, for example, the hole size that would result from shearing off a valve or pipe from a vessel containing a regulated substance.",
+     "read_by": "text_layer",
+     "sha256": "054fa19050e27d1068d9ee99bc79fd4287296d137e5c7c5f243eaf7d35a3d3e7"
+    },
+    "text": "To estimate a hole size you might assume, for example, the hole size that would result from shearing off a valve or pipe from a vessel containing a regulated substance."
+   }
+  },
+  "authority": "EPA, Risk Management Program Guidance for Offsite Consequence Analysis (epa-rmp-oca-guidance-2009, epa-rmp-oca-guidance-appendices-1999)",
+  "containers": {
+   "Highway tank truck or trailer": {
+    "alternative_duration_min": {
+     "derived_from": [],
+     "reason": "EPA's RMP guidance states no alternative-release duration: it is \"based on your scenario and site-specific conditions\" (p. 24)",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "min",
+     "value": null
+    },
+    "alternative_hole_size_cm": {
+     "derived_from": [],
+     "reason": "EPA's RMP guidance states no hole size: it is the facility's choice (\"you might assume, for example, the hole size that would result from shearing off a valve or pipe\", p. 77)",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "cm",
+     "value": null
+    },
+    "container": "Highway tank truck or trailer",
+    "covered": false,
+    "reason": "EPA's RMP guidance states no release quantity for a highway tank truck or trailer: the rule covers a transportation container only when it is used for storage at a stationary source (40 CFR 68.3, appendices p. 74), and the quantity is the facility's own",
+    "worst_case_quantity_kg": {
+     "derived_from": [],
+     "reason": "EPA's RMP guidance states no release quantity for a highway tank truck or trailer: the rule covers a transportation container only when it is used for storage at a stationary source (40 CFR 68.3, appendices p. 74), and the quantity is the facility's own",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "kg",
+     "value": null
+    }
+   },
+   "Rail tank car": {
+    "alternative_duration_min": {
+     "derived_from": [],
+     "reason": "EPA's RMP guidance states no alternative-release duration: it is \"based on your scenario and site-specific conditions\" (p. 24)",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "min",
+     "value": null
+    },
+    "alternative_hole_size_cm": {
+     "derived_from": [],
+     "reason": "EPA's RMP guidance states no hole size: it is the facility's choice (\"you might assume, for example, the hole size that would result from shearing off a valve or pipe\", p. 77)",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "cm",
+     "value": null
+    },
+    "container": "Rail tank car",
+    "covered": false,
+    "reason": "EPA's RMP guidance states no release quantity for a rail tank car: the rule covers a transportation container only when it is used for storage at a stationary source (40 CFR 68.3, appendices p. 74), and the quantity is the facility's own",
+    "worst_case_quantity_kg": {
+     "derived_from": [],
+     "reason": "EPA's RMP guidance states no release quantity for a rail tank car: the rule covers a transportation container only when it is used for storage at a stationary source (40 CFR 68.3, appendices p. 74), and the quantity is the facility's own",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "kg",
+     "value": null
+    }
+   },
+   "unknown": {
+    "alternative_duration_min": {
+     "derived_from": [],
+     "reason": "EPA's RMP guidance states no alternative-release duration: it is \"based on your scenario and site-specific conditions\" (p. 24)",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "min",
+     "value": null
+    },
+    "alternative_hole_size_cm": {
+     "derived_from": [],
+     "reason": "EPA's RMP guidance states no hole size: it is the facility's choice (\"you might assume, for example, the hole size that would result from shearing off a valve or pipe\", p. 77)",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "cm",
+     "value": null
+    },
+    "container": "unknown",
+    "covered": false,
+    "reason": "the container is not known, so no quantity applies",
+    "worst_case_quantity_kg": {
+     "derived_from": [],
+     "reason": "the container is not known, so no quantity applies",
+     "receipt": null,
+     "status": "not_held",
+     "unit": "kg",
+     "value": null
+    }
+   }
+  },
+  "not_adopted": [
+   {
+    "doc": "erg2024-methodology",
+    "locator": "erg2024-methodology#p22 (Table 2.3)",
+    "what": "shipment amounts: DOT Class 105/112 tank car 80,000 kg; MC331 cargo tank 20,000 kg",
+    "why": "an example profile ('Data provided are for chlorine trifluoride (UN 1749)'); chlorine and ammonia have chemical-specific profiles the methodology does not print, and DN-018 section 5 names one authority"
+   }
+  ],
+  "worst_case": {
+   "definition": {
+    "receipt": {
+     "doc_id": "epa-rmp-oca-guidance-2009",
+     "locator": "epa-rmp-oca-guidance-2009#p23",
+     "page": 23,
+     "quote": "the duration of the release (always 10 minutes for gas releases)",
+     "read_by": "text_layer",
+     "sha256": "054fa19050e27d1068d9ee99bc79fd4287296d137e5c7c5f243eaf7d35a3d3e7"
+    },
+    "text": "the duration of the release (always 10 minutes for gas releases)"
+   },
+   "duration_min": {
+    "derived_from": [],
+    "reason": null,
+    "receipt": {
+     "doc_id": "epa-rmp-oca-guidance-2009",
+     "locator": "epa-rmp-oca-guidance-2009#p23",
+     "page": 23,
+     "quote": "always 10 minutes for gas releases",
+     "read_by": "text_layer",
+     "sha256": "054fa19050e27d1068d9ee99bc79fd4287296d137e5c7c5f243eaf7d35a3d3e7"
+    },
+    "status": "held",
+    "unit": "min",
+    "value": 10.0
+   }
+  }
+ },
+ "kind": "release_scenarios",
+ "pack_id": "release_scenarios",
+ "schema_version": 8,
+ "sha256": "aee4cca6e4050ac4fdee714a3b05231e5c0cac60c30821ab895815cf2f6f4df7",
+ "sources": [
+  {
+   "doc_id": "epa-rmp-oca-guidance-2009",
+   "licence": "public-domain",
+   "locator": "epa-rmp-oca-guidance-2009 (HB-66 receipts)",
+   "raw_sha256": "054fa19050e27d1068d9ee99bc79fd4287296d137e5c7c5f243eaf7d35a3d3e7"
+  },
+  {
+   "doc_id": "epa-rmp-oca-guidance-appendices-1999",
+   "licence": "public-domain",
+   "locator": "epa-rmp-oca-guidance-appendices-1999 (HB-66 receipts)",
+   "raw_sha256": "202ac64f49545a183c5820449a8d2f56d111ffc5bf86474ee350848a1f0bd021"
+  }
+ ],
+ "version": "rmpoca2009.2"
+}

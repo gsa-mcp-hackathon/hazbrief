@@ -1,0 +1,38 @@
+{
+ "dc_wac_S000_JT00_2023.csv.gz": {
+  "bytes": 113247,
+  "citation": "U.S. Census Bureau, \"dc_wac_S000_JT00_2023.csv.gz,\" LEHD Origin-Destination Employment Statistics, LODES 8.4, https://lehd.ces.census.gov/data/lodes, accessed on 2026-10-21.",
+  "lodes_version": "8.4",
+  "retrieved_at": "2026-10-21T13:14:41+00:00",
+  "sha256": "f39b6969793bafedbeb214176af03ade7c0c222bc68f7d357fdc6e03652f3d40",
+  "url": "https://lehd.ces.census.gov/data/lodes/LODES8/dc/wac/dc_wac_S000_JT00_2023.csv.gz",
+  "year": 2023
+ },
+ "md_wac_S000_JT00_2023.csv.gz": {
+  "bytes": 799052,
+  "citation": "U.S. Census Bureau, \"md_wac_S000_JT00_2023.csv.gz,\" LEHD Origin-Destination Employment Statistics, LODES 8.4, https://lehd.ces.census.gov/data/lodes, accessed on 2026-10-21.",
+  "lodes_version": "8.4",
+  "retrieved_at": "2026-10-21T13:14:39+00:00",
+  "sha256": "fd9cd7f5654a81bd55b0660292e1bdc154390df5f20f6ca3c1d10c55f4590031",
+  "url": "https://lehd.ces.census.gov/data/lodes/LODES8/md/wac/md_wac_S000_JT00_2023.csv.gz",
+  "year": 2023
+ },
+ "pa_wac_S000_JT00_2023.csv.gz": {
+  "bytes": 2430495,
+  "citation": "U.S. Census Bureau, \"pa_wac_S000_JT00_2023.csv.gz,\" LEHD Origin-Destination Employment Statistics, LODES 8.4, https://lehd.ces.census.gov/data/lodes, accessed on 2026-10-21.",
+  "lodes_version": "8.4",
+  "retrieved_at": "2026-10-21T13:14:40+00:00",
+  "sha256": "56475b2c9a208b6131e27cc3c70fc06e66f419773c590f403829d1f3026b63d5",
+  "url": "https://lehd.ces.census.gov/data/lodes/LODES8/pa/wac/pa_wac_S000_JT00_2023.csv.gz",
+  "year": 2023
+ },
+ "va_wac_S000_JT00_2023.csv.gz": {
+  "bytes": 1340963,
+  "citation": "U.S. Census Bureau, \"va_wac_S000_JT00_2023.csv.gz,\" LEHD Origin-Destination Employment Statistics, LODES 8.4, https://lehd.ces.census.gov/data/lodes, accessed on 2026-10-21.",
+  "lodes_version": "8.4",
+  "retrieved_at": "2026-10-21T13:14:41+00:00",
+  "sha256": "d5f638638e597dcc2c4331be381016366d254a1f540ac5c10c42e2cb8abf4b30",
+  "url": "https://lehd.ces.census.gov/data/lodes/LODES8/va/wac/va_wac_S000_JT00_2023.csv.gz",
+  "year": 2023
+ }
+}

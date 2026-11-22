@@ -1,0 +1,262 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.573276,
+      39.652773
+     ],
+     "type": "Point"
+    },
+    "id": 6464698,
+    "properties": {
+     "address": "63 Railroad Lane",
+     "city": "Smithsburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1629417600000,
+     "name": "Smithsburg Police Department",
+     "objectid": 6464698,
+     "permanent_identifier": "41ae0d30-2d4b-496b-850c-b570dcf59f11",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.726226,
+      39.645754
+     ],
+     "type": "Point"
+    },
+    "id": 6474467,
+    "properties": {
+     "address": "50 North Burhans Boulevard",
+     "city": "Hagerstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1465210783000,
+     "name": "Hagerstown Police Department",
+     "objectid": 6474467,
+     "permanent_identifier": "4d24fafe-a590-47a9-adc8-044158846158",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.556666,
+      39.743338
+     ],
+     "type": "Point"
+    },
+    "id": 6495612,
+    "properties": {
+     "address": "13013 Welty Road",
+     "city": "Waynesboro",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1463570413000,
+     "name": "Washington Township Police Department",
+     "objectid": 6495612,
+     "permanent_identifier": "66be127a-ed01-4e23-92a4-d3764f8f1b71",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.725578,
+      39.791098
+     ],
+     "type": "Point"
+    },
+    "id": 6517034,
+    "properties": {
+     "address": "60 North Washington Street",
+     "city": "Greencastle",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1578096000000,
+     "name": "Greencastle Police Department",
+     "objectid": 6517034,
+     "permanent_identifier": "80c03c51-55a6-481f-9bf3-9f6bc3fee2e4",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.761825,
+      39.639512
+     ],
+     "type": "Point"
+    },
+    "id": 6519219,
+    "properties": {
+     "address": "500 Western Maryland Parkway",
+     "city": "Hagerstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1465210783000,
+     "name": "Washington County Sheriff's Office",
+     "objectid": 6519219,
+     "permanent_identifier": "830f28bd-89cb-4612-8335-b2eb49951037",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.903529,
+      39.826408
+     ],
+     "type": "Point"
+    },
+    "id": 6520767,
+    "properties": {
+     "address": "113 South Main Street",
+     "city": "Mercersburg",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1578096000000,
+     "name": "Mercersburg Police Department",
+     "objectid": 6520767,
+     "permanent_identifier": "84dea247-06d3-4ef3-97ab-139fcb6fa111",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.821646,
+      39.599351
+     ],
+     "type": "Point"
+    },
+    "id": 6526304,
+    "properties": {
+     "address": "2 North Conococheague Street",
+     "city": "Williamsport",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1555977600000,
+     "name": "Washington County Sheriff's Office",
+     "objectid": 6526304,
+     "permanent_identifier": "8b52cfa1-d9ba-4700-a867-b8ca4fdeff2f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.576002,
+      39.755044
+     ],
+     "type": "Point"
+    },
+    "id": 6613243,
+    "properties": {
+     "address": "57 East Main Street",
+     "city": "Waynesboro",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1578096000000,
+     "name": "Waynesboro Police Department",
+     "objectid": 6613243,
+     "permanent_identifier": "f35c2079-d92f-4dd1-829a-e8d4b267d928",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.721346,
+      39.642674
+     ],
+     "type": "Point"
+    },
+    "id": 6745807,
+    "properties": {
+     "address": "32 W Washington Street",
+     "city": "Hagerstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1570752000000,
+     "name": "Hagerstown City Police - University Systems of Maryland Substation",
+     "objectid": 6745807,
+     "permanent_identifier": "7ce38a07-0fd4-4429-b391-268814eef66a",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.733099,
+      39.604566
+     ],
+     "type": "Point"
+    },
+    "id": 6748537,
+    "properties": {
+     "address": "18345 Colonel Henry K Douglas Drive",
+     "city": "Hagerstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1582675200000,
+     "name": "Maryland State Police Department Barracks Hagerstown",
+     "objectid": 6748537,
+     "permanent_identifier": "7f4300ea-0385-4a6e-8bff-bf5e5cca08f7",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.667448,
+      39.630203
+     ],
+     "type": "Point"
+    },
+    "id": 6778165,
+    "properties": {
+     "address": "11400 Robinwood Drive",
+     "city": "Hagerstown",
+     "fcode": 74034,
+     "ftype": 740,
+     "loaddate": 1580083200000,
+     "name": "Hagerstown Community College Campus Police Department",
+     "objectid": 6778165,
+     "permanent_identifier": "9c6a3422-f8ca-45d7-ae79-2f3ab66f0463",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-13T08:16:52Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Fri, 13 Nov 2026 08:16:52 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/18/query?where=1%3D1&geometry=-77.912165%2C39.577272%2C-77.535835%2C39.866728&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

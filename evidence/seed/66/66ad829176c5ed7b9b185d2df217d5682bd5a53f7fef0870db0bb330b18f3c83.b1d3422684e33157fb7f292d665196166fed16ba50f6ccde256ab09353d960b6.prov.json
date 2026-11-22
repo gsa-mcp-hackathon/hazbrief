@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-21T23:25:14Z",
+  "http_mode": "record",
+  "id": "b1d3422684e33157fb7f292d665196166fed16ba50f6ccde256ab09353d960b6",
+  "name": "GET tigerweb",
+  "params": {
+   "method": "GET",
+   "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer?f=json"
+  },
+  "startedAtTime": "2026-10-21T23:25:14Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer?f=json",
+    "id": "tigerweb:current"
+   }
+  ]
+ },
+ "as_of": "2026-10-21T23:25:14Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 9427,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "66ad829176c5ed7b9b185d2df217d5682bd5a53f7fef0870db0bb330b18f3c83"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "tigerweb:current",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

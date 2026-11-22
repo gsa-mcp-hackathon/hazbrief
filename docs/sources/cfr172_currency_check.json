@@ -1,0 +1,84 @@
+{
+ "schema": "hazbrief currency_check 1",
+ "task": "HB-108",
+ "pack_id": "cfr172",
+ "pack_sha256": "69a7bf0f9a3e5b3593b0c6e93e95ce3fba42a5510dc5261cd5ef102ca06aaf69",
+ "pack_version": "cfr2025.1",
+ "edition": "Title 49 Parts 100 to 177 Revised as of October 1, 2025",
+ "checked_against": {
+  "doc_id": "cfr49-172-101-ecfr-xml",
+  "name": "the eCFR text of 49 CFR 172.101",
+  "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-15/title-49.xml?section=172.101",
+  "point_in_time": "2026-10-15"
+ },
+ "version_history": {
+  "doc_id": "hb105-ecfr-172-101-versions",
+  "retrieved_at": "2026-11-04T21:41:45Z",
+  "latest_amendment_date": "2026-09-08",
+  "latest_issue_date": "2026-10-28",
+  "substantive_after_point_in_time": []
+ },
+ "rows_compared": {
+  "old": 2480,
+  "new": 2480
+ },
+ "identification_numbers": {
+  "old": 2369,
+  "new": 2369
+ },
+ "rows_differing": {
+  "added": 0,
+  "removed": 0,
+  "changed": 3
+ },
+ "fixture_identification_numbers": [
+  "UN1005",
+  "UN1011",
+  "UN1012",
+  "UN1017",
+  "UN1049",
+  "UN1052",
+  "UN1055",
+  "UN1057",
+  "UN1075",
+  "UN1077",
+  "UN1202",
+  "UN1203",
+  "UN1267",
+  "UN1746",
+  "UN1823",
+  "UN1951",
+  "UN1957",
+  "UN1966",
+  "UN1969",
+  "UN1971",
+  "UN1972",
+  "UN1977",
+  "UN1978",
+  "UN2034",
+  "UN2915"
+ ],
+ "fixture_rows_differing": [],
+ "fixture_rows_unchanged": true,
+ "check_date": "2026-11-06",
+ "read": [
+  {
+   "doc_id": "cfr49-govinfo-bulk",
+   "path": "corpus/raw/cfr49-govinfo-bulk.xml",
+   "sha256": "82d0fea4df4b1d91dfd704b663524aec4daf9c6e69640157e292ce2914204462"
+  },
+  {
+   "doc_id": "cfr49-172-101-ecfr-xml",
+   "path": "corpus/raw/cfr49-172-101-ecfr-xml.xml",
+   "sha256": "10d434682842084c906af1a201c050f61a87ef5683ce9fe80f9c9f75996d45b0"
+  },
+  {
+   "doc_id": "hb105-ecfr-172-101-versions",
+   "path": "docs/evidence/hb105/cfr/raw/hb105-ecfr-172-101-versions.json",
+   "sha256": "8d013c6ec65313e5b189f9a767a6627d55d936d80dd5b1f97e9d02de96862761"
+  }
+ ],
+ "diff": "docs/evidence/hb108/hmt_diff.tsv",
+ "produced_by": "scripts/cfr_currency_check.py",
+ "network": "none"
+}

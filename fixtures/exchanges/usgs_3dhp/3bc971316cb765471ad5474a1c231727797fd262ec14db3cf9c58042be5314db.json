@@ -1,0 +1,696 @@
+{
+ "api": "usgs_3dhp",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.035712,
+       38.766538
+      ],
+      [
+       -77.035193,
+       38.753743
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4605535,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Potomac River",
+     "hydrosequence": 4627237,
+     "id3dhp": "1CWJV",
+     "mainstemid": "https://geoconnex.us/ref/mainstems/2152216"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.03564,
+       38.707487
+      ],
+      [
+       -77.03945,
+       38.705652
+      ],
+      [
+       -77.041499,
+       38.70499
+      ],
+      [
+       -77.043777,
+       38.704725
+      ],
+      [
+       -77.045699,
+       38.704763
+      ],
+      [
+       -77.047736,
+       38.704909
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4539421,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": null,
+     "hydrosequence": 4561644,
+     "id3dhp": "1RDXD",
+     "mainstemid": "https://geoconnex.us/usgs/mainstems/9805902"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.049761,
+       38.769072
+      ],
+      [
+       -77.049486,
+       38.769022
+      ],
+      [
+       -77.048976,
+       38.769102
+      ],
+      [
+       -77.042313,
+       38.768197
+      ],
+      [
+       -77.035712,
+       38.766538
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4627237,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": null,
+     "hydrosequence": 4649020,
+     "id3dhp": "2FJZ8",
+     "mainstemid": "https://geoconnex.us/usgs/mainstems/9792147"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.023411,
+       38.744751
+      ],
+      [
+       -77.02499,
+       38.744447
+      ],
+      [
+       -77.030042,
+       38.742277
+      ],
+      [
+       -77.033411,
+       38.740137
+      ],
+      [
+       -77.034736,
+       38.738395
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4583672,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Broad Creek",
+     "hydrosequence": 4605534,
+     "id3dhp": "3N5J7",
+     "mainstemid": "https://geoconnex.us/ref/mainstems/2154715"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.051066,
+       38.789763
+      ],
+      [
+       -77.050717,
+       38.789341
+      ],
+      [
+       -77.050859,
+       38.78891
+      ],
+      [
+       -77.05138,
+       38.788264
+      ],
+      [
+       -77.051714,
+       38.787192
+      ],
+      [
+       -77.050927,
+       38.784954
+      ],
+      [
+       -77.044588,
+       38.781462
+      ],
+      [
+       -77.03635,
+       38.773635
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4649021,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Hunting Creek",
+     "hydrosequence": 4670813,
+     "id3dhp": "3WTU5",
+     "mainstemid": "https://geoconnex.us/ref/mainstems/2154623"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.031167,
+       38.718628
+      ],
+      [
+       -77.033461,
+       38.717451
+      ],
+      [
+       -77.03516,
+       38.716515
+      ],
+      [
+       -77.038222,
+       38.71472
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4561645,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Swan Creek",
+     "hydrosequence": 4583671,
+     "id3dhp": "41OKC",
+     "mainstemid": "https://geoconnex.us/usgs/mainstems/3021701"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.038222,
+       38.71472
+      ],
+      [
+       -77.039644,
+       38.712954
+      ],
+      [
+       -77.042963,
+       38.709386
+      ],
+      [
+       -77.044386,
+       38.708131
+      ],
+      [
+       -77.045762,
+       38.706987
+      ],
+      [
+       -77.046777,
+       38.706189
+      ],
+      [
+       -77.047736,
+       38.704909
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4539421,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Potomac River",
+     "hydrosequence": 4561645,
+     "id3dhp": "5IY07",
+     "mainstemid": "https://geoconnex.us/ref/mainstems/2152216"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.035193,
+       38.753743
+      ],
+      [
+       -77.035072,
+       38.75
+      ],
+      [
+       -77.035074,
+       38.746095
+      ],
+      [
+       -77.034736,
+       38.738395
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4583672,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Potomac River",
+     "hydrosequence": 4605535,
+     "id3dhp": "7JV04",
+     "mainstemid": "https://geoconnex.us/ref/mainstems/2152216"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.027959,
+       38.712779
+      ],
+      [
+       -77.028071,
+       38.712777
+      ],
+      [
+       -77.028346,
+       38.712843
+      ],
+      [
+       -77.028533,
+       38.713021
+      ],
+      [
+       -77.028612,
+       38.713075
+      ],
+      [
+       -77.028787,
+       38.713061
+      ],
+      [
+       -77.029064,
+       38.712952
+      ],
+      [
+       -77.029188,
+       38.712873
+      ],
+      [
+       -77.02938,
+       38.712694
+      ],
+      [
+       -77.02978,
+       38.712478
+      ],
+      [
+       -77.030038,
+       38.712182
+      ],
+      [
+       -77.030225,
+       38.712102
+      ],
+      [
+       -77.030685,
+       38.711995
+      ],
+      [
+       -77.03149,
+       38.711729
+      ],
+      [
+       -77.031829,
+       38.711563
+      ],
+      [
+       -77.032044,
+       38.711488
+      ],
+      [
+       -77.032596,
+       38.711166
+      ],
+      [
+       -77.033075,
+       38.711003
+      ],
+      [
+       -77.033296,
+       38.710862
+      ],
+      [
+       -77.033521,
+       38.710666
+      ],
+      [
+       -77.0338,
+       38.710365
+      ],
+      [
+       -77.034082,
+       38.710179
+      ],
+      [
+       -77.034357,
+       38.70996
+      ],
+      [
+       -77.034451,
+       38.709843
+      ],
+      [
+       -77.034616,
+       38.709702
+      ],
+      [
+       -77.034697,
+       38.709591
+      ],
+      [
+       -77.035096,
+       38.709348
+      ],
+      [
+       -77.035349,
+       38.709107
+      ],
+      [
+       -77.035537,
+       38.708818
+      ],
+      [
+       -77.0356,
+       38.708317
+      ],
+      [
+       -77.035565,
+       38.70784
+      ],
+      [
+       -77.03564,
+       38.707487
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4561644,
+     "featuretypelabel": "Channel Line",
+     "gnisidlabel": null,
+     "hydrosequence": 4583670,
+     "id3dhp": "7TLDI",
+     "mainstemid": "https://geoconnex.us/usgs/mainstems/9805902"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.03635,
+       38.773635
+      ],
+      [
+       -77.035407,
+       38.771586
+      ],
+      [
+       -77.035712,
+       38.766538
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4627237,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Potomac River",
+     "hydrosequence": 4649021,
+     "id3dhp": "83AV3",
+     "mainstemid": "https://geoconnex.us/ref/mainstems/2152216"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.032484,
+       38.796779
+      ],
+      [
+       -77.033788,
+       38.791952
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4670814,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Potomac River",
+     "hydrosequence": 4692667,
+     "id3dhp": "A3IWL",
+     "mainstemid": "https://geoconnex.us/ref/mainstems/2152216"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.032146,
+       38.806316
+      ],
+      [
+       -77.032131,
+       38.804737
+      ],
+      [
+       -77.031389,
+       38.800834
+      ],
+      [
+       -77.032484,
+       38.796779
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4692667,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Potomac River",
+     "hydrosequence": 4714289,
+     "id3dhp": "BZL0T",
+     "mainstemid": "https://geoconnex.us/ref/mainstems/2152216"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.033788,
+       38.791952
+      ],
+      [
+       -77.03635,
+       38.773635
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4649021,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Potomac River",
+     "hydrosequence": 4670814,
+     "id3dhp": "E65J7",
+     "mainstemid": "https://geoconnex.us/ref/mainstems/2152216"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.034736,
+       38.738395
+      ],
+      [
+       -77.035347,
+       38.731996
+      ],
+      [
+       -77.03555,
+       38.726055
+      ],
+      [
+       -77.036332,
+       38.721768
+      ],
+      [
+       -77.037406,
+       38.716849
+      ],
+      [
+       -77.038222,
+       38.71472
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4561645,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": "Potomac River",
+     "hydrosequence": 4583672,
+     "id3dhp": "EB0CI",
+     "mainstemid": "https://geoconnex.us/ref/mainstems/2152216"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.026611,
+       38.796619
+      ],
+      [
+       -77.032484,
+       38.796779
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4692667,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": null,
+     "hydrosequence": 4714290,
+     "id3dhp": "EK0U9",
+     "mainstemid": "https://geoconnex.us/usgs/mainstems/11215990"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.029004,
+       38.774625
+      ],
+      [
+       -77.03635,
+       38.773635
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4649021,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": null,
+     "hydrosequence": 4670815,
+     "id3dhp": "GGW87",
+     "mainstemid": "https://geoconnex.us/usgs/mainstems/12545680"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.047843,
+       38.760663
+      ],
+      [
+       -77.04814,
+       38.759779
+      ],
+      [
+       -77.0481,
+       38.759609
+      ],
+      [
+       -77.04792,
+       38.759201
+      ],
+      [
+       -77.047412,
+       38.758841
+      ],
+      [
+       -77.044053,
+       38.758159
+      ],
+      [
+       -77.035193,
+       38.753743
+      ]
+     ],
+     "type": "LineString"
+    },
+    "properties": {
+     "dnhydrosequence": 4605535,
+     "featuretypelabel": "Waterbody Connector",
+     "gnisidlabel": null,
+     "hydrosequence": 4627238,
+     "id3dhp": "JUDI",
+     "mainstemid": "https://geoconnex.us/usgs/mainstems/6259953"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-27T15:10:10Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Tue, 27 Oct 2026 15:10:10 GMT",
+  "ETag": "W/\"1788895078\""
+ },
+ "status": 200,
+ "url": "https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer/50/query?maxAllowableOffset=1e-05&where=1%3D1&geometry=-77.047132%2C38.706889%2C-77.031240%2C38.802075&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=id3dhp%2Cgnisidlabel%2Cfeaturetypelabel%2Cmainstemid%2Chydrosequence%2Cdnhydrosequence&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=1000&f=geojson"
+}

@@ -1,0 +1,1858 @@
+{
+ "attribution": {
+  "credits": [
+   {
+    "doc_id": "cfr49-govinfo-bulk",
+    "edition": "CFR 2025 annual edition, title 49 volume 2 (parts 100 to 177); AMDDATE June 23, 2025",
+    "publisher": "US GPO GovInfo",
+    "title": "Code of Federal Regulations, Title 49, annual edition (GovInfo bulk XML)",
+    "url": "https://www.govinfo.gov/bulkdata/CFR/2025/title-49/CFR-2025-title49-vol2.xml"
+   },
+   {
+    "doc_id": "erg2024-en-pdf",
+    "edition": "2024",
+    "publisher": "US DOT PHMSA",
+    "title": "Emergency Response Guidebook 2024 (English, web PDF)",
+    "url": "https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2024-04/ERG2024-Eng-Web-a.pdf"
+   }
+  ],
+  "notices": [
+   {
+    "doc_id": "cfr49-govinfo-bulk",
+    "locator": "cfr49-govinfo-bulk#OENOTICE",
+    "text": "It is prohibited to use NARA's official seal and the stylized Code of Federal Regulations logo on any republication of this material without the express, written permission of the Archivist of the United States or the Archivist's designee. Any person using NARA's official seals and logos in a manner inconsistent with the provisions of 36 CFR part 1200 is subject to the penalties specified in 18 U.S.C. 506, 701, and 1017."
+   },
+   {
+    "doc_id": "erg2024-en-pdf",
+    "locator": "erg2024-en-pdf#p382",
+    "text": "REPRODUCTION AND RESALE Copies of this document which are provided free-of-charge to fire, police and other emergency services may not be resold. ERG2024 may be reproduced without further permission subject to the following: The names and the seals of the participating governments may not be reproduced on a copy of this document unless that copy accurately reproduces the entire content (text, format, and coloration) of this document without modification. In addition, the publisher's full name and address must be displayed on the outside back cover of each copy, replacing the wording placed on the center of the back cover."
+   }
+  ]
+ },
+ "built_at": "2026-10-20T14:16:26Z",
+ "data": {
+  "guides": {
+   "111": {
+    "guide": "111",
+    "hazard_classes": [],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p154",
+       "page": 154,
+       "quote": "May explode from heat, shock, friction or contamination.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: Guide 111 is the guide for a mixed load or an unidentified cargo, and no release can be modelled for a material nobody has identified. The ERG warns \"May explode from heat, shock, friction or contamination\"; identify the material, then the brief can route it.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Mixed Load/Unidentified Cargo"
+   },
+   "112": {
+    "guide": "112",
+    "hazard_classes": [],
+    "placard_classes": [
+     "1.1",
+     "1.2",
+     "1.3",
+     "1.5"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p156",
+       "page": 156,
+       "quote": "MAY EXPLODE AND THROW FRAGMENTS 1600 METERS (1 MILE) OR MORE IF FIRE REACHES CARGO.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states this guide's hazard as blast and fragments, \"MAY EXPLODE AND THROW FRAGMENTS 1600 METERS (1 MILE) OR MORE IF FIRE REACHES CARGO\", not a drifting vapour cloud. The guide's isolation and evacuation distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Explosives* - Division 1.1, 1.2, 1.3 or 1.5"
+   },
+   "113": {
+    "guide": "113",
+    "hazard_classes": [
+     "3",
+     "4.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p158",
+       "page": 158,
+       "quote": "DRIED OUT material may explode if exposed to heat, flame, friction or shock; treat as an explosive (GUIDE 112).",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states this guide's hazard as fire and, once dried out, explosion, \"DRIED OUT material may explode if exposed to heat, flame, friction or shock; treat as an explosive (GUIDE 112)\", not a drifting vapour cloud. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Flammable Materials (Wet/Desensitized Explosive)"
+   },
+   "114": {
+    "guide": "114",
+    "hazard_classes": [],
+    "placard_classes": [
+     "1.4",
+     "1.6"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p160",
+       "page": 160,
+       "quote": "MAY EXPLODE AND THROW FRAGMENTS 800 METERS (1/2 MILE) OR MORE IF FIRE REACHES CARGO.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states this guide's hazard as blast and fragments, \"MAY EXPLODE AND THROW FRAGMENTS 800 METERS (1/2 MILE) OR MORE IF FIRE REACHES CARGO\", not a drifting vapour cloud. The guide's isolation and evacuation distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Explosives* - Division 1.4 or 1.6"
+   },
+   "115": {
+    "guide": "115",
+    "hazard_classes": [
+     "2.1",
+     "2.2",
+     "3",
+     "9"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p162",
+       "page": 162,
+       "quote": "Will form explosive mixtures with air.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "two_phase_jet",
+      "state": "pressure_liquefied"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p162",
+       "page": 162,
+       "quote": "Will form explosive mixtures with air.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "refrigerated_liquid"
+     }
+    ],
+    "title": "Gases - Flammable (Including Refrigerated Liquids)"
+   },
+   "116": {
+    "guide": "116",
+    "hazard_classes": [
+     "2.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p164",
+       "page": 164,
+       "quote": "Will form explosive mixtures with air. Acetylene (UN1001, UN3374) may react explosively even in the absence of air.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "two_phase_jet",
+      "state": "pressure_liquefied"
+     }
+    ],
+    "title": "Gases - Flammable (Unstable)"
+   },
+   "117": {
+    "guide": "117",
+    "hazard_classes": [
+     "2.3",
+     "6.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p166",
+       "page": 166,
+       "quote": "May be fatal if inhaled or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "two_phase_jet",
+      "state": "pressure_liquefied"
+     }
+    ],
+    "title": "Gases - Toxic - Flammable (Extreme Hazard)"
+   },
+   "118": {
+    "guide": "118",
+    "hazard_classes": [
+     "2.1"
+    ],
+    "placard_classes": [
+     "2.1"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p168",
+       "page": 168,
+       "quote": "May form explosive mixtures with air.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "two_phase_jet",
+      "state": "pressure_liquefied"
+     }
+    ],
+    "title": "Gases - Flammable - Corrosive"
+   },
+   "119": {
+    "guide": "119",
+    "hazard_classes": [
+     "2.1",
+     "2.3"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p170",
+       "page": 170,
+       "quote": "TOXIC; may be fatal if inhaled or absorbed through skin. Some may cause severe skin burns and eye damage.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "two_phase_jet",
+      "state": "pressure_liquefied"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p170",
+       "page": 170,
+       "quote": "TOXIC; may be fatal if inhaled or absorbed through skin. Some may cause severe skin burns and eye damage.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "refrigerated_liquid"
+     }
+    ],
+    "title": "Gases - Toxic - Flammable"
+   },
+   "120": {
+    "guide": "120",
+    "hazard_classes": [
+     "2.2",
+     "9"
+    ],
+    "placard_classes": [
+     "2.2"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p172",
+       "page": 172,
+       "quote": "Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "oxygen_deficiency",
+      "reason": null,
+      "route": "two_phase_jet",
+      "state": "pressure_liquefied"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p172",
+       "page": 172,
+       "quote": "Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "oxygen_deficiency",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "refrigerated_liquid"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p172",
+       "page": 172,
+       "quote": "Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas\". The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "solid"
+     }
+    ],
+    "title": "Gases - Inert (Including Refrigerated Liquids)"
+   },
+   "122": {
+    "guide": "122",
+    "hazard_classes": [
+     "2.2"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p176",
+       "page": 176,
+       "quote": "Substance does not burn but will support combustion.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states this guide's hazard as feeding a fire, \"Substance does not burn but will support combustion\", not a toxic or flammable cloud. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Gases - Oxidizing (Including Refrigerated Liquids)"
+   },
+   "123": {
+    "guide": "123",
+    "hazard_classes": [
+     "2.2",
+     "2.3"
+    ],
+    "placard_classes": [
+     "2.3"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p178",
+       "page": 178,
+       "quote": "TOXIC; may be fatal if inhaled or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "two_phase_jet",
+      "state": "pressure_liquefied"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p178",
+       "page": 178,
+       "quote": "TOXIC; may be fatal if inhaled or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "refrigerated_liquid"
+     }
+    ],
+    "title": "Gases - Toxic"
+   },
+   "124": {
+    "guide": "124",
+    "hazard_classes": [
+     "2.3"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p180",
+       "page": 180,
+       "quote": "TOXIC and/or CORROSIVE; may be fatal if inhaled or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "two_phase_jet",
+      "state": "pressure_liquefied"
+     }
+    ],
+    "title": "Gases - Toxic and/or Corrosive - Oxidizing"
+   },
+   "125": {
+    "guide": "125",
+    "hazard_classes": [
+     "2.2",
+     "2.3",
+     "8"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p182",
+       "page": 182,
+       "quote": "TOXIC and/or CORROSIVE; may be fatal if inhaled, ingested or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "two_phase_jet",
+      "state": "pressure_liquefied"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p182",
+       "page": 182,
+       "quote": "TOXIC and/or CORROSIVE; may be fatal if inhaled, ingested or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "refrigerated_liquid"
+     }
+    ],
+    "title": "Gases - Toxic and/or Corrosive"
+   },
+   "126": {
+    "guide": "126",
+    "hazard_classes": [
+     "2.1",
+     "2.2"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p184",
+       "page": 184,
+       "quote": "Vapors may cause dizziness or asphyxiation without warning, especially when in closed or confined areas.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "oxygen_deficiency",
+      "reason": null,
+      "route": "two_phase_jet",
+      "state": "pressure_liquefied"
+     }
+    ],
+    "title": "Gases - Compressed or Liquefied (Including Refrigerant Gases)"
+   },
+   "127": {
+    "guide": "127",
+    "hazard_classes": [
+     "3"
+    ],
+    "placard_classes": [
+     "3"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p186",
+       "page": 186,
+       "quote": "Vapors may form explosive mixtures with air.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     }
+    ],
+    "title": "Flammable Liquids (Water-Miscible)"
+   },
+   "128": {
+    "guide": "128",
+    "hazard_classes": [
+     "2.1",
+     "3",
+     "4.1",
+     "9",
+     "Comb liq"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p188",
+       "page": 188,
+       "quote": "Vapors may form explosive mixtures with air.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p188",
+       "page": 188,
+       "quote": "HIGHLY FLAMMABLE: Will be easily ignited by heat, sparks or flames.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"HIGHLY FLAMMABLE: Will be easily ignited by heat, sparks or flames\". The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "solid"
+     }
+    ],
+    "title": "Flammable Liquids (Water-Immiscible)"
+   },
+   "129": {
+    "guide": "129",
+    "hazard_classes": [
+     "3"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p190",
+       "page": 190,
+       "quote": "Vapors may form explosive mixtures with air.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     }
+    ],
+    "title": "Flammable Liquids (Water-Miscible/Noxious)"
+   },
+   "130": {
+    "guide": "130",
+    "hazard_classes": [
+     "3"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p192",
+       "page": 192,
+       "quote": "Vapors may form explosive mixtures with air.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     }
+    ],
+    "title": "Flammable Liquids (Water-Immiscible/Noxious)"
+   },
+   "131": {
+    "guide": "131",
+    "hazard_classes": [
+     "3",
+     "6.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p194",
+       "page": 194,
+       "quote": "TOXIC; may be fatal if inhaled, ingested or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     }
+    ],
+    "title": "Flammable Liquids - Toxic"
+   },
+   "132": {
+    "guide": "132",
+    "hazard_classes": [
+     "3",
+     "6.1",
+     "8"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p196",
+       "page": 196,
+       "quote": "Vapors may form explosive mixtures with air.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     }
+    ],
+    "title": "Flammable Liquids - Corrosive"
+   },
+   "133": {
+    "guide": "133",
+    "hazard_classes": [
+     "4.1",
+     "4.2",
+     "9"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p198",
+       "page": 198,
+       "quote": "May be ignited by friction, heat, sparks or flames.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: these are solids whose hazard the ERG states as fire, reaction or contact, \"May be ignited by friction, heat, sparks or flames\", not a vapour that drifts downwind. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Flammable Solids"
+   },
+   "134": {
+    "guide": "134",
+    "hazard_classes": [
+     "4.1",
+     "6.1",
+     "8"
+    ],
+    "placard_classes": [
+     "4.1"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p200",
+       "page": 200,
+       "quote": "Flammable/combustible material.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: these are solids whose hazard the ERG states as fire, reaction or contact, \"Flammable/combustible material\", not a vapour that drifts downwind. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Flammable Solids - Toxic and/or Corrosive"
+   },
+   "135": {
+    "guide": "135",
+    "hazard_classes": [
+     "4.2",
+     "4.3",
+     "5.1",
+     "6.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p202",
+       "page": 202,
+       "quote": "May ignite on contact with moist air or moisture.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: these are solids whose hazard the ERG states as fire, reaction or contact, \"May ignite on contact with moist air or moisture\", not a vapour that drifts downwind. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Substances - Spontaneously Combustible"
+   },
+   "136": {
+    "guide": "136",
+    "hazard_classes": [
+     "4.2",
+     "6.1",
+     "8"
+    ],
+    "placard_classes": [
+     "4.2"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p204",
+       "page": 204,
+       "quote": "Extremely flammable; will ignite itself if exposed to air.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: these are solids whose hazard the ERG states as fire, reaction or contact, \"Extremely flammable; will ignite itself if exposed to air\", not a vapour that drifts downwind. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Substances - Spontaneously Combustible - Toxic and/or Corrosive (Air-Reactive)"
+   },
+   "137": {
+    "guide": "137",
+    "hazard_classes": [
+     "6.1",
+     "8"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p206",
+       "page": 206,
+       "quote": "CORROSIVE and/or TOXIC; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p206",
+       "page": 206,
+       "quote": "CORROSIVE and/or TOXIC; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"CORROSIVE and/or TOXIC; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death\". The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "solid"
+     }
+    ],
+    "title": "Substances - Water-Reactive - Corrosive"
+   },
+   "138": {
+    "guide": "138",
+    "hazard_classes": [
+     "4.1",
+     "4.2",
+     "4.3",
+     "8",
+     "9"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p208",
+       "page": 208,
+       "quote": "Produce flammable gases on contact with water.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the hazard is the gas the material makes with water, \"Produce flammable gases on contact with water\", a reaction no release model here describes. The guide and ERG Table 2 (water-reactive materials) are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Substances - Water-Reactive (Emitting Flammable Gases)"
+   },
+   "139": {
+    "guide": "139",
+    "hazard_classes": [
+     "4.1",
+     "4.3",
+     "6.1"
+    ],
+    "placard_classes": [
+     "4.3"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p210",
+       "page": 210,
+       "quote": "Produce flammable and toxic gases on contact with water.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the hazard is the gas the material makes with water, \"Produce flammable and toxic gases on contact with water\", a reaction no release model here describes. The guide and ERG Table 2 (water-reactive materials) are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Substances - Water-Reactive (Emitting Flammable And Toxic Gases)"
+   },
+   "140": {
+    "guide": "140",
+    "hazard_classes": [
+     "4.1",
+     "5.1",
+     "9"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p212",
+       "page": 212,
+       "quote": "These substances will accelerate burning when involved in a fire.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: an oxidiser's hazard, as the ERG states it, is fire and explosion with other materials, \"These substances will accelerate burning when involved in a fire\", not a toxic or flammable cloud of its own. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Oxidizers"
+   },
+   "141": {
+    "guide": "141",
+    "hazard_classes": [
+     "5.1",
+     "6.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p214",
+       "page": 214,
+       "quote": "These substances will accelerate burning when involved in a fire.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: an oxidiser's hazard, as the ERG states it, is fire and explosion with other materials, \"These substances will accelerate burning when involved in a fire\", not a toxic or flammable cloud of its own. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Oxidizers - Toxic"
+   },
+   "142": {
+    "guide": "142",
+    "hazard_classes": [
+     "5.1",
+     "6.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p216",
+       "page": 216,
+       "quote": "These substances will accelerate burning when involved in a fire.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: an oxidiser's hazard, as the ERG states it, is fire and explosion with other materials, \"These substances will accelerate burning when involved in a fire\", not a toxic or flammable cloud of its own. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Oxidizers - Toxic (Liquid)"
+   },
+   "143": {
+    "guide": "143",
+    "hazard_classes": [
+     "5.1",
+     "6.1"
+    ],
+    "placard_classes": [
+     "5.1"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p218",
+       "page": 218,
+       "quote": "May explode from friction, heat or contamination.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: an oxidiser's hazard, as the ERG states it, is fire and explosion with other materials, \"May explode from friction, heat or contamination\", not a toxic or flammable cloud of its own. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Oxidizers (Unstable)"
+   },
+   "144": {
+    "guide": "144",
+    "hazard_classes": [
+     "5.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p220",
+       "page": 220,
+       "quote": "React vigorously and/or explosively with water.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: an oxidiser's hazard, as the ERG states it, is fire and explosion with other materials, \"React vigorously and/or explosively with water\", not a toxic or flammable cloud of its own. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Oxidizers (Water-Reactive)"
+   },
+   "145": {
+    "guide": "145",
+    "hazard_classes": [
+     "5.2"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p222",
+       "page": 222,
+       "quote": "May explode from heat or contamination.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states an organic peroxide's hazard as decomposition, fire and explosion, \"May explode from heat or contamination\", not a vapour cloud. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Organic Peroxides (Heat and Contamination Sensitive)"
+   },
+   "146": {
+    "guide": "146",
+    "hazard_classes": [
+     "5.2"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p224",
+       "page": 224,
+       "quote": "May explode from heat, shock, friction or contamination.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states an organic peroxide's hazard as decomposition, fire and explosion, \"May explode from heat, shock, friction or contamination\", not a vapour cloud. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Organic Peroxides (Heat, Contamination and Friction Sensitive)"
+   },
+   "147": {
+    "guide": "147",
+    "hazard_classes": [
+     "9"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p226",
+       "page": 226,
+       "quote": "May ignite other batteries in close proximity.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states the hazard as battery fire, \"May ignite other batteries in close proximity\", not a release of a stored liquid or gas. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Lithium Ion and Sodium Ion Batteries"
+   },
+   "148": {
+    "guide": "148",
+    "hazard_classes": [
+     "5.2"
+    ],
+    "placard_classes": [
+     "5.2"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p228",
+       "page": 228,
+       "quote": "May explode from heat, contamination or loss of temperature control.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states an organic peroxide's hazard as decomposition, fire and explosion, \"May explode from heat, contamination or loss of temperature control\", not a vapour cloud. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Organic Peroxides (Heat and Contamination Sensitive/Temperature Controlled)"
+   },
+   "149": {
+    "guide": "149",
+    "hazard_classes": [
+     "4.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p230",
+       "page": 230,
+       "quote": "Self-decomposition, self-polymerization, or self-ignition may be triggered by heat, chemical reaction, friction or impact.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states the hazard as self-reaction, fire and explosion, \"Self-decomposition, self-polymerization, or self-ignition may be triggered by heat, chemical reaction, friction or impact\", not a vapour cloud. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Substances (Self-Reactive)"
+   },
+   "150": {
+    "guide": "150",
+    "hazard_classes": [
+     "4.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p232",
+       "page": 232,
+       "quote": "Self-decomposition, self-polymerization, or self-ignition may be triggered by heat, chemical reaction, friction or impact.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states the hazard as self-reaction, fire and explosion, \"Self-decomposition, self-polymerization, or self-ignition may be triggered by heat, chemical reaction, friction or impact\", not a vapour cloud. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Substances (Self-Reactive/ Temperature Controlled)"
+   },
+   "151": {
+    "guide": "151",
+    "hazard_classes": [
+     "6.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p234",
+       "page": 234,
+       "quote": "Highly toxic, may be fatal if inhaled, ingested or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p234",
+       "page": 234,
+       "quote": "Highly toxic, may be fatal if inhaled, ingested or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"Highly toxic, may be fatal if inhaled, ingested or absorbed through skin\". The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "solid"
+     }
+    ],
+    "title": "Substances - Toxic (Non-Combustible)"
+   },
+   "152": {
+    "guide": "152",
+    "hazard_classes": [
+     "6.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p236",
+       "page": 236,
+       "quote": "Highly toxic, may be fatal if inhaled, ingested or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p236",
+       "page": 236,
+       "quote": "Highly toxic, may be fatal if inhaled, ingested or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"Highly toxic, may be fatal if inhaled, ingested or absorbed through skin\". The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "solid"
+     }
+    ],
+    "title": "Substances - Toxic (Combustible)"
+   },
+   "153": {
+    "guide": "153",
+    "hazard_classes": [
+     "6.1",
+     "8"
+    ],
+    "placard_classes": [
+     "6.1",
+     "8"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p238",
+       "page": 238,
+       "quote": "TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p238",
+       "page": 238,
+       "quote": "TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death\". The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "solid"
+     }
+    ],
+    "title": "Substances - Toxic and/or Corrosive (Combustible)"
+   },
+   "154": {
+    "guide": "154",
+    "hazard_classes": [
+     "6.1",
+     "8",
+     "9"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p240",
+       "page": 240,
+       "quote": "TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p240",
+       "page": 240,
+       "quote": "TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"TOXIC and/or CORROSIVE; inhalation, ingestion or skin contact with material may cause severe injury or death\". The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "solid"
+     }
+    ],
+    "title": "Substances - Toxic and/or Corrosive (Non-Combustible)"
+   },
+   "155": {
+    "guide": "155",
+    "hazard_classes": [
+     "3",
+     "6.1",
+     "8"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p242",
+       "page": 242,
+       "quote": "Vapors form explosive mixtures with air: indoors, outdoors and sewers explosion hazards.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     }
+    ],
+    "title": "Substances - Toxic and/or Corrosive (Flammable/Water-Sensitive)"
+   },
+   "156": {
+    "guide": "156",
+    "hazard_classes": [
+     "6.1",
+     "8"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p244",
+       "page": 244,
+       "quote": "TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p244",
+       "page": 244,
+       "quote": "TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death\". The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "solid"
+     }
+    ],
+    "title": "Substances - Toxic and/or Corrosive (Combustible/Water-Sensitive)"
+   },
+   "157": {
+    "guide": "157",
+    "hazard_classes": [
+     "6.1",
+     "8"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p246",
+       "page": 246,
+       "quote": "TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p246",
+       "page": 246,
+       "quote": "TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"TOXIC and/or CORROSIVE; inhalation, ingestion or contact (skin, eyes) with vapors, dusts or substance may cause severe injury, burns or death\". The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "solid"
+     }
+    ],
+    "title": "Substances - Toxic and/or Corrosive (Non-Combustible/Water-Sensitive)"
+   },
+   "158": {
+    "guide": "158",
+    "hazard_classes": [
+     "6.2"
+    ],
+    "placard_classes": [
+     "6.2"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p248",
+       "page": 248,
+       "quote": "Inhalation or contact with substance may cause infection, disease or death.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states the hazard as infection, \"Inhalation or contact with substance may cause infection, disease or death\", not a chemical vapour cloud. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Infectious Substances"
+   },
+   "159": {
+    "guide": "159",
+    "hazard_classes": [
+     "6.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p250",
+       "page": 250,
+       "quote": "Inhalation of vapors or dust is extremely irritating.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     },
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p250",
+       "page": 250,
+       "quote": "Inhalation of vapors or dust is extremely irritating.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies to the solid: a solid does not evaporate into a drifting cloud, and the ERG states its hazard as \"Inhalation of vapors or dust is extremely irritating\". The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "solid"
+     }
+    ],
+    "title": "Substances (Irritating)"
+   },
+   "160": {
+    "guide": "160",
+    "hazard_classes": [
+     "6.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p252",
+       "page": 252,
+       "quote": "Vapors may cause dizziness or asphyxiation, especially when in closed or confined areas.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "ambient_liquid"
+     }
+    ],
+    "title": "Halogenated Solvents"
+   },
+   "161": {
+    "guide": "161",
+    "hazard_classes": [
+     "7"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p254",
+       "page": 254,
+       "quote": "Very low levels of contained radioactive materials and low radiation levels outside packages result in low risks to people. Damaged packages may release measurable amounts of radioactive material, but the resulting risks are expected to be low.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the hazard is radiation and contamination from the package, which the ERG describes as \"Very low levels of contained radioactive materials and low radiation levels outside packages result in low risks to people. Damaged packages may release ...\". No vapour-cloud model measures it; the guide's distances and a radiation survey are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Radioactive Materials (Low Level Radiation)"
+   },
+   "162": {
+    "guide": "162",
+    "hazard_classes": [
+     "7"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p256",
+       "page": 256,
+       "quote": "Low radiation hazard when material is inside container. If material is released from package or bulk container, hazard will vary from low to moderate. Level of hazard will depend on the type and amount of radioactivity, the kind of material it is in, and/or the surfaces it is on.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the hazard is radiation and contamination from the package, which the ERG describes as \"Low radiation hazard when material is inside container. If material is released from package or bulk container, hazard will vary from low to moderate. Level ...\". No vapour-cloud model measures it; the guide's distances and a radiation survey are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Radioactive Materials (Low to Moderate Level Radiation)"
+   },
+   "163": {
+    "guide": "163",
+    "hazard_classes": [
+     "7"
+    ],
+    "placard_classes": [
+     "7"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p258",
+       "page": 258,
+       "quote": "Undamaged packages are safe. Contents of damaged packages may cause higher external radiation exposure, or both external and internal radiation exposure if contents are released.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the hazard is radiation and contamination from the package, which the ERG describes as \"Undamaged packages are safe. Contents of damaged packages may cause higher external radiation exposure, or both external and internal radiation exposure if ...\". No vapour-cloud model measures it; the guide's distances and a radiation survey are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Radioactive Materials (Low to High Level Radiation)"
+   },
+   "164": {
+    "guide": "164",
+    "hazard_classes": [
+     "7"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p260",
+       "page": 260,
+       "quote": "Undamaged packages are safe; contents of damaged packages may cause external radiation exposure, and much higher external exposure if contents (source capsules) are released.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the hazard is radiation and contamination from the package, which the ERG describes as \"Undamaged packages are safe; contents of damaged packages may cause external radiation exposure, and much higher external exposure if contents (source ...\". No vapour-cloud model measures it; the guide's distances and a radiation survey are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Radioactive Materials (Special Form/ Low to High Level External Radiation)"
+   },
+   "165": {
+    "guide": "165",
+    "hazard_classes": [
+     "7"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p262",
+       "page": 262,
+       "quote": "Undamaged packages are safe. Contents of damaged packages may cause higher external radiation exposure, or both external and internal radiation exposure if contents are released.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the hazard is radiation and contamination from the package, which the ERG describes as \"Undamaged packages are safe. Contents of damaged packages may cause higher external radiation exposure, or both external and internal radiation exposure if ...\". No vapour-cloud model measures it; the guide's distances and a radiation survey are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Radioactive Materials (Fissile/Low to High Level Radiation)"
+   },
+   "166": {
+    "guide": "166",
+    "hazard_classes": [
+     "6.1",
+     "7"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p264",
+       "page": 264,
+       "quote": "Substance reacts with water and water vapor in air to form toxic and corrosive hydrogen fluoride gas, hydrofluoric acid, and an extremely irritating and corrosive, white-colored, water-soluble residue.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: this is a radioactive material whose chemical hazard is a reaction product, \"Substance reacts with water and water vapor in air to form toxic and corrosive hydrogen fluoride gas, hydrofluoric acid, and an extremely irritating and ...\". No release model here takes a reaction with the air's moisture; the guide and ERG Table 1 are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Radioactive Materials - Corrosive (Uranium Hexafluoride/Water-Reactive)"
+   },
+   "168": {
+    "guide": "168",
+    "hazard_classes": [
+     "2.3"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p268",
+       "page": 268,
+       "quote": "Inhalation extremely dangerous; may be fatal.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "evaporating_pool",
+      "state": "refrigerated_liquid"
+     }
+    ],
+    "title": "Carbon Monoxide (Refrigerated Liquid)"
+   },
+   "169": {
+    "guide": "169",
+    "hazard_classes": [
+     "9"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p270",
+       "page": 270,
+       "quote": "Contact causes severe burns to skin and eyes.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states the hazard as heat, contact and reaction, \"Contact causes severe burns to skin and eyes\", not a vapour cloud. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Aluminum (Molten)"
+   },
+   "170": {
+    "guide": "170",
+    "hazard_classes": [
+     "3",
+     "4.1",
+     "4.2",
+     "6.1"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p272",
+       "page": 272,
+       "quote": "May react violently or explosively on contact with water.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: these are solids whose hazard the ERG states as fire, reaction or contact, \"May react violently or explosively on contact with water\", not a vapour that drifts downwind. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Metals (Powders, Dusts, Shavings, Borings, Turnings, or Cuttings, etc.)"
+   },
+   "171": {
+    "guide": "171",
+    "hazard_classes": [
+     "9"
+    ],
+    "placard_classes": [
+     "9"
+    ],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p274",
+       "page": 274,
+       "quote": "Inhalation of material may be harmful.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states this guide's hazard as \"Inhalation of material may be harmful\", with no toxic or flammable cloud. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Substances (Low to Moderate Hazard)"
+   },
+   "172": {
+    "guide": "172",
+    "hazard_classes": [
+     "8"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p276",
+       "page": 276,
+       "quote": "Inhalation of vapors or contact with substance will result in contamination and potential harmful effects.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": null,
+      "reason": "No dispersion model applies: the ERG states the hazard as contamination by contact and vapour, \"Inhalation of vapors or contact with substance will result in contamination and potential harmful effects\", not a drifting cloud a release model sizes. The guide's distances are the response.",
+      "route": "not_applicable",
+      "state": "any"
+     }
+    ],
+    "title": "Gallium and Mercury"
+   },
+   "173": {
+    "guide": "173",
+    "hazard_classes": [
+     "2.3"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p278",
+       "page": 278,
+       "quote": "TOXIC; may be fatal if inhaled or absorbed through skin.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "toxic",
+      "reason": null,
+      "route": "instantaneous",
+      "state": "any"
+     }
+    ],
+    "title": "Adsorbed Gases - Toxic*"
+   },
+   "174": {
+    "guide": "174",
+    "hazard_classes": [
+     "2.1",
+     "2.2"
+    ],
+    "placard_classes": [],
+    "rows": [
+     {
+      "basis": {
+       "doc_id": "erg2024-en-pdf",
+       "locator": "erg2024-en-pdf#p280",
+       "page": 280,
+       "quote": "Vapors may travel to source of ignition and flash back.",
+       "read_by": "text_layer",
+       "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+      },
+      "loc_class": "flammable_lfl",
+      "reason": null,
+      "route": "instantaneous",
+      "state": "any"
+     }
+    ],
+    "title": "Adsorbed Gases - Flammable or Oxidizing"
+   }
+  },
+  "rules": {
+   "polymerization_letter": {
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p347",
+     "page": 347,
+     "quote": "The letter (P) following the guide number in the yellow and blue sections identifies materials that present a polymerization hazard under certain conditions.",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "text": "The letter (P) following the guide number in the yellow and blue sections identifies materials that present a polymerization hazard under certain conditions."
+   },
+   "primary_hazard_first": {
+    "receipt": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p348",
+     "page": 348,
+     "quote": "Primary potential hazard is listed first.",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "text": "Primary potential hazard is listed first."
+   }
+  }
+ },
+ "kind": "release_routing",
+ "pack_id": "release_routing",
+ "schema_version": 8,
+ "sha256": "5533757e59fd0195074d840d05f124d3af2e984c74f74c0eb6a0c5d703ccedc5",
+ "sources": [
+  {
+   "doc_id": "cfr49-govinfo-bulk",
+   "licence": "public-domain",
+   "locator": "§ 172.101 Hazardous Materials Table",
+   "raw_sha256": "82d0fea4df4b1d91dfd704b663524aec4daf9c6e69640157e292ce2914204462"
+  },
+  {
+   "doc_id": "erg2024-en-pdf",
+   "licence": "reproduction-permitted",
+   "locator": "orange guides, POTENTIAL HAZARDS (HB-120 receipts)",
+   "raw_sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+  }
+ ],
+ "version": "hb120.1"
+}

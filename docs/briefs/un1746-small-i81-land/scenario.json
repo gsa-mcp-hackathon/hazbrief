@@ -1,0 +1,22 @@
+{
+ "as_given": "2026-10-21T14:00:00-04:00",
+ "id": "un1746-small-i81-land",
+ "incident": {
+  "container": "unknown",
+  "fire_involved": false,
+  "incident_time": "2026-10-21T14:00:00-04:00",
+  "location": {
+   "latitude": 39.722,
+   "longitude": -77.724
+  },
+  "material": "UN1746",
+  "spill_size": "small",
+  "where_spilled": "land"
+ },
+ "wind": {
+  "direction_deg_from": 270,
+  "observed_at": "2026-10-20T13:40:00-04:00",
+  "source": "worked example wind",
+  "speed_kmh": 13
+ }
+}

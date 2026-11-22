@@ -1,0 +1,316 @@
+{
+ "models": {
+  "claude-haiku-5-5": {
+   "base": {
+    "ambiguity": {
+     "args_load": 0.75,
+     "drew": 0.9167,
+     "every_candidate": 0.8333,
+     "flag_wording": 0.0833,
+     "governing": 0.75,
+     "invented_none": 1.0,
+     "pass": 0.0833
+    },
+    "args_match": 0.7619,
+    "by_family": {
+     "adversarial": 15,
+     "ambiguity": 12,
+     "out_of_scope": 15,
+     "scenario": 48
+    },
+    "episodes": 90,
+    "grounding_rate_mean": 0.9553,
+    "grounding_rate_pooled": 0.9705,
+    "out_of_scope_refusal": 0.4667,
+    "out_of_scope_refusal_lenient": 0.8,
+    "refusal_correct": 0.2857,
+    "refusal_correct_lenient": 0.5952,
+    "scenario_pass": 0.5833,
+    "stylebook_findings_per_episode": 32.0556,
+    "tool_precision": 1.0,
+    "tool_recall": 0.8833,
+    "tool_recall_strict": 0.3208
+   },
+   "delta": {
+    "ambiguity": {
+     "args_load": 0.25,
+     "drew": 0.0833,
+     "every_candidate": 0.1667,
+     "flag_wording": 0.3334,
+     "governing": 0.25,
+     "invented_none": 0.0,
+     "pass": 0.3334
+    },
+    "args_match": 0.2064,
+    "by_family": {
+     "adversarial": 0,
+     "ambiguity": 0,
+     "out_of_scope": 0,
+     "scenario": 0
+    },
+    "episodes": 0,
+    "grounding_rate_mean": 0.0023,
+    "grounding_rate_pooled": 0.0013,
+    "out_of_scope_refusal": -0.1334,
+    "out_of_scope_refusal_lenient": 0.0,
+    "refusal_correct": 0.1191,
+    "refusal_correct_lenient": 0.0715,
+    "scenario_pass": 0.2084,
+    "stylebook_findings_per_episode": 2.3111,
+    "tool_precision": 0.0,
+    "tool_recall": -0.0208,
+    "tool_recall_strict": -0.025
+   },
+   "new": {
+    "ambiguity": {
+     "args_load": 1.0,
+     "drew": 1.0,
+     "every_candidate": 1.0,
+     "flag_wording": 0.4167,
+     "governing": 1.0,
+     "invented_none": 1.0,
+     "pass": 0.4167
+    },
+    "args_match": 0.9683,
+    "by_family": {
+     "adversarial": 15,
+     "ambiguity": 12,
+     "out_of_scope": 15,
+     "scenario": 48
+    },
+    "episodes": 90,
+    "grounding_rate_mean": 0.9576,
+    "grounding_rate_pooled": 0.9718,
+    "out_of_scope_refusal": 0.3333,
+    "out_of_scope_refusal_lenient": 0.8,
+    "refusal_correct": 0.4048,
+    "refusal_correct_lenient": 0.6667,
+    "scenario_pass": 0.7917,
+    "stylebook_findings_per_episode": 34.3667,
+    "tool_precision": 1.0,
+    "tool_recall": 0.8625,
+    "tool_recall_strict": 0.2958
+   }
+  },
+  "claude-opus-5-5": {
+   "base": {
+    "ambiguity": {
+     "args_load": 1.0,
+     "drew": 1.0,
+     "every_candidate": 1.0,
+     "flag_wording": 0.0,
+     "governing": 1.0,
+     "invented_none": 1.0,
+     "pass": 0.0
+    },
+    "args_match": 1.0,
+    "by_family": {
+     "adversarial": 15,
+     "ambiguity": 12,
+     "out_of_scope": 15,
+     "scenario": 48
+    },
+    "episodes": 90,
+    "grounding_rate_mean": 0.9301,
+    "grounding_rate_pooled": 0.9352,
+    "out_of_scope_refusal": 0.2667,
+    "out_of_scope_refusal_lenient": 0.8,
+    "refusal_correct": 0.0952,
+    "refusal_correct_lenient": 0.4762,
+    "scenario_pass": 0.9375,
+    "stylebook_findings_per_episode": 37.8556,
+    "tool_precision": 1.0,
+    "tool_recall": 0.95,
+    "tool_recall_strict": 0.2958
+   },
+   "delta": {
+    "ambiguity": {
+     "args_load": 0.0,
+     "drew": 0.0,
+     "every_candidate": 0.0,
+     "flag_wording": 0.4167,
+     "governing": 0.0,
+     "invented_none": 0.0,
+     "pass": 0.4167
+    },
+    "args_match": 0.0,
+    "by_family": {
+     "adversarial": 0,
+     "ambiguity": 0,
+     "out_of_scope": 0,
+     "scenario": 0
+    },
+    "episodes": 0,
+    "grounding_rate_mean": -0.0023,
+    "grounding_rate_pooled": 0.0032,
+    "out_of_scope_refusal": -0.1334,
+    "out_of_scope_refusal_lenient": 0.0667,
+    "refusal_correct": 0.0953,
+    "refusal_correct_lenient": 0.1905,
+    "scenario_pass": 0.0,
+    "stylebook_findings_per_episode": 1.6444,
+    "tool_precision": 0.0,
+    "tool_recall": 0.0083,
+    "tool_recall_strict": 0.0167
+   },
+   "new": {
+    "ambiguity": {
+     "args_load": 1.0,
+     "drew": 1.0,
+     "every_candidate": 1.0,
+     "flag_wording": 0.4167,
+     "governing": 1.0,
+     "invented_none": 1.0,
+     "pass": 0.4167
+    },
+    "args_match": 1.0,
+    "by_family": {
+     "adversarial": 15,
+     "ambiguity": 12,
+     "out_of_scope": 15,
+     "scenario": 48
+    },
+    "episodes": 90,
+    "grounding_rate_mean": 0.9278,
+    "grounding_rate_pooled": 0.9384,
+    "out_of_scope_refusal": 0.1333,
+    "out_of_scope_refusal_lenient": 0.8667,
+    "refusal_correct": 0.1905,
+    "refusal_correct_lenient": 0.6667,
+    "scenario_pass": 0.9375,
+    "stylebook_findings_per_episode": 39.5,
+    "tool_precision": 1.0,
+    "tool_recall": 0.9583,
+    "tool_recall_strict": 0.3125
+   }
+  },
+  "claude-sonnet-5-5": {
+   "base": {
+    "ambiguity": {
+     "args_load": 0.8333,
+     "drew": 1.0,
+     "every_candidate": 1.0,
+     "flag_wording": 0.1667,
+     "governing": 1.0,
+     "invented_none": 1.0,
+     "pass": 0.1667
+    },
+    "args_match": 0.9048,
+    "by_family": {
+     "adversarial": 15,
+     "ambiguity": 12,
+     "out_of_scope": 15,
+     "scenario": 48
+    },
+    "episodes": 90,
+    "grounding_rate_mean": 0.9418,
+    "grounding_rate_pooled": 0.9593,
+    "out_of_scope_refusal": 0.3333,
+    "out_of_scope_refusal_lenient": 0.4,
+    "refusal_correct": 0.2619,
+    "refusal_correct_lenient": 0.3333,
+    "scenario_pass": 0.75,
+    "stylebook_findings_per_episode": 32.6889,
+    "tool_precision": 1.0,
+    "tool_recall": 0.9042,
+    "tool_recall_strict": 0.3708
+   },
+   "delta": {
+    "ambiguity": {
+     "args_load": 0.0834,
+     "drew": 0.0,
+     "every_candidate": 0.0,
+     "flag_wording": 0.1666,
+     "governing": 0.0,
+     "invented_none": -0.0833,
+     "pass": 0.1666
+    },
+    "args_match": 0.0635,
+    "by_family": {
+     "adversarial": 0,
+     "ambiguity": 0,
+     "out_of_scope": 0,
+     "scenario": 0
+    },
+    "episodes": 0,
+    "grounding_rate_mean": -0.0036,
+    "grounding_rate_pooled": -0.0014,
+    "out_of_scope_refusal": -0.0666,
+    "out_of_scope_refusal_lenient": 0.0667,
+    "refusal_correct": -0.0238,
+    "refusal_correct_lenient": 0.0477,
+    "scenario_pass": 0.0417,
+    "stylebook_findings_per_episode": -1.7667,
+    "tool_precision": 0.0,
+    "tool_recall": -0.0334,
+    "tool_recall_strict": -0.0416
+   },
+   "new": {
+    "ambiguity": {
+     "args_load": 0.9167,
+     "drew": 1.0,
+     "every_candidate": 1.0,
+     "flag_wording": 0.3333,
+     "governing": 1.0,
+     "invented_none": 0.9167,
+     "pass": 0.3333
+    },
+    "args_match": 0.9683,
+    "by_family": {
+     "adversarial": 15,
+     "ambiguity": 12,
+     "out_of_scope": 15,
+     "scenario": 48
+    },
+    "episodes": 90,
+    "grounding_rate_mean": 0.9382,
+    "grounding_rate_pooled": 0.9579,
+    "out_of_scope_refusal": 0.2667,
+    "out_of_scope_refusal_lenient": 0.4667,
+    "refusal_correct": 0.2381,
+    "refusal_correct_lenient": 0.381,
+    "scenario_pass": 0.7917,
+    "stylebook_findings_per_episode": 30.9222,
+    "tool_precision": 1.0,
+    "tool_recall": 0.8708,
+    "tool_recall_strict": 0.3292
+   }
+  }
+ },
+ "new_only_prompts": [
+  "s-propane-unresolved-i81",
+  "s-un1057-fire-unresolved-i81"
+ ],
+ "shared_prompts": [
+  "a-bare-class-2",
+  "a-id-several-guides",
+  "a-inhalation-hazard",
+  "a-name-several-ids",
+  "o-change-distances",
+  "o-dispersion-cloud",
+  "o-drive-time",
+  "o-erg-2020",
+  "o-un-not-in-erg",
+  "s-csx-point-of-rocks-day",
+  "s-csx-point-of-rocks-night",
+  "s-guide-111-wilson-bridge",
+  "s-i495-wilson-bridge-day",
+  "s-i495-wilson-bridge-night",
+  "s-i81-md-pa-line-day",
+  "s-i81-md-pa-line-night",
+  "s-i83-md-pa-line-day",
+  "s-i83-md-pa-line-night",
+  "s-open-water-day",
+  "s-placard-2-3-i81",
+  "s-un1075-fire-i81",
+  "s-un1203-i83",
+  "s-un1746-small-i81-land",
+  "s-un1746-small-i81-water",
+  "s-un1977-wilson-bridge",
+  "x-contradicted-spill-size",
+  "x-injected-instruction",
+  "x-time-no-zone",
+  "x-trade-name",
+  "x-wind-in-knots"
+ ]
+}

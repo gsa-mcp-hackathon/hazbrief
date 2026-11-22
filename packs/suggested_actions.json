@@ -1,0 +1,524 @@
+{
+ "attribution": {
+  "credits": [
+   {
+    "doc_id": "erg2024-en-pdf",
+    "edition": "2024",
+    "publisher": "US DOT PHMSA",
+    "title": "Emergency Response Guidebook 2024 (English, web PDF)",
+    "url": "https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2024-04/ERG2024-Eng-Web-a.pdf"
+   },
+   {
+    "doc_id": "llnl-mass-casualty-framework-2016",
+    "edition": "2016",
+    "publisher": "Lawrence Livermore National Laboratory (OSTI 1313544)",
+    "title": "Mass Casualty Chemical Incident Operational Framework (LLNL, 2016)",
+    "url": "https://www.osti.gov/servlets/purl/1313544"
+   },
+   {
+    "doc_id": "nrt-1-hazmat-emergency-planning-guide-2001",
+    "edition": "Updated 2001",
+    "publisher": "National Response Team",
+    "title": "NRT-1 Hazardous Materials Emergency Planning Guide, Updated 2001",
+    "url": "https://nrt.org/sites/2/files/NRT-1%202001%20update.pdf"
+   },
+   {
+    "doc_id": "nws-10-518",
+    "edition": "2021-09-21 (current per the directives index)",
+    "publisher": "NOAA NWS",
+    "title": "NWSI 10-518, Non-Weather Emergency Products Specification",
+    "url": "https://www.weather.gov/media/directives/010_pdfs/pd01005018curr.pdf"
+   },
+   {
+    "doc_id": "ornl-tm-2002-144-sorensen-evacuate-or-shelter",
+    "edition": "June 2002 (title page)",
+    "publisher": "Oak Ridge National Laboratory (Sorensen, Shumpert and Vogt) for FEMA, Chemical Stockpile Emergency Preparedness Program; OSTI 814651",
+    "title": "Planning Protective Action Decision-Making: Evacuate or Shelter-in-Place? (ORNL/TM-2002/144)",
+    "url": "https://digital.library.unt.edu/ark:/67531/metadc739967/m2/1/high_res_d/814651.pdf"
+   }
+  ],
+  "notices": [
+   {
+    "doc_id": "erg2024-en-pdf",
+    "locator": "erg2024-en-pdf#p382",
+    "text": "REPRODUCTION AND RESALE Copies of this document which are provided free-of-charge to fire, police and other emergency services may not be resold. ERG2024 may be reproduced without further permission subject to the following: The names and the seals of the participating governments may not be reproduced on a copy of this document unless that copy accurately reproduces the entire content (text, format, and coloration) of this document without modification. In addition, the publisher's full name and address must be displayed on the outside back cover of each copy, replacing the wording placed on the center of the back cover."
+   }
+  ]
+ },
+ "built_at": "2026-11-12T00:00:00Z",
+ "data": {
+  "actions": {
+   "alert_public": {
+    "action": {
+     "doc_id": "nrt-1-hazmat-emergency-planning-guide-2001",
+     "locator": "nrt-1-hazmat-emergency-planning-guide-2001#p63",
+     "page": 63,
+     "quote": "one organization must be assigned the responsibility of alerting the public as soon as word of the accidental release is received. Delay in alerting the public can lead to the loss of life.",
+     "read_by": "text_layer",
+     "sha256": "c862e9f0ce64fd385c752fa7b09f8173faba8275a8bc7245da59b1d95dfd4800"
+    },
+    "block": 874,
+    "by_when": {
+     "doc_id": "nrt-1-hazmat-emergency-planning-guide-2001",
+     "locator": "nrt-1-hazmat-emergency-planning-guide-2001#p63",
+     "page": 63,
+     "quote": "as soon as word of the accidental release is received",
+     "read_by": "text_layer",
+     "sha256": "c862e9f0ce64fd385c752fa7b09f8173faba8275a8bc7245da59b1d95dfd4800"
+    },
+    "guide_cell": null,
+    "heading": null,
+    "order": 4,
+    "reads": [
+     "population_at_risk: daytime and nighttime counts"
+    ],
+    "when": "people live or work inside the footprint",
+    "who": "one organization must be assigned the responsibility of alerting the public"
+   },
+   "begin_evacuating": {
+    "action": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p285",
+     "page": 285,
+     "quote": "Begin evacuating people nearby and those who are outdoors in direct view of the scene. When additional help arrives, expand the area to be evacuated downwind and crosswind to at least the extent recommended in this guidebook.",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "block": 4266,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": null,
+    "order": 7,
+    "reads": [
+     "population_at_risk: daytime and nighttime counts"
+    ],
+    "when": "people live or work inside the footprint",
+    "who": null
+   },
+   "closest_first": {
+    "action": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p291",
+     "page": 291,
+     "quote": "Initiate protective actions beginning with those closest to the spill site and working away in a downwind direction.",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "block": 4348,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": null,
+    "order": 3,
+    "reads": [
+     "protective_action_footprint: zones.protective_action_zone"
+    ],
+    "when": "the footprint holds a protective action zone (a Table 1 material)",
+    "who": null
+   },
+   "definite_place": {
+    "action": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p285",
+     "page": 285,
+     "quote": "Send evacuees to a definite place, by a specific route, far enough away so they will not have to relocate again if the wind shifts.",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "block": 4267,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": null,
+    "order": 9,
+    "reads": [
+     "population_at_risk: daytime and nighttime counts"
+    ],
+    "when": "people live or work inside the footprint",
+    "who": null
+   },
+   "fire": {
+    "action": null,
+    "block": null,
+    "by_when": null,
+    "guide_cell": {
+     "heading": "Fire",
+     "section": "public_safety",
+     "tool": "material_response_guidance"
+    },
+    "heading": null,
+    "order": 17,
+    "reads": [
+     "assess_incident: incident.fire_involved",
+     "material_response_guidance: public_safety (EVACUATION, Fire)"
+    ],
+    "when": "fire is involved",
+    "who": null
+   },
+   "fire_response": {
+    "action": null,
+    "block": null,
+    "by_when": null,
+    "guide_cell": {
+     "heading": "FIRE",
+     "section": "emergency_response",
+     "tool": "material_response_guidance"
+    },
+    "heading": null,
+    "order": 18,
+    "reads": [
+     "assess_incident: incident.fire_involved",
+     "material_response_guidance: emergency_response (FIRE)"
+    ],
+    "when": "fire is involved",
+    "who": null
+   },
+   "guide_public_safety": {
+    "action": null,
+    "block": null,
+    "by_when": null,
+    "guide_cell": {
+     "heading": null,
+     "section": "public_safety",
+     "tool": "material_response_guidance"
+    },
+    "heading": null,
+    "order": 2,
+    "reads": [
+     "material_response_guidance: public_safety"
+    ],
+    "when": "an ERG guide is named",
+    "who": null
+   },
+   "indoors": {
+    "action": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p287",
+     "page": 287,
+     "quote": "For anyone already indoors.",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "block": 4302,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p287",
+     "page": 287,
+     "quote": "Consider Sheltering-in-place:",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "order": 8,
+    "reads": [
+     "population_at_risk: daytime and nighttime counts"
+    ],
+    "when": "people live or work inside the footprint",
+    "who": null
+   },
+   "institutions": {
+    "action": {
+     "doc_id": "ornl-tm-2002-144-sorensen-evacuate-or-shelter",
+     "locator": "ornl-tm-2002-144-sorensen-evacuate-or-shelter#p12",
+     "page": 12,
+     "quote": "Each institutional facility (such as hospitals, schools, day care centers, correctional facilities, assisted living facilities or nursing homes) in the community should be considered separately to determine what special protective actions may be necessary.",
+     "read_by": "text_layer",
+     "sha256": "6117ead06526875e49fa9bbd2a033ea956c3d44d032462d51fb89ecb7d476354"
+    },
+    "block": 33,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": null,
+    "order": 13,
+    "reads": [
+     "facilities_in_footprint: counts.schools, counts.hospitals, counts.nursing_homes; group_quarters"
+    ],
+    "when": "a school, hospital, nursing home or group quarters lies inside the footprint",
+    "who": null
+   },
+   "isolate": {
+    "action": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p285",
+     "page": 285,
+     "quote": "Isolate hazard area and deny entry means to keep everybody away from the area if they are not directly involved in emergency response operations. Unprotected emergency responders should not be allowed to enter the isolation zone.",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "block": 4263,
+    "by_when": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p285",
+     "page": 285,
+     "quote": "This is the first step for any protective actions that may follow.",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "guide_cell": null,
+    "heading": null,
+    "order": 1,
+    "reads": [
+     "assess_incident: guide.number"
+    ],
+    "when": "an ERG guide is named",
+    "who": null
+   },
+   "nws_relay": {
+    "action": {
+     "doc_id": "nws-10-518",
+     "locator": "nws-10-518#p12",
+     "page": 12,
+     "quote": "A NWEM is a nonscheduled product and will be relayed at the request of alerting authorities over NWS dissemination systems.",
+     "read_by": "text_layer",
+     "sha256": "67694f4a792e1ee2d3b579e9a2c94b823aba1f87f649fe70272a6538b10a7432"
+    },
+    "block": 117,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": null,
+    "order": 6,
+    "reads": [
+     "population_at_risk: daytime and nighttime counts"
+    ],
+    "when": "people live or work inside the footprint",
+    "who": "at the request of alerting authorities"
+   },
+   "outdoors": {
+    "action": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p287",
+     "page": 287,
+     "quote": "For anyone outdoors.",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "block": 4302,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p287",
+     "page": 287,
+     "quote": "Consider Evacuation:",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "order": 8,
+    "reads": [
+     "population_at_risk: daytime and nighttime counts"
+    ],
+    "when": "people live or work inside the footprint",
+    "who": null
+   },
+   "schools": {
+    "action": {
+     "doc_id": "nrt-1-hazmat-emergency-planning-guide-2001",
+     "locator": "nrt-1-hazmat-emergency-planning-guide-2001#p66",
+     "page": 66,
+     "quote": "If schools are located in the risk zone, the plan must identify the location to which students will be moved in an evacuation and how parents will be notified of this location.",
+     "read_by": "text_layer",
+     "sha256": "c862e9f0ce64fd385c752fa7b09f8173faba8275a8bc7245da59b1d95dfd4800"
+    },
+    "block": 929,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": null,
+    "order": 15,
+    "reads": [
+     "facilities_in_footprint: counts.schools"
+    ],
+    "when": "a school lies inside the footprint",
+    "who": null
+   },
+   "shelter_time": {
+    "action": {
+     "doc_id": "ornl-tm-2002-144-sorensen-evacuate-or-shelter",
+     "locator": "ornl-tm-2002-144-sorensen-evacuate-or-shelter#p22",
+     "page": 22,
+     "quote": "Several analyses suggest that it will take 5 to 10 minutes on average to implement shelter-in-place, once a sheltering decision is made by a household.",
+     "read_by": "text_layer",
+     "sha256": "6117ead06526875e49fa9bbd2a033ea956c3d44d032462d51fb89ecb7d476354"
+    },
+    "block": 87,
+    "by_when": {
+     "doc_id": "ornl-tm-2002-144-sorensen-evacuate-or-shelter",
+     "locator": "ornl-tm-2002-144-sorensen-evacuate-or-shelter#p22",
+     "page": 22,
+     "quote": "5 to 10 minutes on average to implement shelter-in-place, once a sheltering decision is made by a household",
+     "read_by": "text_layer",
+     "sha256": "6117ead06526875e49fa9bbd2a033ea956c3d44d032462d51fb89ecb7d476354"
+    },
+    "guide_cell": null,
+    "heading": null,
+    "order": 11,
+    "reads": [
+     "population_at_risk: daytime and nighttime counts"
+    ],
+    "when": "people live or work inside the footprint",
+    "who": null
+   },
+   "sheltered_communications": {
+    "action": {
+     "doc_id": "erg2024-en-pdf",
+     "locator": "erg2024-en-pdf#p285",
+     "page": 285,
+     "quote": "It is vital for first responders to maintain communications with sheltered-in-place people so that they are advised about changing conditions.",
+     "read_by": "text_layer",
+     "sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+    },
+    "block": 4268,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": null,
+    "order": 10,
+    "reads": [
+     "population_at_risk: daytime and nighttime counts"
+    ],
+    "when": "people live or work inside the footprint",
+    "who": "first responders"
+   },
+   "special_attention": {
+    "action": {
+     "doc_id": "nrt-1-hazmat-emergency-planning-guide-2001",
+     "locator": "nrt-1-hazmat-emergency-planning-guide-2001#p66",
+     "page": 66,
+     "quote": "Special attention must also be paid to evacuating hospitals, nursing homes, and homes for the physically or mentally disabled.",
+     "read_by": "text_layer",
+     "sha256": "c862e9f0ce64fd385c752fa7b09f8173faba8275a8bc7245da59b1d95dfd4800"
+    },
+    "block": 929,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": null,
+    "order": 14,
+    "reads": [
+     "facilities_in_footprint: counts.hospitals, counts.nursing_homes"
+    ],
+    "when": "a hospital or nursing home lies inside the footprint",
+    "who": null
+   },
+   "traffic": {
+    "action": {
+     "doc_id": "nrt-1-hazmat-emergency-planning-guide-2001",
+     "locator": "nrt-1-hazmat-emergency-planning-guide-2001#p66",
+     "page": 66,
+     "quote": "Provisions must be made for quickly moving traffic out of the risk zone and also for preventing outside traffic from entering the risk zone.",
+     "read_by": "text_layer",
+     "sha256": "c862e9f0ce64fd385c752fa7b09f8173faba8275a8bc7245da59b1d95dfd4800"
+    },
+    "block": 929,
+    "by_when": null,
+    "guide_cell": null,
+    "heading": null,
+    "order": 16,
+    "reads": [
+     "assess_incident: incident.container",
+     "facilities_in_footprint: counts.grade_crossings"
+    ],
+    "when": "a road crosses the footprint (the load is on a highway, or the footprint holds grade crossings)",
+    "who": null
+   },
+   "warning_means": {
+    "action": {
+     "doc_id": "llnl-mass-casualty-framework-2016",
+     "locator": "llnl-mass-casualty-framework-2016#p25",
+     "page": 25,
+     "quote": "The SIP warning should be disseminated without delay using a variety of means- reverse 911 on landlines, text messages to cell phones in the area, PA broadcast, police car PA systems, etc.",
+     "read_by": "text_layer",
+     "sha256": "e0d2d150c148e751b28f5549300a736e9302e7f77d252370a202d4865d55d71f"
+    },
+    "block": 219,
+    "by_when": {
+     "doc_id": "llnl-mass-casualty-framework-2016",
+     "locator": "llnl-mass-casualty-framework-2016#p25",
+     "page": 25,
+     "quote": "without delay",
+     "read_by": "text_layer",
+     "sha256": "e0d2d150c148e751b28f5549300a736e9302e7f77d252370a202d4865d55d71f"
+    },
+    "guide_cell": null,
+    "heading": null,
+    "order": 5,
+    "reads": [
+     "population_at_risk: daytime and nighttime counts"
+    ],
+    "when": "people live or work inside the footprint",
+    "who": null
+   },
+   "warning_time": {
+    "action": {
+     "doc_id": "ornl-tm-2002-144-sorensen-evacuate-or-shelter",
+     "locator": "ornl-tm-2002-144-sorensen-evacuate-or-shelter#p21",
+     "page": 21,
+     "quote": "once a decision is made to protect the public, a considerable amount of time (up to one to two hours using conventional warning practices) may elapse before most people in the affected area hear, absorb, and decide to respond to the instructions",
+     "read_by": "text_layer",
+     "sha256": "6117ead06526875e49fa9bbd2a033ea956c3d44d032462d51fb89ecb7d476354"
+    },
+    "block": 81,
+    "by_when": {
+     "doc_id": "ornl-tm-2002-144-sorensen-evacuate-or-shelter",
+     "locator": "ornl-tm-2002-144-sorensen-evacuate-or-shelter#p21",
+     "page": 21,
+     "quote": "up to one to two hours using conventional warning practices",
+     "read_by": "text_layer",
+     "sha256": "6117ead06526875e49fa9bbd2a033ea956c3d44d032462d51fb89ecb7d476354"
+    },
+    "guide_cell": null,
+    "heading": null,
+    "order": 12,
+    "reads": [
+     "population_at_risk: daytime and nighttime counts"
+    ],
+    "when": "people live or work inside the footprint",
+    "who": null
+   }
+  },
+  "decides": "The incident commander decides.",
+  "demonstration": "A demonstration, not a protocol: no incident commander has reviewed this table.",
+  "label": "Suggested actions to consider",
+  "no_entry": "No held source gives an action for this.",
+  "uncovered": [
+   "the material was spilled in water and ERG Table 2 lists it (material_response_guidance: table2_note)",
+   "a waterway crosses the footprint (facilities_in_footprint: counts.waterways)",
+   "a rail line crosses the footprint (facilities_in_footprint: counts.rail_segments)",
+   "the wind the footprint is oriented by was stated by the caller, not forecast or observed (protective_action_footprint: wind.origin)",
+   "the material is not identified, or the ERG lists it under several entries (assess_incident: error, or several candidates)"
+  ]
+ },
+ "kind": "suggested_actions",
+ "pack_id": "suggested_actions",
+ "schema_version": 8,
+ "sha256": "a006787fabd2d3f5fd3dfdc54fc8488ee13f24bb0ff00f2f76f74921fce11aaf",
+ "sources": [
+  {
+   "doc_id": "erg2024-en-pdf",
+   "licence": "reproduction-permitted",
+   "locator": "the suggested actions' quotations (HB-207)",
+   "raw_sha256": "180eb92e649d1ada7d2f39855da70d5742ff211d6863a8804ed2abb835c96e30"
+  },
+  {
+   "doc_id": "llnl-mass-casualty-framework-2016",
+   "licence": "public-release",
+   "locator": "the suggested actions' quotations (HB-207)",
+   "raw_sha256": "e0d2d150c148e751b28f5549300a736e9302e7f77d252370a202d4865d55d71f"
+  },
+  {
+   "doc_id": "nrt-1-hazmat-emergency-planning-guide-2001",
+   "licence": "public-domain",
+   "locator": "the suggested actions' quotations (HB-207)",
+   "raw_sha256": "c862e9f0ce64fd385c752fa7b09f8173faba8275a8bc7245da59b1d95dfd4800"
+  },
+  {
+   "doc_id": "nws-10-518",
+   "licence": "public-domain",
+   "locator": "the suggested actions' quotations (HB-207)",
+   "raw_sha256": "67694f4a792e1ee2d3b579e9a2c94b823aba1f87f649fe70272a6538b10a7432"
+  },
+  {
+   "doc_id": "ornl-tm-2002-144-sorensen-evacuate-or-shelter",
+   "licence": "public-domain",
+   "locator": "the suggested actions' quotations (HB-207)",
+   "raw_sha256": "6117ead06526875e49fa9bbd2a033ea956c3d44d032462d51fb89ecb7d476354"
+  }
+ ],
+ "version": "hb207.1"
+}

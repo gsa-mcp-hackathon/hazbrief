@@ -1,0 +1,67 @@
+{
+ "api": "bts_ntad",
+ "body": {
+  "crs": {
+   "properties": {
+    "name": "EPSG:4326"
+   },
+   "type": "name"
+  },
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.725845,
+      39.736298
+     ],
+     "type": "Point"
+    },
+    "id": 1287,
+    "properties": {
+     "OBJECTID": 1287,
+     "highway_route": "I-81N",
+     "mile_post": "1",
+     "municipality": "Antrim",
+     "nhs_rest_stop": "NHS Rest Stop or Truck Facility 47",
+     "number_of_spots": 14,
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.848069,
+      39.58702
+     ],
+     "type": "Point"
+    },
+    "id": 1766,
+    "properties": {
+     "OBJECTID": 1766,
+     "highway_route": "I-81S",
+     "mile_post": "25",
+     "municipality": "Marlowe",
+     "nhs_rest_stop": "Falling Waters Welcome Center SB",
+     "number_of_spots": 18,
+     "state": "WV"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-13T08:17:08Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "private, max-age=30, s-maxage=30",
+  "Date": "Fri, 13 Nov 2026 08:17:08 GMT",
+  "ETag": "sd24406_-579738083",
+  "Last-Modified": "Wed, 26 Jun 2024 14:39:50 GMT"
+ },
+ "status": 200,
+ "url": "https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/NTAD_Truck_Stop_Parking/FeatureServer/0/query?where=1%3D1&geometry=-77.912165%2C39.577272%2C-77.535835%2C39.866728&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cnhs_rest_stop%2Chighway_route%2Cmile_post%2Cmunicipality%2Cstate%2Cnumber_of_spots&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

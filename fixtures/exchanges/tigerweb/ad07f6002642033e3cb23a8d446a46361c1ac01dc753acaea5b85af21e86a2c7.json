@@ -1,0 +1,203 @@
+{
+ "api": "tigerweb",
+ "body": {
+  "displayFieldName": "BASENAME",
+  "features": [
+   {
+    "attributes": {
+     "BASENAME": "Jefferson",
+     "MTFCC": "S1400",
+     "NAME": "Jefferson St",
+     "OID": "110451042863"
+    },
+    "geometry": {
+     "paths": [
+      [
+       [
+        -77.04321699985917,
+        38.796317000165615
+       ],
+       [
+        -77.04425600029992,
+        38.79644699970023
+       ],
+       [
+        -77.04535500011683,
+        38.796579999732636
+       ],
+       [
+        -77.0464509995607,
+        38.7967119997405
+       ],
+       [
+        -77.04648900009386,
+        38.79671600024612
+       ],
+       [
+        -77.04755699994861,
+        38.79685700007207
+       ],
+       [
+        -77.04868699972765,
+        38.79700699967004
+       ],
+       [
+        -77.04983199957532,
+        38.797155000112106
+       ],
+       [
+        -77.05091299984888,
+        38.797289999760075
+       ],
+       [
+        -77.0518869999923,
+        38.79740699985494
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "attributes": {
+     "BASENAME": "Lee",
+     "MTFCC": "S1400",
+     "NAME": "S Lee St",
+     "OID": "110451041751"
+    },
+    "geometry": {
+     "paths": [
+      [
+       [
+        -77.04148100018273,
+        38.80437800000488
+       ],
+       [
+        -77.04154700030494,
+        38.80405699988351
+       ],
+       [
+        -77.04159400016061,
+        38.80382300033613
+       ],
+       [
+        -77.04170700013852,
+        38.80325499974596
+       ],
+       [
+        -77.04196900007933,
+        38.80209200006366
+       ],
+       [
+        -77.04221000010376,
+        38.80095299981125
+       ],
+       [
+        -77.04245799980089,
+        38.79982399968342
+       ],
+       [
+        -77.0426980000004,
+        38.798688999979625
+       ],
+       [
+        -77.04296099976612,
+        38.797495000266444
+       ],
+       [
+        -77.04321699985917,
+        38.796317000165615
+       ],
+       [
+        -77.04345700005868,
+        38.79518100012126
+       ],
+       [
+        -77.04353099967852,
+        38.7948480001483
+       ],
+       [
+        -77.04361299969428,
+        38.794437000313536
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "attributes": {
+     "BASENAME": "Jefferson",
+     "MTFCC": "S1400",
+     "NAME": "Jefferson St",
+     "OID": "110451042862"
+    },
+    "geometry": {
+     "paths": [
+      [
+       [
+        -77.05302400034236,
+        38.79755699969553
+       ],
+       [
+        -77.05417900023576,
+        38.79770399993316
+       ],
+       [
+        -77.05524000041784,
+        38.79783899994143
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "fieldAliases": {
+   "BASENAME": "BASENAME",
+   "MTFCC": "MTFCC",
+   "NAME": "NAME",
+   "OID": "OID"
+  },
+  "fields": [
+   {
+    "alias": "OID",
+    "length": 22,
+    "name": "OID",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "NAME",
+    "length": 100,
+    "name": "NAME",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "BASENAME",
+    "length": 100,
+    "name": "BASENAME",
+    "type": "esriFieldTypeString"
+   },
+   {
+    "alias": "MTFCC",
+    "length": 5,
+    "name": "MTFCC",
+    "type": "esriFieldTypeString"
+   }
+  ],
+  "geometryType": "esriGeometryPolyline",
+  "spatialReference": {
+   "latestWkid": 4326,
+   "wkid": 4326
+  }
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-27T05:02:13Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Tue, 27 Oct 2026 05:02:13 GMT",
+  "ETag": "\"1784752640\""
+ },
+ "status": 200,
+ "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/8/query?where=UPPER%28NAME%29+IN+%28%27JEFFERSON+ST%27%2C%27S+LEE+ST%27%29&outFields=OID%2CNAME%2CBASENAME%2CMTFCC&returnGeometry=true&outSR=4326&f=json&geometry=-77.1443590004178%2C38.785215999746356%2C-77.03728800040635%2C38.84492299988886&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects"
+}

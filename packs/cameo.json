@@ -1,0 +1,787 @@
+{
+ "attribution": {
+  "credits": [
+   {
+    "doc_id": "cameo-chem-11452",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 11452, FUEL OIL, [DIESEL]",
+    "url": "https://cameochemicals.noaa.gov/chemical/11452"
+   },
+   {
+    "doc_id": "cameo-chem-11498",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 11498, GASOLINE",
+    "url": "https://cameochemicals.noaa.gov/chemical/11498"
+   },
+   {
+    "doc_id": "cameo-chem-2509",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 2509, ARGON, REFRIGERATED LIQUID (CRYOGENIC LIQUID)",
+    "url": "https://cameochemicals.noaa.gov/chemical/2509"
+   },
+   {
+    "doc_id": "cameo-chem-2862",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 2862, CHLORINE",
+    "url": "https://cameochemicals.noaa.gov/chemical/2862"
+   },
+   {
+    "doc_id": "cameo-chem-4069",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 4069, NITROGEN, REFRIGERATED LIQUID (CRYOGENIC LIQUID)",
+    "url": "https://cameochemicals.noaa.gov/chemical/4069"
+   },
+   {
+    "doc_id": "cameo-chem-4860",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 4860, AMMONIA, ANHYDROUS",
+    "url": "https://cameochemicals.noaa.gov/chemical/4860"
+   },
+   {
+    "doc_id": "cameo-chem-9018",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 9018, PROPANE",
+    "url": "https://cameochemicals.noaa.gov/chemical/9018"
+   },
+   {
+    "doc_id": "cameo-chem-987",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO chemical datasheet 987, LIQUEFIED PETROLEUM GAS",
+    "url": "https://cameochemicals.noaa.gov/chemical/987"
+   },
+   {
+    "doc_id": "cameo-unna-1005",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1005 datasheet (Ammonia, anhydrous)",
+    "url": "https://cameochemicals.noaa.gov/unna/1005"
+   },
+   {
+    "doc_id": "cameo-unna-1017",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1017 datasheet (Chlorine)",
+    "url": "https://cameochemicals.noaa.gov/unna/1017"
+   },
+   {
+    "doc_id": "cameo-unna-1075",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1075 datasheet (Liquefied petroleum gas, LPG)",
+    "url": "https://cameochemicals.noaa.gov/unna/1075"
+   },
+   {
+    "doc_id": "cameo-unna-1202",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1202 datasheet (Diesel fuel)",
+    "url": "https://cameochemicals.noaa.gov/unna/1202"
+   },
+   {
+    "doc_id": "cameo-unna-1203",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1203 datasheet (Gasoline)",
+    "url": "https://cameochemicals.noaa.gov/unna/1203"
+   },
+   {
+    "doc_id": "cameo-unna-1951",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1951 datasheet (Argon, refrigerated liquid)",
+    "url": "https://cameochemicals.noaa.gov/unna/1951"
+   },
+   {
+    "doc_id": "cameo-unna-1977",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1977 datasheet (Nitrogen, refrigerated liquid)",
+    "url": "https://cameochemicals.noaa.gov/unna/1977"
+   },
+   {
+    "doc_id": "cameo-unna-1978",
+    "edition": "CAMEO Chemicals 3.1.0 rev 1; ERG 2024",
+    "publisher": "NOAA Office of Response and Restoration",
+    "title": "CAMEO UN/NA 1978 datasheet (Propane)",
+    "url": "https://cameochemicals.noaa.gov/unna/1978"
+   }
+  ],
+  "notices": [
+   {
+    "doc_id": "cameo-unna-1005",
+    "locator": "cameo-unna-1005#footer",
+    "text": "Web site owner: Office of Response and Restoration, National Ocean Service, National Oceanic and Atmospheric Administration. USA.gov. CAMEO Chemicals version 3.1.0 rev 1."
+   }
+  ]
+ },
+ "built_at": "2026-10-20T02:56:55Z",
+ "data": {
+  "materials": {
+   "1005": {
+    "datasheets": [
+     {
+      "doc_id": "cameo-chem-4860",
+      "locator": "cameo-chem-4860#Response Recommendations",
+      "raw_sha256": "024e8f67481351301770501b60b5880e309125ca8a759eec1bf241030eab12a1",
+      "sections": [
+       {
+        "heading": "Isolation and Evacuation",
+        "paragraphs": [
+         "Excerpt from ERG Guide 125 [Gases - Toxic and/or Corrosive]:",
+         "IMMEDIATE PRECAUTIONARY MEASURE: Isolate spill or leak area for at least 100 meters (330 feet) in all directions.",
+         "SPILL: See ERG Tables 1 and 3 - Initial Isolation and Protective Action Distances on the UN/NA 1005 datasheet.",
+         "FIRE: If tank, rail tank car or highway tank is involved in a fire, ISOLATE for 1600 meters (1 mile) in all directions; also, consider initial evacuation for 1600 meters (1 mile) in all directions. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Firefighting",
+        "paragraphs": [
+         "Wear positive pressure breathing apparatus and full protective clothing.",
+         "Small fires: dry chemical or carbon dioxide. Large fires: water spray, fog or foam. Apply water gently to the surface. Do not get water inside container. Move container from fire area if you can do it without risk. Stay away from ends of tanks. Cool containers that are exposed to flames with water from the side until well after fire is out. Isolate area until gas has dispersed. (EPA, 1998)"
+        ]
+       },
+       {
+        "heading": "Non-Fire Response",
+        "paragraphs": [
+         "Excerpt from ERG Guide 125 [Gases - Toxic and/or Corrosive]:",
+         "Do not touch or walk through spilled material. Stop leak if you can do it without risk. If possible, turn leaking containers so that gas escapes rather than liquid. Prevent entry into waterways, sewers, basements or confined areas. Do not direct water at spill or source of leak. Use water spray to reduce vapors or divert vapor cloud drift. Avoid allowing water runoff to contact spilled material. Isolate area until gas has dispersed. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Protective Clothing",
+        "paragraphs": [
+         "For emergency situations, wear a positive pressure, pressure-demand, full facepiece self-contained breathing apparatus (SCBA) or pressure- demand supplied air respirator with escape SCBA and a fully-encapsulating, chemical resistant suit. (EPA, 1998)"
+        ]
+       },
+       {
+        "heading": "First Aid",
+        "paragraphs": [
+         "Warning: Ammonia is extremely corrosive to the skin, eyes, and mucous membranes. Contact with the liquified gas may cause frostbite. Caution is advised.",
+         "Signs and Symptoms of Acute Ammonia Exposure: Inhalation of ammonia may cause irritation and burns of the respiratory tract, laryngitis, dyspnea (shortness of breath), stridor (high-pitched respirations), and chest pain. Pulmonary edema and pneumonia may also result from inhalation. A pink frothy sputum, convulsions, and coma are often seen following exposure to high concentrations. When ammonia is ingested, nausea and vomiting may result; oral, esophageal, and stomach burns are common. If ammonia has contacted the eyes, irritation, pain, conjunctivitis (red, inflamed eyes), lacrimation (tearing), and corneal erosion may occur. Loss of vision is possible. Dermal exposure may result in severe burns and pain.",
+         "Emergency Life-Support Procedures: Acute exposure to ammonia may require decontamination and life support for the victims. Emergency personnel should wear protective clothing appropriate to the type and degree of contamination. Air-purifying or supplied-air respiratory equipment should also be worn, as necessary.",
+         "Inhalation Exposure:",
+         "1. Move victims to fresh air. Emergency personnel should avoid self-exposure to ammonia.",
+         "2. Evaluate vital signs including pulse and respiratory rate, and note any trauma. If no pulse is detected, provide CPR. If not breathing, provide artificial respiration. If breathing is labored, administer oxygen or other respiratory support.",
+         "3. Obtain authorization and/or further instructions from the local hospital for administration of an antidote or performance of other invasive procedures.",
+         "4. Transport to a health care facility.",
+         "Dermal/Eye Exposure:",
+         "1. Remove victims from exposure. Emergency personnel should avoid self- exposure to ammonia.",
+         "2. Evaluate vital signs including pulse and respiratory rate, and note any trauma. If no pulse is detected, provide CPR. If not breathing, provide artificial respiration. If breathing is labored, administer oxygen or other respiratory support.Warning: Do not attempt to neutralize with an acid wash; excessive liberation of heat may result.",
+         "3. If eye exposure has occurred, eyes must IMMEDIATELY be flushed with lukewarm water for at least 15 minutes.",
+         "4. Remove contaminated clothing as soon as possible.",
+         "5. Wash exposed skin areas THOROUGHLY with soap and water.",
+         "6. Obtain authorization and/or further instructions from the local hospital for administration of an antidote or performance of other invasive procedures.",
+         "7. Transport to a health care facility.",
+         "Ingestion Exposure:",
+         "1. Evaluate vital signs including pulse and respiratory rate, and note any trauma. If no pulse is detected, provide CPR. If not breathing, provide artificial respiration. If breathing is labored, administer oxygen or other respiratory support.",
+         "2. DO NOT induce vomiting or attempt to neutralize!",
+         "3. Obtain authorization and/or further instructions from the local hospital for administration of an antidote or performance of other invasive procedures.",
+         "4. Activated charcoal does not strongly bind ammonia, and therefore is of little or no value.",
+         "5. Give the victims water or milk: children up to 1 year old, 125 mL (4 oz or 1/2 cup); children 1 to 12 years old, 200 mL (6 oz or 3/4 cup); adults, 250 mL (8 oz or 1 cup). Water or milk should be given only if victims are conscious and alert.",
+         "6. Transport to a health care facility. (EPA, 1998)"
+        ]
+       }
+      ],
+      "title": "AMMONIA, ANHYDROUS",
+      "un_numbers": [
+       "1005"
+      ]
+     }
+    ],
+    "un": "1005",
+    "unna_page": {
+     "doc_id": "cameo-unna-1005",
+     "locator": "cameo-unna-1005#ERG",
+     "raw_sha256": "5dcfa92c58fec9b261a1dfa57c207a79691f36e0cd251d537133596dd10c080c"
+    }
+   },
+   "1017": {
+    "datasheets": [
+     {
+      "doc_id": "cameo-chem-2862",
+      "locator": "cameo-chem-2862#Response Recommendations",
+      "raw_sha256": "c601eae3a31c0f2db6a348a7de40cd430caab810de0bd20ad7d514d891ecc4a7",
+      "sections": [
+       {
+        "heading": "Isolation and Evacuation",
+        "paragraphs": [
+         "Excerpt from ERG Guide 124 [Gases - Toxic and/or Corrosive - Oxidizing]:",
+         "IMMEDIATE PRECAUTIONARY MEASURE: Isolate spill or leak area for at least 100 meters (330 feet) in all directions.",
+         "SPILL: See ERG Tables 1 and 3 - Initial Isolation and Protective Action Distances on the UN/NA 1017 datasheet.",
+         "FIRE: If tank, rail tank car or highway tank is involved in a fire, ISOLATE for 800 meters (1/2 mile) in all directions; also, consider initial evacuation for 800 meters (1/2 mile) in all directions. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Firefighting",
+        "paragraphs": [
+         "Evacuate area endangered by gas. Stay upwind; keep out of low areas. Wear positive pressure breathing apparatus and full protective clothing. Move container from fire area if you can do so without risk. Spray cooling water on containers that are exposed to flames until well after fire is out. If it is necessary to stop the flow of gas, use water spray to direct escaping gas away from those effecting shut-off.",
+         "Will not burn, but most combustible materials will burn in chlorine as they do in oxygen; flammable gases will form explosive mixtures with chlorine. Dry chemical, carbon dioxide, water spray, fog or foam. (EPA, 1998)"
+        ]
+       },
+       {
+        "heading": "Non-Fire Response",
+        "paragraphs": [
+         "Excerpt from ERG Guide 124 [Gases - Toxic and/or Corrosive - Oxidizing]:",
+         "Do not touch or walk through spilled material. Keep combustibles (wood, paper, oil, etc.) away from spilled material. Stop leak if you can do it without risk. Use water spray to reduce vapors or divert vapor cloud drift. Avoid allowing water runoff to contact spilled material. Do not direct water at spill or source of leak. If possible, turn leaking containers so that gas escapes rather than liquid. Prevent entry into waterways, sewers, basements or confined areas. Isolate area until gas has dispersed. Ventilate the area. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Protective Clothing",
+        "paragraphs": [
+         "Excerpt from NIOSH Pocket Guide for Chlorine:",
+         "Skin: FROSTBITE - Compressed gases may create low temperatures when they expand rapidly. Leaks and uses that allow rapid expansion may cause a frostbite hazard. Wear appropriate personal protective clothing to prevent the skin from becoming frozen.",
+         "Eyes: FROSTBITE - Wear appropriate eye protection to prevent eye contact with the liquid that could result in burns or tissue damage from frostbite.",
+         "Wash skin: No recommendation is made specifying the need for washing the substance from the skin (either immediately or at the end of the work shift).",
+         "Remove: No recommendation is made specifying the need for removing clothing that becomes wet or contaminated.",
+         "Change: No recommendation is made specifying the need for the worker to change clothing after the workshift.",
+         "Provide: FROSTBITE WASH - Quick drench facilities and/or eyewash fountains should be provided within the immediate work area for emergency use where there is any possibility of exposure to liquids that are extremely cold or rapidly evaporating. (NIOSH, 2024)"
+        ]
+       },
+       {
+        "heading": "First Aid",
+        "paragraphs": [
+         "Warning: Effects may be delayed. Caution is advised. Chlorine is corrosive and may be converted to hydrochloric acid in the lungs.",
+         "Signs and Symptoms of Acute Chlorine Exposure: Signs and symptoms of acute exposure to chlorine may include tachycardia (rapid heart rate), hypertension (high blood pressure) followed by hypotension (low blood pressure), and cardiovascular collapse. Pulmonary edema and pneumonia are often seen. The eyes, nose, throat, and chest may sting or burn following exposure to chlorine. Cough with bloody sputum, a feeling of suffocation, dizziness, agitation, anxiety, nausea, and vomiting are common. Dermal exposure may result in sweating, pain, irritation, and blisters.",
+         "Emergency Life-Support Procedures: Acute exposure to chlorine may require decontamination and life support for the victims. Emergency personnel should wear protective clothing appropriate to the type and degree of contamination. Air-purifying or supplied-air respiratory equipment should also be worn, as necessary. Rescue vehicles should carry supplies such as chlorine-resistant plastic sheeting and disposable bags to assist in preventing spread of contamination.",
+         "Inhalation Exposure:",
+         "1. Move victims to fresh air. Emergency personnel should avoid self-exposure to chlorine.",
+         "2. Evaluate vital signs including pulse and respiratory rate, and note any trauma. If no pulse is detected, provide CPR. If not breathing, provide artificial respiration. If breathing is labored, administer oxygen or other respiratory support.",
+         "3. Obtain authorization and/or further instructions from the local hospital for administration of an antidote or performance of other invasive procedures.",
+         "4. Transport to a health care facility.",
+         "Dermal/Eye Exposure:",
+         "1. Remove victims from exposure. Emergency personnel should avoid self- exposure to chlorine.",
+         "2. Evaluate vital signs including pulse and respiratory rate, and note any trauma. If no pulse is detected, provide CPR. If not breathing, provide artificial respiration. If breathing is labored, administer oxygen or other respiratory support.",
+         "3. Remove contaminated clothing as soon as possible.",
+         "4. If eye exposure has occurred, eyes must be flushed with lukewarm water for at least 15 minutes.",
+         "5. Wash exposed skin areas for at least 15 minutes with soap and water.",
+         "6. Obtain authorization and/or further instructions from the local hospital for administration of an antidote or performance of other invasive procedures.",
+         "7. Transport to a health care facility.",
+         "Ingestion Exposure: No information is available. (EPA, 1998)"
+        ]
+       }
+      ],
+      "title": "CHLORINE",
+      "un_numbers": [
+       "1017"
+      ]
+     }
+    ],
+    "un": "1017",
+    "unna_page": {
+     "doc_id": "cameo-unna-1017",
+     "locator": "cameo-unna-1017#ERG",
+     "raw_sha256": "fce6798bab419890cfcd4b4346c57734657a8ed1dfea64862d426501cb52efe2"
+    }
+   },
+   "1075": {
+    "datasheets": [
+     {
+      "doc_id": "cameo-chem-987",
+      "locator": "cameo-chem-987#Response Recommendations",
+      "raw_sha256": "47ecfe15ad224a131937332f85444923e0df80490027ee758c7e0746f3293b04",
+      "sections": [
+       {
+        "heading": "Isolation and Evacuation",
+        "paragraphs": [
+         "Excerpt from ERG Guide 115 [Gases - Flammable (Including Refrigerated Liquids)]:",
+         "IMMEDIATE PRECAUTIONARY MEASURE: Isolate spill or leak area for at least 100 meters (330 feet) in all directions.",
+         "LARGE SPILL: Consider initial downwind evacuation for at least 800 meters (1/2 mile).",
+         "FIRE: If tank, rail tank car or highway tank is involved in a fire, ISOLATE for 1600 meters (1 mile) in all directions; also, consider initial evacuation for 1600 meters (1 mile) in all directions. In fires involving Liquefied Petroleum Gases (LPG) (UN1075), Butane (UN1011), Butylene (UN1012), Isobutylene (UN1055), Propylene (UN1077), Isobutane (UN1969), and Propane (UN1978), also refer to the \"BLEVE - Safety Precautions\" section. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Firefighting",
+        "paragraphs": [
+         "Excerpt from ERG Guide 115 [Gases - Flammable (Including Refrigerated Liquids)]:",
+         "DO NOT EXTINGUISH A LEAKING GAS FIRE UNLESS LEAK CAN BE STOPPED. CAUTION: Hydrogen (UN1049), Deuterium (UN1957), Hydrogen, refrigerated liquid (UN1966) and Hydrogen and Methane mixture, compressed (UN2034) will burn with an invisible flame. Use an alternate method of detection (thermal camera, broom handle, etc.).",
+         "SMALL FIRE: Dry chemical or CO2.",
+         "LARGE FIRE: Water spray or fog. If it can be done safely, move undamaged containers away from the area around the fire. CAUTION: For LNG - Liquefied natural gas (UN1972) pool fires, DO NOT USE water. Use dry chemical or high-expansion foam.",
+         "FIRE INVOLVING TANKS: Fight fire from maximum distance or use unmanned master stream devices or monitor nozzles. Cool containers with flooding quantities of water until well after fire is out. Do not direct water at source of leak or safety devices; icing may occur. Withdraw immediately in case of rising sound from venting safety devices or discoloration of tank. ALWAYS stay away from tanks in direct contact with flames. For massive fire, use unmanned master stream devices or monitor nozzles; if this is impossible, withdraw from area and let fire burn. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Non-Fire Response",
+        "paragraphs": [
+         "Excerpt from ERG Guide 115 [Gases - Flammable (Including Refrigerated Liquids)]:",
+         "ELIMINATE all ignition sources (no smoking, flares, sparks or flames) from immediate area. All equipment used when handling the product must be grounded. Do not touch or walk through spilled material. Stop leak if you can do it without risk. If possible, turn leaking containers so that gas escapes rather than liquid. Use water spray to reduce vapors or divert vapor cloud drift. Avoid allowing water runoff to contact spilled material. Do not direct water at spill or source of leak. CAUTION: For LNG - Liquefied natural gas (UN1972), DO NOT apply water, regular or alcohol-resistant foam directly on spill. Use a high-expansion foam if available to reduce vapors. Prevent spreading of vapors through sewers, ventilation systems and confined areas. Isolate area until gas has dispersed. CAUTION: When in contact with refrigerated/cryogenic liquids, many materials become brittle and are likely to break without warning. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Protective Clothing",
+        "paragraphs": [
+         "Excerpt from NIOSH Pocket Guide for L.P.G.:",
+         "Skin: FROSTBITE - Compressed gases may create low temperatures when they expand rapidly. Leaks and uses that allow rapid expansion may cause a frostbite hazard. Wear appropriate personal protective clothing to prevent the skin from becoming frozen.",
+         "Eyes: FROSTBITE - Wear appropriate eye protection to prevent eye contact with the liquid that could result in burns or tissue damage from frostbite.",
+         "Wash skin: No recommendation is made specifying the need for washing the substance from the skin (either immediately or at the end of the work shift).",
+         "Remove: WHEN WET (FLAMMABLE) - Work clothing that becomes wet should be immediately removed due to its flammability hazard (i.e., for liquids with a flash point <100°F).",
+         "Change: No recommendation is made specifying the need for the worker to change clothing after the workshift.",
+         "Provide: FROSTBITE WASH - Quick drench facilities and/or eyewash fountains should be provided within the immediate work area for emergency use where there is any possibility of exposure to liquids that are extremely cold or rapidly evaporating. (NIOSH, 2024)"
+        ]
+       },
+       {
+        "heading": "First Aid",
+        "paragraphs": [
+         "Excerpt from NIOSH Pocket Guide for L.P.G.:",
+         "Eye: IRRIGATE IMMEDIATELY (LIQUID) - If this chemical in liquid form contacts the eyes, immediately wash (irrigate) the eyes with large amounts of water, occasionally lifting the lower and upper lids. Get medical attention immediately.",
+         "Skin: WATER FLUSH IMMEDIATELY (LIQUID) - If this chemical in liquid form contacts the skin, immediately flush the contaminated skin with water. If this chemical penetrates the clothing, immediately remove the clothing and flush the skin with water. Get medical attention promptly.",
+         "Breathing: RESPIRATORY SUPPORT - If a person breathes large amounts of this chemical, move the exposed person to fresh air at once. If breathing has stopped, perform artificial respiration. Keep the affected person warm and at rest. Get medical attention as soon as possible. (NIOSH, 2024)"
+        ]
+       }
+      ],
+      "title": "LIQUEFIED PETROLEUM GAS",
+      "un_numbers": [
+       "1075"
+      ]
+     }
+    ],
+    "un": "1075",
+    "unna_page": {
+     "doc_id": "cameo-unna-1075",
+     "locator": "cameo-unna-1075#ERG",
+     "raw_sha256": "fce69d8cb073d9aa1dc358d67f4a07a5a5315031a40cf6715f584c0069c4227d"
+    }
+   },
+   "1202": {
+    "datasheets": [
+     {
+      "doc_id": "cameo-chem-11452",
+      "locator": "cameo-chem-11452#Response Recommendations",
+      "raw_sha256": "ddc74f59bf82ec0ae09649e28c72c9ef9cf47b45b013370d6522cb63bd615a07",
+      "sections": [
+       {
+        "heading": "Isolation and Evacuation",
+        "paragraphs": [
+         "Excerpt from ERG Guide 128 [Flammable Liquids (Water-Immiscible)]:",
+         "IMMEDIATE PRECAUTIONARY MEASURE: Isolate spill or leak area for at least 50 meters (150 feet) in all directions.",
+         "LARGE SPILL: Consider initial downwind evacuation for at least 300 meters (1000 feet).",
+         "FIRE: If tank, rail tank car or highway tank is involved in a fire, ISOLATE for 800 meters (1/2 mile) in all directions; also, consider initial evacuation for 800 meters (1/2 mile) in all directions. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Firefighting",
+        "paragraphs": [
+         "Excerpt from ERG Guide 128 [Flammable Liquids (Water-Immiscible)]:",
+         "CAUTION: The majority of these products have a very low flash point. Use of water spray when fighting fire may be inefficient. CAUTION: For mixtures containing alcohol or polar solvent, alcohol-resistant foam may be more effective.",
+         "SMALL FIRE: Dry chemical, CO2, water spray or regular foam. If regular foam is ineffective or unavailable, use alcohol-resistant foam.",
+         "LARGE FIRE: Water spray, fog or regular foam. If regular foam is ineffective or unavailable, use alcohol-resistant foam. Avoid aiming straight or solid streams directly onto the product. If it can be done safely, move undamaged containers away from the area around the fire.",
+         "FIRE INVOLVING TANKS, RAIL TANK CARS OR HIGHWAY TANKS: Fight fire from maximum distance or use unmanned master stream devices or monitor nozzles. Cool containers with flooding quantities of water until well after fire is out. For petroleum crude oil, do not spray water directly into a breached tank car. This can lead to a dangerous boil over. Withdraw immediately in case of rising sound from venting safety devices or discoloration of tank. ALWAYS stay away from tanks in direct contact with flames. For massive fire, use unmanned master stream devices or monitor nozzles; if this is impossible, withdraw from area and let fire burn. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Non-Fire Response",
+        "paragraphs": [
+         "Excerpt from ERG Guide 128 [Flammable Liquids (Water-Immiscible)]:",
+         "ELIMINATE all ignition sources (no smoking, flares, sparks or flames) from immediate area. All equipment used when handling the product must be grounded. Do not touch or walk through spilled material. Stop leak if you can do it without risk. Prevent entry into waterways, sewers, basements or confined areas. A vapor-suppressing foam may be used to reduce vapors. Absorb or cover with dry earth, sand or other non-combustible material and transfer to containers. Use clean, non-sparking tools to collect absorbed material.",
+         "LARGE SPILL: Dike far ahead of liquid spill for later disposal. Water spray may reduce vapor, but may not prevent ignition in closed spaces. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Protective Clothing",
+        "paragraphs": [
+         "Excerpt from ERG Guide 128 [Flammable Liquids (Water-Immiscible)]:",
+         "Wear positive pressure self-contained breathing apparatus (SCBA). Structural firefighters' protective clothing provides thermal protection but only limited chemical protection. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "First Aid",
+        "paragraphs": [
+         "EYES: First check the victim for contact lenses and remove if present. Flush victim's eyes with water or normal saline solution for 20 to 30 minutes while simultaneously calling a hospital or poison control center. Do not put any ointments, oils, or medication in the victim's eyes without specific instructions from a physician. IMMEDIATELY transport the victim after flushing eyes to a hospital even if no symptoms (such as redness or irritation) develop.",
+         "SKIN: IMMEDIATELY flood affected skin with water while removing and isolating all contaminated clothing. Gently wash all affected skin areas thoroughly with soap and water. If symptoms such as redness or irritation develop, IMMEDIATELY call a physician and be prepared to transport the victim to a hospital for treatment.",
+         "INHALATION: IMMEDIATELY leave the contaminated area; take deep breaths of fresh air. If symptoms (such as wheezing, coughing, shortness of breath, or burning in the mouth, throat, or chest) develop, call a physician and be prepared to transport the victim to a hospital. Provide proper respiratory protection to rescuers entering an unknown atmosphere. Whenever possible, Self-Contained Breathing Apparatus (SCBA) should be used; if not available, use a level of protection greater than or equal to that advised under Protective Clothing.",
+         "INGESTION: DO NOT INDUCE VOMITING. If the victim is conscious and not convulsing, give 1 or 2 glasses of water to dilute the chemical and IMMEDIATELY call a hospital or poison control center. Be prepared to transport the victim to a hospital if advised by a physician. If the victim is convulsing or unconscious, do not give anything by mouth, ensure that the victim's airway is open and lay the victim on his/her side with the head lower than the body. DO NOT INDUCE VOMITING. IMMEDIATELY transport the victim to a hospital. (NTP, 1992)"
+        ]
+       }
+      ],
+      "title": "FUEL OIL, [DIESEL]",
+      "un_numbers": [
+       "1202",
+       "1993"
+      ]
+     }
+    ],
+    "un": "1202",
+    "unna_page": {
+     "doc_id": "cameo-unna-1202",
+     "locator": "cameo-unna-1202#ERG",
+     "raw_sha256": "9a77277606af7de4b376f39fc5440309c2edd375b9a366a9b724b6dd98abf224"
+    }
+   },
+   "1203": {
+    "datasheets": [
+     {
+      "doc_id": "cameo-chem-11498",
+      "locator": "cameo-chem-11498#Response Recommendations",
+      "raw_sha256": "b15e39c04d8e5380dcffc3791d46a7fd8e23c7c6eddcb24f553493e2840be988",
+      "sections": [
+       {
+        "heading": "Isolation and Evacuation",
+        "paragraphs": [
+         "Excerpt from ERG Guide 128 [Flammable Liquids (Water-Immiscible)]:",
+         "IMMEDIATE PRECAUTIONARY MEASURE: Isolate spill or leak area for at least 50 meters (150 feet) in all directions.",
+         "LARGE SPILL: Consider initial downwind evacuation for at least 300 meters (1000 feet).",
+         "FIRE: If tank, rail tank car or highway tank is involved in a fire, ISOLATE for 800 meters (1/2 mile) in all directions; also, consider initial evacuation for 800 meters (1/2 mile) in all directions. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Firefighting",
+        "paragraphs": [
+         "Excerpt from ERG Guide 128 [Flammable Liquids (Water-Immiscible)]:",
+         "CAUTION: The majority of these products have a very low flash point. Use of water spray when fighting fire may be inefficient. CAUTION: For mixtures containing alcohol or polar solvent, alcohol-resistant foam may be more effective.",
+         "SMALL FIRE: Dry chemical, CO2, water spray or regular foam. If regular foam is ineffective or unavailable, use alcohol-resistant foam.",
+         "LARGE FIRE: Water spray, fog or regular foam. If regular foam is ineffective or unavailable, use alcohol-resistant foam. Avoid aiming straight or solid streams directly onto the product. If it can be done safely, move undamaged containers away from the area around the fire.",
+         "FIRE INVOLVING TANKS, RAIL TANK CARS OR HIGHWAY TANKS: Fight fire from maximum distance or use unmanned master stream devices or monitor nozzles. Cool containers with flooding quantities of water until well after fire is out. For petroleum crude oil, do not spray water directly into a breached tank car. This can lead to a dangerous boil over. Withdraw immediately in case of rising sound from venting safety devices or discoloration of tank. ALWAYS stay away from tanks in direct contact with flames. For massive fire, use unmanned master stream devices or monitor nozzles; if this is impossible, withdraw from area and let fire burn. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Non-Fire Response",
+        "paragraphs": [
+         "Excerpt from ERG Guide 128 [Flammable Liquids (Water-Immiscible)]:",
+         "ELIMINATE all ignition sources (no smoking, flares, sparks or flames) from immediate area. All equipment used when handling the product must be grounded. Do not touch or walk through spilled material. Stop leak if you can do it without risk. Prevent entry into waterways, sewers, basements or confined areas. A vapor-suppressing foam may be used to reduce vapors. Absorb or cover with dry earth, sand or other non-combustible material and transfer to containers. Use clean, non-sparking tools to collect absorbed material.",
+         "LARGE SPILL: Dike far ahead of liquid spill for later disposal. Water spray may reduce vapor, but may not prevent ignition in closed spaces. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Protective Clothing",
+        "paragraphs": [
+         "Excerpt from NIOSH Pocket Guide for Gasoline:",
+         "Skin: PREVENT SKIN CONTACT - Wear appropriate personal protective clothing to prevent skin contact.",
+         "Eyes: PREVENT EYE CONTACT - Wear appropriate eye protection to prevent eye contact.",
+         "Wash skin: WHEN CONTAMINATED - The worker should immediately wash the skin when it becomes contaminated.",
+         "Remove: WHEN WET (FLAMMABLE) - Work clothing that becomes wet should be immediately removed due to its flammability hazard (i.e., for liquids with a flash point <100°F).",
+         "Change: No recommendation is made specifying the need for the worker to change clothing after the workshift.",
+         "Provide:",
+         "• EYEWASH - Eyewash fountains should be provided in areas where there is any possibility that workers could be exposed to the substances; this is irrespective of the recommendation involving the wearing of eye protection.",
+         "• QUICK DRENCH - Facilities for quickly drenching the body should be provided within the immediate work area for emergency use where there is a possibility of exposure. [Note: It is intended that these facilities provide a sufficient quantity or flow of water to quickly remove the substance from any body areas likely to be exposed. The actual determination of what constitutes an adequate quick drench facility depends on the specific circumstances. In certain instances, a deluge shower should be readily available, whereas in others, the availability of water from a sink or hose could be considered adequate.] (NIOSH, 2024)"
+        ]
+       },
+       {
+        "heading": "First Aid",
+        "paragraphs": [
+         "Excerpt from NIOSH Pocket Guide for Gasoline:",
+         "Eye: IRRIGATE IMMEDIATELY - If this chemical contacts the eyes, immediately wash (irrigate) the eyes with large amounts of water, occasionally lifting the lower and upper lids. Get medical attention immediately.",
+         "Skin: SOAP FLUSH IMMEDIATELY - If this chemical contacts the skin, immediately flush the contaminated skin with soap and water. If this chemical penetrates the clothing, immediately remove the clothing and flush the skin with water. If irritation persists after washing, get medical attention.",
+         "Breathing: RESPIRATORY SUPPORT - If a person breathes large amounts of this chemical, move the exposed person to fresh air at once. If breathing has stopped, perform artificial respiration. Keep the affected person warm and at rest. Get medical attention as soon as possible.",
+         "Swallow: MEDICAL ATTENTION IMMEDIATELY - If this chemical has been swallowed, get medical attention immediately. (NIOSH, 2024)"
+        ]
+       }
+      ],
+      "title": "GASOLINE",
+      "un_numbers": [
+       "1203"
+      ]
+     }
+    ],
+    "un": "1203",
+    "unna_page": {
+     "doc_id": "cameo-unna-1203",
+     "locator": "cameo-unna-1203#ERG",
+     "raw_sha256": "7fbd68870589ccee56dad8595860bb8a298ca636cdc2d1cb5ff76502c040f58b"
+    }
+   },
+   "1951": {
+    "datasheets": [
+     {
+      "doc_id": "cameo-chem-2509",
+      "locator": "cameo-chem-2509#Response Recommendations",
+      "raw_sha256": "6bea4d6ada28220f0e77c2143cb449e7997e53d6f48e63caff40f9b4f482e1b7",
+      "sections": [
+       {
+        "heading": "Isolation and Evacuation",
+        "paragraphs": [
+         "Excerpt from ERG Guide 120 [Gases - Inert (Including Refrigerated Liquids)]:",
+         "IMMEDIATE PRECAUTIONARY MEASURE: Isolate spill or leak area for at least 100 meters (330 feet) in all directions.",
+         "LARGE SPILL: Consider initial downwind evacuation for at least 100 meters (330 feet).",
+         "FIRE: If tank, rail tank car or highway tank is involved in a fire, ISOLATE for 800 meters (1/2 mile) in all directions; also, consider initial evacuation for 800 meters (1/2 mile) in all directions. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Firefighting",
+        "paragraphs": [
+         "Excerpt from ERG Guide 120 [Gases - Inert (Including Refrigerated Liquids)]:",
+         "Use extinguishing agent suitable for type of surrounding fire. If it can be done safely, move undamaged containers away from the area around the fire. Damaged cylinders should be handled only by specialists.",
+         "FIRE INVOLVING TANKS: Fight fire from maximum distance or use unmanned master stream devices or monitor nozzles. Cool containers with flooding quantities of water until well after fire is out. Do not direct water at source of leak or safety devices; icing may occur. Withdraw immediately in case of rising sound from venting safety devices or discoloration of tank. ALWAYS stay away from tanks in direct contact with flames. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Non-Fire Response",
+        "paragraphs": [
+         "Excerpt from ERG Guide 120 [Gases - Inert (Including Refrigerated Liquids)]:",
+         "Do not touch or walk through spilled material. Stop leak if you can do it without risk. Use water spray to reduce vapors or divert vapor cloud drift. Avoid allowing water runoff to contact spilled material. Do not direct water at spill or source of leak. If possible, turn leaking containers so that gas escapes rather than liquid. Prevent entry into waterways, sewers, basements or confined areas. Allow substance to evaporate. Ventilate the area. CAUTION: When in contact with refrigerated/cryogenic liquids, many materials become brittle and are likely to break without warning. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Protective Clothing",
+        "paragraphs": [
+         "Excerpt from ERG Guide 120 [Gases - Inert (Including Refrigerated Liquids)]:",
+         "Wear positive pressure self-contained breathing apparatus (SCBA). Structural firefighters' protective clothing provides thermal protection but only limited chemical protection. Always wear thermal protective clothing when handling refrigerated/cryogenic liquids or solids. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "First Aid",
+        "paragraphs": [
+         "Excerpt from ERG Guide 120 [Gases - Inert (Including Refrigerated Liquids)]:",
+         "Refer to the \"General First Aid\" section. Specific First Aid: Clothing frozen to the skin should be thawed before being removed. In case of contact with liquefied gas, only medical personnel should attempt thawing frosted parts. (ERG, 2024)"
+        ]
+       }
+      ],
+      "title": "ARGON, REFRIGERATED LIQUID (CRYOGENIC LIQUID)",
+      "un_numbers": [
+       "1951"
+      ]
+     }
+    ],
+    "un": "1951",
+    "unna_page": {
+     "doc_id": "cameo-unna-1951",
+     "locator": "cameo-unna-1951#ERG",
+     "raw_sha256": "3219e7ba7412208d25b6c5bf30e455ac54537c87e8f8532ef788720c2948de6c"
+    }
+   },
+   "1977": {
+    "datasheets": [
+     {
+      "doc_id": "cameo-chem-4069",
+      "locator": "cameo-chem-4069#Response Recommendations",
+      "raw_sha256": "ac8c9418b54dae731a14d8e69b2cb781199ae6061f33b9e50873458376739889",
+      "sections": [
+       {
+        "heading": "Isolation and Evacuation",
+        "paragraphs": [
+         "Excerpt from ERG Guide 120 [Gases - Inert (Including Refrigerated Liquids)]:",
+         "IMMEDIATE PRECAUTIONARY MEASURE: Isolate spill or leak area for at least 100 meters (330 feet) in all directions.",
+         "LARGE SPILL: Consider initial downwind evacuation for at least 100 meters (330 feet).",
+         "FIRE: If tank, rail tank car or highway tank is involved in a fire, ISOLATE for 800 meters (1/2 mile) in all directions; also, consider initial evacuation for 800 meters (1/2 mile) in all directions. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Firefighting",
+        "paragraphs": [
+         "Excerpt from ERG Guide 120 [Gases - Inert (Including Refrigerated Liquids)]:",
+         "Use extinguishing agent suitable for type of surrounding fire. If it can be done safely, move undamaged containers away from the area around the fire. Damaged cylinders should be handled only by specialists.",
+         "FIRE INVOLVING TANKS: Fight fire from maximum distance or use unmanned master stream devices or monitor nozzles. Cool containers with flooding quantities of water until well after fire is out. Do not direct water at source of leak or safety devices; icing may occur. Withdraw immediately in case of rising sound from venting safety devices or discoloration of tank. ALWAYS stay away from tanks in direct contact with flames. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Non-Fire Response",
+        "paragraphs": [
+         "Excerpt from ERG Guide 120 [Gases - Inert (Including Refrigerated Liquids)]:",
+         "Do not touch or walk through spilled material. Stop leak if you can do it without risk. Use water spray to reduce vapors or divert vapor cloud drift. Avoid allowing water runoff to contact spilled material. Do not direct water at spill or source of leak. If possible, turn leaking containers so that gas escapes rather than liquid. Prevent entry into waterways, sewers, basements or confined areas. Allow substance to evaporate. Ventilate the area. CAUTION: When in contact with refrigerated/cryogenic liquids, many materials become brittle and are likely to break without warning. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Protective Clothing",
+        "paragraphs": [
+         "Safety glasses or face shield; insulated gloves; long sleeves; trousers worn outside boots or over high-top shoes to shed spilled liquid; self-contained breathing apparatus where insufficient air is present. (USCG, 1999)"
+        ]
+       },
+       {
+        "heading": "First Aid",
+        "paragraphs": [
+         "INHALATION: remove to fresh air; apply artificial respiration if breathing has stopped; call physician.",
+         "EYES: treat for frostbite burns caused by liquid.",
+         "SKIN: treat for frostbite; soak in lukewarm water. (USCG, 1999)"
+        ]
+       }
+      ],
+      "title": "NITROGEN, REFRIGERATED LIQUID (CRYOGENIC LIQUID)",
+      "un_numbers": [
+       "1977"
+      ]
+     }
+    ],
+    "un": "1977",
+    "unna_page": {
+     "doc_id": "cameo-unna-1977",
+     "locator": "cameo-unna-1977#ERG",
+     "raw_sha256": "5e5bb9eb06fa3462d2591aac3b657ec30265f2778b715b3f96333742c78f37dd"
+    }
+   },
+   "1978": {
+    "datasheets": [
+     {
+      "doc_id": "cameo-chem-9018",
+      "locator": "cameo-chem-9018#Response Recommendations",
+      "raw_sha256": "a5a30579fb24e0f07be58c92823da93f2a3f2a6b74f0070f48ff599eb1311e2f",
+      "sections": [
+       {
+        "heading": "Isolation and Evacuation",
+        "paragraphs": [
+         "Excerpt from ERG Guide 115 [Gases - Flammable (Including Refrigerated Liquids)]:",
+         "IMMEDIATE PRECAUTIONARY MEASURE: Isolate spill or leak area for at least 100 meters (330 feet) in all directions.",
+         "LARGE SPILL: Consider initial downwind evacuation for at least 800 meters (1/2 mile).",
+         "FIRE: If tank, rail tank car or highway tank is involved in a fire, ISOLATE for 1600 meters (1 mile) in all directions; also, consider initial evacuation for 1600 meters (1 mile) in all directions. In fires involving Liquefied Petroleum Gases (LPG) (UN1075), Butane (UN1011), Butylene (UN1012), Isobutylene (UN1055), Propylene (UN1077), Isobutane (UN1969), and Propane (UN1978), also refer to the \"BLEVE - Safety Precautions\" section. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Firefighting",
+        "paragraphs": [
+         "Excerpt from ERG Guide 115 [Gases - Flammable (Including Refrigerated Liquids)]:",
+         "DO NOT EXTINGUISH A LEAKING GAS FIRE UNLESS LEAK CAN BE STOPPED. CAUTION: Hydrogen (UN1049), Deuterium (UN1957), Hydrogen, refrigerated liquid (UN1966) and Hydrogen and Methane mixture, compressed (UN2034) will burn with an invisible flame. Use an alternate method of detection (thermal camera, broom handle, etc.).",
+         "SMALL FIRE: Dry chemical or CO2.",
+         "LARGE FIRE: Water spray or fog. If it can be done safely, move undamaged containers away from the area around the fire. CAUTION: For LNG - Liquefied natural gas (UN1972) pool fires, DO NOT USE water. Use dry chemical or high-expansion foam.",
+         "FIRE INVOLVING TANKS: Fight fire from maximum distance or use unmanned master stream devices or monitor nozzles. Cool containers with flooding quantities of water until well after fire is out. Do not direct water at source of leak or safety devices; icing may occur. Withdraw immediately in case of rising sound from venting safety devices or discoloration of tank. ALWAYS stay away from tanks in direct contact with flames. For massive fire, use unmanned master stream devices or monitor nozzles; if this is impossible, withdraw from area and let fire burn. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Non-Fire Response",
+        "paragraphs": [
+         "Excerpt from ERG Guide 115 [Gases - Flammable (Including Refrigerated Liquids)]:",
+         "ELIMINATE all ignition sources (no smoking, flares, sparks or flames) from immediate area. All equipment used when handling the product must be grounded. Do not touch or walk through spilled material. Stop leak if you can do it without risk. If possible, turn leaking containers so that gas escapes rather than liquid. Use water spray to reduce vapors or divert vapor cloud drift. Avoid allowing water runoff to contact spilled material. Do not direct water at spill or source of leak. CAUTION: For LNG - Liquefied natural gas (UN1972), DO NOT apply water, regular or alcohol-resistant foam directly on spill. Use a high-expansion foam if available to reduce vapors. Prevent spreading of vapors through sewers, ventilation systems and confined areas. Isolate area until gas has dispersed. CAUTION: When in contact with refrigerated/cryogenic liquids, many materials become brittle and are likely to break without warning. (ERG, 2024)"
+        ]
+       },
+       {
+        "heading": "Protective Clothing",
+        "paragraphs": [
+         "Excerpt from NIOSH Pocket Guide for Propane:",
+         "Skin: FROSTBITE - Compressed gases may create low temperatures when they expand rapidly. Leaks and uses that allow rapid expansion may cause a frostbite hazard. Wear appropriate personal protective clothing to prevent the skin from becoming frozen.",
+         "Eyes: FROSTBITE - Wear appropriate eye protection to prevent eye contact with the liquid that could result in burns or tissue damage from frostbite.",
+         "Wash skin: No recommendation is made specifying the need for washing the substance from the skin (either immediately or at the end of the work shift).",
+         "Remove: WHEN WET (FLAMMABLE) - Work clothing that becomes wet should be immediately removed due to its flammability hazard (i.e., for liquids with a flash point <100°F).",
+         "Change: No recommendation is made specifying the need for the worker to change clothing after the workshift.",
+         "Provide: FROSTBITE WASH - Quick drench facilities and/or eyewash fountains should be provided within the immediate work area for emergency use where there is any possibility of exposure to liquids that are extremely cold or rapidly evaporating. (NIOSH, 2024)"
+        ]
+       },
+       {
+        "heading": "First Aid",
+        "paragraphs": [
+         "Excerpt from NIOSH Pocket Guide for Propane:",
+         "Eye: FROSTBITE - If eye tissue is frozen, seek medical attention immediately; if tissue is not frozen, immediately and thoroughly flush the eyes with large amounts of water for at least 15 minutes, occasionally lifting the lower and upper eyelids. If irritation, pain, swelling, lacrimation, or photophobia persist, get medical attention as soon as possible.",
+         "Skin: FROSTBITE - If frostbite has occurred, seek medical attention immediately; do NOT rub the affected areas or flush them with water. In order to prevent further tissue damage, do NOT attempt to remove frozen clothing from frostbitten areas. If frostbite has NOT occurred, immediately and thoroughly wash contaminated skin with soap and water.",
+         "Breathing: RESPIRATORY SUPPORT - If a person breathes large amounts of this chemical, move the exposed person to fresh air at once. If breathing has stopped, perform artificial respiration. Keep the affected person warm and at rest. Get medical attention as soon as possible. (NIOSH, 2024)"
+        ]
+       }
+      ],
+      "title": "PROPANE",
+      "un_numbers": [
+       "1978"
+      ]
+     }
+    ],
+    "un": "1978",
+    "unna_page": {
+     "doc_id": "cameo-unna-1978",
+     "locator": "cameo-unna-1978#ERG",
+     "raw_sha256": "bd50a62affdf9c72827621f66774475a7d46e228acbea9065724b98259b5eb7a"
+    }
+   }
+  },
+  "response_sections": [
+   "Isolation and Evacuation",
+   "Firefighting",
+   "Non-Fire Response",
+   "Protective Clothing",
+   "First Aid"
+  ]
+ },
+ "kind": "cameo",
+ "pack_id": "cameo",
+ "schema_version": 8,
+ "sha256": "2d555bbd673d142e43b03c38061e0a7325c282adba14129bc4eb509b70a313e1",
+ "sources": [
+  {
+   "doc_id": "cameo-chem-11452",
+   "licence": "public-domain",
+   "locator": "Response Recommendations: Isolation and Evacuation; Firefighting; Non-Fire Response; Protective Clothing; First Aid",
+   "raw_sha256": "ddc74f59bf82ec0ae09649e28c72c9ef9cf47b45b013370d6522cb63bd615a07"
+  },
+  {
+   "doc_id": "cameo-chem-11498",
+   "licence": "public-domain",
+   "locator": "Response Recommendations: Isolation and Evacuation; Firefighting; Non-Fire Response; Protective Clothing; First Aid",
+   "raw_sha256": "b15e39c04d8e5380dcffc3791d46a7fd8e23c7c6eddcb24f553493e2840be988"
+  },
+  {
+   "doc_id": "cameo-chem-2509",
+   "licence": "public-domain",
+   "locator": "Response Recommendations: Isolation and Evacuation; Firefighting; Non-Fire Response; Protective Clothing; First Aid",
+   "raw_sha256": "6bea4d6ada28220f0e77c2143cb449e7997e53d6f48e63caff40f9b4f482e1b7"
+  },
+  {
+   "doc_id": "cameo-chem-2862",
+   "licence": "public-domain",
+   "locator": "Response Recommendations: Isolation and Evacuation; Firefighting; Non-Fire Response; Protective Clothing; First Aid",
+   "raw_sha256": "c601eae3a31c0f2db6a348a7de40cd430caab810de0bd20ad7d514d891ecc4a7"
+  },
+  {
+   "doc_id": "cameo-chem-4069",
+   "licence": "public-domain",
+   "locator": "Response Recommendations: Isolation and Evacuation; Firefighting; Non-Fire Response; Protective Clothing; First Aid",
+   "raw_sha256": "ac8c9418b54dae731a14d8e69b2cb781199ae6061f33b9e50873458376739889"
+  },
+  {
+   "doc_id": "cameo-chem-4860",
+   "licence": "public-domain",
+   "locator": "Response Recommendations: Isolation and Evacuation; Firefighting; Non-Fire Response; Protective Clothing; First Aid",
+   "raw_sha256": "024e8f67481351301770501b60b5880e309125ca8a759eec1bf241030eab12a1"
+  },
+  {
+   "doc_id": "cameo-chem-9018",
+   "licence": "public-domain",
+   "locator": "Response Recommendations: Isolation and Evacuation; Firefighting; Non-Fire Response; Protective Clothing; First Aid",
+   "raw_sha256": "a5a30579fb24e0f07be58c92823da93f2a3f2a6b74f0070f48ff599eb1311e2f"
+  },
+  {
+   "doc_id": "cameo-chem-987",
+   "licence": "public-domain",
+   "locator": "Response Recommendations: Isolation and Evacuation; Firefighting; Non-Fire Response; Protective Clothing; First Aid",
+   "raw_sha256": "47ecfe15ad224a131937332f85444923e0df80490027ee758c7e0746f3293b04"
+  },
+  {
+   "doc_id": "cameo-unna-1005",
+   "licence": "public-domain",
+   "locator": "UN/NA datasheet",
+   "raw_sha256": "5dcfa92c58fec9b261a1dfa57c207a79691f36e0cd251d537133596dd10c080c"
+  },
+  {
+   "doc_id": "cameo-unna-1017",
+   "licence": "public-domain",
+   "locator": "UN/NA datasheet",
+   "raw_sha256": "fce6798bab419890cfcd4b4346c57734657a8ed1dfea64862d426501cb52efe2"
+  },
+  {
+   "doc_id": "cameo-unna-1075",
+   "licence": "public-domain",
+   "locator": "UN/NA datasheet",
+   "raw_sha256": "fce69d8cb073d9aa1dc358d67f4a07a5a5315031a40cf6715f584c0069c4227d"
+  },
+  {
+   "doc_id": "cameo-unna-1202",
+   "licence": "public-domain",
+   "locator": "UN/NA datasheet",
+   "raw_sha256": "9a77277606af7de4b376f39fc5440309c2edd375b9a366a9b724b6dd98abf224"
+  },
+  {
+   "doc_id": "cameo-unna-1203",
+   "licence": "public-domain",
+   "locator": "UN/NA datasheet",
+   "raw_sha256": "7fbd68870589ccee56dad8595860bb8a298ca636cdc2d1cb5ff76502c040f58b"
+  },
+  {
+   "doc_id": "cameo-unna-1951",
+   "licence": "public-domain",
+   "locator": "UN/NA datasheet",
+   "raw_sha256": "3219e7ba7412208d25b6c5bf30e455ac54537c87e8f8532ef788720c2948de6c"
+  },
+  {
+   "doc_id": "cameo-unna-1977",
+   "licence": "public-domain",
+   "locator": "UN/NA datasheet",
+   "raw_sha256": "5e5bb9eb06fa3462d2591aac3b657ec30265f2778b715b3f96333742c78f37dd"
+  },
+  {
+   "doc_id": "cameo-unna-1978",
+   "licence": "public-domain",
+   "locator": "UN/NA datasheet",
+   "raw_sha256": "bd50a62affdf9c72827621f66774475a7d46e228acbea9065724b98259b5eb7a"
+  }
+ ],
+ "version": "cameo3.1.0.1"
+}

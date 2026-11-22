@@ -1,0 +1,71 @@
+{
+ "api": "nldi",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      [
+       -77.032517105,
+       38.801625095
+      ],
+      [
+       -77.032648005,
+       38.800498493
+      ],
+      [
+       -77.032364905,
+       38.799052797
+      ],
+      [
+       -77.033268206,
+       38.795624897
+      ],
+      [
+       -77.032829307,
+       38.792880595
+      ],
+      [
+       -77.031817004,
+       38.789792396
+      ],
+      [
+       -77.033204004,
+       38.784528099
+      ],
+      [
+       -77.035538606,
+       38.782596797
+      ],
+      [
+       -77.037310302,
+       38.7765003
+      ]
+     ],
+     "type": "LineString"
+    },
+    "id": 22340603,
+    "properties": {
+     "comid": 22340603,
+     "identifier": "22340603",
+     "navigation": "https://api.water.usgs.gov/nldi/linked-data/comid/22340603/navigation",
+     "source": "comid",
+     "sourceName": "NHDPlus comid"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-28T02:40:47Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "public, max-age=3600",
+  "Date": "Wed, 28 Oct 2026 02:40:47 GMT"
+ },
+ "status": 200,
+ "url": "https://api.water.usgs.gov/nldi/linked-data/comid/position?coords=POINT%28-77.033550+38.792834%29"
+}

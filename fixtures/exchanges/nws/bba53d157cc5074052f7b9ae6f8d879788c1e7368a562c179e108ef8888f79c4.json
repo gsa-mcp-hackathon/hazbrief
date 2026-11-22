@@ -1,0 +1,175 @@
+{
+ "api": "nws",
+ "body": {
+  "@context": [
+   "https://geojson.org/geojson-ld/geojson-context.jsonld",
+   {
+    "@version": "1.1",
+    "@vocab": "https://api.weather.gov/ontology#",
+    "bearing": {
+     "@type": "s:QuantitativeValue"
+    },
+    "city": "s:addressLocality",
+    "county": {
+     "@type": "@id"
+    },
+    "distance": {
+     "@id": "s:Distance",
+     "@type": "s:QuantitativeValue"
+    },
+    "forecastGridData": {
+     "@type": "@id"
+    },
+    "forecastOffice": {
+     "@type": "@id"
+    },
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "geometry": {
+     "@id": "s:GeoCoordinates",
+     "@type": "geo:wktLiteral"
+    },
+    "publicZone": {
+     "@type": "@id"
+    },
+    "s": "https://schema.org/",
+    "state": "s:addressRegion",
+    "unit": "http://codes.wmo.int/common/unit/",
+    "unitCode": {
+     "@id": "s:unitCode",
+     "@type": "@id"
+    },
+    "value": {
+     "@id": "s:value"
+    },
+    "wx": "https://api.weather.gov/ontology#"
+   }
+  ],
+  "geometry": {
+   "coordinates": [
+    -77.56,
+    39.08
+   ],
+   "type": "Point"
+  },
+  "id": "https://api.weather.gov/stations/KJYO/observations/2026-10-28T03:35:00+00:00",
+  "properties": {
+   "@id": "https://api.weather.gov/stations/KJYO/observations/2026-10-28T03:35:00+00:00",
+   "@type": "wx:ObservationStation",
+   "barometricPressure": {
+    "qualityControl": "S",
+    "unitCode": "wmoUnit:Pa",
+    "value": 102910
+   },
+   "cloudLayers": [
+    {
+     "amount": "CLR",
+     "base": {
+      "unitCode": "wmoUnit:m",
+      "value": null
+     }
+    }
+   ],
+   "dewpoint": {
+    "qualityControl": "S",
+    "unitCode": "wmoUnit:degC",
+    "value": 11
+   },
+   "elevation": {
+    "unitCode": "wmoUnit:m",
+    "value": 119
+   },
+   "heatIndex": {
+    "qualityControl": "S",
+    "unitCode": "wmoUnit:degC",
+    "value": null
+   },
+   "icon": "https://api.weather.gov/icons/land/night/skc?size=medium",
+   "maxTemperatureLast24Hours": {
+    "unitCode": "wmoUnit:degC",
+    "value": null
+   },
+   "minTemperatureLast24Hours": {
+    "unitCode": "wmoUnit:degC",
+    "value": null
+   },
+   "precipitationLast3Hours": {
+    "qualityControl": "Z",
+    "unitCode": "wmoUnit:mm",
+    "value": null
+   },
+   "precipitationLast6Hours": {
+    "qualityControl": "Z",
+    "unitCode": "wmoUnit:mm",
+    "value": null
+   },
+   "precipitationLastHour": {
+    "qualityControl": "Z",
+    "unitCode": "wmoUnit:mm",
+    "value": null
+   },
+   "presentWeather": [],
+   "rawMessage": "KJYO 280335Z AUTO 00000KT 10SM CLR 11/11 A3039 RMK AO2",
+   "relativeHumidity": {
+    "qualityControl": "S",
+    "unitCode": "wmoUnit:percent",
+    "value": 100
+   },
+   "seaLevelPressure": {
+    "qualityControl": "Z",
+    "unitCode": "wmoUnit:Pa",
+    "value": null
+   },
+   "station": "https://api.weather.gov/stations/KJYO",
+   "stationId": "KJYO",
+   "stationName": "Leesburg / Godfrey",
+   "temperature": {
+    "qualityControl": "S",
+    "unitCode": "wmoUnit:degC",
+    "value": 11
+   },
+   "textDescription": "Clear",
+   "timestamp": "2026-10-28T03:35:00+00:00",
+   "visibility": {
+    "qualityControl": "C",
+    "unitCode": "wmoUnit:m",
+    "value": 16090
+   },
+   "windChill": {
+    "qualityControl": "S",
+    "unitCode": "wmoUnit:degC",
+    "value": null
+   },
+   "windDirection": {
+    "qualityControl": "S",
+    "unitCode": "wmoUnit:degree_(angle)",
+    "value": 0
+   },
+   "windGust": {
+    "qualityControl": "Z",
+    "unitCode": "wmoUnit:km_h-1",
+    "value": null
+   },
+   "windSpeed": {
+    "qualityControl": "S",
+    "unitCode": "wmoUnit:km_h-1",
+    "value": 0
+   }
+  },
+  "type": "Feature"
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-28T04:14:53Z",
+ "request_headers": {
+  "Accept": "application/geo+json",
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "public, max-age=98, s-maxage=300",
+  "Date": "Wed, 28 Oct 2026 04:14:53 GMT",
+  "ETag": "W/\"1793158500:dtagent10337260504112723F6xZ:dtagent10337260504112723F6xZ\"",
+  "Expires": "Wed, 28 Oct 2026 04:16:31 GMT",
+  "Last-Modified": "Wed, 28 Oct 2026 03:34:58 GMT"
+ },
+ "status": 200,
+ "url": "https://api.weather.gov/stations/KJYO/observations/latest"
+}

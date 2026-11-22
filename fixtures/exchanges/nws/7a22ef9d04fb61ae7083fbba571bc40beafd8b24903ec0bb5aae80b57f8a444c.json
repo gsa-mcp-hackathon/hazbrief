@@ -1,0 +1,126 @@
+{
+ "api": "nws",
+ "body": {
+  "@context": [
+   "https://geojson.org/geojson-ld/geojson-context.jsonld",
+   {
+    "@version": "1.1",
+    "@vocab": "https://api.weather.gov/ontology#",
+    "bearing": {
+     "@type": "s:QuantitativeValue"
+    },
+    "city": "s:addressLocality",
+    "county": {
+     "@type": "@id"
+    },
+    "distance": {
+     "@id": "s:Distance",
+     "@type": "s:QuantitativeValue"
+    },
+    "forecastGridData": {
+     "@type": "@id"
+    },
+    "forecastOffice": {
+     "@type": "@id"
+    },
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "geometry": {
+     "@id": "s:GeoCoordinates",
+     "@type": "geo:wktLiteral"
+    },
+    "publicZone": {
+     "@type": "@id"
+    },
+    "s": "https://schema.org/",
+    "state": "s:addressRegion",
+    "unit": "http://codes.wmo.int/common/unit/",
+    "unitCode": {
+     "@id": "s:unitCode",
+     "@type": "@id"
+    },
+    "value": {
+     "@id": "s:value"
+    },
+    "wx": "https://api.weather.gov/ontology#"
+   }
+  ],
+  "geometry": {
+   "coordinates": [
+    -77.037,
+    38.7934
+   ],
+   "type": "Point"
+  },
+  "id": "https://api.weather.gov/points/38.7934,-77.037",
+  "properties": {
+   "@id": "https://api.weather.gov/points/38.7934,-77.037",
+   "@type": "wx:Point",
+   "astronomicalData": {
+    "astronomicalTwilightBegin": "2026-10-21T05:54:59-04:00",
+    "astronomicalTwilightEnd": "2026-10-21T19:50:28-04:00",
+    "civilTwilightBegin": "2026-10-21T06:56:49-04:00",
+    "civilTwilightEnd": "2026-10-21T18:48:38-04:00",
+    "nauticalTwilightBegin": "2026-10-21T06:25:48-04:00",
+    "nauticalTwilightEnd": "2026-10-21T19:19:39-04:00",
+    "sunrise": "2026-10-21T07:23:46-04:00",
+    "sunset": "2026-10-21T18:21:41-04:00",
+    "transit": "2026-10-21T12:52:44-04:00"
+   },
+   "cwa": "LWX",
+   "forecast": "https://api.weather.gov/gridpoints/LWX/97,67/forecast",
+   "forecastGridData": "https://api.weather.gov/gridpoints/LWX/97,67",
+   "forecastHourly": "https://api.weather.gov/gridpoints/LWX/97,67/forecast/hourly",
+   "forecastOffice": "https://api.weather.gov/offices/LWX",
+   "forecastZone": "https://api.weather.gov/zones/forecast/ANZ535",
+   "gridId": "LWX",
+   "gridX": 97,
+   "gridY": 67,
+   "nwr": {
+    "areaBroadcast": null,
+    "pointBroadcast": "https://api.weather.gov/points/38.7934,-77.037/radio",
+    "sameCode": null,
+    "transmitter": null
+   },
+   "observationStations": "https://api.weather.gov/gridpoints/LWX/97,67/stations",
+   "radarStation": "KLWX",
+   "relativeLocation": {
+    "geometry": {
+     "coordinates": [
+      -77.0165243,
+      38.9042429
+     ],
+     "type": "Point"
+    },
+    "properties": {
+     "bearing": {
+      "unitCode": "wmoUnit:degree_(angle)",
+      "value": 0
+     },
+     "city": "Washington",
+     "distance": {
+      "unitCode": "wmoUnit:m",
+      "value": 0
+     },
+     "state": "DC"
+    },
+    "type": "Feature"
+   },
+   "timeZone": "America/New_York",
+   "type": "marine"
+  },
+  "type": "Feature"
+ },
+ "method": "GET",
+ "recorded_at": "2026-10-21T03:27:51Z",
+ "request_headers": {
+  "Accept": "application/geo+json",
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "public, max-age=86400, s-maxage=86400",
+  "Date": "Wed, 21 Oct 2026 03:27:51 GMT",
+  "Expires": "Thu, 22 Oct 2026 03:27:51 GMT"
+ },
+ "status": 200,
+ "url": "https://api.weather.gov/points/38.7934,-77.037"
+}

@@ -1,0 +1,101 @@
+{
+ "criterion_forms": {
+  "agree": true,
+  "continuous": {
+   "class": "dense",
+   "h_m": 1.1570364524037386,
+   "rate_kg_s": 151.66666666666669,
+   "rho_air_kg_m3": 1.2094572911113706,
+   "rho_kg_m3": 22.35645130388013,
+   "ri_c": 14564.345312521169,
+   "u_star_ms": 0.11671251500168023
+  },
+  "instantaneous": {
+   "a0_at_ri_c_1_m2": 5123685.331972217,
+   "a0_flashed_m2": 1.277539310006591,
+   "class": "dense",
+   "g_hat_m_s2": 171.46630175320715,
+   "h_at_ri_c_1_m": 7.944308017807146e-05,
+   "ri_c_at_flashed_a0": 4010589.1786185293,
+   "v0_m3": 407.04134463507756
+  },
+  "route": {
+   "class": "not_determined",
+   "kind": "instantaneous",
+   "missing": [
+    "a source area for an instantaneous release"
+   ],
+   "ri_c": null
+  }
+ },
+ "units": {
+  "P_scichem": {
+   "engine": "SCICHEM",
+   "input_sha256": "a1abcc5a3f887bdcc44063ea194515e6c41a0fddb5bbb78cecde93742facd67b",
+   "key": "580ad6b7b64622251d2b5f414de7268e65730fe748bf5b5d71fba8a20eb97836",
+   "n_sensors": 247,
+   "run_hours": 3,
+   "source": {
+    "air_kg_s": 696.7651899807781,
+    "area_m2": 542.3134871135528,
+    "buoyancy_k_m3_s": -26949.85914696606,
+    "cone_length_m": 101.81200030073401,
+    "duration_s": 60.0,
+    "gas_density_kg_m3": 2.960777120303934,
+    "rate_kg_s": 151.66666666666669,
+    "sigma_h_m": 13.93562744923711,
+    "sigma_z_m": 6.967813724618555,
+    "speed_m_s": 0.9492692402339723,
+    "volume_flux_m3_s": 514.8015118809184
+   }
+  },
+  "P_slab_rh20": {
+   "deck": "    2\n    1\n  0.070906\n     498.1\n     239.5\n0.84054278\n   287840.\n     926.3\n     1574.\n       -1.\n        0.\n     239.5\n 151.66667\n 1.2775393\n       60.\n        0.\n        0.\n        1.\n    10000.\n       0.3\n        0.\n        0.\n        0.\n    0.0005\n        2.\n      3.98\n    291.85\n       20.\n        5.\n       -1.\n",
+   "engine": "SLAB",
+   "input_sha256": "67981994b6cecbdf93b9363ae80909fa6720d7da94256ecab1b6f365019bb79a",
+   "key": "dfba7e462ee1333ef90120c1f273368f33e21e7107e111b4fcbad509edb86c97",
+   "rh_pct": 20.0
+  },
+  "P_slab_rh80": {
+   "deck": "    2\n    1\n  0.070906\n     498.1\n     239.5\n0.84054278\n   287840.\n     926.3\n     1574.\n       -1.\n        0.\n     239.5\n 151.66667\n 1.2775393\n       60.\n        0.\n        0.\n        1.\n    10000.\n       0.3\n        0.\n        0.\n        0.\n    0.0005\n        2.\n      3.98\n    291.85\n       80.\n        5.\n       -1.\n",
+   "engine": "SLAB",
+   "input_sha256": "3660283cd3774d7aee86e4b044c736379cefb1b6a1a9662b1dc17ea0a5f86a5f",
+   "key": "119bfb2ba48209965ef49836e1d0cc586758fe30ca7daafe77e108a3caefbbae",
+   "rh_pct": 80.0
+  },
+  "S_scichem": {
+   "engine": "SCICHEM",
+   "input_sha256": "180d21d5af2ea2688d009a0e5dc06cb4bde9ed4b2056bd60d130f8e72f321c67",
+   "key": "6c7d287469cf684e9ffaf4419b6de9be36ca0be04c118a4125f70b41e9375ff3",
+   "n_sensors": 247,
+   "run_hours": 3,
+   "source": {
+    "air_kg_s": 1172.1051661378444,
+    "area_m2": 123.96434457105487,
+    "buoyancy_k_m3_s": -45391.39242418955,
+    "cone_length_m": 48.548446023344496,
+    "duration_s": 33.3,
+    "gas_density_kg_m3": 2.960777120303934,
+    "rate_kg_s": 259.0,
+    "sigma_h_m": 6.662691720518687,
+    "sigma_z_m": 3.3313458602593435,
+    "speed_m_s": 6.994554054739139,
+    "volume_flux_m3_s": 867.0753089625516
+   }
+  },
+  "S_slab_rh20": {
+   "deck": "    2\n    1\n  0.070906\n     498.1\n     239.5\n     0.828\n   287840.\n     926.3\n     1574.\n       -1.\n        0.\n    235.75\n      259.\n     0.323\n      33.3\n        0.\n        0.\n        1.\n    10000.\n       0.3\n        0.\n        0.\n        0.\n    0.0005\n        2.\n      3.98\n    291.85\n       20.\n        5.\n       -1.\n",
+   "engine": "SLAB",
+   "input_sha256": "188401c2656ac3d5b39794bed54e651b5d2741635dd28a9c2327ae3c037370d0",
+   "key": "ee2373fae65978deacb39a3bfb11ea886f3fccf7749cecd5ded6111e58b566ff",
+   "rh_pct": 20.0
+  },
+  "S_slab_rh80": {
+   "deck": "    2\n    1\n  0.070906\n     498.1\n     239.5\n     0.828\n   287840.\n     926.3\n     1574.\n       -1.\n        0.\n    235.75\n      259.\n     0.323\n      33.3\n        0.\n        0.\n        1.\n    10000.\n       0.3\n        0.\n        0.\n        0.\n    0.0005\n        2.\n      3.98\n    291.85\n       80.\n        5.\n       -1.\n",
+   "engine": "SLAB",
+   "input_sha256": "706ee46efee132f22acc733964a0c42c009c66e5e20b6f88c74b9f4468834b30",
+   "key": "e850b37199de47f019d3c445d0b6ccad04685bee7dd636fe823afe41ba6d6e35",
+   "rh_pct": 80.0
+  }
+ }
+}

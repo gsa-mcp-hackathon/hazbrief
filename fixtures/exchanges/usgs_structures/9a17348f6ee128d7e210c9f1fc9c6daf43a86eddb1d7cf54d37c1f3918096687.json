@@ -1,0 +1,416 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.370589,
+      39.784863
+     ],
+     "type": "Point"
+    },
+    "id": 6588397,
+    "properties": {
+     "address": "106 Steelman Street",
+     "city": "Fairfield",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1675036800000,
+     "name": "Adams Regional Emergency Medical Services - Station 54 - 4",
+     "objectid": 6588397,
+     "permanent_identifier": "d5bc3cb9-2db0-4ed4-afe2-520829b9638b",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.566548,
+      39.838936
+     ],
+     "type": "Point"
+    },
+    "id": 6623326,
+    "properties": {
+     "address": "603 South Main Street",
+     "city": "Mont Alto",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Mont Alto Ambulance Squad",
+     "objectid": 6623326,
+     "permanent_identifier": "000e9c8e-197b-464f-a07d-5a8cc72f0874",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.574173,
+      39.652657
+     ],
+     "type": "Point"
+    },
+    "id": 6653672,
+    "properties": {
+     "address": "8 Maple Avenue",
+     "city": "Smithsburg",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "Smithsburg Emergency Medical Services Company 79",
+     "objectid": 6653672,
+     "permanent_identifier": "1eb626b9-15d5-4094-80cb-7845df998449",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.637339,
+      39.94513
+     ],
+     "type": "Point"
+    },
+    "id": 6654789,
+    "properties": {
+     "address": "850 5th Avenue",
+     "city": "Chambersburg",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Holy Sprit Emergency Medical Services Chambersburg",
+     "objectid": 6654789,
+     "permanent_identifier": "1fce96a8-7cf2-46ae-bb50-e12cea9ee3a8",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.999082,
+      39.931277
+     ],
+     "type": "Point"
+    },
+    "id": 6661984,
+    "properties": {
+     "address": "112 East Maple Street",
+     "city": "Mcconnellsburg",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1437398442000,
+     "name": "McConnellsburg Volunteer Fire Company Ambulance",
+     "objectid": 6661984,
+     "permanent_identifier": "2739b702-72ee-466d-8bd8-4187b463baa7",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.75028,
+      39.458803
+     ],
+     "type": "Point"
+    },
+    "id": 6717956,
+    "properties": {
+     "address": "110 1/2 West Chapline Street",
+     "city": "Sharpsburg",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Sharpsburg Area Emergency Medical Services Station 19",
+     "objectid": 6717956,
+     "permanent_identifier": "601417f9-8a63-40d6-9f5d-b7b1f4746a61",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.589788,
+      39.761448
+     ],
+     "type": "Point"
+    },
+    "id": 6730792,
+    "properties": {
+     "address": "603 West Main Street",
+     "city": "Waynesboro",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Waynesboro Ambulance Squad",
+     "objectid": 6730792,
+     "permanent_identifier": "6d2b42bb-a676-4fe3-b1aa-de25e186db23",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.411191,
+      39.625283
+     ],
+     "type": "Point"
+    },
+    "id": 6740094,
+    "properties": {
+     "address": "27 North Church Street",
+     "city": "Thurmont",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1475452800000,
+     "name": "Thurmont Community Ambulance Service Station 30",
+     "objectid": 6740094,
+     "permanent_identifier": "76fc049c-ca1c-4286-acf9-d51b4ac648d0",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.6618,
+      39.524175
+     ],
+     "type": "Point"
+    },
+    "id": 6741473,
+    "properties": {
+     "address": "7619 Old National Pike",
+     "city": "Boonsboro",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Boonsboro Ambulance and Rescue Services Company 69",
+     "objectid": 6741473,
+     "permanent_identifier": "7823a6a8-810c-4f6c-910f-5d6887b1411d",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.926594,
+      39.656644
+     ],
+     "type": "Point"
+    },
+    "id": 6752056,
+    "properties": {
+     "address": "233 Cumberland Street",
+     "city": "Clear Spring",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "Clear Spring Ambulance Squad 49",
+     "objectid": 6752056,
+     "permanent_identifier": "82f3244f-8140-434d-9ea1-f1df1076aa57",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.964517,
+      39.492563
+     ],
+     "type": "Point"
+    },
+    "id": 6753872,
+    "properties": {
+     "address": "1966 Rock Cliff Drive",
+     "city": "Martinsburg",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1462373059000,
+     "name": "Lamberts Ambulance Service Station 3",
+     "objectid": 6753872,
+     "permanent_identifier": "8454113d-6d7e-4813-970d-bde4ad4fbb12",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.357434,
+      39.477007
+     ],
+     "type": "Point"
+    },
+    "id": 6769099,
+    "properties": {
+     "address": "73 West Frederick Street",
+     "city": "Walkersville",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1672790400000,
+     "name": "Walkersville Volunteer Rescue Company Station 24",
+     "objectid": 6769099,
+     "permanent_identifier": "931ec675-da71-4f94-a10f-2fd8f0bf91aa",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.820039,
+      39.572054
+     ],
+     "type": "Point"
+    },
+    "id": 6771616,
+    "properties": {
+     "address": "15852 Falling Waters Road",
+     "city": "Williamsport",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1464943281000,
+     "name": "County Medical Transport",
+     "objectid": 6771616,
+     "permanent_identifier": "95cad7a9-53f4-44c2-835e-3a65b00e0a66",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.964972,
+      39.446786
+     ],
+     "type": "Point"
+    },
+    "id": 6772803,
+    "properties": {
+     "address": "802 Emmett Roush Drive",
+     "city": "Martinsburg",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1462373059000,
+     "name": "Berkeley County Emergency Ambulance Authority Main Station Unit 97",
+     "objectid": 6772803,
+     "permanent_identifier": "9760ddbb-72ee-446a-b064-465ff01592d3",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.758916,
+      39.625182
+     ],
+     "type": "Point"
+    },
+    "id": 6775249,
+    "properties": {
+     "address": "17556 York Road",
+     "city": "Hagerstown",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "Washington County Emergency Services Company 25",
+     "objectid": 6775249,
+     "permanent_identifier": "99cc5204-d924-4590-906c-2528c98e72ac",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.879483,
+      39.573269
+     ],
+     "type": "Point"
+    },
+    "id": 6820914,
+    "properties": {
+     "address": "8096 Williamsport Pike",
+     "city": "Falling Waters",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1658793600000,
+     "name": "Berkeley County Emergency Ambulance Authority North Station Unit 96",
+     "objectid": 6820914,
+     "permanent_identifier": "c7ba2ed8-faa8-4013-9acf-9450263e2f6e",
+     "state": "WV"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.570646,
+      39.751351
+     ],
+     "type": "Point"
+    },
+    "id": 6842148,
+    "properties": {
+     "address": "East Main Street",
+     "city": "Waynesboro",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1509667200000,
+     "name": "Waynesboro Area Advanced Life Support Unit Medic 2",
+     "objectid": 6842148,
+     "permanent_identifier": "dd530d24-b660-4b06-8700-f0036d5c7a68",
+     "state": "PA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.697175,
+      39.634665
+     ],
+     "type": "Point"
+    },
+    "id": 6871986,
+    "properties": {
+     "address": "110 Eastern Boulevard North",
+     "city": "Hagerstown",
+     "fcode": 74001,
+     "ftype": 740,
+     "loaddate": 1771974889000,
+     "name": "Community Rescue Service Main Station Headquarters",
+     "objectid": 6871986,
+     "permanent_identifier": "fb968996-4e9f-43e3-8d59-977f90838720",
+     "state": "MD"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-13T08:17:14Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Fri, 13 Nov 2026 08:17:13 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/15/query?where=1%3D1&geometry=-78.100340%2C39.432536%2C-77.347660%2C40.011464&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}

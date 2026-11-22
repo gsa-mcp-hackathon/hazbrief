@@ -1,0 +1,87 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "dependentRequired": {
+  "direction_deg_from": [
+   "source",
+   "speed_m_s"
+  ],
+  "speed_m_s": [
+   "source"
+  ]
+ },
+ "description": "The wind at the scene, as the scenario states it.",
+ "if": {
+  "properties": {
+   "speed_m_s": {
+    "exclusiveMinimum": 0,
+    "type": "number"
+   }
+  },
+  "required": [
+   "speed_m_s"
+  ]
+ },
+ "properties": {
+  "direction_deg_from": {
+   "anyOf": [
+    {
+     "maximum": 360,
+     "minimum": 0,
+     "type": "number"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Direction Deg From"
+  },
+  "observed_at": {
+   "anyOf": [
+    {
+     "format": "date-time",
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Observed At"
+  },
+  "source": {
+   "anyOf": [
+    {
+     "minLength": 1,
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Source"
+  },
+  "speed_m_s": {
+   "anyOf": [
+    {
+     "minimum": 0,
+     "type": "number"
+    },
+    {
+     "type": "null"
+    }
+   ],
+   "default": null,
+   "title": "Speed M S"
+  }
+ },
+ "then": {
+  "required": [
+   "direction_deg_from"
+  ]
+ },
+ "title": "StatedWind",
+ "type": "object"
+}

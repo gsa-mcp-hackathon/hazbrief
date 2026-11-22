@@ -1,0 +1,71 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-04T04:31:59.251389Z",
+  "http_mode": "replay",
+  "id": "24fa3890b42a7c72dee1dc4c925206b848d2c9be414fc2b4e5d54d29a4f76504",
+  "is_error": false,
+  "name": "assess_incident",
+  "params": {
+   "incident": {
+    "container": "Rail tank car",
+    "fire_involved": false,
+    "incident_time": "2026-10-21T14:00:00-04:00",
+    "location": {
+     "latitude": 39.2756,
+     "longitude": -77.5394
+    },
+    "material": "UN1017",
+    "spill_size": "large"
+   }
+  },
+  "startedAtTime": "2026-11-04T04:31:59.248608Z",
+  "type": "mcp_tool_call"
+ },
+ "agent": {
+  "server": {
+   "name": "HazBrief MCP Server",
+   "reported": {
+    "name": "HazBrief MCP Server",
+    "version": "4.1.1"
+   },
+   "tool_surface_sha256": "fded04ec6c0e2ec2cc795a9aad679512c1c047b6ab5116390ebc90485ae4a350",
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "packs/erg.json",
+    "id": "pack:erg"
+   },
+   {
+    "endpoint": "packs/cfr172.json",
+    "id": "pack:cfr172"
+   },
+   {
+    "endpoint": "packs/cameo.json",
+    "id": "pack:cameo"
+   },
+   {
+    "endpoint": "packs/hazard_classes.json",
+    "id": "pack:hazard_classes"
+   },
+   {
+    "endpoint": null,
+    "id": "code:astral"
+   }
+  ]
+ },
+ "as_of": "2026-11-04T04:31:59.251389Z",
+ "as_of_basis": "endedAtTime",
+ "entity": {
+  "bytes": 1938,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "0efb7e54922524d7e9700186d25b136b922994c0d252de083ef0016fe5e909d2"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "pack:cfr172",
+ "provenance_class": "recorded_pack",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

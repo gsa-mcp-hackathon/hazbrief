@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T03:22:25Z",
+  "http_mode": "record",
+  "id": "8ba840c84ae6a283f9db67b61fc4a81a56f93065f951101ace13a9f1768c40ff",
+  "name": "GET usgs_3dep",
+  "params": {
+   "method": "GET",
+   "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples?geometry=%7B%22points%22%3A%5B%5B-76.660417%2C39.722%5D%2C%5B-76.660636%2C39.722352%5D%2C%5B-76.66113%2C39.722438%5D%2C%5B-76.661526%2C39.722195%5D%2C%5B-76.661526%2C39.721805%5D%2C%5B-76.66113%2C39.721562%5D%2C%5B-76.660636%2C39.721648%5D%5D%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryMultipoint&returnFirstValueOnly=true&f=json"
+  },
+  "startedAtTime": "2026-10-28T03:22:25Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples?geometry=%7B%22points%22%3A%5B%5B-76.660417%2C39.722%5D%2C%5B-76.660636%2C39.722352%5D%2C%5B-76.66113%2C39.722438%5D%2C%5B-76.661526%2C39.722195%5D%2C%5B-76.661526%2C39.721805%5D%2C%5B-76.66113%2C39.721562%5D%2C%5B-76.660636%2C39.721648%5D%5D%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryMultipoint&returnFirstValueOnly=true&f=json",
+    "id": "usgs:3dep"
+   }
+  ]
+ },
+ "as_of": "2026-10-28T03:22:25Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 1177,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "19274309e7f77fe78b6c265bac61431a355c8849b72f445bcdb9964e1b781a87"
+ },
+ "horizon_s": 31557600,
+ "horizon_source": "usgs:3dep",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

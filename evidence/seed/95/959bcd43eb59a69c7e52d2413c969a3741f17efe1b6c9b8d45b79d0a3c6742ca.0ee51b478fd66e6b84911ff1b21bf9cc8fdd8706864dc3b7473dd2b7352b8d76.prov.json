@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:26:16Z",
+  "http_mode": "record",
+  "id": "0ee51b478fd66e6b84911ff1b21bf9cc8fdd8706864dc3b7473dd2b7352b8d76",
+  "name": "GET pasda_penndot",
+  "params": {
+   "method": "GET",
+   "url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/4/query?where=CTY_CODE%3D%2728%27+AND+TRAF_RT_NO%3D%27081%27+AND+SEG_NO%3C%3D%270020%27&outFields=CTY_CODE%2CTRAF_RT_NO%2CSEG_NO%2CSEG_LNGTH_%2CCUM_OFFSET%2CCUM_OFFS_1%2CMILE_POINT%2CDIR_IND%2CSIDE_IND%2CFAC_TYPE%2CBGN_DESC%2CEND_DESC%2CGIS_UPDATE&orderByFields=SEG_NO&returnGeometry=true&outSR=4326&f=json"
+  },
+  "startedAtTime": "2026-10-27T03:26:16Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/4/query?where=CTY_CODE%3D%2728%27+AND+TRAF_RT_NO%3D%27081%27+AND+SEG_NO%3C%3D%270020%27&outFields=CTY_CODE%2CTRAF_RT_NO%2CSEG_NO%2CSEG_LNGTH_%2CCUM_OFFSET%2CCUM_OFFS_1%2CMILE_POINT%2CDIR_IND%2CSIDE_IND%2CFAC_TYPE%2CBGN_DESC%2CEND_DESC%2CGIS_UPDATE&orderByFields=SEG_NO&returnGeometry=true&outSR=4326&f=json",
+    "id": "lrs:penndot"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T03:26:16Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 1477,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "959bcd43eb59a69c7e52d2413c969a3741f17efe1b6c9b8d45b79d0a3c6742ca"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "lrs:penndot",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

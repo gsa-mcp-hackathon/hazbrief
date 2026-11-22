@@ -1,0 +1,96 @@
+{
+ "models": {
+  "claude-haiku-5-5": {
+   "ambiguity": {
+    "args_load": 0.9167,
+    "drew": 1.0,
+    "every_candidate": 0.9167,
+    "flag_wording": 0.5,
+    "governing": 0.9167,
+    "invented_none": 1.0,
+    "pass": 0.5
+   },
+   "args_match": 0.8696,
+   "by_family": {
+    "adversarial": 15,
+    "ambiguity": 12,
+    "out_of_scope": 15,
+    "scenario": 54
+   },
+   "episodes": 96,
+   "grounding_rate_mean": 0.9571,
+   "grounding_rate_pooled": 0.9711,
+   "out_of_scope_refusal": 0.4,
+   "out_of_scope_refusal_lenient": 0.8,
+   "refusal_correct": 0.381,
+   "refusal_correct_lenient": 0.7143,
+   "scenario_pass": 0.6852,
+   "stylebook_findings_per_episode": 35.9167,
+   "tool_precision": 1.0,
+   "tool_recall": 0.8926,
+   "tool_recall_strict": 0.3185
+  },
+  "claude-opus-5-5": {
+   "ambiguity": {
+    "args_load": 1.0,
+    "drew": 1.0,
+    "every_candidate": 1.0,
+    "flag_wording": 0.4167,
+    "governing": 1.0,
+    "invented_none": 0.9167,
+    "pass": 0.4167
+   },
+   "args_match": 1.0,
+   "by_family": {
+    "adversarial": 15,
+    "ambiguity": 12,
+    "out_of_scope": 15,
+    "scenario": 54
+   },
+   "episodes": 96,
+   "grounding_rate_mean": 0.9295,
+   "grounding_rate_pooled": 0.9417,
+   "out_of_scope_refusal": 0.2,
+   "out_of_scope_refusal_lenient": 0.8,
+   "refusal_correct": 0.2143,
+   "refusal_correct_lenient": 0.6429,
+   "scenario_pass": 0.9259,
+   "stylebook_findings_per_episode": 39.875,
+   "tool_precision": 1.0,
+   "tool_recall": 0.9593,
+   "tool_recall_strict": 0.3333
+  },
+  "claude-sonnet-5-5": {
+   "ambiguity": {
+    "args_load": 0.9167,
+    "drew": 1.0,
+    "every_candidate": 1.0,
+    "flag_wording": 0.25,
+    "governing": 1.0,
+    "invented_none": 1.0,
+    "pass": 0.25
+   },
+   "args_match": 0.8406,
+   "by_family": {
+    "adversarial": 15,
+    "ambiguity": 12,
+    "out_of_scope": 15,
+    "scenario": 54
+   },
+   "episodes": 96,
+   "grounding_rate_mean": 0.934,
+   "grounding_rate_pooled": 0.9544,
+   "out_of_scope_refusal": 0.3333,
+   "out_of_scope_refusal_lenient": 0.5333,
+   "refusal_correct": 0.2619,
+   "refusal_correct_lenient": 0.381,
+   "scenario_pass": 0.5926,
+   "stylebook_findings_per_episode": 32.1875,
+   "tool_precision": 1.0,
+   "tool_recall": 0.8778,
+   "tool_recall_strict": 0.3741
+  }
+ },
+ "n": 288,
+ "prompt_set_version": 3
+}

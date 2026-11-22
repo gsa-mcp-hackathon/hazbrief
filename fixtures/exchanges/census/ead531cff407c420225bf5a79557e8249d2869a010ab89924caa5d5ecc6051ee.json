@@ -1,0 +1,192 @@
+{
+ "api": "census",
+ "body": [
+  [
+   "NAICS2017",
+   "NAICS2017_LABEL",
+   "ESTAB",
+   "INDLEVEL",
+   "state",
+   "county"
+  ],
+  [
+   "00",
+   "Total for all sectors",
+   "16350",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "11",
+   "Agriculture, forestry, fishing and hunting",
+   "3",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "21",
+   "Mining, quarrying, and oil and gas extraction",
+   "6",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "22",
+   "Utilities",
+   "18",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "23",
+   "Construction",
+   "1883",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "31-33",
+   "Manufacturing",
+   "268",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "42",
+   "Wholesale trade",
+   "519",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "44-45",
+   "Retail trade",
+   "2230",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "48-49",
+   "Transportation and warehousing",
+   "582",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "51",
+   "Information",
+   "278",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "52",
+   "Finance and insurance",
+   "537",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "53",
+   "Real estate and rental and leasing",
+   "803",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "54",
+   "Professional, scientific, and technical services",
+   "1991",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "55",
+   "Management of companies and enterprises",
+   "84",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "56",
+   "Administrative and support and waste management and remediation services",
+   "943",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "61",
+   "Educational services",
+   "261",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "62",
+   "Health care and social assistance",
+   "2280",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "71",
+   "Arts, entertainment, and recreation",
+   "176",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "72",
+   "Accommodation and food services",
+   "1565",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "81",
+   "Other services (except public administration)",
+   "1894",
+   "2",
+   "24",
+   "033"
+  ],
+  [
+   "99",
+   "Industries not classified",
+   "29",
+   "2",
+   "24",
+   "033"
+  ]
+ ],
+ "method": "GET",
+ "recorded_at": "2026-10-27T16:27:48Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=60, must-revalidate",
+  "Date": "Tue, 27 Oct 2026 16:27:48 GMT"
+ },
+ "status": 200,
+ "url": "https://api.census.gov/data/2023/cbp?get=NAICS2017%2CNAICS2017_LABEL%2CESTAB&for=county%3A033&in=state%3A24&INDLEVEL=2"
+}

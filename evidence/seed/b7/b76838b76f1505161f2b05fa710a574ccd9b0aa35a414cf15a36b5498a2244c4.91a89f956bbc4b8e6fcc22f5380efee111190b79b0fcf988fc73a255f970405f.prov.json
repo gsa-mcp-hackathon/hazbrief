@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-28T04:34:31Z",
+  "http_mode": "record",
+  "id": "91a89f956bbc4b8e6fcc22f5380efee111190b79b0fcf988fc73a255f970405f",
+  "name": "GET nldi",
+  "params": {
+   "method": "GET",
+   "url": "https://api.water.usgs.gov/nldi/linked-data/comid/2600197/navigation/DM/flowlines?distance=10"
+  },
+  "startedAtTime": "2026-10-28T04:34:31Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://api.water.usgs.gov/nldi/linked-data/comid/2600197/navigation/DM/flowlines?distance=10",
+    "id": "nldi"
+   }
+  ]
+ },
+ "as_of": "2026-10-28T04:34:31Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 4082,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "b76838b76f1505161f2b05fa710a574ccd9b0aa35a414cf15a36b5498a2244c4"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "nldi",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

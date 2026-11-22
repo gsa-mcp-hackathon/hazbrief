@@ -1,0 +1,698 @@
+{
+ "base": "eval/agent_runs/2026-10-23/scores.jsonl",
+ "new": "eval/agent_runs/2026-10-25/scores.jsonl",
+ "measures": {
+  "claude-haiku-5-5": {
+   "tool_precision": {
+    "base": {
+     "n": 54,
+     "rate": 1.0,
+     "interval": [
+      1.0,
+      1.0
+     ],
+     "method": "bootstrap"
+    },
+    "new": {
+     "n": 54,
+     "rate": 1.0,
+     "interval": [
+      1.0,
+      1.0
+     ],
+     "method": "bootstrap"
+    },
+    "outside": false
+   },
+   "tool_recall": {
+    "base": {
+     "n": 54,
+     "rate": 0.8778,
+     "interval": [
+      0.7963,
+      0.9481
+     ],
+     "method": "bootstrap"
+    },
+    "new": {
+     "n": 54,
+     "rate": 0.8926,
+     "interval": [
+      0.8222,
+      0.9556
+     ],
+     "method": "bootstrap"
+    },
+    "outside": false
+   },
+   "args_match": {
+    "base": {
+     "k": 65,
+     "n": 69,
+     "rate": 0.942,
+     "interval": [
+      0.8602,
+      0.9772
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 60,
+     "n": 69,
+     "rate": 0.8696,
+     "interval": [
+      0.7703,
+      0.9298
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "grounding_rate_pooled": {
+    "base": {
+     "k": 3286,
+     "n": 3375,
+     "rate": 0.9736,
+     "interval": [
+      0.9677,
+      0.9785
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 3289,
+     "n": 3387,
+     "rate": 0.9711,
+     "interval": [
+      0.9649,
+      0.9762
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "scenario_pass": {
+    "base": {
+     "k": 42,
+     "n": 54,
+     "rate": 0.7778,
+     "interval": [
+      0.6506,
+      0.868
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 37,
+     "n": 54,
+     "rate": 0.6852,
+     "interval": [
+      0.5526,
+      0.7932
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "refusal_correct": {
+    "base": {
+     "k": 17,
+     "n": 42,
+     "rate": 0.4048,
+     "interval": [
+      0.2704,
+      0.5551
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 16,
+     "n": 42,
+     "rate": 0.381,
+     "interval": [
+      0.25,
+      0.5319
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "refusal_correct_lenient": {
+    "base": {
+     "k": 28,
+     "n": 42,
+     "rate": 0.6667,
+     "interval": [
+      0.5155,
+      0.7899
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 30,
+     "n": 42,
+     "rate": 0.7143,
+     "interval": [
+      0.5643,
+      0.8283
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "out_of_scope_refusal": {
+    "base": {
+     "k": 5,
+     "n": 15,
+     "rate": 0.3333,
+     "interval": [
+      0.1518,
+      0.5829
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 6,
+     "n": 15,
+     "rate": 0.4,
+     "interval": [
+      0.1982,
+      0.6425
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "out_of_scope_refusal_lenient": {
+    "base": {
+     "k": 12,
+     "n": 15,
+     "rate": 0.8,
+     "interval": [
+      0.5481,
+      0.9295
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 12,
+     "n": 15,
+     "rate": 0.8,
+     "interval": [
+      0.5481,
+      0.9295
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "ambiguity": {
+    "base": {
+     "k": 5,
+     "n": 12,
+     "rate": 0.4167,
+     "interval": [
+      0.1933,
+      0.6805
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 6,
+     "n": 12,
+     "rate": 0.5,
+     "interval": [
+      0.2538,
+      0.7462
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   }
+  },
+  "claude-opus-5-5": {
+   "tool_precision": {
+    "base": {
+     "n": 54,
+     "rate": 1.0,
+     "interval": [
+      1.0,
+      1.0
+     ],
+     "method": "bootstrap"
+    },
+    "new": {
+     "n": 54,
+     "rate": 1.0,
+     "interval": [
+      1.0,
+      1.0
+     ],
+     "method": "bootstrap"
+    },
+    "outside": false
+   },
+   "tool_recall": {
+    "base": {
+     "n": 54,
+     "rate": 0.963,
+     "interval": [
+      0.9111,
+      1.0
+     ],
+     "method": "bootstrap"
+    },
+    "new": {
+     "n": 54,
+     "rate": 0.9593,
+     "interval": [
+      0.9074,
+      1.0
+     ],
+     "method": "bootstrap"
+    },
+    "outside": false
+   },
+   "args_match": {
+    "base": {
+     "k": 69,
+     "n": 69,
+     "rate": 1.0,
+     "interval": [
+      0.9473,
+      1.0
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 69,
+     "n": 69,
+     "rate": 1.0,
+     "interval": [
+      0.9473,
+      1.0
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "grounding_rate_pooled": {
+    "base": {
+     "k": 3518,
+     "n": 3730,
+     "rate": 0.9432,
+     "interval": [
+      0.9353,
+      0.9501
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 3459,
+     "n": 3673,
+     "rate": 0.9417,
+     "interval": [
+      0.9337,
+      0.9489
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "scenario_pass": {
+    "base": {
+     "k": 51,
+     "n": 54,
+     "rate": 0.9444,
+     "interval": [
+      0.8489,
+      0.9809
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 50,
+     "n": 54,
+     "rate": 0.9259,
+     "interval": [
+      0.8245,
+      0.9708
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "refusal_correct": {
+    "base": {
+     "k": 8,
+     "n": 42,
+     "rate": 0.1905,
+     "interval": [
+      0.0998,
+      0.333
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 9,
+     "n": 42,
+     "rate": 0.2143,
+     "interval": [
+      0.1171,
+      0.3594
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "refusal_correct_lenient": {
+    "base": {
+     "k": 28,
+     "n": 42,
+     "rate": 0.6667,
+     "interval": [
+      0.5155,
+      0.7899
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 27,
+     "n": 42,
+     "rate": 0.6429,
+     "interval": [
+      0.4917,
+      0.7701
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "out_of_scope_refusal": {
+    "base": {
+     "k": 2,
+     "n": 15,
+     "rate": 0.1333,
+     "interval": [
+      0.0374,
+      0.3788
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 3,
+     "n": 15,
+     "rate": 0.2,
+     "interval": [
+      0.0705,
+      0.4519
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "out_of_scope_refusal_lenient": {
+    "base": {
+     "k": 13,
+     "n": 15,
+     "rate": 0.8667,
+     "interval": [
+      0.6212,
+      0.9626
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 12,
+     "n": 15,
+     "rate": 0.8,
+     "interval": [
+      0.5481,
+      0.9295
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "ambiguity": {
+    "base": {
+     "k": 5,
+     "n": 12,
+     "rate": 0.4167,
+     "interval": [
+      0.1933,
+      0.6805
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 5,
+     "n": 12,
+     "rate": 0.4167,
+     "interval": [
+      0.1933,
+      0.6805
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   }
+  },
+  "claude-sonnet-5-5": {
+   "tool_precision": {
+    "base": {
+     "n": 54,
+     "rate": 1.0,
+     "interval": [
+      1.0,
+      1.0
+     ],
+     "method": "bootstrap"
+    },
+    "new": {
+     "n": 54,
+     "rate": 1.0,
+     "interval": [
+      1.0,
+      1.0
+     ],
+     "method": "bootstrap"
+    },
+    "outside": false
+   },
+   "tool_recall": {
+    "base": {
+     "n": 54,
+     "rate": 0.8852,
+     "interval": [
+      0.8148,
+      0.9481
+     ],
+     "method": "bootstrap"
+    },
+    "new": {
+     "n": 54,
+     "rate": 0.8778,
+     "interval": [
+      0.8074,
+      0.9444
+     ],
+     "method": "bootstrap"
+    },
+    "outside": false
+   },
+   "args_match": {
+    "base": {
+     "k": 66,
+     "n": 69,
+     "rate": 0.9565,
+     "interval": [
+      0.8798,
+      0.9851
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 58,
+     "n": 69,
+     "rate": 0.8406,
+     "interval": [
+      0.7367,
+      0.9086
+     ],
+     "method": "wilson"
+    },
+    "outside": true
+   },
+   "grounding_rate_pooled": {
+    "base": {
+     "k": 2899,
+     "n": 3016,
+     "rate": 0.9612,
+     "interval": [
+      0.9537,
+      0.9675
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 2891,
+     "n": 3029,
+     "rate": 0.9544,
+     "interval": [
+      0.9464,
+      0.9613
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "scenario_pass": {
+    "base": {
+     "k": 41,
+     "n": 54,
+     "rate": 0.7593,
+     "interval": [
+      0.6305,
+      0.8536
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 32,
+     "n": 54,
+     "rate": 0.5926,
+     "interval": [
+      0.4597,
+      0.7132
+     ],
+     "method": "wilson"
+    },
+    "outside": true
+   },
+   "refusal_correct": {
+    "base": {
+     "k": 10,
+     "n": 42,
+     "rate": 0.2381,
+     "interval": [
+      0.1348,
+      0.3853
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 11,
+     "n": 42,
+     "rate": 0.2619,
+     "interval": [
+      0.153,
+      0.4107
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "refusal_correct_lenient": {
+    "base": {
+     "k": 16,
+     "n": 42,
+     "rate": 0.381,
+     "interval": [
+      0.25,
+      0.5319
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 16,
+     "n": 42,
+     "rate": 0.381,
+     "interval": [
+      0.25,
+      0.5319
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "out_of_scope_refusal": {
+    "base": {
+     "k": 4,
+     "n": 15,
+     "rate": 0.2667,
+     "interval": [
+      0.109,
+      0.5195
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 5,
+     "n": 15,
+     "rate": 0.3333,
+     "interval": [
+      0.1518,
+      0.5829
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "out_of_scope_refusal_lenient": {
+    "base": {
+     "k": 7,
+     "n": 15,
+     "rate": 0.4667,
+     "interval": [
+      0.2481,
+      0.6988
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 8,
+     "n": 15,
+     "rate": 0.5333,
+     "interval": [
+      0.3012,
+      0.7519
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   },
+   "ambiguity": {
+    "base": {
+     "k": 4,
+     "n": 12,
+     "rate": 0.3333,
+     "interval": [
+      0.1381,
+      0.6094
+     ],
+     "method": "wilson"
+    },
+    "new": {
+     "k": 3,
+     "n": 12,
+     "rate": 0.25,
+     "interval": [
+      0.0889,
+      0.5323
+     ],
+     "method": "wilson"
+    },
+    "outside": false
+   }
+  }
+ },
+ "outside_the_base_interval": [
+  "claude-sonnet-5-5 args_match: 0.9565 -> 0.8406 (base 0.8798-0.9851)",
+  "claude-sonnet-5-5 scenario_pass: 0.7593 -> 0.5926 (base 0.6305-0.8536)"
+ ],
+ "bootstrap": {
+  "draws": 4000,
+  "seed": 20261025
+ }
+}

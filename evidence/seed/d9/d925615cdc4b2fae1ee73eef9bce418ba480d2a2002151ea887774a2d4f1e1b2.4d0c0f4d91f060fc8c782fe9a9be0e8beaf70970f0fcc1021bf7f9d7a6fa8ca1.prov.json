@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-11-07T08:31:37Z",
+  "http_mode": "record",
+  "id": "4d0c0f4d91f060fc8c782fe9a9be0e8beaf70970f0fcc1021bf7f9d7a6fa8ca1",
+  "name": "GET pubchem",
+  "params": {
+   "method": "GET",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/3672/property/MolecularWeight,MolecularFormula,Title/JSON"
+  },
+  "startedAtTime": "2026-11-07T08:31:37Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/3672/property/MolecularWeight,MolecularFormula,Title/JSON",
+    "id": "pubchem:pug_rest"
+   }
+  ]
+ },
+ "as_of": "2026-11-07T08:31:37Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 131,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "d925615cdc4b2fae1ee73eef9bce418ba480d2a2002151ea887774a2d4f1e1b2"
+ },
+ "horizon_s": 126230400,
+ "horizon_source": "pubchem:pug_rest",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

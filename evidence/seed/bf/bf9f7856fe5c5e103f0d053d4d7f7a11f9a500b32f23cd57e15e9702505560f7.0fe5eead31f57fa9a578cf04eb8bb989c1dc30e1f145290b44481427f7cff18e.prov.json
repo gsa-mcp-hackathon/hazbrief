@@ -1,0 +1,41 @@
+{
+ "activity": {
+  "endedAtTime": "2026-10-27T03:33:56Z",
+  "http_mode": "record",
+  "id": "0fe5eead31f57fa9a578cf04eb8bb989c1dc30e1f145290b44481427f7cff18e",
+  "name": "GET pasda_penndot",
+  "params": {
+   "method": "GET",
+   "url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/4/query?where=T_RT_NO%3D%270081%27+AND+CTY_CODE%3D%2728%27+AND+SIDE_IND%3D%271%27+AND+SEG_NO%3E%3D%270002%27+AND+SEG_NO%3C%3D%270010%27&outFields=T_RT_NO%2CCTY_CODE%2CSEG_NO%2CSEG_LNGTH_%2CCUM_OFFSET%2CCUM_OFFS_1%2CSIDE_IND&returnGeometry=true&outSR=4326&f=json&orderByFields=SEG_NO"
+  },
+  "startedAtTime": "2026-10-27T03:33:56Z",
+  "type": "upstream_exchange"
+ },
+ "agent": {
+  "server": {
+   "name": "hazbrief-mcp",
+   "tool_surface_sha256": null,
+   "version": "0.1.0"
+  },
+  "source": [
+   {
+    "endpoint": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PennDOT/MapServer/4/query?where=T_RT_NO%3D%270081%27+AND+CTY_CODE%3D%2728%27+AND+SIDE_IND%3D%271%27+AND+SEG_NO%3E%3D%270002%27+AND+SEG_NO%3C%3D%270010%27&outFields=T_RT_NO%2CCTY_CODE%2CSEG_NO%2CSEG_LNGTH_%2CCUM_OFFSET%2CCUM_OFFS_1%2CSIDE_IND&returnGeometry=true&outSR=4326&f=json&orderByFields=SEG_NO",
+    "id": "lrs:penndot"
+   }
+  ]
+ },
+ "as_of": "2026-10-27T03:33:56Z",
+ "as_of_basis": "recorded_at",
+ "entity": {
+  "bytes": 2610,
+  "encoding": "json",
+  "media_type": "application/json",
+  "sha256": "bf9f7856fe5c5e103f0d053d4d7f7a11f9a500b32f23cd57e15e9702505560f7"
+ },
+ "horizon_s": 7889400,
+ "horizon_source": "lrs:penndot",
+ "provenance_class": "live_call",
+ "record_version": 1,
+ "used": [],
+ "wasRevisionOf": null
+}

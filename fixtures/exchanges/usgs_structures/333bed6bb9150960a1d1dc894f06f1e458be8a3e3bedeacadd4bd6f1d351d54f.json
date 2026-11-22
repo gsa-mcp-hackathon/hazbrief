@@ -1,0 +1,394 @@
+{
+ "api": "usgs_structures",
+ "body": {
+  "features": [
+   {
+    "geometry": {
+     "coordinates": [
+      -77.406653,
+      39.414202
+     ],
+     "type": "Point"
+    },
+    "id": 6640254,
+    "properties": {
+     "address": "201 East Patrick Street",
+     "city": "Frederick",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Frederick Post Office",
+     "objectid": 6640254,
+     "permanent_identifier": "112ee2a8-9ebf-4853-8b93-1f3c191897c7",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.637601,
+      39.275165
+     ],
+     "type": "Point"
+    },
+    "id": 6692909,
+    "properties": {
+     "address": "15 North Church Street",
+     "city": "Lovettsville",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1631059200000,
+     "name": "Lovettsville Post Office",
+     "objectid": 6692909,
+     "permanent_identifier": "46cbeae6-7bcc-47a0-9fbc-38332f253c64",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.42729,
+      39.342006
+     ],
+     "type": "Point"
+    },
+    "id": 6696174,
+    "properties": {
+     "address": "4001 Buckeystown Pike",
+     "city": "Buckeystown",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1780075038000,
+     "name": "Buckeystown Post Office",
+     "objectid": 6696174,
+     "permanent_identifier": "4a385d84-1d76-49ea-8830-49290ded1bdc",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.631218,
+      39.314722
+     ],
+     "type": "Point"
+    },
+    "id": 6701931,
+    "properties": {
+     "address": "315 Brunswick Street",
+     "city": "Brunswick",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Brunswick Post Office",
+     "objectid": 6701931,
+     "permanent_identifier": "4f96f1ab-de14-4948-89d3-453a5619993e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.475392,
+      39.311226
+     ],
+     "type": "Point"
+    },
+    "id": 6735375,
+    "properties": {
+     "address": "5537 Mountville Road",
+     "city": "Adamstown",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1780074829000,
+     "name": "Adamstown Post Office",
+     "objectid": 6735375,
+     "permanent_identifier": "72392878-b129-469f-8ef5-20234a28d451",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.541047,
+      39.361162
+     ],
+     "type": "Point"
+    },
+    "id": 6755357,
+    "properties": {
+     "address": "3702 Jefferson Pike",
+     "city": "Jefferson",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Jefferson Post Office",
+     "objectid": 6755357,
+     "permanent_identifier": "865cbcdc-ffbb-4fa3-bc0e-9340ddbccf9c",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.629373,
+      39.393393
+     ],
+     "type": "Point"
+    },
+    "id": 6757622,
+    "properties": {
+     "address": "8 East Main Street",
+     "city": "Burkittsville",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Burkittsville Post Office",
+     "objectid": 6757622,
+     "permanent_identifier": "8896987c-0367-4737-92fb-e67545cc3541",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.618933,
+      39.147499
+     ],
+     "type": "Point"
+    },
+    "id": 6764472,
+    "properties": {
+     "address": "16948 Simpson Circle",
+     "city": "Paeonian Springs",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1631059200000,
+     "name": "Paeonian Springs Post Office",
+     "objectid": 6764472,
+     "permanent_identifier": "8f3d03a4-f599-492b-9a7b-76a2c79d8e4a",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.529315,
+      39.276041
+     ],
+     "type": "Point"
+    },
+    "id": 6769815,
+    "properties": {
+     "address": "1597 Bowis Drive",
+     "city": "Point of Rocks",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1780075556000,
+     "name": "Point of Rocks Post Office",
+     "objectid": 6769815,
+     "permanent_identifier": "947e3bb4-f67b-4011-90c8-f9e2c56ff0cc",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.503116,
+      39.418794
+     ],
+     "type": "Point"
+    },
+    "id": 6779453,
+    "properties": {
+     "address": "4707 Schley Avenue",
+     "city": "Braddock Heights",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1653264000000,
+     "name": "Braddock Heights Post Office",
+     "objectid": 6779453,
+     "permanent_identifier": "9d689486-9d63-4bd1-bafb-6bc12087c9a8",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.424353,
+      39.219177
+     ],
+     "type": "Point"
+    },
+    "id": 6803692,
+    "properties": {
+     "address": "22145 Dickerson Road",
+     "city": "Dickerson",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1543881600000,
+     "name": "Dickerson Post Office",
+     "objectid": 6803692,
+     "permanent_identifier": "b5f2f91b-a9da-41e2-b094-ca493b880d5f",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.714079,
+      39.138875
+     ],
+     "type": "Point"
+    },
+    "id": 6821088,
+    "properties": {
+     "address": "220 North Hatcher Avenue",
+     "city": "Purcellville",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1631059200000,
+     "name": "Purcellville Post Office",
+     "objectid": 6821088,
+     "permanent_identifier": "c77038fc-b13f-4315-ae77-636b4fe6167f",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.41451,
+      39.145047
+     ],
+     "type": "Point"
+    },
+    "id": 6841383,
+    "properties": {
+     "address": "19820 Fisher Avenue",
+     "city": "Poolesville",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1543881600000,
+     "name": "Poolesville Post Office",
+     "objectid": 6841383,
+     "permanent_identifier": "dc904643-cc2c-4d89-b263-bb048c6e9983",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.378115,
+      39.218483
+     ],
+     "type": "Point"
+    },
+    "id": 6843788,
+    "properties": {
+     "address": "22110 Beallsville Road",
+     "city": "Barnesville",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1571184000000,
+     "name": "Barnesville Post Office",
+     "objectid": 6843788,
+     "permanent_identifier": "df03584f-d101-4692-a98b-bcf69aa8f75e",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.469263,
+      39.25699
+     ],
+     "type": "Point"
+    },
+    "id": 6854174,
+    "properties": {
+     "address": "5709A Tuscarora Road",
+     "city": "Tuscarora",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1780075329000,
+     "name": "Tuscarora Post Office",
+     "objectid": 6854174,
+     "permanent_identifier": "e9756733-10e2-4039-8f97-d65262909925",
+     "state": "MD"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.611747,
+      39.18835
+     ],
+     "type": "Point"
+    },
+    "id": 6865625,
+    "properties": {
+     "address": "40175 Main Street",
+     "city": "Waterford",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1631059200000,
+     "name": "Waterford Post Office",
+     "objectid": 6865625,
+     "permanent_identifier": "f536e626-e949-4291-8d11-0a13ac605968",
+     "state": "VA"
+    },
+    "type": "Feature"
+   },
+   {
+    "geometry": {
+     "coordinates": [
+      -77.666695,
+      39.135302
+     ],
+     "type": "Point"
+    },
+    "id": 6870848,
+    "properties": {
+     "address": "53 West Colonial Highway",
+     "city": "Hamilton",
+     "fcode": 78006,
+     "ftype": 780,
+     "loaddate": 1631059200000,
+     "name": "Hamilton Post Office",
+     "objectid": 6870848,
+     "permanent_identifier": "fa18e8f9-26b0-4154-88c4-f2d64a7c67fc",
+     "state": "VA"
+    },
+    "type": "Feature"
+   }
+  ],
+  "type": "FeatureCollection"
+ },
+ "method": "GET",
+ "recorded_at": "2026-11-11T11:49:05Z",
+ "request_headers": {
+  "User-Agent": "hazbrief-mcp/0.1.0 (+https://github.com/brockwebb/hazbrief-mcp)"
+ },
+ "response_headers": {
+  "Cache-Control": "max-age=0,must-revalidate",
+  "Date": "Wed, 11 Nov 2026 11:49:05 GMT",
+  "ETag": "W/\"1790615027\""
+ },
+ "status": 200,
+ "url": "https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/3/query?where=1%3D1&geometry=-77.726361%2C39.130872%2C-77.352439%2C39.420328&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CPERMANENT_IDENTIFIER%2CNAME%2CFTYPE%2CFCODE%2CADDRESS%2CCITY%2CSTATE%2CLOADDATE&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=2000&f=geojson"
+}
