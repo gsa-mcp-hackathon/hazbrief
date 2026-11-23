@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/assets/hazbrief-mark.svg" width="180" alt="hazbrief logo"></p>
+
 # hazbrief-mcp
 
 An MCP server for the GSA Model Context Protocol Server and SI Agent Government

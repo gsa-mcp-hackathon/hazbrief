@@ -1733,9 +1733,15 @@ def create_app(
         new.ensure_started()
         return JSONResponse({"brief_id": sid, "url": "/"}, status_code=201)
 
+    async def favicon(request: Request) -> Response:
+        """The hazbrief cloud for the browser tab; browsers ask for it at the root."""
+        icon = (STATIC / "favicon.ico").read_bytes()
+        return Response(icon, media_type="image/x-icon")
+
     app = Starlette(
         routes=[
             Route("/", index),
+            Route("/favicon.ico", favicon),
             Route("/brief/{brief_id}/events", events),
             Route("/brief/{brief_id}/page", page),
             Route("/brief/{brief_id}/record/{sha}", record),
