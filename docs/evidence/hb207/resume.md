@@ -17,7 +17,7 @@ current; commit after each item").
 
 ## Notes
 
-- A1 done (commit 6d7f316e): `entry.transcripts_dir` and `entry.fixtures_dir` are under `the session state (held privately)`
+- A1 done (commit 6d7f316e): `entry.transcripts_dir` and `entry.fixtures_dir` are under `state/entry/`
   (ignored); committed transcripts are read from `entry.held_transcripts`. Kept: the "Liquid nitrogen"
   record (`fixtures/entry/entry-8f196dc3cd2f.json`, transcript `b2bade64...`) and one UN1005 record
   (`fixtures/entry/entry-76c25a2979a0.json`, transcript `b72f9393...`). The ammonia transcript
@@ -52,6 +52,6 @@ current; commit after each item").
 - Live run 1 (14:52 EST, ammonia, I-95) failed whole at 963.6 s on SLAB's unrecorded run (fixed, failures.tsv) and
   left three engine records in fixtures/evidence (fixed: brief/live_records.py). Run 2 started 15:13 EST on four
   ports (8791 to 8794; 8790 is held by an operator's served replay of un1005-i81 from the primary checkout, not
-  stopped): `uv run python the HB-207 evidence (held privately) the session state (held privately)`.
+  stopped): `uv run python the HB-207 evidence (held privately) state/entry/live2`.
 - Model calls: 12 of the 40 allowed (10 for the test lines, 2 for the ammonia demo line).
 - Done 2026-11-19 20:20 EST. Model calls 12 of 40. Tokens 751,593 of 5,000,000 at Part F.

@@ -1,4 +1,4 @@
-<!-- seldon:projection-revision 449130f1d0ebcfa8 (the tables and counts between seldon:projection markers are rendered from the graph by `seldon docs generate rtm`; change a requirement with `seldon req`, not here; AD-013-R2) -->
+<!-- seldon:projection-revision 6bdea59961c0d1b7 (the tables and counts between seldon:projection markers are rendered from the graph by `seldon docs generate rtm`; change a requirement with `seldon req`, not here; AD-013-R2) -->
 # Requirements trace
 
 **Task:** `HB-26` (HB-26).
@@ -214,7 +214,7 @@ Its states map to this document's:
 * `implemented` (from HB-149) is **evidence in place**: the row was called satisfied or changed, but no test verifies
   it yet, so its Status reads `implemented: <the old word>` until a test carries `@pytest.mark.verifies("VR-NNN")`.
 
-The table at HB-141: <!-- seldon:projection view="counts" document="docs/VIEW_REQUIREMENTS.md" -->182 rows: 138 satisfied, 21 open, 14 changed, 4 withdrawn; 27 verified by "none yet"; 0 not yet specified<!-- /seldon:projection -->. HB-131R satisfied the panels and the question box (VR-101 to VR-104, VR-114 to VR-117, VR-119 to VR-127).
+The table at HB-141: <!-- seldon:projection view="counts" document="docs/VIEW_REQUIREMENTS.md" -->183 rows: 139 satisfied, 21 open, 14 changed, 4 withdrawn; 27 verified by "none yet"; 0 not yet specified<!-- /seldon:projection -->. HB-131R satisfied the panels and the question box (VR-101 to VR-104, VR-114 to VR-117, VR-119 to VR-127).
 HB-140R satisfied VR-013 on the reference pair, recorded live under its one-wind footprints. HB-139 built the weather
 source (VR-022, VR-024 and the new VR-149 satisfied; VR-026 changed under Issue `473bdfeb`'s ruling; VR-023 open on
 its MCP clause and VR-025 on the observed client). HB-141 restated VR-102 to VR-104 for the operator checklist, VR-123

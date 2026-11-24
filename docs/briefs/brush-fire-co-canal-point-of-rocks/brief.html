@@ -884,6 +884,8 @@ a { color: #C2410C; }
 // wind), shows the cloud at a time (`window.hbView` "time") and plays from the release;
 // the same button stops it and restores the layers the reader had, exactly. While
 // stopped, the step buttons and slider show the cloud at that step with the same set.
+// HB-222 item 1: a layer in `T.leave` (the roads image) is never switched by Animate,
+// the slider or the step buttons: off stays off, on stays on.
 (function () {
   'use strict';
   window.hbTime = function (T, restyle, setOn) {
@@ -939,7 +941,9 @@ a { color: #C2410C; }
       saved = {};
       boxes().forEach(function (b) { saved[b.dataset.layer] = b.checked; });
       Object.keys(saved).forEach(function (id) {
-        if (setOn) { setOn(id, T.keep.indexOf(id) >= 0); }
+        if (setOn && (T.leave || []).indexOf(id) < 0) {
+          setOn(id, T.keep.indexOf(id) >= 0);
+        }
       });
       window.hbView = 'time';
       map.dataset.view = 'time';

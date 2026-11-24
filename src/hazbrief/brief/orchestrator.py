@@ -808,7 +808,12 @@ async def assemble(
             # would be; withdrawn like a cue line when a later settle drops it
             # DN-028 ADDENDUM-10 decision 4: under a stable class, its one line
             scopes += ["engines", "engines_agree", "engines_stable"]
-            for row in layers.engine_alerts(brief, cfg):
+            # HB-221 item 3: forecast precipitation the drawn cloud's run was not
+            # given, one Verify item, withdrawn like a cue line
+            scopes.append("rain")
+            for row in layers.engine_alerts(brief, cfg) + layers.rain_alerts(
+                brief, cfg
+            ):
                 now_true.append(
                     (
                         (row["kind"], row["text"], row["receipt"]),

@@ -6,6 +6,11 @@
 runtime:
 - logs/
 - logs/*
+- state/checks
+- state/checks/
+- state/checks/*
+- state/entry/
+- state/entry/*
 - evidence/store/*
 - evidence/store/
 - corpus/raw/*
@@ -42,6 +47,10 @@ not_paths:
 - evidence/exchange_records.py
 - evidence/hb01b_09.r1/dangling_gate_hb01b_09.r1.json
 - evidence/hb134/rtm.md
+- evidence/hb208/live/run2b_today_i83_day/form.jpg
+- evidence/hb208/live/run2b_today_i83_day/settled.jpg
+- evidence/hb208/live/run3_today_un1005_moved/playing.jpg
+- evidence/hb208/live/run3_today_un1005_moved/settled.jpg
 - evidence/hb25_pilot_cli310
 - evidence/labels.py
 - evidence/store

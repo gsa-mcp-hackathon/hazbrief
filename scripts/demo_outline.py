@@ -183,8 +183,9 @@ def render_preflight(data: dict) -> str:
     for n, c in enumerate(p["checks"], 1):
         lines.append(f"{n}. {c['what']}: `{c['command']}` prints {c['expect']}.")
     rest = [
-        f"If a live cloud is refused: {' '.join(p['calm'].split())}",
-        " ".join(p["domain_edge"].split()),
+        # HB-221 item 6: items 7 and 8 each end with the line that rain no longer stops the cloud
+        f"If a live cloud is refused: {' '.join(p['calm'].split())} {' '.join(p['rain'].split())}",
+        f"{' '.join(p['domain_edge'].split())} {' '.join(p['rain'].split())}",
         f"A recorded brief by replay (no engine, no model call): `{serve}`; it serves {p['url']} and "
         f"loaded in {load_s:.1f} s in HB-192 (`{p['live_load']}`). With `GOOGLE_MAPS_API_KEY` set the page draws "
         "Google's basemap and its Traffic switch at 127.0.0.1 (Google refuses the key at localhost); without the key "

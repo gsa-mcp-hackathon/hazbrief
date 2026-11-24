@@ -43,9 +43,12 @@ deliverables:
       - docs/submission/deck.yaml
       - docs/submission/deck.html
       - docs/submission/deck.pptx
+      - docs/submission/pitch_deck.pdf
+      - docs/submission/pitch_deck.html
     deck_yaml: docs/submission/deck.yaml
     state_lines:
-      - "Built from `deck.yaml` by `build_deck.py (a build tool held privately)` on GSA's template; every number and quote traced to a committed file (`test_deck.py (a test held privately)`). Ready, by the operator's gate 2."
+      - "The slide deck is the pitch, `pitch_deck.pdf` and `pitch_deck.html` (15 slides), built by hand and accepted by the operator on 2026-11-22; its record holds each file's sha256 and each number it prints with the file it was read from (`docs/submission/pitch_deck.accepted.yaml`, `tests/test_hb220_accepted_pitch_deck.py`)."
+      - "The technical appendix is the generated deck: built from `deck.yaml` by `build_deck.py (a build tool held privately)` on GSA's template; every number and quote traced to a committed file (`test_deck.py (a test held privately)`). Ready, by the operator's gate 2."
   - name: The evaluation document
     gsa: "an evaluation document: methodology, metrics, security, lessons (DN-001 section 1)"
     files:
@@ -73,7 +76,7 @@ operator_gates:
   - gate: The repository is uploaded to GSA's location
     record: null
   - gate: The deck is accepted to go out under his name
-    record: null
+    record: docs/submission/pitch_deck.accepted.yaml
   - gate: The demo video is recorded and is under 50 MB (`scripts/check_video.sh`)
     record: null
 

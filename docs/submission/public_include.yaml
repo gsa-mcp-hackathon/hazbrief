@@ -60,14 +60,20 @@ groups:
     why: the template's licence (decision 12)
   - path: NOTICE
     why: the notices of everything the repository ships or builds (decision 12)
+  - path: docs/assets/
+    why: the logo README's header draws (commit c4a81d6a, the pushed tree's 5b8d889; HB-222 item 8)
 - name: the submission documents
   paths:
   - path: docs/submission/EVALUATION.md
     why: the hackathon evaluation document (decision 12)
   - path: docs/submission/PACKAGE.md
     why: the package manifest, regenerated for the built tree (decision 16)
+  - path: docs/submission/pitch_deck.pdf
+    why: the slide deck, the pitch the operator accepted on 2026-11-22 (HB-220; Issue 42e7a88a)
+  - path: docs/submission/pitch_deck.html
+    why: the same pitch as one self-contained HTML file (HB-220)
   - path: docs/submission/deck.pptx
-    why: the presentation on GSA's template (decision 12)
+    why: the presentation on GSA's template (decision 12), the pitch's technical appendix (HB-220)
   - path: docs/submission/deck.html
     why: the same deck as HTML (decision 12)
   - path: docs/submission/deck.yaml
@@ -10141,6 +10147,10 @@ groups:
     why: 'a product test: it reads only what the tree holds (decision 15)'
   - path: tests/test_hb215_sources_board.py
     why: 'a product test: it reads only what the tree holds (decision 15)'
+  - path: tests/test_hb220_accepted_pitch_deck.py
+    why: 'a product test: it reads only what the tree holds (decision 15)'
+  - path: tests/test_hb222_animate_and_blocks.py
+    why: 'a product test: it reads only what the tree holds (decision 15)'
   - path: tests/test_http_security.py
     why: 'a product test: it reads only what the tree holds (decision 15)'
   - path: tests/test_ics201_map.py
@@ -10543,7 +10553,7 @@ groups:
   - path: docs/evidence/hb188/fetch_log.jsonl
     why: named by corpus/sources.yaml
   - path: docs/evidence/hb188/review.tsv
-    why: named by docs/evidence/hb219/plain_words.md
+    why: named by docs/evidence/hb213/public_tree.tsv
   - path: docs/evidence/hb189/gate_tail.txt
     why: named by docs/evidence/INDEX.md
   - path: docs/evidence/hb189/live_load.tsv
@@ -10823,9 +10833,9 @@ groups:
   - path: docs/evidence/hb216/quotes.yaml
     why: named by docs/evidence/hb213/public_tree.tsv
   - path: docs/evidence/hb219/before_after.tsv
-    why: named by docs/evidence/hb216/planning_uses.md
+    why: named by docs/evidence/hb213/public_tree.tsv
   - path: docs/evidence/hb219/plain_words.md
-    why: named by docs/submission/deck.html
+    why: named by docs/evidence/hb213/public_tree.tsv
   - path: docs/evidence/hb76/build_plan_dry_run.log
     why: named by docs/evidence/INDEX.md
   - path: docs/evidence/hb76/release_hb01b_46.log
@@ -10933,8 +10943,38 @@ groups:
     why: named by docs/evidence/hb213/public_tree.tsv
   - path: docs/sources/base_rates.md
     why: named by corpus/sources.yaml
+  - path: docs/submission/pitch_deck.accepted.yaml
+    why: named by docs/submission/PACKAGE.md
+  - path: docs/submission/pitch_src/README.md
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/build.py
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/crops.py
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/img_check.jpg
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/img_cloud15.jpg
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/img_cloud75.jpg
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/img_form.jpg
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/img_hero.jpg
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/img_ics.jpg
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/img_map.jpg
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/img_out.jpg
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/img_start.jpg
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/render.py
+    why: named by docs/submission/pitch_deck.accepted.yaml
+  - path: docs/submission/pitch_src/shot.py
+    why: named by docs/submission/pitch_deck.accepted.yaml
   - path: docs/submission/plain_words.yaml
-    why: named by docs/submission/deck.yaml
+    why: named by docs/evidence/hb213/public_tree.tsv
   - path: docs/submission/template/MCP-hackathon-sample-deck.pptx
     why: named by docs/evidence/hb213/public_tree.tsv
   - path: eval/README.md

@@ -685,8 +685,10 @@ slides:
         value: 92.6 % (50 of 54)
         source: eval/agent_runs/2026-10-25/intervals_vs_hb16b.json
         field: [measures, claude-opus-5-5, scenario_pass, new]
-      - label: Latest full-suite gate in the evaluation document (HB-213), passed
-        value: "8,321"
+      # HB-221: the evaluation document's gate table moved to HB-220's gate when HB-221 edited it; the note before
+      # read "(HB-213)" and "8,321", HB-215's parallel step, held only by the prose that described HB-215's gate
+      - label: Latest full-suite gate in the evaluation document (HB-220), passed
+        value: "8,460"
         source: docs/submission/EVALUATION.md
       - quote: The gate takes 76 to 89 minutes on the build machine
         source: docs/submission/EVALUATION.md

@@ -210,12 +210,26 @@ assumptions:
   large_scale: "no large-scale variability (ENSM_TYPE NONE, the README's practice for small domains): the probability covers turbulent fluctuation, not uncertainty in the forecast wind"
   source: "the two-phase jet as a dense gas from where its aerosol has evaporated (technical documentation section 13.4's cone method); no aerosol or liquid class"
   material: "an ideal gas at the air temperature, no deposition, no decay"
-  precipitation: "dry: the forecast's quantitative precipitation is zero over the run (a wet forecast is refused)"
   single_station: "one surface station at the release: the forecast is uniform over the domain at each hour"
+
+# HB-221 (the operator, 2026-11-23 10:13 and 10:19 EST): the engine runs dry (PR_TYPE 'NONE' in the .msc), and where the
+# forecast holds precipitation over the run the cloud is still drawn and the brief says so (the checklist, the layer's
+# label, its TEVV section). Nothing here changes what the engine is given. The run's assumption is one of these.
+precipitation:
+  # A dry forecast's words. They are part of every recorded request (`request_sha256` is over the whole request), so
+  # they stay as recorded: changing them re-keys all 73 SCICHEM records and every lines record, and a replayed brief
+  # would find none (HB-221 item 5). Their parenthetical describes the refusal HB-221 retired; `wet` and `not_stated`
+  # are the words for the cases it used to refuse.
+  dry: "dry: the forecast's quantitative precipitation is zero over the run (a wet forecast is refused)"
+  wet: "run dry (PR_TYPE NONE): the forecast holds up to {amount:g} {unit} of precipitation over {interval}, which the run does not account for"
+  not_stated: "run dry (PR_TYPE NONE): the forecast states no precipitation amount over {intervals} (null), which is reported, not read as rain or as dry"
+  # The forecast's unit codes as the page prints them (NWS gridpoint quantitativePrecipitation uom).
+  units:
+    "wmoUnit:mm": mm
 
 # Words of a refusal ("not modelled", Part C item 13). A refusal is a result: the other engine is never run instead.
 refusals:
-  wet: "not modelled: the forecast holds precipitation over the run ({detail}); this engine's record is dry only"
+  # HB-221: the `wet` refusal is retired; forecast precipitation is stated (`precipitation`), never refused
   forecast_short: "not modelled: the held forecast does not cover the run ({detail})"
   missing: "not modelled: {detail} is not held"
   engine: "not modelled: the engine did not finish ({detail})"

@@ -15,48 +15,48 @@ GSA asks for a GitHub repository (DN-001 section 1).
 
 | File | sha256 |
 |---|---|
-| `README.md` | `0e6c19cdc8e3ffd569ce80b800160e14a7f23794def8d28077e346ea94ceb3b8` |
+| `README.md` | `a2c51658beb78f3dc16a4fd846e1eaf8ee102fcd9fe423a09bca3ee33b119cc3` |
 | `LICENSE` | `f554191908fc40fa80f8f04e082055a84699ee89d21c9df7fc55474000917f32` |
 | `LICENSE-TEMPLATE` | `68fe61ab99f970767f2168b6beed195c9806daebb989b7f91213bad12587aa42` |
 | `NOTICE` | `b7a2625fc70f34a2f9c3a426d5812c8e59c23f56f79d500612cb446f0d7f5e92` |
 | `Dockerfile` | `f7209064c0b76d0b0c50c82529c9af8cf6d541a27cfacdc18a9e9e9150399ae9` |
-| `pyproject.toml` | `b0f28537eaa760b5bbc12a73919a335fa652414aa1e20eb2a275084a1e6a21f2` |
+| `pyproject.toml` | `a5fd1f0e6e8666471a09f49e9bba2868e1f708b6192d38000978be8614b26c5d` |
 | `uv.lock` | `d0f2f9be4492acf29f42dba921499acd66a8dd3f65ad3996f8f160b5350c08ee` |
 | `main.py` | `d9fb0230fad7bbe13cfe7fa2a69039eb39923da9131d4dd05af922bfa1c5a8bd` |
-| `AGENTS.md` | `3e61d490f2d07d499e44f948eac5ddb4811816a4c8cb0e6af160f50fe1ced077` |
+| `AGENTS.md` | `094087faedaff5fdaa6b681d638f39deca56416aed93b43a6e3e42ece2a30121` |
 
 ### What the package holds
 
-- 5997 files, 439.8 MB before this manifest and the build record (`docs/evidence/hb213/public_tree.tsv`: each file, its bytes and sha256, and the source commit).
+- 6020 files, 445.6 MB before this manifest and the build record (`docs/evidence/hb213/public_tree.tsv`: each file, its bytes and sha256, and the source commit).
 
 | Group of the include list | Paths | Why |
 |---|--:|---|
 | the server | 4 | the commander stylebook, shipped as an MCP prompt and resource (decision 12); the exported knowledge packs the server reads at run time; no database (decision 1 |
 | build and run | 10 | README's configuration section and `docker run --env-file .env` start from it (the variables, no values); keeps `.env` and the working record out of the image R |
-| licences and front matter | 5 | the entry point for a model asked to review the project (decision 12); the human entry point (decision 12); the licence (decision 12); the notices of everything |
-| the submission documents | 8 | the deck's source; every slide's number and quote is traced from it to a shipped file; the hackathon evaluation document (decision 12); the live demonstration's |
+| licences and front matter | 6 | the entry point for a model asked to review the project (decision 12); the human entry point (decision 12); the licence (decision 12); the logo README's header  |
+| the submission documents | 10 | the deck's source; every slide's number and quote is traced from it to a shipped file; the hackathon evaluation document (decision 12); the live demonstration's |
 | the engineering documents | 8 | the JSON Schemas of an evidence record and of a scenario's release and stated wind, which the code and the scenarios follow; the fixture format README and ARCHI |
 | the prepared scenarios | 3 | the committed brief of every prepared scenario, the application's output the demonstration opens and a replay must equal; the frozen scenarios the tools are eva |
 | the sources manifest | 1 | each source's URL and sha256 (decision 12; the held texts are not redistributed), from the corpus graph's manifest by sources_manifest.py (a build tool held privately) |
 | the evidence export | 7 | decision 14's index, generated from the graph by evidence_index.py (a build tool held privately) (each result, its value, the data file that holds it); decision |
 | the fixtures the server and the prepared scenarios read | 4971 | written from measurements by the build |
-| the product tests | 46 | written from measurements by the build |
+| the product tests | 48 | written from measurements by the build |
 | the evidence the public documents cite | 337 | written from measurements by the build |
-| named by a shipped file | 144 | written from measurements by the build |
+| named by a shipped file | 159 | written from measurements by the build |
 
 ### Checked from a clean copy
 
-- disk before: free 72,071,016,448 bytes in /var/folders/s1/yqb3d76d7053f7dyy9fwtkzw0000gp/T; need 10,333,652,840 (2 x the tree, 440,912,820, + HB-202's largest swap draw, 9,451,827,200)
-- copy: the built tree copied into a new temporary directory (hb213_clean_zds_l2zb); 440,912,820 bytes, 6001 files
+- disk before: free 63,469,899,776 bytes in /var/folders/s1/yqb3d76d7053f7dyy9fwtkzw0000gp/T; need 10,345,267,540 (2 x the tree, 446,720,170, + HB-202's largest swap draw, 9,451,827,200)
+- copy: the built tree copied into a new temporary directory (hb213_clean_00lxcy_d); 446,720,170 bytes, 6024 files
 - git clone (README Run, line 1): not run: the copy is the clone; the public tree carries no history
-- uv sync --group dev: exit 0 in 0.8 s, offline from uv's local cache
+- uv sync --group dev: exit 0 in 0.6 s, offline from uv's local cache
 - uv run ruff check .: exit 0 in 0.7 s: All checks passed!
-- uv run pytest tests/ -q -n auto --maxprocesses 6 --dist loadfile (the product test set): exit 0 in 654 s: 3850 passed, 11 skipped in 653.05s (0:10:53)
-- uv run python main.py (stdio, README's client line): answered in 2.7 s: 7 tools (assess_incident, build_ics_201, facilities_in_footprint, material_response_guidance, population_at_risk, protective_action_footprint, receiving_hospitals); 2 prompts (decision_support, ics201_brief)
+- uv run pytest tests/ -q -n auto --maxprocesses 6 --dist loadfile (the product test set): exit 0 in 670 s: 3878 passed, 11 skipped in 668.66s (0:11:08)
+- uv run python main.py (stdio, README's client line): answered in 2.2 s: 7 tools (assess_incident, build_ics_201, facilities_in_footprint, material_response_guidance, population_at_risk, protective_action_footprint, receiving_hospitals); 2 prompts (decision_support, ics201_brief)
 - README's pack line: exit 0 in 0.1 s: ['attribution', 'built_at', 'data', 'kind', 'pack_id', 'schema_version', 'sha256', 'sources', 'version']
 - uv run hazbrief brief docs/briefs/csx-point-of-rocks-day/scenario.json --out /tmp/brief --replay --now 2026-10-26T12:00:00Z --no-google: exit 0 in 26.8 s; brief.html, tevv.html and appendix.html equal the committed docs/briefs/csx-point-of-rocks-day/: yes
 - docker build -t hazbrief-mcp . (README): not run: the image's dependency layer needs PyPI, and this task's Network is none
-- copy deleted: yes; free 71,913,312,256 bytes after
+- copy deleted: yes; free 63,497,195,520 bytes after
 
 Source: `docs/evidence/hb213/clean_copy.tsv`.
 
@@ -67,7 +67,7 @@ Source: `docs/evidence/hb213/clean_copy.tsv`.
 - the repository's secret patterns (python -m squiddy.secret_scan, exit 1): hits read and judged not a credential, each inside encoded data (`docs/evidence/hb213/secret_scan_review.tsv`): 2
 - the repository's secret patterns: hits not reviewed: 0
 - total: 0
-- files scanned: 6001
+- files scanned: 6024
 
 Source: `docs/evidence/hb213/secret_scan.tsv`.
 
@@ -75,15 +75,16 @@ Source: `docs/evidence/hb213/secret_scan.tsv`.
 
 GSA asks for a slide deck: problem, solution, technical approach, demo (DN-001 section 1).
 
-- Built from `deck.yaml` by `build_deck.py (a build tool held privately)` on GSA's template; every number and quote traced to a committed file (`test_deck.py (a test held privately)`). Ready, by the operator's gate 2.
+- The slide deck is the pitch, `pitch_deck.pdf` and `pitch_deck.html` (15 slides), built by hand and accepted by the operator on 2026-11-22; its record holds each file's sha256 and each number it prints with the file it was read from (`docs/submission/pitch_deck.accepted.yaml`, `tests/test_hb220_accepted_pitch_deck.py`).
+- The technical appendix is the generated deck: built from `deck.yaml` by `build_deck.py (a build tool held privately)` on GSA's template; every number and quote traced to a committed file (`test_deck.py (a test held privately)`). Ready, by the operator's gate 2.
 
 - Slides as built: 22 (`docs/submission/deck.yaml`).
 
 | File | sha256 |
 |---|---|
-| `docs/submission/deck.yaml` | `d65c467b69ebebea4601f33bca1dedc5a106f1516129d3f0edc7f6cd279dc09b` |
-| `docs/submission/deck.html` | `70ca4ab651d688b49602162cc9b94556e6e02c93a380ccad3dbc554f94cca5c2` |
-| `docs/submission/deck.pptx` | `5bae13454abea2e0cb2307dff150e02250beae14b32c02746214d80e4787855a` |
+| `docs/submission/deck.yaml` | `9f2a2fabb37947d677003edca32e997ee369fa931a3e22a94b289cebf10a038e` |
+| `docs/submission/deck.html` | `024bd720dd34350e4df49bb3a6b8f3c035a77aafcfd89e9f5c3b2dea407d9865` |
+| `docs/submission/deck.pptx` | `22ed4aada31087ffb287da9e4766e6093cd3957975ea214ecbc8bed6dc718613` |
 | `docs/submission/pitch_deck.pdf` | `812c8bc52c04d2066f3c0a1a384cf9ed5ed774c1f2be50ad975727754b1c474e` |
 | `docs/submission/pitch_deck.html` | `7c8b622bd9bb00404eea72db653b4869f3ba354ca88166eec1c886a8cedfbcbe` |
 | `docs/incidents/problem_us_damage.svg` | `881152c48031b59d0ee12bd2cc71a062c39dc7930c0551cddb5293eb3152b745` |
@@ -102,10 +103,10 @@ GSA asks for an evaluation document: methodology, metrics, security, lessons (DN
 
 | File | sha256 |
 |---|---|
-| `docs/submission/EVALUATION.md` | `c2fd341b420930ddbd80ac6bd64191b4bde0df00ee2c3f68bb4fb668f25c68bd` |
-| `docs/FUTURE_WORK.md` | `0daca08ec615e7a364510c130cbc77700873297dfc631c23e3d7eeed854c1387` |
-| `docs/REQUIREMENTS_TRACE.md` | `71df1a03d2c9631f00e5700a9646c64ef3c9f416440b6bd2b13c99937585da29` |
-| `docs/VIEW_REQUIREMENTS.md` | `bc152dbe15639c40c39cf4cf6d7bf24b4be982bd682b3a0511001e3646e9f726` |
+| `docs/submission/EVALUATION.md` | `abc34adc0981f1e1e1b4eef7d75e48349f29bbd90a29bcbaaefc147f5f799b1f` |
+| `docs/FUTURE_WORK.md` | `3644c7e3118642f80e0a4aa71e9a96692330df3fcd66b53ea87104a95f72b4f6` |
+| `docs/REQUIREMENTS_TRACE.md` | `648af1a9ee766172d7e84847fda8f3037f2583961489b42f6326ebf2d488a271` |
+| `docs/VIEW_REQUIREMENTS.md` | `6c8486f310308372accaad95668a654b6f3a227d5e8aee42a2cde07b2d0c9baf` |
 
 ## The demo video
 
@@ -116,10 +117,10 @@ GSA asks for a demonstration (the deck's fourth part, DN-001 section 1).
 
 | File | sha256 |
 |---|---|
-| `docs/submission/demo/outline.yaml` | `aa5b6ddd3b5d035ab5669315993c8606de7107e51eaaba8c3471dbe30ab75948` |
+| `docs/submission/demo/outline.yaml` | `5395b99edf19b6b58f98251598154cbc5211e02983dba6d3278422d848e62fcd` |
 | `docs/submission/demo/OUTLINE.md` | `c306414c00c67363d13cb4d12f34ed426279068c960379b3f111bd5ce0509079` |
 | `docs/submission/demo/LINES.md` | `fcbeec08a40c060292eff88da6efe7bb8b8a48cb38b6f52378be7df3e01c9dd5` |
-| `docs/submission/demo/PREFLIGHT.md` | `972d844111a9dff26646503b581ebd60991571b7bb299796af3c7aca22fdb0cd` |
+| `docs/submission/demo/PREFLIGHT.md` | `8444020d3633eb0665f495d2215d6f9687d7294836cff6d6b2682ec21404b850` |
 | `scripts/check_video.sh` | `2b6feda45f14aff7322a41df5446d44a0183c1a844a83343c1c381ad30d2b7aa` |
 
 ## The operator's three gates
@@ -127,7 +128,7 @@ GSA asks for a demonstration (the deck's fourth part, DN-001 section 1).
 | Gate | State |
 |---|---|
 | The repository is uploaded to GSA's location | not done |
-| The deck is accepted to go out under his name | not done |
+| The deck is accepted to go out under his name | done |
 | The demo video is recorded and is under 50 MB (`scripts/check_video.sh`) | not done |
 
 ## How to confirm the package from a clean copy

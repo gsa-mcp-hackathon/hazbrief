@@ -242,6 +242,16 @@ def _layer_fields(brief, cfg: dict, lays: list[dict]) -> dict[str, list[str]]:
             out[field].append(f"{head}: {value}")
         out["run_record"] += doc.get("records") or []
         out["method"] += doc.get("method") or []
+    # HB-221 item 4: the cloud's levels' section states, in its own line, the forecast
+    # precipitation the run was not given (the label's clause may print "as in" an
+    # earlier section); nothing on a dry forecast
+    from hazbrief.brief import layers
+
+    if lays[0]["id"] in layers.cloud_level_ids(cfg):
+        cl = (getattr(brief, "derived", None) or {}).get("cloud") or {}
+        line = layers.rain_words(brief, cl, cfg, "tevv")
+        if line is not None:
+            out["limits"].append(line)
     for k in out:
         out[k] = list(dict.fromkeys(out[k]))
     return _with_registry(cfg, s, out, brief)

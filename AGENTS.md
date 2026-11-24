@@ -83,7 +83,7 @@ From a clone, with `uv` installed:
 
 ## What is known not to work
 
-`docs/FUTURE_WORK.md`: 18 known limits of what ships, each with the files that show it, and 29 future work items, each with its Issue; generated from the graph by `future_work.py (a build tool held privately)`.
+`docs/FUTURE_WORK.md`: 18 known limits of what ships, each with the files that show it, and 30 future work items, each with its Issue; generated from the graph by `future_work.py (a build tool held privately)`.
 
 ## What not to assume
 

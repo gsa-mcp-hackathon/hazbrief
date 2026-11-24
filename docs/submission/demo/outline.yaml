@@ -149,7 +149,7 @@ preflight:
       expect: "`free` well above zero; if it is near zero, close other work or restart first"
     - what: "The network answers and the forecast has wind at a prepared point"
       command: uv run python the HB-208 evidence (held privately)
-      expect: "one line per prepared point with its forecast wind now"
+      expect: "one line per prepared point with its forecast wind now and its forecast precipitation over the next six hours"
   # what to do when a live cloud is refused, in this order (ADDENDUM-01 item 3)
   calm: >-
     a calm forecast (0 km/h) draws no cloud by design (Issue `473bdfeb`; HB-208's run at Point of Rocks met it at
@@ -158,6 +158,9 @@ preflight:
   domain_edge: >-
     A cloud refused at the engine's domain edge in a light night wind (Issue `d5bcfffb`): open the recorded run instead
     and say so.
+  # HB-221 item 6: items 7 and 8 each end with this line (the operator, 2026-11-23: rain no longer stops the cloud)
+  rain: >-
+    Rain no longer stops the cloud (HB-221): a forecast with precipitation draws it, run dry, and the checklist says so.
   # A recorded brief by replay, for the fallback: no network, no engine, no model call
   brief: csx-point-of-rocks-night
   # The `--now` every committed brief is built and served at (src/hazbrief/evidence/labels.yaml fixture_now;

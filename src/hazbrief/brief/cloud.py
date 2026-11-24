@@ -394,6 +394,35 @@ def drawn(rec: dict, sha_a: str, sc: dict, cfg: dict) -> dict:
         "assumptions": meta["assumptions"],
         "cloud_left_domain": res.get("cloud_left_domain"),
         "engine_end_s": res.get("engine_end_s"),
+        # HB-221: the forecast precipitation the run was not given (its request's
+        # fact), present only where the forecast is not dry over the run, so a dry
+        # brief's derived record is unchanged
+        **(
+            {"precipitation": rain_of(meta["precipitation"])}
+            if meta.get("precipitation")
+            else {}
+        ),
+    }
+
+
+def rain_of(fact: dict) -> dict:
+    """HB-221: a request's precipitation fact (`scichem.check_dry`) as the brief reads
+    it: the largest amount with its unit as the page prints it, and each interval (the
+    wettest, and each one whose amount is not stated) as its UTC start and end, so the
+    page states them in the brief's zone without reading the client."""
+    from hazbrief.brief import scichem as SC
+
+    def span(valid_time: str) -> dict:
+        a, b = SC._interval(valid_time)
+        return {"start": a.isoformat(), "end": b.isoformat()}
+
+    wet = fact["state"] == "wet"
+    return {
+        "state": fact["state"],
+        "amount": fact["amount"],
+        "unit": SC.unit_words(fact.get("unit"), SC.load_config()) if wet else None,
+        "interval": span(fact["interval"]) if wet else None,
+        "not_stated": [span(v) for v in fact["not_stated"]],
     }
 
 

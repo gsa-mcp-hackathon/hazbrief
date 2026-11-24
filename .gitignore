@@ -59,14 +59,13 @@ logs/
 # HB-137 (Issue 594f0f14): an operator tool's runtime state (the display review's pid, log, served record and
 # answers). the session state (held privately)'s prior-art ledgers stay tracked; only this subdirectory is local. `serve_review.py stop` copies
 # the record into docs/evidence/ for commit.
-the session state (held privately)
 # HB-141: the live page's recorded operator checks, one JSONL file per serve (orchestrator.yaml web.checks_dir); a
 # served brief's runtime state like the review's. `--checks FILE` replays one.
-the session state (held privately)
+state/checks/
 # HB-207 item 1: a live entry form's records (its parse and choice transcripts and the fixture each build writes;
 # orchestrator.yaml entry.transcripts_dir and entry.fixtures_dir) are run output, local like the review's. A
 # recording kept as a test fixture is copied into docs/evidence/ or fixtures/entry/ and committed.
-the session state (held privately)
+state/entry/
 # Corpus binaries: provenance is url + sha256 in corpus/manifest.yaml (HB-01 rule 2). The
 # manifest, the source list, the fetch log and the queue are tracked.
 # HB-208: no trailing slash here or on the three graph-data lines below. A dispatched worktree links these
@@ -86,24 +85,11 @@ corpus/inbox/
 # and evidence records are tracked (the ledger is truth); bulky or local artifacts are not: the
 # form-feed text derivatives (regenerable from corpus/raw/), the retrieval index, exports,
 # the run's scratch and caches, and the STOP file.
-the corpus graph (held privately)
-the corpus graph (held privately)
-the corpus graph (held privately)
-the corpus graph (held privately)
-the corpus graph (held privately)
-the corpus graph (held privately)
 # HB-20: the stopped release's stage-13 export, kept locally for the record; it is an export (above)
 # that never sealed, and REPLAY.md rebuilds the released one from the tracked events
-the corpus graph (held privately)
-the corpus graph (held privately)
-the corpus graph (held privately)
 # HB-91: squiddy SQ-107's held-file stat cache (revision.STAT_CACHE_NAME): size, mtime and sha256 per held file,
 # keyed on the checkout's ABSOLUTE path, rewritten by every build and dry run. Derived, and the kit's own diagnostic
 # says to delete it and re-run; committing it would carry one machine's paths and mtimes into every checkout.
-the corpus graph (held privately)
-the corpus graph (held privately)
-the corpus graph (held privately)
-the corpus graph (held privately)
 
 # HB-16: the agent eval's per-episode traces (34 MB, over the task's 10 MB line). Each run directory's
 # traces_sha256.txt is committed and names every trace by sha256; the ledger, scores, summary,

@@ -191,7 +191,11 @@ web:
     # level; the side lines stay, ADDENDUM-06 item 1; the wind arrow and field move with the clock); every other
     # layer is hidden while it runs
     animate_keep: [spill, location, initial_isolation_zone, protective_action_zone, fire_isolation, harm_aegl1,
-                   harm_aegl2, harm_aegl3, uncertainty_lines, sited_points, wind, wind_field, roads]
+                   harm_aegl2, harm_aegl3, uncertainty_lines, sited_points, wind, wind_field]
+    # HB-222 item 1 (the operator, 2026-11-23): the layers Animate, the slider and the step buttons leave exactly as
+    # the reader had them, neither forced on nor hidden. The roads image is opaque grey and covers a basemap; a page
+    # whose tiles did not load switches it on itself (the map script's tile check), and Animate keeps that.
+    animate_leave: [roads]
     cloud_pop: "residents under the cloud: not computed for the step"
     # the cloud's step buttons: one every 30 minutes (the slider holds every frame, 15 minutes apart; HB-192)
     button_every_min: 30
@@ -243,7 +247,7 @@ web:
     - {id: public_safety, title: "Public safety", section: guidance, start: "Public safety", rank: 1}
   # where the checks a served page records are written (HB-141 item 2): one JSONL file per serve, `--checks FILE` to
   # replay a recorded one. Under the session state (held privately), which git ignores (HB-137's rule for runtime state)
-  checks_dir: the session state (held privately)
+  checks_dir: state/checks
   # HB-154 (DN-019 ADDENDUM-03; the operator's reviews of 2026-11-09 and 2026-11-10): the live page is a fixed shell
   # that fills the window and never scrolls: the header, then layers and legend on the left, the map in the centre
   # with the tabbed panel under it, and the operator checklist on the right. Each region scrolls inside itself.
@@ -367,7 +371,9 @@ checklist:
     # HB-155 item 8 (ADDENDUM-03 item 6; ADDENDUM-04 item 3): a wind record change marks the suggested points
     # "review", a Verify item of its own (`siting_review`), never in the wind's reserved list; a point moved inside
     # the exclusion area or reached by the modelled cloud is a Warning (`siting`)
-    - {id: verify, title: "Verify before acting", kinds: [wind, shift, cue, integrity, siting_review]}
+    # HB-221 item 3: forecast precipitation the modelled cloud's run was not given (`rain`) is a Verify item, last: the
+    # operator weighs it against what is seen at the scene ("use judgment")
+    - {id: verify, title: "Verify before acting", kinds: [wind, shift, cue, integrity, siting_review, rain]}
     # HB-173 (DN-028 ADDENDUM-04 decision 7): the two engines' item is a Warning ranked after the flags and the siting
     # warnings, so no life-safety item is displaced (NUREG-0700 r4 4.2.8-1: "Lists of alarm messages should be
     # segregated by alarm priority with the highest priority alarms being listed first"); a disagreement (`engines`)
@@ -767,20 +773,20 @@ entry:
   hold_run: hb132-reads
   # HB-207 item 1: a live entry's records are run output, not source (HB-137's rule for an operator tool's runtime
   # state): a live form's calls are recorded under `transcripts_dir`, and the build writes each fixture under
-  # `fixtures_dir`, both under the session state (held privately), which git ignores. `held_transcripts` are the committed transcripts every
+  # `fixtures_dir`, both under state/entry/, which git ignores. `held_transcripts` are the committed transcripts every
   # parser reads first, live or replay (the fixtures' lines, the seeded lines and HB-207's test lines are replayed in
   # every test); a recording meant to be kept is copied there and committed. test_hb207_live_path.py (a test held privately) holds that
   # a live entry leaves `git status --short` empty.
-  transcripts_dir: the session state (held privately)
+  transcripts_dir: state/entry/transcripts
   held_transcripts: [the HB-132 evidence (held privately), the HB-207 evidence (held privately)]
   # where the build route writes each GUI-started brief's fixture before the build starts (HB-132R item 5)
-  fixtures_dir: the session state (held privately)
+  fixtures_dir: state/entry/fixtures
   # HB-207 item 1: a served brief's live root (`brief/live_records.py`): the engine records a served live run makes
   # for requests no task recorded go here, at their repository-relative paths, not into fixtures/evidence/
-  records_dir: the session state (held privately)
+  records_dir: state/entry/records
   # HB-208 (Issue 8907cf6c): each live served brief's upstream exchanges, one directory per run
   # (`brief/live_exchanges.py`), so its map draws the blocks and lines its counts came from; run output, not source
-  exchanges_dir: the session state (held privately)
+  exchanges_dir: state/entry/exchanges
   # HB-154 ADDENDUM-01 section 1 item 3 (Issue 69466498: "nobody should take any of this for a real incident"): a
   # brief built live from this form carries the EXERCISE banner (`page.banner`) on its live page unless this says
   # false. Scenario fixtures and replays carry it whatever this says, and so does every export (the static page, the
@@ -2704,6 +2710,23 @@ map:
     label: "Modelled, dense gas: {engine}, run in `hazbrief-models` {engine_id}, release {release:g} min"
     # DN-025 section 3 item 5: a passive release's cloud is the puff's run
     label_puff: "Modelled, passive puff, first order: {engine} {engine_id}, release {release:g} min"
+    # HB-221 (the operator, 2026-11-23 10:13 and 10:19 EST): forecast precipitation over the run no longer refuses the
+    # cloud. The engine runs dry; where the forecast is not dry over the run, the label line (which goes whole to the
+    # layer's TEVV section) gains `label` and the checklist one Verify item (`item`), the interval in the brief's zone.
+    # No word says which way rain moves the concentration: the held SCICHEM technical documentation describes washout
+    # of particles (section 6.4, p. 82) and of multicomponent gas species (section 7.3.2, p. 90), neither of which is
+    # the single gas material these runs use, so no held source states it for this engine as run.
+    rain:
+      label: "; run dry: the forecast holds up to {amount:g} {unit} of precipitation over {start} to {end}, which the run does not account for"
+      label_not_stated: "; run dry: the forecast states no precipitation amount over {spans}"
+      item: "Precipitation is forecast during the modelled cloud's run: up to {amount:g} {unit} over {start} to {end}. The modelled cloud does not account for rain or snow; use judgment."
+      item_not_stated: "The forecast states no precipitation amount over {spans} of the modelled cloud's run. The modelled cloud does not account for rain or snow; use judgment."
+      # the line on the levels' TEVV section (its limits)
+      tevv: "This run was given no precipitation (PR_TYPE NONE): the forecast holds up to {amount:g} {unit} over {start} to {end}, which the modelled cloud does not account for (HB-221)."
+      tevv_not_stated: "This run was given no precipitation (PR_TYPE NONE): the forecast states no amount over {spans}, which is reported, not read as rain or as dry (HB-221)."
+      span: "{start} to {end}"
+      span_join: "; "
+      receipt: "the NWS gridpoint forecast's quantitativePrecipitation over the run, read with SCICHEM's request (record {record}); the engine runs dry (HB-221)"
     not_reached: "the level is not reached at any step"
     # HB-178 (Issue 78ccbb4b; HBD-419): a level whose area reached at any time meets the engine's grid is cut there. The
     # cut is drawn on the level's own layer as a dashed dark line along the grid's edge (a second cue beside colour:

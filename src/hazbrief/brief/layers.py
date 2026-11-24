@@ -2208,14 +2208,61 @@ def _cloud_lab(c: _Ctx, d: dict) -> str:
     spec = c.map["cloud"]
     # DN-025 section 3 item 5: a passive release's cloud names the puff, its run record
     key = "label_puff" if d.get("engine_key") == "puff" else "label"
+    # HB-221 item 4: where the forecast is not dry over the run, the label (the run's
+    # conditions, which go whole to the layer's TEVV section) says so; a dry run's
+    # label is unchanged
+    rain = rain_words(c.brief, d, c.cfg, "label")
     return (
         spec[key].format(
             engine=d["engine"],
             engine_id=d.get("engine_id") or "",
             release=d["release_minutes"],
         )
+        + (rain or "")
         + f"; record {d['record'][:n]}"
     )
+
+
+def rain_words(brief, d: dict, cfg: dict, which: str) -> str | None:
+    """HB-221: the drawn cloud's forecast precipitation (`cloud.rain_of`, carried by
+    `cloud.drawn`) in the brief's zone, as the label's clause (`which` "label"), the
+    checklist item ("item") or the levels' TEVV line ("tevv"); None where the forecast
+    is dry over the run (the fact is absent)."""
+    from hazbrief.brief import derive as D
+
+    rain = d.get("precipitation")
+    if not rain:
+        return None
+    words = cfg["map"]["cloud"]["rain"]
+    tz = getattr(brief, "time_zone", None)
+
+    def span(s: dict) -> dict:
+        return {"start": D._when(s["start"], tz), "end": D._when(s["end"], tz)}
+
+    if rain["state"] == "wet":
+        return words[which].format(
+            amount=float(rain["amount"]), unit=rain["unit"], **span(rain["interval"])
+        )
+    if rain["state"] == "not_stated":
+        spans = words["span_join"].join(
+            words["span"].format(**span(s)) for s in rain["not_stated"]
+        )
+        return words[f"{which}_not_stated"].format(spans=spans)
+    raise ValueError(f"cloud precipitation state {rain['state']!r}")
+
+
+def rain_alerts(brief, cfg) -> list[dict]:
+    """HB-221 item 3: the checklist's one Verify item where the drawn cloud's run was
+    not given the precipitation its forecast holds; none on a dry forecast."""
+    cl = (getattr(brief, "derived", None) or {}).get("cloud") or {}
+    if cl.get("state") != "drawn":
+        return []
+    text = rain_words(brief, cl, cfg, "item")
+    if text is None:
+        return []
+    n = L.config()["hash_prefix_chars"]
+    receipt = cfg["map"]["cloud"]["rain"]["receipt"].format(record=cl["record"][:n])
+    return [{"kind": "rain", "text": text, "receipt": receipt}]
 
 
 def _clock0(c: _Ctx) -> str:

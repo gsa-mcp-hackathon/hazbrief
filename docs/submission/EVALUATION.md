@@ -1,4 +1,4 @@
-<!-- seldon:projection-revision 91b5d1fe846d024b (the tables and counts between seldon:projection markers are rendered from the graph by `seldon docs generate requirements`; change a requirement with `seldon req`, not here; AD-013-R2) -->
+<!-- seldon:projection-revision 71058f7701954d3e (the tables and counts between seldon:projection markers are rendered from the graph by `seldon docs generate requirements`; change a requirement with `seldon req`, not here; AD-013-R2) -->
 # hazbrief-mcp: evaluation
 
 ## Results at a glance
@@ -407,18 +407,18 @@ runner only when a person starts it; no push or pull request does (HB-85). The d
 excludes the `slow` mark, which the eval workflow runs (`pyproject.toml` `addopts`;
 `.github/workflows/eval-nightly.yml`).
 
-| Latest full-suite gate (HB-215, both steps, in its worktree) | Count | Source |
+| Latest full-suite gate (HB-220, both steps, in its worktree) | Count | Source |
 |---|--:|---|
-| passed | 8,413 | `HB-215` |
-| failed | 0 | `HB-215` |
-| skipped | 15 | `HB-215` |
-| deselected (the `slow` mark) | 12 | `HB-215` |
-| xfailed | 17 | `HB-215` |
-| xpassed (non-strict marks) | 0 | `HB-215` |
+| passed | 8,460 | `HB-220` |
+| failed | 0 | `HB-220` |
+| skipped | 15 | `HB-220` |
+| deselected (the `slow` mark) | 12 | `HB-220` |
+| xfailed | 17 | `HB-220` |
+| xpassed (non-strict marks) | 0 | `HB-220` |
 
-HB-215's gate is the two steps: the parallel step's 8321 passed, 15 skipped, 104 deselected and 17
-xfailed, in 2251.46s (0:37:31), then the load-sensitive step's 92 passed in 886.22s (0:14:46),
-then ruff (`HB-215`). The table adds the two steps: the 92 load-sensitive
+HB-220's gate is the two steps: the parallel step's 8368 passed, 15 skipped, 104 deselected and 17
+xfailed, in 2156.35s (0:35:56), then the load-sensitive step's 92 passed in 895.80s (0:14:55),
+then ruff (`HB-220`). The table adds the two steps: the 92 load-sensitive
 tests are among the parallel step's 104 deselected. The gate takes 76 to 89 minutes on the build
 machine (`docs/evidence/hb194/README.md`); its pytest run took 0:29:55 at HB-151 and 0:11:58 when
 HB-164 made it parallel (`docs/evidence/hb193/gate_history.tsv`; lesson 4.9). Before HB-194 split it, four of ten
@@ -472,7 +472,7 @@ The display is one person's design from experience: improving it needs design se
 and the aim of this version is that a capable person put in the chair can do a good enough job with it and that what it
 shows is believable (DN-019 ADDENDUM-04 section 6).
 
-At HB-141 the table holds <!-- seldon:projection view="counts" document="docs/VIEW_REQUIREMENTS.md" -->182 rows: 138 satisfied, 21 open, 14 changed, 4 withdrawn; 27 verified by "none yet"; 0 not yet specified<!-- /seldon:projection --> (`docs/evidence/hb134/rtm.md`). `test_view_requirements.py (a test held privately)` checks four things:
+At HB-141 the table holds <!-- seldon:projection view="counts" document="docs/VIEW_REQUIREMENTS.md" -->183 rows: 139 satisfied, 21 open, 14 changed, 4 withdrawn; 27 verified by "none yet"; 0 not yet specified<!-- /seldon:projection --> (`docs/evidence/hb134/rtm.md`). `test_view_requirements.py (a test held privately)` checks four things:
 * every cited test is collected by the gate;
 * every governing text is on disk;
 * the ids run without a gap;

@@ -10,7 +10,7 @@ the known items; HB-137's rule: an operator tool's runtime state is local).
 `set_root(path)` names the live root for this process (`hazbrief brief --serve`, live
 or replaying; `cli.py`). With it set, a record is read from the repository when it is
 committed there, else from the live root, and a new one is written under the live root,
-at the same relative path (`the session state...`, ignored by git).
+at the same relative path (`state/entry/records/fixtures/evidence/...`, ignored by git).
 Unset (a written brief, a recording script, the tests), every path is the repository's,
 as before.
 """

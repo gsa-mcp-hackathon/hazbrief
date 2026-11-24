@@ -26,9 +26,11 @@ Four steps, each its own function:
    flashed source; the area is the mixture's volume flux over that speed; the sigmas
    are 0.75 of the radii, the documentation's rule for its pool sources.
 
-   A wet forecast, a forecast that does not cover the run, or an input not held is a
-   `Refusal` ("not modelled" with the reason; Part C item 13). Nothing is defaulted
-   silently and the other engine is never run in its place.
+   A forecast that does not cover the run, or an input not held, is a `Refusal` ("not
+   modelled" with the reason; Part C item 13). Nothing is defaulted silently and the
+   other engine is never run in its place. Forecast precipitation over the run is not
+   a refusal (HB-221): the engine runs dry (`PR_TYPE 'NONE'`) and the request states
+   the precipitation it was not given (`check_dry`), which the brief prints.
 2. `run_request(request, cfg)`: the models image runs `scichem_driver.py` on the
    request (`docker run --rm -i --network none --pull never`); `argv` replaces the
    command for a development build. The response is the engine's sensor file and the
@@ -280,10 +282,22 @@ def forecast_hours(seed: dict, start: datetime, n: int, cfg: dict) -> list[dict]
     return rows
 
 
-def check_dry(seed: dict, start: datetime, end: datetime, cfg: dict) -> None:
-    """A refusal unless every quantitativePrecipitation interval over [start, end) is
-    zero (the record is dry only; Part C item 13)."""
-    layer = (seed["properties"].get("quantitativePrecipitation") or {}).get("values")
+def check_dry(seed: dict, start: datetime, end: datetime, cfg: dict) -> dict:
+    """The forecast's precipitation over the run [start, end), as a fact the run's
+    conditions carry (HB-221, the operator's statement of 2026-11-23 10:13 EST: rain is
+    no reason to draw no cloud). The engine runs dry whatever this says (`PR_TYPE
+    'NONE'`); nothing here changes what it is given.
+
+    Returns `state` ("dry": every covering interval is zero; "wet": at least one holds
+    an amount above zero; "not_stated": none does, but at least one is null), the
+    largest amount (`amount`, its `unit` as the forecast states it and its `interval`,
+    the NWS validTime) where wet, and the null intervals (`not_stated`), which are
+    reported, never read as rain or as dry.
+
+    Two refusals stay (HB-167 Part C item 13): a forecast with no precipitation layer,
+    and one whose layer does not cover the run."""
+    prop = seed["properties"].get("quantitativePrecipitation") or {}
+    layer = prop.get("values")
     if not layer:
         raise Refusal(
             cfg["refusals"]["missing"].format(
@@ -291,22 +305,63 @@ def check_dry(seed: dict, start: datetime, end: datetime, cfg: dict) -> None:
             )
         )
     seen = False
+    wettest: tuple[float, str] | None = None
+    not_stated: list[str] = []
     for v in layer:
         a, b = _interval(v["validTime"])
         if a < end and b > start:
             seen = True
-            if v["value"] is None or float(v["value"]) != 0.0:
-                raise Refusal(
-                    cfg["refusals"]["wet"].format(
-                        detail=f"{v['value']!r} mm over {v['validTime']}"
-                    )
-                )
+            if v["value"] is None:
+                not_stated.append(v["validTime"])
+                continue
+            amount = float(v["value"])
+            if amount > 0.0 and (wettest is None or amount > wettest[0]):
+                wettest = (amount, v["validTime"])
     if not seen:
         raise Refusal(
             cfg["refusals"]["forecast_short"].format(
                 detail=f"no quantitativePrecipitation over {start.isoformat()}"
             )
         )
+    if wettest is not None:
+        state = "wet"
+    elif not_stated:
+        state = "not_stated"
+    else:
+        state = "dry"
+    return {
+        "state": state,
+        "amount": wettest[0] if wettest else None,
+        "unit": prop.get("uom"),
+        "interval": wettest[1] if wettest else None,
+        "not_stated": not_stated,
+    }
+
+
+def precipitation_assumption(rain: dict, cfg: dict) -> str:
+    """The run's precipitation assumption (HB-221): for a dry forecast, the words every
+    recorded request already carries (`precipitation.dry`; part of each record's key,
+    so a replayed brief still reads its record); otherwise what was run against what
+    the forecast holds, in the forecast's own UTC interval."""
+    words = cfg["precipitation"]
+    if rain["state"] == "dry":
+        return words["dry"]
+    if rain["state"] == "wet":
+        return words["wet"].format(
+            amount=rain["amount"],
+            unit=unit_words(rain.get("unit"), cfg),
+            interval=rain["interval"],
+        )
+    return words["not_stated"].format(intervals=", ".join(rain["not_stated"]))
+
+
+def unit_words(uom: str | None, cfg: dict) -> str:
+    """A forecast unit (`wmoUnit:mm`) as the page prints it; an unmapped one as given,
+    so an amount is never printed without the unit it was stated in."""
+    units = cfg["precipitation"]["units"]
+    if uom is None:
+        raise ValueError("a forecast precipitation amount without a unit (uom)")
+    return units.get(uom, uom)
 
 
 # ── the source ───────────────────────────────────────────────────────────────────────
@@ -518,7 +573,8 @@ def build_request(
     n_met = p["met_hours_before_release"] + hours + 2
     rows = forecast_hours(seed, met_start, n_met, cfg)
     end = release + timedelta(hours=hours)
-    check_dry(seed, release, end, cfg)
+    # HB-221: forecast precipitation is a fact the run's conditions carry, not a refusal
+    rain = check_dry(seed, release, end, cfg)
     series = []
     for row in rows:
         wdir = float(row["windDirection"])
@@ -688,6 +744,7 @@ def build_request(
                     }
                 )
     assumptions = dict(cfg["assumptions"])
+    assumptions["precipitation"] = precipitation_assumption(rain, cfg)
     if stable is not None:
         assumptions["boundary_layer"] = (
             f"BL_TYPE OBS with the brief's stability class {stable['class']} as PGT "
@@ -781,6 +838,9 @@ def build_request(
             },
             "assumptions": assumptions,
             "turn": turn,
+            # HB-221: present only where the forecast is not dry over the run, so a
+            # dry forecast's request is byte-identical to one recorded before
+            **({"precipitation": rain} if rain["state"] != "dry" else {}),
         },
     }
 

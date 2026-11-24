@@ -2702,6 +2702,8 @@ def _cloud_time_config(brief, cfg) -> dict | None:
         # HB-192: the status line's words for a live page's frames as they land
         "frames": _frames_status(d, tc) if d.get("frames_run") else None,
         "keep": list(tc["animate_keep"]),
+        # HB-222 item 1: left as the reader had them (the roads image), never switched
+        "leave": list(tc["animate_leave"]),
         "viewed": layers.cloud_level_ids(cfg) + [cfg["map"]["cloud"]["extent"]["id"]],
     }
 

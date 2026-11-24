@@ -1,0 +1,89 @@
+# HB-220: the acceptance record of the pitch deck. The deck is an accepted file, a human-adjusted presentation of
+# held facts, built by Desktop as one HTML file, printed to PDF and revised with the operator in three passes. It is
+# not generated from docs/submission/deck.yaml; that generated deck (deck.yaml, deck.html, deck.pptx) is its
+# technical appendix. A change to any file below is a new acceptance, not an edit of this one.
+# tests/test_hb220_accepted_pitch_deck.py holds each file to its sha256 and each number to the file it was read from.
+
+accepted:
+  by: the operator
+  at: "2026-11-22 13:14 EST"
+  statement: "The deck good. accepted. Let's put it in the repo for pushing."
+  session: Desktop hz-24
+  issue: 42e7a88a
+  task: HB-220
+
+files:
+  - path: docs/submission/pitch_deck.pdf
+    sha256: 812c8bc52c04d2066f3c0a1a384cf9ed5ed774c1f2be50ad975727754b1c474e
+    pages: 15
+  - path: docs/submission/pitch_deck.html
+    sha256: 7c8b622bd9bb00404eea72db653b4869f3ba354ca88166eec1c886a8cedfbcbe
+
+# The build session's sources, kept as written (docs/submission/pitch_src/README.md); not run here.
+sources:
+  - path: docs/submission/pitch_src/build.py
+    sha256: 0b8d9ad72929512385e3365d1195b6140d8061485011883bb192061714473700
+  - path: docs/submission/pitch_src/render.py
+    sha256: 0d6364bea93690c55490e8dcff4eccbce3ca14a013397e8b31aa7dfd6a025ad9
+  - path: docs/submission/pitch_src/shot.py
+    sha256: 2b6e6d0870709dd3e6807382b668c22e00084ea1c8eb11296d057b0260c8fff7
+  - path: docs/submission/pitch_src/crops.py
+    sha256: 0b06972500d774bb0f9ecbed2492d603a8674fcc8669e5b8cd5c83321ed210f0
+  - path: docs/submission/pitch_src/img_check.jpg
+    sha256: 343bed29a8e41704f1bff8522e70bff0950840c12401050bc4e4991ba15142f4
+  - path: docs/submission/pitch_src/img_cloud15.jpg
+    sha256: 0c869a8b4b7883da625234c5cc3f4dbe50976ecff33474218cc5df62cb826bfa
+  - path: docs/submission/pitch_src/img_cloud75.jpg
+    sha256: 63c39a73ebd90e7b875d6c705a01d2ed4831d3f9216d1e1fbcc2cdf88bb89e73
+  - path: docs/submission/pitch_src/img_form.jpg
+    sha256: a1dd9da033cb1297ad3c2d54fec8fbc4582e016c9d41fe1200f6263b2df904a2
+  - path: docs/submission/pitch_src/img_hero.jpg
+    sha256: 6dce1f73a0d581961833b447172294837eb6d70ebb8bb2f82a340ca89231a164
+  - path: docs/submission/pitch_src/img_ics.jpg
+    sha256: eb188aab0beb9bf5ee77b23f923aa3d2208e8f9cc33d03c21f17ab2d2e8adf84
+  - path: docs/submission/pitch_src/img_map.jpg
+    sha256: cb659e00317a90b622e570d91f661afe10a7b198c94777dff302451de3d0539e
+  - path: docs/submission/pitch_src/img_out.jpg
+    sha256: 400b921b3723aa451983aa5e9db34f3c0096f798b4b4c4afd64e7e70b32237ac
+  - path: docs/submission/pitch_src/img_start.jpg
+    sha256: da91938ffd6e62e621418707480b3cd121a83a2d04b59ffba63bf949ce53c887
+
+# The numbers the deck prints, each with the held file it was read from. `printed` is the deck's text; `held` is
+# the value as the file holds it; `match` is how the test compares them (exact: the held text is in the file;
+# rounded: the printed whole number is within half a unit of the held value; count: the file holds that many rows).
+numbers:
+  - printed: "24,265"
+    what: hazmat transportation incidents reported to PHMSA, all modes, 2023
+    file: docs/incidents/problem_scale.tsv
+    held: "24,265"
+    match: exact
+  - printed: "66"
+    what: incidents a day, about (24,265 / 365)
+    file: docs/evidence/hb127/base_rates.tsv
+    held: "66.5"
+    match: rounded
+  - printed: "146"
+    what: rail accidents in which a car released hazmat, 2016 to 2025
+    file: docs/incidents/problem_scale.tsv
+    held: "146"
+    match: exact
+  - printed: "$209.5M"
+    what: those accidents' reported damage, equipment and track, 2016 to 2025
+    file: docs/incidents/problem_scale.tsv
+    held: "209.5"
+    match: exact
+  - printed: "11,740"
+    what: facilities filing a worst-case release scenario (40 CFR 68.25), about
+    file: docs/evidence/hb216/planning_uses.md
+    held: "11,740"
+    match: exact
+  - printed: "Seven tools"
+    what: the server's tools
+    file: README.md
+    held: the rows of the Tools table
+    match: count
+
+# Not checked against a file: the operator's own generalisation, marked as his.
+unchecked:
+  - printed: "A workup in 3 or 4 minutes."
+    whose: the operator's generalisation (2026-11-22), not checked against a held file

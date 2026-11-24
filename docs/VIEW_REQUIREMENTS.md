@@ -1,4 +1,4 @@
-<!-- seldon:projection-revision 324557078b3013a5 (the tables and counts between seldon:projection markers are rendered from the graph by `seldon docs generate requirements`; change a requirement with `seldon req`, not here; AD-013-R2) -->
+<!-- seldon:projection-revision 658246253640e06f (the tables and counts between seldon:projection markers are rendered from the graph by `seldon docs generate requirements`; change a requirement with `seldon req`, not here; AD-013-R2) -->
 # View requirements: every panel and layer of the brief, traced
 
 **Task:** `HB-134R2` (HB-134R2).
@@ -89,6 +89,7 @@ HB-130R, HB-131R and HB-132R each add a line to their RESULT naming the `VR` row
 | HB-155-A04 | `HB-155` |
 | HB-155-A05 | `HB-155` |
 | HB-215 | `HB-215` |
+| HB-221 | `HB-221` |
 
 Two citations in the governing texts are off by one section, and this table cites the section that holds the words. HB-134R2 and HB-133 cite "DN-020 section 3.4" for the footprint labels. The label text is DN-020 section 3.3; section 3.4 is the open Issues.
 
@@ -500,4 +501,12 @@ DN-019 and DN-022 name these surfaces, but neither note nor any task gives a sen
 | VR-180 | A change of the brief's wind record marks the three suggested points review, in their rows and in a Verify item of its own (never the wind's reserved list); a step of the time control or the wind stepper is not a change of the record and marks nothing. | DN-023 §4.6; HB-155 item 8; HB-155-A03 item 6; HB-155-A04 item 3 | test_hb155_siting.py (a test held privately)::test_a_wind_record_change_marks_the_points_review_and_a_time_step_does_not | satisfied |
 | VR-181 | Free-flow routes over the held primary and secondary roads, avoiding every road segment that meets the exclusion area, run from each nearest fire, EMS and police station to staging and from triage to each receiving hospital; each is drawn on the map and listed in the Responders tab as one line that opens onto its connectors, a directions link built from the coordinates alone and the label free-flow, assumed speeds; no live traffic; they are recomputed when a point moves, and the ICS 201's annex names the three points as suggested with the routes. | DN-023 §4.4; HB-155 item 9; HB-155-A05 item 5 | test_hb155_siting.py (a test held privately)::test_a_route_row_carries_a_directions_link_from_coordinates_alone; test_hb155_siting.py (a test held privately)::test_routes_avoid_the_exclusion_and_change_when_a_point_moves | satisfied |
 | VR-182 | The Area radius control (buttons on the Responders heading's line: 5, 10, 20, 30 and 50 miles and widen to nearest, default 10) filters the services in the area on the map and in the Responders tab; a step whose data is in hand filters at once and makes no request beyond the page's own server; a step not in hand is read by the server on a live serve (Retrieving until it arrives) and on a replay reads not recorded for this replay and is not offered; each step is an area_radius_set event replayed at its place; it is a view filter and changes no record. | DN-023 §5.5; HB-155-A01 item 6; HB-155-A02 item 5; HB-155-A03 item 4; HB-155-A05 item 4 | test_hb155_siting.py (a test held privately)::test_a_live_step_past_the_data_reads_that_box_and_sends_the_facilities; test_hb155_siting.py (a test held privately)::test_a_radius_step_in_hand_makes_no_request_and_one_not_in_hand_reads_not_recorded; test_hb155_siting.py (a test held privately)::test_the_radius_event_round_trips_through_a_replay | satisfied |
+<!-- /seldon:projection -->
+
+## Forecast rain and the modelled cloud (added by HB-221)
+
+<!-- seldon:projection view="table" section="Forecast rain and the modelled cloud (added by HB-221)" -->
+| ID | Requirement | Set by | Verified by | Status |
+|---|---|---|---|---|
+| VR-183 | A modelled cloud is drawn when the forecast holds precipitation over its run: the engine runs dry, its input unchanged, and the precipitation (the largest amount, its unit and its interval in the brief's zone, or the intervals with no amount stated) is stated as one Verify item on the checklist, in the cloud's label and on the cloud's TEVV section; no forecast precipitation is a refusal, while a forecast with no precipitation layer, or one that does not cover the run, still is. | HB-221 items 1 to 4 and 7 | test_hb221_rain_does_not_refuse.py (a test held privately)::test_a_layer_that_does_not_cover_the_run_is_still_refused; test_hb221_rain_does_not_refuse.py (a test held privately)::test_a_null_amount_is_reported_as_not_stated; test_hb221_rain_does_not_refuse.py (a test held privately)::test_no_checklist_item_on_a_dry_forecast_or_an_undrawn_cloud; test_hb221_rain_does_not_refuse.py (a test held privately)::test_no_precipitation_layer_is_still_refused; test_hb221_rain_does_not_refuse.py (a test held privately)::test_rain_draws_the_same_cloud_as_a_dry_forecast; test_hb221_rain_does_not_refuse.py (a test held privately)::test_rain_gives_the_engine_the_same_input_as_a_dry_forecast; test_hb221_rain_does_not_refuse.py (a test held privately)::test_the_checklist_item_names_the_amount_unit_and_local_interval; test_hb221_rain_does_not_refuse.py (a test held privately)::test_the_label_and_the_tevv_section_state_the_rain | satisfied |
 <!-- /seldon:projection -->

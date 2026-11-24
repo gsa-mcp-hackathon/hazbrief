@@ -169,3 +169,7 @@ future_work:
     issue: 856ab26b
   - heading: "Traffic camera video and credentialed camera feeds"
     issue: "72025338"
+  # HB-221 item 9 (the operator, 2026-11-23 10:19 EST): rain no longer refuses the cloud, which runs dry; running the
+  # engine with precipitation is the record here (linked to Issue b1c63015)
+  - heading: "SCICHEM run with precipitation (wet deposition and washout), and tested"
+    issue: 4e5caa21
